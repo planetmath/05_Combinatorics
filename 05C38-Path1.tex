@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Path1}
+\pmcreated{2013-03-22 12:16:49}
+\pmmodified{2013-03-22 12:16:49}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{path}
+\pmrecord{8}{31731}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C38}
+\pmrelated{ClosedPath}
+\pmdefines{path length}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+\xyoption{all}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{path} in a graph is a finite sequence of alternating vertices and edges, beginning and ending with a vertex, $v_1e_1v_2e_2v_3\dots e_{n-1}v_n$ such that every consecutive pair of vertices $v_x$ and $v_{x+1}$ are adjacent and $e_x$ is incident with $v_x$ and with $v_{x+1}$.  Typically, the edges may be omitted when writing a path (e.g., $v_1v_2v_3\dots v_n$) since only one edge of a graph may connect two adjacent vertices.  In a multigraph, however, the choice of edge may be significant.  
+
+The length of a path is the number of edges in it.
+
+Consider the following graph:
+
+$$\xymatrix{
+A \ar@{-}[r] & B \ar@{-}[d] \\
+D \ar@{-}[u] & C \ar@{-}[l] }$$
+
+Paths include (but are certainly not limited to) $ABCD$ (length 3), $ABCDA$ (length 4), and $ABABABABADCBA$ (length 12).  $ABD$ is not a path since $B$ is not adjacent to $D$.
+
+In a digraph, each consecutive pair of vertices must be connected by an edge with the proper orientation; if $e=(u,v)$ is an edge, but $(v,u)$ is not, then $uev$ is a valid path but $veu$ is not.
+
+Consider this digraph:
+
+$$\xymatrix{
+G \ar[r] \ar[d] & H \ar[d] \ar[l] \\
+J & I \ar[l] }$$
+
+$GHIJ$, $GJ$, and $GHGHGH$ are all valid paths.  $GHJ$ is not a valid path because $H$ and $J$ are not connected.  $GJI$ is not a valid path because the edge connecting $I$ to $J$ has the opposite orientation.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

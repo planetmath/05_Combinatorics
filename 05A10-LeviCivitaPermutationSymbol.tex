@@ -1,0 +1,166 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LeviCivitaPermutationSymbol}
+\pmcreated{2013-03-22 13:31:29}
+\pmmodified{2013-03-22 13:31:29}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{Levi-Civita permutation symbol}
+\pmrecord{13}{34116}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmrelated{KroneckerDelta}
+\pmrelated{GeneralizedKroneckerDeltaSymbol}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbbmss{R}}
+\newcommand{\sC}[0]{\mathbbmss{C}}
+\newcommand{\sN}[0]{\mathbbmss{N}}
+\newcommand{\sZ}[0]{\mathbbmss{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{defn}
+Let $k_i \in \{1,\cdots, n\}$ for all $i=1,\cdots ,n$.
+The \emph{Levi-Civita permutation symbols} $\varepsilon_{k_1\cdots k_n}$ and $\varepsilon^{k_1\cdots k_n}$ are
+defined as
+$$\varepsilon_{k_1\cdots k_m}=\varepsilon^{k_1\cdots k_m}= \left\{  \begin {array}{ll} +1 & \mbox{when} \, \{l\mapsto k_l\} \mbox{ is an even permutation (of $\{1,\cdots, n\}$),} \\
+-1 & \mbox{when} \, \{l\mapsto k_l\} \mbox{ is an odd permutation,} \\
+   0 &  \mbox{otherwise, i.e., when\,} k_i = k_j, \ \mbox {for some } \ i\neq j.  \\
+    \end{array} \right. $$
+\end{defn}
+
+The Levi-Civita permutation symbol is a special case of  the generalized
+Kronecker delta symbol. Using this fact one can write the Levi-Civita permutation
+symbol as the determinant of an $n\times n$ matrix consisting of traditional
+delta symbols. See the entry on the generalized Kronecker symbol for details.
+ 
+
+When using the Levi-Civita permutation symbol and the generalized Kronecker delta
+symbol, the Einstein summation convention is usually employed. In the below, 
+we shall also use this convention.
+
+\subsubsection*{Properties}
+\begin{itemize}
+\item When $n=2$, we have for all $i,j,m,n$ in $\{1,2\}$, 
+\begin{eqnarray}
+\label{eq0}
+\varepsilon_{ij} \varepsilon^{mn} &=& \delta_i^m \delta_j^n - \delta_i^n \delta_j^m, \\
+\label{eq1}
+\varepsilon_{ij} \varepsilon^{in} &=& \delta_j^n,\\
+\label{eq2}
+\varepsilon_{ij} \varepsilon^{ij} &=& 2.
+\end{eqnarray}
+
+\item When $n=3$, we have for all $i,j,k,m,n$ in $\{1,2,3\}$, 
+\begin{eqnarray}
+\label{eq3}
+\varepsilon_{jmn} \varepsilon^{imn} &=& 2\delta^i_j, \\
+\label{eq4}
+\varepsilon_{ijk} \varepsilon^{ijk} &=& 6.
+\end{eqnarray}
+\end{itemize}
+
+Let us prove these properties. The proofs are instructional since they
+demonstrate typical argumentation methods for manipulating the
+permutation symbols.
+
+\emph{Proof.} For equation \ref{eq0}, let us first note that both sides
+are antisymmetric with respect of $ij$ and $mn$. We therefore only need
+to consider the case $i\neq j$ and $m\neq n$. By substitution, we see that
+the equation holds for $\varepsilon_{12} \varepsilon^{12}$, i.e., for 
+$i=m=1$ and $j=n=2$. (Both sides are then one). Since the equation is 
+anti-symmetric in $ij$ and $mn$, any set of values for these can be 
+reduced the above case (which holds). The equation 
+thus holds for all values of $ij$ and $mn$.
+Using equation \ref{eq0}, we have for equation \ref{eq1} 
+\begin{eqnarray*}
+\varepsilon_{ij}\varepsilon^{in} &=& \delta_i^i \delta_j^n - \delta^n_i \delta^i_j\\
+&=& 2 \delta_j^n - \delta^n_j\\
+&=& \delta_j^n. 
+\end{eqnarray*}
+Here we used the Einstein summation convention with $i$ going from $1$ to $2$. 
+Equation \ref{eq2} follows similarly from equation \ref{eq1}.
+To establish equation \ref{eq3}, let us first observe that both sides 
+vanish when $i\neq j$. Indeed, if $i\neq j$, then one can not choose 
+$m$ and $n$ such that both permutation symbols on the left are nonzero. Then, 
+with $i=j$ fixed, there are only two ways to choose $m$ and $n$ from the remaining
+two indices. For any such indices, we have
+$\varepsilon_{jmn} \varepsilon^{imn} = (\varepsilon^{imn})^2 = 1$ (no summation),
+and the result follows. The last property follows since $3!=6$ and for any 
+distinct indices $i,j,k$ in $\{1,2,3\}$, we have 
+$\varepsilon_{ijk} \varepsilon^{ijk}=1$ (no summation). $\Box$
+
+\subsubsection*{Examples and Applications.} 
+\begin{itemize}
+\item The determinant of an $n\times n$ matrix $A=(a_{ij})$ can be written
+as
+$$ \det A = \varepsilon_{i_1\cdots i_n} a_{1i_1} \cdots a_{ni_n},$$
+where each $i_l$ should be summed over $1,\ldots, n$. 
+\item If $A=(A^1, A^2, A^3)$ and $B=(B^1, B^2, B^3)$ are vectors in 
+$\sR^3$ (represented in some right hand oriented orthonormal basis), then 
+the $i$th component of their cross product equals
+$$ (A\times B)^i = \varepsilon^{ijk} A^j B^k.$$
+For instance, the first component of $A\times B$ is
+$A^2 B^3-A^3 B^2$. From the above expression for the cross product, 
+it is clear that $A\times B = -B\times A$. 
+Further, if $C=(C^1, C^2, C^3)$ is a vector like $A$ and $B$, then 
+the triple scalar product equals
+$$ A\cdot(B\times C) = \varepsilon^{ijk} A^i B^j C^k.$$
+From this expression, it can be seen that the triple scalar product is 
+antisymmetric when exchanging any adjacent arguments.
+For example, $A\cdot(B\times C)= -B\cdot(A\times C)$. 
+\item Suppose $F=(F^1, F^2, F^3)$ is a vector field defined on some 
+open set of $\R^3$ with Cartesian coordinates $x=(x^1, x^2, x^3)$. Then 
+the $i$th component of the curl of $F$ equals
+$$ 
+  (\nabla \times F)^i(x) = \varepsilon^{ijk}\frac{\partial}{\partial x^j} F^k(x).
+$$
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

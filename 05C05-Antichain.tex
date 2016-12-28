@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Antichain}
+\pmcreated{2013-03-22 12:52:25}
+\pmmodified{2013-03-22 12:52:25}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{antichain}
+\pmrecord{6}{33212}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmclassification{msc}{03E05}
+\pmrelated{TreeSetTheoretic}
+\pmrelated{Aronszajn}
+\pmdefines{antichain}
+\pmdefines{maximal antichain}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+A subset $A$ of a poset $(P,<_P)$ is an \emph{antichain} if no two elements are comparable.  That is, if $a,b\in A$ then $a\nless_P b$ and $b\nless_P a$.  
+
+A \emph{maximal antichain} of $T$ is one which is maximal.
+
+In particular, if $(P,<_P)$ is a tree then the maximal antichains are exactly those antichains which intersect every branch, and if the tree is splitting then every level is a maximal antichain.
+%%%%%
+%%%%%
+\end{document}

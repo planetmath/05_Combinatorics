@@ -1,0 +1,840 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ColoringsOfPlaneGraphs}
+\pmcreated{2013-03-22 15:10:25}
+\pmmodified{2013-03-22 15:10:25}
+\pmowner{marijke}{8873}
+\pmmodifier{marijke}{8873}
+\pmtitle{colorings of plane graphs}
+\pmrecord{8}{36925}
+\pmprivacy{1}
+\pmauthor{marijke}{8873}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+%\pmkeywords{face coloring}
+%\pmkeywords{edge coloring}
+%\pmkeywords{vertex coloring}
+%\pmkeywords{plane graph}
+%\pmkeywords{coloring}
+\pmrelated{FourColorConjecture}
+\pmrelated{TaitColoring}
+\pmrelated{KempeChain}
+
+\usepackage{amssymb}
+% \usepackage{amsmath}
+% \usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% portions from
+% makra.sty 1989-2005 by Marijke van Gans %
+                                          %          ^ ^
+\catcode`\@=11                            %          o o
+                                          %         ->*<-
+                                          %           ~
+%%%% CHARS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        %    code    char  frees  for
+
+\let\Para\S             %    \Para     Ã‚Â§   \S \scriptstyle
+\let\Pilcrow\P          %    \Pilcrow  Ã‚Â¶   \P
+\mathchardef\pilcrow="227B
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+\let\bs\backslash       %    \bs       \
+\let\us\_               %    \us       _     \_  ...
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+%%%% DIACRITICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\udot\d             % under-dot (text mode), frees \d
+\let\odot\.             % over-dot (text mode),  frees \.
+%let\hacek\v            % hacek (text mode),     frees \v
+%let\makron\=           % makron (text mode),    frees \=
+%let\tilda\~            % tilde (text mode),     frees \~
+\let\uml\"              % umlaut (text mode),    frees \"
+
+%def\ij/{i{\kern-.07em}j}
+\def\trema#1{\discretionary{-}{#1}{\uml #1}}
+
+%%%% amssymb %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\le\leqslant
+\let\ge\geqslant
+%let\prece\preceqslant
+%let\succe\succeqslant
+
+%%%% USEFUL MISC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\C++{C$^{_{++}}$}
+
+%let\writelog\wlog
+%def\wl@g/{{\sc wlog}}
+%def\wlog{\@ifnextchar/{\wl@g}{\writelog}}
+
+%def\org#1{\lower1.2pt\hbox{#1}} 
+% chem struct formulae: \bs, --- /  \org{C} etc. 
+
+%%%% USEFUL INTERNAL LaTeX STUFF %%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\Ifnextchar=\@ifnextchar
+%let\Ifstar=\@ifstar
+%def\currsize{\@currsize}
+
+%%%% KERNING, SPACING, BREAKING %%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\qqquad{\hskip3em\relax}
+%def\qqqquad{\hskip4em\relax}
+%def\qqqqquad{\hskip5em\relax}
+%def\qqqqqquad{\hskip6em\relax}
+%def\qqqqqqquad{\hskip7em\relax}
+%def\qqqqqqqquad{\hskip8em\relax}
+
+%%%% LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% COUNTERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\addtoreset\@addtoreset
+%{A}{B} adds A to list of counters reset to 0
+% when B is \refstepcounter'ed (see latex.tex)
+%
+%def\numbernext#1#2{\setcounter{#1}{#2}\addtocounter{#1}{\m@ne}}
+
+%%%% EQUATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% LEMMATA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% DISPLAY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% MATH LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\D\displaystyle
+\let\T\textstyle
+\let\S\scriptstyle
+\let\SS\scriptscriptstyle
+
+% array:
+%def\<#1:{\begin{array}{#1}}
+%def\>{\end{array}}
+
+% array using [ ] with rounded corners:
+%def\[#1:{\left\lgroup\begin{array}{#1}} 
+%def\]{\end{array}\right\rgroup}
+
+% array using ( ):
+%def\(#1:{\left(\begin{array}{#1}}
+%def\){\end{array}\right)}
+
+%def\hh{\noalign{\vskip\doublerulesep}}
+
+%%%% MATH SYMBOLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\d{\mathord{\rm d}}                      % d as in dx
+%def\e{{\rm e}}                              % e as in e^x
+
+%def\Ell{\hbox{\it\char`\$}}
+
+\def\sfmath#1{{\mathchoice%
+{{\sf #1}}{{\sf #1}}{{\S\sf #1}}{{\SS\sf #1}}}}
+\def\Stalkset#1{\sfmath{I\kern-.12em#1}}
+\def\Bset{\Stalkset B}
+\def\Nset{\Stalkset N}
+\def\Rset{\Stalkset R}
+\def\Hset{\Stalkset H}
+\def\Fset{\Stalkset F}
+\def\kset{\Stalkset k}
+\def\In@set{\raise.14ex\hbox{\i}\kern-.237em\raise.43ex\hbox{\i}}
+\def\Roundset#1{\sfmath{\kern.14em\In@set\kern-.4em#1}}
+\def\Qset{\Roundset Q}
+\def\Cset{\Roundset C}
+\def\Oset{\Roundset O}
+\def\Zset{\sfmath{Z\kern-.44emZ}}
+
+% \frac overwrites LaTeX's one (use TeX \over instead)
+%def\fraq#1#2{{}^{#1}\!/\!{}_{\,#2}}
+\def\frac#1#2{\mathord{\mathchoice%
+{\T{#1\over#2}}
+{\T{#1\over#2}}
+{\S{#1\over#2}}
+{\SS{#1\over#2}}}}
+%def\half{\frac12}
+
+\mathcode`\<="4268         % < now is \langle, \lt is <
+\mathcode`\>="5269         % > now is \rangle, \gt is >
+
+%def\biggg#1{{\hbox{$\left#1\vbox %to20.5\p@{}\right.\n@space$}}}
+%def\Biggg#1{{\hbox{$\left#1\vbox %to23.5\p@{}\right.\n@space$}}}
+
+\let\epsi=\varepsilon
+\def\omikron{o}
+
+\def\Alpha{{\rm A}}
+\def\Beta{{\rm B}}
+\def\Epsilon{{\rm E}}
+\def\Zeta{{\rm Z}}
+\def\Eta{{\rm H}}
+\def\Iota{{\rm I}}
+\def\Kappa{{\rm K}}
+\def\Mu{{\rm M}}
+\def\Nu{{\rm N}}
+\def\Omikron{{\rm O}}
+\def\Rho{{\rm P}}
+\def\Tau{{\rm T}}
+\def\Ypsilon{{\rm Y}} % differs from \Upsilon
+\def\Chi{{\rm X}}
+
+%def\dg{^{\circ}}                   % degrees
+
+%def\1{^{-1}}                       % inverse
+
+\def\*#1{{\bf #1}}                  % boldface e.g. vector
+%def\vi{\mathord{\hbox{\bf\i}}}     % boldface vector \i
+%def\vj{\mathord{\,\hbox{\bf\j}}}   % boldface vector \j
+
+%def\union{\mathbin\cup}
+%def\isect{\mathbin\cap}
+
+\let\so\Longrightarrow
+\let\oso\Longleftrightarrow
+\let\os\Longleftarrow
+
+% := and :<=>
+%def\isdef{\mathrel{\smash{\stackrel{\SS\rm def}{=}}}}
+%def\iffdef{\mathrel{\smash{stackrel{\SS\rm def}{\oso}}}}
+
+\def\isdef{\mathrel{\mathop{=}\limits^{\smash{\hbox{\tiny def}}}}}
+%def\iffdef{\mathrel{\mathop{\oso}\limits^{\smash{\hbox{\tiny %def}}}}}
+
+%def\tr{\mathop{\rm tr}}            % tr[ace]
+%def\ter#1{\mathop{^#1\rm ter}}     % k-ter[minant]
+
+%let\.=\cdot
+%let\x=\times                % ÃƒÂ—Ã‚Â— (direct product)
+
+\def\qed{ ${\S\circ}\!{}^\circ\!{\S\circ}$}
+%def\qed{\vrule height 6pt width 6pt depth 0pt}
+
+%def\edots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}\mkern1mu   %  .shorter
+%   \raise4pt\hbox{.}\mkern1mu                  %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %        .
+%def\fdots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}            %   . ~45Ã‚Â°
+%   \raise4pt\hbox{.}                           %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %       .
+
+\def\mod#1{\allowbreak \mkern 10mu({\rm mod}\,\,#1)}
+% redefines TeX's one using less space
+
+%def\int{\intop\displaylimits}
+%def\oint{\ointop\displaylimits}
+
+%def\intoi{\int_0^1}
+%def\intall{\int_{-\infty}^\infty}
+
+%def\su#1{\mathop{\sum\raise0.7pt\hbox{$\S\!\!\!\!\!#1\,$}}}
+
+\let\frakR\Re
+%let\frakI\Im
+%def\Re{\mathop{\rm Re}\nolimits}
+%def\Im{\mathop{\rm Im}\nolimits}
+%def\conj#1{\overline{#1\vphantom1}}
+%def\cj#1{\overline{#1\vphantom+}}
+
+%def\forAll{\mathop\forall\limits}
+%def\Exists{\mathop\exists\limits}
+
+%%%% PICTURES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\cent{\makebox(0,0)}
+
+%def\node{\circle*4}
+%def\nOde{\circle4}
+
+%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\opcit{[{\it op.\,cit.}]}
+\def\bitem#1{\bibitem[#1]{#1}}
+\def\name#1{{\sc #1}}
+\def\book#1{{\sl #1\/}}
+\def\paper#1{``#1''}
+\def\mag#1{{\it #1\/}}
+\def\vol#1{{\bf #1}}
+\def\isbn#1{{\small\tt ISBN\,\,#1}}
+\def\seq#1{{\small\tt #1}}
+%def\url<{\verb>}
+%def\@cite#1#2{[{#1\if@tempswa\ #2\fi}]}
+
+%%%% VERBATIM CODE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\"{\verb"}
+
+%%%% AD HOC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% WORDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \hyphenation{pre-sent pre-sents pre-sent-ed pre-sent-ing
+% re-pre-sent re-pre-sents re-pre-sent-ed re-pre-sent-ing
+% re-fer-ence re-fer-ences re-fer-enced re-fer-encing
+% ge-o-met-ry re-la-ti-vi-ty Gauss-ian Gauss-ians
+% Des-ar-gues-ian}
+
+\def\oord/{o{\trema o}rdin\-ate}
+% usage: C\oord/s, c\oord/.
+% output: co\"ord... except when linebreak at co-ord...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                                          %
+                                          %          ^ ^
+\catcode`\@=12                            %          ` '
+                                          %         ->*<-
+                                          %           ~
+\begin{document}
+\PMlinkescapeword{blue}
+\PMlinkescapeword{chart}
+\PMlinkescapeword{closed}
+\PMlinkescapeword{completes}
+\PMlinkescapeword{consistent}
+\PMlinkescapeword{developments}
+\PMlinkescapeword{difference}
+\PMlinkescapeword{differences}
+\PMlinkescapeword{divide}
+\PMlinkescapeword{force}
+\PMlinkescapeword{independent}
+\PMlinkescapeword{isolated}
+\PMlinkescapeword{join}      % garden sense, not as technical terms...
+\PMlinkescapeword{joins}
+\PMlinkescapeword{level}
+\PMlinkescapeword{map}
+\PMlinkescapeword{mean}
+\PMlinkescapeword{meet}
+\PMlinkescapeword{meets}
+\PMlinkescapeword{opposite}
+\PMlinkescapeword{order}
+\PMlinkescapeword{residues}  % gives complex analysis one, not (mod p) one
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{scheme}
+\PMlinkescapeword{sections}
+\PMlinkescapeword{separated}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{side}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{size}
+\PMlinkescapeword{sum}
+\PMlinkescapeword{sums}
+\PMlinkescapeword{state}
+\PMlinkescapeword{term}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{times}
+\PMlinkescapeword{triangle}
+
+\section*{Colorings of plane graphs} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\small\em This is the first draft of this write-up. Corrections of its contents and suggestions are welcomed.}
+
+% A {\bf \PMlinkid{planar}{1826} \PMlinkname{graph}{Graph}}
+A planar graph
+is a graph that can be embedded on a sphere or plane.
+% A {\bf \PMlinkid{plane graph}{1826}}
+A plane graph
+is such a graph together with a choice how to embed it; its {\bf faces}
+are the resulting regions of surface separated by edges.
+
+A (face, edge, vertex etc.) {\bf coloring} is just a mapping from the relevant
+set of items to a small set of other things traditionally given the names of
+colors.
+
+In graph theory however there is usually an extra condition a coloring has to
+satisfy to be valid. Unless specified otherwise, the condition is that
+adjacent items must be given distinct colors --- two edges meeting at a vertex
+must have different colors, two faces with a common border must too.
+
+\vfill\pagebreak
+\subsection*{Face colorings}
+
+Because of the history of the subject, being couched in terms of coloring
+maps, faces have often been called ``countries'' and the plane graph a ``map''.
+
+A word on ``border'' in the context of face coloring. For countries to be
+considered adjacent it is not enough to just meet at one point. The reason is
+that that would make coloring problems uninteresting: divide a region into as
+many countries as you want, arranged like a pie chart, and any number of colors
+would be required if touching at a point did qualify.
+
+So in a map which has a portion shaped like $\times$, both the North and
+South countries border both the East and West countries, but South does
+not border North so they're allowed to have the same color, and West is
+likewise allowed to have the same color as East. Now consider a small border
+adjustment from $\times$ to \raise1.4pt\hbox{$\S>\!-\!<$} where we've added one
+extra constraint: now North and South must have different colors. If it was
+possible to color the old map with a certain number of colors we can't be
+certain we can still color the new map. Conversely however, if we can color
+the new map we can certainly color the old map (using the same color
+assignment even).
+
+If we are given any bridgeless planar graph $G$ (not necessarily trivalent),
+we can give any vertex with valency 4 this treatment, splitting it into two
+new vertices of valency 3 and a short new stretch of border, adding a
+constraint on coloring. Vertices with valency $v\gt4$ can be given the same
+treatment in $v-3$ steps, creating $v-2$ vertices of valency 3 and $v-3$ new
+pieces of border which only makes the problem harder: if we can still color
+this, we can also color the original.
+
+2-valent vertices are simply funny features along an ongoing border
+between two countries, and 0-valent vertices funny features within the
+landscape. Removing them does not alter the coloring exercise. And finally
+1-valent vertices create a bridge; we do not want them nor do we want any
+other bridges, because at such an edge a country meets {\em itself\/} on the
+other side of the border, making it impossible to have a color change there.
+This is why face coloring theorems are stated for bridge-free graphs only.
+
+By now we have only vertices left of valency 3 so our new graph $G^{\sf Y}$ is
+trivalent (cubic). And if it can be $n$-colored (for any $n$), then so can $G$.
+This completes the proof of
+
+{\bf Lemma 0}$\quad$ Any bridge-free planar graph can be 4-colored $\oso$
+any bridge-free planar trivalent graph can be 4-colored.
+
+as the $\os$ direction was argued above, and the $\so$ direction is
+immediate ({\em any\/} includes all the trivalent ones).~\qed
+
+Note the lemma does not state either side of the ``iff\/'' is true, merely
+that they are equivalent. The left-hand side is known as the {\bf four-color
+theorem}; having the right-hand side equivalent to it gives statements on
+trivalent graphs a more general importance.
+
+\vfill\pagebreak
+One last point: we will consider the graph drawn on a sphere. Or, what is the
+same thing: if we draw it on a plane, we will also consider the infinite outside
+area to be a face. If you were thinking of your graph as a map subdividing a
+finite continent into countries just call the outside Oceania and color it
+blue.
+
+This convention too only makes the coloring harder: considering the outside to
+be a colorless sea allows countries with a shoreline to be of all four colors,
+while coloring Oceania (say) blue only allows those countries three different
+colors (just like any other set of countries with a common neighbour). Again,
+if we can color this, we can color plane maps of any other convention.
+
+\vfill\pagebreak
+\subsection*{Edge colorings}
+
+A {\bf Tait coloring} of a trivalent graph is a coloring of its edges with
+only three colors, such that at each vertex the colors of the three edges
+there are different. After Peter G.\ Tait (1831--1901), Scottish physicist (\PMlinkexternal{bio at St Andrews}{http://www-history.mcs.st-andrews.ac.uk/Mathematicians/Tait.html}), who in 1880 proved the following
+
+{\bf Theorem 1 (Tait)}$\quad$ A bridge-free trivalent plane graph can be
+face-colored with 4 colors if and only if it can be edge-colored with 3
+colors.
+
+We will not give our four colors such poetic names as red or green, instead
+they will be given two-bit labels (0,0) and (0,1) and (1,0) and (1,1), formally
+vectors in $\Fset_2^2$, the vector space of dimension 2 over the finite field
+of order 2.
+
+Edge colors used will be the {\bf difference} between the face colors on
+either side of the edge. Because $\Fset_2^2$ has characteristic 2, differences
+are the same thing as sums (so it doesn't matter which we subtract from which).
+They are carried out (mod~2) on the individual c\oord/s (in terms of bit
+patterns: addition without internal carry, that is, the {\sc xor} operation).
+
+Note that the assignment of labels to {\em face\/} colors is quite
+arbitrary (e.g.\ $(0,0)$ has no special significance) but the
+assignment to {\em edge\/} colors is less arbitrary: here ${\bf0}=(0,0)$ really
+means something. It means a border between faces of the same color, exactly
+the thing that shouldn't happen. You could say face colors are
+``position vectors'' (where $(0,0)$ is an arbitrary point) while
+edge colors are ``free vectors'', differences between position vectors.
+
+Proof of $\so$: let $F$ and $E$ be the sets of faces and edges,
+let $f : F\to\Fset_2^2$ be a valid face-4-coloring, and
+$g : E\to\Fset_2^2$ the edge coloring we are trying to construct from $f$.
+Let $e$ be any edge, and $\alpha$ and $\beta$ the faces it separates. Now
+$f$ being valid means $f(\alpha)\ne f(\beta)$ so $g(e) = f(\alpha) - f(\beta)
+\ne {\bf0}$. This means $g$ really is an edge-3-coloring
+$g : E\to\Fset_2^2\setminus\{{\bf0}\}$.
+
+It is also easy to see $g$ is a valid coloring: let $d$ and $e$ be any two
+edges meeting at vertex {\sc p} say, and let $\alpha$, $\beta$ and $\gamma$
+be the three faces found around {\sc p} such that $e$ separates $\alpha$
+and $\beta$, and $d$ separates $\alpha$ and $\gamma$. By $f$ being valid we
+have $f(\beta)\ne f(\gamma)$ from which
+$g(e) = f(\beta)-f(\alpha) \ne f(\gamma)-f(\alpha) = g(d)$.~\qed
+
+\vfill\pagebreak
+Note in passing that the three edge colors around {\sc p} all being different
+(and nonzero) means they must be (0,1), (1,0), (1,1) in some order. That means
+they sum to ${\bf0}$ in a valid edge-3-coloring, a result we will use.
+
+To construct $f$ from $g$ you might pick a color, give it to the country
+you're in, and travel the world. At each border, add its edge color to the
+previous face color and assign that to the new country. I called edge colors
+differences rather than sums for that reason: if a journey ${\mit\Gamma}$
+visits faces $\alpha\beta\gamma\dots\psi\omega$, and the face colors everywhere
+have to be such that the edges crossed have colors $f(\beta)-f(\alpha)$,
+$f(\gamma)-f(\beta)$, \dots\ $f(\omega)-f(\psi)$ then the color
+$f(\omega)$ reached should be $f(\alpha) + \sum$ colors of edges crossed.
+
+So we construct $f$ by ``integrating'' $g$ (and indeed, ``plus a constant'',
+the arbitrary color of the first country). If we {\em can\/} do that without
+contradiction between all possible journeys, this ``potential'' $f$ will
+automatically have $g$ as its ``gradient'' as it should. Remains to prove
+the ``integral'' is independent of path taken, in other words that circular
+paths ``integrate'' to zero.
+
+Thus far we haven't used the fact that we're in a sphere or plane!
+Of course, the use of ``faces'' at all means we have an embedding of a graph
+in some surface; the fact we didn't use yet is that the surface has genus~0.
+Indeed, the forward half of Tait's theorem (valid $f$ implies valid $g$)
+is true in surfaces of any genus. For the reverse half (valid $g$ implies
+valid $f$) we need to use the topological properties of the plane or sphere.
+
+There are various ways of doing that. One wonderfully simple proof found in
+Wilson~\cite{Wil02}, adapted here to use the $\Fset_2^2$ notation, relies on
+the graph being embedded in a plane. For a graph embedded in a sphere that
+entails choosing a country and puncturing the sphere in the interior of
+that country; it corresponds to the choice of giving that country the face
+color (0,0).
+
+Proof of $\os$: the subgraph $G'$ formed by edges of the two colors (1,any)
+is regular 2-valent. So is the subgraph $G''$ formed by edges of the two
+colors (any,1). Such graphs consist of disjoint cycles. In a plane, such
+cycles have a well-defined interior and exterior. Every face $\alpha$ has a
+number $g'$ counting the number of (nested) cycles of $G'$ it is inside, and
+similarly a number $g''$ with respect to $G''$.
+
+Let $r'$ and $r''$ be the residues of $g'$ and $g''$ (mod~2). Give the face
+the color $(r',r'')$. This is clearly a face-4-coloring. And it is valid:
+to reach any neighbouring face $\beta$ we cross an edge with color $(e',e'')$
+where $e'=1$ iff $\beta$ is inside a number of $G'$ cycles that differs by
+1 from $g'$, likewise $e''=1$ iff $\beta$ is inside a number of $G''$ cycles
+that differs by 1 from $g''$. So $\beta$ has color $(r'+e',r''+e'')$ and we
+know $e'$ and $e''$ are not both zero.~\qed
+
+\vfill\pagebreak
+Tait himself hoped to prove face-4-colorability, via edge-3-colorability, in
+the following way.
+
+{\bf Lemma 2 (Tait)}$\quad$ A trivalent plane graph that has a Hamiltonian cycle can be edge-colored with 3 colors.
+
+A Hamiltonian cycle is a closed path that visits every vertex exactly once
+(and yes, {\em that\/} Hamilton). We dropped the ``bridgeless'' qualifier
+because having a cycle in which every vertex is involved means no bridges:
+for any vertices {\sc p} and {\sc q} you can travel between them via the
+Hamiltonian cycle, and back via all different edges using the other half of
+the cycle. That would be impossible with a bridge: pick {\sc p} and {\sc q}
+either side of the bridge, now two routes between them would have to use the
+same edge (that bridge).
+
+Note also that in a trivalent graph the number of edges $m$ equals $3n/2$
+where $n$ is the number of vertices. But $m$ is an integer, so $n$ is even.
+
+Proof of lemma: the Hamiltonian cycle, having $n$ vertices, also has $n$ edges,
+which is even. Color them alternatingly red and green. Each vertex now has one
+red and one green edge; color the third edge blue.~\qed
+
+So Tait next tried to prove every planar graph has a Hamiltonian cycle.
+Unfortunately, some don't.
+
+\vfill\pagebreak
+\subsection*{A vertex coloring}
+
+Curiously, the property that a graph is face-4-colorable, which turned out to
+be equivalent to being edge-3-colorable by Tait's theorem, is also equivalent
+to admitting a certain kind of vertex-2-coloring. This seems to have been
+discovered independently a few times, most notably by Percy J.\ Heawood (\PMlinkexternal{bio at St Andrews}{http://www-history.mcs.st-andrews.ac.uk/Mathematicians/Heawood.html}).
+
+We can call the vertex colors black and white, but think of them as representing values $+1$ and $-1$ interpreted as residues (mod~3).
+This is not the kind of coloring where adjacent items have to be of different
+color! It does have another more global constraint though: around any face, the vertex colors must sum to 0 (mod~3).
+
+{\bf Theorem 3}$\quad$ A bridge-free trivalent plane graph can be edge-colored
+with 3 colors if and only if it can be vertex-colored in the way just
+explained.
+
+Rename the three edge colors to 0, 1 and 2 interpreted as residues (mod~3).
+These are again ``position vector''-like; there's no special significance
+to being 0. Let $g_3$ be this new relabeled verion of the old $g$.
+
+We construct a vertex coloring $h_3 : V \to \{+1,-1\}$ from $g_3$ as follows:
+assign color $+1$ to a vertex if the edges there have colors 0, 1, 2 going
+clockwise; $-1$ if counterclockwise. If the edge coloring $g_3$ is valid,
+it is possible to define an $h_3$ this way.
+
+Note this makes the vertex colors {\em differences\/} of edge colors in the
+following sense. If we travel around a face counterclockwise (i.e.\ always
+turning left) and $d$ and $e$ are two successive edges joined at vertex
+{\sc p}, then $g_3(e)-g_3(d) = h_3(\hbox{\sc p})$. If instead we turn right to edge $x$ say, we get $g_3(x)-g_3(d) = -h_3(\hbox{\sc p})$.
+
+Proof of $\so$: Based on $g_3$, define $h_3$ as above. To prove it is valid.
+Pick any face $\alpha$, and any edge $e$ in it, let $g_3(e) = c$. Go round
+the face counterclockwise one whole cycle. Now
+$$
+  c \;+ \sum_{{\SS\rm V}\in\alpha} h(\hbox{\sc v}) \;=\; c
+$$
+(mod~3). Which proves the sum of $h_3$ values around the cycle is zero.~\qed
+
+The same argument works in reverse: if $h_3$ is a valid vertex coloring then,
+in any one cycle, we could assign an arbitrary color $c$ to an edge $e$ and,
+going round counterclockwise finding vertices {\sc p}, {\sc q}\dots\ we could
+assign to the edges after $e$ the colors $c+h_3(\hbox{\sc p})$,
+$c+h_3(\hbox{\sc p})+h_3(\hbox{\sc q})$, and so on. Because $h_3$ sums to zero
+around the cycle, it consistently assigns edge colors (e.g.\ edge $e$ again
+gets color $c$ once around the cycle) and because $h_3$ is never zero, we
+never get the same edge color for successive edges.
+
+But this isn't yet enough. Given an $h_3$ satisfying its rule, we can start
+reconstructing $g_3$ by this ``integration'' process. We just saw it works
+locally on the level of single face boundary cycles. As with the previous
+theorem however, the problem with ``integrating'' is to prove this can be done
+unambiguously on a global scale, for which the topological properties of
+genus~0 surfaces must again crop up somehow.
+
+\vfill\pagebreak
+I will choose to use the following property of planes and spheres:
+
+{\bf Lemma 4}$\quad$ With a plane graph of $u$ faces on a genus 0 surface, it is possible to enlarge a collection of 1 face to $u-1$ faces, one face at a time, in such a way that the area covered remains simply connected throughout.
+
+Simply connected means that the area covered is topologically equivalent to a
+disk, that it doesn't enclose any isolated area. Its boundary is a simple
+closed curve. Imagine the area covered by the collection of faces as shaded.
+On a sphere, the area covered being simply connected means there is a single
+connected shaded area inside the boundary and a single connected unshaded area
+outside, and that the boundary is {\em one\/} closed curve. Of course, while
+the outside starts off big, it is reduced to just one face by the time the
+inside has reached $u-1$ faces.
+
+Proof of lemma: start with one face shaded. At each stage, there will be
+other faces immediately bordering the area shaded thus far. Choose one,
+call it $\alpha$. If accreting it to the side of the growing shaded area
+would leave it simply connected, take it and move to the next step.
+
+Now suppose $\alpha$ misbehaves, that adding it would enclose (one or more)
+unshaded region(s) $\frakR$. Of course on a sphere we are already
+enclosing an unshaded region, the whole outside. So what is really happening
+if $\alpha$ misbehaves is that adding it would split the remaining outside
+into two (or more) pieces. Choose any one of those pieces and let that be
+our region $\frakR$.
+
+Note that each of those pieces, including $\frakR$, contain some faces that
+border the already shaded area. The way it works is this: The boundary of the
+shaded region has $k$ stretches where it borders $\alpha$, and $k\ge1$ because
+$\alpha$ was chosen as a face that borders the shaded area. If $k=1$ it doesn't
+misbehave; if $k\gt1$ then adding it would split the new outside into $k$
+regions: in between the $k$ stretches where the shaded area borders $\alpha$
+there are $k$ stretches where each time it would border one of those regions.
+
+Choose a face $\beta$ from the faces of $\frakR$ that border the shaded
+region, and try adding it. If that would fail too it would be by splitting
+the outside in more than one region. Choose one of those that does not contain
+$\alpha$ and call it $\frakR'$. Because it does not include $\alpha$, it is
+wholly contained within one of the regions adding $\alpha$ would have created,
+namely $\frakR$. In fact $\frakR\,'\subseteq\frakR\setminus\{\beta\}$ i.e.\
+it has at least one fewer country than $\frakR$.
+
+Choose a face $\gamma$ from the faces of $\frakR'$ that border the shaded
+region, if this doesn't work either choose a $\frakR''$ that does not contain
+$\beta$, and so on.
+
+Now $\frakR$ only has finitely many faces, and $|\frakR|\gt|\frakR'|\gt|\frakR''|\dots$.
+So things can go wrong only a finite number of times. We end up with a country
+that can be added without budding off a piece of outside.~\qed
+
+\vfill\pagebreak
+Now we can finish our proof of Theorem~3.
+
+Proof of $\os$: Pick one face. We saw we could pick an arbitrary color for one
+of its edges and then continue assigning $g_3$ colors based on $h_3$ going
+round, in a valid way. Shade the face to mark it as ``done''.
+
+Now pick additional faces along the lines of lemma~4. Keeping the boundary of
+the shaded area simply connected means that each new face borders the previous
+shaded area along a single stretch of boundary (say edges $a\dots m$ going
+counterclockwise), and this means the portion of the boundary of the new face
+where the edges ($n\dots z$ say) don't have colors yet is also a single stretch.
+
+This means we can edge-color the additional face validly: give $a$ the color
+it already has, and go round turning left each time assigning edge colors
+based on $h_3$. This must agree with the colors for $b\dots m$ we already
+assigned consistently, and gives new colors for $n\dots z$ (which are now also
+consistent with the rest) and gives the same color again to $a$ because $h_3$
+is valid.
+
+Once we have covered $u-1$ faces, the last face already has all its edges
+colored, validly.~\qed
+
+It's a pity there doesn't seem to be an easy way to find such a vertex
+coloring from scratch (thereby making the four color theorem much more simple to prove). There cannot be a very obvious way to find one. For example, valid
+face-4-colorings and edge-3-colorings of the dodecahedron correspond to a
+vertex-2-coloring that uses 4 of one color and 16 of the other color. It's hard to see how any automatic scheme could spontaneously break the symmetry and
+treat 4 of those 20 vertices differently.
+
+The four-color theorem says every bridgeless trivalent plane graph has a valid
+face-4-coloring. It is equivalent to saying it has a valid edge-3-coloring.
+And now it is equivalent to saying it has a valid vertex-2-coloring. The next
+thing would be a valid something-1-coloring, and it shouldn't be too hard to
+prove that things can all be colored with 1 color! Unfortunately, we seem to
+have run out of graph elements to take the place of that ``something''.
+
+\vfill\pagebreak
+\subsection*{A corollary: $3n$-gon faces}
+
+Consider a valid vertex-2-coloring $h_3$, with some black ($+1$) and some
+white ($-1$) vertices. Around each face, they sum to 0 (mod~3).
+
+Now consider the following {\bf modification}: pick any vertex, and replace it
+by a tiny triangular country. If we give the three new vertices the opposite
+color from the old vertex, the coloring is still valid (in each of the three
+adjoining faces, one $\pm1$ is replaced by two $\mp1$ which counts as the same).
+
+Conversely, if the graph had any triangle face we could replace it by a single
+vertex. The only way three $+1$ or $-1$ can add to zero (mod~3) is if they
+were all of the same sign, so we replace it by one vertex of the opposite
+sign.
+
+Now suppose we expand all white vertices to black triangles. Or vice versa. We
+saw each single modification leaves a valid vertex coloring valid. So once
+we're done and only have vertices of the same color, the coloring must
+still be valid. That can only mean one thing: every face now has a number of
+vertices divisible by 3. Not only the triangles we added, but also the
+original faces, which must have grown to 6-, 9-, 12- etc.\ -gons.
+
+{\bf Theorem 5}$\quad$ A valid vertex coloring as in Theorem~3 exists if and only if it is possible to modify the plane graph, turning some vertices into triangles, in such a way that we end up with only faces whose size is divisible by~3.
+
+Proof of $\so:$ We just did it.~\qed
+
+Proof of $\os:$ We are given such a sequence of modifications where every face
+ended up as a $3n$-gon. It is very easy to give this a valid vertex-2-coloring:
+just give every vertex the same color. Now undo the modification step by step,
+each time coloring the new single vertex the opposite color from the triangle
+it replaced. Modifications and their reversals preserve the validity of
+vertex-2-colorings, so by the time we have undone every modification the graph
+is still validly colored.~\qed
+
+This gives yet another corollary of the four color theorem: that we can always
+find such a modication to $3n$-gon faces.
+
+\vfill\pagebreak
+\subsection*{Duals}
+
+The {\bf dual} $G^*$ of a bridgeless plane graph $G$ is formed as follows:
+place one vertex of $G^*$ inside each face of $G$. For each edge $e$ of $G$,
+separating faces $\alpha$ and $\beta$, draw one edge of $G^*$ from its vertex
+in $\alpha$ to its vertex in $\beta$, in such a way that the only edge of $G$
+it crosses is $e$, and so that it crosses $e$ at a point other than its
+endpoints.
+
+This construction creates faces of $G^*$ that each enclose one vertex of $G$
+and every one of those vertices is thus enclosed, making $G$ likewise a dual
+of $G^*$.
+
+To prove that assertion: let {\sc p} be a vertex of $G$, surrounded
+by faces $\alpha$, $\beta\dots$ and with edges $d$, $e\dots$ radiating from
+it. All those edges will be crossed by edges of $G^*$ forming a closed cycle
+because they connect the vertices of $G^*$ placed inside $\alpha$, $\beta\dots$
+going round. There are no other edges of $G^*$ crossing our edges, and no
+edges of $G$ nearer to {\sc p} to cross, so the cycle forms the boundary of a
+face. This shows every vertex of $G$ has a dual face of $G^*$.
+
+To show every face of $G^*$ is now accounted for, we can invoke Euler's
+formula. $G$ has $n$ vertices, $m$ edges, $f$ faces, with $n-m+f=2$. For
+$G^*$ we have by construction $n^*=f$ vertices, $m^*=m$ edges, and an unknown
+number $f^*$ of faces. By the previous argument there are at least the $n$
+faces with vertices of $G$ in it. But by $n^*-m^*+f^*=2$ (and $n^*=f$ and
+$m^*=m$ and $n-m+f=2$) $f^*$ must equal that $n$.~\qed
+
+Modern formulations of the four color theorem usually take the dual view. In
+stead of a face-4-coloring, a vertex-4-coloring. Note this is different from
+the vertex-2-coloring in the previous sections; it has the standard constraint
+that adjacent vertices must have different colors.
+
+The dual expression of lemma~0 is now that it is sufficient to consider plane
+graphs where every face is triangular (the dual of the $\times$ to
+\raise1.4pt\hbox{$\S>\!-\!<$} machinations is tiling up a $v$-gon into
+$v-2$ triangles).
+
+\vfill\pagebreak
+\subsection*{History}
+
+The subject has colorful beginnings. Francis Guthrie was born in England in
+1832, obtained firsts in both mathematics and law, taught mathematics in South
+Africa until his death in 1899 and also found the time to get involved with
+railroad construction and to make his name in botany. One day he noticed
+something when coloring a map of the counties of England --- the original
+four-color conjecture. And on 23 October 1852, in London, his brother Frederick
+asked his own math professor Augustus de Morgan about that observation
+(``With my brother's permission''). De Morgan consulted Hamilton (``A
+student of mine asked me to day to give him a reason for a fact which I did
+not know was a fact --- and do not yet.''). The latter didn't think much of
+it and quipped he didn't have time for that ``quaternion of colours''.
+The problem didn't go away though, Cayley dug it out again, Kempe gave his
+flawed proof that stood for 11 years, and the rest is history~\cite{FW77,FF94}.
+
+The four-color conjecture (now four-color theorem) has loomed large over graph theory. The story how Kenneth Appel, Wolfgang Haken and John Koch found the proof by computer in 1976 is well known. Perhaps it has been fortunate the theorem resisted proof so long, because it has been a motivating force for many exciting developments in graph theory. This includes important results in graph coloring such as Vizing's theorem, but also work that transcends the bounds of graph theory, such as that by Whitney and Tutte on what is now called matroids.
+
+And the future? Hadwiger's conjecture can be regarded as a generalisation of the four-color theorem. And it is still open.
+
+\vfill\pagebreak
+\raggedright
+\begin{thebibliography}{MST73}
+
+\bitem{Ore67} \name{Oystein~Ore}, \book{The Four-Color Problem},\\
+              Acad.~Pr.~1967 without \isbn{0\,12\,528150\,1}\\
+              {\it Long the standard work on its subject, but written before
+              the theorem was proven. Has a wealth of other graph theory
+              material.}
+
+\bitem{FW77}  \name{S.~Fiorini} and \name{R.~J.~Wilson},
+              \book{Edge-colourings of graphs}\\
+              (Research notes in math.~\vol{16}), Pitman~1977,
+              \isbn{0\,273\,01129\,4}\\
+              {\em The first ever book devoted to edge-colorings,
+              including material previously found only in Russian
+              language journal articles.}
+
+\bitem{SK77}  \name{Thomas~L.~Saaty} and \name{Paul~C.~Kainen},\\
+              \book{The Four-Color Problem: assaults and conquest},\\
+              McGraw-Hill 1977; repr.\ Dover 1986,
+              \isbn{0\,486\,65092\,8}\\
+              {\em Wonderfully broad, not only focussing on the now standard
+              route to the Appel-Haken proof but also giving a wealth of
+              other material related to colorings.}
+
+\bitem{FF94}  \name{Rudolf~Fritsch} and \name{Gerda~Fritsch},\\
+              \book{Der Vierfarbensatz}, Brockhaus 1994;\\
+              \book{The Four-Color Theorem}, tra.\ \name{Julie Peschke},\\
+              Springer~1998, \isbn{0-387-98497-6}\\
+              {\em History of the theorem with biographical cameos by
+              G.\,Fritsch, thorough topological treatment of plane
+              graph embedding and details of the Appel-Haken proof by
+              R.\,Fritsch.}
+
+\bitem{Wil02} \name{Robert~A.~Wilson},
+              \book{Graphs, Colourings and the Four-colour Theorem},
+              Oxford~Univ.~Pr.~2002, \isbn{0\,19\,851062\,4} (pbk),
+{\tt\PMlinkexternal{http://www.maths.qmul.ac.uk/~raw/graph.html}{http://www.maths.qmul.ac.uk/~raw/graph.html}}
+              (errata \&c.)\\
+              {\em A good general course in graph theory, with special focus on
+              the four-color theorem and details of the Appel-Haken proof.}
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

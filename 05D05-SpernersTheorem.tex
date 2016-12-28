@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpernersTheorem}
+\pmcreated{2013-03-22 13:51:57}
+\pmmodified{2013-03-22 13:51:57}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{Sperner's theorem}
+\pmrecord{7}{34606}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05D05}
+\pmclassification{msc}{06A07}
+%\pmkeywords{antichain}
+%\pmkeywords{maximal antichain}
+\pmrelated{LYMInequality}
+\pmdefines{Sperner family}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\newtheorem*{theorem}{Theorem}
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand*{\floor}[1]{\left\lfloor #1\right\rfloor}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{refinements}
+What is the size of the largest family $\mathcal{F}$ of subsets of
+an $n$-element set such that no $A\in \mathcal{F}$ is a subset of
+$B\in \cal{F}$? Sperner \cite{cite:sperner_antichain} gave an
+answer in the following elegant theorem:
+\begin{theorem}
+For every family $\mathcal{F}$ of incomparable subsets of an
+$n$-set, $\abs{\mathcal{F}}\leq \binom{n}{\floor{n/2}}$.
+\end{theorem}
+A family satisfying the conditions of Sperner's theorem is usually
+called \emph{Sperner family} or \emph{antichain}. The later
+terminology stems from the fact that subsets of a finite set
+ordered by inclusion form a Boolean lattice.
+
+There are many generalizations of Sperner's theorem. On one hand,
+there are refinements like LYM inequality that strengthen the
+theorem in various ways. On the other hand, there are
+generalizations to posets other than the Boolean lattice. For a
+comprehensive exposition of the topic one should consult a
+well-written monograph by Engel\cite{cite:engel_sperner}.
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:bollobas_comb}
+B{\'e}la Bollob{\'a}s.
+\newblock Combinatorics: Set systems, hypergraphs, families of vectors, and
+  combinatorial probability.
+\newblock 1986.
+\newblock \PMlinkexternal{Zbl
+  0595.05001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an%
+=0595.05001}.
+
+\bibitem{cite:engel_sperner}
+Konrad Engel.
+\newblock {\em Sperner theory}, volume~65 of {\em Encyclopedia of Mathematics
+  and Its Applications}.
+\newblock Cambridge University Press.
+\newblock \PMlinkexternal{Zbl
+  0868.05001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an%
+=0868.05001}.
+
+\bibitem{cite:sperner_antichain}
+Emanuel Sperner.
+\newblock {E}in {S}atz {\"u}ber {U}ntermengen einer endlichen {M}enge.
+\newblock {\em Math. Z.}, 27:544--548, 1928.
+\newblock \PMlinkexternal{Available online}{http://www.emis.de/cgi-bin/jfmen/MATH/JFM/quick.html?first=1&maxdocs=20&type=html&an=JFM\%2054.0090.06&format=complete} at
+  \PMlinkexternal{JFM}{http://www.emis.de/projects/JFM/}.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

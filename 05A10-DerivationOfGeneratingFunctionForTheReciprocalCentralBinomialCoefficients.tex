@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfGeneratingFunctionForTheReciprocalCentralBinomialCoefficients}
+\pmcreated{2013-03-22 19:04:58}
+\pmmodified{2013-03-22 19:04:58}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{derivation of generating function for  the reciprocal central binomial coefficients}
+\pmrecord{4}{41971}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmclassification{msc}{05A15}
+\pmclassification{msc}{05A19}
+\pmclassification{msc}{11B65}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\BQ}{\mathbb{Q}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\begin{document}
+According to the \PMlinkescapetext{parent} article, the ordinary generating function for $\dbinom{2n}{n}^{-1}$ is
+\[
+  \frac{4\left(\sqrt{4-x}+\sqrt{x}\arcsin\left(\frac{\sqrt{x}}{2}\right)\right)}{(4-x)^{3/2}}
+\]
+To see this, let $C_n = \binom{2n}{n}^{-1}$, and $C(x) = \sum_{n\geq 0}C_nx^n$ its ordinary generating function. Then
+\begin{align*}
+  C_{n+1} &= \dbinom{2n+2}{n+1}^{-1} = \frac{(n+1)!(n+1)!}{(2n+2)!} \\
+          & = \frac{(n+1)(n+1)}{(2n+2)(2n+1)}\cdot \frac{n!n!}{(2n)!} \\
+          &= \frac{n+1}{2(2n+1)}\cdot C_n
+\end{align*}
+Thus
+\[
+  (4n+2)C_{n+1} = (n+1)C_n
+\]
+so that
+\[
+  \sum_{n\geq 0} (4n+2)C_{n+1}x^n = \sum_{n\geq 0} (n+1)C_nx^n
+\]
+A little algebra gives
+\[
+  4\sum_{n\geq 0} (n+1)C_{n+1}x^n - 2\sum_{n\geq 0}C_{n+1}x^n = \sum_{n\geq 0}nC_nx^n + \sum_{n\geq 0}C_nx^n
+\]
+so that
+\[
+  4C'(x) - \frac{2}{x}(C(x)-1) = xC'(x) + C(x)
+\]
+and, collecting terms,
+\[
+  (4x-x^2)C'(x) = (x+2)C(x)-2
+\]
+We now have a first-order linear ODE to solve. Put it in the form
+\[
+  C'(x) + \frac{-x-2}{x(4-x)}C(x) = \frac{-2}{4x-x^2}
+\]
+and we must now integrate the coefficient of $C(x)$. Expand by partial fractions and integrate to get
+\[
+  \int \frac{-x-2}{x(4-x)} dx = \ln\left(\frac{(4-x)^{3/2}}{\sqrt{x}}\right)
+\]
+Thus the solution to the equation is
+\begin{align*}
+  C(x) &= \frac{\sqrt{x}}{(4-x)^{3/2}}\left(k + \int \frac{(4-x)^{3/2}}{\sqrt{x}}\cdot 
+                       \frac{-2}{x(4-x)}dx\right) \\
+       &= \frac{k\sqrt{x}}{(4-x)^{3/2}} - \frac{2\sqrt{x}}{(4-x)^{3/2}}\int\frac{\sqrt{4-x}}{x^{3/2}}dx \\
+       &= \frac{k\sqrt{x}}{(4-x)^{3/2}} - \frac{2\sqrt{x}}{(4-x)^{3/2}}\left(\frac{-2(4-x)}{\sqrt{x(4-x)}}
+                       - \arcsin\left(\frac{x}{2}-1\right)\right)\\
+       &= \frac{4}{4-x} + \frac{\sqrt{x}}{(4-x)^{3/2}}\left(k+2\arcsin\left(\frac{x}{2}-1\right)\right) 
+\end{align*}
+To determine the constant $k$, note that we should have $C'(x)\big\lvert_{x=0}=\frac{1}{2}$; looking at $\lim_{x\to 0}C'(x)$ we see that for $k=\pi$ this equation holds. Thus
+\[
+  C(x) = \frac{4}{4-x} + \frac{\sqrt{x}}{(4-x)^{3/2}}\left(\pi+2\arcsin\left(\frac{x}{2}-1\right)\right)
+\]
+We show below that the following is an identity:
+\[
+  \sqrt{\frac{z+1}{2}} = \sin\left(\frac{\pi}{4} + \frac{1}{2}\arcsin(z)\right)
+\]
+Assuming that result, substitute $\frac{x}{2}-1$ for $z$ and simplify to get
+\[
+  \frac{\sqrt{x}}{2} = \sin\left(\frac{\pi}{4} + \frac{1}{2}\arcsin\left(\frac{x}{2}-1\right)\right)
+\]
+so that
+\[
+  4\arcsin\left(\frac{\sqrt{x}}{2}\right) = \pi + 2\arcsin\left(\frac{x}{2}-1\right)
+\]
+and then
+\begin{align*}
+  C(x) &= \frac{4}{4-x}+\frac{\sqrt{x}}{(4-x)^{3/2}}\left(4\arcsin\left(\frac{\sqrt{x}}{2}\right)\right) \\
+       &= \frac{4\left(\sqrt{4-x} + \sqrt{x}\arcsin\left(\frac{\sqrt{x}}{2}\right)\right)}{(4-x)^{3/2}}
+\end{align*}
+as desired.
+
+Finally, to prove the identity, first expand the right-hand \PMlinkescapetext{side} using the formula for $\sin(a+b)$, and then apply the half-angle formulas:
+\begin{align*}
+  \sin\left(\frac{\pi}{4} + \frac{1}{2}\arcsin(z)\right)
+     &= \frac{\sqrt{2}}{2}\left(\cos\left(\frac{1}{2}\arcsin(z)\right) + \sin\left(\frac{1}{2}\arcsin(z)\right)\right) \\
+     &= \frac{\sqrt{2}}{2}\left(\sqrt{\frac{1+\cos(\arcsin(z))}{2}} + \sqrt{\frac{1-\cos(\arcsin(z))}{2}}\right) \\
+     &= \frac{\sqrt{2}}{2}\left(\sqrt{\frac{1+\sqrt{1-z^2}}{2}} + \sqrt{\frac{1-\sqrt{1-z^2}}{2}}\right) \\
+     &= \frac{1}{2}\left(\sqrt{1+\sqrt{1-z^2}}+\sqrt{1-\sqrt{1-z^2}}\right)
+\end{align*}
+Now square this expression to get
+\[
+  \frac{1}{4}\left(2 + 2\sqrt{1-1+z^2}\right) = \frac{\lvert z\rvert+1}{2}
+\]
+Thus the identity holds for $0\leq z \leq 1$; an almost identical computation using $-z$ in \PMlinkescapetext{place} of $z$ shows that it also holds for $-1\leq z\leq 0$.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProbabilisticMethod}
+\pmcreated{2013-03-22 13:05:53}
+\pmmodified{2013-03-22 13:05:53}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{probabilistic method}
+\pmrecord{15}{33519}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C80}
+\pmclassification{msc}{11K99}
+\pmrelated{GraphTheory}
+\pmrelated{ProofOfCrossingLemma}
+\pmrelated{RamseysTheorem2}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%%%\usepackage{xypic}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+The \emph{probabilistic method} was pioneered by Erd\H{o}s P\'al (known to Westerners as Paul Erd\H{o}s) and initially used for solving problems in graph theory, but has acquired ever wider applications.  Broadly, the probabilistic method is somewhat the opposite of extremal graph theory.  Instead of considering how a graph can behave in the most extreme case, we consider how a collection of graphs behave ``on average'', whereby we can formulate a probability space.  The fruits reaped by this method are often raw existence theorems, usually deduced from the fact that the nonexistence of whatever \PMlinkescapetext{sort} of graph would \PMlinkescapetext{mean} a zero probability.  For instance, by means of the probabilistic method, Erd\H{o}s proved the existence of a graph of arbitrarily high girth and chromatic number, a very counterintuitive result.  Graphs tend to get enormous as the chromatic number and girth increase, thereby severely hindering necessary computations to explicitly construct them, so an existence theorem is most welcome.
+
+In all honesty, probabilistic proofs are nothing more than counting proofs in disguise, since determining the probabilities of interest will invariably involve detailed counting arguments.  In fact, we \emph{could} remove from any probabilistic proof any mention of a probability space, although the result may be significanltly less transparent.  Also, the advantage of using probability is that we can employ all the machinery of probability theory.  Markov chains, martingales, \PMlinkname{expectations}{ExpectedValue}, probabilistic inequalities, and many other results, all become the tools of the trade in dealing with seemingly static objects of combinatorics and number theory.
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:alon_spencer_probmethod}
+Noga Alon and Joel~H. Spencer.
+\newblock {\em The probabilistic method}.
+\newblock John Wiley \& Sons, Inc., second edition, 2000.
+\newblock \PMlinkexternal{Zbl
+  0996.05001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0996.05001}.
+
+\bibitem{cite:erdos_spencer_probmethod}
+Paul Erd{\H{o}}s and Joel Spencer.
+\newblock {\em Probabilistic methods in combinatorics}.
+\newblock Academic Press, 1973.
+\newblock \PMlinkexternal{Zbl
+  0308.05001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0308.05001}.
+
+\end{thebibliography}
+
+%
+%@BOOK{cite:alon_spencer_probmethod,
+% title     = {The probabilistic method},
+% author    = {Noga Alon and Joel H. Spencer},
+% year      = 2000,
+% edition   = {Second},
+% publisher = {John Wiley \& Sons, Inc.}
+%}
+%
+%@BOOK{cite:erdos_spencer_probmethod,
+% title     = {Probabilistic methods in combinatorics},
+% author    = {Erd{\H{o}}s, Paul and Spencer, Joel},
+% year      = 1973,
+% publisher = {Academic Press},
+% note      = {\PMlinkexternal{Zbl %0308.05001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0308.05001}}
+%}
+%%%%%
+%%%%%
+\end{document}

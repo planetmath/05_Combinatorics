@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedFactorial}
+\pmcreated{2013-03-22 16:08:31}
+\pmmodified{2013-03-22 16:08:31}
+\pmowner{gilbert_51126}{14238}
+\pmmodifier{gilbert_51126}{14238}
+\pmtitle{generalized factorial}
+\pmrecord{7}{38220}
+\pmprivacy{1}
+\pmauthor{gilbert_51126}{14238}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\emph{Definition.}
+The \PMlinkescapetext{\emph{factorial}} $[x,d]_n$ is defined for any number $x \in \mathbb{C}$, any stepsize $d \in \mathbb{C}$ and any \PMlinkescapetext{length} $n \in \mathbb{Z}$, except for $-x \in \{ d,2d,\dots,nd \}$, by
+\begin{eqnarray*}
+\displaystyle [x,d]_n := \begin{cases} \prod_{j=0}^{n-1}(x-jd) & n \in \mathbb{N}\\
+1 & n = 0 \\
+\prod_{j=1}^{-n}\frac{1}{x+jd} & -n \in \mathbb{N}, -x \notin \{ d,2d,\dots,nd \}.
+\end{cases}
+\end{eqnarray*}
+ 
+If $x = n$, $d = 1$ and $n \in \mathbb{N}$ then 
+\[
+\displaystyle [n,1]_n = \begin{cases} n(n-1)\dots(2)(1) & n > 0 \\
+1 & n = 0, \end{cases}
+\]
+on which it follows that $[n,1]_n = n!$. This is why the above definition generalizes the notion of the usual factorial.
+%%%%%
+%%%%%
+\end{document}

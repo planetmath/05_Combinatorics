@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FourcolorConjecture}
+\pmcreated{2013-03-22 13:21:18}
+\pmmodified{2013-03-22 13:21:18}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{four-color conjecture}
+\pmrecord{19}{33875}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C10}
+\pmclassification{msc}{05C15}
+\pmsynonym{Appel-Haken theorem}{FourcolorConjecture}
+\pmsynonym{4-color conjecture}{FourcolorConjecture}
+\pmrelated{PlanarGraph}
+\pmrelated{ChromaticNumber}
+\pmrelated{HeawoodNumber}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{graphicx}
+\usepackage{pstricks}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{states}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{map}
+\PMlinkescapeword{maps}
+
+The four-color conjecture was a long-standing problem posed by Francis Guthrie to his professor Augustus De Morgan in 1852, while coloring a map of England. The conjecture states that every map on a plane or a sphere can be colored using only four colors such that no two adjacent countries are assigned the same color.  There are maps that need four colors to be colored as the figure below shows.  This conjecture equivalent to the statement that chromatic number of every planar graph is no more than four. 
+
+\begin{figure}[h]
+%\includegraphics{Ill/beg2.eps}
+\begin{center}
+\begin{pspicture}(20pt,20pt)(180pt,180pt)\pscustom{\scale{1 1}\gsave \code{0
+0.5 0 setrgbcolor newpath 180 100 moveto 100 100 80 0 360 arc 150
+100 moveto 100 100 50 360 0 arcn fill 1 0 0 setrgbcolor newpath
+100 100 moveto 150 100 lineto 100 100 50 0 120 arc closepath fill
+0 0 1 setrgbcolor newpath 100 100 moveto 120 cos 50 mul 
+120 sin 50 mul rlineto 100 100 50 120 240 arc closepath
+fill 1 1 0 setrgbcolor newpath 100 100 moveto 240 cos 50 mul
+240 sin 50 mul rlineto 100 100 50 240 360 arc closepath
+fill} \grestore}\end{pspicture}\end{center}\caption{Four mutually
+adjacent countries}
+\end{figure}
+After many unsuccessful attempts the conjecture was proven by Appel and Haken in 1976 with the aid of a computer.  Before it was known that every planar map can be five-colored by the work of Heawood in 1890.
+
+Interestingly, the seemingly harder problem of determining the
+maximal number of colors needed for all surfaces other than the
+sphere was solved long before the four-color conjecture was
+settled. This is the Heawood number of the surface unless the surface
+is the Klein bottle in which case it is $6$.
+
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:may_origin_fcc}
+Kenneth~O. May.
+\newblock The origin of the four-color conjecture.
+\newblock {\em Isis}, 56(3):346--348, 1965.
+\newblock \PMlinkexternal{Available
+  online}{http://links.jstor.org/sici?sici=0021-1753\%28196523\%2956\%3A3\%3C3%
+46\%3ATOOTFC\%3E2.0.CO\%3B2-Z} at \PMlinkexternal{JSTOR}{http://www.jstor.org}.
+
+\bibitem{cite:saaty_kainen_fcc}
+Thomas~L. Saaty and Paul~C. Kainen.
+\newblock {\em The Four-Color Problem: Assaults and Conquest}.
+\newblock Dover, 1986.
+\newblock \PMlinkexternal{Zbl
+0463.05041}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0463.05041}.
+
+\end{thebibliography}
+%@BOOK{cite:saaty_kainen_fcc,
+% author    = {Thomas L. Saaty and Paul C. Kainen},
+% title     = {The Four-Color Problem: Assaults and Conquest},
+% publisher = {Dover},
+% year      = 1986
+%}
+%@ARTICLE{cite:may_origin_fcc,
+% author    = {Kenneth O. May},
+% title     = {The origin of the four-color conjecture},
+% journal   = {Isis},
+% volume    = 56,
+% pages     = {346--348},
+% number    = 3,
+% year      = 1965,
+% note      = {\PMlinkexternal{Available %online}{http://links.jstor.org/sici?sici=0021-1753\%28196523\%2956\%3A3\%3C346\%3ATOOTFC\%3E2.0.CO\%3B2-Z} %at \PMlinkexternal{JSTOR}{http://www.jstor.org}}
+%}
+%%%%%
+%%%%%
+\end{document}

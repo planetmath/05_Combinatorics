@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChromaticNumberAndGirth}
+\pmcreated{2013-03-22 12:46:03}
+\pmmodified{2013-03-22 12:46:03}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{chromatic number and girth}
+\pmrecord{7}{33077}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+\pmclassification{msc}{05C38}
+\pmclassification{msc}{05C80}
+\pmrelated{Girth}
+\pmrelated{ChromaticNumber}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+\newcommand{\girth}{\operatorname{girth}}
+\begin{document}
+A famous theorem of P. Erd\H{o}s\footnote{See the very readable P. Erd\H{o}s, \textit{\PMlinkescapetext{Graph theory} and probability}, Canad J. Math. 11 (1959), 34--38.}.
+
+\begin{theorem}
+For any natural numbers $k$ and $g$, there exists a graph $G$ with chromatic number $\chi(G) \ge k$ and girth $\girth(G) \ge g$.
+\end{theorem}
+
+Obviously, we can easily have graphs with high chromatic numbers.  For instance, the complete graph $K_n$ trivially has $\chi(K_n)=n$; however $\girth(K_n)=3$ (for $n\ge 3$).  And the cycle graph $C_n$ has $\girth(C_n)=n$, but
+$$
+\chi(C_n)=
+\begin{cases}
+  1&n=1\\
+  2&\text{$n$ even}\\
+  3&\text{otherwise.}\\
+\end{cases}
+$$
+It seems intuitively plausible that a high chromatic number occurs because of short, ``local'' cycles in the graph; it is hard to envisage how a graph with no short cycles can still have high chromatic number.
+
+Instead of envisaging, Erd\H{o}s' proof shows that, in some appropriately chosen probability space on graphs with $n$ vertices, the probability of choosing a graph which does \emph{not} have $\chi(G)\ge k$ and $\girth(G)\ge g$ tends to zero as $n$ grows.  In particular, the desired graphs exist.
+
+This seminal paper is probably the most famous application of the probabilistic method, and is regarded by some as the foundation of the method.\footnote{However, as always, with the benefit of hindsight we can see that the probabilistic method had been used before, e.g. in various applications of Sard's theorem.  This does nothing to diminish from the importance of the clear statement of the tool.}  Today the probabilistic method is a standard tool for combinatorics.  More constructive methods are often preferred, but are almost always much harder.
+%%%%%
+%%%%%
+\end{document}

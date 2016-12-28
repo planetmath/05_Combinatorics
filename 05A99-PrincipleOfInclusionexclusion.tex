@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrincipleOfInclusionexclusion}
+\pmcreated{2013-03-22 12:33:25}
+\pmmodified{2013-03-22 12:33:25}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{principle of inclusion-exclusion}
+\pmrecord{9}{32803}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A99}
+\pmsynonym{inclusion-exclusion principle}{PrincipleOfInclusionexclusion}
+\pmrelated{SieveOfEratosthenes2}
+\pmrelated{BrunsPureSieve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{principle of inclusion-exclusion} provides a way of methodically counting the union of possibly non-disjoint sets.
+
+Let $C = \{A_1, A_2, \dots A_N\}$ be a finite collection of finite sets.  Let $I_k$ represent the set of $k$-fold intersections of members of $C$ (e.g., $I_2$ contains all possible intersections of two sets chosen from $C$).
+
+Then
+$$\left| \bigcup_{i=1}^{N} A_i \right| = \sum_{j=1}^N \left( (-1)^{(j+1)} \sum_{S \in I_j} |S| \right )$$
+
+For example:
+$$|A \cup B| = |A|+|B|-|A \cap B|$$
+$$|A \cup B \cup C| = |A|+|B|+|C|-(|A \cap B|+|A \cap C|+|B \cap C|)+|A \cap B \cap C|$$
+
+The principle of inclusion-exclusion, combined with de Morgan's laws, can be used to count the intersection of sets as well.  Let $A$ be some universal set such that $A_k \subseteq A$ for each $k$, and let $\overline{A_k}$ represent the complement of $A_k$ with respect to $A$.  Then we have
+
+$$\left | \bigcap_{i=1}^N A_i \right | = \left |\overline{ \bigcup_{i=1}^N \overline{A_i} }\right |$$
+
+thereby turning the problem of finding an intersection into the problem of finding a union.
+%%%%%
+%%%%%
+\end{document}

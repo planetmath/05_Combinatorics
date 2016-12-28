@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReductionAlgorithmForSymmetricPolynomials}
+\pmcreated{2013-03-22 12:11:17}
+\pmmodified{2013-03-22 12:11:17}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{reduction algorithm for symmetric polynomials}
+\pmrecord{6}{31454}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05E05}
+\pmclassification{msc}{12F10}
+\pmdefines{height}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We give here an algorithm for reducing a symmetric polynomial into a polynomial in the elementary symmetric polynomials.
+
+We define the {\em height} of a monomial $x_1^{e_1} \cdots x_n^{e_n}$ in $R[x_1,\dots,x_n]$ to be $e_1 + 2 e_2 + \cdots + n e_n$. The height of a polynomial is defined to be the maximum height of any of its monomial terms, or 0 if it is the zero polynomial.
+
+Let $f$ be a symmetric polynomial. We reduce $f$ into elementary symmetric polynomials by induction on the height of $f$. Let $c x_1^{e_1} \cdots x_n^{e_n}$ be the monomial term of maximal height in $f$. Consider the polynomial
+$$
+g := f - c s_1^{e_n - e_{n-1}} s_2^{e_{n-1} - e_{n-2}} \cdots s_{n-1}^{e_2 - e_1} s_n^{e_1}
+$$
+where $s_k$ is the $k$--th elementary symmetric polynomial in the $n$ variables $x_1, \dots, x_n$. Then $g$ is a symmetric polynomial of lower height than $f$, so by the induction hypothesis, $g$ is a polynomial in $s_1, \dots, s_n$, and it follows immediately that $f$ is also a polynomial in $s_1, \dots, s_n$.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

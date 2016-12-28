@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HallsMarriageTheorem}
+\pmcreated{2013-03-22 12:35:14}
+\pmmodified{2013-03-22 12:35:14}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Hall's marriage theorem}
+\pmrecord{6}{32837}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05D15}
+\pmsynonym{marriage theorem}{HallsMarriageTheorem}
+\pmrelated{Saturate}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $S = \{ S_1,S_2,\dots S_n \}$ be a finite collection of finite sets.  There exists a system of distinct representatives of $S$ if and only if the following condition holds for any $T \subseteq S$:
+$$\left | \cup T \right | \geq |T|$$
+
+As a corollary, if this condition fails to hold anywhere, then no SDR exists.
+
+This is known as Hall's marriage theorem.  The name arises from a particular application of this theorem.  Suppose we have a finite set of single men/women, and, for each man/woman, a finite collection of women/men to whom this person is attracted.  An SDR for this collection would be a way each man/woman could be (theoretically) married happily.  Hence, Hall's marriage theorem can be used to determine if this is possible.
+
+An application of this theorem to graph theory gives that if $G(V_1, V_2, E)$ is a bipartite graph, then $G$ has a complete matching that saturates every vertex of $V_1$ if and only if $|S|\leq |N(S)|$ for every subset $S\subset V_1$.
+%%%%%
+%%%%%
+\end{document}

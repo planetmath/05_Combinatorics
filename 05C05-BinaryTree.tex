@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BinaryTree}
+\pmcreated{2013-03-22 12:29:08}
+\pmmodified{2013-03-22 12:29:08}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{binary tree}
+\pmrecord{7}{32705}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Data Structure}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmclassification{msc}{68P05}
+\pmrelated{Tree}
+\pmrelated{BalancedTree}
+\pmrelated{Heap}
+\pmrelated{ExtendedBinaryTree}
+\pmrelated{LowerBoundForSorting}
+\pmrelated{GraphTheory}
+\pmdefines{balanced binary tree}
+\pmdefines{left child}
+\pmdefines{right child}
+\pmdefines{left descendent}
+\pmdefines{right descendent}
+\pmdefines{left subtree}
+\pmdefines{right subtree}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[all]{xy}
+\begin{document}
+A \emph{binary tree} is an ordered rooted tree where every node has two or fewer children.  A \emph{balanced binary tree} is a binary tree that is also a balanced tree.
+For example,
+
+$$
+\xymatrix{
+&&&A \ar@{-}[dll] \ar@{-}[drr] \\
+&B \ar@{-}[dl] \ar@{-}[dr] &&&& E \ar@{-}[dl] \ar@{-}[dr] \\
+C && D && F && G
+}
+$$
+
+is a balanced binary tree.
+
+The two (potential) children of a node in a binary tree are often called the
+\emph{left} and \emph{right children} of that node.  The left child of some node $X$ and all that child's descendents are the \emph{left descendents} of $X$.  A similar definition applies to $X$'s \emph{right descendents}.  The \emph{left subtree} of $X$ is $X$'s left descendents, and the \emph{right subtree} of $X$ is its right descendents.
+
+Since we know the maximum number of children a binary tree node can have, we can make some statements regarding minimum and maximum depth of a binary tree as it relates to the total number of nodes.  The maximum depth of a binary tree of $n$ nodes is $n - 1$ (every non-leaf node has exactly one child).  The minimum depth of a binary tree of $n$ nodes ($n > 0$) is $\lceil\log_2n\rceil$ (every non-leaf node has exactly two children, that is, the tree is balanced).
+
+A binary tree can be implicitly stored as an array, if we designate a constant, maximum depth for the tree.  We begin by storing the root node at index $0$ in the array.  We then store its left child at index $1$ and its right child at index $2$.  The children of the node at index $1$ are stored at indices $3$ and $4$, and the chldren of the node at index $2$ are stored at indices $5$ and $6$.
+This can be generalized as: if a node is stored at index $k$, then its left child is located at index $2k+1$ and its right child at $2k+2$.  This form of implicit storage thus eliminates all overhead of the tree structure, but is only really advantageous for trees that tend to be balanced.  For example, here is the implicit array representation of the tree shown above.
+
+\begin{center}
+\begin{tabular}{|*{7}{c|}}
+\hline
+A&B&E&C&D&F&G\\
+\hline
+\end{tabular}
+\end{center}
+
+Many data structures are binary trees.  For instance, heaps and binary search trees are binary trees with particular properties.
+%%%%%
+%%%%%
+\end{document}

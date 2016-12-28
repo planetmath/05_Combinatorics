@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCrossingLemma}
+\pmcreated{2013-03-22 13:38:46}
+\pmmodified{2013-03-22 13:38:46}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{proof of crossing lemma}
+\pmrecord{6}{34297}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C10}
+\pmclassification{msc}{05C80}
+%\pmkeywords{probabilistic method}
+%\pmkeywords{linearity of expectation}
+\pmrelated{ProbabilisticMethod}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\DeclareMathOperator{\crn}{cr}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+Euler's formula implies the linear lower bound $\crn(G)\geq m-3n+6$, and so it cannot be used directly. What we need is to consider the subgraphs of our graph, apply Euler's formula on them, and then combine the estimates. The probabilistic method provides a natural way to do that.
+
+Consider a minimal embedding of $G$. Choose independently every vertex of $G$ with probability $p$. Let $G_p$ be a graph induced by those vertices. By Euler's formula, $\crn(G_p)-m_p+3n_p\geq 0$. The expectation is clearly
+\begin{equation*}
+E(\crn(G_p)-m_p+3n_p)\geq 0.
+\end{equation*}
+Since $E(n_p)=pn$, $E(m_p)=p^2 m$ and $E(X_p)=p^4\crn(G)$, we get an inequality that bounds the crossing number of $G$ from below,
+\begin{equation*}
+\crn(G)\geq p^{-2} m-3p^{-3}n.
+\end{equation*}
+Now set $p=\frac{4n}{m}$ (which is at most $1$ since $m\geq 4n$), and the inequaliy becomes 
+\begin{equation*}
+\crn(G)\geq \frac{1}{64}\frac{m^3}{n^2}.
+\end{equation*}
+Similarly, if $m\geq\frac{9}{2}n$, then we can set $p=\frac{9n}{2m}$ to get
+\begin{equation*}
+\crn(G)\geq \frac{4}{243}\frac{m^3}{n^2}.
+\end{equation*}
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:aigner_ziegler_thebook}
+Martin Aigner and G{\"u}nter~M. Ziegler.
+\newblock {\em Proofs from {THE BOOK}}.
+\newblock Springer, 1999.
+
+\end{thebibliography}
+
+%@BOOK{cite:aigner_ziegler_thebook,
+% author     = {Martin Aigner and G{\"u}nter M. Ziegler},
+% title      = "Proofs from {THE BOOK}",
+% year       = 1999,
+% publisher  = {Springer}
+%}
+%%%%%
+%%%%%
+\end{document}

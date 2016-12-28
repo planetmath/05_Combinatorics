@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChromaticPolynomial}
+\pmcreated{2013-03-22 13:58:25}
+\pmmodified{2013-03-22 13:58:25}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{chromatic polynomial}
+\pmrecord{8}{34745}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+\pmclassification{msc}{05B35}
+%\pmkeywords{matroid}
+%\pmkeywords{coloring}
+\pmrelated{Matroid}
+\pmrelated{ChromaticNumber}
+\pmdefines{Tutte polynomial}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{rank}
+\PMlinkescapeword{inversion}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{information}
+Let $G$ be a graph (in the sense of graph theory) whose set $V$
+of vertices is finite and nonempty, and which has no loops or
+multiple edges.
+For any natural number $x$, let $\chi(G,x)$, or just $\chi(x)$,
+denote the number of $x$-colorations of $G$, i.e. the number of
+mappings $f\colon V\to\{1,2,\ldots,x\}$ such that $f(a)\ne f(b)$ for any
+pair $(a,b)$ of adjacent vertices.
+Let us prove that $\chi$ (which is called the
+\emph{chromatic polynomial} of the graph $G$)
+is a polynomial function in $x$ with coefficients in $\Z$.
+Write $E$ for the set of edges in $G$. If $|E|$=0, then trivially
+$\chi(x)=x^{|V|}$ (where $|\cdot|$ denotes the number of elements
+of a finite set).
+If not, then we choose an edge $e$ and construct two graphs
+having fewer edges than $G$: $H$ is obtained from $G$ by contracting
+the edge $e$, and $K$ is obtained from $G$ by omitting the edge $e$.
+We have
+\begin{equation} \label{eq:ind}
+\chi(G,x)=\chi(K,x)-\chi(H,x)
+\end{equation}
+for all $x\in\N$, because the polynomial $\chi(K,x)$ is the number
+of colorations of the vertices of $G$ which might or might not be
+valid for the edge $e$, while $\chi(H,x)$ is the number which
+are not valid.
+By induction on $|E|$, \eqref{eq:ind} shows that $\chi(G,x)$ is
+a polynomial over $\Z$.
+
+By refining the argument a little, one can show
+$$\chi(x)=x^{|V|}-|E|x^{|V|-1}+\ldots\pm sx^k\;,$$
+for some nonzero integer $s$, where $k$ is the number
+of connected components of $G$, and the coefficients alternate in sign.
+
+With the help of the M\"obius-Rota
+inversion formula (see Moebius Inversion),
+or directly by induction, one can prove
+$$\chi(x)=\sum_{F\subset E}(-1)^{|F|}x^{|V|-r(F)}$$
+where the sum is over all subsets $F$ of $E$, and $r(F)$ denotes the
+rank of $F$ in $G$, i.e. the number of elements of
+any maximal cycle-free subset of $F$.
+(Alternatively, the sum may be taken only over subsets $F$ such that
+$F$ is equal to the span of $F$; all other summands cancel
+out in pairs.)
+
+The \emph{chromatic number} of $G$ is the smallest $x>0$ such that
+$\chi(G,x)>0$ or, equivalently, such that $\chi(G,x)\ne0$.
+
+The \emph{Tutte polynomial} of a graph, or more generally of a matroid
+$(E,r)$, is this function of two variables:
+$$t(x,y)=\sum_{F\subset E}(x-1)^{r(E)-r(F)}(y-1)^{|F|-r(F)}\;.$$
+Compared to the chromatic polynomial, the Tutte contains more information
+about the matroid.
+Still, two or more nonisomorphic matroids may have the same Tutte polynomial.
+%%%%%
+%%%%%
+\end{document}

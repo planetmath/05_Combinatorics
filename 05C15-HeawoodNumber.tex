@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HeawoodNumber}
+\pmcreated{2013-03-22 13:21:21}
+\pmmodified{2013-03-22 13:21:21}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{Heawood number}
+\pmrecord{12}{33876}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+\pmclassification{msc}{05C10}
+\pmrelated{FourColorConjecture}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%%\usepackage{xypic}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+The Heawood number of a surface is an upper bound for the maximal
+number of colors needed to color any graph embedded in the
+surface. In 1890 Heawood proved for all surfaces except the sphere
+that no more than
+\begin{equation*}
+H(S)=\left\lfloor\frac{7+\sqrt{49-24 e(S)}}{2}\right\rfloor
+\end{equation*}
+colors are needed to color any graph embedded in a surface of
+Euler characteristic $e(S)$. The case of the sphere is the four-color conjecture which was settled by Appel and Haken in 1976. The number $H(S)$ became
+known as Heawood number in 1976. Franklin proved that the chromatic number
+of a graph embedded in the Klein bottle can be as large as $6$,
+but never exceeds $6$. Later it was proved in the works of Ringel
+and Youngs that the complete graph of $H(S)$ vertices can be
+embedded in the surface $S$ unless $S$ is the Klein bottle. This
+established that Heawood's bound could not be improved.
+
+For example, the complete graph on $7$ vertices can be embedded in the torus as follows:
+\begin{equation*}
+\begin{xy}{*!C\xybox{\xymatrix@R=0pt{ 1\ar@{-}[r]\ar@{-}[dd]\ar@{-}[dddr]&2\ar@{-}[r]\ar@{-}[ddd]\ar@{-}[dddr]\ar@{-}[ddrr]&3\ar@{-}[r]\ar@{-}[ddr]&1\ar@{-}[dd]\\
+\\ 4\ar@{-}[dd]\ar@{-}[dr] & & & 4\ar@{-}[dd]\\
+ & 6\ar@{-}[r]\ar@{-}[dddr] & 7\ar@{-}[ddd]\ar@{-}[dddr]\ar@{-}[dr]\ar@{-}[ur] & \\
+5\ar@{-}[dd]\ar@{-}[ur]\ar@{-}[ddr]\ar@{-}[ddrr] & & & 5\ar@{-}[dd] \\ \\
+1\ar@{-}[r] & 2\ar@{-}[r] & 3\ar@{-}[r] & 1}}}
+\end{xy}
+\end{equation*}
+% Whoever can fix the cropping in LaTeX2HTML for the above diagram, 
+% contact me or akrowne
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:bollobas_graphth_intro}
+B{\'e}la Bollob{\'a}s.
+\newblock {\em Graph Theory: An Introductory Course}, volume~63 of {\em GTM}.
+\newblock Springer-Verlag, 1979.
+\newblock \PMlinkexternal{Zbl 0411.05032}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0411.05032}.
+
+\bibitem{cite:saaty_kainen_fcc}
+Thomas~L. Saaty and Paul~C. Kainen.
+\newblock {\em The Four-Color Problem: Assaults and Conquest}.
+\newblock Dover, 1986.
+\newblock \PMlinkexternal{Zbl 0463.05041}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0463.05041}.
+
+\end{thebibliography}
+%@BOOK{cite:saaty_kainen_fcc,
+% author = {Thomas L. Saaty and Paul C. Kainen},
+% title = {The Four-Color Problem: Assaults and Conquest},
+% publisher = {Dover},
+% year = 1986,
+% note      = {\PMlinkexternal{Zbl %0463.05041}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0463.05041}}
+%}
+%
+%@BOOK{cite:bollobas_graphth_intro,
+% author    = {B{\'e}la Bollob{\'a}s},
+% title     = {Graph Theory: An Introductory Course},
+% year      = 1979,
+% publisher = {Springer-Verlag},
+% volume    = 63,
+% series    = {GTM},
+% note      = {\PMlinkexternal{Zbl %0411.05032}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0411.05032}}
+%}
+%%%%%
+%%%%%
+\end{document}

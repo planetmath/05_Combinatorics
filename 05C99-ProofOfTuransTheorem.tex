@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTuransTheorem}
+\pmcreated{2013-03-22 12:46:13}
+\pmmodified{2013-03-22 12:46:13}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of Turan's theorem}
+\pmrecord{6}{33080}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If the graph $G$ has $n\leq p-1$ vertices it cannot contain any $p$--clique and thus has at most ${n\choose 2}$ edges. So in this case we only have to prove that
+$$\frac{n(n-1)}{2}\leq\left( 1-\frac{1}{p-1}\right)\frac{n^2}{2}.$$
+Dividing by $n^2$ we get
+$$\frac{n-1}{n}=1-\frac{1}{n}\leq 1-\frac{1}{p-1},$$
+which is true since $n\leq p-1$.
+
+Now we assume that $n\geq p$ and the set of vertices of $G$ is denoted by $V$. If $G$ has the maximum number of edges possible without containing a $p$--clique it contains a $p-1$--clique, since otherwise we might add edges to get one. So we denote one such clique by $A$ and define $B:=G\backslash A$.
+
+So $A$ has ${p-1\choose 2}$ edges. We are now interested in the number of edges in  $B$, which we will call $e_B$, and in the number of edges connecting $A$ and $B$, which will be called $e_{A,B}$. By induction we get:
+$$e_B\leq\frac{1}{2}\left( 1-\frac{1}{p-1}\right)\left(n-p+1\right)^2.$$
+Since $G$ does not contain any $p$--clique every vertice of $B$ is connected to at most $p-2$ vertices in $A$ and thus we get:
+$$e_{A,B}\leq (p-2)(n-p+1).$$
+Putting this together we get for the number of edges $|E|$ of $G$:
+$$|E|\leq{p-1\choose 2}+\frac{1}{2}\left(1-\frac{1}{p-1}\right)(n-p+1)^2+(p-2)(n -p+1).$$
+And thus we get:
+$$|E|\leq\left( 1-\frac{1}{p-1}\right)\frac{n^2}{2}.$$
+%%%%%
+%%%%%
+\end{document}

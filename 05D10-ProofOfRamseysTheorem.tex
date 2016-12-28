@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRamseysTheorem}
+\pmcreated{2013-03-22 12:55:52}
+\pmmodified{2013-03-22 12:55:52}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Ramsey's theorem}
+\pmrecord{8}{33286}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05D10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{state}
+\PMlinkescapeword{states}
+
+$$\omega\rightarrow(\omega)^n_k$$
+is proven by induction on $n$.
+
+If $n=1$ then this just states that any partition of an infinite set into a finite number of subsets must include an infinite set; that is, the union of a finite number of finite sets is finite.  This is simple enough to prove: since there are a finite number of sets, there is a largest set of size $x$.  Let the number of sets be $y$.  Then the size of the union is no more than $xy$.
+
+If
+$$\omega\rightarrow(\omega)^n_k$$
+
+then we can show that 
+
+$$\omega\rightarrow(\omega)^{n+1}_k$$
+
+Let $f$ be some coloring of $[S]^{n+1}$ by $k$ where $S$ is an infinite subset of $\omega$.  Observe that, given an $x<\omega$, we can define $f^x\colon[S\setminus\{x\}]^{n}\rightarrow k$ by $f^x(X)=f(\{x\}\cup X)$.  Since $S$ is infinite, by the induction hypothesis this will have an infinite homogeneous set.
+
+Then we define a sequence of integers $\langle n_i\rangle_{i\in\omega}$ and a sequence of infinite subsets of $\omega$, $\langle S_i\rangle_{i\in\omega}$ by induction.  Let $n_0=0$ and let $S_0=\omega$.  Given $n_i$ and $S_i$ for $i\leq j$ we can define $S_{j}$ as an infinite homogeneous set for $f^{n_i}\colon[S_{j-1}]^n\rightarrow k$ and $n_j$ as the least element of $S_j$.
+
+Obviously $N=\bigcup \{n_i\}$ is infinite, and it is also homogeneous, since each $n_i$ is contained in $S_j$ for each $j\leq i$.
+%%%%%
+%%%%%
+\end{document}

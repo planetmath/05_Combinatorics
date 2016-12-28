@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExternalPathLength}
+\pmcreated{2013-03-22 12:32:03}
+\pmmodified{2013-03-22 12:32:03}
+\pmowner{Logan}{6}
+\pmmodifier{Logan}{6}
+\pmtitle{external path length}
+\pmrecord{4}{32776}
+\pmprivacy{1}
+\pmauthor{Logan}{6}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmrelated{ExtendedBinaryTree}
+\pmrelated{WeightedPathLength}
+\pmdefines{external path length}
+\pmdefines{internal path length}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\begin{document}
+Given a binary tree $T$, construct its extended binary tree $T'$.
+The \emph{external path length} of $T$ is then defined to be the sum of the lengths of the paths to each of the external nodes.
+
+For example, let $T$ be the following tree.
+
+\begin{center}
+\includegraphics{tree.3}
+\end{center}
+
+The extended binary tree of $T$ is
+
+\begin{center}
+\includegraphics{tree.4}
+\end{center}
+
+The external path length of $T$ (denoted $E$) is
+
+$$
+E = 2 + 3 + 3 + 3 + 3 + 3 + 3 = 20
+$$
+
+The \emph{internal path length} of $T$ is defined to be the sum of the lengths of the paths to each of the internal nodes.  The internal path length of our example tree (denoted $I$) is
+
+$$
+I = 1 + 2 + 0 + 2 + 1 + 2 = 8
+$$
+
+Note that in this case $E = I + 2n$, where $n$ is the number of internal nodes.  This happens to hold for all binary trees.
+%%%%%
+%%%%%
+\end{document}

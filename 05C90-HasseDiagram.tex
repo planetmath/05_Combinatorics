@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HasseDiagram}
+\pmcreated{2013-03-22 12:15:23}
+\pmmodified{2013-03-22 12:15:23}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{Hasse diagram}
+\pmrecord{18}{31639}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C90}
+\pmrelated{Poset}
+\pmrelated{PartialOrder}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%%%\usepackage{xypic}
+\begin{document}
+If $(A,\leq)$ is a finite poset, then it can be represented by a \emph{Hasse diagram}, which is a graph whose vertices are elements of $A$ and the edges correspond to the covering relation. More precisely an edge from $x\in A$ to $y\in A$ is present if
+\begin{itemize}
+\item $x < y$.
+\item There is no $z \in A$ such that $x < z$ and $z < y$. (There are no in-between elements.)
+\end{itemize}
+If $x<y$, then in $y$ is drawn higher than $x$. Because of that, the direction of the edges is never indicated in a Hasse diagram.
+
+\emph{Example:} If $A = \mathcal{P}(\{1,2,3\})$, the power set of $\{1,2,3\}$, and $\leq$
+is the subset relation $\subseteq$, then Hasse diagram is
+$$\xymatrix{
+                               & \{1,2,3\} &    \\
+\{1,2\} \ar@{-}[ur]  & \{1,3\} \ar@{-}[u]  & \{2,3\} \ar@{-}[ul] \\
+\{1\} \ar@{-}[u] \ar@{-}[ur] & \{2\} \ar@{-}[ul] \ar@{-}[ur] & \{3\} \ar@{-}[ul] \ar@{-}[u] \\
+  & \emptyset \ar@{-}[ul] \ar@{-}[u] \ar@{-}[ur] & }
+$$
+
+
+Even though $\{3\} < \{1,2,3\}$ (since $\{3\} \subset \{1,2,3\}$), there is no edge directly between them because there are inbetween elements:
+$\{2,3\}$ and $\{1,3\}$. However, there still remains an indirect path from $\{3\}$ to $\{1,2,3\}$.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

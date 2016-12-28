@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Polyomino}
+\pmcreated{2013-03-22 15:20:18}
+\pmmodified{2013-03-22 15:20:18}
+\pmowner{s0}{9826}
+\pmmodifier{s0}{9826}
+\pmtitle{polyomino}
+\pmrecord{10}{37156}
+\pmprivacy{1}
+\pmauthor{s0}{9826}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05B50}
+\pmdefines{n-omino}
+\pmdefines{domino}
+\pmdefines{tromino}
+\pmdefines{tetromino}
+\pmdefines{fixed polyomino}
+\pmdefines{lattice animal}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage[dvips]{graphics}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A polyomino consists of a number of identical connected squares placed
+in distinct locations in the plane so that at least one side of each
+square is adjacent to (i.e. completely coincides with the side of)
+another square (if the polyomino consists of at least two squares).
+
+A polyomino with $n$ squares is called an {\em n-omino}. For small $n$,
+polyominoes have special names. A 1-omino is called a {\em monomino},
+a 2-omino a {\em domino}, a 3-omino a {\em tromino} or {\em triomino},
+etc. The famous Tetris video game derives its name from the fact that
+the bricks are {\em tetrominoes} or 4-ominoes.
+
+\begin{figure}[h]
+\includegraphics{Polyomino.1.eps}
+
+\includegraphics{Polyomino.2.eps}
+
+\includegraphics{Polyomino.3.eps}
+
+\includegraphics{Polyomino.4.eps}
+
+\includegraphics{Polyomino.5.eps}
+\sf\caption{All distinct 1-, 2-, 3-, 4-, and 5-ominoes. Pentominoes
+have been scaled in the figure to fit on the page.}
+\end{figure}
+
+{\em Fixed polyominoes} (which are also called {\em lattice animals})
+are considered distinct if they cannot be translated into each other,
+while {\em free polyominoes} must also be distinct under rotation and
+reflection.
+
+\begin{figure}[h]
+\includegraphics{Polyomino.6.eps}
+
+\includegraphics{Polyomino.7.eps}
+\sf\caption{All distinct, fixed dominoes and trominoes.}
+\end{figure}
+
+The topic of how many distinct (free or fixed) n-ominoes exist for a given
+$n$ has been the subject of much research. It is known that the
+number of free n-ominoes $A_n$ grows exponentially. More precisely, it
+can be proven that $3.72^n < A_n < 4.65^n$.
+
+Polyominoes are special instances of {\em polyforms}.
+%%%%%
+%%%%%
+\end{document}

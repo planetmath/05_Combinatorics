@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AcyclicGraph}
+\pmcreated{2013-03-22 12:30:39}
+\pmmodified{2013-03-22 12:30:39}
+\pmowner{Logan}{6}
+\pmmodifier{Logan}{6}
+\pmtitle{acyclic graph}
+\pmrecord{8}{32746}
+\pmprivacy{1}
+\pmauthor{Logan}{6}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C38}
+\pmsynonym{acyclic}{AcyclicGraph}
+\pmsynonym{DAG}{AcyclicGraph}
+\pmrelated{Graph}
+\pmrelated{Cycle}
+\pmrelated{BetheLattice}
+\pmdefines{directed acyclic graph}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[all]{xy}
+\begin{document}
+Any graph that contains no cycles is an \emph{acyclic graph}.  A directed acyclic graph is often called a DAG for short.
+
+For example, the following graph and digraph are acyclic.
+
+$$
+\begin{array}{cc}
+\xymatrix{&A\ar@{-}[dl]\ar@{-}[dr]\\B&&C}
+\quad
+&
+\quad
+\xymatrix{&A\ar[dr]\\B\ar[ur]\ar[rr]&&C}
+\end{array}
+$$
+
+In contrast, the following graph and digraph are \emph{not} acyclic, because
+each contains a cycle.
+
+$$
+\begin{array}{cc}
+\xymatrix{&A\ar@{-}[dl]\ar@{-}[dr]\\B\ar@{-}[rr]&&C}
+\quad
+&
+\quad
+\xymatrix{&A\ar[dr]\\B\ar[ur]&&C\ar[ll]}
+\end{array}
+$$
+%%%%%
+%%%%%
+\end{document}

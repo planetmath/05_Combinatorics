@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Flow}
+\pmcreated{2013-03-22 13:00:50}
+\pmmodified{2013-03-22 13:00:50}
+\pmowner{bgins}{4516}
+\pmmodifier{bgins}{4516}
+\pmtitle{flow}
+\pmrecord{6}{33397}
+\pmprivacy{1}
+\pmauthor{bgins}{4516}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C20}
+\pmclassification{msc}{94C15}
+\pmsynonym{network flow}{Flow}
+\pmrelated{MaximumFlowMinimumCutTheorem}
+\pmrelated{MaximumFlowminimumCutTheorem}
+\pmdefines{maximum flow}
+\pmdefines{source}
+\pmdefines{sink}
+\pmdefines{Kirchoff's law}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{interpretation}
+\PMlinkescapeword{conductors}
+On a digraph, define a \emph{sink} to be a vertex with
+out-degree zero and a \emph{source} to be a vertex with
+in-degree zero.
+Let $G$ be a digraph with non-negative weights and with exactly
+one sink and exactly one source.
+A \emph{flow} on $G$ is an assignment
+$f : E(G) \rightarrow \mathbb{R}$
+of values to each edge of $G$ satisfying certain rules:
+
+\begin{enumerate}
+\item For any edge $e$, we must have
+$0 \leq f(e) \leq W(e)$ (where $W(e)$ is the weight of $e$).
+\item For any vertex $v$, excluding the source and the sink, let $E_{in}$ be
+the set of edges incident to $v$ and let $E_{out}$ be the set of edges
+incident from $v$.
+Then we must have   
+$$\sum_{e \in E_{in}} f(e) = \sum_{e \in E_{out}} f(e) .$$
+\end{enumerate}
+
+Let $E_{source}$ be the edges incident from the source, and let $E_{sink}$ be
+the set of edges incident to the sink.
+If $f$ is a flow, then
+$$\sum_{e \in E_{sink}} f(e) = \sum_{e \in E_{source}} f(e)\;.$$
+
+We will refer to this quantity as the amount of flow.
+
+Note that a flow given by $f(e) = 0$ trivially satisfies these conditions.
+We are typically more interested in \emph{maximum flows}, where the amount
+of flow is maximized for a particular graph.
+
+We may interpret a flow as a means of transmitting something through
+a network.
+Suppose we think of the edges in a graph as pipes, with the weights
+corresponding with the capacities of the pipes; we are pouring water
+into the system through the source and draining it through the sink.
+Then the first rule requires that we do not pump more water through
+a pipe than is possible, and the second rule requires that any water
+entering a junction of pipes must leave. 
+Under this interpretation, the maximum amount of flow corresponds to
+the maximum amount of water we could pump through this network.
+
+Instead of water in pipes, one may think of electric charge in a network of conductors.
+Rule (2) above is one of Kirchoff's two laws for such networks; the other
+says that the sum of the voltage drops around any circuit is zero.
+%%%%%
+%%%%%
+\end{document}

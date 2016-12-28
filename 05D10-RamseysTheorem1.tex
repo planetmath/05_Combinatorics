@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RamseysTheorem}
+\pmcreated{2013-03-22 12:55:49}
+\pmmodified{2013-03-22 12:55:49}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Ramsey's theorem}
+\pmrecord{9}{33285}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05D10}
+\pmrelated{RamseysTheorem2}
+\pmrelated{GraphTheory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+\emph{Ramsey's theorem} states that a particular arrows relation,
+
+$$\omega\rightarrow(\omega)^n_k$$
+
+holds for any integers $n$ and $k$.
+
+In words, if $f$ is a function on sets of integers of size $n$ whose range is finite then there is some infinite $X\subseteq\omega$ such that $f$ is constant on the subsets of $X$ of size $n$.
+
+As an example, consider the case where $n=k=2$, and $f\colon [\omega]^2\rightarrow\{0,1\}$ is defined by:
+
+$$f(\{x,y\})=\left\{
+\begin{array}{ll}
+1&\text{ if ~} x=y^2 \text{ or ~} y=x^2\\
+0&\text{otherwise}
+\end{array}\right.$$
+
+Then let $X\subseteq\omega$ be the set of integers which are not perfect squares.  This is clearly infinite, and obviously if $x,y\in X$ then neither $x=y^2$ nor $y=x^2$, so $f$ is homogeneous on $X$.
+%%%%%
+%%%%%
+\end{document}

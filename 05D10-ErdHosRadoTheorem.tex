@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ErdHosRadoTheorem}
+\pmcreated{2013-03-22 12:59:30}
+\pmmodified{2013-03-22 12:59:30}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{Erd\H{o}s-Rado theorem}
+\pmrecord{9}{33366}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05D10}
+\pmclassification{msc}{03E05}
+\pmrelated{arrowsrelation}
+\pmrelated{ArrowsRelation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+Repeated exponentiation for cardinals is denoted $\operatorname{exp}_i(\kappa)$, where $i<\omega$.  It is defined by:
+
+$$\operatorname{exp}_0(\kappa)=\kappa$$
+
+and
+
+$$\operatorname{exp}_{i+1}(\kappa)=2^{\operatorname{exp}_{i}(\kappa)}$$
+
+The Erd\H{o}s-Rado theorem states that:
+
+$$\operatorname{exp}_i(\kappa)^+\rightarrow(\kappa^+)^{i+1}_\kappa$$
+
+That is, if $f:[\operatorname{exp}_i(\kappa)^+]^{i+1}\rightarrow\kappa$ then there is a homogeneous set of size $\kappa^+$.
+
+As special cases, $(2^\kappa)^+\rightarrow(\kappa^+)^2_\kappa$ and $(2^{\aleph_0})^+\rightarrow(\aleph_1)^2_{\aleph_0}$.
+%%%%%
+%%%%%
+\end{document}

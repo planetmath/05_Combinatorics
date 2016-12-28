@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBondyAndChvatalTheorem}
+\pmcreated{2013-03-22 14:48:33}
+\pmmodified{2013-03-22 14:48:33}
+\pmowner{taxipom}{3607}
+\pmmodifier{taxipom}{3607}
+\pmtitle{proof of Bondy and Chv\'atal theorem}
+\pmrecord{8}{36466}
+\pmprivacy{1}
+\pmauthor{taxipom}{3607}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C45}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\begin{proof}
+The sufficiency of the condition is obvious and we shall prove the necessity by
+contradiction.
+
+Assume that $G+uv$ is Hamiltonian but $G$ is not.
+Then $G+uv$ has a Hamiltonian cycle containing the edge $uv$. Thus there exists a path $P=(x_1,\dots,x_n)$ in $G$ from $x_1=u$ to $x_n=v$ meeting all the vertices of $G$. If $x_i$ is adjacent to $x_1$ ($2\leq i\leq n$) then $x_{i-1}$ is not adjacent to $x_n$, for otherwise
+$(x_1,x_i,x_{i+1},\dots,x_n,x_{i-1},x_{i-2},\dots,x_1)$ is a Hamiltonian cycle of $G$. Thus $d(x_n)\leq (n-1)-d(x_1)$, that is $d(u)+d(v)\leq n-1$, a contradiction
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

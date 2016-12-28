@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BipartiteMatching}
+\pmcreated{2013-03-22 12:40:08}
+\pmmodified{2013-03-22 12:40:08}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{bipartite matching}
+\pmrecord{7}{32942}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C70}
+\pmrelated{Saturate}
+\pmdefines{complete matching}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A matching on a bipartite graph is called a \emph{bipartite matching}.  Bipartite matchings have many interesting properties.
+
+\paragraph{Matrix form}
+
+Suppose we have a bipartite graph $G$ and we partition the vertices into two sets, $V_1$ and $V_2$, of the same colour.  We may then represent the graph with a simplified adjacency matrix with $|V_1|$ rows and $|V_2|$ columns containing a $1$ where an edge joins the corresponding vertices and a $0$ where there is no edge.
+
+We say that two $1$s in the matrix are \emph{line-independent} if they are not in the same row or column.  Then a matching on the graph with be a subset of the $1$s in the matrix that are all line-independent.
+
+For example, consider this bipartite graph (the thickened edges are a matching):
+
+\begin{center}
+\includegraphics[scale=1.0]{bipartite3.eps}
+\end{center}
+
+The graph could be represented as the matrix
+$$\begin{pmatrix}
+1* & 1 & 0 & 1 & 0 \\
+1 & 0 & 1* & 0 & 0 \\
+0 & 0 & 1 & 0 & 1* \\
+0 & 1* & 1 & 0 & 1 \\
+\end{pmatrix}$$
+where a $1*$ indicates an edge in the matching.  Note that all the starred $1$s are line-independent.
+
+A \emph{complete matching} on a bipartite graph $G(V_1, V_2, E)$ is one that saturates all of the vertices in $V_1$.
+
+\paragraph{Systems of distinct representatives}
+
+A system of distinct representatives is equivalent to a maximal matching on some bipartite graph.  Let $V_1$ and $V_2$ be the two sets of vertices in the graph with $|V_1| \leq |V_2|$.  Consider the set $\{ v \in V_1 : \Gamma(v) \}$, which includes the neighborhood of every vertex in $V_1$.  An SDR for this set will be a unique choice of an vertex in $V_2$ for each vertex in $V_1$.  There must be an edge joining these vertices; the set of all such edges forms a matching.
+
+Consider the sets
+\begin{eqnarray*}
+S_1 &=& \{A, B, D\} \\
+S_2 &=& \{A,C \} \\
+S_3 &=& \{C,E \} \\
+S_4 &=& \{B,C,E \} \\
+\end{eqnarray*}
+
+One SDR for these sets is
+\begin{eqnarray*}
+A &\in& S_1 \\
+C &\in& S_2 \\
+E &\in& S_3 \\
+B &\in& S_4 \\
+\end{eqnarray*}
+
+Note that this is the same matching on the graph shown above.
+
+\paragraph{Finding Bipartite Matchings}
+
+One method for finding maximal bipartite matchings involves using a network flow algorithm.  Before using it, however, we must modify the graph.
+
+Start with a bipartite graph $G$.  As usual, we consider the two sets of vertices $V_1$ and $V_2$.  Replace every edge in the graph with a directed arc from $V_1$ to $V_2$ of capacity $L$, where $L$ is some large integer.
+
+Invent two new vertices: the source and the sink.  Add a directed arc of capacity $1$ from the source to each vertex in $V_1$.  Likewise, add a directed arc of capacity $1$ from each vertex in $V_2$ to the sink.
+
+Now find the maximum flow from the source to the sink.  The total weight of this flow will be the \PMlinkescapeword{size} of the maximum matching on $G$.  Similarly, the set of edges with non-zero flow will constitute a matching.
+
+There also exist \PMlinkname{algorithms specifically for finding bipartite matchings}{MaximalBipartiteMatchingAlgorithm} that avoid the overhead of setting up a weighted digraph suitable for network flow.
+%%%%%
+%%%%%
+\end{document}

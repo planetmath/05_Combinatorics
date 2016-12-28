@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneratingFunctionForTheReciprocalCentralBinomialCoefficients}
+\pmcreated{2013-03-22 18:58:09}
+\pmmodified{2013-03-22 18:58:09}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{generating function for  the reciprocal central binomial coefficients}
+\pmrecord{12}{41829}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A19}
+\pmclassification{msc}{11B65}
+\pmclassification{msc}{05A10}
+\pmclassification{msc}{05A15}
+\pmsynonym{convergent series}{GeneratingFunctionForTheReciprocalCentralBinomialCoefficients}
+%\pmkeywords{sum of reciprocals}
+%\pmkeywords{generating function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+It is well known that the sequence called central binomial coefficients is defined by ${2n\choose n}$ and whose initial terms are $1,2,6,20,70, 252,...$ has a generating function $\frac{1}{\sqrt{1-4x}}$.
+But it is less known the fact that
+the function
+$$\frac{4\,\left( {\sqrt{4 - x}} + {\sqrt{x}}\,\arcsin (\frac{{\sqrt{x}}}{2}) \right) }{{\sqrt{(4 - x)^3}}}
+$$
+has ordinary power series
+$$1+\frac{x}{2}+\frac{x^2}{6}+\frac{x^3}{20}+\frac{x^4}{70}+\frac{x^5}{252}+...$$
+This means that such a function is a generating function for the reciprocals ${2n\choose n}^{-1}$.
+
+From that expression we can see that the numerical series $\sum_{n=0}^{\infty}{2n\choose n}^{-1}$ sums $\frac{4\,\left( {\sqrt{3}} + \frac{\pi }{6} \right) }{3\,{\sqrt{3}}}$ which has the approximate value $1,\!7363998587187151$.
+
+\vskip1cm
+
+Reference:
+
+1) Renzo Sprugnoli, {\it Sum of reciprocals of the Central Binomial Coefficients}, Integers: electronic 
+journal of combinatorial number theory, 6 (2006) A27, 1-18
+%%%%%
+%%%%%
+\end{document}

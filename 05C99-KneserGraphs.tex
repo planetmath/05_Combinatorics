@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KneserGraphs}
+\pmcreated{2013-03-22 14:16:49}
+\pmmodified{2013-03-22 14:16:49}
+\pmowner{justice}{4961}
+\pmmodifier{justice}{4961}
+\pmtitle{Kneser graphs}
+\pmrecord{5}{35732}
+\pmprivacy{1}
+\pmauthor{justice}{4961}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C99}
+%\pmkeywords{Kneser graph}
+%\pmkeywords{Petersen graph}
+\pmdefines{Petersen graph}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $k,n$ be positive integers with $k\leq n$. The \emph{Kneser graph} $K_{n:k}$ has as its vertex set the $n\choose k$ $k$-element subsets of $\{1,2,\dots,n\}$. Two vertices are adjacent if and only if they correspond to disjoint subsets.
+
+The graph $K_{n:1}$ is the complete graph on $n$ vertices. Another well-known Kneser graph is $K_{5:2}$, better known as the \emph{Petersen graph}, which is shown in figure \ref{petersen}. The Petersen graph is often a counterexample to graph-theoretical conjectures.
+
+\begin{figure}
+\centering
+\scalebox{.5}{\includegraphics{PetersenGraph}}
+\caption{\label{petersen}The Petersen graph}
+\end{figure}
+%%%%%
+%%%%%
+\end{document}

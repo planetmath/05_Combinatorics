@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MinimumWeightedPathLength}
+\pmcreated{2013-03-22 12:32:12}
+\pmmodified{2013-03-22 12:32:12}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{minimum weighted path length}
+\pmrecord{6}{32779}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmrelated{WeightedPathLength}
+\pmrelated{ExtendedBinaryTree}
+\pmrelated{HuffmansAlgorithm}
+\pmrelated{HuffmanCoding}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\begin{document}
+Given a list of weights, $W := \left\{ w_1, w_2, \dots, w_n \right\}$, the
+\emph{minimum weighted path length} is the minimum of the weighted path length of all extended binary trees that have $n$ external nodes with weights taken from $W$.  There may be multiple possible trees that give this minimum path length, and quite often finding this tree is more important than determining the path length.
+
+\subsubsection*{Example}
+
+Let $W := \left\{ 1, 2, 3, 3, 4 \right\}$.  The minimum weighted path length is
+$29$.  A tree that gives this weighted path length is shown below.
+
+\begin{center}
+\includegraphics{tree.10}
+\end{center}
+
+\subsubsection*{Applications}
+
+Constructing a tree of minimum weighted path length for a given set of weights has several applications, particularly dealing with optimization problems.
+A simple and elegant algorithm for constructing such a tree is Huffman's algorithm.
+Such a tree can give the most optimal algorithm for merging $n$ sorted sequences (optimal merge).  It can also provide a means of compressing data (Huffman coding), as well as lead to optimal searches.
+%%%%%
+%%%%%
+\end{document}

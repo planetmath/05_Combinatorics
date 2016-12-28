@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArrowsRelation}
+\pmcreated{2013-03-22 17:48:54}
+\pmmodified{2013-03-22 17:48:54}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{arrows relation}
+\pmrecord{5}{40278}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A18}
+\pmclassification{msc}{03E05}
+\pmrelated{PartitionsLessThanCofinality}
+\pmrelated{ErdosRadoTheorem}
+\pmdefines{homogeneous}
+\pmdefines{arrows}
+\pmdefines{homogeneous set}
+\pmdefines{homogeneous subset}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+Let $[X]^\alpha=\{Y\subseteq X\mid |Y|=\alpha\}$, that is, the set of subsets of $X$ of size $\alpha$. Then given some cardinals $\kappa$, $\lambda$, $\alpha$ and $\beta$
+
+$$ \kappa\rightarrow(\lambda)^\alpha_\beta$$
+
+states that for any set $X$ of size $\kappa$ and any function $f:[X]^\alpha\rightarrow\beta$, there is some $Y\subseteq X$ and some $\gamma\in\beta$ such that $|Y|=\lambda$ and for any $y\in [Y]^\alpha$, $f(y)=\gamma$.
+
+In words, if $f$ is a partition of $[X]^\alpha$ into $\beta$ subsets then $f$ is constant on a subset of size $\lambda$ (a \emph{homogeneous} subset).
+
+As an example, the pigeonhole principle is the statement that if $n$ is finite and $k<n$ then:
+
+$$n\rightarrow 2^1_k$$
+
+That is, if you try to partition $n$ into fewer than $n$ pieces then one piece has more than one element.
+
+Observe that if
+
+$$ \kappa\rightarrow(\lambda)^\alpha_\beta$$
+
+then the same statement holds if:
+\begin{itemize}
+
+\item $\kappa$ is made larger (since the restriction of $f$ to a set of size $\kappa$ can be considered)
+
+\item $\lambda$ is made smaller (since a subset of the homogeneous set will suffice)
+
+\item $\beta$ is made smaller (since any partition into fewer than $\beta$ pieces can be expanded by adding empty sets to the partition)
+
+\item $\alpha$ is made smaller (since a partition $f$ of $[\kappa]^\gamma$ where $\gamma<\alpha$ can be extended to a partition $f^\prime$ of $[\kappa]^\alpha$ by $f^\prime(X)=f(X_\gamma)$ where $X_\gamma$ is the $\gamma$ smallest elements of $X$)
+
+\end{itemize}
+
+$$\kappa\nrightarrow(\lambda)^\alpha_\beta$$
+
+is used to state that the corresponding $\rightarrow$ relation is false.
+
+\PMlinkescapeword{size}
+
+{\bf References}
+\begin{itemize}
+\item Jech, T.  \emph{Set Theory}, Springer-Verlag, 2003
+\item Just, W. and Weese, M. \emph{Topics in Discovering Modern Set Theory, II}, American Mathematical Society, 1996
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

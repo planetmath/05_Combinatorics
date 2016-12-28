@@ -1,0 +1,510 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeBruijnErdHosTheorem}
+\pmcreated{2013-03-22 15:11:21}
+\pmmodified{2013-03-22 15:11:21}
+\pmowner{marijke}{8873}
+\pmmodifier{marijke}{8873}
+\pmtitle{De Bruijn--Erd\H{o}s theorem}
+\pmrecord{7}{36945}
+\pmprivacy{1}
+\pmauthor{marijke}{8873}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05B25}
+%\pmkeywords{incidence}
+%\pmkeywords{finite geometry}
+\pmrelated{FiniteProjectivePlane4}
+\pmrelated{IncidenceStructures}
+\pmrelated{Geometry}
+\pmrelated{LinearSpace2}
+
+\usepackage{amssymb}
+% \usepackage{amsmath}
+% \usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% portions from
+% makra.sty 1989-2005 by Marijke van Gans %
+                                          %          ^ ^
+\catcode`\@=11                            %          o o
+                                          %         ->*<-
+                                          %           ~
+%%%% CHARS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        %    code    char  frees  for
+
+\let\Para\S             %    \Para     ÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃ‚Â§   \S \scriptstyle
+\let\Pilcrow\P          %    \Pilcrow  ÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃ‚Â¶   \P
+\mathchardef\pilcrow="227B
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+\let\bs\backslash       %    \bs       \
+\let\us\_               %    \us       _     \_  ...
+
+%%%% DIACRITICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\udot\d             % under-dot (text mode), frees \d
+\let\odot\.             % over-dot (text mode),  frees \.
+%let\hacek\v            % hacek (text mode),     frees \v
+%let\makron\=           % makron (text mode),    frees \=
+%let\tilda\~            % tilde (text mode),     frees \~
+\let\uml\"              % umlaut (text mode),    frees \"
+
+%def\ij/{i{\kern-.07em}j}
+%def\trema#1{\discretionary{-}{#1}{\uml #1}}
+
+%%%% amssymb %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\le\leqslant
+\let\ge\geqslant
+%let\prece\preceqslant
+%let\succe\succeqslant
+
+%%%% USEFUL MISC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\C++{C$^{_{++}}$}
+
+%let\writelog\wlog
+%def\wl@g/{{\sc wlog}}
+%def\wlog{\@ifnextchar/{\wl@g}{\writelog}}
+
+%def\org#1{\lower1.2pt\hbox{#1}} 
+% chem struct formulae: \bs, --- /  \org{C} etc. 
+
+%%%% USEFUL INTERNAL LaTeX STUFF %%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\Ifnextchar=\@ifnextchar
+%let\Ifstar=\@ifstar
+%def\currsize{\@currsize}
+
+%%%% KERNING, SPACING, BREAKING %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\comma{,\,\allowbreak}
+
+%def\qqquad{\hskip3em\relax}
+%def\qqqquad{\hskip4em\relax}
+%def\qqqqquad{\hskip5em\relax}
+%def\qqqqqquad{\hskip6em\relax}
+%def\qqqqqqquad{\hskip7em\relax}
+%def\qqqqqqqquad{\hskip8em\relax}
+
+%%%% LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% COUNTERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\addtoreset\@addtoreset
+%{A}{B} adds A to list of counters reset to 0
+% when B is \refstepcounter'ed (see latex.tex)
+%
+%def\numbernext#1#2{\setcounter{#1}{#2}\addtocounter{#1}{\m@ne}}
+
+%%%% EQUATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% LEMMATA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% DISPLAY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% MATH LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\D\displaystyle
+\let\T\textstyle
+\let\S\scriptstyle
+\let\SS\scriptscriptstyle
+
+% array:
+%def\<#1:{\begin{array}{#1}}
+%def\>{\end{array}}
+
+% array using [ ] with rounded corners:
+%def\[#1:{\left\lgroup\begin{array}{#1}} 
+%def\]{\end{array}\right\rgroup}
+
+% array using ( ):
+%def\(#1:{\left(\begin{array}{#1}}
+%def\){\end{array}\right)}
+
+%def\hh{\noalign{\vskip\doublerulesep}}
+
+%%%% MATH SYMBOLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\d{\mathord{\rm d}}                      % d as in dx
+%def\e{{\rm e}}                              % e as in e^x
+
+%def\Ell{\hbox{\it\char`\$}}
+
+\def\sfmath#1{{\mathchoice%
+{{\sf #1}}{{\sf #1}}{{\S\sf #1}}{{\SS\sf #1}}}}
+\def\Stalkset#1{\sfmath{I\kern-.12em#1}}
+\def\Bset{\Stalkset B}
+\def\Nset{\Stalkset N}
+\def\Rset{\Stalkset R}
+\def\Hset{\Stalkset H}
+\def\Fset{\Stalkset F}
+\def\kset{\Stalkset k}
+\def\In@set{\raise.14ex\hbox{\i}\kern-.237em\raise.43ex\hbox{\i}}
+\def\Roundset#1{\sfmath{\kern.14em\In@set\kern-.4em#1}}
+\def\Qset{\Roundset Q}
+\def\Cset{\Roundset C}
+\def\Oset{\Roundset O}
+\def\Zset{\sfmath{Z\kern-.44emZ}}
+
+% \frac overwrites LaTeX's one (use TeX \over instead)
+%def\fraq#1#2{{}^{#1}\!/\!{}_{\,#2}}
+\def\frac#1#2{\mathord{\mathchoice%
+{\T{#1\over#2}}
+{\T{#1\over#2}}
+{\S{#1\over#2}}
+{\SS{#1\over#2}}}}
+%def\half{\frac12}
+
+\mathcode`\<="4268         % < now is \langle, \lt is <
+\mathcode`\>="5269         % > now is \rangle, \gt is >
+
+%def\biggg#1{{\hbox{$\left#1\vbox %to20.5\p@{}\right.\n@space$}}}
+%def\Biggg#1{{\hbox{$\left#1\vbox %to23.5\p@{}\right.\n@space$}}}
+
+\let\epsi=\varepsilon
+\def\omikron{o}
+
+\def\Alpha{{\rm A}}
+\def\Beta{{\rm B}}
+\def\Epsilon{{\rm E}}
+\def\Zeta{{\rm Z}}
+\def\Eta{{\rm H}}
+\def\Iota{{\rm I}}
+\def\Kappa{{\rm K}}
+\def\Mu{{\rm M}}
+\def\Nu{{\rm N}}
+\def\Omikron{{\rm O}}
+\def\Rho{{\rm P}}
+\def\Tau{{\rm T}}
+\def\Ypsilon{{\rm Y}} % differs from \Upsilon
+\def\Chi{{\rm X}}
+
+%def\dg{^{\circ}}                   % degrees
+
+%def\1{^{-1}}                       % inverse
+
+\def\*#1{{\bf #1}}                  % boldface e.g. vector
+%def\vi{\mathord{\hbox{\bf\i}}}     % boldface vector \i
+%def\vj{\mathord{\,\hbox{\bf\j}}}   % boldface vector \j
+
+%def\union{\mathbin\cup}
+%def\isect{\mathbin\cap}
+
+\let\so\Longrightarrow
+\let\oso\Longleftrightarrow
+\let\os\Longleftarrow
+
+% := and :<=>
+%def\isdef{\mathrel{\smash{\stackrel{\SS\rm def}{=}}}}
+%def\iffdef{\mathrel{\smash{stackrel{\SS\rm def}{\oso}}}}
+
+\def\isdef{\mathrel{\mathop{=}\limits^{\smash{\hbox{\tiny def}}}}}
+%def\iffdef{\mathrel{\mathop{\oso}\limits^{\smash{\hbox{\tiny %def}}}}}
+
+%def\tr{\mathop{\rm tr}}            % tr[ace]
+%def\ter#1{\mathop{^#1\rm ter}}     % k-ter[minant]
+
+%let\.=\cdot
+%let\x=\times                % ><ÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒ (direct product)
+
+%def\qed{ ${\S\circ}\!{}^\circ\!{\S\circ}$}
+%def\qed{\vrule height 6pt width 6pt depth 0pt}
+
+%def\edots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}\mkern1mu   %  .shorter
+%   \raise4pt\hbox{.}\mkern1mu                  %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %        .
+%def\fdots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}            %   . ~45ÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃ‚Â°
+%   \raise4pt\hbox{.}                           %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %       .
+
+\def\mod#1{\allowbreak \mkern 10mu({\rm mod}\,\,#1)}
+% redefines TeX's one using less space
+
+%def\int{\intop\displaylimits}
+%def\oint{\ointop\displaylimits}
+
+%def\intoi{\int_0^1}
+%def\intall{\int_{-\infty}^\infty}
+
+%def\su#1{\mathop{\sum\raise0.7pt\hbox{$\S\!\!\!\!\!#1\,$}}}
+
+%let\frakR\Re
+%let\frakI\Im
+%def\Re{\mathop{\rm Re}\nolimits}
+%def\Im{\mathop{\rm Im}\nolimits}
+%def\conj#1{\overline{#1\vphantom1}}
+%def\cj#1{\overline{#1\vphantom+}}
+
+%def\forAll{\mathop\forall\limits}
+%def\Exists{\mathop\exists\limits}
+
+%%%% PICTURES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\cent{\makebox(0,0)}
+
+%def\node{\circle*4}
+%def\nOde{\circle4}
+
+%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\opcit{[{\it op.\,cit.}]}
+\def\bitem#1{\bibitem[#1]{#1}}
+\def\name#1{{\sc #1}}
+\def\book#1{{\sl #1\/}}
+\def\paper#1{``#1''}
+\def\mag#1{{\it #1\/}}
+\def\vol#1{{\bf #1}}
+\def\isbn#1{{\small\tt ISBN\,\,#1}}
+\def\seq#1{{\small\tt #1}}
+%def\url<{\verb>}
+%def\@cite#1#2{[{#1\if@tempswa\ #2\fi}]}
+
+%%%% VERBATIM CODE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\"{\verb"}
+
+%%%% AD HOC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% WORDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \hyphenation{pre-sent pre-sents pre-sent-ed pre-sent-ing
+% re-pre-sent re-pre-sents re-pre-sent-ed re-pre-sent-ing
+% re-fer-ence re-fer-ences re-fer-enced re-fer-encing
+% ge-o-met-ry re-la-ti-vi-ty Gauss-ian Gauss-ians
+% Des-ar-gues-ian}
+
+%def\oord/{o{\trema o}rdin\-ate}
+% usage: C\oord/s, c\oord/.
+% output: co\"ord... except when linebreak at co-ord...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                                          %
+                                          %          ^ ^
+\catcode`\@=12                            %          ` '
+                                          %         ->*<-
+                                          %           ~
+\begin{document}
+\PMlinkescapeword{collection}
+\PMlinkescapephrase{finite plane}
+\PMlinkescapeword{incident}
+\PMlinkescapeword{order}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{line}
+\PMlinkescapeword{circle}
+
+\subsection*{De Bruijn--Erd\H{o}s theorem}
+
+Let $S$ be a set of $n\ne0$ `points', say $\{L_1,L_2,\dots L_n\}$, and
+let $\Lambda_1$, $\Lambda_2$, \dots\ $\Lambda_\nu$ be $\nu$ different subsets
+of $S$ of which any two have exactly one point in common. Now the {\bf De Bruijn--Erd\H{o}s theorem} says that $\nu\le n$, and that if $\nu=n$ then (up to renumbering) at least one of the following three must be true:
+%
+\begin{itemize}
+
+\item $\Lambda_i=\{L_i,L_n\}$ for $i\ne n$, and $\Lambda_n=\{L_n\}$
+
+\item $\Lambda_i=\{L_i,L_n\}$ for $i\ne n$, and $\Lambda_n=\{L_1,L_2,\dots
+L_{n-1}\}$
+
+\item $n$ is of the form $q^2+q+1$, each $\Lambda_i$ contains $q+1$ points,
+and each point is contained in $q+1$ of the $\Lambda_i$
+
+\end{itemize}
+%
+and we recognise the last case as \PMlinkid{finite projective planes}{6943} of order $q$. For $n=1$ ($q=0$) the first and last case overlap, and for $n=3$ ($q=1$) the last two cases do.  The second case is also known as a near-pencil.  The last two cases together are examples of linear spaces.  
+
+To exclude the first two cases one usually defines projective planes to satisfy some non-triviality conditions; unfortunately that also excludes projective planes of order 0~and~1.
+%
+\begin{center}
+\begin{picture}(200,78)(-100,0)
+
+\put(-122,+30){\begin{picture}(100,48)(0,0)
+\put(  0,+32){\circle*{4}}
+\put(-40,  0){\circle*{4}}
+\put(-24,  0){\circle*{4}}
+\put( -8,  0){\circle*{4}}
+\put( +8,  0){\circle*{4}}
+\put(+24,  0){\circle*{4}}
+\put(+40,  0){\circle*{4}}
+\put(-47, -5.6){\line(+5,+4){54}}
+\put(-29.25,-7){\line(+3,+4){34.5}}
+\put(-10, -8){\line(+1,+4){12}}
+\put(+10, -8){\line(-1,+4){12}}
+\put(+29.25,-7){\line(-3,+4){34.5}}
+\put(+47,-5.6){\line(-5,+4){54}}
+\put(-19,+32){\line(+1, 0){38}}
+\end{picture}}
+
+\put(+18,+30){\begin{picture}(100,48)(0,0)
+\put(  0,+32){\circle*{4}}
+\put(-40,  0){\circle*{4}}
+\put(-24,  0){\circle*{4}}
+\put( -8,  0){\circle*{4}}
+\put( +8,  0){\circle*{4}}
+\put(+24,  0){\circle*{4}}
+\put(+40,  0){\circle*{4}}
+\put(-47, -5.6){\line(+5,+4){54}}
+\put(-29.25,-7){\line(+3,+4){34.5}}
+\put(-10, -8){\line(+1,+4){12}}
+\put(+10, -8){\line(-1,+4){12}}
+\put(+29.25,-7){\line(-3,+4){34.5}}
+\put(+47, -5.6){\line(-5,+4){54}}
+\put(-49,  0){\line(+1, 0){98}}
+\end{picture}}
+
+\put(+148,+30){\begin{picture}(100,48)(0,0)
+\put(  0,+12.6){\circle{25}}
+\put(-24,  0){\circle*{4}}
+\put(+24,  0){\circle*{4}}
+\put(  0,+36){\circle*{4}}
+\put(  0,+12){\circle*{4}}
+\put(  0,  0){\circle*{4}}
+\put(-12,+18){\circle*{4}}
+\put(+12,+18){\circle*{4}}
+\put(-31,  0){\line(+1, 0){62}}
+\put(-28, -6){\line(+2,+3){32}}
+\put(+28, -6){\line(-2,+3){32}}
+\put(-30, -3){\line(+2,+1){48}}
+\put(+30, -3){\line(-2,+1){48}}
+\put(  0,+43){\line( 0,-1){50}}
+\end{picture}}
+
+\put(0,10){\cent[t]{\it The three cases of De\,Bruijn--Erd\H{o}s drawn for
+$n=\nu=7$ ($q=2$)}}
+
+\end{picture}
+\end{center}
+%
+The formulation above was found in the literature \cite{Cam94}. Naturally, if
+the $L_i$ are points we tend to interpret the subsets $\Lambda_\iota$
+as lines. However, interpreted in this way the condition that every two
+$\Lambda$ share an $L$ says rather more than is needed for the structure to
+be a finite plane (\PMlinkid{linear space}{3509}) as it insists that no two lines are parallel. The absence of the dual condition, for two $L$ to share a $\Lambda$, actually means we have {\em too little\/} for the structure to be a finite plane (linear space), as for two points we may not have a line through them. And indeed, while the second and third cases are finite planes without parallel lines, the first case is not a plane.
+
+\clearpage
+\subsection*{Erd\H{o}s--De Bruijn theorem}
+
+A dual formulation (which we could whimsically call the {\bf Erd\H{o}s--De
+Bruijn Theorem}) remedies both under- and over-specification for a plane.
+Indeed, the conditions are now exactly tailored to make the structure a finite
+plane (with some parallel lines in the first of the three cases).
+%
+\begin{center}
+\begin{picture}(200,78)(-100,-90)
+
+\put(-122,-30){\begin{picture}(100,48)(0,0)
+\put(-56,  0){\circle*{4}}
+\put(-40,  0){\circle*{4}}
+\put(-24,  0){\circle*{4}}
+\put( -8,  0){\circle*{4}}
+\put( +8,  0){\circle*{4}}
+\put(+24,  0){\circle*{4}}
+\put(+40,  0){\circle*{4}}
+\put(-40, +8){\line( 0,-1){46}}
+\put(-24, +8){\line( 0,-1){46}}
+\put( -8, +8){\line( 0,-1){46}}
+\put( +8, +8){\line( 0,-1){46}}
+\put(+24, +8){\line( 0,-1){46}}
+\put(+40, +8){\line( 0,-1){46}}
+\put(-64,  0){\line(+1, 0){112}}
+\end{picture}}
+
+\put(+18,-30){\begin{picture}(100,48)(0,0)
+\put(  0,-32){\circle*{4}}
+\put(-40,  0){\circle*{4}}
+\put(-24,  0){\circle*{4}}
+\put( -8,  0){\circle*{4}}
+\put( +8,  0){\circle*{4}}
+\put(+24,  0){\circle*{4}}
+\put(+40,  0){\circle*{4}}
+\put(-47, +5.6){\line(+5,-4){54}}
+\put(-29.25,+7){\line(+3,-4){34.5}}
+\put(-10, +8){\line(+1,-4){12}}
+\put(+10, +8){\line(-1,-4){12}}
+\put(+29.25,+7){\line(-3,-4){34.5}}
+\put(+47, +5.6){\line(-5,-4){54}}
+\put(-49,  0){\line(+1, 0){98}}
+\end{picture}}
+\put(+148,-30){\begin{picture}(100,48)(0,0)
+\put(  0,-12.6){\circle{25}}
+\put(-24,  0){\circle*{4}}
+\put(+24,  0){\circle*{4}}
+\put(  0,-36){\circle*{4}}
+\put(  0,-12){\circle*{4}}
+\put(  0,  0){\circle*{4}}
+\put(-12,-18){\circle*{4}}
+\put(+12,-18){\circle*{4}}
+\put(-31,  0){\line(+1, 0){62}}
+\put(-28, +6){\line(+2,-3){32}}
+\put(+28, +6){\line(-2,-3){32}}
+\put(-30, +3){\line(+2,-1){48}}
+\put(+30, +3){\line(-2,-1){48}}
+\put(  0,-43){\line( 0,+1){50}}
+\end{picture}}
+
+\put(0,-80){\cent[t]{\it The three cases of Erd\H{o}s--De\,Bruijn drawn for
+$\nu=n=7$ ($q=2$)}}
+
+\end{picture}
+\end{center}
+%
+Let $\Sigma$ be a set of $\nu\ne0$ `points', say $\{\Lambda_1,\Lambda_2,\dots
+\Lambda_\nu\}$, and let $L_1$, $L_2$, \dots\ $L_n$ be $n$ subsets of $\Sigma$
+(`lines') such that for any two points there is a unique $L_i$ that contains
+them both. We must now be careful about the points (the former lines) being
+``different'' (this was easier to formulate in the previous version, in which
+form it was a {\em simple\/} incidence structure): this condition now takes the
+form that no two points must have the same collection of lines that are
+incident with them. Then $n\ge\nu$, and if $n=\nu$ then (up to renumbering)
+at least one of the following three must be true:
+%
+\begin{itemize}
+
+\item $L_i=\{\Lambda_i\}$ for $i\ne n$, and $L_n=\{\Lambda_1,\Lambda_2,\dots
+\Lambda_n\}$
+
+\item $L_i=\{\Lambda_i,\Lambda_n\}$ for $i\ne n$, and $L_n=\{\Lambda_1,\Lambda_2
+\Lambda_{n-1}\}$
+
+\item $n$ is of the form $q^2+q+1$, each $L_i$ contains $q+1$ points,
+and each point is contained in $q+1$ of the $L_i$
+
+\end{itemize}
+%
+For a proof of the theorem (in the former version) see e.g.\ Cameron \cite{Cam94}.
+
+\clearpage
+\raggedright
+\begin{thebibliography}{MST73}
+
+\bitem{Cam94} \name{Peter J.\,Cameron},
+              \book{Combinatorics: topics, techniques, algorithms},\\
+              Camb.~Univ.~Pr.~1994, \isbn{0\,521\,45761\,0}\\
+{\tt\PMlinkexternal{http://www.maths.qmul.ac.uk/~pjc/comb/}{http://www.maths.qmul.ac.uk/~pjc/comb/}}
+              (solutions, errata \&c.)
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

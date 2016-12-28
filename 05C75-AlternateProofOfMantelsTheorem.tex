@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternateProofOfMantelsTheorem}
+\pmcreated{2013-03-22 17:56:35}
+\pmmodified{2013-03-22 17:56:35}
+\pmowner{lieven}{1075}
+\pmmodifier{lieven}{1075}
+\pmtitle{alternate proof of Mantel's theorem}
+\pmrecord{5}{40440}
+\pmprivacy{1}
+\pmauthor{lieven}{1075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C75}
+\pmclassification{msc}{05C69}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $G$ be a triangle-free graph of order $n$. For each edge $xy$ of $G$ we consider the 
+\PMlinkname{neighbourhoods}{NeighborhoodOfAVertex} 
+$\Gamma(x)$ and $\Gamma(y)$ of $G$.
+Since $G$ is triangle-free, these are disjoint. 
+
+This is only possible if the sum of the degrees of $x$ and $y$ 
+is less 
+than or equal to $n$. So for each edge $xy$ we get the inequality
+
+\[
+\delta(x)+\delta(y)\leq n
+\]
+
+Summing these inequalities for all edges of $G$ gives us
+\[
+\Sigma_{x\in V(G)} (\delta(x))^2 \leq n |E(G)|
+\]
+
+(The left hand side is a sum of $\delta(x)$ where each edge incident with $x$ 
+contributes one term and their are $\delta(x)$ such edges.)
+
+Since $\Sigma_{x\in V(G)} \delta(x) = 2 |E(G)|$, we get $4 |E(G)|^2 = 
+(\Sigma_{x\in V(G)} \delta(x))^2 $ and applying the Cauchy-Schwarz inequality gives 
+$4 |E(G)|^2 \leq n \Sigma_{x\in V(G)} (\delta(x))^2 \leq n^2 |E(G)|$.
+
+So we conclude that for a triangle-free graph $G$, 
+\[|E(G)|\leq\frac{n^2}{4} \]
+%%%%%
+%%%%%
+\end{document}

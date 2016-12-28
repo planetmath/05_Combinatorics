@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultinomialTheoremproof}
+\pmcreated{2013-03-22 13:41:55}
+\pmmodified{2013-03-22 13:41:55}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{multinomial theorem (proof)}
+\pmrecord{4}{34374}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\emph{Proof.} The below proof of the multinomial theorem uses 
+the binomial theorem and  induction on $k$. 
+In addition, we shall use multi-index notation.
+
+First, 
+for $k=1$, both sides equal $x_1^n$. For the induction step,
+suppose the multinomial theorem holds for $k$. 
+Then the binomial theorem and the induction assumption yield
+\begin{eqnarray*}
+(x_1+\cdots + x_k\,+\,x_{k+1})^n &=& \sum_{l=0}^n {n \choose l} (x_1+\cdots + x_k)^l x_{k+1}^{n-l}\\
+&=& \sum_{l=0}^n {n \choose l} l! \sum_{|i|=l} \frac{x^i}{i!} x_{k+1}^{n-l}\\
+&=& n! \sum_{l=0}^n \sum_{|i|=l} \frac{x^i x_{k+1}^{n-l}}{i! (n-l)!} \\
+\end{eqnarray*}
+where $x=(x_1,\ldots, x_k)$ and $i$ is a multi-index in $I^k_+$. To complete the proof, we need to show that
+the sets 
+\begin{eqnarray*}
+A&=&\{ (i_1,\ldots,i_k, n-l)\in I^{k+1}_+ \mid l=0,\ldots, n,\, |(i_1,\ldots, i_k)|=l \}, \\
+B&=&\{j \in I^{k+1}_+ \mid |j|=n \} 
+\end{eqnarray*}
+are equal.
+The inclusion $A \subset B$ is clear since 
+$$ |(i_1,\ldots,i_k, n-l)| = l + n-l = n.$$
+For $B \subset A$, suppose $j=(j_1,\ldots, j_{k+1}) \in I^{k+1}_+$,
+and $|j|=n$. Let $l=|(j_1,\ldots, j_k)|$. Then $l=n-j_{k+1}$, 
+so $j_{k+1} = n-l$ for some $l=0,\ldots, n$. 
+It follows that that $A=B$.
+
+Let us define $y=(x_1,\cdots, x_{k+1})$ and let 
+$j=(j_1,\ldots, j_{k+1})$ be a multi-index in $I_+^{k+1}$. 
+Then 
+\begin{eqnarray*}
+(x_1+\cdots + x_{k+1})^n &=& n! \sum_{|j|=n} \frac{x^{(j_1,\ldots, j_k)} x_{k+1}^{j_{k+1}}}{(j_1,\ldots, j_k)! j_{k+1}!} \\
+&=& n! \sum_{|j|=n} \frac{y^j}{j!}.
+\end{eqnarray*}
+This completes the proof. $\Box$
+%%%%%
+%%%%%
+\end{document}

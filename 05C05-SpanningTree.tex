@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpanningTree}
+\pmcreated{2013-03-22 12:29:19}
+\pmmodified{2013-03-22 12:29:19}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{spanning tree}
+\pmrecord{6}{32709}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmrelated{Tree}
+\pmrelated{Graph}
+\pmrelated{MinimumSpanningTree}
+\pmrelated{DepthFirstSearch2}
+\pmrelated{DepthFirstSearch}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[all]{xy}
+\begin{document}
+A \emph{spanning tree} of a (connected) graph $G$ is a connected, acyclic subgraph of $G$ that contains all of the vertices of $G$.  Below is an example of a spanning tree $T$, where the edges in $T$ are drawn as solid lines and the edges in $G$ but not in $T$ are drawn as dotted lines.
+
+$$
+\xymatrix{
+\bullet \ar@{.}[dddd] \ar@{-}[ddr] \ar@{.}[rrr] &&& \bullet \ar@{.}[ddll] \ar@{-}[dd] \ar@{.}[drr] \\
+&&&&&\bullet \ar@{-}[dll] \ar@{.}[d] \\
+&\bullet\ar@{-}[ddl]\ar@{-}[dr]\ar@{.}[rr] && \bullet\ar@{-}[dl]\ar@{.}[dr]\ar@{-}[rr] &&\bullet\ar@{-}[dl] \\
+&&\bullet\ar@{.}[dll]\ar@{-}[dr]\ar@{.}[rr]&&\bullet\ar@{.}[dl] \\
+\bullet\ar@{.}[rrr]&&&\bullet
+}
+$$
+
+For any tree there is exactly one spanning tree: the tree itself.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,556 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VizingsTheorem}
+\pmcreated{2013-03-22 15:10:36}
+\pmmodified{2013-03-22 15:10:36}
+\pmowner{marijke}{8873}
+\pmmodifier{marijke}{8873}
+\pmtitle{Vizing's theorem}
+\pmrecord{11}{36930}
+\pmprivacy{1}
+\pmauthor{marijke}{8873}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+%\pmkeywords{graph}
+\pmrelated{TaitColoring}
+\pmdefines{edge coloring}
+\pmdefines{edge-${k}$-coloring}
+\pmdefines{chromatic index}
+\pmdefines{edge-chromatic number}
+\pmdefines{class I}
+\pmdefines{class II}
+\pmdefines{class 1}
+\pmdefines{class 2}
+\pmdefines{edge-critical graph}
+\pmdefines{enlarged valency}
+\pmdefines{snark}
+
+\usepackage{amssymb}
+% \usepackage{amsmath}
+% \usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% portions from
+% makra.sty 1989-2005 by Marijke van Gans %
+                                          %          ^ ^
+\catcode`\@=11                            %          o o
+                                          %         ->*<-
+                                          %           ~
+%%%% CHARS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        %    code    char  frees  for
+
+\let\Para\S             %    \Para     Â§   \S \scriptstyle
+\let\Pilcrow\P          %    \Pilcrow  Â¶   \P
+\mathchardef\pilcrow="227B
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+\let\bs\backslash       %    \bs       \
+\let\us\_               %    \us       _     \_  ...
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+%%%% DIACRITICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\udot\d             % under-dot (text mode), frees \d
+%let\odot\.             % over-dot (text mode),  frees \.
+%let\hacek\v            % hacek (text mode),     frees \v
+%let\makron\=           % makron (text mode),    frees \=
+%let\tilda\~            % tilde (text mode),     frees \~
+\let\uml\"              % umlaut (text mode),    frees \"
+
+%def\ij/{i{\kern-.07em}j}
+%def\trema#1{\discretionary{-}{#1}{\uml #1}}
+
+%%%% amssymb %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\le\leqslant
+\let\ge\geqslant
+%let\prece\preceqslant
+%let\succe\succeqslant
+
+%%%% USEFUL MISC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\C++{C$^{_{++}}$}
+
+%let\writelog\wlog
+%def\wl@g/{{\sc wlog}}
+%def\wlog{\@ifnextchar/{\wl@g}{\writelog}}
+
+%def\org#1{\lower1.2pt\hbox{#1}} 
+% chem struct formulae: \bs, --- /  \org{C} etc. 
+
+%%%% USEFUL INTERNAL LaTeX STUFF %%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\Ifnextchar=\@ifnextchar
+%let\Ifstar=\@ifstar
+%def\currsize{\@currsize}
+
+%%%% KERNING, SPACING, BREAKING %%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\qqquad{\hskip3em\relax}
+%def\qqqquad{\hskip4em\relax}
+%def\qqqqquad{\hskip5em\relax}
+%def\qqqqqquad{\hskip6em\relax}
+%def\qqqqqqquad{\hskip7em\relax}
+%def\qqqqqqqquad{\hskip8em\relax}
+
+%%%% LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% COUNTERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\addtoreset\@addtoreset
+%{A}{B} adds A to list of counters reset to 0
+% when B is \refstepcounter'ed (see latex.tex)
+%
+%def\numbernext#1#2{\setcounter{#1}{#2}\addtocounter{#1}{\m@ne}}
+
+%%%% EQUATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% LEMMATA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% DISPLAY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% MATH LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\D\displaystyle
+\let\T\textstyle
+\let\S\scriptstyle
+\let\SS\scriptscriptstyle
+
+% array:
+%def\<#1:{\begin{array}{#1}}
+%def\>{\end{array}}
+
+% array using [ ] with rounded corners:
+%def\[#1:{\left\lgroup\begin{array}{#1}} 
+%def\]{\end{array}\right\rgroup}
+
+% array using ( ):
+%def\(#1:{\left(\begin{array}{#1}}
+%def\){\end{array}\right)}
+
+%def\hh{\noalign{\vskip\doublerulesep}}
+
+%%%% MATH SYMBOLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\d{\mathord{\rm d}}                      % d as in dx
+%def\e{{\rm e}}                              % e as in e^x
+
+%def\Ell{\hbox{\it\char`\$}}
+
+\def\sfmath#1{{\mathchoice%
+{{\sf #1}}{{\sf #1}}{{\S\sf #1}}{{\SS\sf #1}}}}
+\def\Stalkset#1{\sfmath{I\kern-.12em#1}}
+\def\Bset{\Stalkset B}
+\def\Nset{\Stalkset N}
+\def\Rset{\Stalkset R}
+\def\Hset{\Stalkset H}
+\def\Fset{\Stalkset F}
+\def\kset{\Stalkset k}
+\def\In@set{\raise.14ex\hbox{\i}\kern-.237em\raise.43ex\hbox{\i}}
+\def\Roundset#1{\sfmath{\kern.14em\In@set\kern-.4em#1}}
+\def\Qset{\Roundset Q}
+\def\Cset{\Roundset C}
+\def\Oset{\Roundset O}
+\def\Zset{\sfmath{Z\kern-.44emZ}}
+
+% \frac overwrites LaTeX's one (use TeX \over instead)
+%def\fraq#1#2{{}^{#1}\!/\!{}_{\,#2}}
+\def\frac#1#2{\mathord{\mathchoice%
+{\T{#1\over#2}}
+{\T{#1\over#2}}
+{\S{#1\over#2}}
+{\SS{#1\over#2}}}}
+%def\half{\frac12}
+
+\mathcode`\<="4268         % < now is \langle, \lt is <
+\mathcode`\>="5269         % > now is \rangle, \gt is >
+
+%def\biggg#1{{\hbox{$\left#1\vbox %to20.5\p@{}\right.\n@space$}}}
+%def\Biggg#1{{\hbox{$\left#1\vbox %to23.5\p@{}\right.\n@space$}}}
+
+\let\epsi=\varepsilon
+\def\omikron{o}
+
+\def\Alpha{{\rm A}}
+\def\Beta{{\rm B}}
+\def\Epsilon{{\rm E}}
+\def\Zeta{{\rm Z}}
+\def\Eta{{\rm H}}
+\def\Iota{{\rm I}}
+\def\Kappa{{\rm K}}
+\def\Mu{{\rm M}}
+\def\Nu{{\rm N}}
+\def\Omikron{{\rm O}}
+\def\Rho{{\rm P}}
+\def\Tau{{\rm T}}
+\def\Ypsilon{{\rm Y}} % differs from \Upsilon
+\def\Chi{{\rm X}}
+
+%def\dg{^{\circ}}                   % degrees
+
+%def\1{^{-1}}                       % inverse
+
+\def\*#1{{\bf #1}}                  % boldface e.g. vector
+%def\vi{\mathord{\hbox{\bf\i}}}     % boldface vector \i
+%def\vj{\mathord{\,\hbox{\bf\j}}}   % boldface vector \j
+
+%def\union{\mathbin\cup}
+%def\isect{\mathbin\cap}
+
+%let\so\Longrightarrow
+%let\oso\Longleftrightarrow
+%let\os\Longleftarrow
+
+% := and :<=>
+%def\isdef{\mathrel{\smash{\stackrel{\SS\rm def}{=}}}}
+%def\iffdef{\mathrel{\smash{stackrel{\SS\rm def}{\oso}}}}
+
+\def\isdef{\mathrel{\mathop{=}\limits^{\smash{\hbox{\tiny def}}}}}
+%def\iffdef{\mathrel{\mathop{\oso}\limits^{\smash{\hbox{\tiny %def}}}}}
+
+%def\tr{\mathop{\rm tr}}            % tr[ace]
+%def\ter#1{\mathop{^#1\rm ter}}     % k-ter[minant]
+
+%let\.=\cdot
+%let\x=\times                % Ã—Â— (direct product)
+
+%def\qed{ ${\S\circ}\!{}^\circ\!{\S\circ}$}
+%def\qed{\vrule height 6pt width 6pt depth 0pt}
+
+%def\edots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}\mkern1mu   %  .shorter
+%   \raise4pt\hbox{.}\mkern1mu                  %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %        .
+%def\fdots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}            %   . ~45Â°
+%   \raise4pt\hbox{.}                           %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %       .
+
+\def\mod#1{\allowbreak \mkern 10mu({\rm mod}\,\,#1)}
+% redefines TeX's one using less space
+
+%def\int{\intop\displaylimits}
+%def\oint{\ointop\displaylimits}
+
+%def\intoi{\int_0^1}
+%def\intall{\int_{-\infty}^\infty}
+
+%def\su#1{\mathop{\sum\raise0.7pt\hbox{$\S\!\!\!\!\!#1\,$}}}
+
+%let\frakR\Re
+%let\frakI\Im
+%def\Re{\mathop{\rm Re}\nolimits}
+%def\Im{\mathop{\rm Im}\nolimits}
+%def\conj#1{\overline{#1\vphantom1}}
+%def\cj#1{\overline{#1\vphantom+}}
+
+%def\forAll{\mathop\forall\limits}
+%def\Exists{\mathop\exists\limits}
+
+%%%% PICTURES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\cent{\makebox(0,0)}
+
+%def\node{\circle*4}
+%def\nOde{\circle4}
+
+%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\opcit{[{\it op.\,cit.}]}
+\def\bitem#1{\bibitem[#1]{#1}}
+\def\name#1{{\sc #1}}
+\def\book#1{{\sl #1\/}}
+\def\paper#1{``#1''}
+\def\mag#1{{\it #1\/}}
+\def\vol#1{{\bf #1}}
+\def\isbn#1{{\small\tt ISBN\,\,#1}}
+\def\seq#1{{\small\tt #1}}
+%def\url<{\verb>}
+%def\@cite#1#2{[{#1\if@tempswa\ #2\fi}]}
+
+%%%% VERBATIM CODE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\"{\verb"}
+
+%%%% AD HOC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\0#1{\hbox{\sc #1}}  % typesetting for nodes (vertices)
+
+%%%% WORDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \hyphenation{pre-sent pre-sents pre-sent-ed pre-sent-ing
+% re-pre-sent re-pre-sents re-pre-sent-ed re-pre-sent-ing
+% re-fer-ence re-fer-ences re-fer-enced re-fer-encing
+% ge-o-met-ry re-la-ti-vi-ty Gauss-ian Gauss-ians
+% Des-ar-gues-ian}
+
+%def\oord/{o{\trema o}rdin\-ate}
+% usage: C\oord/s, c\oord/.
+% output: co\"ord... except when linebreak at co-ord...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                                          %
+                                          %          ^ ^
+\catcode`\@=12                            %          ` '
+                                          %         ->*<-
+                                          %           ~
+\begin{document}
+\PMlinkescapeword{bound}
+\PMlinkescapephrase{class number}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{covers}
+\PMlinkescapeword{cyclic}
+\PMlinkescapeword{decompositions}
+\PMlinkescapeword{embeddings}
+\PMlinkescapeword{Fix}
+\PMlinkescapeword{length}
+\PMlinkescapeword{link}
+\PMlinkescapeword{links}
+\PMlinkescapeword{node}
+\PMlinkescapeword{nodes}
+\PMlinkescapeword{odd}
+\PMlinkescapeword{range}
+\PMlinkescapeword{ranges}
+\PMlinkescapeword{size}
+\PMlinkescapeword{sizes}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{structures}
+\PMlinkescapeword{term}
+\PMlinkescapeword{time}
+
+
+\subsection*{Definitions and notation}
+
+In a graph or multigraph $G$, let $\rho(\0v)$ denote the valency of vertex
+(node) $\0v$, and let $\rho(G)$ denote the largest valency in $G$ (often written
+just $\rho$ on its own, $\Delta(G)$ is another common notation).
+
+Let the multiplicity $\mu(\0v,\0w)$ of vertices (nodes) $\0v$ and $\0w$
+be the number of parallel edges that link them, and here too let $\mu(G)$ be
+the largest multiplicity in $G$. A graph is a multigraph for which $\mu(G)=1$.
+
+An {\bf edge coloring} of a (multi)graph $G$ is a mapping from the
+set $E$ of its edges to a set $K$ of items called colors, in such a way
+that at any vertex $\0v$, the $\rho(\0v)$ edges there all have a different
+color. An {\bf edge-$k$-coloring} is an edge-coloring where $|K|=k$.
+
+Note that a loop (an edge joining $\0v$ to itself) accounts for two of the
+$\rho(\0v)$ edges at $\0v$ and cannot have a color different from itself,
+so edge-colorings as defined here do not exist for pseudographs (structures
+that are allowed to have loops).
+
+The {\bf chromatic index} (aka {\bf edge-chromatic number}) ${\chi\,}'(G)$ is
+the smallest number $k$ for which an edge-$k$-coloring of $G$ exists. This now
+standard notation is analogous to the {\bf chromatic number} $\chi(G)$ which
+refers to vertex coloring.
+
+\subsection*{Vizing's theorem}
+
+For any multigraph $G$ (this includes graphs), we have of course
+$$
+  {\chi\,}'(G) \;\ge\; \rho(G)
+$$
+immediately from the definition. Surprisingly though, we also have
+
+{\bf Theorem (Vizing)}$\quad$
+For any graph $G$,
+$$
+  {\chi\,}'(G) \;\le\; \rho(G)+1
+$$
+This celebrated theorem was proved by V.~G.~Vizing in 1964 while still a
+graduate student (at Novosibirsk). It is a special case of
+
+{\bf Theorem (Vizing)}$\quad$
+For any multigraph $G$,
+$$
+  {\chi\,}'(G) \;\le\; \rho(G)+\mu(G)
+$$
+(edge-coloring of multigraphs is the subject of Vizing's doctoral thesis, 1965).
+The theorem was proved independently by R.~P.~Gupta in 1966; nowadays various
+versions of the proofs exist. A key r\^ole is played by connected subgraphs $H(a,b)$ of colors $a$ and $b$ that cannot be extended further. They are analogous to Kempe chains in face or vertex colorings, but have a simpler structure: they are either paths or closed paths (the latter of even length). \PMlinkid{See here for a proof}{6932} (in the case of graphs).
+
+Ore~\cite{Ore67} gives a sharper bound for multigraphs. Let the
+{\bf enlarged valency} $\rho^+(\0v)$ be given by
+$$
+  \rho^+(\0v) \;\isdef\; \rho(\0v) + \max_{\rm w} \mu(\0v,\0w)
+$$
+where $\0w$ can be taken over all vertices of the graph; it effectively only
+ranges over those adjacent to $\0v$ (as $\mu(\0v,\0w)$ is zero for the others).
+Again, let $\rho^+(G)$ denote the maximum enlarged valency occurring in
+$G$. Now
+
+{\bf Theorem (Ore)}$\quad$ For any multigraph $G$,
+$$
+  {\chi\,}'(G) \;\le\; \rho^+(G)
+$$
+
+\subsection*{Shannon's theorem}
+
+The following theorem was proven in 1949 by
+Claude E.~Shannon. He also gives examples, for any value of $\rho$, of
+multigraphs that actually attain the bound,
+the so-called Shannon graphs: they have three vertices, with
+$\mu(\0a,\0b)=\mu(\0a,\0c)=\lfloor\rho/2\rfloor$ and
+$\mu(\0b,\0c)=\lceil\rho/2\rceil$.
+
+{\bf Theorem (Shannon)}$\quad$ For any multigraph $G$,
+$$
+  {\chi\,}'(G) \;\le\; \lfloor\frac32\rho(G)\rfloor
+$$
+While giving a much worse bound for graphs, it gives for some multigraphs a
+better bound than Vizing's theorem. Nevertheless, it is also possible to prove
+it from the latter~\cite{FW77}.
+
+Only in the context of graph colorings is {\em Shannon's theorem\/} understood
+to refer to the one here; in the wider world the term tends to refer to any of
+his fundamental theorems in information theory.
+
+Here too Ore~\cite{Ore67} gives a sharper bound based on the maximum of
+a local expression. Let $\sigma(\0v)$ be 0 if $\0v$ has fewer than two
+neighbours, and otherwise
+$$
+  \sigma(\0v) \;\isdef\;
+  \max_{{\rm v}',\,{\rm v}''} (\rho(\0v) + \rho(\0v') + \rho(\0v''))
+$$
+where $\0v'$ and $\0v''$ range over all pairs of distinct neighbours of $\0v$. Again, let $\sigma(G)$ be its
+largest value in the graph.
+
+{\bf Theorem (Ore)}$\quad$ For any multigraph $G$,
+$$
+  {\chi\,}'(G) \;\le\; \max(\rho(G),\lfloor\frac12\sigma(G)\rfloor)
+$$
+
+\subsection*{Chromatic class}
+
+Vizing's theorem has the effect of placing each multigraph $G$ in one of the
+classes 0, 1, 2, \dots\ $\mu(G)$ where the class number is
+${\chi\,}'(G)-\rho(G)$.
+
+For graphs it means they split into just two classes: those that can be
+edge-colored in $\rho(G)$ colors and those that need $\rho(G)+1$
+colors. The logical name for them would be class~0 and class~1; unfortunately
+the standard terminology is class~1 and 2 (or I and II).
+
+{\bf Class I} (graphs that can be edge-$\rho$-colored) contains among others
+%
+\begin{itemize}
+
+\item single $n$-cycles for even $n$ $^\dagger$
+
+\item complete graphs $K_n$ for even $n$ $^\ddagger$
+
+\item bipartite graphs (this is K\uml{o}nig's theorem, 1916)
+
+\item bridgeless planar trivalent graphs (four-color theorem via Tait coloring)
+
+\item planar graphs with $\rho(G)\ge8$ (by another theorem of Vizing)
+
+\item planar graphs with $\rho(G)\ge6$?? (conjecture of Vizing)
+
+\end{itemize}
+%
+{\bf Class II} (graphs that need $\rho+1$ colors) contains among others
+%
+\begin{itemize}
+
+\item single $n$-cycles for odd $n$ $^\dagger$
+
+\item complete graphs $K_n$ for odd $n$ $^\ddagger$
+
+\item $K_n$ for odd $n$ with a few edges missing (by a couple of theorems)
+
+\item trivalent graphs with a bridge $^\pilcrow$
+
+\end{itemize}
+%
+but the general classification problem has thus far eluded the best efforts of
+Vizing and many others. There are interesting links here with polyhedral
+decompositions (aka cyclic double covers) and embeddings in surfaces.
+
+A(n {\bf edge-}){\bf critical graph} is a connected graph of class II but such
+that removing any of its edges makes it class I. As often in graph theory,
+such a minimality condition imposes a certain amount of structure on the graph.
+There are conjectures\dots
+
+\subsection*{Almost all graphs are in class I}
+
+Let $\#G_n$ be the number of graphs with $n$ vertices,
+and $\#G^{\,\rm I}_n$ the number of them in class~I.
+
+{\bf Theorem (P.~Erd\H{o}s and R.~J.~Wilson)}$\quad$
+$$
+  \lim_{n\to\infty} {\#G^{\,\rm I}_n \over \#G_n} = 1
+$$
+So graphs of class II get {\em relatively\/} rarer for larger graph sizes. The {\em absolute\/} numbers do still increase. For cubic graphs for instance, we saw every one with a bridge is in class II. Bridgeless cubic graphs of class II are a bit thinner on the ground. By the four-color theorem, via Tait coloring, we know all of them are non-planar. Rarer still are those of them with girth at least five (and some non-triviality conditions); they are so hard to find that Martin Gardner dubbed them {\bf snarks}. The Petersen graph is one, and a few infinite families of snarks have been found.
+
+{\footnotesize
+
+$\dagger\quad$ $\rho=2$, so an edge-$\rho$-coloring must use alternating colors. For odd $n$ that's impossible.
+
+$\ddagger\quad$ $\rho=n-1$, note it is also the valency of every vertex.
+Fix two colors $a$ and $b$. A Kempe chain $H(a,b)$ can only terminate at a vertex where one of those colors is missing but in $K_n$ we cannot afford to miss any color at any vertex, so every $H(a,b)$ is a cycle of even length and together they visit all $n$ vertices. For odd $n$ that's impossible.
+For even $n$ there are ways to construct the coloring (try it).
+
+$\pilcrow\;\;$ $\rho = 3$ and again the valency of every vertex. For the same
+reason as in the previous note, every $H(a,b)$ or $H(c,a)$ or $H(b,c)$ is a cycle. Every edge must be in two such, but a bridge cannot be part of a cycle.
+
+}
+
+\raggedright
+\begin{thebibliography}{MST73}
+
+\bitem{Ore67} \name{Oystein~Ore}, \book{The Four-Color Problem},\\
+              Acad.~Pr.~1967, \isbn{0\,12\,528150\,1}\\
+              {\it Long the standard work on its subject, but written before
+              the theorem was proven. Has a wealth of other graph theory
+              material, including proofs of (improvements of) Vizing's and
+              Shannon's theorems.}
+
+\bitem{FW77}  \name{S.~Fiorini} and \name{R.~J.~Wilson},
+              \book{Edge-colourings of graphs}, Pitman~1977,
+              \isbn{0\,273\,01129\,4}\\
+              {\em The first ever book devoted to edge-colorings,
+              including material previously found only in Russian
+              language journal articles. Has proofs of Vizing's and
+              Shannon's theorems.}
+
+\bitem{SK77}  \name{Thomas~L.~Saaty} and \name{Paul~C.~Kainen},\\
+              \book{The Four-Color Problem: assaults and conquest},\\
+              McGraw-Hill 1977; repr.\ Dover 1986,
+              \isbn{0\,486\,65092\,8}\\
+              {\em Wonderfully broad, not only focussing on the usual
+              route to the Appel-Haken proof but also giving lots of
+              other material.}
+
+\bitem{Wil02} \name{Robert~A.~Wilson},
+              \book{Graphs, Colourings and the Four-colour Theorem},
+              Oxford~Univ.~Pr.~2002, \isbn{0\,19\,851062\,4} (pbk),
+{\tt\PMlinkexternal{http://www.maths.qmul.ac.uk/~raw/graph.html}{http://www.maths.qmul.ac.uk/~raw/graph.html}}
+              (errata \&c.)\\
+              {\em A good general course in graph theory, with special focus on
+              the four-color theorem and details of the Appel-Haken proof.
+              Has proof of Vizing's theorem.}
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

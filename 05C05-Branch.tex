@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Branch}
+\pmcreated{2013-03-22 12:52:22}
+\pmmodified{2013-03-22 12:52:22}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{branch}
+\pmrecord{4}{33211}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmclassification{msc}{03E05}
+\pmrelated{TreeSetTheoretic}
+\pmrelated{ExampleOfTreeSetTheoretic}
+\pmdefines{branch}
+\pmdefines{cofinal branch}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+A subset $B$ of a tree $(T,<_T)$ is a \emph{branch} if $B$ is a maximal linearly ordered subset of $T$.  That is:
+\begin{itemize}
+
+\item $<_T$ is a linear ordering of $B$
+
+\item If $t\in T\setminus B$ then $B\cup \{t\}$ is not linearly ordered by $<_T$.
+
+\end{itemize}
+
+This is the same as the intuitive conception of a branch: it is a set of nodes starting at the root and going all the way to the tip (in infinite sets the conception is more complicated, since there may not be a tip, but the idea is the same).  Since branches are maximal there is no way to add an element to a branch and have it remain a branch.
+
+A \emph{cofinal branch} is a branch which intersects every level of the tree.
+%%%%%
+%%%%%
+\end{document}

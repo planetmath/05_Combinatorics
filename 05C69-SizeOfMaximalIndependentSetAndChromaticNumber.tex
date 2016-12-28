@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SizeOfMaximalIndependentSetAndChromaticNumber}
+\pmcreated{2013-03-22 14:30:02}
+\pmmodified{2013-03-22 14:30:02}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{size of maximal independent set and chromatic number}
+\pmrecord{10}{36037}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C69}
+\pmclassification{msc}{05C15}
+%\pmkeywords{chromatic number}
+%\pmkeywords{independent sets}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\alpha(G)$ be the size of the largest independent set in a graph $G$, and $\chi(G)$ the chromatic number of $G$.
+
+{\bf Theorem:} $\alpha(G)\chi(G) \geq |G|$.
+
+\bigskip
+
+\begin{proof}
+The vertices of $G$ can be partitioned into $\chi(G)$ monochromatic classes. Each class is an independent set, and hence cannot have size larger than $\alpha(G)$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GraphHomomorphism}
+\pmcreated{2013-03-22 16:04:53}
+\pmmodified{2013-03-22 16:04:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{graph homomorphism}
+\pmrecord{11}{38140}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C75}
+\pmclassification{msc}{05C60}
+\pmsynonym{graph automorphism}{GraphHomomorphism}
+\pmrelated{GraphIsomorphism}
+\pmrelated{Pseudograph}
+\pmrelated{Multigraph}
+\pmrelated{Graph}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+We shall define what a graph homomorphism is between two pseudographs, so that a graph homomorphism between two multigraphs, or two graphs are special cases.
+
+Recall that a pseudograph $G$ is an ordered triple $(V,E,i)$, where $V$ is a set called the vertex set of $G$, $E$ is a set called the edge set of $G$, and $i:E\to 2^V$ is a map (incidence map), such that for every $e\in E$, $1\le |i(e)|\le 2$.  
+
+Elements of $V$ are called vertices, elements of $E$ edges.  The vertex/vertices associated with any edge $e$ via the map $i$ is/are called the endpoint(s) of $e$.  If an edge $e$ has only one endpoint, it is called a loop.  $e_1$ and $e_2$ are said to be parallel if $i(e_1)=i(e_2)$.  
+
+As two examples, a multigraph is a pseudograph such that $|i(e)|=2$ for each edge $e\in E$ (no loops allowed).  A graph is a multigraph such that $i$ is one-to-one (no parallel edges allowed).
+
+\textbf{Definition}.  Given two pseudographs $G_1=(V_1,E_1,i_1)$ and $G_2=(V_2,E_2,i_2)$, a \emph{graph homomorphism} $h$ from $G_1$ to $G_2$ consists of two functions $f:V_1\to V_2$ and $g:E_1\to E_2$, such that 
+\begin{eqnarray}
+i_2\circ g=f^*\circ i_1.
+\end{eqnarray}
+The function $f^*:2^{V_1} \to 2^{V_2}$ is defined as $f^*(S)=\lbrace f(s)\mid s\in S\rbrace$.
+
+A \emph{graph isomorphism} $h=(f,g)$ is a graph homomorphism such that both $f$ and $g$ are bijections.  It is a 
+\emph{graph automorphism} if $G_1=G_2$.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+In case when $G_1$ and $G_2$ are graphs, a graph homomorphism may be defined in terms of a single function $f:V_1\to V_2$ satisfying the condition (*)
+\begin{center}
+$\lbrace v_1,v_2\rbrace$ is an edge of $G_1\Longrightarrow \lbrace f(v_1),f(v_2)\rbrace$ is an edge of $G_2$.  
+\end{center}
+To see this, suppose $h=(f,g)$ is a graph homomorphism from $G_1$ to $G_2$.  Then $f^*i_1(e)=f^*(\lbrace v_1,v_2\rbrace)=\lbrace f(v_1),f(v_2)\rbrace=i_2(g(e))$.  The last equation says that $f(v_1)$ and $f(v_2)$ are endpoints of $g(e)$.  Conversely, suppose $f:V_1\to V_2$ is a function sastisfying condition (*).  For each $e\in E_1$ with end points $\lbrace v_1,v_2\rbrace$, let $e^{\prime}\in E_2$ be the edge whose endpoints are $\lbrace f(v_1),f(v_2)\rbrace$.  There is only one such edge because $G_2$ is a graph, having no parallel edges.  Define $g:E_1\to E_2$ by $g(e)=e^{\prime}$.  Then $g$ is a well-defined function which also satisfies Equation (1).  So $h:=(f,g)$ is a graph homomorphism $G_1\to G_2$.
+\item
+The definition of a graph homomorphism between pseudographs can be analogously applied to one between directed pseudographs.  Since the incidence map $i$ now maps each edge to an ordered pair of vertices, a graph homomorphism thus defined will respect the ``direction'' of each edge.  For example, 
+\[
+\xymatrix{a \ar[r] & b\ar[d] \\ 
+c \ar[u] & d\ar[l]}
+\qquad\qquad\qquad\qquad
+\xymatrix{r \ar[r] & s \\ 
+t \ar[u]\ar[r] & u\ar[u]}
+\]
+are two non-isomorphic digraphs whose underlying graphs are isomorphic.  Note that one digraph is strongly connected, while the other is only weakly connected.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

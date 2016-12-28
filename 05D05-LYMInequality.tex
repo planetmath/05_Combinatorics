@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LYMInequality}
+\pmcreated{2013-03-22 14:06:01}
+\pmmodified{2013-03-22 14:06:01}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{LYM inequality}
+\pmrecord{6}{35498}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05D05}
+\pmclassification{msc}{06A07}
+\pmsynonym{LYM-inequality}{LYMInequality}
+%\pmkeywords{Sperner family}
+\pmrelated{SpernersTheorem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand*{\floor}[1]{\left\lfloor #1\right\rfloor}
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+Let $\mathcal{F}$ be a Sperner family, that is, the collection of
+subsets of $\{1,2,\dotsc,n\}$ such that no set contains any other subset.
+Then
+\begin{equation*}
+\sum_{X\in\mathcal{F}} \frac{1}{\binom{n}{\abs{X}}}\leq 1.
+\end{equation*}
+This inequality is known as \emph{LYM inequality} by the names of
+three people that independently discovered it:
+Lubell\cite{cite:lubell_lym}, Yamamoto\cite{cite:yamamoto_lym},
+Meshalkin\cite{cite:meshalkin_lym}.
+
+Since $\binom{n}{k}\leq \binom{n}{\floor{n/2}}$ for every integer $k$, LYM inequality tells us that $\abs{F}/\binom{n}{\floor{n/2}}\leq 1$ which is \PMlinkname{Sperner's theorem}{SpernersTheorem}.
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:engel_sperner}
+Konrad Engel.
+\newblock {\em Sperner theory}, volume~65 of {\em Encyclopedia of Mathematics
+  and Its Applications}.
+\newblock Cambridge University Press.
+\newblock \PMlinkexternal{Zbl 0868.05001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0868.05001}.
+
+\bibitem{cite:lubell_lym}
+David Lubell.
+\newblock A short proof of Sperner's lemma.
+\newblock {\em J. Comb. Theory}, 1:299, 1966.
+\newblock \PMlinkexternal{Zbl 0151.01503}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0151.01503}.
+
+\bibitem{cite:meshalkin_lym}
+Lev~D. Meshalkin.
+\newblock Generalization of Sperner's theorem on the number of subsets of a
+  finite set.
+\newblock {\em Teor. Veroyatn. Primen.}, 8:219--220, 1963.
+\newblock \PMlinkexternal{Zbl 0123.36303}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0123.36303}.
+
+\bibitem{cite:yamamoto_lym}
+Koichi Yamamoto.
+\newblock Logarithmic order of free distributive lattice.
+\newblock {\em J. Math. Soc. Japan}, 6:343--353, 1954.
+\newblock \PMlinkexternal{Zbl 0056.26301}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0056.26301}.
+
+\end{thebibliography}
+
+%@ARTICLE{cite:lubell_lym,
+% author    = {David Lubell},
+% title     = {A short proof of {S}perner's lemma},
+% journal   = {J. Comb. Theory},
+% volume    = {1},
+% year      = {1966},
+% pages     = {299},
+% note      = {\PMlinkexternal{Zbl %0151.01503}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0151.01503}}
+%}
+%
+%@ARTICLE{cite:meshalkin_lym,
+% author    = {Lev D. Meshalkin},
+% title     = {Generalization of {S}perner's theorem on the number of subsets of a %finite set},
+% journal   = {Teor. Veroyatn. Primen.},
+% volume    = {8},
+% year      = {1963},
+% pages     = {219--220},
+% note      = {\PMlinkexternal{Zbl %0123.36303}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0123.36303}}
+%}
+%
+%@ARTICLE{cite:yamamoto_lym,
+% author    = {Koichi Yamamoto},
+% title     = {Logarithmic order of free distributive lattice},
+% journal   = {J. Math. Soc. Japan},
+% volume    = {6},
+% year      = {1954},
+% pages     = {343--353},
+% note      = {\PMlinkexternal{Zbl %0056.26301}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0056.26301}}
+%}
+%%%%%
+%%%%%
+\end{document}

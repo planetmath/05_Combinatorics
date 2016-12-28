@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatomegaHasTheTreeProperty}
+\pmcreated{2013-03-22 12:52:36}
+\pmmodified{2013-03-22 12:52:36}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{proof that $\omega$ has the tree property}
+\pmrecord{5}{33218}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmclassification{msc}{03E05}
+\pmsynonym{proof that omega has the tree property}{ProofThatomegaHasTheTreeProperty}
+\pmsynonym{proof that infinity has the tree property}{ProofThatomegaHasTheTreeProperty}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+Let $T$ be a tree with finite levels and an infinite number of elements.  Then consider the elements of $T_0$.  $T$ can be partitioned into the set of descendants of each of these elements, and since any finite partition of an infinite set has at least one infinite partition, some element $x_0$ in $T_0$ has an infinite number of descendants.  The same procedure can be applied to the children of $x_0$ to give an element $x_1\in T_1$ which has an infinite number of descendants, and then to the children of $x_1$, and so on.  This gives a sequence $X=\langle x_0, x_1,\ldots \rangle$. The sequence is infinite since each element has an infinite number of descendants, and since $x_{i+1}$ is always of child of $x_i$, $X$ is a branch, and therefore an infinite branch of $T$.
+%%%%%
+%%%%%
+\end{document}

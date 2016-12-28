@@ -1,0 +1,328 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MooreGraphsOfD2AreVvalentAndOrderIsV21}
+\pmcreated{2013-03-22 15:11:30}
+\pmmodified{2013-03-22 15:11:30}
+\pmowner{marijke}{8873}
+\pmmodifier{marijke}{8873}
+\pmtitle{Moore graphs of $d=2$ are $v$-valent and order is $v^2+1$}
+\pmrecord{6}{36948}
+\pmprivacy{1}
+\pmauthor{marijke}{8873}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C75}
+
+\usepackage{amssymb}
+% \usepackage{amsmath}
+% \usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% portions from
+% makra.sty 1989-2005 by Marijke van Gans %
+                                          %          ^ ^
+\catcode`\@=11                            %          o o
+                                          %         ->*<-
+                                          %           ~
+%%%% CHARS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        %    code    char  frees  for
+
+\let\Para\S             %    \Para     ÃƒÂƒÃ‚ÂƒÃƒÂ‚Ã‚Â‚ÃƒÂƒÃ‚Â‚ÃƒÂ‚Ã‚Â§   \S \scriptstyle
+\let\Pilcrow\P          %    \Pilcrow  ÃƒÂƒÃ‚ÂƒÃƒÂ‚Ã‚Â‚ÃƒÂƒÃ‚Â‚ÃƒÂ‚Ã‚Â¶   \P
+\mathchardef\pilcrow="227B
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+\let\bs\backslash       %    \bs       \
+\let\us\_               %    \us       _     \_  ...
+
+%%%% DIACRITICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\udot\d             % under-dot (text mode), frees \d
+\let\odot\.             % over-dot (text mode),  frees \.
+%let\hacek\v            % hacek (text mode),     frees \v
+%let\makron\=           % makron (text mode),    frees \=
+%let\tilda\~            % tilde (text mode),     frees \~
+\let\uml\"              % umlaut (text mode),    frees \"
+
+%def\trema#1{\discretionary{-}{#1}{\uml #1}}
+
+%%%% amssymb %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\le\leqslant
+\let\ge\geqslant
+%let\prece\preceqslant
+%let\succe\succeqslant
+
+%%%% USEFUL MISC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% KERNING, SPACING, BREAKING %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\comma{,\,\allowbreak}
+
+%%%% LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% MATH LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\D\displaystyle
+\let\T\textstyle
+\let\S\scriptstyle
+\let\SS\scriptscriptstyle
+
+%%%% MATH SYMBOLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\d{\mathord{\rm d}}                      % d as in dx
+%def\e{{\rm e}}                              % e as in e^x
+
+%def\Ell{\hbox{\it\char`\$}}
+
+\def\sfmath#1{{\mathchoice%
+{{\sf #1}}{{\sf #1}}{{\S\sf #1}}{{\SS\sf #1}}}}
+\def\Stalkset#1{\sfmath{I\kern-.12em#1}}
+\def\Bset{\Stalkset B}
+\def\Nset{\Stalkset N}
+\def\Rset{\Stalkset R}
+\def\Hset{\Stalkset H}
+\def\Fset{\Stalkset F}
+\def\kset{\Stalkset k}
+\def\In@set{\raise.14ex\hbox{\i}\kern-.237em\raise.43ex\hbox{\i}}
+\def\Roundset#1{\sfmath{\kern.14em\In@set\kern-.4em#1}}
+\def\Qset{\Roundset Q}
+\def\Cset{\Roundset C}
+\def\Oset{\Roundset O}
+\def\Zset{\sfmath{Z\kern-.44emZ}}
+
+% \frac overwrites LaTeX's one (use TeX \over instead)
+%def\fraq#1#2{{}^{#1}\!/\!{}_{\,#2}}
+\def\frac#1#2{\mathord{\mathchoice%
+{\T{#1\over#2}}
+{\T{#1\over#2}}
+{\S{#1\over#2}}
+{\SS{#1\over#2}}}}
+
+\mathcode`\<="4268         % < now is \langle, \lt is <
+\mathcode`\>="5269         % > now is \rangle, \gt is >
+
+\let\epsi=\varepsilon
+\def\omikron{o}
+
+\def\Alpha{{\rm A}}
+\def\Beta{{\rm B}}
+\def\Epsilon{{\rm E}}
+\def\Zeta{{\rm Z}}
+\def\Eta{{\rm H}}
+\def\Iota{{\rm I}}
+\def\Kappa{{\rm K}}
+\def\Mu{{\rm M}}
+\def\Nu{{\rm N}}
+\def\Omikron{{\rm O}}
+\def\Rho{{\rm P}}
+\def\Tau{{\rm T}}
+\def\Ypsilon{{\rm Y}} % differs from \Upsilon
+\def\Chi{{\rm X}}
+
+%def\dg{^{\circ}}                   % degrees
+
+%def\1{^{-1}}                       % inverse
+
+\def\*#1{{\bf #1}}                  % boldface e.g. vector
+%def\vi{\mathord{\hbox{\bf\i}}}     % boldface vector \i
+%def\vj{\mathord{\,\hbox{\bf\j}}}   % boldface vector \j
+
+%def\union{\mathbin\cup}
+%def\isect{\mathbin\cap}
+
+\let\so\Longrightarrow
+\let\oso\Longleftrightarrow
+\let\os\Longleftarrow
+
+% := and :<=>
+%def\isdef{\mathrel{\smash{\stackrel{\SS\rm def}{=}}}}
+%def\iffdef{\mathrel{\smash{stackrel{\SS\rm def}{\oso}}}}
+
+\def\qed{ ${\S\circ}\!{}^\circ\!{\S\circ}$}
+%def\qed{\vrule height 6pt width 6pt depth 0pt}
+
+\def\mod#1{\allowbreak \mkern 10mu({\rm mod}\,\,#1)}
+% redefines TeX's one using less space
+
+%def\conj#1{\overline{#1\vphantom1}}
+%def\cj#1{\overline{#1\vphantom+}}
+
+%def\forAll{\mathop\forall\limits}
+%def\Exists{\mathop\exists\limits}
+
+%%%% PICTURES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\cent{\makebox(0,0)}
+
+%def\node{\circle*4}
+%def\nOde{\circle4}
+
+%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\opcit{[{\it op.\,cit.}]}
+\def\bitem#1{\bibitem[#1]{#1}}
+\def\name#1{{\sc #1}}
+\def\book#1{{\sl #1\/}}
+\def\paper#1{``#1''}
+\def\mag#1{{\it #1\/}}
+\def\vol#1{{\bf #1}}
+\def\isbn#1{{\small\tt ISBN\,\,#1}}
+\def\seq#1{{\small\tt #1}}
+%def\url<{\verb>}
+%def\@cite#1#2{[{#1\if@tempswa\ #2\fi}]}
+
+%%%% VERBATIM CODE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\"{\verb"}
+
+%%%% AD HOC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% WORDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\oord/{o{\trema o}rdin\-ate}
+% usage: C\oord/s, c\oord/.
+% output: co\"ord... except when linebreak at co-ord...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                                          %
+                                          %          ^ ^
+\catcode`\@=12                            %          ` '
+                                          %         ->*<-
+                                          %           ~
+\begin{document}
+\PMlinkescapeword{node}
+\PMlinkescapeword{nodes}
+\PMlinkescapeword{size}
+\PMlinkescapeword{type}
+\PMlinkescapeword{line}
+\PMlinkescapeword{circle}
+
+{\bf Given} a Moore graph with diameter 2 and girth 5, which implies the
+existence of cycles. {\bf To prove} every node (vertex) has the same valency,
+$v$ say, and the number $n$ of nodes (vertices) is $v^2+1$.
+
+{\bf Lemma:} a key feature of Moore graphs with diameter 2 is that any nodes X
+and \PMlinkescapetext{Z} that are not adjacent have exactly one shared neighbour Y. {\bf Proof of lemma:} at least one Y$_k$ because distance XY is not 1 so must be 2, at most one because XY$_0$ZY$_1$ would be a 4-cycle.~\qed
+
+{\bf Lemma:} every two adjacent nodes B and C lie together on some 5-cycle.
+{\bf Proof of lemma:} every node (other than B) is at distance 1 or 2 from B, and every node (other than C) at distance 1 or 2 from C. There are no nodes X
+at distance 1 from both (BXC would be a 3-cycle). Suppose the graph only has nodes at distance 1 from B and 2 from C (call them A$_i$), and nodes at distance 1 from C and 2 from B (call them D$_j$). Now no cycle can exist (the only edges are A$_i$B, BC, CD$_j$; any edge of type AA, AC, \PMlinkescapetext{AD}, BD, DD would create a 3-or 4-cycle). But Moore graphs have cycles by definition. So there must be at least one node E at distance 2 from both B and C. Let A be the joint neighbour of B and E, and D that of C and E (note A $\ne$ D, otherwise BAC would be a 3-cycle). Now CDEAB is a 5-cycle with edge BC.~\qed
+
+{\bf Lemma:} two nodes O and Q at distance~2 have the same valency. {\bf Proof
+of lemma:} let P be the unique joint neighbour. Let O have $o$ other neighbours
+N$_i$ and let Q have $q$ other neighbours R$_j$.
+
+\begin{center}
+\begin{picture}(100,110)(-50,-55)
+
+\put(+44,+27){\circle{12}}
+\put( -7,+44){\circle*{4}}
+\put(-40,  0){\circle*{4}}
+\put( -7,-44){\circle*{4}}
+\put(+44,-27){\circle{12}}
+
+\put( -7,+44){\line(+3,-1){45}}
+\put(-40,  0){\line(+3,+4){33}}
+\put(-40,  0){\line(+3,-4){33}}
+\put( -7,-44){\line(+3,+1){45}}
+
+\put( +7,+44){\cent[b]{$o$}}
+\put(+31,+36){\cent[b]{$1$}}
+\put(+44,+27){\cent{$o$}}
+\put(+44,-27){\cent{$q$}}
+\put(+31,-36){\cent[t]{$1$}}
+\put( +7,-44){\cent[t]{$q$}}
+
+\put(+54,+27){\cent[l]{\small N$_i$}}
+\put(-10,+48){\cent[rb]{\small O}}
+\put(-46,  0){\cent[r]{\small P}}
+\put(-10,-48){\cent[rt]{\small Q}}
+\put(+54,-27){\cent[l]{\small R$_j$}}
+
+\end{picture}
+\end{center}
+
+No N$_i$ can be adjacent to P (3-cycle PON$_i$) so the unique joint neighbours
+of any N$_i$ and Q must be among the R$_j$. Different N$_i$ and N$_{i'}$
+cannot use the same R$_j$ (4-cycle ON$_i$R$_j$N$_{i'}$) so we have $o\le q$.
+By the same argument (swapping O and Q, N$_i$ and R$_j$) also $q\le o$ so we
+have $o=q$, both nodes have valency $q+1$.~\qed
+
+{\bf Lemma:} two adjacent nodes O and S have the same valency. {\bf Proof
+of lemma:} let OPQRS be the 5-cycle through SO. Calling the valency of Q
+again $q+1$, both O and S have that same valency by the previous lemma.~\qed
+
+{\bf Proof of theorem:} the graph is connected. Travel from any node to any
+other via adjacent ones, the valency stays the same by the last lemma (let's
+keep calling it $q+1$).
+
+\begin{center}
+\begin{picture}(100,110)(-50,-55)
+
+\put(-44,+27){\circle*{4}}
+\put( +7,+44){\circle{12}}
+\put(+40,  0){\circle{20}}
+\put( +7,-44){\circle{12}}
+\put(-44,-27){\circle*{4}}
+
+\put( +1,+42){\line(-3,-1){45}}
+\put(+34, +8){\line(-3,+4){23}}
+\put(+34, -8){\line(-3,-4){23}}
+\put( +1,-42){\line(-3,+1){45}}
+\put(-44,-27){\line( 0,+1){54}}
+\put(+50,  0){\line(+4,+1){24}}
+\put(+50,  0){\line(+4,-1){24}}
+\put(+74,  0){\oval(12,12)[r]}
+
+\put( +7,+44){\cent{$q$}}
+\put(+40,  0){\cent{$q^2$}}
+\put( +7,-44){\cent{$q$}}
+
+\put(+26,+15){\cent[tr]{$1$}}
+\put(+15,+30){\cent[tr]{$q$}}
+\put( -6,+35){\cent[t]{$1$}}
+\put(-27,+27){\cent[t]{$q$}}
+\put(-41,+13){\cent[l]{$1$}}
+\put(-41,-13){\cent[l]{$1$}}
+\put(-27,-27){\cent[b]{$q$}}
+\put( -6,-35){\cent[b]{$1$}}
+\put(+15,-30){\cent[br]{$q$}}
+\put(+26,-15){\cent[br]{$1$}}
+\put(+70, +8){\cent[b]{$q-1$}}
+
+\put(-50,+30){\cent[r]{\small N}}
+\put(+12,+56){\cent[b]{\small O$_i$}}
+\put(+44,-14){\cent[t]{\small P$_{ij}$}}
+\put(+12,-56){\cent[t]{\small Q$_j$}}
+\put(-50,-30){\cent[r]{\small R}}
+
+\end{picture}
+\end{center}
+
+Now let N and R be any two adjacent nodes. N has $q$ other neighbours O$_i$
+and R has $q$ other neighbours Q$_j$. Call the joint neighbour of O$_i$ and
+Q$_j$ now P$_{ij}$, these $q^2$ nodes are all distinct (4-cycles of type
+NOPO and/or RQPQ otherwise) and none of them coincide with N, R, the Os or Qs
+(3- or 4-cycles otherwise). On the other hand, there are no further nodes
+(distance $\gt2$ from N or R otherwise). Tally: $q^2+2q+2 = (q+1)^2+1$,
+for valency $q+1$.~\qed
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ThomassensTheoremOn3connectedGraphs}
+\pmcreated{2013-03-22 13:11:09}
+\pmmodified{2013-03-22 13:11:09}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Thomassen's theorem on $3$-connected graphs}
+\pmrecord{6}{33634}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C40}
+\pmrelated{EdgeContraction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Every \PMlinkname{$3$-connected}{KConnectedGraph} graph $G$ with more
+than 4 vertices has an edge $e$ such that \PMlinkname{$G/e$}{EdgeContraction} is also $3$-connected.
+
+Note: $G/e$ denotes the graph obtained from $G$ by contracting the edge $e$.
+If $e=xy$ we also use the notation $G/xy$.
+
+Suppose such an edge doesn't exist. Then, for every edge $e=xy$, the
+graph $G/e$ isn't $3$-connected and can be made disconnected by
+removing 2 vertices. Since $\kappa(G)\geq 3$, our contracted vertex
+$v_{xy}$ has to be one of these two. So for every edge $e$, $G$ has a
+vertex $z\neq x,y$ such that $\{v_{xy},z\}$ separates $G/e$.  Any 2
+vertices separated by $\{v_{xy},z\}$ in $G/e$ are separated in $G$ by
+$S:=\{x,y,z\}$. Since the minimal size of a separating set is 3, every
+vertex in $S$ has an adjacent vertex in every component of $G-S$.
+
+Now we choose the edge $e$, the vertex $z$ and the component $C$ such
+that $|C|$ is minimal. We also choose a vertex $v$ adjacent to $z$ in
+$C$.
+
+By construction $G/zv$ is not $3$-connected since removing $xy$
+disconnects $C-v$ from $G/zv$. So there is a vertex $w$ such that
+$\{z,v,w\}$ separates $G$ and as above every vertex in $\{z,v,w\}$ has
+an adjacent vertex in every component of $G-\{z,v,w\}$. We now
+consider a component $D$ of $G-\{z,v,w\}$ that doesn't contain $x$ or
+$y$. Such a component exists since $x$ and $y$ belong to the same
+component and $G-\{z,v,w\}$ isn't connected. Any vertex adjacent to
+$v$ in $D$ is also an element of $C$ since $v$ is an element of
+$C$. This means $D$ is a proper subset of $C$ which contradicts our
+assumption that $|C|$ was minimal.
+%%%%%
+%%%%%
+\end{document}

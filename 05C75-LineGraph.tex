@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LineGraph}
+\pmcreated{2013-03-22 16:24:15}
+\pmmodified{2013-03-22 16:24:15}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{line graph}
+\pmrecord{4}{38552}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C75}
+\pmrelated{DeBruijnDigraph}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{proposition*}{Proposition}
+\theoremstyle{definition}
+\newtheorem{example}{Example}
+\begin{document}
+\PMlinkescapeword{connected}
+\PMlinkescapeword{right}
+\PMlinkescapeword{label}
+\PMlinkescapeword{observation}
+Let $G$ be a graph.  The \emph{line graph} of $G$ is denoted by $L(G)$ and is defined as follows.  The vertices of $L(G)$ are the edges of $G$.  Two vertices of $L(G)$ are connected by an edge if and only if the corresponding edges in $G$ form a path (which must be a directed path if $G$ is a digraph).
+
+\begin{example}
+Let $G$ be the undirected graph on the vertex set $V(G)=\{a,b,c,d\}$ and edge set $E(G)=\{ab, bc, cd, bd\}$.  Then the line graph $L(G)$ has vertex set $V(L(G))=\{ab, bc, cd, bd\}$.  Since $ab$ and $bc$ are incident in $G$, they are connected by an edge in $L(G)$.  We label this edge by the unique walk from $a$ to $c$ determined by these edges, namely $abc$.  With this notation, the edge set is $E(L(G))=\{abc, abd, bcd, bdc, cbd\}$.
+\[\xymatrix{
+& a\ar@{-}[d]^{ab}                     & &                          & ab\ar@{-}[dl]_{abc}\ar@{-}[dr]^{abd} & \\
+                     & b\ar@{-}[dl]_{bc}\ar@{-}[dr]^{bd} &  & bc\ar@{-}[rr]^{bcd}\ar@{-}[dr]_{cbd} &                          & bd\ar@{-}[dl]^{bdc} \\
+c\ar@{-}[rr]_{cd} & & d &                         & cd
+}\]
+Above we display the graphs $G$ (left) and $L(G)$ (right).
+\end{example}
+
+Part of the reason for interest in line graphs is the following observation:
+
+\begin{proposition*}
+If a graph is Eulerian, then its line graph is Hamiltonian.
+\end{proposition*}
+
+This follows immediately from the fact that a sequence of incident edges in $G$ is a sequence of incident vertices in $L(G)$.
+
+\begin{example}
+Let $B_n$ be the de Bruijn digraph on binary strings of length $n$.  Then for $n\ge 2$, the next de Bruijn digraph can be obtained by taking the line graph of the previous one, that is, $B_{n+1}=L(B_n)$.
+\end{example}
+%%%%%
+%%%%%
+\end{document}

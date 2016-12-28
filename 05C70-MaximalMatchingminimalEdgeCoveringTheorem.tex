@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MaximalMatchingminimalEdgeCoveringTheorem}
+\pmcreated{2013-03-22 12:40:05}
+\pmmodified{2013-03-22 12:40:05}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{maximal matching/minimal edge covering theorem}
+\pmrecord{7}{32941}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C70}
+\pmrelated{MaximumFlowminimumCutTheorem}
+\pmrelated{Matching}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\paragraph{Theorem} Let $G$ be a graph.  If $M$ is a matching on $G$, and $C$ is an edge covering for $G$, then $|M| \leq |C|$.
+
+\paragraph{Proof} Consider an arbitrary matching $M$ on $G$ and an arbitrary edge covering $C$ on $G$.  We will attempt to construct a one-to-one function $f: M \rightarrow C$.
+
+Consider some edge $e \in M$.  At least one of the vertices that $e$ joins must be in $C$, because $C$ is an edge covering and hence every edge is incident with some vertex in $C$.  Call this vertex $v_e$, and let $f(e) = v_e$.
+
+Now we will show that $f$ one-to-one.  Suppose we have two edges $e_1, e_2 \in M$ where $f(e_1) = f(e_2) = v$.  By the definition of $f$, $e_1$ and $e_2$ must both be incident with $v$.  Since $M$ is a matching, however, no more than one edge in $M$ can be incident with any given vertex in $G$.  Therefore $e_1 = e_2$, so $f$ is one-to-one.
+
+Hence we now have that $|M| \leq |C|$.
+
+\paragraph{Corollary} Let $G$ be a graph.  Let $M$ and $C$ be a matching and an edge covering on $G$, respectively.  If $|M| = |C|$, then $M$ is a maximal matching and $C$ is a minimal edge covering.
+
+\paragraph{Proof} Suppose $M$ is not a maximal matching.  Then, by definition, there exists another matching $M'$ where $|M| < |M'|$.  But then $|M'| > |C|$, which violates the above theorem.
+
+Likewise, suppose $C$ is not a minimal edge covering.  Then, by definition, there exists another covering $C'$ where $|C'| < |C|$.  But then $|C'| < |M|$, which violates the above theorem.
+%%%%%
+%%%%%
+\end{document}

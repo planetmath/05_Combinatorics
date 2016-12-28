@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DivisibilityOfCentralBinomialCoefficient}
+\pmcreated{2013-03-22 17:41:22}
+\pmmodified{2013-03-22 17:41:22}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{divisibility of central binomial coefficient}
+\pmrecord{8}{40130}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmclassification{msc}{11B65}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+In this entry, we shall prove two results about the
+divisibility of central binomial coefficients
+which were stated in the main entry.
+
+\begin{thm}
+If $n \ge 3$ is an integer and $p$ is a prime number such that $n < p < 2n$, then
+$p$ divides ${2n \choose n}$.
+\end{thm}
+
+\begin{proof}
+We will examine the following expression for our binomial coefficient:
+\[
+{2n \choose n} =
+{2n (2n-1) \cdots (n+2) (n+1) \over
+n (n-1) \cdots 3 \cdot 2 \cdot 1}.
+\]
+Since $n < p < 2n$, we find $p$ appearing in the numerator.  However,
+$p$ cannot appear in the denominator because the terms there are all
+smaller than $n$.  Hence, $p$ cannot be cancelled, so it must divide
+${2n \choose n}$.
+\end{proof}
+
+\begin{thm}
+If $n \ge 3$ is an integer and $p$ is a prime number such that $2n/3 < p \le n$, then
+$p$ does not divide ${2n \choose n}$.
+\end{thm}
+
+\begin{proof}
+We will again examine our expression for our binomial coefficient:
+\[
+{2n \choose n} =
+{2n (2n-1) \cdots (n+2) (n+1) \over
+n (n-1) \cdots 3 \cdot 2 \cdot 1}.
+\]
+This time, because $2n/3 < p \le n$, we find $p$ appearing in the denominator
+and $2p$ appearing in the numerator.  No other multiples will appear because,
+if $m > 2$, then $mp > 2n$.  The two occurrences of $p$ noted above cancel, hence
+$p$ is not a prime factor of ${2n \choose n}$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

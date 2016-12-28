@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Trie}
+\pmcreated{2013-03-22 12:28:36}
+\pmmodified{2013-03-22 12:28:36}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{trie}
+\pmrecord{12}{32684}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmclassification{msc}{68P20}
+\pmrelated{DigitalTree}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[all]{xy}
+\newcommand{\concat}{{\ensuremath{+\hspace{-1ex}+}}}
+\begin{document}
+\PMlinkescapeword{edge}
+\PMlinkescapeword{edges}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{name}
+\PMlinkescapeword{node}
+\PMlinkescapeword{nodes}
+
+A \emph{trie} is a digital tree for storing a set of strings in which there is one node for every prefix of every string in the set.  The name comes from the word
+re\emph{trie}val, and thus is pronounced the same as \emph{tree} (which leads to much confusion when spoken aloud).  The word retrieval is stressed, because a trie has a lookup time that is equivalent to the length of the string being looked up.
+
+If a trie is to store some set of strings $S\subseteq\Sigma^*$ (where $\Sigma$ is an alphabet),
+then it takes the following form.
+Each edge leading to non-leaf nodes in the trie is labelled by an element of $\Sigma$.  Any edge leading to a leaf node is labelled by $\$$ (some symbol \emph{not} in $\Sigma$).  For every string $s\in S$, there is a path from the root of the trie to a leaf, the labels of which when concatenated form $s\concat\$$ (where $\concat$ is the string concatenation operator).  For every path from the root of the trie to a leaf, the labels of the edges concatenated form some string in $S$.
+
+\subsubsection*{Example}
+
+Suppose we wish to store the set of strings $S := \left\{ alpha, beta, bear, beast, beat \right\}$.  The trie that stores $S$ would be
+
+$$
+\xymatrix{
+    &&\bullet \ar@{-}[dl]_a \ar@{-}[dr]^b \\
+    &\bullet \ar@{-}[dl]_l && \bullet \ar@{-}[dr]^e \\
+    \bullet \ar@{-}[d]_p &&&& \bullet \ar@{-}[dl]_a \ar@{-}[dr]^t \\
+    \bullet \ar@{-}[d]_h &&& \bullet \ar@{-}[dl]_r \ar@{-}[d]^s \ar@{-}[dr]^t && \bullet \ar@{-}[dr]^a \\
+    \bullet \ar@{-}[d]_a && \bullet \ar@{-}[dl]_{\$} & \bullet \ar@{-}[d]^t & \bullet \ar@{-}[dr]^{\$} && \bullet \ar@{-}[dr]^{\$} \\
+    \bullet \ar@{-}[d]_{\$} & \bullet && \bullet \ar@{-}[d]^{\$} && \bullet && \bullet \\
+    \bullet &&& \bullet
+}
+$$
+%%%%%
+%%%%%
+\end{document}

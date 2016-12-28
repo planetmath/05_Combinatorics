@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MinimumSpanningTree}
+\pmcreated{2013-03-22 12:29:22}
+\pmmodified{2013-03-22 12:29:22}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{minimum spanning tree}
+\pmrecord{7}{32710}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmsynonym{smallest spanning tree}{MinimumSpanningTree}
+\pmrelated{SpanningTree}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[all]{xy}
+\begin{document}
+Given a graph $G$ with weighted edges, a \emph{minimum spanning tree} is a spanning tree with minimum weight, where the weight of a spanning tree is the sum of the weights of its edges.  There may be more than one minimum spanning tree for a graph, since it is the weight of the spanning tree that must be minimum.
+
+For example, here is a graph $G$ of weighted edges and a minimum spanning tree $T$ for that graph.  The edges of $T$ are drawn as solid lines, while edges in $G$ but not in $T$ are drawn as dotted lines.
+
+$$
+\xymatrix{
+&&\bullet\ar@{-}[dll]|3\ar@{-}[dd]|4\ar@{.}[drr]|7 \\
+\bullet\ar@{.}[dd]|8\ar@{.}[drr]|4&&&&\bullet\ar@{-}[dll]|2\ar@{-}[dd]|5 \\
+&&\bullet\ar@{.}[dll]|5\ar@{-}[dd]|3\ar@{.}[drr]|7 \\
+\bullet\ar@{-}[drr]|2&&&&\bullet\ar@{.}[dll]|6 \\
+&&\bullet
+}
+$$
+
+Prim's algorithm or Kruskal's algorithm can compute the minimum spanning tree of a graph.
+%%%%%
+%%%%%
+\end{document}

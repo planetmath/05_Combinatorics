@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TaitColoring}
+\pmcreated{2013-03-22 15:10:29}
+\pmmodified{2013-03-22 15:10:29}
+\pmowner{marijke}{8873}
+\pmmodifier{marijke}{8873}
+\pmtitle{Tait coloring}
+\pmrecord{9}{36927}
+\pmprivacy{1}
+\pmauthor{marijke}{8873}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+\pmrelated{ColoringsOfPlaneGraphs}
+\pmrelated{VizingsTheorem}
+
+\usepackage{amssymb}
+\begin{document}
+\PMlinkescapeword{classes}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{classes}
+\PMlinkescapeword{proportion} 
+
+A {\bf Tait coloring} of a \PMlinkname{trivalent}{Valency} (aka cubic) graph is a coloring of its edges with only three colors, such that at each vertex the colors of the three edges there are different. After Peter~G.\ Tait (1831--1901), Scottish physicist, who in 1880 proved the following
+
+{\bf Theorem (Tait)}$\quad$ A bridge-free trivalent plane graph can be
+face-colored with 4 colors if and only if it can be edge-colored with 3
+colors.
+
+This \PMlinkid{introduction to face- and edge-colorings of plane graphs}{6925}
+has a {\bf proof of the theorem}.
+
+To put this in a modern context, {\bf Vizing's theorem} says that graphs $G$
+fall into two classes: those that can be colored with $\Delta(G)$ colors and
+those that need $\Delta(G)+1$ colors, where $\Delta(G)$ is the largest valency
+that occurs in $G$. When applied to trivalent graphs that means 3 and 4
+colors, respectively. It is known that ``almost all'' are in the first class
+--- this expression has a technical meaning (for increasing graph size, the
+proportion of them in the second class tends to zero).
+
+Thanks to Tait's result, it is a corollary of the {\bf four-color theorem}
+that all planar trivalent graphs are in the first class (can be edge-3-colored).
+The converse is not the case. Many trivalent graphs, in fact almost all of
+them, can be edge-3-colored and yet are not planar. $K_{3,3}$ is one example.
+
+% In terms of a Venn diagram: among the trivalent graphs,
+% planar and second class ones are disjoint.
+%
+% \begin{center}
+% \begin{picture}(400,100)(-200,-50)
+% \put(- 80,+36){\Huge C\,L\,A\,S\,S \ \,I}
+% \put(- 80,+14){\LARGE needs 3 colors}
+% \put(+ 61, +3){\bf C\,L\,A\,S\,S \ \,I\,I}
+% \put(+ 61,-10){\small\bf needs 4 colors}
+% \put(-100,0){\oval(100,40)}
+% \put(+100,0){\oval(100,40)}
+% \put(-136,-4){\textbf{\textit{P\,L\,A\,N\,A\,R}}}
+% \put(-50,-30){\LARGE\it N O N - P L A N A R}
+% \end{picture}
+% \end{center}
+
+The Petersen graph is an example of a trivalent graph that needs 4 colors.
+%%%%%
+%%%%%
+\end{document}

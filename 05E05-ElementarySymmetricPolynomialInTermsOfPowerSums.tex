@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ElementarySymmetricPolynomialInTermsOfPowerSums}
+\pmcreated{2013-03-22 15:57:11}
+\pmmodified{2013-03-22 15:57:11}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{elementary symmetric polynomial in terms of power sums}
+\pmrecord{9}{37965}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05E05}
+\pmrelated{NewtonGirardFormulaSymmetricPolynomials}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Elementary symmetric polynomials can be expressed as polynomials in sums of powers.  For instance, one can use the binomial identity $(x + y)^2 = x^2 + y^2 + 2 xy$ to re-express the elementary symmetric polynomial of power 2 in 2 variables:
+ \[ x_1 x_2 = \frac{1}{2} \left(\sum_{k=1}^2 x_i \right)^2 - \frac{1}{2} \sum_{k=1}^2 (x_i)^2\]
+Similarly, one has the following identities:
+ \[ \sum_{1 \le i < j \le n} x_i x_j = \frac{1}{2} \left(\sum_{k=1}^n x_k \right)^2 - \frac{1}{2} \sum_{k=1}^n (x_i)^2 \]
+ \[ \sum_{1 \le i < j < k\le n} x_i x_j x_k = \frac{1}{6} \left(\sum_{k=1}^n x_k \right)^3 - \frac{1}{2} \left(\sum_{k=1}^n x_k^2 \right) \left(\sum_{k=1}^n x_k \right) + \frac{1}{3} \sum_{k=1}^n x_k^3 \]
+Note that the algebraic form of these expressions does not depend on $n$, the number of variables; this is true in general.  In fact, it is possible to take $n$ to infinity and obtain an identity for infinite series under suitable circumstances, but that lies beyond the scope of the current entry.
+
+These formulae can be derived using the Newton-Girard recursion relations.  Moreover, these recursions can be used to provide an inductive proof that any elementary symmetric polynomial can be expressed in terms of sums of powers.  It might also be worth pointing out that Waring's formula allows one to do the opposite --- express sums of powers in terms of symmetric polynomials.
+
+Whilst these recursions may be used to derive these formulae, they can be tedious to use; for deriving a particular such relation, it may be easier to determine coefficients by substituting particular values for the variables and solving linear equations, as will be demonstrated with an example.  Suppose that we want to express the elementary symmetric polynomial of power 5,
+ \[ \sum_{1 \le a < b < c < d < e \le n} x_a x_b x_c x_d x_e \]
+in terms of power sums.  Since this is of the fifth order, we shall only require sums of powers less than or equal to 5.  Furthermore, we shall only have terms of the fifth order in the expression, so we only need to consider products of these five power sums whose total order is five.  To determine these possible sums, we consider the possible partitions of the number 5:
+ \[ 5, 4+1, 3+2, 3+1+1, 2+2+1, 2+1+1+1, 1+1+1+1+1 \]
+Corresponding to these partitions, we have the following ansatz:
+\begin{eqnarray*} \sum_{1 \le a < b < c < d < e \le n} x_a x_b x_c x_d x_e &=&
+c_5 \sum_{k=1}^n x_k^5 + c_{41} \left(\sum_{k=1}^n x_k^4\right) \left(\sum_{k=1}^n x_k \right) + c_{32} \left(\sum_{k=1}^n x_k^3 \right) \left(\sum_{k=1}^n x_k^2 \right) \\ &+&
+c_{311} \left(\sum_{k=1}^n x_k^3 \right) \left(\sum_{k=1}^n x_k \right)^2 + c_{221} \left(\sum_{k=1}^n x_k^2 \right)^2 \left(\sum_{k=1}^n x_k \right) \\ &+&  c_{2111} \left(\sum_{k=1}^n x_k^2 \right) \left(\sum_{k=1}^n x_k \right)^3 + c_{11111} \left(\sum_{k=1}^n x_k \right)^5
+\end{eqnarray*}
+
+Now it remains to determine the $c$'s.  This can be done by substituting particular values for the $x$'s to obtain 7 equations for the 7 coefficients.  By choosing these values strategically, the equations can be made relatively simple so as to reduce the work of solving them.  One possibility is the following:
+\begin{eqnarray*}
+1. \quad n &=& 1 \qquad x_1 = 1 : \\
+0 &=& c_5 + c_{41} + c_{32} + c_{311} + c_{221} + c_{2111} + c_{11111} \\
+2. \quad n &=& 2 \qquad x_1 = 1 \quad x_2 = 1 : \\
+0 &=& 2 c_5 + 4 c_{41} + 4 c_{32} + 8 c_{311} + 8 c_{221} + 16 c_{2111} + 32 c_{11111} \\
+3. \quad n &=& 3 \qquad x_1 = 1 \quad x_2 = 1 \quad x_3 = 1 : \\
+0 &=& 3 c_5 + 9 c_{41} + 9 c_{32} + 27 c_{311} + 27 c_{221} + 81 c_{2111} + 243 c_{11111} \\
+4. \quad n &=& 3 \qquad x_1 = 1 \quad x_2 = 1 \quad x_3 = -1 : \\
+0 &=& c_5 + 3 c_{41} + 3 c_{32} + c_{311} + 9 c_{221} + 3 c_{2111} + c_{11111} \\
+5. \quad n &=& 3 \qquad x_1 = 2 \quad x_2 = -1 \quad x_3 = -1 : \\
+0 &=& 5 c_5 + 6 c_{32} \\
+6. \quad n &=& 4 \qquad x_1 = 1 \quad x_2 = 1 \quad x_3 = 1 \quad x_4 = 1: \\
+0 &=& 4 c_5 + 16 c_{41} + 16 c_{32} + 64 c_{311} + 64 c_{221} + 256 c_{2111} + 1024 c_{11111} \\
+7. \quad n &=& 5 \qquad x_1 = 1 \quad x_2 = 1 \quad x_3 = 1 \quad x_4 = 1 \quad x_5 = 1: \\
+1 &=& 5 c_5 + 25 c_{41} + 25 c_{32} + 125 c_{311} + 125 c_{221} + 625 c_{2111} + 3125 c_{11111} \\
+\end{eqnarray*}
+
+By combining equations 1,2,3,6, the following sparse system may be derived:
+\begin{eqnarray*}
+c_5 &=& 24 c_{11111} \\
+c_{41} + c_{32} &=& - 50 c_{11111} \\
+c_{311} + c_{221} &=& 35 c_{11111} \\
+c_{2111} &=& -10 c_{11111} \\
+\end{eqnarray*}
+Likewise, subtracting equation 1 from equation 4 yields
+ \[c_{41} + c_{32} + 4 c_{221} + c_{2111} = 0\]
+Combining these equations with the already sparse eqnation 5 yeilds the following equations which express everyting else in terms of $c_{11111}$:
+\begin{eqnarray*}
+c_5 &=& 24 c_{11111} \\
+c_{41} &=& - 70 c_{11111} \\
+c_{32} &=& 20 c_{11111}\\
+c_{311} &=& 5 c_{11111} \\
+c_{221} &=& 30 c_{11111} \\
+c_{2111} &=& -10 c_{11111} \\
+\end{eqnarray*}
+Substituting this into equation 7, we learn that $c_{11111} = 1/120$, from which  the values of the remaining coefficients follow immediately:
+\begin{eqnarray*}
+c_5 &=& \frac{1}{5} \\
+c_{41} &=& -\frac{7}{12} \\
+c_{32} &=& \frac{1}{6} \\
+c_{311} &=& \frac{1}{24} \\
+c_{221} &=& \frac{1}{4} \\
+c_{2111} &=& -\frac{1}{12} \\
+\end{eqnarray*}
+Hence the desired formula is the following:
+\begin{eqnarray*} \sum_{1 \le a < b < c < d < e \le n} x_a x_b x_c x_d x_e &=&
+\frac{1}{5} \sum_{k=1}^n x_k^5 - \frac{7}{12} \left(\sum_{k=1}^n x_k^4\right) \left(\sum_{k=1}^n x_k \right) + \frac{1}{6} \left(\sum_{k=1}^n x_k^3 \right) \left(\sum_{k=1}^n x_k^2 \right) \\ &+&
+\frac{1}{24} \left(\sum_{k=1}^n x_k^3 \right) \left(\sum_{k=1}^n x_k \right)^2 + \frac{1}{4} \left(\sum_{k=1}^n x_k^2 \right)^2 \left(\sum_{k=1}^n x_k \right) \\ &-& \frac{1}{12} \left(\sum_{k=1}^n x_k^2 \right) \left(\sum_{k=1}^n x_k \right)^3 + \frac{1}{120} \left(\sum_{k=1}^n x_k \right)^5
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

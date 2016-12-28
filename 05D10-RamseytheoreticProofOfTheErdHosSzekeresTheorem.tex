@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RamseytheoreticProofOfTheErdHosSzekeresTheorem}
+\pmcreated{2013-03-22 16:16:46}
+\pmmodified{2013-03-22 16:16:46}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{Ramsey-theoretic proof of the Erd\H{o}s-Szekeres theorem}
+\pmrecord{5}{38391}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05D10}
+\pmclassification{msc}{51D20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\conv}{conv}
+\begin{document}
+\PMlinkescapeword{finite}
+Let $n\ge 3$ be an integer.  By the finite Ramsey theorem, there is a positive integer $N$ such that the arrows relation
+\[
+N\to(n)^3_2
+\]
+holds.  Let $X$ be a planar point set in general position with $|X|\ge N$.  Define a red-blue colouring of the triangles in $X$ as follows.  Let $T=\{a,b,c\}$ be a triangle of $X$ with $a$, $b$, $c$ having monotonically increasing $x$-coordinates.  (If two points have the same $x$-coordinate, break the tie by placing the point with smaller $y$-coordinate first.)  If $b$ lies above the line determined by $a$ and $c$ (the triangle ``points up''), then colour the triangle blue.  Otherwise, $b$ lies below the line (the triangle ``points down''); in this case colour the triangle red.
+
+Now there must be a homogeneous subset $Y\subset X$ with $|Y|\ge n$.  Without loss of generality, every triangle in $Y$ is coloured blue.  To see that this implies that the points of $Y$ are the vertices of a convex $n$-gon, suppose there exist $a$, $b$, $c$, $d$ in $Y$ such that $d\in\conv\{a,b,c\}$ and such that $a$, $b$, $c$ have monotonically increasing $x$-coordinates (breaking ties as before).  Since every triangle in $Y$ is coloured blue, the triangle $\{a,b,c\}$ points up.  If the $x$-coordinate of $d$ is less than or equal to that of $b$, then the triangle $\{a,d,b\}$ points down.  But if the $x$-coordinate of $d$ is greater than that of $b$, the triangle $\{b,d,c\}$ points down.  In either case there is a red triangle in the homogeneously blue $Y$, a contradiction.  Hence $Y$ is a convex $n$-gon.  This shows that $g(n)\le N<\infty$.
+
+\begin{thebibliography}{9}
+\bibitem{cite:ES1935}
+P.~Erd\H{o}s and G.~Szekeres, A combinatorial problem in geometry, {\it Compositio Math.} {\bf 2} (1935), 463--470.
+
+\bibitem{cite:MS2000}
+W.~Morris and V.~Soltan, The Erd\H{o}s--Szekeres problem on points in convex position -- a survey, {\it Bull. Amer. Math. Soc.} {\bf 37} (2000), 437--458.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

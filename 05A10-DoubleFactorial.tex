@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DoubleFactorial}
+\pmcreated{2013-03-22 12:24:54}
+\pmmodified{2013-03-22 12:24:54}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{double factorial}
+\pmrecord{9}{32318}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{double factorial} of a positive integer $n$ is the product $n!!$ of the positive integers less than or equal to $n$ that have the same parity as $n$, that is,
+\[n!! = n (n-2) (n-4)\cdots k_n\]
+where $k_n$ denotes $1$ if $n$ is an odd number and $2$ if $n$ is an even number.
+
+For example,
+\[ 7!! = 7 \cdot 5 \cdot 3 \cdot 1 = 105 \]
+\[ 10!! = 10\cdot 8\cdot 6\cdot 4\cdot 2 = 3840 \]
+
+Note that $n!!$ is not the same as $(n!)!$.
+
+Observe that $(2n)!! = 2^n n!$ and $(2n+1)!! = \frac{(2n+1)!}{2^n n!}$.
+%%%%%
+%%%%%
+\end{document}

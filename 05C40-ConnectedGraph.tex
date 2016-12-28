@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConnectedGraph}
+\pmcreated{2013-03-22 12:30:34}
+\pmmodified{2013-03-22 12:30:34}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{connected graph}
+\pmrecord{7}{32743}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C40}
+\pmsynonym{connected}{ConnectedGraph}
+\pmsynonym{strongly connected}{ConnectedGraph}
+\pmsynonym{component}{ConnectedGraph}
+\pmrelated{Graph}
+\pmrelated{Bridge}
+\pmrelated{Cutvertex}
+\pmrelated{LocallyConnected}
+\pmrelated{KConnectedGraph}
+\pmrelated{GraphTopology}
+\pmrelated{ClosedPath}
+\pmrelated{ConnectedPoset}
+\pmrelated{DepthFirstSearch2}
+\pmrelated{DepthFirstSearch}
+\pmrelated{VectorValuedFunction2}
+\pmdefines{strongly connected graph}
+\pmdefines{connected components}
+\pmdefines{strongly connected components}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[all]{xy}
+\begin{document}
+A \emph{connected graph} is a graph such that there exists a path between all pairs of vertices.  If the graph is a directed graph, and there exists a path from each vertex to every other vertex, then it is a \emph{strongly connected graph}.
+
+A \emph{connected component} is a maximal (under inclusion) subset of vertices of any graph and any edges between them that forms a connected graph.  Similarly, a \emph{strongly connected component} is a maximal (under inclusion) subset of vertices of any digraph and any edges between them that forms a strongly connected graph.  Any graph or digraph is a union of connected or strongly connected components, plus some edges to join the components together.  Thus any graph can be decomposed into its connected or strongly connected components.  For instance, Tarjan's algorithm can decompose any digraph into its strongly connected components.
+
+For example, the following graph and digraph are connected and strongly connected, respectively.
+
+$$
+\begin{array}{cc}
+\xymatrix{
+A \ar@{-}[r] & B \ar@{-}[r] & C \ar@{-}[d] \\
+D \ar@{-}[r] & E \ar@{-}[r] & F
+}\quad
+&
+\quad
+\xymatrix{
+A \ar[r] & B \ar[d] \ar[r] & C \ar[d]\\
+D \ar[u] & E \ar[l] & F \ar[l]
+}
+\end{array}
+$$
+
+On the other hand, the following graph is \emph{not} connected, and consists of the union of two connected components.
+
+$$
+\xymatrix{
+A \ar@{-}[r] & B \ar@{-}[r] & C \\
+D \ar@{-}[r] & E \ar@{-}[r] & F
+}
+$$
+
+The following digraph is \emph{not} strongly connected, because there is
+no way to reach $F$ from other vertices, and there is no vertex reachable from $C$.
+
+$$
+\xymatrix{
+A \ar[r] & B \ar[d] \ar[r] & C \\
+D \ar[u] & E \ar[l] & F \ar[l]\ar[u]
+}
+$$
+
+The three strongly connected components of this graph are
+
+$$
+\begin{array}{ccc}
+\xymatrix{
+A \ar[r] & B\ar[d] \\
+D \ar[u] & E\ar[l]
+}
+&
+$C$
+&
+$F$
+\end{array}
+$$
+%%%%%
+%%%%%
+\end{document}

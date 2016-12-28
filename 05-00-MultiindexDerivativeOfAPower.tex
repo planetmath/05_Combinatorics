@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultiindexDerivativeOfAPower}
+\pmcreated{2013-03-22 13:42:01}
+\pmmodified{2013-03-22 13:42:01}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{multi-index derivative of a power}
+\pmrecord{9}{34376}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+{\bf Theorem}
+If $i,k$ are multi-indices in $\sN^n$, and $x=(x_1,\ldots, x_n)$, 
+then 
+\begin{eqnarray*}
+\partial^i x^k = \left\{ \begin {array}{ll} 
+ \frac{k!}{(k-i)!} x^{k-i} & \mbox{if}\,\, i\le k, \\
+                         0 & \mbox{otherwise}.
+ \end{array} \right.
+\end{eqnarray*}
+
+\emph{Proof.} The proof follows from the corresponding rule for 
+the ordinary derivative; if $i,k$ are in $0,1,2,\ldots$, then 
+\begin{eqnarray}
+\label{usual}
+\frac{d^i}{dx^i} x^k = \left\{ \begin {array}{ll}  \frac{k!}{(k-i)!} x^{k-i} & \mbox{if}\,\, i\le k, \\
+0 & \mbox{otherwise.} 
+ \end{array} \right.
+\end{eqnarray}
+Suppose $i=(i_1,\ldots, i_n)$, $k=(k_1,\ldots, k_n)$, and 
+$x=(x_1,\ldots, x_n)$. 
+Then we have that 
+\begin{eqnarray*}
+\partial^i x^k &=& \frac{\partial^{|i|}}{\partial x_1^{i_1} \cdots \partial x_n^{i_n}} x_1^{k_1} \cdots x_n^{k_n} \\
+ &=& \frac{\partial^{i_1}}{\partial x_1^{i_1}} x_1^{k_1} \cdot \cdots \cdot  \frac{\partial^{i_n}}{\partial x_n^{i_n}} x_n^{k_n}.
+\end{eqnarray*}
+For each $r=1,\ldots, n$, the function $x_r^{k_r}$ only depends on $x_r$. 
+In the above, each 
+partial differentiation $\partial/\partial x_r$ therefore
+reduces to the corresponding 
+ordinary differentiation $d/dx_r$. 
+Hence, from equation \ref{usual}, it follows that $\partial^i x^k$ vanishes
+if $i_r > k_r$ for any  $r=1,\ldots, n$. If this is not the case, i.e., 
+if $i\le k$ as multi-indices, then for each $r$, 
+$$\frac{d^{i_r}}{dx_r^{i_r}} x_r^{k_r} =  \frac{k_r!}{(k_r-i_r)!} x_r^{k_r-i_r},$$
+and the theorem follows. $\Box$
+%%%%%
+%%%%%
+\end{document}

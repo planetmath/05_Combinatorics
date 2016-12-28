@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstructionOfMagicSquareOfOddLength}
+\pmcreated{2013-03-22 16:25:19}
+\pmmodified{2013-03-22 16:25:19}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{construction of magic square of odd length}
+\pmrecord{5}{38572}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The construction of an $n \times n$ magic square with $n$ being odd is simple. (The letter $x$ will be used as a placeholder).
+
+First, place the number 1 in the middle square of the top row.
+
+$$\begin{bmatrix}
+x & x & 1 & x & x \\
+x & x & x & x & x \\
+x & x & x & x & x \\
+x & x & x & x & x \\
+x & x & x & x & x \\
+\end{bmatrix}$$
+
+The 2 goes in the bottommost row, in the column to the right of the one where we put the 1. Each subsequent number goes in the row above, in the column to the right, wrapping around as needed.
+
+$$\begin{bmatrix}
+x & x & 1 & x & x \\
+x & 5 & x & x & x \\
+4 & x & x & x & x \\
+x & x & x & x & 3 \\
+x & x & x & 2 & x \\
+\end{bmatrix}$$
+
+But if that spot already has a number, the next number goes in the square below instead.
+
+$$\begin{bmatrix}
+17 & x & 1 & 8 & 15 \\
+x & 5 & 7 & 14 & 16 \\
+4 & 6 & 13 & x & x \\
+10 & 12 & x & x & 3 \\
+11 & x & x & 2 & 9 \\
+\end{bmatrix}$$
+
+And so on and so forth. Of course this procedure can be rotated.
+%%%%%
+%%%%%
+\end{document}

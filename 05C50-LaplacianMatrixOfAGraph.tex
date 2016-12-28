@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LaplacianMatrixOfAGraph}
+\pmcreated{2013-03-22 17:04:40}
+\pmmodified{2013-03-22 17:04:40}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Laplacian matrix of a graph}
+\pmrecord{8}{39371}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C50}
+\pmdefines{Laplacian matrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $G$ be a finite graph with $n$ vectices and let $D$ be the \PMlinkname{incidence matrix}{
+IncidenceMatrixWithRespectToAnOrientation} of $G$ with respect to some orientation.
+The \emph{Laplacian matrix} of $G$ is defined to be $DD^T$.
+
+If we let $A$ be the adjacency matrix of $G$ then it can be shown
+that $DD^T = \Delta - A$,
+where $\Delta=\textrm{diag}(\delta_1, \ldots, \delta_n)$ and 
+$\delta_i$ is the degree of
+the vertex $v_i$. As a result, the Laplacian matrix is independent of what orientation is
+chosen for $G$. 
+
+The  Laplacian matrix is usually denoted by $L(G)$. It is a positive semidefinite
+singular matrix, so that the   smallest eigenvalue is 0.
+%%%%%
+%%%%%
+\end{document}

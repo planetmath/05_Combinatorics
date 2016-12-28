@@ -1,0 +1,198 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ThingsCountedByTheCatalanNumbers}
+\pmcreated{2013-03-22 17:40:47}
+\pmmodified{2013-03-22 17:40:47}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{things counted by the Catalan numbers}
+\pmrecord{5}{40119}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmrelated{DyckLanguage}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%\usepackage{xypic}
+
+\begin{document}
+The Catalan numbers count literally hundreds of interesting things. See \PMlinkexternal{Richard Stanley's web site}{http://www-math.mit.edu/~rstan/ec} for a list. Here are a few, including the examples given in the parent article. In each case, the item given is counted by $C_n$.
+
+\begin{enumerate}
+
+\item The number of Dyck paths of length $2n$, or, equivalently, paths from $(0,0)$ to $(n,n)$ in the Euclidean plane with steps $(1,0)$ or $(0,1)$.
+
+See the articles on the ballot numbers and on the generating function for the Catalan numbers for a discussion of this fact.
+
+\item The number of ways to arrange $n$ pairs of matching parentheses, e.g.:
+\begin{gather*}
+()\\
+(())\text{ } ()()\\
+((()))\text{ } (()())\text{ } ()(())\text{ } (())()\text{ } ()()()
+\end{gather*}
+
+There is an obvious bijection between $n$ pairs of matching parentheses and Dyck paths of length $2n$: each left parenthesis corresponds to an up step, and each right parenthesis to a down step. The fact that a Dyck path never goes below the $x$-axis corresponds to the statement that the parentheses match (if an arrangement of parentheses is unmatched, it means exactly that at some point, scanning from left to right, there are more right than left parentheses, which would mean that the corresponding path would drop below the $x$-axis).
+
+\item The number of rooted complete binary trees with exactly $n+1$ leaves. (A rooted binary tree is \emph{complete} if every vertex has either zero or two children).
+
+A simple bijection between such trees and Dyck paths with length $2n$ is constructed as follows. Given a rooted complete binary tree, perform a preorder traversal of the tree. For each step away from the root on a left child, generate an up step in the Dyck path. For each step towards the root on a left child, generate a down step in the Dyck path. Ignore steps on right children. Since the binary tree is complete, it is clear that one can reconstruct the binary tree from just the information about the left children that is encoded in the Dyck path. Thus, for example,
+\[\mbox{\xy <0cm,.3cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+&&&\bullet \ar@{-}[lldd]_U^D \ar@{-}[rrdd]\\
+\\
+&\bullet \ar@{-}[ld]_U^D\ar@{-}[rd] &&&& \bullet \ar@{-}[ld]_U^D\ar@{-}[rd] \\
+\bullet & & \bullet & & \bullet & & \bullet\ar@{-}[ld]_U^D\ar@{-}[rd]\\
+&&&&&\bullet&&\bullet
+} \endxy}
+\qquad\leftrightarrow\qquad\mbox{\xy <0cm,.6cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+&&\bullet \ar@{-}[ld] \ar@{-}[rd]\\
+&\bullet \ar@{-}[ld] && \bullet \ar@{-}[rd] &&\bullet \ar@{-}[ld] \ar@{-}[rd]&&\bullet \ar@{-}[ld] \ar@{-}[rd]\\
+\bullet & & & & \bullet & & \bullet & & \bullet
+} \endxy}
+\]
+
+\item Arrangements of the numbers $1,2,\ldots,2n$ in a $2\times n$ rectangle so that the numbers in each row and column are increasing.
+
+These are bijective with Dyck paths of length $2n$ as follows: given such a rectangle, put an up step in the Dyck path for each element on the top row, and a down step for each element in the bottom row. This has an obvious inverse. It's easy to see that each Dyck path generates a different arrangement of elements in the rectangle, and a few \PMlinkescapetext{moments'} thought leads to the conclusion that each such rectangle indeed leads to a Dyck path (never drops below the $x$-axis). Thus, for example, if $n=3$,
+\[
+\begin{tabular}{|c|c|c|}
+\hline
+$1$&$2$&$5$\\
+\hline
+$3$&$4$&$6$\\
+\hline
+\end{tabular}
+\qquad\longleftrightarrow\qquad
+\mbox{\xy <0cm,.6cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+&&\bullet \ar@{-}[ld] \ar@{-}[rd]\\
+&\bullet \ar@{-}[ld] && \bullet \ar@{-}[rd] &&\bullet \ar@{-}[ld] \ar@{-}[rd]\\
+\bullet & & & & \bullet & & \bullet
+} \endxy}
+\]
+
+Note that these are standard Young tableaux in two dimensions. Tables with $3$ rows, such as
+\begin{center}\begin{tabular}{|c|c|c|}
+\hline
+$1$&$2$&$5$\\
+\hline
+$3$&$4$&\\
+\hline
+$6$&$7$&\\
+\hline
+\end{tabular}\end{center}
+correspond to paths in $3$ dimensions staying inside a particular part of an octant, and similarly for higher dimensions. Young tableaux are related to representations of $S_n$.
+
+\item Sequences $1\leq a_1\leq a_2\leq \cdots\leq a_n$ of integers with $a_i\leq i$.
+
+There is a bijection between such sequences and paths from $(1,1)$ to $(n+1,n+1)$ that stay weakly below the line $y=x$, and the latter are bijective with paths from $(0,0)$ to $(n,n)$ staying weakly below the line $y=x$, which are counted by $C_n$. Given such a sequence, the number of $a_i$ that are equal to $k$ gives the number of horizontal steps in the path along the line $y=k$. The fact that the $a_i$ are in nondecreasing order means that each possible path can be so represented in only one way; the fact that $a_i\leq i$ means that the path stays below $y=x$. For example, if $n=3$,
+\[
+\begin{tabular}{ccc}
+$1$&$1$&$3$
+\end{tabular}
+\qquad\longleftrightarrow\qquad
+\mbox{\xy <0cm,.9cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+&&&\bullet \ar@{-}[d]\\
+&&\bullet \ar@{-}[d] \ar@{-}[r] &\bullet\\
+&&\bullet \ar@{-}[d]\\
+\bullet \ar@{-}[r] & \bullet \ar@{-}[r] &\bullet
+} \endxy}
+\]
+
+\item Sequences $a_1,a_2,\ldots,a_n$ of integers such that $a_1=0$ and $0\leq a_{i+1}\leq a_i+1$.
+
+There is a bijection between such sequences and Dyck paths of length $2n$. Such a Dyck path has exactly $n$ up steps; the integers $a_i$ specify the starting level of each step. This uniquely determines the path. Thus, if $a_i=0$, the up step starts from the $x$-axis, while if $a_i=1$, it starts one unit above the $x$-axis. Again, if $n=3$, then for example
+\[
+\begin{tabular}{ccc}
+$0$&$1$&$0$
+\end{tabular}
+\qquad\longleftrightarrow\qquad
+\mbox{\xy <0cm,.6cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+&&\bullet \ar@{-}[ld] \ar@{-}[rd]\\
+&\bullet \ar@{-}[ld] && \bullet \ar@{-}[rd] &&\bullet \ar@{-}[ld] \ar@{-}[rd]\\
+\bullet & & & & \bullet & & \bullet
+} \endxy}
+\]
+
+\item Sequences $b_1, b_2,\ldots,b_{n-1}$ of integers such that $b_i\leq 1$ and all partial sums are nonnegative.
+
+There is a bijection between these sequences of $b_i$ and the sequences $a_i$ of the previous part. Given a sequence $a_1,\ldots,a_n$ with $a_1=0$, $0\leq a_{i+1}\leq a_i+1$, define $b_i=a_{i+1}-a_i$. Conversely, given a sequence $b_0,\ldots,b_{n-1}$, define $a_i=a_{i-1}+b_{i-1}, i=1,\ldots,n$. This is obviously a bijection.
+
+\item A Motzkin path is a path with steps $(1,-1), (1,0), (1,1)$ that starts at $(0,0)$, ends on the $x$-axis, and never goes below the $x$-axis. A two-colored Motzkin path is a Motzkin path in which each level step is colored either red or blue. Motzkin paths ending at $(n-1,0)$ are counted by $C_n$.
+
+Define a map from two-colored Motzkin paths ending at $(n-1,0)$ to Dyck paths ending at $(2n,0)$ as follows. Each Dyck path always starts with an up step and ends with a down step. In between, there are $2n-2$ steps. Map the step from $i$ to $i+1$ in the Motzkin path to two steps in the Dyck path, from $2i-1$ to $2i+1$, as follows:
+
+\[
+\mbox{\xy <0cm,.4cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+&\bullet \ar@{-}[ld]\\
+\bullet
+} \endxy}
+\longmapsto
+\mbox{\xy <0cm,.8cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+&&\bullet \ar@{-}[ld]\\
+&\bullet \ar@{-}[ld]\\
+\bullet
+} \endxy}
+\qquad\qquad
+\mbox{\xy <0cm,.4cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+\bullet \ar@{-}[rd]\\
+&\bullet
+} \endxy}
+\longmapsto
+\mbox{\xy <0cm,.8cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+\bullet \ar@{-}[rd]\\
+&\bullet \ar@{-}[rd]\\
+&&\bullet
+} \endxy}
+\]
+\[
+\mbox{\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+\bullet \ar@{-}^{red}[r] & \bullet
+} }
+\longmapsto
+\mbox{\xy <0cm,.4cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+&\bullet \ar@{-}[dl] \ar@{-}[dr]\\
+\bullet & & \bullet
+} \endxy}
+\qquad\qquad
+\mbox{\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+\bullet \ar@{-}^{blue}[r] & \bullet
+} }
+\longmapsto
+\mbox{\xy <0cm,.4cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+\bullet\ar@{-}[dr] & & \bullet\ar@{-}[dl]\\
+&\bullet
+} \endxy}
+\]
+
+Define a map from Dyck paths to two-colored Motzkin paths as follows: ignore the initial and final steps in the Dyck path, and map each successive two-step sequence back to a two-colored Motzkin path by the inverse of this mapping.
+
+It is clear that each map is injective, and that the two are inverses, so they are bijections. But Dyck paths of length $2n$ are counted by $C_n$.
+
+\item The number of ways a convex polygon of $n+2$ sides can be split into $n$ triangles.
+
+There is a bijection between such decompositions of a polygon and rooted complete binary trees with $n+1$ leaves (and thus $2n+1$ total vertices). Given a polygon with $n+2$ sides, fix a particular side $s$, which will be the root of the complete binary tree. For each decomposition into triangles, the vertices of the corresponding tree will be the $2n+1$ edges of the decomposition. The left child of $s$ is the counterclockwise edge from $s$; its right child is its clockwise edge. Those left and right children then form a root edge for the smaller polygons; continue this process iteratively. It is clear that this results in a complete rooted binary tree with $n+1$ leaves (the leaves correspond to the remaining $n+1$ edges of the original polygon), and it is easy to see that this is a bijection by figuring out how to reconstruct a decomposition from a tree. For example, for $n=2$, we have
+\[\mbox{\xy <0cm,.6cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+\bullet\ar@{-}[r]^(1){s}\ar@{-}[d] & \star \ar@{-}[r]\ar@{.}[ld]\ar@{.}[d] & \bullet \ar@{-}[ld]\ar@{-}[d]\\
+\star\ar@{-}[d] & \star\ar@{-}[ld]\ar@{.}[r]\ar@{.}[d] & \star\ar@{-}[d]\\
+\bullet\ar@{-}[r] & \star\ar@{-}[r] & \bullet
+} \endxy}
+\qquad\leftrightarrow\qquad\mbox{\xy <0cm,.6cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+& \bullet\ar@{-}[ld]\ar@{-}[rd]\\
+\bullet & & \bullet\ar@{-}[ld]\ar@{-}[rd]\\
+& \bullet & & \bullet
+} \endxy}
+\]
+
+\item The number of configurations of $n$ nonintersecting chords joining, in pairs, $2n$ points on the circumference of a circle.
+
+Given any collection of chords, label the points sequentially around the circle from $1$ to $2n$, break the circle between $2n$ and $1$, and represent it as a straight line. Since the chords are nonintersecting, we get a diagram
+with noncrossing arcs from the line to itself. Diagrams with such noncrossing arcs are obviously equivalent to either Dyck paths or to paired parentheses, both of which are counted by $C_n$.
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

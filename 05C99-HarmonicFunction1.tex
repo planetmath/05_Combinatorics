@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HarmonicFunction1}
+\pmcreated{2013-03-22 15:09:27}
+\pmmodified{2013-03-22 15:09:27}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{harmonic function}
+\pmrecord{5}{36906}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+A real or complex-valued function $f:V\to\mathbb{R}$ or $f:V\to\mathbb{C}$ defined on the vertices~$V$ of a graph $G=(V,E)$ is called \emph{harmonic} at $v\in V$ if its value at~$v$ is its average value at the neighbours of~$v$:
+$$f(v) = \frac{1}{\operatorname{deg}(v)} \sum_{\{u,v\}\in E} f(u).$$
+It is called harmonic \emph{except on~$A$}, for some $A\subseteq V$, if it is harmonic at each $v\in V\setminus A$, and harmonic if it is harmonic at each $v\in V$.
+
+Any harmonic $f:\mathbb{Z}^n\to\mathbb{R}$, where $\mathbb{Z}^n$ is the $n$-dimensional grid, is \PMlinkescapetext{constant} if \PMlinkescapetext{bounded} below (or above).  However, this is not necessarily true on other graphs.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultiindexNotation}
+\pmcreated{2013-03-22 13:41:32}
+\pmmodified{2013-03-22 13:41:32}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{multi-index notation}
+\pmrecord{15}{34366}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05-00}
+\pmdefines{multi-index}
+\pmdefines{multi-indices}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+Multi-indices form a powerful notational device for keeping track
+of multiple derivatives or multiple powers. In many respects 
+these resemble natural numbers. 
+For example, one can define the factorial, binomial coefficients,
+and derivatives for multi-indices. 
+Using these one can state traditional results such as the
+multinomial theorem, 
+Leibniz' rule, Taylor's formula, etc. 
+very concisely. In fact, the multi-dimensional results are more or
+ less obtained simply by  replacing usual indices in $\sN$ with multi-indices. 
+See below for examples.
+
+{\bf Definition}
+A \emph{multi-index} is an $n$-tuple 
+$\alpha=(\alpha_1,\ldots, \alpha_n)$ of non-negative integers $\alpha_1,\ldots, \alpha_n$. In other words,
+$\alpha \in \sN^n$. Usually, $n$ is the dimension of the underlying space.
+Therefore, when dealing with multi-indices, $n$ is usually 
+assumed clear from the context.
+
+\subsubsection*{Operations on multi-indices}
+For a multi-index $\alpha$, we define the \emph{length} (or \emph{order}) as
+$$ 
+  |\alpha| = \alpha_1+\cdots + \alpha_n,
+$$
+and the \emph{factorial}  as
+$$ 
+  \alpha! = \prod_{k=1}^n \alpha_k!.
+$$
+If $\alpha=(\alpha_1,\ldots, \alpha_n)$ and 
+$\beta=(\beta_1,\ldots, \beta_n)$ are two multi-indices, 
+their sum and difference is defined  component-wise as
+\begin{eqnarray*}
+ \alpha+\beta &=&(\alpha_1+\beta_1, \ldots, \alpha_n+\beta_n),\\
+ \alpha-\beta &=&(\alpha_1-\beta_1, \ldots, \alpha_n-\beta_n).
+\end{eqnarray*}
+Thus $|\alpha\pm \beta| = |\alpha|\pm |\beta|$.
+Also, if $\beta_k\le \alpha_k$ for all $k=1,\ldots, n$, then we write 
+$\beta\le \alpha$. For multi-indices $\alpha,\beta$, with  
+$\beta\le \alpha$, we define
+$$ 
+  {\alpha\choose \beta} = \frac{\alpha!}{(\alpha-\beta)! \beta!}.
+$$
+For a point $x=(x_1,\ldots, x_n)$ in $\mathbb{R}^n$ (with 
+standard coordinates) we define 
+$$ 
+  x^\alpha= \prod_{k=1}^n x_k^{\alpha_k}.
+$$
+Also, if $f\colon \mathbb{R}^n \to \mathbb{R}$ is a smooth function, and
+$\alpha=(\alpha_1,\ldots, \alpha_n)$ is a multi-index, we define 
+$$   
+  \partial^\alpha f = \frac{\partial^{|\alpha|}}{\partial^{\alpha_1}e_1 \cdots \partial^{\alpha_n}e_n} f,
+$$
+where $e_1,\ldots, e_n$ are the standard unit vectors of $\mathbb{R}^n$. 
+Since $f$ is sufficiently smooth, the order in which the derivations are 
+performed is irrelevant. For multi-indices $\alpha$ and $\beta$, we thus
+have 
+$$ 
+  \partial^\alpha \partial^\beta = \partial^{\alpha+\beta} = \partial^{\beta+\alpha} = \partial^\beta \partial^\alpha.
+$$
+
+\subsubsection*{Examples}
+\begin{enumerate}
+\item If $n$ is a positive integer, and $x_1,\ldots, x_k$ are
+complex numbers, the multinomial expansion  states that
+$$ 
+  (x_1+\cdots + x_k)^n = n! \sum_{|\alpha|=n} \frac{x^\alpha}{\alpha!}, 
+$$
+where $x=(x_1,\ldots, x_k)$ and $\alpha$ is a multi-index.
+(\PMlinkname{proof}{MultinomialTheoremProof})
+\item Leibniz' rule: If $f,g\colon\sR^n \to \sR$ are smooth functions, and $\beta$ is
+a multi-index, then 
+$$ \partial^\beta(fg) = \sum_{\alpha\le \beta} {\beta \choose \alpha} \partial^\alpha(f)\, \partial^{\beta-\alpha}(g),$$
+where $\alpha$ is a multi-index.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{reedsimon} M. Reed, B. Simon, \emph{Methods of Mathematical Physics,
+I - Functional Analysis}, Academic Press, 1980.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

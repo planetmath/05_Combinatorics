@@ -1,0 +1,165 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RamseysTheorem}
+\pmcreated{2013-03-22 13:53:09}
+\pmmodified{2013-03-22 13:53:09}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{Ramsey's theorem}
+\pmrecord{18}{34630}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05D40}
+\pmclassification{msc}{05D10}
+\pmrelated{RamseysTheorem}
+\pmrelated{ProbabilisticMethod}
+\pmdefines{Ramsey number}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\begin{document}
+\PMlinkescapeword{states}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{even}
+\PMlinkescapeword{partition}
+\PMlinkescapeword{classes}
+\PMlinkescapeword{similar}
+\PMlinkescapeword{argument}
+\PMlinkescapeword{matching}
+\PMlinkescapeword{combination}
+\PMlinkescapeword{behavior}
+
+The original version of \emph{Ramsey's theorem} states that for
+every positive integers $k_1$ and $k_2$ there is $n$ such that if
+edges of a complete graph on $n$ vertices are colored in two
+colors, then there is either a $k_1$-clique of the first color or
+$k_2$-clique of the second color.
+
+The standard proof proceeds by induction on $k_1+k_2$. If
+$k_1,k_2\leq 2$, then the theorem holds trivially. To prove
+induction step we consider the graph $G$ that contains no cliques
+of the desired kind, and then consider any vertex $v$ of $G$.
+Partition the rest of the vertices into two classes $C_1$ and
+$C_2$ according to whether edges from $v$ are of color $1$ or $2$
+respectively. By inductive hypothesis $\abs{C_1}$ is bounded since
+it contains no $k_1-1$-clique of color $1$ and no $k_2$-clique of
+color $2$. Similarly, $\abs{C_2}$ is bounded. QED.
+
+Similar argument shows that for any positive integers
+$k_1,k_2,\dotsc,k_t$ if we color the edges of a sufficiently large
+graph in $t$ colors, then we would be able to find either
+$k_1$-clique of color $1$, or $k_2$-clique or color $2$,\dots, or
+$k_t$-clique of color $t$.
+
+The minimum $n$ whose existence stated in Ramsey's theorem is
+called \emph{Ramsey number} and denoted by $R(k_1,k_2)$ (and
+$R(k_1,k_2,\dotsc,k_t)$ for multicolored graphs). The above proof
+shows that $R(k_1,k_2)\leq R(k_1,k_2-1)+R(k_1-1,k_2)$. From that
+it is not hard to deduce by induction that $R(k_1,k_2)\leq
+\binom{k_1+k_2-2}{k_1-1}$. In the most interesting case
+$k_1=k_2=k$ this yields approximately $R(k,k)\leq (4+o(1))^k$. The
+lower bounds can be established by means of probabilistic
+construction as follows.
+
+Take a complete graph on $n$ vertices and color its edges at random,
+choosing the color of each edge uniformly independently of all other edges.
+The probability that any given set of $k$ vertices is a
+monochromatic clique is $2^{1-k}$. Let $I_r$ be the random
+variable which is $1$ if $r$'th set of $k$ elements is
+monochromatic clique and is $0$ otherwise. The sum $I_r$'s 
+over all $k$-element sets is
+simply the number of monochromatic $k$-cliques. Therefore by
+linearity of expectation $E(\sum I_r)=\sum
+E(I_r)=2^{1-k}\binom{n}{k}$. If the expectation is less than $1$,
+then there exists a coloring which has no monochromatic cliques. A
+little exercise in calculus shows that if we choose $n$ to be no more
+than $(2+o(1))^{k/2}$ then the expectation is indeed less than
+$1$. Hence, $R(k,k)\geq (\sqrt{2}+o(1))^{k}$.
+
+The gap between the lower and upper bounds has been \PMlinkname{open}{Open3} for
+several decades. There have been a number of improvements in
+$o(1)$ terms, but nothing better than $\sqrt{2}+o(1)\leq R(k,k)^{1/k}\leq
+4+o(1)$ is known. It is not even known whether $\lim_{k\to \infty}
+R(k,k)^{1/k}$ exists.
+
+The behavior of $R(k,x)$ for fixed $k$ and large $x$ is equally
+mysterious. For this case Ajtai, Koml\'os and
+Szemer\'edi\cite{cite:aks_ramsey} proved that $R(k,x)\leq
+c_{k}x^{k-1}/(\ln)^{k-2}$. The matching lower bound has only
+recently been established for $k=3$ by Kim
+\cite{cite:kim_ramsey_three}. Even in this case the asymptotics is
+unknown. The combination of results of Kim and improvement of
+Ajtai, Koml\'os and Szemer\'edi's result by Shearer \cite{cite:shearer_independence} yields
+$\tfrac{1}{162}(1+o(1)) k^2/\log k \leq R(3,k)\leq (1+o(1))k^2/\log k$.
+
+A lot of machine and human time has been spent trying to
+determine Ramsey numbers for small $k_1$ and $k_2$. An up-to-date
+summary of our knowledge about small Ramsey numbers can be found
+in \cite{cite:radziszowski_smallramsey}.
+
+%\PMlinktofile{anchor}{pmath.sty}
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:aks_ramsey}
+Mikl{\'o}s Ajtai, J{\'a}nos Koml{\'o}s, and Endre Szemer{\'e}di.
+\newblock A note on {Ramsey} numbers.
+\newblock {\em J. Combin. Theory Ser. A}, 29(3):354--360, 1980.
+\newblock \PMlinkexternal{Zbl 0455.05045}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0455.05045}.
+
+\bibitem{cite:alon_spencer_probmethod}
+Noga Alon and Joel~H. Spencer.
+\newblock {\em The probabilistic method}.
+\newblock John Wiley \& Sons, Inc., second edition, 2000.
+\newblock \PMlinkexternal{Zbl 0996.05001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0996.05001}.
+
+\bibitem{cite:grs_ramsey_book}
+Ronald~L. Graham, Bruce~L. Rothschild, and Joel~H. Spencer.
+\newblock {\em Ramsey Theory}.
+\newblock Wiley-Interscience series in discrete mathematics. 1980.
+\newblock \PMlinkexternal{Zbl 0455.05002}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0455.05002}.
+
+\bibitem{cite:kim_ramsey_three}
+Jeong~Han Kim.
+\newblock The {Ramsey} number {$R(3,t)$} has order of magnitude {$t^2/\log t$}.
+\newblock {\em Random Structures \& Algorithms}, 7(3):173--207, 1995.
+\newblock \PMlinkexternal{Zbl 0832.05084}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0832.05084}.
+\newblock Preprint is \PMlinkexternal{available online}{http://research.microsoft.com/research/theory/jehkim/papers/ramsey5.pdf}.
+
+\bibitem{cite:radziszowski_smallramsey}
+Stanislaw Radziszowski.
+\newblock Small Ramsey numbers.
+\newblock {\em Electronic Journal of Combinatorics}, Dynamical Survey, 2002.
+\newblock \PMlinkexternal{Available
+  online}{http://www.combinatorics.org/Surveys/ds1.pdf}.
+
+
+\bibitem{cite:shearer_independence}
+James~B. Shearer.
+\newblock A note on the independence number of triangle-free graphs.
+\newblock {\em Discrete Mathematics}, 46:83--87, 1983.
+\newblock \PMlinkexternal{Zbl 0516.05053}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0516.05053}.
+\newblock Abstract is \PMlinkexternal{available online}{http://www.research.ibm.com/people/s/shearer/abstracts/intfg.html}
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

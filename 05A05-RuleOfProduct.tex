@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RuleOfProduct}
+\pmcreated{2013-03-22 19:13:02}
+\pmmodified{2013-03-22 19:13:02}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{rule of product}
+\pmrecord{6}{42137}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A05}
+\pmclassification{msc}{03-00}
+\pmsynonym{multiplication principle}{RuleOfProduct}
+\pmrelated{CartesianProduct}
+\pmrelated{Combinatorics}
+\pmrelated{Cardinality}
+\pmrelated{Number}
+\pmrelated{Product}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{combination}
+
+If a process $A$ can have altogether $m$ different results and another process $B$ altogether $n$ different results, then the two processes can have altogether $mn$ different combined results.\, Putting it to set-theoretical form,
+$$\mbox{card}(A\!\times\!B) \;=\; m\!\cdot\!n.$$
+
+The \emph{rule of product} is true also for the combination of several processes:\, If the processes $A_i$ can have $n_i$ possible results ($i = 1,\,2,\,\ldots,\,k$), then their combined process has $n_1n_2\!\cdots\!n_k$ possible results.\, I.e.,
+$$\mbox{card}(A_1\!\times\!A_2\!\times\ldots\times\!A_k) \;=\; n_1n_2\!\cdots\!n_k.$$\\
+
+
+\textbf{Example.}\, Arranging $n$ elements, the first one may be chosen freely from all the $n$ elements, the second from the remaining $n\!-\!1$ elements, the third from the remaining $n\!-\!2$, and so on, the penultimate one from two elements and the last one from the only remaining element; thus by the rule of product, there are in all 
+$$n(n\!-\!1)(n\!-\!2)\!\cdots\!2\!\cdot\!1 \;=\; n!$$ 
+different arrangements, i.e. permutations, as the result.
+%%%%%
+%%%%%
+\end{document}

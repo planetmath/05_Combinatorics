@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrincipleOfInclusionexclusionProofOf}
+\pmcreated{2013-03-22 12:33:27}
+\pmmodified{2013-03-22 12:33:27}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{principle of inclusion-exclusion, proof of}
+\pmrecord{6}{32804}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The proof is by induction.  Consider a single set $A_1$.  Then the principle of inclusion-exclusion states that $|A_1| = |A_1|$, which is trivially true.
+
+Now consider a collection of exactly two sets $A_1$ and $A_2$.  We know that
+$$A \cup B = (A \setminus B) \cup (B \setminus A) \cup (A \cap B)$$
+Furthermore, the three sets on the right-hand side of that equation must be disjoint.  Therefore, by the addition principle, we have
+\begin{eqnarray*}
+|A \cup B| &=& |A \setminus B| + |B \setminus A| + |A \cap B| \\
+&=& |A \setminus B | + |A \cap B| + |B \setminus A| + |A \cap B| - |A \cap B| \\
+&=& |A| + |B| - |A \cap B| \\
+\end{eqnarray*}
+
+So the principle of inclusion-exclusion holds for any two sets.
+
+Now consider a collection of $N > 2$ finite sets $A_1, A_2, \dots A_N$.  We assume that the principle of inclusion-exclusion holds for any collection of $M$ sets where $1 \leq M < N$.  Because the union of sets is associative, we may break up the union of all sets in the collection into a union of two sets:
+$$\bigcup_{i=1}^N A_i = \left( \bigcup_{i=1}^{N-1} A_i \right ) \cup A_N$$
+
+By the principle of inclusion-exclusion for two sets, we have
+$$\left | \bigcup_{i=1}^N A_i \right | = \left | \bigcup_{i=1}^{N-1} A_i \right| + |A_N| - \left|\left( \bigcup_{i=1}^{N-1} A_i \right ) \cap A_N \right|$$
+
+Now, let $I_k$ be the collection of all $k$-fold intersections of $A_1, A_2, \dots A_{N-1}$, and let $I'_k$ be the collection of all $k$-fold intersections of $A_1, A_2, \dots A_N$ that include $A_N$.  Note that $A_N$ is included in every member of $I'_k$ and in no member of $I_k$, so the two sets do not duplicate one another.
+
+We then have
+$$\left | \bigcup_{i=1}^N A_i \right | = \sum_{j=1}^N \left( (-1)^{(j+1)} \sum_{S\in I_j} |S| \right ) + |A_N| - \left|\left( \bigcup_{i=1}^{N-1} A_i \right ) \cap A_N \right|$$
+by the principle of inclusion-exclusion for a collection of $N-1$ sets.  Then, we may distribute set intersection over set union to find that
+$$\left | \bigcup_{i=1}^N A_i \right | = \sum_{j=1}^N \left( (-1)^{(j+1)} \sum_{S\in I_j} |S| \right ) + |A_N| - \left| \bigcup_{i=1}^{N-1} (A_i \cap A_N) \right |$$
+Note, however, that $$(A_x \cap A_N) \cup (A_y \cap A_N) = (A_x \cap A_y \cap A_N)$$  Hence we may again apply the principle of inclusion-exclusion for $N-1$ sets, revealing that
+\begin{eqnarray*}
+\left | \bigcup_{i=1}^N A_i \right | &=& \sum_{j=1}^{N-1} \left( (-1)^{(j+1)} \sum_{S\in I_j} |S| \right ) + |A_N| - \sum_{j=1}^{N-1} \left( (-1)^{(j+1)} \sum_{S\in I_j} |S \cap A_N| \right ) \\
+&=& \sum_{j=1}^{N-1} \left( (-1)^{(j+1)} \sum_{S\in I_j} |S| \right ) + |A_N| - \sum_{j=1}^{N-1} \left( (-1)^{(j+1)} \sum_{S\in I'_{j+1}} |S| \right ) \\
+&=& \sum_{j=1}^{N-1} \left( (-1)^{(j+1)} \sum_{S\in I_j} |S| \right ) + |A_N| - \sum_{j=2}^{N} \left( (-1)^{(j)} \sum_{S\in I'_{j}} |S| \right ) \\
+&=& \sum_{j=1}^{N-1} \left( (-1)^{(j+1)} \sum_{S\in I_j} |S| \right ) + |A_N| + \sum_{j=2}^{N} \left( (-1)^{(j+1)} \sum_{S\in I'_{j}} |S| \right ) \\
+\end{eqnarray*}
+
+The second sum does not include $I'_1$.  Note, however, that $I'_1 = \{ A_N \}$, so we have
+\begin{eqnarray*}
+\left | \bigcup_{i=1}^N A_i \right | &=& \sum_{j=1}^{N-1} \left( (-1)^{(j+1)} \sum_{S\in I_j} |S| \right ) + \sum_{j=1}^{N} \left( (-1)^{(j+1)} \sum_{S\in I'_{j}} |S| \right ) \\
+&=& \sum_{j=1}^{N-1} \left[ (-1)^{(j+1)} \left(  \sum_{S\in I_j} |S| + \sum_{S\in I'_{j}} |S| \right ) \right]
++(-1)^{N+1}\left | \bigcap_{i=1}^N A_i\right | \\
+\end{eqnarray*}
+
+Combining the two sums yields the principle of inclusion-exclusion for $N$ sets.
+%%%%%
+%%%%%
+\end{document}

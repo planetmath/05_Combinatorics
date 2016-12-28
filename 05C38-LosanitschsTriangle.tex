@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LosanitschsTriangle}
+\pmcreated{2013-03-22 15:44:09}
+\pmmodified{2013-03-22 15:44:09}
+\pmowner{CompositeFan}{12809}
+\pmmodifier{CompositeFan}{12809}
+\pmtitle{Losanitsch's triangle}
+\pmrecord{13}{37686}
+\pmprivacy{1}
+\pmauthor{CompositeFan}{12809}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C38}
+\pmsynonym{Lozanic's triangle}{LosanitschsTriangle}
+\pmsynonym{Lozani\'c's triangle}{LosanitschsTriangle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A triangular arrangement of numbers very similar to Pascal's triangle.
+
+Begin as you would if you were constructing Pascal's triangle, with a 1 in the top row, and that row $k$ numbered 0, and the 1's position $n$ as 0.
+
+\begin{eqnarray*}
+\begin{array}{cccccccccccccccccc}
+& & & & & & & & & 1 & & & & & & & &\\
+& & & & & & & & 1 & & 1 & & & & & & &\\
+& & & & & & & 1 & & x & & 1 & & & & & &\\
+& & & & &\vdots & & & & \vdots & & & & \vdots& & & & \\
+\end{array}
+\end{eqnarray*}
+
+Now, for the next value, add up the two values above, but then subtract 
+
+$${{\frac{n}{2}-1} \choose {{k - 1} \over 2}}$$
+
+From this \PMlinkescapetext{point} forward, do the same for every even-numbered position in an even-numbered row. Instead of calculating the binomial coefficient, it can be looked up in Pascal's triangle.
+
+\begin{eqnarray*}
+\begin{array}{cccccccccccccccccc}
+& & & & & & & & & 1 & & & & & & & &\\
+& & & & & & & & 1 & & 1 & & & & & & &\\
+& & & & & & & 1 & & 1 & & 1 & & & & & &\\
+& & & & & & 1 & & 2 & & 2 & & 1 & & & & &\\
+& & & & & 1 & & 2 & & 4 & & 2 & & 1 & & & &\\
+& & & & 1 & & 3 & &6 & &6 & & 3 & & 1 & & &\\
+& & & 1 & & 3 & &9 & & 10& &9 & & 3 & & 1 & &\\
+& & 1 & & 4 & &12 & &19 & &19 & &12 & & 4 & & 1 &\\
+& & & & &\vdots & & & & \vdots & & & & \vdots& & & & \\
+\end{array}
+\end{eqnarray*}
+This triangle was first studied by the Serbian chemist Sima Losanitsch, but has since been found to have applications in graph theory and combinatorics.
+
+\begin{thebibliography}{6}
+\bibitem{dh} S. M. Losanitsch, {\it Die Isomerie-Arten bei den Homologen der Paraffin-Reihe}, Chem. Ber. 30 (1897), 1917-1926.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

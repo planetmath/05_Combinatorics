@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HosoyasTriangle}
+\pmcreated{2013-03-22 18:07:47}
+\pmmodified{2013-03-22 18:07:47}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Hosoya's triangle}
+\pmrecord{5}{40679}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmsynonym{Fibonacci triangle}{HosoyasTriangle}
+\pmsynonym{Hosoya triangle}{HosoyasTriangle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\em Hosoya's triangle} or the {\em Fibonacci triangle} is a triangular arrangement of numbers (like Pascal's triangle) based on the Fibonacci numbers. Each number is the sum of the two numbers above in either the left diagonal or the right diagonal. The first few rows are:
+
+\begin{eqnarray*}
+\begin{array}{cccccccccccccccccc}
+& & & & & & & & & 1 & & & & & & & &\\
+& & & & & & & & 1 & & 1 & & & & & & &\\
+& & & & & & & 2 & & 1 & & 2 & & & & & &\\
+& & & & & & 3 & & 2 & & 2 & & 3 & & & & &\\
+& & & & & 5 & & 3 & & 4 & & 3 & & 5 & & & &\\
+& & & & 8 & & 5 & & 6 & & 6 & & 5 & & 8 & & &\\
+& & & 13 & & 8 & & 10 & & 9 & & 10 & & 8 & & 13 & &\\
+& & 21 & & 13 & & 16 & & 15 & & 15 & & 16 & & 13 & & 21 &\\
+& & & & &\vdots & & & & \vdots & & & & \vdots& & & & \\
+\end{array}
+\end{eqnarray*}
+
+(See sequence A058071 in Sloaen's OEIS). The recurrence relation is $H(0, 0) = H(1, 0) = H(1, 1) = H(2, 1) = 1$ and $H(n, j) = H(n - 1, j) + H(n - 2, j)$ or $H(n, j) = H(n - 1, j - 1) + H(n - 2, j - 2)$.
+
+Thus, the two outermost diagonals are the Fibonacci numbers, while the numbers on the middle vertical line are the squares of the Fibonacci numbers. All the other numbers in the triangle are the product of two distinct Fibonacci numbers greater than 1. The row sums are the convolved Fibonacci numbers (A001629 in Sloane's OEIS).
+
+\begin{thebibliography}{2}
+\bibitem{hh} Haruo Hosoya, ``Fibonacci Triangle'' {\it The Fibonacci Quarterly} {\bf 14} 2 (1976): 173 - 178 
+\bibitem{tk} Thomas Koshy, {\it Fibonacci and Lucas Numbers and Applications}. New York: Wiley \& Sons (2001): 187 - 195
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

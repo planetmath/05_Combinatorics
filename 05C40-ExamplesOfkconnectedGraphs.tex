@@ -1,0 +1,203 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfkconnectedGraphs}
+\pmcreated{2013-03-22 15:10:14}
+\pmmodified{2013-03-22 15:10:14}
+\pmowner{marijke}{8873}
+\pmmodifier{marijke}{8873}
+\pmtitle{examples of ${k}$-connected graphs}
+\pmrecord{4}{36921}
+\pmprivacy{1}
+\pmauthor{marijke}{8873}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C40}
+
+%%%% makra for LaTeX bog standard picture environment: %%%%
+
+\def\cent{\makebox(0,0)}  % center text on \put coÃ¶rdinates
+\def\node{\circle*{4}}    % nice size for graph node/vertex
+\begin{document}
+\PMlinkescapeword{node}
+
+Some examples to go with the 
+\PMlinkname{$k$-connected graph}{KConnectedGraph} entry, where
+$\kappa$ and $\kappa'$ are defined.
+
+\subsection*{examples of disconnected graphs:}
+
+\begin{center}
+\begin{picture}(400,110)(0,0)
+
+\put(80,0){
+\begin{picture}(80,110)(-40,-60)
+\put(-30,-30){\node}
+\put(-40,+10){\node}
+\put(-10,+40){\node}
+\put(+30,+30){\node}
+\put(+40,-10){\node}
+\put(+10,-40){\node}
+\put(0,-60){\cent{$\kappa=\kappa'=0$}}
+\end{picture}}
+
+\put(240,0){
+\begin{picture}(80,110)(-40,-60)
+\put(-30,-30){\node}
+\put(-40,+10){\node}
+\put(-10,+40){\node}
+\put(+30,+30){\node}
+\put(+40,-10){\node}
+\put(+10,-40){\node}
+\put(-30,-30){\line(-1,+4){10}}
+\put(-40,+10){\line(+1,-1){50}}
+\put(+10,-40){\line(-4,+1){40}}
+\put(+30,+30){\line(+1,-4){10}}
+\put(+40,-10){\line(-1,+1){50}}
+\put(-10,+40){\line(+4,-1){40}}
+\put(0,-60){\cent{$\kappa=\kappa'=0$}}
+\end{picture}}
+
+\end{picture}
+\end{center}
+
+\subsection*{examples of bridges \& cutvertices:}
+
+Legend: {\sc b} is a bridge, {\sc c} a cutvertex
+
+\begin{center}
+\begin{picture}(400,110)(0,0)
+
+\put(0,0){
+\begin{picture}(80,110)(-40,-60)
+\put(-30,-30){\node}
+\put(-40,+10){\node}
+\put(-10,+40){\node}
+\put(+30,+30){\node}
+\put(+40,-10){\node}
+\put(+10,-40){\node}
+\put(-30,-30){\line(-1,+4){10}}
+\put(+40,-10){\line(-1,+4){10}}
+\put(-40,+10){\line(+1,+1){30}}
+\put(-10,+40){\line(+4,-1){40}}
+\put(+10,-40){\line(-1,+1){50}}
+\put(-52,+8){\sc c}
+\put(-15,+45){\sc c}
+\put(+33,+33){\sc c}
+\put(-44,-14){\sc b}
+\put(-13,-13){\sc b}
+\put(-33,+27){\sc b}
+\put( +9,+39){\sc b}
+\put(+38, +9){\sc b}
+\put(0,-60){\cent{$\kappa=\kappa'=1$}}
+\end{picture}}
+
+\put(160,0){
+\begin{picture}(80,110)(-40,-60)
+\put(-30,-30){\node}
+\put(-40,+10){\node}
+\put(-10,+40){\node}
+\put(+30,+30){\node}
+\put(+40,-10){\node}
+\put(+10,-40){\node}
+\put(-30,-30){\line(-1,+4){10}}
+\put(-40,+10){\line(+1,-1){50}}
+\put(+10,-40){\line(-4,+1){40}}
+\put(-40,+10){\line(+1,+1){30}}
+\put(+30,+30){\line(+1,-4){10}}
+\put(+40,-10){\line(-1,+1){50}}
+\put(-10,+40){\line(+4,-1){40}}
+\put(-52,+8){\sc c}
+\put(-15,+45){\sc c}
+\put(-33,+27){\sc b}
+\put(0,-60){\cent{$\kappa=\kappa'=1$}}
+\end{picture}}
+
+\put(320,0){
+\begin{picture}(80,110)(-40,-60)
+\put(-30,-30){\node}
+\put(-40,+10){\node}
+\put(-10,+40){\node}
+\put(+30,+30){\node}
+\put(+40,-10){\node}
+\put(+10,-40){\node}
+\put(-40,+10){\line(+1,-4){10}}
+\put(-30,-30){\line(+4,-1){40}}
+\put(+40,-10){\line(-1,+1){50}}
+\put(-40,+10){\line(+1,+1){30}}
+\put(+40,-10){\line(-1,-1){30}}
+\put(-10,+40){\line(+4,-1){40}}
+\put(-15,+45){\sc c}
+\put( +9,+39){\sc b}
+\put(0,-60){\cent{$\kappa=\kappa'=1$}}
+\end{picture}}
+
+\end{picture}
+\end{center}
+
+\subsection*{examples of better connected graphs:}
+
+\begin{center}
+\begin{picture}(400,110)(0,0)
+
+\put(0,0){
+\begin{picture}(80,110)(-40,-60)
+\put(-30,-30){\node}
+\put(-40,+10){\node}
+\put(-10,+40){\node}
+\put(+30,+30){\node}
+\put(+40,-10){\node}
+\put(+10,-40){\node}
+\put(-30,-30){\line(-1,+4){10}}
+\put(-40,+10){\line(+1,-1){50}}
+\put(+10,-40){\line(-4,+1){40}}
+\put(-40,+10){\line(+1,+1){30}}
+\put(+30,+30){\line(+1,-4){10}}
+\put(-40,+10){\line(+4,-1){80}}
+\put(-10,+40){\line(+4,-1){40}}
+\put(-52,+8){\sc c}
+\put(0,-60){\cent{$\kappa=1$, $\kappa'=2$}}
+\end{picture}}
+
+\put(160,0){
+\begin{picture}(80,110)(-40,-60)
+\put(-30,-30){\node}
+\put(-40,+10){\node}
+\put(-10,+40){\node}
+\put(+30,+30){\node}
+\put(+40,-10){\node}
+\put(+10,-40){\node}
+\put(-30,-30){\line(-1,+4){10}}
+\put(+10,-40){\line(-4,+1){40}}
+\put(-40,+10){\line(+1,+1){30}}
+\put(+30,+30){\line(+1,-4){10}}
+\put(-10,+40){\line(+4,-1){40}}
+\put(+40,-10){\line(-1,-1){30}}
+\put(0,-60){\cent{$\kappa=\kappa'=2$}}
+\end{picture}}
+
+\put(320,0){
+\begin{picture}(80,110)(-40,-60)
+\put(-28.333,-28.333){\node}
+\put(-38.333,+11.666){\node}
+\put(-11.666,+38.333){\node}
+\put(+28.333,+28.333){\node}
+\put(+38.333,-11.666){\node}
+\put(+11.666,-38.333){\node}
+\put(-38.333,+11.666){\line(+1,-4){10}}
+\put(-28.333,-28.333){\line(+4,-1){40}}
+\put(-38.333,+11.666){\line(+1,+1){28.333}}
+\put(+38.333,-11.666){\line(-1,-1){28.333}}
+\put(+38.333,-11.666){\line(-1,+4){10}}
+\put(-11.666,+38.333){\line(+4,-1){40}}
+\put(-38.333,+11.666){\line(+4,+1){66.666}}
+\put(-28.333,-28.333){\line(+4,+1){66.666}}
+\put(+11.666,-38.333){\line(+1,+4){16.666}}
+\put(-28.333,-28.333){\line(+1,+4){16.666}}
+\put(0,-60){\cent{$\kappa=2$, $\kappa'=3$}}
+\end{picture}}
+
+\end{picture}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

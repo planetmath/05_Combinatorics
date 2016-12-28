@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SingmastersConjecture}
+\pmcreated{2013-03-22 18:51:10}
+\pmmodified{2013-03-22 18:51:10}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Singmaster's conjecture}
+\pmrecord{4}{41662}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Conjecture}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Conjecture. (David Singmaster). With the exception of the number 1, no positive integer appears in Pascal's triangle more than twelve times.
+
+Numbering the top row of Pascal's triangle (the tip with the single instance of 1) as row 0, and leftmost column as row 0, it is clear that each integer $n > 2$ occurs at least twice, specifically, at positions $(n, 1)$ and $(n, n - 1)$. Singmaster was able to figure out that when there is a solution to $$n = { F_{2k} F_{2k + 1} \choose F_{2k - 1} F_{2k} - 1} - 1 = { F_{2k} F_{2k + 1} - 1 \choose F_{2k - 1} F_{2k}}$$ (with $F_i$ being the $i$th Fibonacci number) the number $n$ occurs six times in Pascal's triangle, and he showed that there are infinitely many such numbers. Empirical evidence suggests the actual maximum of instances for a number to occur in Pascal's triangle may be less than twelve: Pascal's triangle has been computed to millions of rows and no number (besides 1) has been encountered more than eight times.
+%%%%%
+%%%%%
+\end{document}

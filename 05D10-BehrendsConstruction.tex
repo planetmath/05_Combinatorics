@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BehrendsConstruction}
+\pmcreated{2013-03-22 13:40:53}
+\pmmodified{2013-03-22 13:40:53}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{Behrend's construction}
+\pmrecord{11}{34350}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05D10}
+\pmclassification{msc}{11B25}
+%\pmkeywords{arithmetic progressions}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{size}
+\PMlinkescapeword{order}
+
+At first sight it may seem that the greedy algorithm yields the densest subset of $\{0,1,\dotsc,N\}$ that is free of arithmetic progressions of length $3$. It is not hard to show that the greedy algorithm yields the set of numbers that lack digit $2$ in their \PMlinkname{ternary development}{Base3}. \PMlinkname{Density}{AsymptoticDensity} of such numbers is $O(N^{\log_3 2-1})$.
+
+However, in 1946 Behrend\cite{cite:behrend_szem_low} constructed much denser subsets that are free of arithmetic progressions. His major idea is that if we were looking for a progression-free sets in $\mathbb{R}^n$, then we could use spheres. So, consider an $d$-dimensional cube $[1,n]^d \cap \mathbb{Z}^d$ and family of spheres $x_1^2+x_2^2+\dotsb+x_d^2=t$ for $t=1, \dotsc, d n^2$. Each point in the cube is contained in one of the spheres, and so at least one of the spheres contains $n^d/d n^2$ lattice points. Let us call this set $A$. Since sphere does not contain arithmetic progressions, $A$ does not contain any progressions either. Now let $f$ be a Freiman isomorphism from $A$ to a subset of $\mathbb{Z}$ defined as follows. If $x=\{x_1,x_2,\dotsc,x_d\}$ is a point of $A$, then $f(x)=x_1+x_2(2n)+x_3(2n)^2+\dotsb+x_d(2n)^{d-1}$, that is, we treat $x_i$ as $i$'th digit of $f(x)$ in base $2n$. It is not hard to see that $f$ is indeed a Freiman isomorphism of order $2$, and that $f(A) \subset \{1, 2,\dotsc,N=(2n)^d\}$. If we set $d=c\sqrt{\ln N}$, then we get that there is a progression-free subset of $\{1,2,\dotsc,N\}$ of size at least
+$N e^{-\sqrt{\ln N}(c\ln 2+2/c+o(1)}$. To maximize this value we can set $c=\sqrt{2/\ln 2}$. Thus, there exists a progression-free set of size at least
+\begin{equation*}
+N e^{-\sqrt{8\ln 2 \ln N}(1+o(1))}.
+\end{equation*}
+
+This result was later generalized to sets not containing arithmetic progressions of length $k$ by Rankin\cite{cite:rankin_behrgen}. His construction is more complicated, and depends on the estimates of the number of representations of an integer as a sum of many squares. He proves that the size of a set free of $k$-term arithmetic progression is at least
+\begin{equation*}
+N e^{-c (\log N)^{1/(k-1)}}.
+\end{equation*}
+
+On the other hand, Moser\cite{cite:moser_behrendbound} gave a
+construction analogous to that of Behrend, but which was explicit
+since it did not use the pigeonhole principle.
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:behrend_szem_low}
+Felix~A. Behrend.
+\newblock On the sets of integers which contain no three in arithmetic
+  progression.
+\newblock {\em Proc. Nat. Acad. Sci.}, 23:331--332, 1946.
+\newblock \PMlinkexternal{Zbl 0060.10302}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0060.10302}.
+
+\bibitem{cite:moser_behrendbound}
+Leo Moser.
+\newblock On non-averaging sets of integers.
+\newblock {\em Canadian J. Math.}, 5:245--252, 1953.
+\newblock \PMlinkexternal{Zbl
+  0050.04001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an%
+=0050.04001}.
+
+\bibitem{cite:rankin_behrgen}
+Robert~A. Rankin.
+\newblock Sets of integers containing not more than a given number of terms in
+  arithmetical progression.
+\newblock {\em Proc. Roy. Soc. Edinburgh Sect. A}, 65:332--344, 1962.
+\newblock \PMlinkexternal{Zbl 0104.03705}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0104.03705}.
+
+\end{thebibliography}
+
+%@ARTICLE{cite:behrend_szem_low,
+% author    = {Felix A. Behrend},
+% title     = {On the sets of integers which contain no three in arithmetic %progression},
+% journal   = {Proc. Nat. Acad. Sci.},
+% volume    = 23,
+% year      = 1946,
+% pages     = {331--332}
+%}
+%%%%%
+%%%%%
+\end{document}

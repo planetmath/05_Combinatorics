@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfTreesetTheoretic}
+\pmcreated{2013-03-22 12:52:27}
+\pmmodified{2013-03-22 12:52:27}
+\pmowner{uzeromay}{4983}
+\pmmodifier{uzeromay}{4983}
+\pmtitle{example of tree (set theoretic)}
+\pmrecord{5}{33213}
+\pmprivacy{1}
+\pmauthor{uzeromay}{4983}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmclassification{msc}{03E05}
+\pmrelated{CofinalBranch}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+The set $\mathbb{Z}^+$ is a tree with $<_T=<$.  This isn't a very interesting tree, since it simply consists of a line of nodes.  However note that the height is $\omega$ even though no particular node has that height.
+
+A more interesting tree using $\mathbb{Z}^+$ defines $m<_T n$ if $i^a=m$ and $i^b=n$ for some $i,a,b\in \mathbb{Z}^+\cup \{0\}$.  Then $1$ is the root, and all numbers which are not powers of another number are in $T_1$.  Then all squares (which are not also fourth powers) for $T_2$, and so on.
+
+To illustrate the concept of a cofinal branch, observe that for any limit ordinal $\kappa$ we can construct a $\kappa$-tree which has no cofinal branches.  We let $T=\{(\alpha,\beta)|\alpha<\beta<\kappa\}$ and $(\alpha_1,\beta_1)<_T(\alpha_2,\beta_2)\leftrightarrow \alpha_1<\alpha_2 \wedge \beta_1=\beta_2$.  The tree then has $\kappa$ disjoint branches, each consisting of the set $\{(\alpha,\beta)|\alpha<\beta\}$ for some $\beta<\kappa$.  No branch is cofinal, since each branch is capped at $\beta$ elements, but for any $\gamma<\kappa$, there is a branch of height $\gamma+1$.  Hence the supremum of the heights is $\kappa$.
+%%%%%
+%%%%%
+\end{document}

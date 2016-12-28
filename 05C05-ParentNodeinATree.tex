@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ParentNodeinATree}
+\pmcreated{2013-03-22 12:30:32}
+\pmmodified{2013-03-22 12:30:32}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{parent node (in a tree)}
+\pmrecord{5}{32742}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmsynonym{parent node}{ParentNodeinATree}
+\pmsynonym{parent}{ParentNodeinATree}
+\pmrelated{ChildNodeOfATree}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%\usepackage{xypic}
+\xyoption{all}
+\usepackage{color}
+\begin{document}
+A \emph{parent} node $P$ of a node $C$ in a tree is the first node which lies along the path from $C$ to the root of the tree, $R$.
+
+Drawn in the canonical root-at-top manner, the parent node of a node $C$ in a tree is simply the node immediately above $C$ which is connected to it.
+
+\begin{center}
+
+$$\xymatrix{
+& \bullet \ar@{-}[dl] \ar@{-}[dr] & & & \\
+\bullet & & {\color{red}\bullet} \ar@{-}[dr]\ar@{-}[dl] & & \\
+& \bullet \ar@{-}[dl] & & {\color{blue}\bullet} & \\
+\bullet & & & & }$$
+
+{\tiny Figure: A node (blue) and its parent (red.)}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

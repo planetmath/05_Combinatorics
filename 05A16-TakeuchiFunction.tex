@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TakeuchiFunction}
+\pmcreated{2013-03-22 17:33:07}
+\pmmodified{2013-03-22 17:33:07}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Takeuchi function}
+\pmrecord{4}{39957}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A16}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The {\em Takeuchi function} is a triply recursive 3-parameter function originally defined by Ichiro Takeuchi in 1978 as $t(x, y, z) = y$ if $x \leq y$ and $t(x, y, z) = t(t(x - 1, y, z), t(y - 1, z, x), t(z - 1, x, y))$ otherwise. Later John McCarthy simplified the definition of the function as $t(x, y, z) = y$ if $x \leq y$, $t(x, y, z) = z$ if $y \leq z$ and $t(x, y, z) = x$ in all other cases.
+
+For example, $t(194, 13, 5) = 194$ since 194 is not less than 13, and 13 is not less than 5. The return value of the function ``is on no practical significance,'' but the function itself ``is useful for benchmark testing of programming languages.'' (Finch, 2003) The function $T(x, y, z)$ is the number of times $t$ calls itself to obtain the return value. A properly optimized implementation of the function in a given programming language should not require more recursion than $T$ indicates.
+
+\begin{thebibliography}{1}
+\bibitem{sf} Steven R. Finch {\it Mathematical Constants} New York: Cambridge University Press (2003): 321
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

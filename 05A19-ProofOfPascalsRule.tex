@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPascalsRule}
+\pmcreated{2013-03-22 15:03:11}
+\pmmodified{2013-03-22 15:03:11}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of Pascal's rule}
+\pmrecord{5}{36770}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A19}
+
+\usepackage{amsmath}
+\begin{document}
+The definition of $\binom{n}{k}$ is the number of $k$-subsets out from an $n$-set. Using this combinatorial meaning the proof is straightforward.
+
+Let $x$ a distinct element from the $n$-set. As previously stated, $\binom{n}{k}$ counts the number of subsets with $k$ elements, chosen from the set with $n$ elements. Now, some of these subsets will contain $x$ and some others don't.
+
+The number of $k$-subsets not containing $x$ is $\binom{n-1}{k}$, since we need to choose $k$ elements from the $n-1$ elements different from $x$.
+
+The number of $k$-subsets containing $x$ is $\binom{n-1}{k-1}$, because if it is given that $x$ is in the subset, we only need to choose the remaining $k-1$ elements from the $n-1$ elements that are different from $x$.
+
+Thus
+\[
+\binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}.
+\]
+%%%%%
+%%%%%
+\end{document}

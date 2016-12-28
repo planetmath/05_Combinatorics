@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GraphIsomorphism}
+\pmcreated{2013-03-22 12:16:24}
+\pmmodified{2013-03-22 12:16:24}
+\pmowner{vampyr}{22}
+\pmmodifier{vampyr}{22}
+\pmtitle{graph isomorphism}
+\pmrecord{5}{31708}
+\pmprivacy{1}
+\pmauthor{vampyr}{22}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C60}
+\pmsynonym{isomorphism}{GraphIsomorphism}
+\pmsynonym{isomorphic}{GraphIsomorphism}
+\pmrelated{Graph}
+\pmrelated{Digraph}
+\pmrelated{GraphHomomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic} 
+%\input xy
+%\xyoptions{all}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{graph isomorphism} is a bijection between the vertices of two graphs $G$ and $H$:
+$$f: V(G) \rightarrow V(H)$$
+with the property that any two vertices $u$ and $v$ from $G$ are adjacent if and only if $f(u)$ and $f(v)$ are adjacent in $H$.
+
+If an isomorphism can be constructed between two graphs, then we say those graphs are \emph{isomorphic}.
+
+For example, consider these two graphs:
+
+$$\xymatrix{
+a \ar@{-}[r] \ar@{-}[rd] \ar@{-}[rdd] & g \\
+b \ar@{-}[ru] \ar@{-}[r] \ar@{-}[rdd] & h \\
+c \ar@{-}[ruu] \ar@{-}[r] \ar@{-}[rd] & i \\
+d \ar@{-}[ruu] \ar@{-}[ru] \ar@{-}[r] & j}$$
+
+$$\xymatrix{
+1 \ar@{-}[rrr] \ar@{-}[rd] \ar@{-}[ddd] & & & 2 \\
+& 5 & 6 \ar@{-}[ur] \ar@{-}[l] \ar@{-}[d] & \\
+& 8 \ar@{-}[u] \ar@{-}[r] \ar@{-}[dl] & 7 & \\
+4 & & & 3 \ar@{-}[uuu] \ar@{-}[lll] \ar@{-}[ul] }$$
+
+Although these graphs look very different at first, they are in fact isomorphic; one isomorphism between them is
+$$f(a) = 1$$
+$$f(b) = 6$$
+$$f(c) = 8$$
+$$f(d) = 3$$
+$$f(g) = 5$$
+$$f(h) = 2$$
+$$f(i) = 4$$
+$$f(j) = 7$$
+%%%%%
+%%%%%
+\end{document}

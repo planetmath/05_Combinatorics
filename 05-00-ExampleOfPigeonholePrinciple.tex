@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfPigeonholePrinciple}
+\pmcreated{2013-03-22 12:41:32}
+\pmmodified{2013-03-22 12:41:32}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{example of pigeonhole principle}
+\pmrecord{8}{32972}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05-00}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\usepackage{amsthm}
+\newtheorem*{thm}{Theorem}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}{
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+
+\begin{document}
+A \PMlinkescapetext{simple} example.
+\begin{thm} For any set of $8$ integers, there exist at least two of them 
+whose difference is divisible by $7$.
+\end{thm}
+
+\small
+\begin{proof}
+The residue classes modulo $7$ are $0,1,2,3,4,5,6$. 
+We have seven \PMlinkescapetext{classes} and eight integers. So it must be the case that 2 integers fall on the same
+residue class, and therefore their difference will be divisible by $7$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

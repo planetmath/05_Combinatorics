@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BellsTriangle}
+\pmcreated{2013-03-22 16:49:16}
+\pmmodified{2013-03-22 16:49:16}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Bell's triangle}
+\pmrecord{5}{39059}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Data Structure}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A18}
+\pmclassification{msc}{11B73}
+\pmsynonym{Bell triangle}{BellsTriangle}
+\pmsynonym{Aitken's array}{BellsTriangle}
+\pmsynonym{Aitken array}{BellsTriangle}
+\pmsynonym{Peirce triangle}{BellsTriangle}
+\pmsynonym{Peirce's triangle}{BellsTriangle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\em Bell's triangle} or {\em Aitken's array} or {\em Peirce triangle} is a triangular arrangement of integers in which the top row has a single 1, and each subsequent row begins with the last number of the previous row, and each remaining number in a row is the sum of the number to the left to the number above left.
+
+The first eight rows are:
+
+$$\begin{array}{cccccccccccccccccc}
+& & & & & & & & & 1 & & & & & & & &\\
+& & & & & & & & 1 & & 2 & & & & & & &\\
+& & & & & & & 2 & & 3 & & 5 & & & & & &\\
+& & & & & & 5 & & 7 & & 10 & & 15 & & & & &\\
+& & & & & 15 & & 20 & & 27 & & 37 & & 52 & & & &\\
+& & & & 52 & & 67 & & 87 & & 114 & & 151 & & 203 & & &\\
+& & & 203 & & 255 & & 322 & & 409 & & 523 & & 674 & & 877 & &\\
+& & 877 & & 1080 & & 1335 & & 1657 & & 2066 & & 2589 & & 3263 & & 4140 &\\
+& & & & &\vdots & & & & \vdots & & & & \vdots& & & & \\
+\end{array}$$
+
+These are listed in A011971 of Sloane's OEIS.
+
+The left outermost diagonal gives the Bell numbers (1, 2, 5, 15, 52, 203, 877, 4140, etc.) in order.
+%%%%%
+%%%%%
+\end{document}

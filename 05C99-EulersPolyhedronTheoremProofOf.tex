@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EulersPolyhedronTheoremProofOf}
+\pmcreated{2013-03-22 12:47:36}
+\pmmodified{2013-03-22 12:47:36}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{Euler's polyhedron theorem, proof of}
+\pmrecord{7}{33109}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+
+
+%%%%%% END OF SAVED PREAMBLE %%%%%%
+\begin{document}
+This proof is not one of the standard proofs given to Euler's formula.  I found the idea presented in one of Coxeter's books.  It presents a different approach to the formula, that may be more familiar to modern students who have been exposed to a ``Discrete Mathematics'' course.  It falls into the category of ``informal'' proofs: proofs which assume without proof certain properties of planar graphs usually proved with algebraic topology.  This one makes deep (but somewhat hidden) use of the Jordan curve theorem.
+
+Let $G=(V,E)$ be a planar graph; we consider some particular planar embedding of $G$.  Let $F$ be the set of \emph{faces} of this embedding.  Also let $G'=(F,E')$ be the dual graph ($E'$ contains an edge between any 2 adjacent faces of $G$).  The planar embeddings of $G$ and $G'$ determine a correspondence between $E$ and $E'$: two vertices of $G$ are adjacent iff they both belong to a pair of adjacent faces of $G$; denote by $\phi:E\to E'$ this correspondence.
+
+\begin{center}
+\includegraphics{euler1}
+\end{center}
+
+\begin{small}
+In all illustrations, we represent a planar graph $G$, and the two sets of edges $T\subseteq E$ (in red) and $T'\subseteq E'$ (in blue).
+\end{small}
+
+Let $T\subseteq E$ be a spanning tree of $G$.  Let $T' = E' \setminus \phi[E]$.  We claim that $T'$ is a spanning tree of $G'$.  Indeed,
+\begin{description}
+\item[$T'$ contains no loop.]
+\begin{center}
+\includegraphics[scale=0.7]{euler2}
+\end{center}
+Given any loop of edges in $T'$, we may draw a loop on the faces of $G$ which participate in the loop.  This loop must partition the vertices of $G$ into two non-empty sets, and only crosses edges of $E\setminus T$.  Thus, $(V,T)$ has more than a single connected component, so $T$ is not spanning.
+\begin{small}
+[The proof of this utilizes the Jordan curve theorem.]
+\end{small}
+
+\item[$T'$ spans $G'$.]
+\begin{center}
+\includegraphics[scale=0.7]{euler3}
+\end{center}
+For suppose $T'$ does not connect all faces $F$.  Let $f_1,f_2\in F$ be two faces with no path between them in $T'$.  Then $T$ must contain a cycle separating $f_1$ from $f_2$, and cannot be a tree.
+\begin{small}
+[The proof of this utilizes the Jordan curve theorem.]
+\end{small}
+\end{description}
+
+We thus have a partition $E=T\cup \phi^{-1}[T']$ of the edges of $G$ into two sets.  Recall that in any tree, the number of edges is one less than the number of vertices.  It follows that 
+\[
+|E| = |T| + |T'| = (|V|-1) + (|F|-1) = |V|+|F|-2,
+\]
+as required.
+%%%%%
+%%%%%
+\end{document}

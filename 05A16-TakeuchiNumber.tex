@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TakeuchiNumber}
+\pmcreated{2013-03-22 17:33:09}
+\pmmodified{2013-03-22 17:33:09}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Takeuchi number}
+\pmrecord{5}{39958}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A16}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The $n$th {\em Takeuchi number} $T_n$ is the value of the function $T(n, 0, n + 1)$ which measures how many times the Takeuchi function $t(x, y, z)$ has to call itself to give the answer starting with $x = n, y = 0, z = n + 1$. For example, the second Takeuchi number is 4, since $t(2, 0, 3)$ requires four recursions to obtain the answer 2. The first few Takeuchi numbers are 0, 1, 4, 14, 53, 223, 1034, 5221, 28437, listed in A000651 of Sloane's OEIS. Prellberg gives a formula for the asymptotic growth of the Takeuchi numbers: $$T_n ~ cB_n\exp\left(\frac{1}{2W(n)^2}\right)$$, where $c$ is the Takeuchi-Prellberg constant (approximately 2.2394331), $B_n$ is the $n$th Bernoulli number and $W(x)$ is Lambert's $W$ function.
+
+\begin{thebibliography}{2}
+\bibitem{sf} Steven R. Finch {\it Mathematical Constants} New York: Cambridge University Press (2003): 321
+\bibitem{tp} T. Prellberg, ``On the asymptotics of Takeuchi numbers'', {\it Symbolic computation, number theory, special functions, physics and combinatorics}, Dordrecht: Kluwer Acad. Publ. (2001): 231 - 242.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

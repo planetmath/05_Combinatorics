@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtendedBinaryTree}
+\pmcreated{2013-03-22 12:31:36}
+\pmmodified{2013-03-22 12:31:36}
+\pmowner{aoh45}{5079}
+\pmmodifier{aoh45}{5079}
+\pmtitle{extended binary tree}
+\pmrecord{8}{32766}
+\pmprivacy{1}
+\pmauthor{aoh45}{5079}
+\pmtype{Data Structure}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmrelated{BinaryTree}
+\pmrelated{CompleteBinaryTree}
+\pmrelated{ExternalPathLength}
+\pmrelated{WeightedPathLength}
+\pmrelated{MinimumWeightedPathLength}
+\pmdefines{external node}
+\pmdefines{internal node}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\begin{document}
+An \emph{extended binary tree} is a transformation of any binary tree into a complete binary tree.  This transformation consists of replacing every null subtree of the original tree with ``special nodes.''  The nodes from the original tree are then \emph{internal nodes}, while the ``special nodes'' are \emph{external nodes}.
+
+For instance, consider the following binary tree.
+
+\begin{center}
+\includegraphics{tree1}
+\end{center}
+
+The following tree is its extended binary tree.  Empty circles represent internal nodes, and filled circles represent external nodes.
+
+\begin{center}
+\includegraphics{tree2}
+\end{center}
+
+Every internal node in the extended tree has exactly two children, and every external node is a leaf.  The result is a complete binary tree.
+%%%%%
+%%%%%
+\end{document}

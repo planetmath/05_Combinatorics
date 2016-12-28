@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VandermondeIdentity}
+\pmcreated{2013-03-22 14:08:49}
+\pmmodified{2013-03-22 14:08:49}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{Vandermonde identity}
+\pmrecord{8}{35562}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A19}
+\pmrelated{PascalsRule}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{Theorem}{Theorem}
+\begin{document}
+\PMlinkescapeword{restriction}
+\PMlinkescapeword{completes}
+\PMlinkescapeword{decide}
+\PMlinkescapeword{size}
+\PMlinkescapeword{formula}
+\begin{Theorem}[\cite{AS} 24.1.1 formula A. II.]
+For any $p$ and $q$ and any $k$ with $0\le k\le p+q$,
+\begin{equation}
+\binom{p+q}{k}=\sum_{i=0}^k\binom{p}{i}\binom{q}{k-i}.\tag{*}
+\end{equation}
+\end{Theorem}
+
+\begin{proof}
+Let $P$ and $Q$ be disjoint sets with $|P|=p$ and $|Q|=q$.  Then the 
+left-hand side
+of Equation~(*) is equal to the number of subsets of $P\cup Q$ of size $k$.
+To build a subset of $P\cup Q$ of size $k$, we first decide how many elements, say $i$ with $0\le i\le k$,
+we will select from $P$.  We can then select those elements in $\binom{p}{i}$
+ways.  Once we have done so, we must select the
+remaining $k-i$ elements from $Q$, which we can do in $\binom{q}{k-i}$ ways.  Thus there are $\binom{p}{i}\binom{q}{k-i}$ ways to select a subset of $P\cup Q$ of size $k$ subject to the restriction that exactly $i$ elements come from $P$.  Summing over all possible $i$ completes the proof.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{AS}
+Abramowitz, M., and I. A. Stegun, eds.  {\it Handbook of Mathematical Functions}.  National Bureau of Standards, Dover, New York, 1974.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BridgesOfKonigsberg}
+\pmcreated{2013-03-22 12:33:47}
+\pmmodified{2013-03-22 12:33:47}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{bridges of K\"onigsberg}
+\pmrecord{9}{32810}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C38}
+\pmsynonym{bridges of Koenigsberg}{BridgesOfKonigsberg}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+\PMlinkescapeword{bridge}
+\PMlinkescapeword{bridges}
+\PMlinkescapeword{map}
+\PMlinkescapeword{representation}
+The \emph{bridges of K\"onigsberg} is a famous problem inspired by an actual place and situation.  The solution of the problem, put forth by Leonhard Euler in 1736, is widely considered to be the first work of graph theory and responsible for the foundation of the discipline.
+
+The following figure shows a portion of the Prussian city of K\"onigsberg.  A river passes through the city, and there are two islands in the river.  Seven bridges cross between the islands and the mainland:
+
+\begin{center}
+\includegraphics[scale=.5]{koenigs1}
+
+{\tiny Figure 1: Map of the K\"onigsberg bridges.}
+\end{center}
+
+The mathematical problem arose when citizens of K\"onigsburg noticed that one could not take a stroll across all seven bridges, returning to the starting point, without crossing at least one bridge twice.  
+
+Answering the question of why this is the case required a mathematical theory that didn't exist yet: graph theory.  This was provided by Euler in his formative paper.
+
+To solve the problem, we must translate it into a graph-theoretic representation.  We model the land masses, $A$, $B$, $C$ and $D$, as vertices in a graph.  The bridges between the land masses become edges.  This generates from the above picture the following graph:
+
+\begin{center}
+\psfrag{A}{$A$}
+\psfrag{B}{$B$}
+\psfrag{C}{$C$}
+\psfrag{D}{$D$}
+\psfrag{1}{$1$}
+\psfrag{2}{$2$}
+\psfrag{3}{$3$}
+\psfrag{4}{$4$}
+\psfrag{5}{$5$}
+\psfrag{6}{$6$}
+\psfrag{7}{$7$}
+\includegraphics[scale=.9]{koenigs2}
+
+{\tiny Figure 2: Graph-theoretic representation of the K\"onigsburg bridges.}
+\end{center}
+
+At this point, we can apply what we know about Euler paths and Euler circuits.    Since an Euler circuit for a graph exists only if every vertex has an even degree, the K\"onigsberg graph must have no Euler circuit.  Hence, we have explained why one cannot take a walk around K\"onigsberg and return to the starting point without crossing at least one bridge more than once.
+%%%%%
+%%%%%
+\end{document}

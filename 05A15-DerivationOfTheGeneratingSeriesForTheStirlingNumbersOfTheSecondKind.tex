@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfTheGeneratingSeriesForTheStirlingNumbersOfTheSecondKind}
+\pmcreated{2013-03-22 15:13:35}
+\pmmodified{2013-03-22 15:13:35}
+\pmowner{cgibbard}{959}
+\pmmodifier{cgibbard}{959}
+\pmtitle{derivation of the generating series for the Stirling numbers of the second kind}
+\pmrecord{6}{36992}
+\pmprivacy{1}
+\pmauthor{cgibbard}{959}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The derivation of the generating series is much simpler if one makes use of the composition lemma for exponential generating series. We are looking for the generating series for sets of nonempty sets, so in the notation of Jackson and Goulden, we have the set decomposition:
+\begin{displaymath}
+\mathcal{A}\,\tilde\longrightarrow\, \mathcal{U} \circledast (\mathcal{U} \backslash \{\emptyset\})
+\end{displaymath}
+where $\mathcal{U}$ is the set of all canonical unordered sets, $\mathcal{A}$ is the set which we are interested in counting, and $\circledast$ is star-composition of sets of labelled combinatorial objects.
+
+The set $\mathcal{U}$ has one object in it of each weight, and so has exponential generating series:
+\begin{displaymath}
+[(\mathcal{U}, \omega)]_e (x) = \sum_{n\geq 0} {x^n\over n!} = e^x
+\end{displaymath}
+
+The set $\mathcal{U} \backslash \{\emptyset\}$ then has generating series:
+\begin{displaymath}
+[(\mathcal{U} \backslash \{\emptyset\}, \omega)]_e (x) = e^x - 1
+\end{displaymath}
+
+So, by the star composition lemma and the above decomposition,
+\begin{eqnarray*}
+[(\mathcal{A}, \omega)]_e (x) &=& [(\mathcal{U} \circledast (\mathcal{U} \backslash \{\emptyset\}), \omega)]_e (x)\\
+&=&\left([(\mathcal{U}, \omega)]_e \circ [(\mathcal{U} \backslash \{\emptyset\}, \omega)]_e\right) (x)\\
+&=&e^{e^x - 1}
+\end{eqnarray*}
+
+By tensoring the weight function $\omega$ with a weight function $\lambda$ counting the number of parts each set partition contains, we get
+\begin{displaymath}
+[(\mathcal{A}, \omega \otimes \lambda)]_{e,o} (x,t) = e^{t (e^x - 1)}
+\end{displaymath}
+using a derivation similar to the one above.
+%%%%%
+%%%%%
+\end{document}

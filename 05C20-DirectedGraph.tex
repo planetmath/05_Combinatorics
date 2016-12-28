@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectedGraph}
+\pmcreated{2013-03-22 12:16:18}
+\pmmodified{2013-03-22 12:16:18}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{directed graph}
+\pmrecord{12}{31702}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C20}
+\pmsynonym{digraph}{DirectedGraph}
+\pmsynonym{in degree}{DirectedGraph}
+\pmsynonym{out degree}{DirectedGraph}
+\pmrelated{Graph}
+\pmrelated{VeblensTheorem}
+\pmrelated{GraphTheory}
+\pmdefines{in-degree}
+\pmdefines{out-degree}
+\pmdefines{directed spanning tree}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+\input xy
+\xyoption{all}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{directed graph} or \emph{digraph} is a pair $G=(V,E)$ where $V$ is a set of \emph{vertices} and $E$ is a subset of $V \times V$ called \emph{edges} or \emph{arcs}.
+
+If $E$ is symmetric (i.e., $(u,v) \in E$ if and only if $(v,u) \in E$), then the digraph is isomorphic to an ordinary (that is, undirected) graph.
+
+Digraphs are generally drawn in a similar manner to graphs with arrows on the edges to indicate a sense of direction.  For example, the digraph $$\left (\{a,b,c,d\}, \{(a,b),(b,d),(b,c),(c,b),(c,c),(c,d)\}\right )$$ may be drawn as
+
+$$\xymatrix{
+& a \ar[r] & b \ar[d] \ar[dl] \\
+& c \ar[ur] \ar[r] \ar@(dr,dl)[] & d \\
+& & \\
+}$$
+
+Since the graph is directed, one has the concept of the number of edges originating or terminating at a given vertex $v$. The out-degree, $d_{\textrm{out}}(v)$ of a vertex $v$ is the number of edges having $v$ as their originating vertex; similarly, the in-degree, $d_{\textrm{in}}(v)$ is the number of edges having $v$ as their terminating vertex.
+
+If the graph has a finite number of vertices, say $v_1,\ldots,v_n$, then obviously
+\[\sum_{i=1}^n d_{\textrm{in}}(v_i)=\sum_{i=1}^n d_{\textrm{out}}(v_i)\]
+
+A \emph{directed path} in a digraph $G$ is a sequence of edges $e_1,\ldots,e_k$ such that the end vertex of $e_i$ is the start vertex of $e_{i+1}$ for $i=1,2,\ldots,k-1$. Such a path is called a \emph{directed circuit} if, in addition, the end vertex of $e_k$ is the start vertex of $e_1$.
+
+A digraph is \emph{connected} (or, sometimes, \emph{strongly connected}) if for every pair of vertices $u$ and $v$ there is a directed path from $u$ to $v$. In addition, a digraph $G=(V,E)$ is said to have a \emph{root} $r\in V$ if every vertex $v\in V$ is reachable from $r$, i.e. if there is a directed path from $r$ to $v$.
+
+A digraph is called a \emph{directed tree} if it has a root and if the underlying (undirected) graph is a tree. That is, it must morphologically look like a tree, and the structure imposed by the directional arrows must flow ``away'' from the root.
+
+If $H$ is a subgraph of a digraph $G$, then $H$ is said to be a \emph{directed spanning tree} of $G$ if $H$ is a directed tree and $H$ contains all vertices of $G$. This is a direct analog of the concept of spanning trees for undirected graphs. Note that if $r$ is the root of $H$, then $r$ is clearly a root of $G$. Also, if $r$ is any root of $G$, it is possible to construct a directed spanning tree of $G$ with root $r$: construct $H$ edge by edge starting from $r$. At each vertex, add any edge from $G$ whose terminus is a vertex not yet in $H$. Since $r$ is a root of $G$, this process is guaranteed to include each vertex in $G$; since we are choosing at each step only vertices not yet visited, we are guaranteed to end up with a tree.
+%%%%%
+%%%%%
+\end{document}

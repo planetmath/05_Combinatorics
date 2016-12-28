@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AxiomaticProjectiveGeometry}
+\pmcreated{2013-03-22 19:14:19}
+\pmmodified{2013-03-22 19:14:19}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{axiomatic projective geometry}
+\pmrecord{15}{42163}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05B35}
+\pmclassification{msc}{06C10}
+\pmclassification{msc}{51A05}
+\pmrelated{ProjectiveGeometry}
+\pmrelated{ProjectiveSpace}
+\pmrelated{ProjectivePlane2}
+\pmdefines{Veblen's axiom}
+\pmdefines{order}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\PMlinkescapeword{projective geometry}
+\PMlinkescapeword{projective space}
+
+\subsubsection*{The Language and Axioms}
+
+The language of axiomatic projective geometry is a first-order language consisting of two sorts: point and line, and one binary predicate $I$ called ``incidence'' between points and lines.  There are various ways to call $I(p,L)$: point $p$ is incident with line $L$, $L$ is incident with $p$, $p$ lies on $L$, $p$ is on $L$, or $L$ passes through $p$.
+
+There are three axioms for projective geometry:
+
+\textbf{Axiom 1}.  For any two distinct points, there is exactly one line incident with the points.
+
+If $p,q$ are points, we write $pq$ or $qp$ for the line incident with $p$ and $q$.
+
+In order to state the next axiom, we define the concept of meet or intersection: two lines meet or intersect if there is a point incident with both lines, and that they are parallel if no such a point exists.
+
+\textbf{Axiom 2}. (Veblen's axiom) For any four pairwise distinct points $p,q,r,s$, if $pq$ meets $rs$, then $pr$ meets $qs$.
+
+A set of points is said to be collinear if there is a line incident with each of the points.  Axiom 2 can be equivalently stated as: if points $x,q,s$ are not collinear, and if $p\ne x$ is a point on $xq$, and $r\ne x$ is a point on $xs$, then $pr$ meets $qs$.
+
+\textbf{Axiom 3}. Each line is incident with at least three points.
+
+\subsubsection*{Models}
+
+A model of projective geometry is called a projective space.  It consists of a set $\mathcal{P}$ of points, a set $\mathcal{L}$ of lines, and a relation $I\subseteq \mathcal{P}\times \mathcal{L}$ such that the three axioms above are satisfied.  In other words, a projective space is an incidence structure satisfying the conditions stated by the axioms.  Here, lines and blocks are synonymous.  In addition, if two lines are incident with the identical set of points, this set must contain at least three points, and so by Axiom 1, the lines are identical.  In other words, any projective space is a simple incidence structure, and therefore any line may be identified with the set of points on it, which we will do for the remainder of the entry.
+
+$\varnothing$, a single point with no lines, a single line with at least three points, are all projective spaces.  A prototypical example of a projective space is $PG(V)$, where $V$ is a vector space over some division ring $k$.  The points and lines of $PG(V)$ are one- and two-dimensional subspaces and of $V$, respectively, and incidence is set inclusion.
+
+Axiom 3 is sometimes known as the non-degeneracy axiom.  With it, one can show that any two lines are equipolent in a projective space, and with this, the \emph{order} of a projective space may be defined: it is one less than the cardinality of a line in the space.
+
+Without Axiom 3, we would end up with projective spaces such that some lines containing fewer than three points.  These are either the degenerate cases where $I$ is such that all three axioms are satisfied vacuously (for example, a point and a line with no incidence relation at all, etc..), or structures that are disjoint union of spaces (satisfying all three axioms) such that pairs of points from different spaces lie on a line consisting of exactly the pair of points.
+
+\subsubsection*{Subspaces and Dimensions}
+
+What seems to be absent in the axioms of projective geometry is any mentioning of another fundamental notion: plane.  In fact, a plane can be defined using points, lines, and the incidence relation: a plane is the smallest set $P$ of points (in the projective space) such that there is a line $\ell \subseteq P$ and a point $p\in P$ not on $\ell$, such that $pq\subseteq P$ for any $q$ on $\ell$.  We may write $P=\langle p,\ell\rangle$, and say that $P$ is determined by $p$ and $\ell$.  It is not hard to see that any non-incident pair of a line and a point on $P$ determine $P$.  A plane in a projective space is also a model of a projective plane (but not all models of a projective plane are isomorphic!).
+
+More generally, we may define a subspace of a projective space as a set $X$ of points such that if $p,q\in X$, then $pq\subseteq X$.  Equivalently, a subspace of a projective space, viewed as an incidence structure, is an incidence substructure (with inherited incidence relation) that is also a projective space.  Given a projective space, the empty set is a subspace, and so is any point (properly a one-point set), as well as any line, and any plane.
+
+Dimensions can also be defined on subspaces of a projective space, recursively: $\varnothing$ has dimension $-1$, a point has dimension $0$, and if subspace $V$ has dimension $n$, then any subspace containing $V$ and any point not in $V$ has dimension $n+1$.  This process can go on, until the whole space itself is reached, in which case, we say the projective space is finite-dimensional.  Or, it can go on indefinitely, in which case we say that the space is infinite-dimensional.  But for an infinite dimensional projective space, what is its dimension, since there are different magnitudes of infinity.  Veblen has shown the following: 
+\begin{quote}
+any projective spaces of dimension $n>2$ (including infinite dimensional ones) is isomorphic to $PG(V)$ for some vector space $V$.
+\end{quote}
+Thus, we may instead define the dimension of a projective space to be $\operatorname{dim}(V)-1$, where the space is isomorphic to $PG(V)$.  This definition extends the recursive one given earlier.  This also shows that if a projective space is infinite dimensional, its dimension is the same as the dimension of the vector space that generates it.  A more direct way of defining dimension is to use the concept of independent spanning set of a projective space, similar to that found for vector spaces.
+
+\begin{thebibliography}{6}
+\bibitem{br} A. Beutelspacher, U. Rosenbaum {\it Projective Geometry, From Foundations to Applications}, Cambridge University Press (2000)
+\bibitem{vy} O. Veblen, J. W. Young {\it Projective Geometry, Volumes I \& II}, Ginn \& Co., Boston, MA (1916)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

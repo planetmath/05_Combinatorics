@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PlanarGraph}
+\pmcreated{2013-03-22 12:17:37}
+\pmmodified{2013-03-22 12:17:37}
+\pmowner{archibal}{4430}
+\pmmodifier{archibal}{4430}
+\pmtitle{planar graph}
+\pmrecord{12}{31826}
+\pmprivacy{1}
+\pmauthor{archibal}{4430}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C10}
+\pmsynonym{planar}{PlanarGraph}
+\pmrelated{WagnersTheorem}
+\pmrelated{KuratowskisTheorem}
+\pmrelated{CrossingLemma}
+\pmrelated{CrossingNumber}
+\pmrelated{FourColorConjecture}
+\pmdefines{plane graph}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%\usepackage{xypic}
+\xyoption{all}
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\PMlinkescapeword{divide}
+\PMlinkescapeword{map}
+\PMlinkescapeword{outer}
+\PMlinkescapeword{terms}
+
+\section*{Description}
+
+A \emph{planar graph} is a graph which can be drawn on a plane (a flat 2-d surface) or on a sphere, with no edges crossing. When drawn on a sphere, the edges divide its area in a number of regions called faces (or ``countries'', in the context of map coloring). When drawn on a plane, there is one \emph{outer country} taking up all the space outside the drawing. Every graph drawn on a sphere can be drawn on a plane (puncture the sphere in the interior of any one of the countries) and vice versa. Statements on map coloring are often simpler in terms of a spherical map because the outer country is no longer a special case.
+
+The number of faces (countries) equals $c+1$ where $c$ is the \emph{cyclomatic number}, $c=m-n+k$ (where $m$ is the number of edges, $n$ the number of vertices, and $k$ the number of connected components of the graph). All this holds equally for planar multigraphs and pseudographs.
+
+No complete graphs above $K_4$ are planar.  $K_4$, drawn without crossings, looks like :
+
+$$ 
+\xymatrix{
+  & A\ar@{-}[d] \ar@{-}[ddl] \ar@{-}[ddr] &    \\
+  & B\ar@{-}[dl] \ar@{-}[dr] &    \\
+C \ar@{-}[rr] &   & D } 
+$$
+
+Hence it is planar (try this for $K_5$.)
+
+A \PMlinkescapetext{straight line} drawing of a planar graph is a drawing in which each edge is drawn as a \PMlinkescapetext{straight} line segment. Every planar graph has a \PMlinkescapetext{straight line} drawing. This result was found independently by Wagner, F\'ary and Stein. Schnyder improved this further by showing how to draw any planar graph with $n$ vertices on an integer grid of $O(n^2)$ area.
+
+\section*{Definition}
+
+Ideally, this definition would just formalize what was described above.  It will not, exactly.  It will formalize the notion of a graph \emph{with an embedding into the plane}.
+
+\begin{defn}
+Let $M$ be a topological manifold.  Then a \emph{graph on $M$} is a pair $(G,\iota)$, where 
+\begin{enumerate}
+\item $G$ is a multigraph, 
+\item $\iota$ is a function from the graph topology of $G$ into $M$, and
+\item $\iota$ is a homeomorphism onto its image.
+\end{enumerate}
+A \emph{plane graph} is a graph on $\mathbb{R}^2$. 
+
+A \emph{planar graph} is a graph $G$ that has an embedding $\iota$ making $(G,\iota)$ into a plane graph.
+\end{defn}
+
+Normally, the only manifolds $M$ that are of interest are two-dimensional.  
+
+The most usual question for which this definition finds a use is ``can the following graph $G$ be made into a graph on $M$?''.  When $M$ is the plane, this is usually phrased as ``Is $G$ a planar graph?''.  Wagner's theorem provides a \PMlinkescapetext{simple} criterion for answering this question.  When $M$ is a torus, the answer changes: the complete bipartite graph $K_{3,3}$ can be made into a graph on the torus. 
+
+A graph on a manifold has a notion of ``face'' as well as the usual graph notions of vertex and edge.
+%%%%%
+%%%%%
+\end{document}

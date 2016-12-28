@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CriterionForANearlinearSpaceBeingALinearSpace}
+\pmcreated{2013-03-22 14:32:47}
+\pmmodified{2013-03-22 14:32:47}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{criterion for a near-linear space being a linear space}
+\pmrecord{9}{36094}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05B25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{groups}
+\PMlinkescapeword{group}
+\PMlinkescapeword{partition}
+
+{\bf Theorem}
+
+Suppose $\mathscr{S}$ is near-linear space with $v$ points and $b$ lines, and $s_i$ is the number of points in the $i$th line, for $i=1,\ldots, b$. Then
+\[
+\sum_{i=1}^b s_i(s_i-1) \leq v(v-1),
+\] 
+and equality holds if and only if $\mathscr{S}$ is a linear space.
+
+\paragraph{Proof}
+
+Let $N$ be the number of ordered pairs of points that are joined by a line. Clearly $N$ can be no more than $v(v-1)$, and $N=v(v-1)$ if and only if every pair of points are joined by a line. Since two points in a near-linear space are on at most one line, we can label each pair by the line to which the two points belong to. We thus have a partition of the $N$ pairs into $b$ groups, and each group is associated with a distinct line. The group corresponding to the line consisting of $s_i$ points contributes $s_i(s_i-1)$ to the total sum. Therefore
+\[
+ \sum_{i=1}^b s_i(s_i-1) = N \leq v(v-1).
+\]
+%%%%%
+%%%%%
+\end{document}

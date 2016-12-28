@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultiplicativeEncoding}
+\pmcreated{2013-03-22 17:43:43}
+\pmmodified{2013-03-22 17:43:43}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{multiplicative encoding}
+\pmrecord{5}{40176}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C38}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The {\em multiplicative encoding} of a finite sequence $a$ of positive integers $k$ long is the product of the first $k$ primes with the members of the sequence used as exponents, thus $$\prod_{i = 1}^k {p_i}^{a_i},$$ with $p_i$ being the $i$th prime number. For example, the fourth row of Pascal's triangle is 1, 3, 3, 1. The multiplicative encoding is $2^1 3^3 5^3 7^1 = 47250$.
+
+Encryption is not the purpose of multiplicative encoding, as the original sequence is easily retrieved \PMlinkescapetext{even} with trial division. However, there are applications in combinatorics. Neil Sloane, for example, encodes the most famous number triangles as multiplicative encodings of the rows in order. While the resulting sequence for Pascal's triangle does not consist of squarefree numbers (save the first two), it does contain only singly even numbers.
+
+Another use is in logic, such as Kurt G\"odel encoding a logical proposition as a single integer. As an example, Nagel and Newman convert $(\exists x)(x = sy)$ to the integer sequence 8, 4, 13, 9, 8, 13, 5, 7, 17, 9, and by multiplicative encoding to the single integer 172225505803959398742621651659678877886965404082311908389214945877004912002249920215937500000000.
+
+\begin{thebibliography}{2}
+\bibitem{en} Ernest Nagel \& James Newman, {\it G\"odel's Proof}. New York: New York University Press (2001): 75 - 76
+\bibitem{ns} Neil Sloane, {\it The Encyclopedia of Integer Sequences}. New York: Academic Press (1995): M1722
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

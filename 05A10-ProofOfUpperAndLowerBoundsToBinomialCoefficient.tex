@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfUpperAndLowerBoundsToBinomialCoefficient}
+\pmcreated{2013-03-22 13:49:06}
+\pmmodified{2013-03-22 13:49:06}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of upper and lower bounds to binomial coefficient}
+\pmrecord{12}{34546}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $2 \le k \le n$ be natural numbers. We'll first prove the
+inequality
+\begin{equation*}
+{n \choose k} \le \left(\frac{ne}{k}\right)^k.
+\end{equation*}
+We rewrite ${n \choose k}$ as
+\begin{eqnarray*}
+{n \choose k} &=& \frac{n (n-1)\cdots (n-k+1)}{k!} \\
+&=& \left(1 -\frac{1}{n}\right)\cdots \left(1
+-\frac{k-1}{n}\right)\cdot \frac{n^k}{k!}
+\end{eqnarray*}
+Since each of the parenthesized factors lies between $0$ and $1$, we have
+\begin{equation*}
+{n \choose k} < \frac{n^k}{k!}
+\end{equation*}
+Since all the terms of the series $e^k = \sum_{n=0}^{\infty} k^n / n!$ are positive when $k$ is a positive real number, each term must be smaller than the whole sum; in particular, this implies that, for any non-negative integer $k$, we have $e^k > k^k / k!$.  Rearranging this slightly,
+\begin{equation*}
+1 < \frac{k! e^k}{k^k}
+\end{equation*}
+Multiplying this inequality by the previous inequality for the binomial coefficient yields
+ \begin{equation*}
+{n \choose k} < \frac{n^k}{k!} \cdot \frac{k! e^k}{k^k} = 
+\left( \frac{ne}{k} \right)^k
+\end{equation*}
+
+To conclude the proof we show that
+\begin{equation}
+\label{eq:1}
+\prod_{i=1}^{n-1} \left(1
++\frac{1}{i}\right)^i=\frac{n^n}{n!}\;\forall\;n \ge 2 \in
+\mathbb{N}.
+\end{equation}
+\begin{eqnarray*}
+\prod_{i=1}^{n-1} \left(1+\frac{1}{i}\right)^i&=&\prod_{i=1}^{n-1}
+\frac{(i+1)^i}{i^i} \\
+&=&\frac{\prod\limits_{i=2}^n i^{i-1}}{\left(\prod\limits_{i=1}^{n-1}
+i^{i-1}\right)\cdot (n-1)!}
+\end{eqnarray*}
+Since each left-hand factor in (\ref{eq:1}) is $<e$, we have
+$\frac{n^n}{n!} <e^{n-1}$.
+Since $n-i<n\;\forall\;1 \le i \le k-1$, we immediately get
+\begin{eqnarray*}
+{n \choose k}&=&\frac{\prod\limits_{i=2}^{k-1}
+\left(1-\frac{1}{i}\right)}{k!} <\frac{n^k}{k!}.
+\end{eqnarray*}
+And from
+\begin{eqnarray*}
+k \le n&\Leftrightarrow&(n-i)\cdot k \ge (k-i)\cdot n\;\forall \;1\le
+i\le k-1
+\end{eqnarray*}
+we obtain
+\begin{eqnarray*}
+{n \choose k}&=&\frac{n}{k}\cdot \prod\limits_{i=1}^{k-1}
+\frac{n-i}{k-i} \\ 
+&\ge \left(\frac{n}{k}\right)^k.
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

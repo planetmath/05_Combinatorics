@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Derangement}
+\pmcreated{2013-03-22 16:05:04}
+\pmmodified{2013-03-22 16:05:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{derangement}
+\pmrecord{7}{38144}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A15}
+\pmclassification{msc}{05A05}
+\pmclassification{msc}{60C05}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $S_n$ be the symmetric group of order $n\ge 1$.  A permutation $\phi\in S_n$ without a fixed point (that is, $\phi(i)\neq i$ for any $i\in\lbrace 1,\ldots, n\rbrace$) is called a \emph{derangement}.  
+
+In combinatorial theory, one is usually interested in the number $d(n)$ of derangements in $S_n$.  It is clear that $d(1)=0,d(2)=1$, and $d(3)=2$.  It is also not difficult to calculate $d(n)$ for small $n$.  For general $n$, one can appeal to the principle of inclusion-exclusion.  Let $A_i$ denote the collection of permutations that fix $i$.  Then the collection of $A$ of derangments in $S_n$ is just the complement of $$A_1\cup A_2\cup \cdots \cup A_n$$
+in $S_n$.  Let $C=\lbrace A_1,\ldots,A_n\rbrace$ and $I_k$ be the $k$-fold intersection of members of $C$ (that is, each member of $I_k$ has the form $A_{j_1}\cap \cdots \cap A_{j_k}$).  We can interpret a member of $I_k$ as a set of permutations that fix $k$ elements from $\lbrace 1,\dots, n\rbrace$.  The cardinality of each of these members is $(n-k)!$.  Furthermore, there are $n\choose k$ members in $I_k$.  Then,
+
+\begin{eqnarray*}
+d(n)&=& |A| = |S_n|-|A_1\cup \cdots \cup A_k\cup\cdots \cup A_n| \\
+&=& n!-\Big[\sum_{S\in I_1}|S|-\cdots+(-1)^k\sum_{S\in I_k}|S|+\cdots+(-1)^n\sum_{S\in I_n}|S|\Big] \\
+&=& n!-\Big[{n\choose 1}(n-1)!-\cdots+(-1)^k {n\choose k} (n-k)!+\cdots+(-1)^n {n\choose n} (n-n)!\Big] \\
+&=& n!-\Big[ \frac{n!}{1!}-\cdots +(-1)^k\frac{n!}{k!}+\cdots  +(-1)^n\frac{n!}{n!}\Big] \\
+&=& n!\sum_{k=0}^{n}\frac{(-1)^k}{k!}
+\end{eqnarray*}
+
+With this equation, one can easily derive the recurrence relation
+$$d(n)=nd(n-1)+(-1)^n.$$
+Apply this formula twice, we are led to another recurrence relation
+$$d(n)=(n-1)\big[d(n-1)+d(n-2)\big].$$
+
+\textbf{Application}.  A group of $n$ men arrive at a party and check their hats.  Upon departure, the hat-checker, being forgetful, randomly (meaning that the distribution of picking any hat out of all possible hats is a uniform distribution) hands back a hat to each man.  What is the probability $p(n)$ that no man receives his own hat?  Does this probability go to $0$ as $n$ gets larger and larger?
+
+Answer: According to the above calculation, $$p(n)=\frac{d(n)}{n!}=\sum_{k=0}^{n}\frac{(-1)^k}{k!}.$$  Therefore, $$\lim_{n\to\infty}p(n)=\frac{1}{e}\approx 0.368.$$
+%%%%%
+%%%%%
+\end{document}

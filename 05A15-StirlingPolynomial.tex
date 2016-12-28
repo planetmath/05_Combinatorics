@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StirlingPolynomial}
+\pmcreated{2013-03-22 15:38:36}
+\pmmodified{2013-03-22 15:38:36}
+\pmowner{kronos}{12218}
+\pmmodifier{kronos}{12218}
+\pmtitle{Stirling polynomial}
+\pmrecord{9}{37575}
+\pmprivacy{1}
+\pmauthor{kronos}{12218}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A15}
+%\pmkeywords{Stirling}
+%\pmkeywords{Bernoulli}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\emph{Stirling's polynomials}  $S_k(x)$ are defined by the generating function $$\left( {t \over {1-e^{-t}}} \right) ^{x+1}= \sum_{k=0} {S_k(x) \over k!} t^k.$$
+
+The sequence $S_k(x-1)$ is of binomial type, since $S_k(x+y-1)= \sum_{i=0}^k {k \choose i} S_i(x-1) S_{k-i}(y-1)$. Moreover, this basic recursion holds: $S_k(x)= (x-k) {S_k(x-1) \over x} + k S_{k-1}(x+1)$. 
+
+These are the first polynomials:
+\begin{enumerate}
+ \item $S_0(x)=1$;
+ \item $S_1(x)= {1 \over 2}(x+1)$;
+ \item $S_2(x)= {1 \over 12} (3 x^2 + 5x+ 2)$;
+ \item $S_3(x)= {1 \over 8} (x^3+2 x^2+x)$;
+ \item $S_4(x)= {1 \over 240} (15 x^4+ 30 x^3+5 x^2- 18x-8)$.
+\end{enumerate}
+
+In addition we have these special values:
+\begin{enumerate}
+ \item $S_k(-m)= {(-1)^k \over {k+m-1 \choose k}} S_{k+m-1,m-1}$, where $S_{m,n}$ denotes Stirling numbers of the second kind. Conversely, $S_{n,m}=(-1)^{n-m} {n \choose m} S_{n-m}(-m-1)$;
+ \item $S_k(-1)= \delta_{k,0}$;
+ \item $S_k(0)= (-1)^k B_k$, where $B_k$ are Bernoulli's numbers;
+ \item $S_k(1)= (-1)^{k+1} ((k-1) B_k+ k B_{k-1})$;
+ \item $S_k(2)= {(-1)^{k}\over 2} ((k-1)(k-2) B_k+ 3 k(k-2) B_{k-1}+ 2 k(k-1) B_{k-2})$;
+ \item $S_k(k)= k!$;
+ \item $S_k(m)= {(-1)^k \over {m \choose k}} s_{m+1, m+1-k}$, where $s_{m,n}$ are Stirling numbers of the first kind. They may be recovered by $s_{n,m}= (-1)^{n-m} {n-1 \choose n-m} S_{n-m}(n-1)$.
+\end{enumerate}
+
+
+Explicit representations involving Stirling numbers can be deduced with Lagrange's interpolation formula: $$S_k(x)= \sum_{n=0}^k (-1)^{k-n} S_{k+n,n} {{x+n \choose n} {x+k+1 \choose k-n} \over {k+n \choose n}} = \sum_{n=0}^k (-1)^n s_{k+n+1,n+1} {{x-k \choose n} {x-k-n-1 \choose k-n} \over {k+n \choose k}}.$$
+
+These following formulae hold as well:
+$${k+m \choose k} S_k(x-m)= \sum_{i=0}^k (-1)^{k-i} {k+m \choose i} S_{k-i+m,m} S_i(x),$$
+$${k-m \choose k} S_k(x+m)= \sum_{i=0}^k {k-m \choose i} s_{m,m-k+i} S_i(x).$$
+%%%%%
+%%%%%
+\end{document}

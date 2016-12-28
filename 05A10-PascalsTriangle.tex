@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PascalsTriangle}
+\pmcreated{2013-03-22 13:36:56}
+\pmmodified{2013-03-22 13:36:56}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Pascal's triangle}
+\pmrecord{9}{34248}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmsynonym{Tartaglia's triangle}{PascalsTriangle}
+\pmrelated{BinomialCoefficient}
+\pmrelated{PascalsRule}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\emph{Pascal's triangle}, also called \emph{Tartaglia's triangle}, is the following configuration of numbers:
+
+\[
+\begin{array}{cccccccccccccccccc}
+&   &   &   &   &   &   &   &   & 1 &   &   &   &   &   &   &   &\\ 
+&   &   &   &   &   &   &   & 1 &   & 1 &   &   &   &   &   &   &\\ 
+&   &   &   &   &   &   & 1 &   & 2 &   & 1 &   &   &   &   &   &\\ 
+&   &   &   &   &   & 1 &   & 3 &   & 3 &   & 1 &   &   &   &   &\\ 
+&   &   &   &   & 1 &   & 4 &   & 6 &   & 4 &   & 1 &   &   &   &\\ 
+&   &   &   & 1 &   & 5 &   &10 &   &10 &   & 5 &   & 1 &   &   &\\ 
+&   &   & 1 &   & 6 &   &15 &   & 20&   &15 &   & 6 &   & 1 &   &\\ 
+&   & 1 &   & 7 &   &21 &   &35 &   &35 &   &21 &   & 7 &   & 1 &\\ 
+&  & & & &\vdots & &   &  & \vdots & & & &  \vdots&  & & & \\ 
+ \end{array}
+\]
+
+In general, this triangle is constructed such that entries 
+on the left side and right side 
+are $1$, and every entry inside the triangle is obtained by 
+adding the two entries immediately above it. For instance,
+on the fourth row $4=1+3$.
+
+Historically, the application of this triangle has been to give 
+the coefficients when expanding binomial expressions. For instance,
+to expand $(a+b)^4$, one simply look up the 
+coefficients on the fourth row, and write
+$$(a+b)^4 = a^4 + 4 a^3 b + 6 a^2 b^2 + 4 a b^3 + b^4.$$
+
+Pascal's triangle is named after the French mathematician
+Blaise Pascal (1623-1662) \cite{wikipascal}. 
+However, this triangle was known at least 
+around 1100 AD in China; five centuries before Pascal
+\cite{wikibinom}. In modern language, the expansion 
+of the binomial is given by 
+the binomial theorem discovered by Isaac Newton 
+in 1665 \cite{wikinewton}: For any $n=1,2,\ldots$ and real numbers $a,b$, we 
+have 
+\begin{eqnarray*}
+(a+b)^n &=& \sum_{k=0}^n \binom{n}{k} a^{n-k}b^k \\
+ &=& a^n + \binom{n}{1} a^{n-1}b + \binom{n}{2} a^{n-2}b^2 + \cdots + b^n. 
+\end{eqnarray*}
+Thus, in Pascal's triangle, the entries on the $n$th row are given by
+the binomial coefficients 
+$$\binom{n}{k}=\frac{n!}{(n-k)!k!}.$$
+for $k=1,\ldots, n$. 
+
+Pascal's triangle has many interesting numerical properties. For example, it is easy to see that the sum of the entries in the $n^{\mathrm{th}}$ row is $2^n$. This can be easily proved by induction, but a more elegant proof goes as follows:
+\[2^n=(1+1)^n=\sum_{k=0}^n \binom{n}{k} 1^{n-k}1^k=\sum_{k=0}^n \binom{n}{k} \]
+
+If you look at the long diagonals parallel to the diagonal sides of the triangle, you see in the second diagonal the integers $1,2,3,4,\ldots$. The next diagonal down contains the triangular numbers $1,3,6,10,15,\ldots$, and the row below that the tetrahedral number $1,4,10,20,35,\ldots$. It is easy to see why this is: for example, each triangular number is the sum of the previous triangular number and the next integer, which precisely reflects the arrangement of the triangle. Each tetrahedral number is the sum of the previous tetrahedral number and the size of the next ``layer'' of the tetrahedron, which is just the next triangular number. Similarly, succeeding diagonals give ``triangular'' number in higher dimensions.
+
+\begin{thebibliography}{9}
+ \bibitem {wikibinom} Wikipedia's \PMlinkexternal{entry on the binomial coefficients}{http://www.wikipedia.org/wiki/Binomial_coefficient}
+ \bibitem {wikinewton} Wikipedia's \PMlinkexternal{entry on Isaac Newton}{http://www.wikipedia.org/wiki/Isaac_Newton}
+ \bibitem {wikipascal} Wikipedia's \PMlinkexternal{entry on Blaise Pascal}{http://www.wikipedia.org/wiki/Blaise_Pascal}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

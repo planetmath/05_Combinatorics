@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompleteBipartiteGraph}
+\pmcreated{2013-03-22 12:17:13}
+\pmmodified{2013-03-22 12:17:13}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{complete bipartite graph}
+\pmrecord{7}{31784}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%%\usepackage{xypic}
+\begin{document}
+The \emph{complete bipartite graph} $K_{n,m}$ is a graph with two sets of vertices, one with $n$ members and one with $m$, such that each vertex in one set is adjacent to every vertex in the other set and to no vertex in its own set.  As the name implies, $K_{n,m}$ is bipartite.
+
+Examples of complete bipartite graphs:
+
+$K_{2,5}$:
+
+$$\xymatrix{
+  & C \\
+A \ar@{-}[ur] \ar@{-}[r] \ar@{-}[dr] \ar@{-}[ddr] \ar@{-}[dddr] & D \\
+  & E \\
+B \ar@{-}[uuur] \ar@{-}[uur] \ar@{-}[ur] \ar@{-}[r] \ar@{-}[dr] & F \\
+  & G
+}$$
+
+$K_{3,3}$:
+
+$$\xymatrix{
+A \ar@{-}[r] \ar@{-}[dr] \ar@{-}[ddr] & D \\
+B \ar@{-}[ur] \ar@{-}[r] \ar@{-}[dr] & E \\
+C \ar@{-}[uur] \ar@{-}[ur] \ar@{-}[r] & F 
+}$$
+%%%%%
+%%%%%
+\end{document}

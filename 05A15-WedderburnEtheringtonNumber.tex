@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WedderburnEtheringtonNumber}
+\pmcreated{2013-03-22 16:49:32}
+\pmmodified{2013-03-22 16:49:32}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Wedderburn-Etherington number}
+\pmrecord{6}{39064}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A15}
+\pmsynonym{Wedderburn Etherington number}{WedderburnEtheringtonNumber}
+\pmsynonym{Etherington-Wedderburn number}{WedderburnEtheringtonNumber}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The $n$th {\em Wedderburn-Etherington number} counts how many weakly binary trees can be constructed such that each graph vertex (not counting the root vertex) is adjacent to no more than three other such vertices, for a given number $n$ of nodes. The first few Wedderburn-Etherington numbers are 1, 1, 1, 2, 3, 6, 11, 23, 46, 98, 207, 451, 983, etc. listed in A001190 of Sloane's  OEIS. Michael Somos gives the following recurrence relations:
+
+$$a_{2n} = \frac{1}{2} a_n a_{n + 1} + \sum_{i = 1}^n a_i a_{2n - i}$$
+
+and
+
+$$a_{2n - 1} = \sum_{i = 0}^{n - 1} a_{i + 1} a_{2n - i}$$
+
+with $a_1 = a_2 = 1$ in both relations.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LeibnizHarmonicTriangle}
+\pmcreated{2013-03-22 16:47:21}
+\pmmodified{2013-03-22 16:47:21}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Leibniz harmonic triangle}
+\pmrecord{5}{39022}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmsynonym{Leibniz' harmonic triangle}{LeibnizHarmonicTriangle}
+\pmsynonym{Leibniz's harmonic triangle}{LeibnizHarmonicTriangle}
+\pmsynonym{Leibniz'z harmonic triangle}{LeibnizHarmonicTriangle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The {\em Leibniz harmonic triangle} is a triangular arrangement of fractions in which the outermost diagonals consist of the reciprocals of the row numbers and each inner cell is the absolute value of the cell above minus the cell to the left. To put it algebraically, $L(r, 1) = \frac{1}{n}$ (where $r$ is the number of the row, starting from 1, and $c$ is the column number, never more than $r$) and $L(r, c) = L(r - 1, c - 1) - L(r, c - 1)$.
+
+The first eight rows are:
+
+$$\begin{array}{cccccccccccccccccc}
+& & & & & & & & & 1 & & & & & & & &\\
+& & & & & & & & \frac{1}{2} & & \frac{1}{2} & & & & & & &\\
+& & & & & & & \frac{1}{3} & & \frac{1}{6} & & \frac{1}{3} & & & & & &\\
+& & & & & & \frac{1}{4} & & \frac{1}{12} & & \frac{1}{12} & & \frac{1}{4} & & & & &\\
+& & & & & \frac{1}{5} & & \frac{1}{20} & & \frac{1}{30} & & \frac{1}{20} & & \frac{1}{5} & & & &\\
+& & & & \frac{1}{6} & & \frac{1}{30} & & \frac{1}{60} & & \frac{1}{60} & & \frac{1}{30} & & \frac{1}{6} & & &\\
+& & & \frac{1}{7} & & \frac{1}{42} & & \frac{1}{105} & & \frac{1}{140} & & \frac{1}{105} & & \frac{1}{42} & & \frac{1}{7} & &\\
+& & \frac{1}{8} & & \frac{1}{56} & & \frac{1}{168} & & \frac{1}{280} & & \frac{1}{280} & & \frac{1}{168} & & \frac{1}{56} & & \frac{1}{8} &\\
+& & & & &\vdots & & & & \vdots & & & & \vdots& & & & \\
+\end{array}$$
+
+The denominators are listed in A003506 of Sloane's OEIS, while the numerators, which are all 1s, are listed in A000012. The denominators of the second outermost diagonal are oblong numbers. The sum of the denominators in the $n$th row is $n2^{n - 1}$.
+
+Just as Pascal's triangle can be computed by using binomial coefficients, so can Leibniz's: $$L(r, c) = \frac{1}{c {r \choose c}}$$.
+
+This triangle can be used to obtain examples for the \PMlinkname{Erd\H{o}s-Straus conjecture}{ErdHosStrausConjecture} when $4|n$.
+
+\begin{thebibliography}{2}
+\bibitem{aa} A. Ayoub, ``The Harmonic Triangle and the Beta Function'' {\it Math. Magazine} {\bf 60} 4 (1987): 223 - 225
+\bibitem{dd} D. Darling, ``Leibniz' harmonic triangle'' in {\it The Universal Book of Mathematics: From Abracadabra To Zeno's paradoxes}. Hoboken, New Jersey: Wiley (2004) 
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

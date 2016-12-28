@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IncidenceMatrixWithRespectToAnOrientation}
+\pmcreated{2013-05-16 21:09:13}
+\pmmodified{2013-05-16 21:09:13}
+\pmowner{Mathprof}{13753}
+\pmmodifier{unlord}{1}
+\pmtitle{incidence matrix with respect to an orientation}
+\pmrecord{7}{39382}
+\pmprivacy{1}
+\pmauthor{Mathprof}{1}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C50}
+\pmdefines{orientation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $G$ be a finite graph with $n$ vertices, $\{v_1, \ldots, v_n\}$
+and $m$ edges, $\{e_1, \ldots, e_m\}$. 
+For each edge $e = (v_i,v_j)$ of $G$ choose one vertex
+to be the positive end and the other to be the negative end. In this way,
+we assign an \emph{orientation} to $G$. The \emph{\PMlinkescapetext{incidence matrix}}
+of $G$ with respect an orientation is an $n \times m$ matrix 
+$D=(d_{ij})$
+where
+\begin{displaymath}
+d_{ij} = \left\{ \begin{array}{ll}
++1 & \textrm{if $v_i$ is the positive end of $e_j$} \\
+-1 & \textrm{if $v_i$ is the negative end of $e_j$} \\
+0 & \textrm{otherwise}.
+\end{array} \right.
+\end{displaymath}
+
+%%%%%
+%%%%% rerender
+\end{document}

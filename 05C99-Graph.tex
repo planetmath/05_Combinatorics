@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Graph}
+\pmcreated{2013-03-22 11:57:54}
+\pmmodified{2013-03-22 11:57:54}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{graph}
+\pmrecord{34}{30777}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C99}
+%\pmkeywords{multigraph}
+%\pmkeywords{digraph}
+%\pmkeywords{pseudograph}
+%\pmkeywords{tree}
+\pmrelated{LoopOfAGraph}
+\pmrelated{NeighborhoodOfAVertex}
+\pmrelated{EulersPolyhedronTheorem}
+\pmrelated{Digraph}
+\pmrelated{Tree}
+\pmrelated{SpanningTree}
+\pmrelated{ConnectedGraph}
+\pmrelated{Cycle}
+\pmrelated{GraphTheory}
+\pmrelated{GraphTopology}
+\pmrelated{Subgraph}
+\pmrelated{SimplePath}
+\pmrelated{EulerPath}
+\pmrelated{Diameter3}
+\pmrelated{DistanceInAGraph}
+\pmrelated{GraphHomomorphism}
+\pmrelated{Pseudograph}
+\pmrelated{Multigraph}
+\pmrelated{OrderOf}
+\pmdefines{edge}
+\pmdefines{vertex}
+\pmdefines{endvertex}
+\pmdefines{adjacent}
+\pmdefines{incident}
+\pmdefines{join}
+\pmdefines{vertices}
+\pmdefines{simple graph}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{graph} $G$ is an ordered pair of disjoint sets $(V, E)$ such that $E$ is a subset of the set $V^{(2)}$ of unordered pairs of $V$. $V$ and $E$ are always assumed to be finite, unless explicitly stated otherwise. The set $V$ is the set of \emph{vertices} (sometimes called nodes) and $E$ is the set of \emph{edges}. If $G$ is a graph, then $V = V(G)$ is the vertex set of $G$, and $E = E(G)$ is the edge set.
+Typically, $V(G)$ is defined to be nonempty. If $x$ is a vertex of $G$, we sometimes write $x \in G$ instead of $x \in V(G)$.
+
+An edge $\{x, y\}$ (with $x\neq y$) is said to \emph{join} the vertices $x$ and $y$ and is denoted by $xy$. One says that the edges $xy$ and $yx$ are \emph{equivalent}; the vertices $x$ and $y$ are the \emph{endvertices} of this edge. If $xy \in E(G)$, then $x$ and $y$ are \emph{adjacent}, or \emph{neighboring}, vertices of $G$, and the vertices $x$ and $y$ are \emph{incident} with the edge $xy$. Two edges are \emph{adjacent} if they have at least one common endvertex. Also, $x \sim y$ means that the vertex $x$ is adjacent to the vertex $y$.
+
+Notice that this definition allows pairs of the form $\{x,x\}$, which would correspond to a node joining to itself.  Some authors explicitly disallow this in their definition of a graph.
+
+\begin{center}
+\includegraphics{grapha.eps} \qquad \qquad
+\includegraphics{graphb.eps} \qquad \qquad
+\includegraphics{graphc.eps} \\
+Some graphs.
+\end{center}
+
+Note:  Some authors include multigraphs in their definition of a graph.  In this notation, the above definition corresponds to that of a \emph{simple graph}.  A graph is then \emph{simple} if there is at most one edge joining each pair of nodes.
+
+\footnotesize{Adapted with permission of the author from \emph{\PMlinkescapetext{Modern Graph Theory}} by B\'{e}la Bollob\'{a}s, published by Springer-Verlag New York, Inc., 1998.}
+%%%%%
+%%%%%
+%%%%%
+\end{document}

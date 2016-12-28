@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternatingFactorial}
+\pmcreated{2013-03-22 16:19:59}
+\pmmodified{2013-03-22 16:19:59}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{alternating factorial}
+\pmrecord{7}{38463}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{alternating factorial} $af(n)$ of a positive integer $n$ is the sum $$af(n) = \sum_{i = 1}^n (-1)^{n - i}i!,$$ which can also be expressed with the recurrence relation $af(n) = n! - af(n - 1)$ with starting condition $af(1) = 1$. The notation nÂ¡! (alternating an inverted exclamation mark with a regular exclamation mark) has been proposed by analogy to that of the double factorial, but has not gained much support, in part because of TeX's lack of support for Spanish characters.
+
+The first few alternating factorials, listed in A005165 of Sloane's OEIS, are 1, 5, 19, 101, 619, 4421.
+
+In 1999, Miodrag Zivkovi\'c proved that $\gcd(n, af(n)) = 1$ and that the set of alternating factorials that are prime numbers is finite. $af(661)$ is the largest such known prime.
+%%%%%
+%%%%%
+\end{document}

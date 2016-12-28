@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HallsMarriageTheoremProofOf}
+\pmcreated{2013-03-22 12:45:12}
+\pmmodified{2013-03-22 12:45:12}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{Hall's marriage theorem, proof of}
+\pmrecord{10}{33059}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05D15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+\newcommand{\size}[1]{\left|#1\right|}
+\begin{document}
+We prove Hall's marriage theorem by induction on $\size{S}$, the size of $S$.  
+
+The theorem is trivially true for $|S|=0$.
+
+Assuming the theorem true for all $\size{S}<n$, we prove it for $\size{S}=n$.
+
+\newcommand{\x}[1]{#1\setminus\{x\}}
+First suppose that we have the stronger condition 
+$$
+\size{\cup T} \ge \size{T}+1
+$$
+for all $\emptyset \ne T \subset S$.  Pick any $x\in S_n$ as the representative of $S_n$; we must choose an SDR from
+$$
+S' = \left\{\x{S_1},\ldots,\x{S_{n-1}}\right\}.
+$$
+But if
+$$
+\{\x{S_{j_1}},...,\x{S_{j_k}}\} = T'\subseteq S'
+$$
+then, by our assumption,
+$$
+\size{\cup T'} \ge \size{\cup_{i=1}^{k} S_{j_i}}-1 \ge k.
+$$
+By the already-proven case of the theorem for $S'$ we see that we can indeed pick an SDR for $S'$.
+
+Otherwise, for some
+$\emptyset\ne T \subset S$ we have the ``exact'' size
+$$
+\size{\cup T}=\size{T}.
+$$
+Inside $T$ itself, for any $T'\subseteq T\subset S$ we have
+$$
+\size{\cup T'}\ge\size{T'},
+$$
+so by an already-proven case of the theorem we can pick an SDR for $T$.
+
+It remains to pick an SDR for $S\setminus T$ which avoids all elements of $\cup T$ (these elements are in the SDR for $T$).
+To use the already-proven case of the theorem (again) and do this, we must show that for any $T'\subseteq S\setminus T$, even after discarding elements of $\cup T$ there remain enough elements in $\cup T'$: we must prove
+$$
+\size{\cup T' \setminus \cup T} \ge \size{T'}.
+$$
+
+But
+\begin{eqnarray}
+\size{\cup T' \setminus \cup T} &= \size{\bigcup(T\cup T')} -
+\size{\cup T} \ge\\
+&\ge \size{T\cup T'} - \size{T} =\\
+&= \size{T} + \size{T'} - \size{T} = \size{T'},
+\end{eqnarray}
+using the disjointness of $T$ and $T'$.  So by an already-proven case of the theorem, $S\setminus T$ does indeed have an SDR which avoids all elements of $\cup T$.
+
+This \PMlinkescapetext{completes} the proof.
+%%%%%
+%%%%%
+\end{document}

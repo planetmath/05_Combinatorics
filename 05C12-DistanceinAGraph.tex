@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DistanceinAGraph}
+\pmcreated{2013-03-22 12:31:32}
+\pmmodified{2013-03-22 12:31:32}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{distance (in a graph)}
+\pmrecord{11}{32765}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C12}
+\pmsynonym{distance}{DistanceinAGraph}
+\pmrelated{Graph}
+\pmrelated{Path}
+\pmrelated{Diameter3}
+\pmrelated{PathConnected}
+\pmdefines{diameter (of a graph)}
+\pmdefines{radius (of a graph)}
+\pmdefines{central vertex}
+
+% This is Cosmin's preamble.
+
+% Packages
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+  \usepackage{amsfonts}
+  \usepackage{amsthm}
+  \usepackage{mathrsfs}
+  %\usepackage{graphicx}
+  %%%\usepackage{xypic}
+  %\usepackage{babel}
+
+% Theorem Environments
+  \newtheorem*{thm}{Theorem}
+  \newtheorem{thmn}{Theorem}
+  \newtheorem*{lem}{Lemma}
+  \newtheorem{lemn}{Lemma}
+  \newtheorem*{cor}{Corollary}
+  \newtheorem{corn}{Corollary}
+  \newtheorem*{prop}{Proposition}
+  \newtheorem{propn}{Proposition}
+
+  \newcommand{\bbN}[1]{\mathbb{#1}}
+  \DeclareMathOperator{\diam}{diam}
+  \DeclareMathOperator{\rad}{rad}
+
+  % Other Commands
+    \renewcommand{\geq}{\geqslant}
+    \renewcommand{\leq}{\leqslant}
+    \newcommand{\vect}[1]{\boldsymbol{#1}}
+    \newcommand{\mat}[1]{\mathsf{#1}}
+    \renewcommand{\div}{\!\mid\!}
+\begin{document}
+The \emph{distance} $d(x,y)$ of two vertices $x$ and $y$ of a graph $G$ is the length of the shortest path (or, equivalently, walk) from $x$ to $y$. If there is no path from $x$ to $y$ (i.e. if they lie in different components of G), we set $d(x,y) := \infty.$ 
+
+Two basic graph invariants involving distance are the \emph{diameter} $\diam G := \max_{(x,y)\in V(G)^2} d(x,y)$ (the maximum distance between two vertices of $G$) and the \emph{radius} $\rad G := \min_{x\in V(G)} \max_{y\in V(G)} d(x,y)$ (the maximum distance of a vertex from a \emph{central} vertex of $G$, i.e. a vertex such that the maximum distance to another vertex is minimal).
+%%%%%
+%%%%%
+\end{document}

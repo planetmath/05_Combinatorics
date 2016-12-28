@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocallyFiniteGraph}
+\pmcreated{2013-03-22 16:00:51}
+\pmmodified{2013-03-22 16:00:51}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{locally finite graph}
+\pmrecord{19}{38049}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C99}
+\pmrelated{UniformlyLocallyFiniteGraph}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage[dvips,all]{xypic}
+
+\begin{document}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{infinite}
+\PMlinkescapeword{length}
+\PMlinkescapeword{lines}
+\PMlinkescapeword{point}
+\PMlinkescapeword{similar}
+\PMlinkescapeword{unit}
+\PMlinkescapephrase{locally finite}
+
+A \emph{locally finite graph} is a graph in which every vertex has \PMlinkname{finite}{Finite} degree.
+Note that any finite graph is locally finite;
+however, infinite graphs can also be locally finite.
+For example, consider the graph given by $\mathbb{Z}^{2}$,
+where the points are the vertices and the line segments of unit length that connect vertices are edges:
+\[
+\xymatrix{
+& \vdots \ar@{-}[d] & \vdots \ar@{-}[d] &  \\
+\dots \ar@{-}[r] & \cdot \ar@{-}[r] \ar@{-}[d] & \cdot \ar@{-}[d] \ar@{-}[r] & \dots \\
+\dots \ar@{-}[r] & \cdot \ar@{-}[r] \ar@{-}[d] & \cdot \ar@{-}[r] \ar@{-}[d] & \dots \\ & \vdots & \vdots }
+\]
+
+Note that every vertex has degree $4$ but that this is an infinite graph.
+
+The $k$-\PMlinkname{regular}{RegularGraph} trees
+form another class of examples of locally finite graphs.
+A picture of a $2$-regular tree is given below
+
+\[
+\xymatrix{
+& & & \cdot \\
+& & \cdot \ar@{--}[ur] &  \\
+& \cdot \ar@{-}[ur] & & \\
+\cdot \ar@{-}[ur] \ar@{-}[dr] & & & \\
+& \cdot \ar@{-}[dr] & & \\
+& & \cdot \ar@{--}[dr] & \\
+& & & \cdot }
+\]
+
+The solid unit length dashed are edges while the dots are vertices and the dashed lines are meant to denote continuation.
+For a similar reason this is a locally finite graph.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneratingFunctionForTheCatalanNumbers}
+\pmcreated{2013-03-22 17:38:47}
+\pmmodified{2013-03-22 17:38:47}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{generating function for the Catalan numbers}
+\pmrecord{9}{40069}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmrelated{DyckLanguage}
+\pmdefines{Dyck paths}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[all]{xy}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{decide}
+\PMlinkescapeword{observation}
+\PMlinkescapeword{length}
+This article derives the formula
+\[\sum C_nx^n=\frac{1-\sqrt{1-4x}}{2x}\]
+for the generating function for the Catalan numbers, given in the \PMlinkname{parent}{CatalanNumbers} article, in two different ways.
+
+A \emph{Dyck path} is a lattice path in the Euclidean plane from $(0,0)$ to $(2n,0)$ whose steps are either $(1,1)$ or $(1,-1)$, i.e. either upwards diagonals or downwards diagonals, and which never goes below the $x$-axis. Here are two Dyck paths:
+\[
+\mbox{\xy <0cm,.6cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+&&\bullet \ar@{-}[ld] \ar@{-}[rd]\\
+&\bullet \ar@{-}[ld] && \bullet \ar@{-}[rd] &&\bullet \ar@{-}[ld] \ar@{-}[rd]\\
+\bullet & & & & \bullet & & \bullet
+} \endxy}
+\qquad\ \qquad\ \qquad
+\mbox{\xy <0cm,.6cm>\entrymodifiers={[o]}\xymatrix @R1pc@C1pc{
+&&&&\bullet \ar@{-}[ld] \ar@{-}[rd] && \bullet  \ar@{-}[ld] \ar@{-}[rd]&&\\
+&\bullet \ar@{-}[ld] \ar@{-}[rd] && \bullet \ar@{-}[ld]&&\bullet&& \bullet\ar@{-}[rd]&\\
+\bullet && \bullet &&&&&& \bullet
+} \endxy}
+\]
+If you rotate a Dyck path counterclockwise by $45^{\circ}$ and then reflect it in the line $x=y$, the result is a lattice path from $(0,0)$ to $(n,n)$ that never goes above the diagonal. One can also think of such a path as a path from $(1,0)$ to $(n+1,n)$ that never touches or crosses the diagonal. As the article on \PMlinkname{ballot numbers}{LatticePathsAndBallotNumbers} explains, these paths are counted by the Catalan numbers, and thus the number of Dyck paths of length $2n$ (or \emph{Dyck paths of semilength $n$}) is equal to $C_n$, the $n^{\mathrm{th}}$ Catalan number.
+
+Note that any Dyck path has a unique decomposition as follows. Every Dyck path returns to the $x$-axis at some point (possibly at its end). Split the path at the first such point. Then the original path consists of an up step (the first step of the path), an arbitrary (perhaps empty) Dyck path, a down step returning to the $x$-axis, and then another arbitrary (perhaps empty) Dyck path.
+Considering the first example above, this decomposition looks like this:
+\[
+\mbox{\xy <0cm,.6cm>\xymatrix @R1pc@C1pc{
+&&*[o]{\bullet} \ar@{-}[ld] \ar@{-}[rd]\\
+&. \ar@{-}[ld] &&.  \ar@{-}[rd] &&*[o]{\bullet} \ar@{-}[ld] \ar@{-}[rd]\\
+*[o]{\bullet} & & & & . & & *[o]{\bullet}
+} \endxy}
+\]
+So a Dyck path is either empty, or consists of an up/down and two arbitrary Dyck paths. If one thinks about the lengths of the paths involved, it is clear that in terms of the generating function, we have
+\[C(x)=1+xC(x)^2\]
+since a nonempty Dyck path of semilength $n$ consists of two Dyck paths the sum of whose semilengths is $n-1$ together with the unique Dyck path of semilength $1$ (the up-down steps).
+
+Solving this quadratic equation, we get
+\[C(x)=\frac{1\pm\sqrt{1-4x}}{2x}\]
+and we must decide between the plus and minus sign. However, note that $C(x)$ is a formal power series with only nonnegative powers of $x$, and the expansion of $\sqrt{1-4x}$ starts with the constant term $1$. So if the sign were positive, then $C(x)$ would have a leading term of $\frac{1}{x}$. So we must choose the negative sign, and we get
+\[C(x)=\frac{1-\sqrt{1-4x}}{2x}\]
+
+Here is a second method of getting to the same result; it is more straightforward but less informative.
+
+By the generalized binomial formula, we have that
+\[\sqrt{1+x}=(1+x)^{1/2}=\sum_{k=0}^{\infty}\dbinom{1/2}{k}x^k=\dbinom{1/2}{0}+\sum_{k=1}^{\infty}\dbinom{1/2}{k}x^k=1+\sum_{k=1}^{\infty}\dbinom{1/2}{k}x^k\]
+Now,
+\begin{align*}\dbinom{1/2}{k}&=\frac{(1/2)(1/2-1)(1/2-2)\cdots(1/2-k+1)}{k!}=2^{-k}(-1)^{k-1}\frac{1\cdot 3\cdot 5\cdots(2k-3)}{k!}\\
+&=2^{-k}(-1)^{k-1}\frac{(k-1)!\cdot 1\cdot 3\cdot 5\cdots(2k-3)}{k!(k-1)!}=2^{1-2k}(-1)^{k-1}\frac{(2k-2)!}{k!(k-1)!}\\
+&=2^{1-2k}(-1)^{k-1}\frac{1}{k}\cdot\dbinom{2k-2}{k-1}
+\end{align*}
+and so, substituting, we get
+\[\sqrt{1+x}=1+\sum_{k=1}^{\infty}2^{1-2k}(-1)^{k-1}\frac{1}{k}\cdot\dbinom{2k-2}{k-1}x^k\]
+Replacing $x$ by $-4x$, we get
+\begin{align*}
+\sqrt{1-4x}-1&=\sum_{k=1}^{\infty}2^{1-2k}(-1)^{k-1}\frac{1}{k}\cdot\dbinom{2k-2}{k-1}(-1)^k2^{2k}x^k =\sum_{k=1}^{\infty}(-2)\frac{1}{k}\dbinom{2k-2}{k-1}x^k\\
+&=\sum_{k=0}^{\infty}\frac{-2}{k+1}\dbinom{2k}{k}x^{k+1}
+\end{align*}
+where the last equality results from replacing $k$ by $k+1$ and adjusting the range of summation. On dividing through by $-2x$, we get
+\[\frac{1-\sqrt{1-4x}}{2x}=\sum_{k=0}^{\infty}\frac{1}{k+1}\dbinom{2k}{k}x^k=\sum_{k=0}^{\infty}C_kx^k\]
+and we are done.
+
+As a final observation, note that the recurrence
+\[C_n=\sum_{i=0}^{n-1} C_i C_{n-1-i}\]
+given in the \PMlinkname{parent}{CatalanNumbers} article can be easily derived from the functional equation for the generating function, $C(x)=1+xC(x)^2$:
+\[\sum_k C_kx^k=1+x\left(\sum_k C_kx^k\right)^2\]
+and the coefficient of $x^n$ on the right hand side is the coefficient of $x^{n-1}$ in the sum, which is precisely
+\[\sum_{k=0}^{n-1} C_k C_{n-1-k}\]
+as desired.
+%%%%%
+%%%%%
+\end{document}

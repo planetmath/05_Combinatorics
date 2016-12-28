@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeightedPathLength}
+\pmcreated{2013-03-22 12:32:09}
+\pmmodified{2013-03-22 12:32:09}
+\pmowner{Logan}{6}
+\pmmodifier{Logan}{6}
+\pmtitle{weighted path length}
+\pmrecord{4}{32778}
+\pmprivacy{1}
+\pmauthor{Logan}{6}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmrelated{ExternalPathLength}
+\pmrelated{ExtendedBinaryTree}
+\pmrelated{CompleteBinaryTree}
+\pmrelated{MinimumWeightedPathLength}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\begin{document}
+Given an extended binary tree $T$ (that is, simply any complete binary tree, where leafs are denoted as \emph{external nodes}), associate weights with each external node.  The \emph{weighted path length} of $T$ is the sum of the product of the weight and path length of each external node, over all external nodes.
+
+Another formulation is that weighted path length is $\sum w_jl_j$ over all external nodes $j$, where $w_j$ is the weight of an external node $j$, and $l_j$ is the distance from the root of the tree to $j$.  If $w_j = 1$ for all $j$, then weighted path length is exactly the same as external path length.
+
+\subsubsection*{Example}
+
+Let $T$ be the following extended binary tree.  Square nodes are external nodes, and circular nodes are internal nodes.  Values in external nodes indicate weights, which are given in this problem, while values in internal nodes represent the weighted path length of subtrees rooted at those nodes, and are calculated from the given weights and the given tree.  The weight of the tree as a whole is given at the root of the tree.
+
+\begin{center}
+\includegraphics{tree.10}
+\end{center}
+
+This tree happens to give the minimum weighted path length for this particular set of weights.
+%%%%%
+%%%%%
+\end{document}

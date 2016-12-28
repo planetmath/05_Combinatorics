@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KautzGraph}
+\pmcreated{2013-03-22 16:22:55}
+\pmmodified{2013-03-22 16:22:55}
+\pmowner{wati}{15191}
+\pmmodifier{wati}{15191}
+\pmtitle{Kautz graph}
+\pmrecord{7}{38526}
+\pmprivacy{1}
+\pmauthor{wati}{15191}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C20}
+%\pmkeywords{Graph}
+%\pmkeywords{digraph}
+\pmrelated{DeBruijnDigraph}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need % them
+%\usepackage{epsfig}
+% define commands here
+
+\begin{document}
+\noindent
+The {\em Kautz graph} ${\cal K}_K^{N + 1}$ is a digraph (directed
+graph) of degree $K$ and dimension $N+ 1$, which has $(K +1)K^{N}$
+vertices labeled by all possible strings $s_0 \cdots s_N$ of length $N
++ 1$ which are composed of characters $s_i$ chosen from an alphabet
+$A$ containing $K + 1$ distinct symbols, subject to the condition that
+adjacent characters in the string cannot be equal ($s_i \neq s_{i+
+1}$).
+\vspace*{0.1in}
+
+\noindent
+The Kautz graph  ${\cal K}_K^{N + 1}$ has $(K + 1)K^{N + 1}$ edges
+\begin{equation}
+\{(s_0 s_1 \cdots s_N,
+s_1 s_2 \cdots s_N s_{N + 1})| \; s_i \in A \; s_i \neq s_{i
+  + 1} \} \,.
+\label{eq:}
+\end{equation}
+It is natural to label each such edge of  ${\cal K}_K^{N + 1}$
+as $s_0s_1 \cdots s_{N + 1}$, giving a one-to-one correspondence
+between edges of    the Kautz graph  ${\cal K}_K^{N + 1}$
+and vertices of the Kautz graph
+${\cal K}_K^{N + 2}$.
+\vspace*{0.1in}
+
+\noindent
+{\bf Example:}
+
+\noindent
+The Kautz graph   ${\cal K}_2^{2}$ has 6 nodes, and is depicted in the
+following figure (using the alphabet $A$ =\{0, 1, 2\})
+
+\begin{center}
+%\epsfig{file=c:wati22.eps,width=10cm}
+\includegraphics{C:wati22-8.eps}
+\end{center}
+
+\vspace*{0.1in}
+
+\noindent
+{\bf Properties:}
+
+\noindent $\bullet$
+The diameter of the Kautz graph
+${\cal K}_K^{N}$ is $N$ \\
+(For example, there is a path of length $N$ from $x$ to $y$
+achieved by the
+sequence of edges $(x_0 x_1 \cdots x_N, x_1 \cdots x_N y_0)$, \ldots
+$(x_N y_0 \cdots y_{N -1}, y_0 \cdots y_N)$ unless $x_N = y_0$ in
+which case there is a similar path of length $N -1$ beginning
+$(x_0 x_1 \cdots x_{N-1} y_0, x_1 \cdots x_{N-1} y_0 y_1), \ldots$.)
+
+\noindent $\bullet$ 
+Kautz graphs are closely related to {\em de Bruijn graphs}, which are
+defined similarly but without the condition $s_i \neq s_{i + 1}$, and
+with an alphabet of only $K$ symbols for the degree $K$ de Bruijn graph.
+
+\noindent $\bullet$
+For a fixed degree $K$ and number of vertices $V = (K + 1) K^N$, the
+Kautz graph has the smallest diameter of any possible directed graph
+with $V$ vertices and degree $K$.
+
+\noindent $\bullet$ All Kautz graphs have Eulerian cycles\\ (An Eulerian cycle
+is one which visits each edge exactly once-- This result follows
+because Kautz graphs have in-degree equal to out-degree for each
+node)
+
+\noindent $\bullet$ All Kautz graphs have a Hamiltonian cycle\\
+(This result follows from the correspondence described above
+between edges of    the Kautz graph  ${\cal K}_K^{N}$
+and vertices of the Kautz graph
+${\cal K}_K^{N + 1}$; a Hamiltonian cycle on ${\cal K}_K^{N + 1}$ is
+given by an Eulerian cycle on ${\cal K}_K^{N}$)
+
+\noindent $\bullet$ A degree-$k$ Kautz graph has $k$ disjoint
+paths from any node  $x$
+to any other node $y$.
+
+
+%%%%%
+%%%%%
+\end{document}

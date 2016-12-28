@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Multigraph}
+\pmcreated{2013-03-22 11:57:57}
+\pmmodified{2013-03-22 11:57:57}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{multigraph}
+\pmrecord{8}{30780}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C75}
+\pmsynonym{parallel edge}{Multigraph}
+%\pmkeywords{graph}
+\pmrelated{Graph}
+\pmrelated{Subgraph}
+\pmrelated{GraphHomomorphism}
+\pmrelated{Pseudograph}
+\pmrelated{Quiver}
+\pmrelated{AxiomsOfMetacategoriesAndSupercategories}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+\begin{document}
+A \emph{multigraph} is a graph in which we allow more than one edge to join a pair of vertices. Two or more edges that join a pair of vertices are called \emph{parallel edges}. Every graph, then, is a multigraph, but not all multigraphs are graphs.
+Some authors define the concept of a graph by excluding graphs with multiple 
+edges or loops. Then if they want to consider more general graphs the \PMlinkescapetext{term}
+multigraph is introduced. Usually, such graphs have no loops.
+Formally, a multigraph $G=(V,  E)$ is a pair, where $E=(V^{(2)}, f)$
+is a multiset for which $f(x,x) = 0$ and $V^{(2)}$ is the set of unordered pairs
+of $V$.
+
+A multigraph can be used to \PMlinkescapetext{represent} a matrix whose entries are nonnegative integers. To do this, suppose that $A=(a_{ij})$ is an $m\times n$
+matrix of nonnegative integers. 
+Let $V=S \cup T$, where $S=\{1, \ldots , m\}$ and 
+$T =\{1', \ldots , n'\}$ and connect vertex $i\in S$ to vertex $j'\in T$ with $a_{ij}$
+edges. 
+ 
+
+%%%%%
+%%%%%
+%%%%%
+\end{document}

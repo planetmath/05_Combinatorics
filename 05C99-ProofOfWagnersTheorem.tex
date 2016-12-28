@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfWagnersTheorem}
+\pmcreated{2014-01-16 17:37:41}
+\pmmodified{2014-01-16 17:37:41}
+\pmowner{Ziosilvio}{18733}
+\pmmodifier{Ziosilvio}{18733}
+\pmtitle{proof of Wagner's theorem}
+\pmrecord{14}{40551}
+\pmprivacy{1}
+\pmauthor{Ziosilvio}{18733}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\ie}{\textit{i.e.}}
+\begin{document}
+It is sufficient to prove that
+the planarity condition given by Wagner's theorem
+is equivalent to the one given by Kuratowski's theorem,
+\ie, that a graph $G=(V,E)$
+has $K_{5}$ or $K_{3,3}$ as a minor,
+if and only if it has a subgraph
+homeomorphic to either $K_{5}$ or $K_{3,3}$.
+It is not restrictive to suppose that $G$ is simple and 2-connected.
+
+First, suppose that $G$ has a subgraph
+homeomorphic to either $K_{5}$ or $K_{3,3}$.
+Then there exists $U\subseteq V$ such that the subgraph induced by $U$
+can be transformed into either $K_{5}$ or $K_{3,3}$
+via a sequence of simple subdivisions
+and simple contractions through vertices of degree 2.
+Since none of these operations
+can alter the number of vertices of degree $d\neq 2$,
+and neither $K_{5}$ nor $K_{3,3}$ have vertices of degree 2,
+none of the simple subdivisions is necessary,
+and the homeomorphic subgraph is actually a minor.
+
+For the other direction, we prove the following.
+\begin{enumerate}
+\item \label{item:k33}
+If $G$ has $K_{3,3}$ as a minor,
+then $G$ has a subgraph homeomorphic to $K_{3,3}$.
+\item \label{item:k5}
+If $G$ has $K_{5}$ as a minor,
+then $G$ has a subgraph homeomorphic to either $K_{5}$ or $K_{3,3}$.
+\end{enumerate}
+
+\textit{Proof of point~\ref{item:k33}}
+
+If $G$ has $K_{3,3}$ as a minor,
+then there exist $U_{1},U_{2},U_{3},W_{1},W_{2},W_{3}\subseteq V$
+that are pairwise disjoint,
+induce connected subgraphs of $G$,
+and such that, for each $i$ and $j$,
+there exist $u_{i,j}\in U_{i}$ and $w_{i,j}\in W_{j}$
+such that $(u_{i,j},w_{i,j})\in E$.
+Consequently, for each $i$, there exists a subtree of $G$ with three leaves,
+one leaf in each of the $W_{j}$'s,
+and all of its other nodes inside $U_{i}$;
+the situation with the $j$'s is symmetrical.
+
+As a consequence of the handshake lemma,
+a tree with three leaves is homeomorphic to $K_{1,3}$.
+Thus, $G$ has a subgraph homeomorphic to six copies of $K_{1,3}$
+connected three by three,
+\ie, to $K_{3,3}$.
+
+\textit{Proof of point~\ref{item:k5}}
+
+If $G$ has $K_{5}$ as a minor,
+then there exist pairwise disjoint $U_{1},\ldots,U_{5}\subseteq V$
+that induce connected subgraphs of $G$
+and such that, for every $i\neq j$,
+there exist $u_{i;\{i,j\}}\in U_{i}$ and $u_{j;\{i,j\}}\in U_{j}$
+such that $(u_{i;\{i,j\}},u_{j;\{i,j\}})\in E$.
+Consequently, for each $i$,
+there exists a subtree $T_i$ of $G$ with four leaves,
+one leaf in each of the $U_{j}$'s for $i\neq j$,
+and with all of its other nodes inside $U_{i}$.
+
+As a consequence of the handshake lemma,
+a tree with four leaves is homeomorphic to either $K_{1,4}$
+or two joint copies of $K_{1,3}$.
+If all of the trees above are homeomorphic to $K_{1,4}$,
+then $G$ has a subgraph homeomorphic to
+five copies of $K_{1,4}$, each joint to the others:
+\ie, to $K_5$.
+Otherwise, a subgraph homeomorphic to $K_{3,3}$
+can be obtained via the following procedure.
+\begin{enumerate}
+\item
+Choose one of the $T_i$'s
+which is homeomorphic to two joint copies of $K_{1,3}$,
+call them $T_{i,r}$ and $T_{i,b}$.
+\item
+Color red the nodes of $T_{i,r}$,
+except its two leaves, which are colored blue.
+\item
+Color blue the nodes of $T_{i,b}$,
+except its two leaves, which are colored red.
+\item
+Color blue the nodes of the $T_j$'s
+containing the leaves of $T_{i,r}$.
+\item
+Color red the nodes of the $T_j$'s
+containing the leaves of $T_{i,b}$.
+\item
+Remove the edges joining nodes with same color in different $T_j$'s.
+\\
+This ``prunes'' the $T_j$'s so that they have three leaves,
+each in a subgraph of a color different than the rest of their vertices.
+\end{enumerate}
+The graph formed by the red and blue nodes,
+together with the remaining edges,
+is then isomorphic to $K_{3,3}$.
+
+\begin{thebibliography}{99}
+
+\bibitem{ag06}
+Geir Agnarsson, Raymond Greenlaw.
+\textit{Graph Theory: Modeling, Applications and Algorithms.}
+Prentice Hall, 2006.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

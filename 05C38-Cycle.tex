@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Cycle}
+\pmcreated{2013-03-22 12:17:21}
+\pmmodified{2013-03-22 12:17:21}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{cycle}
+\pmrecord{8}{31805}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C38}
+\pmrelated{AcyclicGraph}
+\pmrelated{SimplePath}
+\pmrelated{VeblensTheorem}
+\pmrelated{MantelsTheorem}
+\pmrelated{Graph}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{cycle} in a graph, digraph, or multigraph, is a simple path from a vertex to itself (i.e., a path where the first vertex is the same as the last vertex and no edge is repeated).
+
+For example, consider this graph:
+$$\xymatrix{
+A \ar@{-}[r] \ar@{-}[d] & B \ar@{-}[dl] \ar@{-}[d] \\
+D \ar@{-}[r] & C
+}$$
+
+$ABCDA$ and $BDAB$ are two of the cycles in this graph.  $ABA$ is not a cycle, however, since it uses the edge connecting $A$ and $B$ twice.  $ABCD$ is not a cycle because it begins on $A$ but ends on $D$.
+
+A cycle of length $n$ is sometimes denoted $C_n$ and may be referred to as a polygon of $n$ sides: that is, $C_3$ is a triangle, $C_4$ is a quadrilateral, $C_5$ is a pentagon, etc.
+
+An \emph{even} cycle is one of even length; similarly, an \emph{odd} cycle is one of odd length.
+%%%%%
+%%%%%
+\end{document}

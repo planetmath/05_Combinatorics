@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMantelsTheorem}
+\pmcreated{2013-03-22 13:03:04}
+\pmmodified{2013-03-22 13:03:04}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{proof of Mantel's theorem}
+\pmrecord{6}{33455}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C75}
+\pmclassification{msc}{05C69}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\supp}{\mathop{\mathrm{supp}}}
+\begin{document}
+\PMlinkescapeword{weight}
+\PMlinkescapeword{push}
+\PMlinkescapeword{support}
+
+Let $G$ be a triangle-free graph.  We may assume that $G$ has at least three vertices and at least one edge; otherwise, there is nothing to prove.  Consider the set $P$ of all functions $c\colon V(G)\to\mathbb{R}_+$ such that $\sum_{v\in V(G)} c(v)=1$.  Define the total weight $W(c)$ of such a function by
+\[
+W(c) = \sum_{uv\in E(G)} c(u)\cdot c(v).
+\]
+By declaring that $c\le c^*$ if and only if $W(c)\le W(c^*)$ we make $P$ into a poset.
+
+Consider the function $c_0\in P$ which takes the constant value $\frac{1}{|V(G)|}$ on each vertex.  The total weight of this function is
+\[
+W(c_0) = \sum_{uv\in E(G)} \frac{1}{|V(G)|}\cdot\frac{1}{|V(G)|}=\frac{|E(G)|}{|V(G)|^2},
+\]
+which is positive because $G$ has an edge.  So if $c\ge c_0$ in $P$, then $c$ has support on an induced subgraph of $G$ with at least one edge.
+
+We claim that a maximal element of $P$ above $c_0$ is supported on a copy of $K_2$ inside $G$.  To see this, suppose $c\ge c_0$ in $P$.  If $c$ has support on a subgraph larger than $K_2$, then there are nonadjacent vertices $u$ and $v$ such that $c(u)$ and $c(v)$ are both positive.  Without loss of generality, suppose that
+\begin{equation*}
+\sum_{uw\in E(G)} c(w) \ge \sum_{vw\in E(G)} c(w).\tag{*}
+\end{equation*}
+Now we push the function off $v$.  To do this, define a function $c^*\colon V(G)\to\mathbb{R}_+$ by
+\[
+c^*(w) = \begin{cases}
+c(u)+c(v) & w=u \\
+0         & w=v \\
+c(w)      & \text{otherwise.}
+\end{cases}
+\]
+Observe that $\sum_{w\in V(G)} c^*(w) = 1$, so $c^*$ is still in the poset $P$.
+Furthermore, by inequality~(*) and the definition of $c^*$,
+\begin{align*}
+W(c^*)
+&= \sum_{uw\in E(G)} c^*(u)\cdot c^*(w) + \sum_{vw\in E(G)} c^*(v)\cdot c^*(w) + \sum_{wz\in E(G)} c^*(w)\cdot c^*(z) \\
+&= \sum_{uw\in E(G)} [c(u) + c(v)]\cdot c(w) + 0 + \sum_{wz\in E(G)} c(w)\cdot c(z) \\
+&= \sum_{uw\in E(G)} c(u) \cdot c(w) + \sum_{vw} c(v)\cdot c(w) + \sum_{wz\in E(G)} c(w) \cdot c(z) \\
+&= W(c).
+\end{align*}
+Thus $c^*\ge c$ in $G$ and is supported on one less vertex than $c$ is.  So let $c$ be a maximal element of $P$ above $c_0$.  We have just seen that $c$ must be supported on adjacent vertices $u$ and $v$.  The weight $W(c)$ is just $c(u)\cdot c(v)$; since $c(u)+c(v)=1$ and $c$ has maximal weight, it must be that $c(u)=c(v)=\frac{1}{2}$.  Hence
+\[
+\frac{1}{4}=W(c)\ge W(c_0)=\frac{|E(G)|}{|V(G)|^2},
+\]
+which gives us the desired inequality: $|E(G)|\le\frac{|V(G)|^2}{4}$.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LaverTable}
+\pmcreated{2013-03-22 16:26:13}
+\pmmodified{2013-03-22 16:26:13}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Laver table}
+\pmrecord{6}{38591}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C38}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A {\em Laver table} $L_n$ for a given integer $n > 0$ has $2^n$ rows $i$ and columns $j$ with each entry being determined thus: $L_n(i, j) = i \star j$, with $i \star 1 = (i \mod 2^n) + 1$ for the first column. Subsequent rows are calculated with $i \star (j \star k) := (i \star j) \star (i \star k)$.
+
+For example, $L_2$ is
+
+$$\begin{bmatrix}
+2 & 4 & 2 & 4 \\
+3 & 4 & 3 & 4 \\
+4 & 4 & 4 & 4 \\
+1 & 2 & 3 & 4 \\
+\end{bmatrix}$$
+
+There is no known closed formula to calculate the entries of a Laver table directly, and it is in fact suspected that such a formula does not exist.
+
+The entries repeat with a certain periodicity $m$. This periodicity is always a power of 2; the first few periodicities are 1, 1, 2, 4, 4, 8, 8, 8, 8, 16, 16, ... (see A098820 in Sloane's OEIS). The sequence is increasing, and it was proved in 1995 by Richard Laver that under the assumption that there exists a rank-into-rank, it actually tends towards infinity. Nevertheless, it grows extremely slowly; Randall Dougherty showed that the first $n$ for which the table entries' period can possibly be 32 is $A(9,A(8,A(8,255)))$, where $A$ denotes the Ackermann function.
+
+\begin{thebibliography}{9}
+\bibitem{pd} P. Dehornoy, "Das Unendliche als Quelle der Erkenntnis", {\it Spektrum der Wissenschaft Spezial} 1/2001: 86 - 90
+\bibitem{rl} R. Laver, ''On the Algebra of Elementary Embeddings of a Rank into Itself'', {\it Advances in Mathematics} {\bf 110} (1995): 334
+\end{thebibliography}
+
+{\it This entry based entirely on a Wikipedia entry from a PlanetMath member.}
+%%%%%
+%%%%%
+\end{document}

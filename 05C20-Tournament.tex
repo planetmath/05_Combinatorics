@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Tournament}
+\pmcreated{2013-03-22 13:05:49}
+\pmmodified{2013-03-22 13:05:49}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{tournament}
+\pmrecord{7}{33518}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C20}
+\pmsynonym{directed complete graph}{Tournament}
+%\pmkeywords{complete graph}
+\pmrelated{CompleteGraph}
+\pmrelated{GraphTheory}
+\pmdefines{paradoxical tournament}
+\pmdefines{transitive tournament}
+
+\usepackage[all]{xypic}
+\begin{document}
+A \emph{tournament} is a directed graph obtained by choosing a
+direction for each edge in an undirected complete graph.
+For example, here is a tournament on 4 vertices:
+\[ \xymatrix{
+        1 \ar[dr] \ar[r] &2 \ar[d]\\
+        3 \ar[u] \ar[ur] &4 \ar[l]}
+\]
+Any tournament on a finite number $n$ of vertices contains a Hamiltonian path, i.e., directed path on all $n$ vertices. This is easily shown by induction on $n$:
+suppose that the statement holds for $n$, and consider any
+tournament $T$ on $n+1$ vertices. Choose a vertex $v_0$ of $T$ and
+consider a directed path $v_1,v_2,\ldots,v_n$ in $T\setminus \{v_0\}$.
+Now let $i \in \{0,\ldots,n\}$ be maximal such that $v_j \rightarrow
+v_0$ for all $j$ with $1 \leq j \leq i$. Then
+\[ v_1,\ldots,v_i,v_0,v_{i+1},\ldots,v_n \]
+is a directed path as desired.
+
+The name ``tournament'' originates from such a graph's interpretation as
+the outcome of some sports competition in which every player encounters
+every other player exactly once, and in which no draws occur; let us say
+that an arrow points from the winner to the loser. A player who wins
+all games would naturally be the tournament's winner. However, as the
+above example shows, there might not be such a player; a tournament for
+which there isn't is called a {\em $1$-paradoxical} tournament. More
+generally, a tournament $T=(V,E)$ is called {\em $k$-paradoxical} if
+for every $k$-subset $V'$ of $V$ there is a $v_0 \in V \setminus V'$
+such that $v_0 \rightarrow v$ for all $v \in V'$. By means of the
+probabilistic method Erd\H{o}s showed that if $|V|$ is sufficiently
+large, then almost every tournament on $V$ is $k$-paradoxical.
+
+A \emph{transitive tournament} is a tournament in which, for all vertices $v_0$, $v_1$ and $v_2$, if there is an edge from $v_0$ to $v_1$ and an edge from $v_1$ to $v_2$ then there is also an edge from $v_0$ to $v_2$.
+%%%%%
+%%%%%
+\end{document}

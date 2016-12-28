@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EnumerationOfLatticeWalks}
+\pmcreated{2013-03-22 19:20:54}
+\pmmodified{2013-03-22 19:20:54}
+\pmowner{csguy}{26054}
+\pmmodifier{csguy}{26054}
+\pmtitle{enumeration of lattice walks}
+\pmrecord{5}{42298}
+\pmprivacy{1}
+\pmauthor{csguy}{26054}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+
+\begin{document}
+\newtheorem*{defs}{Definition}
+
+\subsubsection*{Introduction}
+We present explicit formulas for the number of walks in certain lattices.  Proofs are given in a separate entry.
+\subsubsection*{Definitions}
+
+The following definitions formalize the concepts of square lattice, triangular lattice, honeycomb lattice, dice lattice, and walk.
+\begin{defs}
+The {\em square lattice} is the graph on vertex set $\mathbb{Z} \times \mathbb{Z}$ with each vertex $(i,j)$ adjacent to vertices $(i+1,j)$, $(i-1,j)$, $(i, j+1)$ and $(i, j-1)$.
+\end{defs}
+
+\begin{defs}
+The {\em triangular lattice} is the graph on vertex set $\mathbb{Z} \times \mathbb{Z}$ with each vertex $(i,j)$ adjacent to vertices $(i+1,j)$, $(i-1,j)$, $(i,j+1)$, $(i,j-1$, $(i-1,j+1)$, and $(i+1,j-1)$.
+\end{defs}
+
+\begin{defs} 
+The {\em honeycomb lattice} is the graph on vertex set $\{(i,j) \in \mathbb{Z} \times \mathbb{Z} : i+j \not\equiv 2 \pmod 3 \}$, and with the following adjacencies:
+\begin{enumerate}
+\item If $i + j \equiv 0 \pmod 3$, then $(i,j)$ is adjacent to vertices $(i+1,j)$, $(i,j+1)$, and $(i-1,j-1)$.
+\item If $i + j \equiv 1 \pmod 3$, then $(i,j)$  is adjacent to vertices $(i-1,j)$, $(i,j-1)$, and $(i+1,j+1)$.
+\end{enumerate}
+\end{defs}
+
+\begin{defs}
+The {\em dice lattice}  is the graph on vertex set $\mathbb{Z} \times \mathbb{Z}$ with the following adjacencies:
+\begin{enumerate}
+\item If $i + j \equiv 0 \pmod 3$, then $(i,j)$ is adjacent to vertices $(i+1,j)$, $(i-1,j)$, $(i,j+1)$, $(i,j-1)$, $(i+1,j+1)$, and $(i-1,j-1)$.
+\item If $i + j \equiv 1 \pmod 3$, then $(i,j)$  is adjacent to vertices $(i-1,j)$, $(i,j-1)$, and $(i+1,j+1)$.
+\item If $i + j \equiv 2 \pmod 3$, then $(i,j)$ is adjacent to vertices $(i+1,j)$, $(i, j+1)$, and $(i-1,j-1)$.
+\end{enumerate}
+
+\end{defs}
+
+\begin{defs}
+A {\em walk} in a graph is a sequence of vertices where consecutive vertices in the sequence are adjacent. Notice that the same vertex can appear multiple times in a walk.  A {\em closed walk} is a walk starting and ending with the same vertex. We use the notation $w(x,y,n)$ for the number of walks of length $n$ from $(0,0)$ to $(x,y)$ in a lattice.
+\end{defs}
+
+\subsubsection*{Square lattice}
+The number of walks $w(x,y,n)$ of length $n$ from $(0,0)$ to $(x,y) \in \mathbb{Z} \times \mathbb{Z}$ in the square lattice is given by
+\begin{align*}
+  w(x,y,n) = \binom{n}{\frac{n+x-y}{2}} \binom{n}{\frac{n-x-y}{2}}
+\end{align*}
+whenever $x+y$ and $n$ have the same parity. Otherwise $w(x,y,n) = 0$.
+
+\subsubsection*{Triangular lattice}
+The number of walks $w(x,y,n)$ of length $n$ from $(0,0)$ to $(x,y) \in \mathbb{Z} \times \mathbb{Z}$ in the triangular lattice is given by
+\begin{align*}
+ w(x,y,n) &= \sum_{k=0}^n(-2)^{n-k}\binom{n}{k} \sum_{j=0}^k \binom{k}{j} \binom{k}{j-x-y}\binom{k}{j-x}
+\end{align*}
+In particular, the number of closed walks of length $n$ starting and ending at $(0,0)$ is
+\begin{align*}
+   w(0,0,n) = \sum_{k=0}^n(-2)^{n-k}\binom{n}{k} \sum_{j=0}^k \binom{k}{j}^3
+\end{align*}
+
+\subsubsection*{Honeycomb lattice}
+The number of walks $w(x,y,n)$ of even length $n$ from $(0,0)$ to $(x,y) \in \mathbb{Z} \times \mathbb{Z}$ in the honeycomb lattice is given by
+\begin{align*}
+  w(x,y,n) &= \sum_{k=0}^{n/2} \binom{n/2}{k} \sum_{j=0}^k \binom{k}{j + x-(x+y)/3} \binom{k}{j} \binom{k}{j + (x+y)/3}\\
+  &= \sum_{k=0}^{n/2}\binom{n/2}{k}\binom{n/2}{k+(x+y)/3}\binom{2k+(x+y)/3}{k+(2x-y)/3}
+\end{align*}
+whenever $x+y \equiv 0 \pmod{3}$. Otherwise w(x,y,n) = 0.
+
+The number of walks of odd length $n$ from $(0,0)$ to $(x,y) \in \mathbb{Z} \times \mathbb{Z}$ is $w(x,y,n) = w(x-1,y,n-1) + w(x, y+1, n-1) + w(x+1, y+1, n-1)$ if $x+y \equiv 1 \pmod{3}$. Otherwise $w(x,y,n) = 0$.
+
+Setting $x = y = 0$ we obtain the following formula for the number of closed walks of (necessarily) even length $n$ starting and ending at $(0,0)$:
+\begin{align*}
+  w(0,0,n) = \sum_{k=0}^{n/2} \binom{n/2}{k}\sum_{j=0}^k\binom{k}{j}^3 =  \sum_{k=0}^{n/2}\binom{n/2}{k}^2\binom{2k}{k}
+\end{align*}
+
+\subsubsection*{Dice lattice}
+
+The number of walks $w(x,y,n)$ of even length $n$ from $(0,0)$ to $(x,y)$ in the dice lattice is given by
+\begin{align*}
+  w(x,y,n) &= 2^{n/2} \sum_{k=0}^{n/2} \binom{n/2}{k} \sum_{j=0}^k \binom{k}{j + x-(x+y)/3} \binom{k}{j} \binom{k}{j + (x+y)/3}\\
+ &= 2^{n/2} \sum_{k=0}^{n/2}\binom{n/2}{k}\binom{n/2}{k+(x+y)/3}\binom{2k+(x+y)/3}{k+(2x-y)/3}
+ \end{align*}
+whenever $x+y \equiv 0 \pmod{3}$. Otherwise $w(x,y,n) = 0$.  
+
+The number of walks of odd length $n$ from $(0,0)$ to $(x,y) \in \mathbb{Z} \times \mathbb{Z}$ is $w(x,y,n) = w(x+1,y,n-1) + w(x,y+1,n-1) + w(x-1,y-1,n-1)$ if $x+y \equiv 2 \pmod{3}$; if $x+y \equiv 1 \pmod{3}$, $w(x,y,n) = w(x-1,y,n-1) + w(x,y-1,n-1) + w(x+1,y+1,n-1)$. Otherwise $w(x,y,n) = 0$.
+
+Setting $x = y = 0$, we obtain the following formula for the number of closed walks of (necessarily) even length $n$ starting and ending at $(0,0)$:
+\begin{align*}
+  w(0,0,n) = 2^{n/2}\sum_{k=0}^{n/2} \binom{n/2}{k} \sum_{j=0}^k \binom{k}{j}^3 = 2^{n/2}\sum_{k=0}^{n/2}\binom{n/2}{k}^2\binom{2k}{k}
+\end{align*}
+
+%%%%%
+%%%%%
+\end{document}

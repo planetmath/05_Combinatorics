@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BellNumber}
+\pmcreated{2013-03-22 14:47:07}
+\pmmodified{2013-03-22 14:47:07}
+\pmowner{aoh45}{5079}
+\pmmodifier{aoh45}{5079}
+\pmtitle{Bell number}
+\pmrecord{7}{36436}
+\pmprivacy{1}
+\pmauthor{aoh45}{5079}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A18}
+\pmclassification{msc}{11B73}
+\pmrelated{StirlingNumbersSecondKind}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\begin{document}
+The \emph{Bell number}, denoted $B(n)$ is the total number of partitions of a set with $n$ elements.  For $n=0$, we have $B(0)=1$.  For $n\ge 1$, we have 
+\[
+B(n) = \sum_{k=0}^n S(n,k) \qquad \textrm{for } n \ge 1
+\]
+where $S(n,k)$ are the Stirling numbers of the second kind.
+
+\newtheorem{bell}{Proposition}
+\begin{bell}
+\[
+B(n+1) = \sum_{k=0}^n \binom{n}{k} B(k)
+\]
+\end{bell}
+
+\begin{proof}
+We count the number of partitions of a set of $n+1$ elements, depending on the size of the block containing the $n+1$st element. If the block has size $j$ for $1 \le j \le n+1$ then we have $\binom{n}{j-1}$ choices for the $j-1$ other elements of the block. The remaining $n+1-j$ elements can be partitioned in $B(n+1-j)$ ways. We have therefore that:
+\begin{eqnarray*}
+B(n+1) & = & \sum_{j=1}^{n+1}\binom{n}{j-1} B(n+1-j) \\
+       & = & \sum_{j=1}^{n+1}\binom{n}{n+1-j} B(n+1-j) \\
+       & = & \sum_{k=0}^n \binom{n}{k} B(k)
+\end{eqnarray*}
+\end{proof}
+
+Using the formula above, one can easily derive the first few Bell numbers.  Starting with $n=0$, the first ten Bell numbers are 1, 1, 2, 5, 15, 52, 203, 877, 4140, 21147.
+
+%%%%%
+%%%%%
+\end{document}

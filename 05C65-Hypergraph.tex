@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Hypergraph}
+\pmcreated{2013-03-22 13:05:29}
+\pmmodified{2013-03-22 13:05:29}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{hypergraph}
+\pmrecord{24}{33508}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C65}
+\pmsynonym{metacategory}{Hypergraph}
+\pmsynonym{multi-graph}{Hypergraph}
+\pmsynonym{colored graph}{Hypergraph}
+%\pmkeywords{finite and infinite hypergraphs}
+%\pmkeywords{edge sets}
+%\pmkeywords{vertices}
+%\pmkeywords{matrix representations of hypergraphs}
+\pmrelated{SteinerSystem}
+\pmrelated{IncidenceStructures}
+\pmrelated{ToposAxioms}
+\pmrelated{TopicEntryOnTheAlgebraicFoundationsOfMathematics}
+\pmrelated{GraphTheory}
+\pmrelated{ETAS}
+\pmrelated{AxiomsOfMetacategoriesAndSupercategories}
+\pmdefines{incidence matrix}
+\pmdefines{uniform hypergraph}
+\pmdefines{regular hypergraph}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+
+\begin{document}
+A \emph{hypergraph} $\mathcal{H}$ is an ordered pair $(V, \mathcal{E})$ where $V$ is a set of \emph{vertices} and $\mathcal{E}$ is a set of edges such that $\mathcal{E} \subseteq \mathcal{P}(V)$.  In other words, an \emph{edge} is nothing more than a set of vertices. A hypergraph is the same thing as a simple incidence structure, but with terminology that focuses on the relationship with graphs.
+
+Sometimes it is desirable to restrict this definition more.  The empty hypergraph is not very interesting, so we usually accept that $V \not= \emptyset$.  Singleton edges are allowed in general, but not the empty one.  Most applications consider only finite hypergraphs, but occasionally it is also useful to allow $V$ to be infinite.
+
+Many of the definitions of graphs carry verbatim to hypergraphs.  
+
+$\mathcal{H}$ is said to be $k$-\emph{uniform} if every edge $e \in \mathcal{E}$ has cardinality $k$, and is \emph{uniform} if it is $k$-uniform for some $k$.  An ordinary graph is merely a $2-$uniform hypergraph.
+
+The \emph{degree} of a vertex $v$ is the number of edges in $\mathcal{E}$ that contain this vertex, often denoted $d(v)$.  $\mathcal{H}$ is $k$-\emph{regular} if every vertex has degree $k$, and is said to be \emph{regular} if it is $k$-regular for some $k$.
+
+Let $V = \{v_1, v_2, ~\ldots, ~ v_n\}$ and $\mathcal{E} = \{e_1, e_2, ~ \ldots, ~ e_m\}$.  Associated to any hypergraph is the $n \times m$ \emph{incidence matrix} $A = (a_{ij})$ where
+\[a_{ij} = 
+\begin{cases}
+1 &\text{ if } ~ v_i \in e_j \\
+0 &\text{ otherwise }
+\end{cases}\]
+For example, let $\mathcal{H}=(V,\mathcal{E})$, where $V=\lbrace a,b,c\rbrace$ and $\mathcal{E}=\lbrace \lbrace a\rbrace, \lbrace a,b\rbrace, \lbrace a,c\rbrace, \lbrace a,b,c\rbrace\rbrace$.  Defining $v_i$ and $e_j$ in the obvious manner (as they are listed in the sets), we have
+\begin{center}$A =
+\begin{pmatrix}
+1 & 1 & 1 & 1 \\
+0 & 1 & 0 & 1 \\
+0 & 0 & 1 & 1
+\end{pmatrix}$
+\end{center}
+Notice that the sum of the entries in any column is the cardinality of the corresponding edge.  Similarly, the sum of the entries in a particular row is the degree of the corresponding vertex.
+
+The transpose $A^t$ of the incidence matrix also defines a hypergraph $\mathcal{H}^*$, the \emph{dual} of $\mathcal{H}$, in an obvious manner.  To be explicit, let $\mathcal{H}^* = (V^*, \mathcal{E}^*)$ where $V^*$ is an $m$-element set and $\mathcal{E}^*$ is an $n$-element set of subsets of $V^*$.  For $v^*_j \in V^*$ and $e^*_i \in \mathcal{E}^*, ~ v^*_j \in e^*_i$ if and only if $a_{ij} = 1$.
+
+Continuing from the example above, the dual $\mathcal{H}^*$ of $\mathcal{H}$ consists of $V^*=\lbrace x,y,z,t\rbrace$ and $\mathcal{E}^*=\lbrace \lbrace x,y,z,t\rbrace, \lbrace y,t\rbrace, \lbrace z,t\rbrace \rbrace$, where $v^*_j$ and $e^*_i$ are defined in the obvious manner.
+
+By the remark immediately after the definition of the incidence matrix of a hypergraph, it is easy to see that the dual of a uniform hypergraph is regular and vice-versa.  It is not rare to see fruitful results emerge by considering the dual of a hypergraph.
+
+\textbf{Note}
+A finite hypergraph is also related to a metacategory, and can be shown to be a special case of a supercategory, and can be thus defined as a mathematical interpretation of ETAS axioms.
+
+%%%%%
+%%%%%
+\end{document}

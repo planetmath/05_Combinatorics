@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CayleyGraph}
+\pmcreated{2013-03-22 12:48:53}
+\pmmodified{2013-03-22 12:48:53}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Cayley graph}
+\pmrecord{8}{33135}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C25}
+\pmrelated{Presentationgroup}
+\pmrelated{FinitelyGenerated}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+
+
+%%%%%% END OF SAVED PREAMBLE %%%%%%
+\begin{document}
+Let $G = \langle X | R \rangle$ be a presentation of the finitely generated group $G$ with generators $X$ and relations $R$.  We define the \emph{Cayley graph} $\Gamma = \Gamma(G,X)$ of $G$ with generators $X$ as
+$$
+\Gamma =
+\left(G,E\right),
+$$
+where
+$$
+E =
+  \left\{
+    \left\{u,a\cdot u \right\} |
+    u\in G, a\in X
+  \right\}.
+$$
+
+That is, the vertices of the Cayley graph are precisely the elements of $G$, and two elements of $G$ are connected by an edge iff some generator in $X$ transfers the one to the other.
+
+\subsection*{Examples}
+\begin{enumerate}
+\item
+$G=\Ints^d$, with generators $X=\{e_1,\ldots,e_d\}$, the standard basis vectors.  Then $\Gamma(G,X)$ is the $d$-dimensional grid; confusingly, it too is often termed ``$\Ints^d$''.
+\item
+$G=F_d$, the free group with the $d$ generators $X=\{g_1,...,g_d\}$.  Then $\Gamma(G,X)$ is the $2d$-regular tree.
+\end{enumerate}
+
+
+A Cayley graph can be considered as a metric space with $d(x,y)$ ($x,y \in G$) being 
+the minimum number of edges one must traverse to get from $x$ to $y$.  Thus, each edge has length 1.
+
+
+1) the graph is also edge labeled by the generator and directed.  If you are in a group then given directed edges is sufficient to reconstruct the label.
+Though in practice the vertices themselves are just dots (save the identity at times) in the graph and instead it is the edges that get labeled to tell you what to call the vertex.
+
+2) The definition works for more than groups.  In fact, it is sometimes  used for the graph of a (semi)group acting on a set S as a Cayley graph with vertices S and edges given by the group action.  As the definition of the graph is nearly identical authors do not generally strive to distinguish these two notions of a Cayley graph.
+
+3)  In a group, the graph is regular and connected.
+
+4)  The metric we mentioned above  is usually called "word length" .  The bounding of word lengths -- that is bounding the girth of a the graph, is a hard and active research problem involving the theory of expanders.
+%%%%%
+%%%%%
+\end{document}

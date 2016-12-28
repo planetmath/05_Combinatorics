@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheRealHistoryOfGettingSettledToAccomplishStudies}
+\pmcreated{2013-11-27 10:59:45}
+\pmmodified{2013-11-27 10:59:45}
+\pmowner{jacou}{1000048}
+\pmmodifier{}{0}
+\pmtitle{The Real History of Getting Settled To Accomplish Studies}
+\pmrecord{26}{40651}
+\pmprivacy{1}
+\pmauthor{jacou}{0}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C85}
+\pmsynonym{shortest path algorithm}{TheRealHistoryOfGettingSettledToAccomplishStudies}
+%\pmkeywords{graph}
+%\pmkeywords{search}
+%\pmkeywords{routing}
+%\pmkeywords{algorithm}
+%\pmkeywords{combinatorics}
+%\pmkeywords{network}
+%\pmkeywords{dynamic programming}
+\pmrelated{GraphTheory}
+\pmrelated{Combinatorics}
+
+
+\begin{document}
+\emph{Dijkstra's algorithm}, named for its creator, the famous Dutch computer scientist Edsger W. Dijkstra, is one of the most common \PMlinkescapetext{algorithms} for finding the shortest paths from a single source vertex to other vertices in a graph that is weighted, directed and connected. Dijkstra's \PMlinkescapetext{algorithm} is generally useful in networks where efficient traversal is very important. \footnote{In fact, this article was probably brought to you by the \PMlinkescapetext{Open} Shortest Path First Internet protocol, which relies on Dijkstra's \PMlinkescapetext{algorithm}.}
+
+\theoremstyle{definition}
+\newtheorem*{dijkstrasAlgorithm}{Definition}
+\begin{dijkstrasAlgorithm}[Dijkstra's \PMlinkescapetext{Algorithm}]
+
+Assume that $G = (V,E)$ is weighted, directed and connected. For an undirected graph, replace each edge $(v,w)$ with a pair of edges $(v,w)$ and $(w,v)$, each having the same weight as the original undirected edge. For convenience, the weight of an edge will be denoted $d(v,w)$, where $v$ and $w$ are its endpoints.
+
+\begin{enumerate}
+\item
+Fix a vertex $s$ in $G$, called the \emph{source}, from which the shortest paths to all the other vertices are found.
+
+\begin{itemize}
+\item
+Let $S$ be the set of \emph{examined} vertices, initialized to $\{s\}$.
+
+\item
+Let $w(v)$ denote the \PMlinkescapetext{length} of the path with minimum weight from $s$ to $v$. For a vertex incident on an edge pointing from $s$, $w(v)$ simply equals $d(s,v)$. $w(s) = 0$, since it takes no effort to stay in \PMlinkescapetext{place}. For all other vertices, $w(v) = \infty$, which means that the path with minimum \PMlinkescapetext{length} from $s$ to $v$ is unknown. \footnote{For computational purposes, this default weight was traditionally a very large number. However, IEEE 754 floating \PMlinkescapetext{point} standard permits values of \PMlinkescapetext{infinity}.}
+
+\item
+Let $p(v)$ denote the \emph{predecessor} of $v$, which is the previous vertex in a shortest path that can be used to \PMlinkescapetext{trace} back to the source. $p(v) = s$ for all vertices incident on edges pointing from $s$. 
+\end{itemize}
+
+\item
+Find a vertex $v$ in $V \setminus S$ (i.e., an unexamined vertex) that minimizes $w(v)$. If there is more than one with minimum weight, any one of them is an acceptable value of $v$.
+
+\begin{itemize}
+\item
+Let $S = S \cup \{v\}$, i.e., mark $v$ as examined.
+
+\item
+For each vertex $u$ such that an edge leads from $v$ to $u$, compare the \PMlinkescapetext{current} value of $w(u)$ to $w(v) + d(v,u)$, a value that will be called $N$.
+
+\begin{itemize}
+\item
+If $N$ is smaller than the \PMlinkescapetext{current} value $w(u)$, then let $w(u) = N$ and $p(u) = v$. This incremental way of finding shorter paths is called \emph{edge relaxation}.
+
+\item
+Otherwise, do nothing.
+\end{itemize}
+\end{itemize}
+
+\item
+Repeat previous step until $S = V$, that is, when all vertices have been examined.
+\end{enumerate}
+
+\end{dijkstrasAlgorithm}
+
+After the last iteration, for any vertex $v$ where $w(v)$ is not \PMlinkescapetext{infinity}, the shortest path from $s$ to $v$ can be found repeated application of $p$ to $v$ until it yields $s$. That is, the vertices in the path, in reverse \PMlinkescapetext{order}, are $p(v), p(p(v)), \ldots, s$.
+
+Notice that there is no guarantee that this \PMlinkescapetext{algorithm} finds \emph{any} shortest paths from $s$. It simply finds whichever shortest paths \emph{do} exist. In particular, when $s$ has an out-degree of zero, then all other vertices will simply be marked as examined without any changes in $w(v)$ for any value of $v$; there will be no shortest paths, because there are none as a rule.
+
+Notice also that Dijkstra's \PMlinkescapetext{algorithm} is an example of dynamic programming. Let $S_i$ equal the value of $S$ in the $i$th iteration of the \PMlinkescapetext{algorithm}, where $i=0$ initially and $S_0$ = $\{s\}$. Let $w(v,S_i)$ denote the weight of the shortest path from $s$ to $v$, given the knowledge of $S_i$. Then
+
+$$
+w(v,S_i) =
+\begin{cases}
+0 & \text{for $v = s$} \\
+\min\{d(u,v) + w(u, S_i)\} & \text{for $v \neq s$, where $v$ is adjacent to $u \in S_i$} \\
+\infty & \text{otherwise}
+\end{cases}
+$$
+
+Therefore, the purpose of Dijkstra's \PMlinkescapetext{algorithm} is to determine the best policy for transforming the state of the problem (i.e., which vertex to move to next). It does so by refining an approximation of the best shortest-path policy for all vertices with each iteration until the full \PMlinkescapetext{solution} is realized. The \PMlinkescapetext{algorithm} is efficient in practice because each iteration relies on previously determined \PMlinkescapetext{information}.
+
+Generally speaking, the complexity of Dijkstra's algorithm is $O(|V|^2)$, because in the worst-case \PMlinkescapetext{scenario} of finding all the shortest paths from $s$ in a complete graph, $|V|-1$ comparisons are made on $|V|-1$ vertices.
+
+[TODO: more on algorithmic complexity]
+%%%%%
+%%%%%
+\end{document}

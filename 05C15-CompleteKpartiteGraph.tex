@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompleteKpartiteGraph}
+\pmcreated{2013-03-22 12:17:18}
+\pmmodified{2013-03-22 12:17:18}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{complete k-partite graph}
+\pmrecord{8}{31804}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+\pmsynonym{complete $k$-partite graph}{CompleteKpartiteGraph}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic} 
+\usepackage{color}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\fm}[1]{{\it #1}}
+\begin{document}
+A \emph{complete k-partite graph} is a maximal \fm{k}-partite
+graph.  In other words, a graph is complete \fm{k}-partite provided
+that its vertex set admits a partition $V=V_1\sqcup\dots\sqcup V_k$
+such that for any $u\in V_i$ and $v\in V_j$, \fm{uv} is an edge if and
+only if $i\ne j$.
+
+For any tuple $(a_1,\dots,a_k)$, there is up to graph isomorphism a
+single complete \fm{k}-partite graph with maximal stable sets
+$V_1,\dots, V_k$ such that for each $i$, there are exactly $a_i$
+vertices in $V_i$.  This graph is denoted by $K_{a_1,\dots,a_k}$.
+
+Below we display the 3-partite complete graph $K_{2,3,4}$:
+
+\[\xymatrix{
+  & {\color{red}A} \ar@{-}[dl] \ar@{-}[ddl] \ar@{-}[dddl] \ar@{-}[ddddl] \ar@{-}[rrrdd] \ar@{-}[rrrddd] & {\color{red}B} \ar@{-}[dll] \ar@{-}[ddll] \ar@{-}[dddll] \ar@{-}[ddddll] \ar@{-}[rrdd] \ar@{-}[rrddd]& {\color{red}C} \ar@{-}[dlll] \ar@{-}[ddlll] \ar@{-}[dddlll] \ar@{-}[ddddlll] \ar@{-}[rdd] \ar@{-}[rddd] &   \\
+{\color{blue}D} \ar@{-}[rrrrd] \ar@{-}[rrrrdd] &   &   &   &   \\
+{\color{blue}E} \ar@{-}[rrrr] \ar@{-}[rrrrd] &   &   &   & {\color{green}H} \\ 
+{\color{blue}F} \ar@{-}[rrrru] \ar@{-}[rrrr] &   &   &   & {\color{green}I} \\
+{\color{blue}G} \ar@{-}[rrrruu] \ar@{-}[rrrru] &   &   &   &
+}\]
+
+\PMlinkescapeword{complete}
+%%%%%
+%%%%%
+\end{document}

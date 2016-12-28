@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BipartiteGraph}
+\pmcreated{2013-03-22 12:17:07}
+\pmmodified{2013-03-22 12:17:07}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{bipartite graph}
+\pmrecord{9}{31765}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+\pmsynonym{bipartite}{BipartiteGraph}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{color}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{bipartite graph} is a graph with a chromatic number of $2$.
+
+The following graph, for example, is bipartite:
+
+$$\xymatrix{
+{\color{red}A} \ar@{-}[rrr] \ar@{-}[rd] \ar@{-}[ddd] & & & {\color{blue}B} \\
+& {\color{blue}E} & {\color{red}F} \ar@{-}[ur] \ar@{-}[l] \ar@{-}[d] & \\
+& {\color{red}H} \ar@{-}[u] \ar@{-}[r] \ar@{-}[dl] & {\color{blue}G} & \\
+{\color{blue}D} & & & {\color{red}C} \ar@{-}[uuu] \ar@{-}[lll] \ar@{-}[ul] }$$
+
+One way to think of a bipartite graph is by partitioning the vertices into two disjoint sets where vertices in one set are adjacent only to vertices in the other set.  In the above graph, this may be more obvious with a different \PMlinkescapetext{representation}:
+
+$$\xymatrix{
+{\color{red}A} \ar@{-}[r] \ar@{-}[rd] \ar@{-}[rdd] & {\color{blue}E} \\
+{\color{red}F} \ar@{-}[ru] \ar@{-}[r] \ar@{-}[rdd] & {\color{blue}B} \\
+{\color{red}H} \ar@{-}[ruu] \ar@{-}[r] \ar@{-}[rd] & {\color{blue}D} \\
+{\color{red}C} \ar@{-}[ruu] \ar@{-}[ru] \ar@{-}[r] & {\color{blue}G}}$$
+
+The two subsets are the two columns of vertices, all of which have the same colour.
+
+A graph is bipartite if and only if all its cycles have even length.  This is easy to see intuitively: any path of odd length on a bipartite must end on a vertex of the opposite colour from the beginning vertex and hence cannot be a cycle.
+%%%%%
+%%%%%
+\end{document}

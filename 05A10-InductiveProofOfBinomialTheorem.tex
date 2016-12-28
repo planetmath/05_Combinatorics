@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InductiveProofOfBinomialTheorem}
+\pmcreated{2013-03-22 11:48:06}
+\pmmodified{2013-03-22 11:48:06}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{inductive proof of binomial theorem}
+\pmrecord{21}{30338}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+%\pmkeywords{number theory}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+We prove the theorem for a ring. We do not assume a unit for the ring.
+We do not need commutativity of the ring, but only that $a$ and $b$ commute.
+
+When $n=1$, the result is clear.
+
+For the inductive step, assume it holds for $m$. Then for $n = m+1$,
+\begin{eqnarray*}
+(a+b)^{m+1} & = & (a+b)(a+b)^m  \\
+& = & (a+b)(a^m + b^m+ \sum_{k=1}^{m-1} \binom{m}{k} a^{m-k} b^k )\text{ by the inductive hypothesis} \\
+& = & a^{m+1} + b^{m+1} + ab^m + ba^m + \sum_{k=1}^{m-1} \binom{m}{k} a^{m-k+1} b^k + \sum_{k=1}^{m-1} \binom{m}{k} a^{m-k} b^{k+1} \\ 
+& = & a^{m+1} + b^{m+1} + \sum_{k=1}^m \binom{m}{k} a^{m-k+1} b^k + \sum_{k=0}^{m-1} \binom{m}{k} a^{m-k} b^{k+1} \text{ by combining terms} \\
+& = & a^{m+1} + b^{m+1} + \sum_{k=1}^m \binom{m}{k} a^{m-k+1} b^k + \sum_{j=1}^m \binom{m}{j-1} a^{m+1-j} b^j \text{ let j=k+1 in second sum} \\
+& = & a^{m+1} + b^{m+1} + \sum_{k=1}^m \left[ \binom{m}{k} + \binom{m}{k-1} \right] a^{m+1-k}b^k \text{ by combining the sums}\\
+& = & a^{m+1} + b^{m+1} + \sum_{k=1}^m \binom{m+1}{k} a^{m+1-k}b^k \text{ from Pascal's rule} \\
+\end{eqnarray*}
+as desired.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

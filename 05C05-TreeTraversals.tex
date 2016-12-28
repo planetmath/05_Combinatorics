@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TreeTraversals}
+\pmcreated{2013-03-22 12:29:00}
+\pmmodified{2013-03-22 12:29:00}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{tree traversals}
+\pmrecord{10}{32699}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmsynonym{inorder traversal}{TreeTraversals}
+\pmrelated{Tree}
+\pmdefines{preorder traversal}
+\pmdefines{postorder traversal}
+\pmdefines{in-order traversal}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[all]{xy}
+%\usepackage{lbh-pseudocode}
+\usepackage{program}
+\begin{document}
+\PMlinkescapeword{term}
+\PMlinkescapeword{property}
+\PMlinkescapeword{right}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{node}
+\PMlinkescapeword{order}
+\PMlinkescapeword{arrows}
+\PMlinkescapeword{preorder}
+A \emph{tree traversal} is an algorithm for visiting all the \PMlinkname{nodes}{Graph} in a rooted tree exactly once.  The constraint is on rooted trees, because the root is taken to be the starting point of the traversal.  A traversal is also defined on a forest in the sense that each tree in the forest can be iteratively traversed (provided one knows the roots of every tree beforehand).  This entry presents a few common and simple tree traversals.
+
+In the description of a \PMlinkname{tree}{forest}, the notion of rooted-subtrees
+was presented.  Full understanding of this notion is necessary to understand the traversals presented here, as each of these traversals depends heavily upon this notion.
+
+In a traversal, there is the notion of \emph{visiting} a node.  Visiting a node often consists of doing some computation with that node.  The traversals are defined here without any notion of what is being done to visit a node, and simply indicate where the visit occurs (and most importantly, in what order).
+
+Examples of each traversal will be illustrated on the following binary tree.
+
+\[
+\xymatrix{
+&&&\bullet \ar@{-}[dll] \ar@{-}[drr] \\
+&\bullet \ar@{-}[dl] \ar@{-}[dr] &&&& \bullet \ar@{-}[dl] \ar@{-}[dr] \\
+\bullet && \bullet && \bullet && \bullet
+}
+\]
+
+Vertices will be numbered in the order they are visited, and edges will be drawn with arrows indicating the path of the traversal.
+
+
+\subsubsection*{Preorder Traversal}
+
+Given a rooted tree, a \emph{preorder traversal} consists of first visiting the root, and then executing a preorder traversal on each of the root's children (if any).
+
+For example
+
+\[
+\xymatrix{
+&&&1 \ar@/^/[dll]^a \ar@/_/[drr]_g \ar@{-}[dll] \ar@{-}[drr] \\
+&2 \ar@/^/[dl]^b \ar@/_/[dr]_d \ar@/^/[urr]^f \ar@{-}[dl] \ar@{-}[dr]&&&& 5 \ar@/^/[dl]^h \ar@/_/[dr]_j \ar@{-}[dl] \ar@{-}[dr] \\
+3 \ar@/^/[ur]^c && 4 \ar@/_/[ul]_e && 6 \ar@/^/[ur]^i && 7
+}
+\]
+
+The term \emph{preorder} refers to the fact that a node is visited \emph{before} any of its descendents.  A preorder traversal is defined for any rooted tree.
+As pseudocode, the preorder traversal is
+
+\begin{program}
+\mathrm{PreorderTraversal}(x,\mathrm{Visit})
+\text{{\bf Input}: A node $x$ of a binary tree, with children $\mathrm{left}(x)$ and $\mathrm{right}(x)$, and some computation $\mathrm{Visit}$ defined for $x$}
+\text{{\bf Output}: Visits nodes of subtree rooted at $x$ in a preorder traversal}
+\text{{\bf Procedure}:}
+\mathrm{Visit}(x)
+\mathrm{PreorderTraversal}(\mathrm{left}(x), \mathrm{Visit})
+\mathrm{PreorderTraversal}(\mathrm{right}(x), \mathrm{Visit})
+\end{program}
+
+\subsubsection*{Postorder Traversal}
+
+Given a rooted tree, a \emph{postorder traversal} consists of first executing a postorder traversal on each of the root's children (if any), and then visiting the root.
+
+For example
+
+\[
+\xymatrix{
+    &&&7 \ar@/^/[dll]^a \ar@/_/[drr]_g \ar@{-}[dll] \ar@{-}[drr] \\
+        &3 \ar@/^/[dl]^b \ar@/_/[dr]_d \ar@/^/[urr]^f \ar@{-}[dl] \ar@{-}[dr]
+&&&& 6 \ar@/^/[dl]^h \ar@/_/[dr]_j \ar@{-}[dl] \ar@{-}[dr] \\
+        1 \ar@/^/[ur]^c && 2 \ar@/_/[ul]_e && 4 \ar@/^/[ur]^i && 5
+}
+\]
+
+As with the preorder traversal, the term \emph{postorder} here refers to the fact that a node is visited \emph{after} all of its descendents.  A postorder traversal is defined for any rooted tree.
+As pseudocode, the postorder traversal is
+
+\begin{program}
+\mathrm{PostorderTraversal}(x,\mathrm{Visit})
+\text{{\bf Input}: A node $x$ of a binary tree, with children $\mathrm{left}(x)$ and $\mathrm{right}(x)$, and some computation $\mathrm{Visit}$ defined for $x$}
+\text{{\bf Output}: Visits nodes of subtree rooted at $x$ in a postorder traversal}
+\text{{\bf Procedure}:}
+\mathrm{PostorderTraversal}(\mathrm{left}(x), \mathrm{Visit})
+\mathrm{PostorderTraversal}(\mathrm{right}(x), \mathrm{Visit})
+\mathrm{Visit}(x)
+\end{program}
+
+\subsubsection*{In-order Traversal}
+
+Given a binary tree, an \emph{in-order traversal} consists of executing an in-order traversal on the root's left child (if present), then visiting the root, then executing an in-order traversal on the root's right child (if present).
+Thus all of a root's left descendents are visited before the root, and the root is visited before any of its right descendents.
+
+For example
+
+\[
+\xymatrix{
+&&&4 \ar@/^/[dll]^a \ar@/_/[drr]_g \ar@{-}[dll] \ar@{-}[drr] \\
+&2 \ar@/^/[dl]^b \ar@/_/[dr]_d \ar@/^/[urr]^f \ar@{-}[dl] \ar@{-}[dr]&&&& 6 \ar@/^/[dl]^h \ar@/_/[dr]_j \ar@{-}[dl] \ar@{-}[dr] \\
+1 \ar@/^/[ur]^c && 3 \ar@/_/[ul]_e && 5 \ar@/^/[ur]^i && 7
+}
+\]
+
+  As can be seen, the in-order traversal has the wonderful property of traversing a tree from left to right (if the tree is visualized as it has been drawn here).
+The term \emph{in-order} comes from the fact that an in-order traversal of a binary search tree visits the data associated with the nodes in sorted order.
+As pseudocode, the in-order traversal is
+
+\begin{program}
+\mathrm{InOrderTraversal}(x,\mathrm{Visit})
+\text{{\bf Input}: A node $x$ of a binary tree, with children $\mathrm{left}(x)$ and $\mathrm{right}(x)$, and some computation $\mathrm{Visit}$ defined for $x$}
+\text{{\bf Output}: Visits nodes of subtree rooted at $x$ in an in-order traversal}
+\text{{\bf Procedure}:}
+\mathrm{InOrderTraversal}(\mathrm{left}(x), \mathrm{Visit})
+\mathrm{Visit}(x)
+\mathrm{InOrderTraversal}(\mathrm{right}(x), \mathrm{Visit})
+\end{program}
+%%%%%
+%%%%%
+\end{document}

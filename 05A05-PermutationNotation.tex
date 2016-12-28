@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PermutationNotation}
+\pmcreated{2013-03-22 17:27:34}
+\pmmodified{2013-03-22 17:27:34}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{permutation notation}
+\pmrecord{8}{39842}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A05}
+\pmclassification{msc}{03-00}
+\pmclassification{msc}{20B99}
+\pmrelated{Cycle2}
+\pmrelated{CycleNotation}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{bottom}
+\PMlinkescapeword{fixed}
+\PMlinkescapeword{information}
+\PMlinkescapeword{order}
+\PMlinkescapeword{remainder}
+\PMlinkescapeword{right}
+\PMlinkescapeword{top}
+
+There are at least three methods of denoting permutations.
+
+The first method of denoting a permutation that acts on a finite set is to simply list where it sends each element.  For example, the function $f$ defined as follows is a permutation on $\{ 1,2,3,4,5,6 \}$:
+
+$$f(1)=3$$
+
+$$f(2)=1$$
+
+$$f(3)=2$$
+
+$$f(4)=6$$
+
+$$f(5)=5$$
+
+$$f(6)=4$$
+
+Another method of denoting a permutation that acts on a finite set is to give the information in a matrix.  This matrix will have $2$ rows and $n$ columns, where $n$ is the cardinality of the set on which the permutation is acting.  The first row is each of the elements of the set on which the permutation is acting, and the second row is created so that, whenever a column is read, the bottom element is where the permutation sends the top element.  If the set on which the permutation is acting has an order on it, then the elements usually occur in the first row according to that order.  For example, the function $f$ as described above would be denoted as:
+
+$$\left( \begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6 \\
+3 & 1 & 2 & 6 & 5 & 4 \end{array} \right)$$
+
+\PMlinkescapetext{One} final method of denoting a permutation is as follows:
+
+\begin{enumerate}
+\item Write a left parenthesis and an element that is not sent to itself by the permutation.  (If the permutation fixes every element of the set, then it is the identity.  In that case, if the set is of the form $\{1, \dots , n \}$, then this permutation is typically denoted $(1)$.)  If the set on which the permutation is acting has an \PMlinkname{order}{PartialOrder} on it, then the elements are considered according to that order.
+\item Immediately to the right of the previous element, write the element to which the permutation sends it.
+\item Repeat the previous step until repetition would occur.  Instead of repeating the element, put a right parenthesis.
+\item Repeat this procedure for the remainder of the set on which the permutation is acting.
+\end{enumerate}
+
+This procedure yields a permutation written in cycle notation.
+
+The procedure will be demonstrated for the function $f$.
+
+Since the function $f$ acts on $\{1,2,3,4,5,6\}$, $1$ is the first element of this set, and $f(1)\neq 1$, we start by writing:
+
+$$(1$$
+
+Since $f(1)=3$, we put $3$ after $1$:
+
+$$(13$$
+
+Since $f(3)=2$, we put $2$ after $3$:
+
+$$(132$$
+
+Since $f(2)=1$, we put a right parenthesis:
+
+$$(132)$$
+
+In the remainder of the set, $4$ is the the first element.  Since $f(4)\neq 4$, $(4$ is added:
+
+$$(132)(4$$
+
+Since $f(4)=6$, we put $6$ after $4$:
+
+$$(132(46$$
+
+Since $f(6)=4$, we put a right parenthesis:
+
+$$(132)(46)$$
+
+The element $5$ is the only one remaining.  Since it is \PMlinkname{fixed}{Fixed} by the permutation, it need not be written.  Thus, the permutation is $(132)(46)$.
+
+Note that, with this method of denoting permutations, only elements that are not fixed by the permutation are written.  Thus, this procedure can be used to denote permutations that act on any set, so long as the number of elements that are not fixed by the permutation is finite.  Also, this method of denoting permutations is more concise than the other methods.  For these two reasons, this last method is the one that is most often used.  The permutation has then been written as a ``product'' of cycles.
+%%%%%
+%%%%%
+\end{document}

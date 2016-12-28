@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeometricLattice}
+\pmcreated{2013-03-22 15:57:32}
+\pmmodified{2013-03-22 15:57:32}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{geometric lattice}
+\pmrecord{12}{37972}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05B35}
+\pmclassification{msc}{06C10}
+\pmclassification{msc}{51D25}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\newtheorem*{thm}{Theorem}
+\begin{document}
+A lattice is said to be \emph{geometric} if it is 
+\begin{enumerate}
+\item \PMlinkname{algebraic}{AlgebraicLattice},
+\item \PMlinkname{semimodular}{SemimodularLattice}, and
+\item each compact element is a join of atoms.
+\end{enumerate}
+
+By the definition of compactness, the last condition is equivalent to ``each compact element is a finite join of atoms''.
+
+Three examples that come to mind are 
+\begin{itemize}
+\item the power set of a set;
+\item an incidence geometry with the empty set adjoined to form the bottom element; and
+\item a projective geometry (the lattice of subspaces of a vector space).
+\end{itemize}
+
+From the last two examples, one sees how the name ``geometric'' lattice is derived.
+
+To generate geometric lattices from existing ones, one has the following
+
+\begin{thm} Any lattice interval of a geometric lattice is also geometric.\end{thm}
+
+\begin{proof} Let $L$ be a geometric lattice and $I=[x,y]$ a lattice interval of $L$.  We first prove that $I$ is algebraic, that is, $I$ is both complete and that every element is a join of compact elements.  Since $L$ is complete, both $\bigvee S$ and $\bigwedge S$ exist in $L$ for any subset $S\subseteq L$.  Since $x\le s\le y$ for each $s\in S$, $\bigvee S$ and $\bigwedge S$ are in fact in $I$.  So $I$ is a complete lattice.  
+
+Now, suppose that $a\in I$.  Since $L$ is algebraic, $a$ is a join of compact elements in $L$: $a=\bigvee_i a_i$, where each $a_i$ is compact in $L$.  Since $a_i\le y$, the elements $b_i:=a_i\vee x$ are in $I$ for each $i$.  So $a=a\vee x=(\bigvee_i a_i)\vee x=\bigvee_i (a_i\vee x)=\bigvee_i b_i$.  We want to show that each $b_i$ is compact in $I$.  Since $a_i$ is compact in $L$, $a_i=\bigvee_{k=1}^{m}\alpha_k$, where $\alpha_k$ are atoms in $L$.  Then $b_i=(\bigvee_{k=1}^{m}\alpha_k)\vee x=\bigvee_{k=1}^{m}(\alpha_k\vee x)$.  Let $S$ be a subset of $I$ such that $\alpha_k\vee x\le \bigvee S$.  Since $\alpha_k\le \bigvee S$ and $\alpha_k$ is an atom in $L$ and hence compact, there is a finite subset $F\subseteq S$ such that $\alpha_k\le \bigvee F$.  Because $F\subseteq I$, $x\le \bigvee F$, and so $\alpha_k\vee x\le \bigvee F$, meaning that $\alpha_k\vee x$ is compact in $I$.  This shows that $b_i$, as a finite join of compact elements in $I$, is compact in $I$ as well.  In turn, this shows that $a$ is a join of compact elements in $I$.
+
+Since $I$ is both complete and each of its elements is a join of compact elements, $I$ is algebraic.
+
+Next, we show that $I$ is semimodular.  If $c,d\in I$ with $c\wedge d\prec c$ ($c\wedge d$ is \emph{\PMlinkname{covered}{CoveringRelation}} by $c$).  Since $L$ is semimodular, $d\prec c\vee d$.  As $c\vee d$ is the least upper bound of $\lbrace c,d\rbrace$,  $c\vee d\le y$, and thus $c\vee d\in I$.  So $I$ is semimodular.  
+
+Finally, we show that every compact element of $I$ is a finite join of atoms in $I$.  Suppose $a\in I$ is compact.  Then certainly $a\le \bigvee I$.  Consequently, $a\le \bigvee J$ for some finite subset $J$ of $I$.  But since $L$ is atomistic, each element in $J$ is a join of atoms in $L$.  Take the join of each of the atoms with $x$, we get either $x$ or an atom in $I$.  Thus, each element in $J$ is a join of atoms in $I$ and hence $a$ is a join of atoms in $I$.
+\end{proof}
+
+Note that in the above proof, $b_i$ is in fact a finite join of atoms in $I$, for if $\alpha_k\le x$, then $\alpha_k\vee x=x$.  Otherwise, $\alpha_k\vee x$ covers $x$ (since $L$ is semimodular), which means that $\alpha_k\vee x$ is an atom in $I$.
+
+\textbf{Remark}.  In matroid theory, where geometric lattices play an important role, lattices considered are generally assumed to be finite.  Therefore, any lattice in this context is automatically complete and every element is compact.  As a result, any finite lattice is geometric if it is semimodular and atomistic.
+
+\PMlinkescapeword{compactness}
+%%%%%
+%%%%%
+\end{document}

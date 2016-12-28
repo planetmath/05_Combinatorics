@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChromaticNumber}
+\pmcreated{2013-05-16 21:23:44}
+\pmmodified{2013-05-16 21:23:44}
+\pmowner{mathcam}{2727}
+\pmmodifier{unlord}{1}
+\pmtitle{chromatic number}
+\pmrecord{9}{31764}
+\pmprivacy{1}
+\pmauthor{mathcam}{1}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+\pmrelated{ChromaticNumberAndGirth}
+\pmrelated{FourColorConjecture}
+\pmrelated{ChromaticPolynomial}
+\pmrelated{ChromaticNumberOfASpace}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%%\usepackage{xypic}
+\usepackage{color}
+\begin{document}
+The \emph{chromatic number} of a graph is the minimum number of colours required to colour it.
+
+Consider the following graph:
+
+$$\xymatrix{
+{\color{red}A} \ar@{-}[r] & {\color{blue}B} \ar@{-}[r] \ar@{-}[d] & {\color{red}C} \ar@{-}[r] \ar@{-}[dl] & {\color{green}F} \ar@{-}[dl] \\
+& {\color{green}D} \ar@{-}[r] & {\color{blue}E} & }$$
+
+This graph has been coloured using $3$ colours.  Furthermore, it's clear that it cannot be coloured with fewer than $3$ colours, as well: it contains a subgraph ($BCD$) that is isomorphic to the complete graph of $3$ vertices.  As a result, the chromatic number of this graph is indeed $3$.
+
+This example was easy to solve by inspection.  In general, however, finding the chromatic number of a large graph (and, similarly, an optimal colouring) is a very difficult (NP-hard) problem.
+%%%%%
+%%%%% rerender
+\end{document}

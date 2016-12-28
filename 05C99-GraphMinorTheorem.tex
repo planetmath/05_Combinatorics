@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GraphMinorTheorem}
+\pmcreated{2013-03-22 14:04:20}
+\pmmodified{2013-03-22 14:04:20}
+\pmowner{AxelBoldt}{56}
+\pmmodifier{AxelBoldt}{56}
+\pmtitle{graph minor theorem}
+\pmrecord{16}{35430}
+\pmprivacy{1}
+\pmauthor{AxelBoldt}{56}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C99}
+\pmrelated{MinorOfAGraph}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{closed}
+\PMlinkescapeword{class}
+\PMlinkescapeword{series}
+\PMlinkescapeword{theory}
+
+
+If $(G_k)_{k\in\Bbb{N}}$ is an infinite sequence of finite graphs, then there exist two numbers $m<n$ such that $G_m$ is isomorphic to a minor of $G_n$.
+
+This theorem is often referred to as the deepest result in graph theory. It was proven by Robertson and Seymour in 1988 as the culminating result of a long series of articles, and the proof was recently published in the Journal of Combinatorial Theory series B. It resolves Wagner's conjecture in the affirmative and leads to an important generalization of Kuratowski's theorem.
+
+Specifically, to every set $\cal{G}$ of finite graphs which is closed under taking minors (meaning if $G\in\cal{G}$ and $H$ is isomorphic to a minor of $G$, then $H\in\cal{G}$) there exist \emph{finitely many} graphs $G_1,\ldots,G_n$ such that $\cal{G}$ consists precisely of those finite graphs that do not have a minor isomorphic to one of the $G_i$. The graphs $G_1,\ldots,G_n$ are often referred to as the \emph{forbidden minors} for the class $\cal{G}$. 
+
+\subsection{References}
+\begin{itemize}
+\item Neil Robertson and P.D. Seymour. Graph Minors XX: Wagner's conjecture. {\em Journal of Combinatorial Theory B}, Volume 92, Issue 2, November 2004, Pages 325-357. \url{http://dx.doi.org/10.1016/j.jctb.2004.08.001}
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

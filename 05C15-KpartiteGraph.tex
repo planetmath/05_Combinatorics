@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KpartiteGraph}
+\pmcreated{2013-03-22 12:17:16}
+\pmmodified{2013-03-22 12:17:16}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{k-partite graph}
+\pmrecord{10}{31785}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{color}
+\usepackage[all]{xypic}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+A $k$-partite graph is a graph with a chromatic number of $k$.
+
+An alternate definition of a $k$-partite graph is a graph where the vertices are partitioned into $k$ subsets with the following conditions:
+
+\begin{enumerate}
+\item No two vertices in the same subset are adjacent.
+
+\item There is no partition of the vertices with fewer than $k$ subsets where condition 1 holds.
+\end{enumerate}
+
+These two definitions are equivalent.  Informally, we see that a colour can be assigned to all the vertices in each subset, since they are not adjacent to one another.  Furthermore, this is also an optimal colouring, since the second condition holds.
+
+An example of a 4-partite graph:
+
+\begin{center}
+\begin{xy}
+*!C\xybox{\xymatrix{
+  & {\color{red}A} \ar@{-}[drrr] \ar@{-}[dd] \ar@{-}[dl] \ar@{-}[ddrr] & {\color{red}B} \ar@{-}[drr] \ar@{-}[dd] & {\color{red}C} \ar@{-}[dlll] \ar@{-}[ddll] & \\
+{\color{cyan}G} \ar@{-}[rrrr] &   &   &   & {\color{green}H} \\
+  & {\color{blue}D} & {\color{blue}E} \ar@{-}[urr] & {\color{blue}F} \ar@{-}[ulll] \ar@{-}[ur]& \\
+}}
+\end{xy}
+\end{center}
+
+A $2$-partite graph is also called a bipartite graph.
+%%%%%
+%%%%%
+\end{document}

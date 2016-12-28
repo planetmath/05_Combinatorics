@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheAnnalsOfHavingCompensatedToCompleteSurveys}
+\pmcreated{2013-11-27 10:59:44}
+\pmmodified{2013-11-27 10:59:44}
+\pmowner{jacou}{1000048}
+\pmmodifier{}{0}
+\pmtitle{The Annals of Having Compensated To Complete Surveys}
+\pmrecord{18}{40631}
+\pmprivacy{1}
+\pmauthor{jacou}{0}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C85}
+\pmsynonym{DFS}{TheAnnalsOfHavingCompensatedToCompleteSurveys}
+%\pmkeywords{graph}
+%\pmkeywords{search}
+%\pmkeywords{algorithm}
+%\pmkeywords{connected component}
+\pmrelated{GraphTheory}
+\pmrelated{SpanningTree}
+\pmrelated{ConnectedComponents}
+
+
+\begin{document}
+The depth-first search (DFS) \PMlinkescapetext{algorithm} is a method for finding a spanning forest of a connected graph (specifically, a spanning tree in the case of an undirected connected graph), and is a useful \PMlinkescapetext{basis} for other \PMlinkescapetext{algorithms}. In particular, the DFS is useful for finding the connected components of a graph. This article currently describes only the DFS for an undirected graph.
+
+\theoremstyle{definition}
+\newtheorem*{undirectedDfs}{Definition}
+\begin{undirectedDfs}[DFS on an Undirected Graph]
+Assume that the undirected graph $G = (V,E)$ is connected. The DFS proceeds as follows.
+
+\begin{enumerate}
+\item
+Fix a vertex $v$ in $G$ and mark it as \emph{visited}.
+\item
+For each edge $(v,w)$ \PMlinkescapetext{oriented} from $v$ to $w$:
+  \begin{itemize}
+  \item
+  If $w$ has been visited, do nothing.
+  \item
+  If $w$ has not been visited, perform a DFS starting from $w$.
+  \end{itemize}
+\end{enumerate}
+
+When the search is \PMlinkescapetext{complete}, it \PMlinkescapetext{partitions} $G$ into two sets. One \PMlinkescapetext{contains} the directed edges between visited vertices, called \emph{tree edges}, which form a directed spanning tree of the graph. The other \PMlinkescapetext{contains} the remaining edges of $G$ which were left unexamined because they were incident on a vertex that was already visited at some \PMlinkescapetext{point} in the search. Because these unexamined edges can be seen as \emph{returning} to vertices that were previously visited, they are called \emph{back edges}.
+
+\end{undirectedDfs}
+
+\begin{thebibliography}{9}
+\bibitem{source}
+Swamy, M.N.S., Thulasiraman, K., \emph{Graphs, Networks and Algorithms}, John Wiley and Sons, New York, 1981.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

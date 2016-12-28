@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CountingCompositionsOfAnInteger}
+\pmcreated{2013-03-22 17:37:55}
+\pmmodified{2013-03-22 17:37:55}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{counting compositions of an integer}
+\pmrecord{5}{40053}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05-00}
+\pmdefines{composition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{place}
+\PMlinkescapeword{even}
+\PMlinkescapeword{section}
+\PMlinkescapeword{sections}
+\PMlinkescapeword{composition}
+A \emph{composition} of a nonnegative integer $n$ is a sequence $(a_1,\ldots,a_k)$ of positive integers with $\sum a_i=n$. Denote by $C_n$ the number of compositions of $n$, and denote by $S_n$ the set of those compositions. (Note that this is a very different - and simpler - concept than the number of partitions of an integer; here the \PMlinkname{order}{PartialOrder} matters).
+
+For some small values of $n$, we have
+\begin{align*}
+C_0&=1\\
+C_1 &= 1\\
+C_2 &= 2 \qquad (2), (1,1)\\
+C_3 &= 4 \qquad (3), (1,2), (2,1), (1,1,1)
+\end{align*}
+In fact, it is easy to see that $C_n=2C_{n-1}$ for $n>1$: each composition $(a_1,\ldots,a_k)$ of $n-1$ can be associated with two different compositions of $n$
+\begin{gather*}
+(a_1,a_2,\ldots,a_k,1)\\
+(a_1,a_2,\ldots,a_k+1)
+\end{gather*}
+We thus get a map $\varphi:S_{n-1}\times\{0,1\}\to S_n$ given by
+\begin{gather*}
+\varphi((a_1,\ldots,a_k),0)=(a_1,\ldots,a_k,1)\\
+\varphi((a_1,\ldots,a_k),1)=(a_1,\ldots,a_k+1)
+\end{gather*}
+and this map is clearly injective. But it is also clearly surjective, for given $(a_1,\ldots,a_k)\in S_n$, if $a_k=1$ then the composition is the image of $((a_1,\ldots,a_{k-1}),0)$ while if $a_k>1$, then it is the image of $((a_1,\ldots,a_{k-1}),1)$. This proves that (for $n>1$) $C_n = 2C_{n-1}$.
+
+We can also figure out how many compositions there are of $n$ with $k$ parts. Think of a box with $n$ sections in it, with dividers between each pair of sections and a chip in each section; there are thus $n$ chips and $n-1$ dividers. If we leave $k-1$ of the dividers in place, the result is a composition of $n$ with $k$ parts; there are obviously $\dbinom{n-1}{k-1}$ ways to do this, so the number of compositions of $n$ into $k$ parts is simply $\dbinom{n-1}{k-1}$. Note that this gives even a simpler proof of the first result, since
+\[\sum_{k=1}^n\dbinom{n-1}{k-1} = \sum_{k=0}^{n-1}\dbinom{n-1}{k}=2^{n-1}\]
+%%%%%
+%%%%%
+\end{document}

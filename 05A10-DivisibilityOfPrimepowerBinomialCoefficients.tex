@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DivisibilityOfPrimepowerBinomialCoefficients}
+\pmcreated{2013-03-22 18:42:29}
+\pmmodified{2013-03-22 18:42:29}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{divisibility of prime-power binomial coefficients}
+\pmrecord{4}{41473}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmclassification{msc}{11B65}
+\pmrelated{OrderValuation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\ord}{ord}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ax}{Axiom}
+\begin{document}
+For $p$ a prime, $n$ a nonzero integer, define $\ord_p(n)$ to be the largest integer $r$ such that $p^r\mid n$.
+
+An easy consequence of Kummer's theorem is:
+\begin{thm} Let $p$ be a prime, $n\geq 1$ an integer. If $1\leq rp^s\leq p^n$ where $r,s$ are nonnegative integers with $p\nmid r$, then $\ord_p\binom{p^n}{rp^s} = n-s$.
+\end{thm}
+
+\begin{proof} The result is clearly true for $r=1, s=n$, so assume that $s<n$. By Kummer's theorem, $\ord_p\binom{p^n}{rp^s}$ is the number of carries when adding $rp^s$ to $p^n-rp^s$ in base $p$. Consider the base $p$ representations of $rp^s$ and $p^n-rp^s$. They each have $n$ digits (possibly with leading zeros) when represented in base $p$, and they each have $s$ trailing zeros. If the rightmost nonzero digit in $rp^s$ is $k$, then the rightmost nonzero digit in $p^n-rp^s$ is in the same ``decimal'' place and has value $p-k$. Each pair of corresponding digits (one from $rp^s$ and one from $p^n-rp^s$) to the left of that point sum to $p-1$ (it may help to think about how you subtract a decimal number from a power of $10$, and what the result looks like).
+
+It is then clear that adding those two numbers together will result in no carries in the rightmost $s$ places, but there will be a carry out of the $s+1^{\mathrm{st}}$ place and out of each successive place up to and including the $n^{\mathrm{th}}$ place, for a total of $n-s$ carries.
+\end{proof}
+
+A couple of examples may help to make this proof more transparent. Take $p=3$. Then
+\[
+  \dbinom{27}{4} = 17550 = 2\cdot 3^3 \cdot 5^2\cdot 13
+\]
+so that $\ord_3 \binom{27}{4}=3$. Now, $27_{10}=1000_3$ and $4_{10}=11_3$, so that $27-4=23_{10}$ is $212_3$. Adding $212_3+11_3$ indeed results in carries out of all three places since there are no trailing zeros.
+\[
+  \dbinom{27}{6} = 296010 = 2\cdot 3^2\cdot 5\cdot 11\cdot 13\cdot 23
+\]
+so that $\ord_3 \binom{27}{6}=2$. Now, $6_{10}=20_3$ so that $27-6=21_{10}$ is $210_3$. When adding $20_3+210_3$ , there are two carries, out of the $3$'s place and out of the $9$'s place. There is no carry out of the ones place since both numbers have a $0$ there.
+
+%%%%%
+%%%%%
+\end{document}

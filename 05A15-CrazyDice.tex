@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CrazyDice}
+\pmcreated{2013-03-22 15:01:43}
+\pmmodified{2013-03-22 15:01:43}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{crazy dice}
+\pmrecord{7}{36738}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+It is a standard exercise in elementary combinatorics to \PMlinkescapetext{calculate} the number of ways of rolling any given value with 2 fair 6-sided dice (by taking the \PMlinkescapetext{sum} of the two rolls).  The below table \PMlinkescapetext{enumerates} the number of such ways of rolling a given value $n$:
+
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+$n$&\# of ways\\
+2&1\\
+3&2\\
+4&3\\
+5&4\\
+6&5\\
+7&6\\
+8&5\\
+9&4\\
+10&3\\
+11&2\\
+12&1\\
+\end{tabular}
+\end{center}
+
+A somewhat (un?)natural question is to ask whether or not there are any other ways of re-labeling the faces of the dice with positive integers that \PMlinkescapetext{generate} these sums with the same frequencies.  The surprising answer to this question is that there does indeed exist such a re-labeling, via the labeling
+\begin{align*}
+\mbox{Die }1&=\{1,2,2,3,3,4\}\\
+\mbox{Die }2&=\{1,3,4,5,6,8\}\\
+\end{align*}
+and a pair of dice with this labeling are called a set of \emph{crazy dice}.  It is straight-forward to verify that the various possible \PMlinkescapetext{sums} occur with the same frequencies as given by the above table.
+%%%%%
+%%%%%
+\end{document}

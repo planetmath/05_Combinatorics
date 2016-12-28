@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfAlonChungLemma}
+\pmcreated{2013-03-22 17:26:53}
+\pmmodified{2013-03-22 17:26:53}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{proof of Alon-Chung lemma}
+\pmrecord{6}{39829}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C50}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let the vertices of $G$ be labeled by $\{1,2,\ldots, n\}$, and $\mathbf{x}$ be the column vector defined by
+\[
+x_i = \begin{cases}
+1 & \text{if vertex $i$ is in $X$} \\
+0 & \text{otherwise}
+\end{cases}
+\]
+for $i=1,2,\ldots, n$.
+
+
+Let $\mathbf{A}$ denote the adjacency matrix of $G$. The number of edges in the subgraph induced by $X$ equals $\frac{1}{2} \mathbf{x}^T \mathbf{A x}$, and we are going to show the following equivalent inequality,
+\[\mathbf{x}^T \mathbf{A x} \leq \frac{1}{n} \Big( d|X|^2 +  \lambda |X|(n- |X|) \Big).
+\]
+
+We label the eigenvalues of $\mathbf{A}$ in decreasing order as
+\[
+ \lambda_1 \geq \lambda_2 \geq \ldots \geq \lambda_n.
+\]
+
+
+The largest eigenvalue $\lambda_1$ is equal to the degree $d$, and we let $\mathbf{u}_1$ be the corresponding normalized eigenvector,
+\[
+  \mathbf{u}_1 := \frac{1}{\sqrt{n}} [1, 1, \ldots, 1 ]^T.
+\]
+As $\mathbf{A}$ is symmetric, there is a unitary matrix $\mathbf{U}$ that diagonalizes $\mathbf{A}$,
+\[
+ \mathbf{U}^T \mathbf{A U} = 
+ \begin{bmatrix}
+ \lambda_1 & & &\\
+ & \lambda_2 &&\\
+ & & \ddots & \\
+&&&     \lambda_n
+ \end{bmatrix}.
+\]
+The first column of $\mathbf{U}$ is the column vector $\mathbf{u}_1$. We obtain
+\begin{eqnarray*}
+ \mathbf{x}^T \mathbf{A x} &=& \sum_{k=1}^n \lambda_k (\mathbf{u}_k^T \mathbf{x})^2 \\
+ &\leq & d (\mathbf{u}_1^T \mathbf{x})^2 + \lambda_2 \sum_{k=2}^n  (\mathbf{u}_k^T \mathbf{x})^2.
+\end{eqnarray*}
+
+In the line above, the first term is 
+\[
+ d (\mathbf{u}_1^T \mathbf{x})^2 = \frac{d |X|^2}{n},
+\]
+while the summation is equal to
+\[
+\sum_{k=2}^n  (\mathbf{u}_k^T  \mathbf{x})^2 = \|\mathbf{x}\|^2 - (\mathbf{u}_1^T \mathbf{x})^2 = |X| - \frac{|X|^2}{n}.
+\]
+
+Hence
+\begin{eqnarray*}
+\mathbf{x}^T \mathbf{A x} & \leq & \frac{d |X|^2}{n} + \lambda_2 \Big( |X| - \frac{|X|^2}{n} \Big)\\
+& = & \frac{1}{n} \Big( d|X|^2 +  \lambda_2 |X|(n- |X|) \Big).
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

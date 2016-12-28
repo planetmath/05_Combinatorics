@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GraphHomeomorphism}
+\pmcreated{2013-03-22 18:02:02}
+\pmmodified{2013-03-22 18:02:02}
+\pmowner{Ziosilvio}{18733}
+\pmmodifier{Ziosilvio}{18733}
+\pmtitle{graph homeomorphism}
+\pmrecord{8}{40553}
+\pmprivacy{1}
+\pmauthor{Ziosilvio}{18733}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C99}
+\pmdefines{simple subdivision}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\ie}{\textit{i.e.}}
+
+\begin{document}
+Let $G=(V,E)$ be a simple undirected graph.
+A \emph{simple subdivision} is the replacement of an edge $(x,y)\in E$
+with a pair of edges $(x,z),(z,y)$,
+$z$ being a new vertex, \ie, $z\not\in V$.
+The reverse operation of a simple subdivision
+is an edge-contraction through a vertex of degree 2.
+
+Two graphs $G_1$, $G_2$ are \emph{homeomorphic}
+if $G_1$ can be transformed into $G_2$
+via a finite sequence of simple subdivisions
+and edge-contractions through vertices of degree 2.
+It is easy to see that graph homeomorphism is an equivalence relation.
+
+Equivalently, $G_1$ and $G_2$ are homeomorphic
+if there exists a third graph $G_3$
+such that both $G_1$ and $G_2$ can be obtained from $G_3$
+via a finite sequence of edge-contractions through vertices of degree 2.
+
+If a graph $G$ has a subgraph $H$
+which is homeomorphic to a graph $G'$ having no vertices of degree 2,
+then $G'$ is a minor of $G$.
+The vice versa is not true:
+as a counterexample, the Petersen graph
+has $K_{5}$ as a minor, but no subgraph homeomorphic to $K_{5}$.
+This happens because a graph homeomorphism
+cannot change the number of vertices of degree $d\neq 2$:
+since all the vertices of $K_{5}$ have degree 4
+and all the vertices of the Petersen graph have degree 3,
+no subgraph of the Petersen graph can be homeomorphic to $K_{5}$.
+
+%%%%%
+%%%%%
+\end{document}

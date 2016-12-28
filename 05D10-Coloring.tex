@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Coloring}
+\pmcreated{2013-03-22 12:55:43}
+\pmmodified{2013-03-22 12:55:43}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{coloring}
+\pmrecord{5}{33283}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05D10}
+\pmsynonym{colouring}{Coloring}
+\pmrelated{Partition}
+\pmrelated{GraphTheory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+A \emph{coloring} of a set $X$ by $Y$ is just a function $f:X\rightarrow Y$.  The term coloring is used because the function can be thought of as assigning a ``color'' from $Y$ to each element of $X$.
+
+Any coloring provides a partition of $X$: for each $y\in Y$, $f^{-1}(y)$, the set of elements $x$ such that $f(x)=y$, is one element of the partition.  Since $f$ is a function, the sets in the partition are disjoint, and since it is a total function, their union is $X$.
+%%%%%
+%%%%%
+\end{document}

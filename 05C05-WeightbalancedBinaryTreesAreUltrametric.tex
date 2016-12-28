@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeightbalancedBinaryTreesAreUltrametric}
+\pmcreated{2013-03-22 13:28:31}
+\pmmodified{2013-03-22 13:28:31}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{weight-balanced binary trees are ultrametric}
+\pmrecord{9}{34045}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be the set of leaf nodes in a weight-balanced binary tree. Let the distance between leaf nodes be identified with the weighted path length between them. We will show that this distance metric on $X$ is ultrametric.  
+
+Before we begin, let the join of any two nodes $x,y$, denoted $x \lor y$, be defined as the node $z$ which is the most immediate common ancestor of $x$ and $y$ (that is, the common ancestor which is farthest from the root). Also, we are using weight-balanced in the sense that
+
+\begin{itemize}
+\item the weighted path length from the root to each leaf node is equal, and 
+\item each subtree is weight-balanced, too. 
+\end{itemize}
+
+
+\subsection*{Lemma: two properties of weight-balanced trees}
+
+Because the tree is weight-balanced, the distances between any node and each of the leaf node descendents of that node are equal. So, for any leaf nodes $x,y$, 
+
+\begin{equation} 
+\label{eq:prop1} 
+d(x,x \lor y) = d(y, x \lor y) \end{equation} 
+
+Hence, 
+\begin{equation} 
+\label{eq:prop2} 
+d(x,y) = d(x,x \lor y) + d(y, x \lor y) = 2*d(x, x \lor y) 
+\end{equation}  
+
+\subsection*{Back to the main proof}
+
+We will now show that the ultrametric three point condition holds for any three leaf nodes in a weight-balanced binary tree. 
+
+Consider any three points $a,b,c$ in a weight-balanced binary tree. If there exists a renaming of $a,b,c$ such that $d(a,b) \leq d(b,c) = d(a,c)$, then the three point condition holds. Now assume this is not the case. Without loss of generality, assume that $d(a,b) < d(a,c)$. 
+
+Applying Eqn. \ref{eq:prop2}, 
+
+\begin{eqnarray*}
+2*d(a, a \lor b) &<& 2*d(a, a \lor c)
+\\ d(a, a \lor b) &<& d(a, a \lor c)
+\end{eqnarray*} 
+
+Note that both $a \lor b$ and $a \lor c$ are ancestors of $a$. Hence, $a \lor c$ is a more distant ancestor of $a$ and so $a \lor c$ must be an ancestor of $a \lor b$. 
+
+Now, consider the path between $b$ and $c$. \PMlinkescapetext{One way} to get from $b$ to $c$ is to go from $b$ up to $a \lor b$, then up to $a \lor c$, and then down to $c$. Since this is a tree, this is the only path. The highest node in this path (the ancestor of both b and c) was $a \lor c$, so the distance $d(b,c) = 2*d(b,a \lor c)$. 
+
+But by Eqn. \ref{eq:prop1} and Eqn. \ref{eq:prop2} 
+(noting that $b$ is a descendent of $a \lor c$), we have
+
+\begin{equation*}
+d(b,c) = 2*d(b,a \lor c) = 2*d(a,a \lor c) = d(a,c)
+\end{equation*}
+
+To summarize, we have $d(a,b) \leq d(b,c) = d(a,c)$, which is the desired ultrametric three point condition. So we are done.
+
+Note that this means that, if $a,b$ are leaf nodes, and you are at a node outside the subtree under $a \lor b$, then $d(\textrm{you},a) = d(\textrm{you},b)$. In other words, (from the point of view of distance between you and them,) the \PMlinkescapetext{structure} of any subtree that is not your own doesn't matter to you. This is expressed in the three point condition as ``if two points are closer to each other than they are to you, then their distance to you is equal''.
+
+(above, we have only proved this if you are at a leaf node, but it works for any node which is outside the subtree under $a \lor b$, because the paths to $a$ and $b$ must both pass through $a \lor b$).
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PetersenTheorem}
+\pmcreated{2013-03-22 14:06:07}
+\pmmodified{2013-03-22 14:06:07}
+\pmowner{scineram}{4030}
+\pmmodifier{scineram}{4030}
+\pmtitle{Petersen theorem}
+\pmrecord{15}{35502}
+\pmprivacy{1}
+\pmauthor{scineram}{4030}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C70}
+%\pmkeywords{complete matching}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Every finite , \PMlinkname{3-regular}{Valency}, 2-edge connected graph has a complete matching.
+
+\begin{proof}
+Using the notations from the Tutte theorem, we have to prove that for all $X\subseteq V(G)$ the inequality $c_p(G-X)\leq |X|$ holds. There are at least $3$ edges running between $X$ and an odd component of $G-X$: there cannot be one edge, since $G$ is 2-edge connected, and there also cannot be two edges, because three edges start from all vertices of an odd component, so the number of edges leaving an odd component is odd. Let $t$ be the number of all edges between $X$ and the odd components of $G-X$. Now we have $t\geq 3c_p(G-X)$. But $G$ is 3-regular, thus $t\leq 3|X|$. This  gives $c_p(G-X)\leq |X|$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

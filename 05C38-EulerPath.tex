@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EulerPath}
+\pmcreated{2013-03-22 12:02:04}
+\pmmodified{2013-03-22 12:02:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Euler path}
+\pmrecord{18}{31043}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C38}
+%\pmkeywords{Euler path}
+%\pmkeywords{Euler circuit}
+\pmrelated{EulerCircuit}
+\pmrelated{Graph}
+\pmdefines{Euler cycle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+An \emph{Euler path} in a graph is a path which traverses each edge of the graph exactly once.  An Euler path which is a cycle is called an \emph{Euler cycle}.  For loopless graphs without isolated vertices, the existence of an Euler path implies the connectedness of the graph, since traversing every edge of such a graph requires visiting each vertex at least once.
+
+If a connected graph has an Euler path, one can be constructed by applying Fleury's algorithm.  A connected graph has an Euler path if it has exactly zero or two vertices of odd degree.  If every vertex has even degree, the graph has an Euler cycle.
+
+\begin{center}
+\includegraphics[width=1in,height=1in]{ecircuit}
+\end{center}
+
+This graph has an Euler cycle.  All of its vertices are of even degree.
+
+\begin{center}
+\includegraphics[width=1in,height=1in]{epath}
+\end{center}
+
+This graph has an Euler path which is not a cycle. It has exactly two vertices of odd degree.
+
+%%%%%
+%%%%%
+%%%%%
+\end{document}

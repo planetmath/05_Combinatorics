@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRecurrencesForDerangementNumbers}
+\pmcreated{2013-03-22 19:05:56}
+\pmmodified{2013-03-22 19:05:56}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of recurrences for derangement numbers}
+\pmrecord{4}{41991}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A05}
+\pmclassification{msc}{05A15}
+\pmclassification{msc}{60C05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\BQ}{\mathbb{Q}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\begin{document}
+The derangement numbers $D_n$ satisfy two recurrence relations:
+\begin{gather}
+	D_n = (n-1)[D_{n-1}+D_{n-2}] \\
+	D_n = nD_{n-1} + (-1)^n
+\end{gather}
+These formulas can be derived algebraically (working from the explicit formula for the derangement numbers); there is also an enlightening combinatorial proof of (1).
+
+The exponential generating function for  the derangement numbers is
+\[
+	D_n = n!\sum_{k=0}^n \frac{(-1)^k}{k!}
+\]
+
+To derive the formulas algebraically, start with (2):
+\begin{align*}
+  nD_{n-1} &= n(n-1)!\sum_{k=0}^{n-1} \frac{(-1)^k}{k!} = n!\sum_{k=0}^{n-1} \frac{(-1)^k}{k!} 
+      = n!\left(-\frac{(-1)^n}{n!} + \sum_{k=0}^n \frac{(-1)^k}{k!}\right) \\
+     &= -(-1)^n + D_n
+\end{align*}
+and (2) follows. To derive (1), use (2) twice:
+\begin{align*}
+  D_n &= nD_{n-1} + (-1)^n = (n-1)D_{n-1} + D_{n-1} + (-1)^n \\
+     &= (n-1)D_{n-1} + ((n-1)D_{n-2} + (-1)^{n-1}) + (-1)^n \\
+     &= (n-1)(D_{n-1} + D_{n-2})
+\end{align*}
+
+Combinatorially, we can see (1) as follows. Write $[n]$ for $\{1,2,\dotsc,n\}$. Let $\pi$ be any derangement of $[n-1]$, i.e. a permutation containing no $1$-cycles. Adding $n$ before any of the $n-1$ elements of $\pi$ produces a derangement of $[n]$. For fixed $\pi$, these are clearly all distinct, since $1$ has a different successor in each case; for distinct $\pi$, these are equally obviously distinct. Thus each derangement of $[n-1]$ corresponds to exactly $n-1$ derangements of $[n]$. Note also that since $\pi$ had no $1$-cycles that $1$ is not a member of a transposition (a $2$-cycle). 
+
+Now let $\pi$ be a derangement of any $n-2$ elements chosen from $[n-1]$. There are clearly $(n-1)D_{n-2}$ such derangements. If the omitted element in $\pi$ is $x$, then adding the transposition $(1~x)$ to $\pi$ produces a derangement of $[n]$, and all such derangements again are distinct from one another. Finally, since in this case $1$ is a member of a transposition, these derangements are distinct from those in the first group. This proves (1).
+
+%%%%%
+%%%%%
+\end{document}

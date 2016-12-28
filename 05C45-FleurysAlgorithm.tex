@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FleurysAlgorithm}
+\pmcreated{2013-03-22 13:35:15}
+\pmmodified{2013-03-22 13:35:15}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Fleury's algorithm}
+\pmrecord{9}{34210}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C45}
+\pmrelated{EulerCircuit}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Fleury's algorithm constructs an Euler circuit in a graph (if it's possible). \\
+\begin{enumerate}
+\item Pick any vertex to start
+\item From that vertex pick an edge to traverse, considering following rule: never cross a bridge of the reduced graph unless there is no other choice 
+\item Darken that edge, as a reminder that you can't traverse it again 
+\item Travel that edge, coming to the next vertex 
+\item Repeat 2-4 until all edges have been traversed, and you are back at the starting vertex
+\end{enumerate}
+By ``reduced graph'' we mean the original graph minus the darkened (already used) edges.
+%%%%%
+%%%%%
+\end{document}

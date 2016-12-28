@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StarProduct}
+\pmcreated{2013-03-22 14:09:17}
+\pmmodified{2013-03-22 14:09:17}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{star product}
+\pmrecord{4}{35574}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05E99}
+\pmclassification{msc}{06A11}
+%\pmkeywords{star product}
+%\pmkeywords{poset}
+%\pmkeywords{f-vector}
+%\pmkeywords{cd-index}
+\pmrelated{Poset}
+\pmrelated{GradedPoset}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{star product} of two graded posets $(P,\le_P)$ and $(Q,\le_Q)$, where $P$ has a unique maximal element $\widehat{1}$ and $Q$ has a unique minimal element $\widehat{0}$, is the poset $P*Q$ on the set $(P\setminus\widehat{1})\cup(Q\setminus\widehat{0})$.  We define the partial order $\le_{P*Q}$ by $x\le y$ if and only if:
+\begin{enumerate}
+\item
+$\{x,y\}\subset P$, and $x\le_P y$; 
+
+\item
+$\{x,y\}\subset Q$, and $x\le_Q y$; or
+
+\item
+$x\in P$ and $y\in Q$.
+\end{enumerate}
+
+In other words, we pluck out the top of $P$ and the bottom of $Q$, and require that everything in $P$ be smaller than everything in $Q$.
+For example, suppose $P=Q=B_2$.
+\[\xymatrix{
+&
+\widehat{1}_P\ar@{-}[dl]\ar@{-}[dr] & 
+&
+&
+&
+\widehat{1}_Q\ar@{-}[dl]\ar@{-}[dr] & 
+\\
+a_P\ar@{-}[dr] &
+&
+b_P\ar@{-}[dl] &
+&
+a_Q\ar@{-}[dr] &
+&
+b_Q\ar@{-}[dl]
+\\
+&
+\widehat{0}_P &
+&
+&
+&
+\widehat{0}_Q &
+}\]
+Then $P*Q$ is the poset with the Hasse diagram below.
+\[\xymatrix{
+&
+\widehat{1}_Q\ar@{-}[dl]\ar@{-}[dr] &
+\\
+a_Q\ar@{-}[d]\ar@{-}[drr] &
+&
+b_Q\ar@{-}[dll]\ar@{-}[d]
+\\
+a_P\ar@{-}[dr] &
+&
+b_P\ar@{-}[dl]
+\\
+&
+\widehat{0}_P &
+}\]
+The star product of Eulerian posets is Eulerian.
+
+\begin{thebibliography}{9}
+\bibitem{cite:RS}
+Stanley, R., \emph{Flag $f$-vectors and the $\mathbf{cd}$-index}, Math. Z. 216 (1994), 483-499.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

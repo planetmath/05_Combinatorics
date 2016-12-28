@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExpectationExample}
+\pmcreated{2013-11-05 17:59:13}
+\pmmodified{2013-11-05 17:59:13}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{expectation example}
+\pmrecord{2}{87656}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmclassification{msc}{05A18}
+\pmclassification{msc}{26E60}
+\pmclassification{msc}{60A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The contraharmonic mean of several positive numbers 
+$u_1$, $u_2$, $\ldots$, $u_n$  is defined as
+$$c \;:=\; \frac{u_1^2\!+\!u_2^2\!+\ldots+\!u_n^2}{u_1\!+\!u_2\!+\ldots+\!u_n}.$$                                        
+This \PMlinkescapetext{concept} has certain applications; one 
+of them is by [1] the following.
+
+If $\langle u_1$, $u_2$, $\ldots$, $u_n\rangle$ is the distribution of the seats of $n$ parties, 
+$s$ the total number of seats in the body of delegates 
+($u_1\!+\!u_2\!+\ldots+\!u_n\,=\,s$), 
+and one draws a random seat (with probability $1/s$), then the size of the drawn 
+delegate{'}s party has the {\it expected value}
+$$\frac{u_1}{s}\!\cdot\!u_1+\frac{u_2}{s}\!\cdot\!u_2+\ldots+\frac{u_n}{s}\!\cdot\!u_n 
+\;=\; c.$$
+
+\begin{thebibliography}{8}
+\bibitem{C}{\sc Caulier, Jean-Fran\c cois}:  The interpretation of the Laakso{--}Taagepera effective number of parties.\;   {--} {\it Documents de travail du Centre d{'}Economie de la Sorbonne} (2011.06).
+\end{thebibliography}
+
+
+\end{document}

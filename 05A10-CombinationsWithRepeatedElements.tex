@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CombinationsWithRepeatedElements}
+\pmcreated{2013-03-22 17:43:17}
+\pmmodified{2013-03-22 17:43:17}
+\pmowner{kfgauss70}{18761}
+\pmmodifier{kfgauss70}{18761}
+\pmtitle{combinations with repeated elements}
+\pmrecord{8}{40167}
+\pmprivacy{1}
+\pmauthor{kfgauss70}{18761}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+%\pmkeywords{Combinatorics}
+\pmrelated{BinomialCoefficient}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem{note}{Note}
+
+\begin{document}
+\theoremstyle{definition}
+\begin{defn}
+A \emph{$k$-combination with repeated elements} chosen within the set $X=\{x_1,x_2,\ldots x_n\}$ is a multiset with cardinality $k$ having $X$ as the underlying set.
+\end{defn}
+\begin{note}
+The definition is based on the multiset concept and therefore the order of the elements within the combination is irrelevant.
+\end{note}
+\begin{note}
+The definition generalizes the concept of \emph{combination with distinct elements}.
+\end{note}
+\begin{lemma}
+Given $n,k \in \{0,1,2,\ldots\},n \ge k$, the following formula holds:
+$$
+\binom{n+1}{k+1}=\sum_{i=k}^n\binom{i}{k}.
+$$
+\end{lemma}
+\begin{proof}
+The formula is easily demonstrated by repeated application of the Pascal's Rule for the binomial coefficient.
+\end{proof}
+\begin{thm}
+The number $C'_{n,k}$ of the $k$-combinations with repeated elements is given by the formula:
+$$
+C'_{n,k}=\binom{n+k-1}{k}.
+$$
+\end{thm}
+\begin{proof}
+The proof is given by \PMlinkname{finite induction}{PrincipleOfFiniteInduction}.\\
+The proof is trivial for $k=1$, since no repetitions can occur and the number of $1$-combinations is $n=\binom{n}{1}$.\\
+Let's then prove the formula is true for $k+1$, assuming it holds for $k$. The $k+1$-combinations can be partitioned in $n$ subsets as follows:
+\begin{itemize}
+\item
+combinations that include $x_1$ at least once;
+\item
+combinations that do not include $x_1$, but include $x_2$ at least once;
+\item
+combinations that do not include $x_1$ and $x_2$, but include $x_3$ at least once;
+\item \ldots
+\item
+combinations that do not include $x_1$, $x_2$,... $x_{n-2}$ but include $x_{n-1}$ at least once;
+\item
+combinations that do not include $x_1$, $x_2$,... $x_{n-2}$, $x_{n-1}$ but include $x_n$ only.
+\end{itemize}
+The number of the subsets is:
+$$C'_{n,k}+C'_{n-1,k}+C'_{n-2,k}+\ldots +C'_{2,k}+C'_{1,k}$$
+which, by the inductive hypothesis and the lemma, equalizes:
+$$
+\binom{n+k-1}{k}+\binom{n+k-2}{k}+\binom{n+k-3}{k}+\ldots +\binom{k+1}{k}+\binom{k}{k}=\sum_{i=k}^{n+k-1}\binom{i}{k}=\binom{n+k}{k+1}.
+$$
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

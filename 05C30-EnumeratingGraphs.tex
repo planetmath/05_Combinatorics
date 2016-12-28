@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EnumeratingGraphs}
+\pmcreated{2013-03-22 15:50:07}
+\pmmodified{2013-03-22 15:50:07}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{enumerating graphs}
+\pmrecord{6}{37810}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C30}
+\pmrelated{EnumeratingGroups}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+\begin{document}
+\indent\textbf{How many graphs are there?}
+
+\begin{prop}\label{prop:graph}
+The number of non-isomorphic simple graphs on $N$ vertices, denoted $gph(N)$, satisfies
+	\[\frac{2^{\binom{N}{2}}}{N!} \leq gph(N) \leq 2^{\binom{N}{2}}.\]
+\end{prop}
+\begin{proof}
+\begin{itemize}
+\item[($\leq$)]
+Every simple graph on $N$ vertices can be encoded by a $N\times N$ symmetric matrix 
+with all entries from $\{0,1\}$ and with $0$'s on the diagonal.  Therefore the information
+can be encoded by strictly upper triangular $N\times N$ matrices over $\{0,1\}$.  This
+gives $2^{\binom{N}{2}}$ possibilities.
+
+\item[($\geq$)]
+The number of isomorphisms from a graph $G$ to a graph $H$ is equal to the number of
+automorphisms of $G$ (or $H$).  Therefore the total number of isomorphisms between two
+graphs is no more than $N!$ -- the total number of permutations of the $N$ vertices of
+$G$.  Therefore the total number of non-isomorphic simple graphs on $N$ vertices is
+at least $2^{\binom{N}{2}}/N!$.
+\end{itemize}
+\end{proof}
+
+\begin{itemize}
+\item The gap between the bounds is superexponential in $N$:
+that is: $O\left(2^{\binom{N}{2}}\right)$.  However logarithmically the estimate is tight:
+ \[\log gph(N)\in \Omega(N^2-N\log N)\intersect O(N^2)=\Theta(N^2).\] 
+\item
+$gph(N)$ is closer to the lower bound; yet, most graphs have few automorphisms.
+
+\item $gph$ is monotonically increasing.
+\[
+\begin{xy}
+(0,10) *\hbox{Graphs on $N$ vertices},
+(0,0) *[o]=<40pt>\hbox{G}*\frm{o}, (5,0) *\hbox{$\bullet$},
+ (-3,-3) *\hbox{$\bullet$},  (-4,2) *\hbox{$\bullet$};
+\end{xy}
+\qquad
+\hookrightarrow
+\qquad
+\begin{xy}
+(0,10) *\hbox{Graphs on $N+1$ vertices},
+(0,0) *[o]=<40pt>\hbox{G}*\frm{o}, (5,0) *\hbox{$\bullet$},
+ (-3,-3) *\hbox{$\bullet$},  (-4,2) *\hbox{$\bullet$},
+ (10,0) *\hbox{$\bullet$};
+\end{xy}
+\]
+\end{itemize}
+
+
+\bibliographystyle{amsplain}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+
+\bibitem{HP}
+Harary, Frank and Palmer, Edgar M.
+     \emph{Graphical enumeration}
+ Academic Press, New York, 1973, pp. xiv+271, 05C30, \MR{MR0357214} (50 \#9682)
+
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

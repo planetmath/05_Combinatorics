@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultinomialTheorem}
+\pmcreated{2013-03-22 13:13:05}
+\pmmodified{2013-03-22 13:13:05}
+\pmowner{bshanks}{153}
+\pmmodifier{bshanks}{153}
+\pmtitle{multinomial theorem}
+\pmrecord{12}{33683}
+\pmprivacy{1}
+\pmauthor{bshanks}{153}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+%\pmkeywords{multinomial}
+\pmrelated{BinomialFormula}
+\pmrelated{BinomialCoefficient}
+\pmrelated{GeneralizedLeibnizRule}
+\pmrelated{NthDerivativeOfADeterminant}
+\pmdefines{multinomial}
+\pmdefines{multinomial coefficient}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A multinomial is a mathematical expression consisting of two or more terms, e.g.
+$$a_1 x_1 + a_2 x_2 + \ldots + a_k x_k.$$
+The multinomial theorem provides the general form of the expansion of  the powers of this
+expression, in the process specifying the multinomial coefficients which are found in that expansion. The expansion is:
+\begin{equation}
+(x_1 + x_2 + \ldots + x_k)^n =
+\sum \frac{n!}{n_1! n_2! \dotsb n_k!} x_1^{n_1} x_2^{n_2} \cdots x_k^{n_k}
+\end{equation}
+where the sum is taken over all multi-indices $(n_1, \ldots n_k)\in\mathbb{N}^k$  that 
+sum to $n$.
+
+The expression $\frac{n!}{n_1! n_2! \cdots n_k!}$ occurring in the expansion is called \emph{multinomial coefficient} and is denoted by
+\begin{equation*}
+\binom{n}{n_1, n_2, \dotsc, n_k}.
+\end{equation*}
+%%%%%
+%%%%%
+\end{document}

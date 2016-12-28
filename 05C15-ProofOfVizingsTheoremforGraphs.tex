@@ -1,0 +1,748 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfVizingsTheoremforGraphs}
+\pmcreated{2013-03-22 15:10:42}
+\pmmodified{2013-03-22 15:10:42}
+\pmowner{marijke}{8873}
+\pmmodifier{marijke}{8873}
+\pmtitle{proof of Vizing's theorem (for graphs)}
+\pmrecord{6}{36932}
+\pmprivacy{1}
+\pmauthor{marijke}{8873}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+\pmrelated{KempeChain}
+
+\usepackage{amssymb}
+% \usepackage{amsmath}
+% \usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% portions from
+% makra.sty 1989-2005 by Marijke van Gans %
+                                          %          ^ ^
+\catcode`\@=11                            %          o o
+                                          %         ->*<-
+                                          %           ~
+%%%% CHARS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        %    code    char  frees  for
+
+\let\Para\S             %    \Para     ÃƒÂƒÃ‚Â‚ÃƒÂ‚Ã‚Â§   \S \scriptstyle
+\let\Pilcrow\P          %    \Pilcrow  ÃƒÂƒÃ‚Â‚ÃƒÂ‚Ã‚Â¶   \P
+\mathchardef\pilcrow="227B
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+\let\bs\backslash       %    \bs       \
+\let\us\_               %    \us       _     \_  ...
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+%%%% DIACRITICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\udot\d             % under-dot (text mode), frees \d
+\let\odot\.             % over-dot (text mode),  frees \.
+%let\hacek\v            % hacek (text mode),     frees \v
+%let\makron\=           % makron (text mode),    frees \=
+%let\tilda\~            % tilde (text mode),     frees \~
+\let\uml\"              % umlaut (text mode),    frees \"
+
+%def\ij/{i{\kern-.07em}j}
+%def\trema#1{\discretionary{-}{#1}{\uml #1}}
+
+%%%% amssymb %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\le\leqslant
+\let\ge\geqslant
+%let\prece\preceqslant
+%let\succe\succeqslant
+
+%%%% USEFUL MISC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\C++{C$^{_{++}}$}
+
+%let\writelog\wlog
+%def\wl@g/{{\sc wlog}}
+%def\wlog{\@ifnextchar/{\wl@g}{\writelog}}
+
+%def\org#1{\lower1.2pt\hbox{#1}} 
+% chem struct formulae: \bs, --- /  \org{C} etc. 
+
+%%%% USEFUL INTERNAL LaTeX STUFF %%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\Ifnextchar=\@ifnextchar
+%let\Ifstar=\@ifstar
+%def\currsize{\@currsize}
+
+%%%% KERNING, SPACING, BREAKING %%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\qqquad{\hskip3em\relax}
+%def\qqqquad{\hskip4em\relax}
+%def\qqqqquad{\hskip5em\relax}
+%def\qqqqqquad{\hskip6em\relax}
+%def\qqqqqqquad{\hskip7em\relax}
+%def\qqqqqqqquad{\hskip8em\relax}
+
+%%%% LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% COUNTERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\addtoreset\@addtoreset
+%{A}{B} adds A to list of counters reset to 0
+% when B is \refstepcounter'ed (see latex.tex)
+%
+%def\numbernext#1#2{\setcounter{#1}{#2}\addtocounter{#1}{\m@ne}}
+
+%%%% EQUATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% LEMMATA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% DISPLAY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% MATH LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\D\displaystyle
+\let\T\textstyle
+\let\S\scriptstyle
+\let\SS\scriptscriptstyle
+
+% array:
+%def\<#1:{\begin{array}{#1}}
+%def\>{\end{array}}
+
+% array using [ ] with rounded corners:
+%def\[#1:{\left\lgroup\begin{array}{#1}} 
+%def\]{\end{array}\right\rgroup}
+
+% array using ( ):
+%def\(#1:{\left(\begin{array}{#1}}
+%def\){\end{array}\right)}
+
+%def\hh{\noalign{\vskip\doublerulesep}}
+
+%%%% MATH SYMBOLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\d{\mathord{\rm d}}                      % d as in dx
+%def\e{{\rm e}}                              % e as in e^x
+
+%def\Ell{\hbox{\it\char`\$}}
+
+\def\sfmath#1{{\mathchoice%
+{{\sf #1}}{{\sf #1}}{{\S\sf #1}}{{\SS\sf #1}}}}
+\def\Stalkset#1{\sfmath{I\kern-.12em#1}}
+\def\Bset{\Stalkset B}
+\def\Nset{\Stalkset N}
+\def\Rset{\Stalkset R}
+\def\Hset{\Stalkset H}
+\def\Fset{\Stalkset F}
+\def\kset{\Stalkset k}
+\def\In@set{\raise.14ex\hbox{\i}\kern-.237em\raise.43ex\hbox{\i}}
+\def\Roundset#1{\sfmath{\kern.14em\In@set\kern-.4em#1}}
+\def\Qset{\Roundset Q}
+\def\Cset{\Roundset C}
+\def\Oset{\Roundset O}
+\def\Zset{\sfmath{Z\kern-.44emZ}}
+
+% \frac overwrites LaTeX's one (use TeX \over instead)
+%def\fraq#1#2{{}^{#1}\!/\!{}_{\,#2}}
+\def\frac#1#2{\mathord{\mathchoice%
+{\T{#1\over#2}}
+{\T{#1\over#2}}
+{\S{#1\over#2}}
+{\SS{#1\over#2}}}}
+%def\half{\frac12}
+
+\mathcode`\<="4268         % < now is \langle, \lt is <
+\mathcode`\>="5269         % > now is \rangle, \gt is >
+
+%def\biggg#1{{\hbox{$\left#1\vbox %to20.5\p@{}\right.\n@space$}}}
+%def\Biggg#1{{\hbox{$\left#1\vbox %to23.5\p@{}\right.\n@space$}}}
+
+\let\epsi=\varepsilon
+\def\omikron{o}
+
+\def\Alpha{{\rm A}}
+\def\Beta{{\rm B}}
+\def\Epsilon{{\rm E}}
+\def\Zeta{{\rm Z}}
+\def\Eta{{\rm H}}
+\def\Iota{{\rm I}}
+\def\Kappa{{\rm K}}
+\def\Mu{{\rm M}}
+\def\Nu{{\rm N}}
+\def\Omikron{{\rm O}}
+\def\Rho{{\rm P}}
+\def\Tau{{\rm T}}
+\def\Ypsilon{{\rm Y}} % differs from \Upsilon
+\def\Chi{{\rm X}}
+
+%def\dg{^{\circ}}                   % degrees
+
+%def\1{^{-1}}                       % inverse
+
+\def\*#1{{\bf #1}}                  % boldface e.g. vector
+%def\vi{\mathord{\hbox{\bf\i}}}     % boldface vector \i
+%def\vj{\mathord{\,\hbox{\bf\j}}}   % boldface vector \j
+
+%def\union{\mathbin\cup}
+%def\isect{\mathbin\cap}
+
+%let\so\Longrightarrow
+%let\oso\Longleftrightarrow
+%let\os\Longleftarrow
+
+% := and :<=>
+%def\isdef{\mathrel{\smash{\stackrel{\SS\rm def}{=}}}}
+%def\iffdef{\mathrel{\smash{stackrel{\SS\rm def}{\oso}}}}
+
+\def\isdef{\mathrel{\mathop{=}\limits^{\smash{\hbox{\tiny def}}}}}
+%def\iffdef{\mathrel{\mathop{\oso}\limits^{\smash{\hbox{\tiny %def}}}}}
+
+%def\tr{\mathop{\rm tr}}            % tr[ace]
+%def\ter#1{\mathop{^#1\rm ter}}     % k-ter[minant]
+
+%let\.=\cdot
+%let\x=\times                % ÃƒÂƒÃ‚ÂƒÃƒÂ‚Ã‚Â—ÃƒÂƒÃ‚Â‚ÃƒÂ‚Ã‚Â— (direct product)
+
+%def\qed{ ${\S\circ}\!{}^\circ\!{\S\circ}$}
+%def\qed{\vrule height 6pt width 6pt depth 0pt}
+
+%def\edots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}\mkern1mu   %  .shorter
+%   \raise4pt\hbox{.}\mkern1mu                  %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %        .
+%def\fdots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}            %   . ~45ÃƒÂƒÃ‚Â‚ÃƒÂ‚Ã‚Â°
+%   \raise4pt\hbox{.}                           %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %       .
+
+\def\mod#1{\allowbreak \mkern 10mu({\rm mod}\,\,#1)}
+% redefines TeX's one using less space
+
+%def\int{\intop\displaylimits}
+%def\oint{\ointop\displaylimits}
+
+%def\intoi{\int_0^1}
+%def\intall{\int_{-\infty}^\infty}
+
+%def\su#1{\mathop{\sum\raise0.7pt\hbox{$\S\!\!\!\!\!#1\,$}}}
+
+%let\frakR\Re
+%let\frakI\Im
+%def\Re{\mathop{\rm Re}\nolimits}
+%def\Im{\mathop{\rm Im}\nolimits}
+%def\conj#1{\overline{#1\vphantom1}}
+%def\cj#1{\overline{#1\vphantom+}}
+
+%def\forAll{\mathop\forall\limits}
+%def\Exists{\mathop\exists\limits}
+
+%%%% PICTURES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\cent{\makebox(0,0)}
+
+\def\node{\circle*4}
+%def\nOde{\circle4}
+
+%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\opcit{[{\it op.\,cit.}]}
+\def\bitem#1{\bibitem[#1]{#1}}
+\def\name#1{{\sc #1}}
+\def\book#1{{\sl #1\/}}
+\def\paper#1{``#1''}
+\def\mag#1{{\it #1\/}}
+\def\vol#1{{\bf #1}}
+\def\isbn#1{{\small\tt ISBN\,\,#1}}
+\def\seq#1{{\small\tt #1}}
+%def\url<{\verb>}
+%def\@cite#1#2{[{#1\if@tempswa\ #2\fi}]}
+
+%%%% VERBATIM CODE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\"{\verb"}
+
+%%%% AD HOC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\0#1{\hbox{\sc #1}}    % typeset vertex names
+
+%%%% WORDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \hyphenation{pre-sent pre-sents pre-sent-ed pre-sent-ing
+% re-pre-sent re-pre-sents re-pre-sent-ed re-pre-sent-ing
+% re-fer-ence re-fer-ences re-fer-enced re-fer-encing
+% ge-o-met-ry re-la-ti-vi-ty Gauss-ian Gauss-ians
+% Des-ar-gues-ian}
+
+%def\oord/{o{\trema o}rdin\-ate}
+% usage: C\oord/s, c\oord/.
+% output: co\"ord... except when linebreak at co-ord...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                                          %
+                                          %          ^ ^
+\catcode`\@=12                            %          ` '
+                                          %         ->*<-
+                                          %           ~
+\begin{document}
+\PMlinkescapeword{length}
+\PMlinkescapeword{node}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{time}
+\PMlinkescapeword{line}
+\PMlinkescapeword{circle}
+
+
+\subsection*{Proof of Vizing's theorem (for graphs)}
+
+We must prove, for any integer $\rho$, the following: if $G$ is a graph all of
+whose vertices have valency $\le \rho$, then its edges can be colored (with
+adjacent edges receiving different colors) in no more than $\rho+1$ colors.
+
+This form of stating the theorem allows us to do induction on the
+number of edges. A graph with zero edges, for instance, certainly doesn't
+need more than $\rho+1$ colors. Now assume (for any given $\rho$) that
+all graphs with $m$ edges can be thus colored. For any graph $G$ with $m+1$
+edges we choose an edge to remove, color the remaining $m$ edges, and
+try putting the edge back.
+
+Another way of looking at this: suppose there was (for a certain $\rho$) a
+graph $G^*$ with $m^*$ edges that could not be colored thus. There would then
+be a largest number $m$, bounded by $0\le m\lt m^*$, such that all graphs with
+$m$ edges can still be colored thus. Then there would also be a $G$ with $m+1$
+edges that cannot. Choose one of its edges and proceed as above. This time,
+succeeding in coloring it after all would prove by contradiction that there
+was no such $m$ and hence no such $G^*$.
+
+Either way we have our $G$ where after picking an edge we can color everything
+except that edge, and fitting it in too proves the theorem. Let the edge to
+fit run between $\0v$ and $\0w_1$. Some terms:
+%
+\begin{itemize}
+
+\item With a palette of $\rho+1$ edge colors, and no more than $\rho$ edges
+      at any vertex, each vertex has at least one {\bf missing color}.
+
+\item Let a {\bf Kempe chain} $H(a,b)$ be any connected component of the
+      subgraph formed by all edges colored $a$ or $b$. This is either a
+      cycle of even length, or an open path terminating at two vertices
+      where one of $a$ or $b$ is missing.
+
+\end{itemize}
+%
+{\bf Step 1}. If there is a color missing both at $\0v$ and at $\0w_1$, use
+that color for the edge $\0v\0w_1$ and we're finished.
+
+Else, let color $a$ be missing at $\0v$ (but present at $\0w_1$), and color
+$b_1$ be missing at $\0w_1$ (but present at $\0v$). If the Kempe chain of
+colors $a$ and $b_1$ that terminates at $\0v$ is disjoint from the one
+terminating at $\0w_1$, swap the colors in the latter chain, then use
+$a$ for edge $\0v\0w_1$ and be done.
+
+Else it's the same $H(a,b_1)$ chain, in which case we proceed as follows.
+
+\begin{center}
+\begin{picture}(300,90)(-150,0)
+
+\put(  0, 0){\node}
+\put(-90,30){\node}
+\put(-30,30){\node}
+\put(-90,60){\node}
+\put(-30,60){\node}
+
+\put(  0, 0){\line(-1,+1){30}}
+
+\put(-80,60){\oval(20,20)[tl]}
+\put(-40,60){\oval(20,20)[tr]}
+\put(-80,70){\line(1,0){40}}
+\put(  5, 0){\cent[l]{$\0v$}}
+\put(-85,30){\cent[l]{$\0w_1$}}
+\put(-60,75){\cent[b]{$H(a,b_1)$}}
+\linethickness{2pt}
+\put(-90,30){\line(0,1){30}}
+\put(-30,30){\line(0,1){30}}
+\put(-80,70){\line(1,0){10}}
+\put(-63,70){\line(1,0){6}}
+\put(-50,70){\line(1,0){10}}
+
+\end{picture}
+\end{center}
+
+Find the $b_1$-colored edge from $\0v$, call it
+$\0v\0w_2$. Steal color $b_1$ from it and give it to edge $\0v\0w_1$, now
+$\0v\0w_2$ is the problem edge that needs a color.
+
+\begin{center}
+\begin{picture}(300,90)(-150,0)
+
+\put(  0, 0){\node}
+\put(-90,30){\node}
+\put(-30,30){\node}
+\put(-90,60){\node}
+\put(-30,60){\node}
+
+\put(  0, 0){\line(-3,+1){90}}
+
+\put(-80,60){\oval(20,20)[tl]}
+\put(-40,60){\oval(20,20)[tr]}
+\put(-80,70){\line(1,0){40}}
+\put(  5, 0){\cent[l]{$\0v$}}
+\put(-85,30){\cent[l]{$\0w_1$}}
+\put(-25,30){\cent[l]{$\0w_2$}}
+\put(-60,75){\cent[b]{$H(a,b_1)$}}
+\linethickness{2pt}
+\put(-90,30){\line(0,1){30}}
+\put(-30,30){\line(0,1){30}}
+\put(-80,70){\line(1,0){10}}
+\put(-63,70){\line(1,0){6}}
+\put(-50,70){\line(1,0){10}}
+
+\end{picture}
+\end{center}
+
+
+Go back to Step~1 calling it {\bf Step~2}, replacing subscripts $_1$ by $_2$
+in all text. This involves a color $b_2$ that was missing at $\0w_2$ ($a$
+remains the missing color at $\0v$). If $\0v$ and $\0w_2$ are awkward too,
+being in the same $H(a,b_2)$ chain
+
+\begin{center}
+\begin{picture}(300,90)(-150,0)
+
+\put(  0, 0){\node}
+\put(-90,30){\node}
+\put(-30,30){\node}
+\put(+30,30){\node}
+\put(-90,60){\node}
+\put(-30,60){\node}
+\put(+30,60){\node}
+
+\put(  0, 0){\line(-3,+1){90}}
+\put( 0,1.5){\line(+1,+1){30}}
+\put(1.5, 0){\line(+1,+1){30}}
+
+\put(-80,60){\oval(20,20)[tl]}
+\put(-40,60){\oval(20,20)[tr]}
+\put(-21,61){\oval(20,20)[tl]}
+\put(+21,61){\oval(20,20)[tr]}
+\put(-21,61){\oval(16,16)[tl]}
+\put(+21,61){\oval(16,16)[tr]}
+\put(-80,70){\line(1,0){40}}
+\put(-21,71){\line(1,0){42}}
+\put(-21,69){\line(1,0){42}}
+\put(  5,-3){\cent[l]{$\0v$}}
+\put(-85,30){\cent[l]{$\0w_1$}}
+\put(-25,30){\cent[l]{$\0w_2$}}
+\put(-60,75){\cent[b]{$H(a,b_1)$}}
+\put(  0,75){\cent[b]{$H(a,b_2)$}}
+\linethickness{2pt}
+\put(-90,30){\line(0,1){30}}
+\put(-30,30){\line(0,1){30}}
+\put(+30,30){\line(0,1){30}}
+\put(-80,70){\line(1,0){10}}
+\put(-63,70){\line(1,0){6}}
+\put(-50,70){\line(1,0){10}}
+\put(-20,70){\line(1,0){10}}
+\put( -3,70){\line(1,0){6}}
+\put(+10,70){\line(1,0){10}}
+
+\end{picture}
+\end{center}
+
+find the $b_2$-colored edge $\0v\0w_3$, give its color to $\0v\0w_2$
+making $\0v\0w_3$ the problem:
+
+\begin{center}
+\begin{picture}(300,90)(-150,0)
+
+\put(  0, 0){\node}
+\put(-90,30){\node}
+\put(-30,30){\node}
+\put(+30,30){\node}
+\put(-90,60){\node}
+\put(-30,60){\node}
+\put(+30,60){\node}
+
+\put(  0, 0){\line(-3,+1){90}}
+\put( 0,1.5){\line(-1,+1){30}}
+\put(-1.5,0){\line(-1,+1){30}}
+
+\put(-80,60){\oval(20,20)[tl]}
+\put(-40,60){\oval(20,20)[tr]}
+\put(-21,61){\oval(20,20)[tl]}
+\put(+21,61){\oval(20,20)[tr]}
+\put(-21,61){\oval(16,16)[tl]}
+\put(+21,61){\oval(16,16)[tr]}
+\put(-80,70){\line(1,0){40}}
+\put(-21,71){\line(1,0){42}}
+\put(-21,69){\line(1,0){42}}
+\put(  5, 0){\cent[l]{$\0v$}}
+\put(-85,30){\cent[l]{$\0w_1$}}
+\put(-25,30){\cent[l]{$\0w_2$}}
+\put(+35,30){\cent[l]{$\0w_3$}}
+\put(-60,75){\cent[b]{$H(a,b_1)$}}
+\put(  0,75){\cent[b]{$H(a,b_2)$}}
+\linethickness{2pt}
+\put(-90,30){\line(0,1){30}}
+\put(-30,30){\line(0,1){30}}
+\put(+30,30){\line(0,1){30}}
+\put(-80,70){\line(1,0){10}}
+\put(-63,70){\line(1,0){6}}
+\put(-50,70){\line(1,0){10}}
+\put(-20,70){\line(1,0){10}}
+\put( -3,70){\line(1,0){6}}
+\put(+10,70){\line(1,0){10}}
+
+\end{picture}
+\end{center}
+
+Next time round ({\bf Step~3}) increase the subscripts again.
+And if still necessary, transfer the color again.
+
+\begin{center}
+\begin{picture}(300,90)(-150,0)
+
+\put(  0, 0){\node}
+\put(-90,30){\node}
+\put(-30,30){\node}
+\put(+30,30){\node}
+\put(+90,30){\node}
+\put(-90,60){\node}
+\put(-30,60){\node}
+\put(+30,60){\node}
+\put(+90,60){\node}
+
+\put(  0, 0){\line(-3,+1){90}}
+\put( 0,1.5){\line(-1,+1){30}}
+\put(-1.5,0){\line(-1,+1){30}}
+\put( 3, 3){\cent.}
+\put( 5, 5){\cent.}
+\put( 7, 7){\cent.}
+\put( 9, 9){\cent.}
+\put(11,11){\cent.}
+\put(13,13){\cent.}
+\put(15,15){\cent.}
+\put(17,17){\cent.}
+\put(19,19){\cent.}
+\put(21,21){\cent.}
+\put(23,23){\cent.}
+\put(25,25){\cent.}
+\put(27,27){\cent.}
+
+\put(-80,60){\oval(20,20)[tl]}
+\put(-40,60){\oval(20,20)[tr]}
+\put(-21,61){\oval(20,20)[tl]}
+\put(+21,61){\oval(20,20)[tr]}
+\put(-21,61){\oval(16,16)[tl]}
+\put(+21,61){\oval(16,16)[tr]}
+\put(-80,70){\line(1,0){40}}
+\put(-21,71){\line(1,0){42}}
+\put(-21,69){\line(1,0){42}}
+\put(+32,66){\cent.}
+\put(+34,68){\cent.}
+\put(+36,69){\cent.}
+\put(+38,70){\cent.}
+\put(+52,70){\cent.}
+\put(+55,70){\cent.}
+\put(+65,70){\cent.}
+\put(+68,70){\cent.}
+\put(+82,70){\cent.}
+\put(+84,69){\cent.}
+\put(+86,68){\cent.}
+\put(+88,66){\cent.}
+\put(+89,64){\cent.}
+\put(  5,-2){\cent[l]{$\0v$}}
+\put(-85,30){\cent[l]{$\0w_1$}}
+\put(-25,30){\cent[l]{$\0w_2$}}
+\put(+35,30){\cent[l]{$\0w_3$}}
+\put(+95,30){\cent[l]{$\0w_4$}}
+\put(-60,75){\cent[b]{$H(a,b_1)$}}
+\put(  0,75){\cent[b]{$H(a,b_2)$}}
+\put(+60,75){\cent[b]{$H(a,b_3)$}}
+\linethickness{2pt}
+\put(-90,30){\line(0,1){30}}
+\put(-30,30){\line(0,1){30}}
+\put(+30,30){\line(0,1){30}}
+\put(+90,30){\line(0,1){30}}
+\put(-80,70){\line(1,0){10}}
+\put(-63,70){\line(1,0){6}}
+\put(-50,70){\line(1,0){10}}
+\put(-20,70){\line(1,0){10}}
+\put( -3,70){\line(1,0){6}}
+\put(+10,70){\line(1,0){10}}
+\put(+40,70){\line(1,0){10}}
+\put(+57,70){\line(1,0){6}}
+\put(+70,70){\line(1,0){10}}
+
+\end{picture}
+\end{center}
+
+Sooner or later (if we don't get to bail out at one of the Steps) we will run
+out of colors, in the following sense: the color missing at some $\0w_{j+1}$
+is not some new color $b_{j+1}$ but a color $b_i$ we've seen before (it can't
+be $a$, that's present at $\0w_{j+1}$). And not only is $i\lt j+1$ but also
+$i\lt j$ because $b_j$ is the color we just stole from $\0w_{j+1}$.
+
+A chain $H(a,b_i)$ runs from $\0v$ to $\0w_{i+1}$ and all its vertices
+except $\0w_{i+1}$ have color $b_i$. Now $\0w_{j+1}$ isn't $\0w_{i+1}$
+(because $i\lt j$) nor one of the other vertices of the chain (because
+it doesn't have color $b_i$). So $\0w_{j+1}$ isn't on this $H(a,b_i)$.
+
+\begin{center}
+\begin{picture}(300,90)(-150,0)
+
+\put(  0, 0){\node}
+\put(-30,30){\node}
+\put(+30,30){\node}
+\put(+90,30){\node}
+\put(-30,60){\node}
+\put(+30,60){\node}
+
+\put( 0,1.5){\line(-1,+1){30}}
+\put(-1.5,0){\line(-1,+1){30}}
+
+\put(-21,61){\oval(20,20)[tl]}
+\put(+21,61){\oval(20,20)[tr]}
+\put(-21,61){\oval(16,16)[tl]}
+\put(+21,61){\oval(16,16)[tr]}
+\put(-21,71){\line(1,0){42}}
+\put(-21,69){\line(1,0){42}}
+\put(  5, 0){\cent[l]{$\0v$}}
+\put(-25,30){\cent[l]{$\0w_i$}}
+\put(+35,30){\cent[l]{$\0w_{i+1}$}}
+\put(+95,30){\cent[l]{$\0w_{j+1}$}}
+\put(  0,75){\cent[b]{$H(a,b_i)$}}
+\linethickness{2pt}
+\put(-30,30){\line(0,1){30}}
+\put(+30,30){\line(0,1){30}}
+\put(-20,70){\line(1,0){10}}
+\put( -3,70){\line(1,0){6}}
+\put(+10,70){\line(1,0){10}}
+
+\end{picture}
+\end{center}
+
+$\0w_{k+1}$ does have color $a$ so it's on some other $H'(a,b_i)$ disjoint
+from $H(a,b_i)$. This could be as short as a single $a$-colored edge or
+longer, it doesn't matter.
+
+\begin{center}
+\begin{picture}(300,90)(-150,0)
+
+\put(  0, 0){\node}
+\put(-30,30){\node}
+\put(+30,30){\node}
+\put(+90,30){\node}
+\put(-30,60){\node}
+\put(+30,60){\node}
+\put(+90,60){\node}
+
+\put( 0,1.5){\line(-1,+1){30}}
+\put(-1.5,0){\line(-1,+1){30}}
+
+\put(-21,61){\oval(20,20)[tl]}
+\put(+21,61){\oval(20,20)[tr]}
+\put(-21,61){\oval(16,16)[tl]}
+\put(+21,61){\oval(16,16)[tr]}
+\put(-21,71){\line(1,0){42}}
+\put(-21,69){\line(1,0){42}}
+\put(+89,60){\line(0,1){20}}
+\put(+91,60){\line(0,1){20}}
+\put(+90,79){\line(1,0){20}}
+\put(+90,81){\line(1,0){20}}
+\put(  5, 0){\cent[l]{$\0v$}}
+\put(-25,30){\cent[l]{$\0w_i$}}
+\put(+35,30){\cent[l]{$\0w_{i+1}$}}
+\put(+95,30){\cent[l]{$\0w_{j+1}$}}
+\put(  0,75){\cent[b]{$H(a,b_i)$}}
+\put(120,65){\cent[b]{$H'(a,b_i)$}}
+\linethickness{2pt}
+\put(-30,30){\line(0,1){30}}
+\put(+30,30){\line(0,1){30}}
+\put(+90,30){\line(0,1){30}}
+\put(-20,70){\line(1,0){10}}
+\put( -3,70){\line(1,0){6}}
+\put(+10,70){\line(1,0){10}}
+\put(+90,80){\line(1,0){10}}
+\put(105,80){\line(1,0){3}}
+
+\end{picture}
+\end{center}
+
+Swap the colors in that $H'(a,b_i)$. Now use $a$ to finally color
+$\0v\0w_{j+1}$ (merging $H(a,b_i)$ and $H'(a,b_i)$ in the process).
+
+\begin{center}
+\begin{picture}(300,90)(-150,0)
+
+\put(  0, 0){\node}
+\put(-30,30){\node}
+\put(+30,30){\node}
+\put(+90,30){\node}
+\put(-30,60){\node}
+\put(+30,60){\node}
+\put(+90,60){\node}
+
+\put( 0,1.5){\line(-1,+1){30}}
+\put(-1.5,0){\line(-1,+1){30}}
+\put(-1.2,0.4){\line(+3,+1){90}}
+\put(-0.9,0.3){\line(+3,+1){90}}
+\put(-0.6,0.2){\line(+3,+1){90}}
+\put(-0.3,0.1){\line(+3,+1){90}}
+\put(  0, 0){\line(+3,+1){90}}
+\put(0.3,-0.1){\line(+3,+1){90}}
+\put(0.6,-0.2){\line(+3,+1){90}}
+\put(0.9,-0.3){\line(+3,+1){90}}
+\put(1.2,-0.4){\line(+3,+1){90}}
+
+\put(-21,61){\oval(20,20)[tl]}
+\put(+21,61){\oval(20,20)[tr]}
+\put(-21,61){\oval(16,16)[tl]}
+\put(+21,61){\oval(16,16)[tr]}
+\put(-21,71){\line(1,0){42}}
+\put(-21,69){\line(1,0){42}}
+\put(+89,30){\line(0,1){30}}
+\put(+91,30){\line(0,1){30}}
+\put(+90,79){\line(1,0){20}}
+\put(+90,81){\line(1,0){20}}
+\put(  5,-5){\cent[l]{$\0v$}}
+\put(-25,30){\cent[l]{$\0w_i$}}
+\put(+35,30){\cent[l]{$\0w_{i+1}$}}
+\put(+95,30){\cent[l]{$\0w_{j+1}$}}
+\put(  0,75){\cent[b]{$H(a,b_i)$}}
+\put(120,65){\cent[b]{$H'(a,b_i)$}}
+\linethickness{2pt}
+\put(-30,30){\line(0,1){30}}
+\put(+30,30){\line(0,1){30}}
+\put(+90,60){\line(0,1){20}}
+\put(-20,70){\line(1,0){10}}
+\put( -3,70){\line(1,0){6}}
+\put(+10,70){\line(1,0){10}}
+\put(100,80){\line(1,0){5}}
+\put(108,80){\line(1,0){2}}
+
+\end{picture}
+\end{center}
+
+This is in essence the proof usually given, as taught to students and found for instance in references [FW77] and [Wil02] of the
+\PMlinkid{parent entry}{6930}.
+%%%%%
+%%%%%
+\end{document}

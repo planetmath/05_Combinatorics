@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RootofATree}
+\pmcreated{2013-03-22 12:30:11}
+\pmmodified{2013-03-22 12:30:11}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{root (of a tree)}
+\pmrecord{8}{32735}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmsynonym{root}{RootofATree}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%\usepackage{xypic}
+\xyoption{all}
+\usepackage{color}
+\begin{document}
+The \emph{root} of a tree is a place-holder node.  It is typically drawn at the top of the page, with the other nodes below (with all nodes having the same path distance from the root at the same height.)
+
+\begin{center}
+
+$$\xymatrix{
+& {\color{red}\bullet} \ar@{-}[dl] \ar@{-}[dr] & & & \\
+\bullet & & \bullet \ar@{-}[dr]\ar@{-}[dl] & & \\
+& \bullet \ar@{-}[dl] & & \bullet & \\
+\bullet & & & & }$$
+
+{\tiny Figure: A tree with root highlighted in red.}
+\end{center}
+
+Any tree can be redrawn this way, selecting any node as the root.  This is important to note: taken as a graph in general, the notion of ``root'' is meaningless. We introduce a root explicitly when we begin speaking of a graph as a tree-- there is nothing in general that selects a root for us.
+
+However, there are some special cases of trees where the root can be distinguished from the other nodes implicitly due to the properties of the tree.  For instance, a root is uniquely identifiable in a complete binary tree, where it is the only node with degree two.  
+
+Further, in a \emph{directed tree}, there can be only one root.  This is because all nodes must be reachable from that node by following the arrows between them in the proper direction.
+%%%%%
+%%%%%
+\end{document}

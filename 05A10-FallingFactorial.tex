@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FallingFactorial}
+\pmcreated{2013-03-22 12:23:58}
+\pmmodified{2013-03-22 12:23:58}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{falling factorial}
+\pmrecord{11}{32211}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmdefines{rising factorial}
+\pmdefines{Pochhammer symbol}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\on}{{\overline{n}}}
+\newcommand{\un}{{\underline{n}}}
+\begin{document}
+For $n\in\natnums$, the rising and falling factorials are $n\supth$
+degree polynomial described, respectively, by
+\begin{align*}
+x^\on &= x(x+1)\ldots (x+n-1) \\
+x^\un &= x(x-1)\ldots (x-n+1)
+\end{align*}
+The two types of polynomials are related by:
+$$x^\on = (-1)^n (-x)^\un.$$
+
+
+The rising factorial is often written as $(x)_n$, and referred to as
+the Pochhammer symbol (see hypergeometric series). Unfortunately, the
+falling factorial is also often denoted by $(x)_n$, so great care must
+be taken when encountering this notation.
+
+
+{\bf Notes.}  
+
+Unfortunately, the notational conventions for the rising and falling
+factorials lack a common standard, and are plagued with a fundamental
+inconsistency. An examination of reference works and textbooks reveals
+two fundamental sources of notation: works in combinatorics and works
+dealing with hypergeometric functions.
+
+Works of combinatorics [1,2,3] give greater focus to the falling
+factorial because of its role in defining the Stirling numbers.
+The symbol $(x)_n$ almost always denotes the falling factorial.  The
+notation for the rising factorial varies widely; we find
+$\left<x\right>_n$ in [1] and $(x)^{(n)}$ in [3].
+
+Works focusing on special functions [4,5]  universally use $(x)_n$ to
+denote the rising factorial and use this symbol in the description of
+the various flavours of hypergeometric series.  Watson [5] credits
+this notation to Pochhammer [6], and indeed the special functions
+literature eschews ``falling factorial'' in favour of ``Pochhammer
+symbol''.  Curiously, according to Knuth [7], Pochhammer himself used
+$(x)_n$ to denote the binomial coefficient (Note: I haven't verified
+this.)
+ 
+The notation featured in this entry is due to D. Knuth [7,8].  Given
+the fundamental inconsistency in the existing notations, it seems
+sensible to break with both traditions, and to adopt new and
+graphically suggestive notation for these two concepts.  The
+traditional notation, especially in the hypergeometric camp, is so
+deeply entrenched that, realistically, one needs to be familiar with
+the traditional modes and to take care when encountering the symbol
+$(x)_n$.
+
+{\bf References}
+\begin{enumerate}
+\item Comtet,  {\em Advanced combinatorics.}
+\item Jordan, {\em Calculus of finite differences.}
+\item Riordan, {\em Introduction to combinatorial analysis.}
+\item Erd\'elyi, et. al., {\em Bateman manuscript project.}
+\item Watson, {\em A treatise on the theory of Bessel functions.}\ 
+\item Pochhammer, ``Ueber hypergeometrische Functionen $n^{\rm ter}$
+  Ordnung,'' {\sl Journal f\"ur die reine und angewandte Mathematik\/
+    \bf 71} (1870), 316--352.
+\item Knuth, ``Two notes on notation'' \PMlinkexternal{download}{http://www-cs-faculty.stanford.edu/~knuth/papers/tnn.tex.gz}
+\item Greene, Knuth, {\em Mathematics for the analysis of algorithms.}
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

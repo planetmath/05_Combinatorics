@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PascalsTriangleIsSymmetricalAlongItsCentralColumn}
+\pmcreated{2013-03-22 19:00:14}
+\pmmodified{2013-03-22 19:00:14}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Pascal's triangle is symmetrical along its central column}
+\pmrecord{5}{41872}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A19}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+As a consequence of Pascal's rule, we see that Pascal's triangle is symmetrical along its central column (the column containing the central binomial coefficients). Expressing individual values in Pascal's triangle $T$ as $T(n, k)$, with $n$ and $k$ being integers obeying the relation $-1 < k \leq n$, this means that each $T(n, k) = T(n, n - k)$.
+
+Since Pascal's triangle is essentially a table in which to look up binomial coefficients, $$T(n, k) = \binom{n}{k}.$$ From Pascal's rule it follows that $T(n, k) = T(n - 1, k - 1) + T(n - 1, k)$.
+
+Obviously $T(0, k) = 1$ because there is only one way to choose no items from a collection of $k$ items; likewise, $T(k, k) = 1$ because there is only one way to choose $k$ items from a collection of $k$ items. Therefore, the leftmost and rightmost column of Pascal's triangle are filled with 1's. Almost as obvious is the fact that $T(1, k) = k$ because there are $k$ ways to choose just one item from a collection of $k$ items; likewise, $T(k - 1, k) = k$ because there are $k$ ways to choose all but one item from a collection of $k$ items since leaving out one item in turn can only be done $k$ times in such a collection.
+
+From the foregoing, row 1 of Pascal's triangle is {1, 1}, row 2 is {1, 2, 1} and row 3 is {1, 3, 3, 1}. From Pascal's rule it follows that even-numbered rows (with an odd number of columns, and their highest, central value at $T(\frac{k}{2}, k)$) will be symmetrical along the central value if the previous row was also symmetrical, while odd-numbered rows (with an even number of columns, and the highest, central value at both $T(\frac{k - 1}{2}, k)$ and $T(\frac{k + 1}{2}, k)$ will be symmetrical about the central values if the previous row was symmetrical. Since the first three rows are symmetrical, all the following rows are also symmetrical.
+%%%%%
+%%%%%
+\end{document}

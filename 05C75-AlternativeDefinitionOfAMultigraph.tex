@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeDefinitionOfAMultigraph}
+\pmcreated{2013-03-22 19:16:54}
+\pmmodified{2013-03-22 19:16:54}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{alternative definition of a multigraph}
+\pmrecord{4}{42214}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C75}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Many authors tried to formalize the notation of a graph. This problem is relatively simple if we allow at most $1$ edge between vertices. But for multigraphs, i.e. graphs with many edges (possibly infinitely many) between vertices this tends to be problematic formally. We wish to give an alternative definition, which uses so called \PMlinkname{symmetric power}{SymmetricPower}.
+
+\textbf{Definition.} A \textbf{multigraph} or \textbf{non-oriented graph} is a triple
+$$G=(V,E,\tau)$$
+where $V$ is a nonempty set whose elements are called vertices, $E$ is a set whose elements are called edges and
+$$\tau:E\to V^2_{sym}$$
+is a function which takes every edge to a pair of vertices called ends of this edge. On the right side we have a \PMlinkname{symmetric power}{SymmetricPower} of $V$ to ensure that the order of ends is not important.
+
+This definition allows loops and even infinite number of edges between two vertices and is one of the most general and formal.
+%%%%%
+%%%%%
+\end{document}

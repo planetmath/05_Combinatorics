@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KonigEgervaryTheorem}
+\pmcreated{2013-03-22 16:33:47}
+\pmmodified{2013-03-22 16:33:47}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{K\"onig-Egervary theorem}
+\pmrecord{4}{38752}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A19}
+\pmsynonym{Konig-Egervary theorem}{KonigEgervaryTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The {\em K\"onig-Egervary theorem} states that in a finite matrix of 0's and 1's, the maximum numbers of 1's such that no two are in a line, equals the minimum number of lines which collectively contain all the 1's. Here line means row or column.
+
+Take this matrix, for example,
+
+$$\begin{bmatrix}
+1 & 0 & 0 & 0 & 0 & 1 \\
+1 & 0 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 & 0 & 1 \\
+1 & 0 & 1 & 1 & 1 & 0 \\
+\end{bmatrix}$$
+
+Here the max and min numbers (always equal) are 4.
+
+\begin{thebibliography}{1}
+\bibitem{ac} A. Chandra Babu, P. V. Ramakrishnan, ``New Proofs of Konig-Egervary Theorem And Maximal Flow-Minimal Cut Capacity Theorem Using O. R. Techniques'' {\it Indian J. Pure 
+Appl. Math.} {\bf 22}(11) (1991): 905 - 911
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

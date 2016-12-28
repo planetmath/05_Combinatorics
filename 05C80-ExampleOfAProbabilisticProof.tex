@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfAProbabilisticProof}
+\pmcreated{2013-03-22 13:06:18}
+\pmmodified{2013-03-22 13:06:18}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{example of a probabilistic proof}
+\pmrecord{13}{33530}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C80}
+
+\usepackage{amssymb, amsmath, amsthm, alltt, setspace}
+\newtheorem{thm}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{definition}
+\newtheorem*{rem}{Remark}
+
+\theoremstyle{definition}
+\newtheorem*{nott}{Notation}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem*{eg}{Example}
+\newtheorem*{ex}{Exercise}
+\newtheorem*{prop}{Proposition}
+
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\leftbb}{[ \! [}
+\newcommand{\rightbb}{] \! ]}
+\newcommand{\bt}{\begin{thm}}
+\newcommand{\et}{\end{thm}}
+\newcommand{\Rel}{\mathbf{R}}
+\newcommand{\er}{\thicksim}
+\newcommand{\sqle}{\sqsubseteq}
+\newcommand{\floor}[1]{\lfloor{#1}\rfloor}
+\newcommand{\ceil}[1]{\lceil{#1}\rceil}
+\begin{document}
+\PMlinkescapeword{arrow}
+\PMlinkescapeword{size}
+\PMlinkescapeword{fixed}
+
+Our example is the existence of $k$-paradoxical tournaments.  The proof hinges upon the following basic probabilistic inequality, for any events $A$ and $B$,
+\[
+P\left(A \cup B \right) \leq P(A) + P(B)
+\]
+\begin{thm}
+For every $k$, there exists a $k$-paradoxical tournament.
+\end{thm}
+\begin{proof}
+We will construct a tournament $T$ on $n$ vertices.  We will show that for $n$ large enough, a $k$-paradoxical tournament must exist.  The probability space in question is all possible directions of the arrows of $T$, where each arrow can point in either direction with probability $1/2$, independently of any other arrow.
+
+We say that a set $K$ of $k$ vertices is \emph{arrowed} by a vertex $v_0$ outside  the set if every arrow between $v_0$ to $w_i \in K$ points from $v_0$ to $w_i$, for $i = 1, ~\ldots, k$.  Consider a fixed set $K$ of $k$ vertices and a fixed vertex $v_0$ outside $K$.  Thus, there are $k$ arrows from $v_0$ to $K$, and only one arrangement of these arrows permits $K$ to be arrowed by $v_0$, thus
+\[
+P(K ~\mbox{ is arrowed by }~ v_0) = \frac{1}{2^k}.
+\]
+The complementary event, is therefore,
+\[
+P(K ~\mbox{ is \emph{not} arrowed by }~ v_0) = 1 - \frac{1}{2^k}.
+\]
+By independence, and because there are $n - k$ vertices outside of $K$,
+\begin{equation}
+\label{kk}
+P(K ~\mbox{ is not arrowed by \emph{any} vertex}) = \left(1 - \frac{1}{2^k}\right)^{n-k}.
+\end{equation}
+Lastly, since there are $\binom{n}{k}$ sets of cardinality $k$ in $T$, we employ the inequality mentioned above to obtain that for the union of all events of the form in equation (\ref{kk})
+\[
+P(\text{Some set of $k$ vertices is not arrowed by any vertex}) \leq \binom{n}{k}\left(1 - \frac{1}{2^k}\right)^{n-k}.
+\]
+If the probability of this last event is less than $1$ for some $n$, then there must exist a $k$-paradoxical tournament of $n$ vertices.  Indeed there is such an $n$, since
+\begin{eqnarray*}
+\binom{n}{k}\left(1 - \frac{1}{2^k}
+            \right)^{n-k} &=&  \frac{1}{k!} n(n-1)
+                               \cdots (n-k+1) \left(1 - \frac{1}{2^k}
+                               \right)^{n-k} \\
+                          &<& \frac{1}{k!} n^k \left(1 - \frac{1}{2^k}
+                               \right)^{n-k} 
+\end{eqnarray*}
+
+Therefore, regarding $k$ as fixed while $n$ tends to infinity, the right-hand-side above tends to zero.  In particular, for some $n$ it is less than $1$, and the result follows.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

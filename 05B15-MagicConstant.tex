@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MagicConstant}
+\pmcreated{2013-03-22 16:24:57}
+\pmmodified{2013-03-22 16:24:57}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{magic constant}
+\pmrecord{5}{38565}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Given a magic square, magic cube, etc., the sum of any row, column or diagonal is called the \emph{magic constant} of that magic square, cube, etc.
+
+In the case of a standard $n \times n$ magic square that uses the integers from 1 to $n^2$, the magic constant is $$\frac{1}{n}\sum_{i = 1}^{n^2} i,$$ while that for a magic cube is $$\frac{1}{n^2}\sum_{i = 1}^{n^3} i.$$ We can then generalize to higher dimensions $d$ thus: $$\frac{1}{n^{d - 1}}\sum_{i = 1}^{n^d} i.$$
+
+So, for dimension $d$ the magic constant is $\frac{n(n^d + 1)}{2}$. For instance, a Franklin magic square ($n = 8,d = 2$) has magic constant $\frac{8(8^2 + 1)}{2} = 260$.
+
+In a trivial sense, an $n \times n$ sudoku puzzle has a magic constant of $n^2$.
+%%%%%
+%%%%%
+\end{document}

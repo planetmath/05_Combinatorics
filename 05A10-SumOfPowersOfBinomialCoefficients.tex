@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SumOfPowersOfBinomialCoefficients}
+\pmcreated{2013-03-22 14:25:43}
+\pmmodified{2013-03-22 14:25:43}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{sum of powers of binomial coefficients}
+\pmrecord{7}{35937}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmclassification{msc}{11B65}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Some results exist on sums of powers of binomial coefficients.  Define $A_s$ as follows:
+
+\[ A_s(n) = \sum_{i=0}^n {n \choose i}^s \]
+
+for $s$ a positive integer and $n$ a nonnegative integer.
+
+For $s=1$, the binomial theorem implies that the sum $A_1(n)$ is simply $2^n$.
+
+For $s=2$, the following result on the sum of the squares of the binomial coefficients ${n \choose i}$ holds:
+
+\[ A_2(n) = \sum_{i=0}^n {n \choose i}^2 = {2n \choose n} \]
+
+that is, $A_2(n)$ is the $n$th central binomial coefficient.
+
+{\bf Proof:}
+This result follows immediately from the Vandermonde identity:
+
+\[ {p+q \choose k}=\sum_{i=0}^k {p \choose i} {q \choose k-i} \]
+upon choosing $p=q=k=n$ and observing that ${n \choose n-i}={n \choose i}$.
+
+Expressions for $A_s(n)$ for larger values of $s$ exist in terms of hypergeometric functions.
+%%%%%
+%%%%%
+\end{document}

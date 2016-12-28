@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChildNodeofATree}
+\pmcreated{2013-03-22 12:30:37}
+\pmmodified{2013-03-22 12:30:37}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{child node (of a tree)}
+\pmrecord{4}{32744}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmsynonym{child node}{ChildNodeofATree}
+\pmsynonym{child}{ChildNodeofATree}
+\pmrelated{ParentNodeInATree}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%\usepackage{xypic} 
+\xyoption{all}
+\usepackage{color}
+\begin{document}
+A \emph{child node} $C$ of a node $P$ in a tree is any node connected to $P$ which has a path distance from the root node $R$ which is one greater than the path distance between $P$ and $R$.
+
+Drawn in the canonical root-at-top manner, a child node of a node $P$ in a tree is simply any node immediately below $P$ which is connected to it.
+
+\begin{center}
+
+$$\xymatrix{
+& \bullet \ar@{-}[dl] \ar@{-}[dr] & & & \\
+\bullet & & {\color{blue}\bullet} \ar@{-}[dr]\ar@{-}[dl] & & \\
+& {\color{red}\bullet} \ar@{-}[dl] & & {\color{red}\bullet} & \\
+\bullet & & & & }$$
+
+{\tiny Figure: A node (blue) and its children (red.)}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfChromaticNumberAndGirth}
+\pmcreated{2013-03-22 14:31:02}
+\pmmodified{2013-03-22 14:31:02}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{proof of chromatic number and girth}
+\pmrecord{9}{36057}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C38}
+\pmclassification{msc}{05C15}
+\pmclassification{msc}{05C80}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{satisfies}
+
+
+Let $\alpha(G)$ denote the size of the largest independent set in
+$G$, and $\chi(G)$ the chromatic number of $G$. We want to show
+that there is a graph $G$ with girth larger than $\ell$ and
+$\chi(G)>k$, for any $\ell, k > 0$.
+
+\bigskip
+
+We first prove the following claim.
+
+{\it Claim:} Given a positive integer $\ell$ and a positive real
+number $t<1/\ell$, for all sufficiently large $n$, there is a
+graph $G$ on $n$ vertices satisfying properties
+
+\begin{enumerate}
+\item  the number of cycles of length at most $\ell$ is less than
+$n/2$,
+
+\item $\alpha(G) < 3n^{1-t}\log n$.
+\end{enumerate}
+
+{\it Proof of claim:} Let $G$ be a random graph on $n$ vertices,
+in which each pair of vertices joint by an edge independently with
+probability $p=n^{t-1}$. Let $X$ be the number of cycles of length
+at most $\ell$ in $G$. The expected value of $X$ is
+\begin{align*}
+  E[X] &= \sum_{i=3}^\ell \frac{n(n-1)\cdots(n-i+1)}{2i}p^i \\
+  &< \sum_{i=3}^\ell \frac{(np)^i}{2i} < \sum_{i=3}^\ell n^{ti} < \ell n^{t\ell}
+\end{align*}
+By Markov inequality,
+\[
+  \Pr(X \geq n/2) < 2\ell n^{t\ell-1},
+\]
+we have
+\[ \Pr(X \geq n/2) \rightarrow 0
+\]
+as $n\rightarrow \infty$, since $t\ell < 1$.
+
+On the other hand, let $y=\lceil (3\log n)/ p \rceil$, and $Y$ be
+the number of independent sets of size $y$ in $G$. By Markov
+inequality again,
+\[
+  \Pr(\alpha(G)\geq y) = \Pr(Y\geq 1) \leq E[Y].
+\]
+However,
+\[
+ E[Y] = {n \choose y} (1-p)^{y(y-1)/2}
+\]
+Using the inequalities, ${n \choose y} < n^y$ and $(1-p)\leq
+e^{-p}$, we get
+\[
+ \Pr(\alpha(G)\geq y) < (n e^{-p(y-1)/2})^y
+\]
+Our choice of $y$ guarantees that $n e^{-p(y-1)/2} < \beta < 1 $
+for some $\beta$, and $y\rightarrow \infty$ as $n$ approaches
+infinity. Therefore,
+\[
+ \Pr(\alpha(G)\geq y) \rightarrow 0, \quad \text{as
+ $n\rightarrow\infty$}.
+\]
+
+
+
+We can thus find $n_0$ such that for all $n>n_0$, both  $\Pr(X
+\geq n/2)$ and $\Pr(\alpha(G)\geq y)$ are strictly less than
+$1/2$. For all $n>n_0$,
+\[
+ \Pr(X<\ell \text{ and } \alpha(G)<y) > 1-\Pr(X\geq\ell)-\Pr(
+ \alpha(G)\geq y)>1.
+\]
+Therefore there exists a graph that satisfies the two properties
+in the claim. This ends the proof of the claim.
+
+\bigskip
+
+ Let $G$ be a graph that satisfies the two properties in the
+claim. Remove a vertex from each cycle of length at most $\ell$ in
+$G$. The resulting graph $G'$ has girth larger than $\ell$, more
+than $n/2$ vertices, and $\alpha(G')\leq \alpha(G)$. Since
+\PMlinkid{$\chi(G') \alpha(G') \geq |G'|$}{6037}, we have
+\[
+  \chi(G') \geq \frac{n/2}{3n^{1-t}\log n} = \frac{n^t}{6 \log n}
+\]
+We can pick sufficiently large $n$ such that $\chi(G')$ is larger
+than $k$. Then the chromatic number of $G'$ is larger than $k$ and
+girth is larger than $\ell$.
+
+
+{\bf Reference}: N. Alon and J. Spencer, {\it The probabilistic method}, 2nd, John Wiley.
+%%%%%
+%%%%%
+\end{document}

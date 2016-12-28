@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PermutationPattern}
+\pmcreated{2013-03-22 16:24:41}
+\pmmodified{2013-03-22 16:24:41}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{permutation pattern}
+\pmrecord{4}{38560}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A05}
+\pmclassification{msc}{05A15}
+\pmdefines{pattern avoidance}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{contain}
+\PMlinkescapeword{representation}
+\PMlinkescapeword{length}
+\PMlinkescapeword{isomorphism}
+
+A \emph{permutation pattern} is simply a permutation viewed as its representation in one-line notation.  Let $\pi=\pi_1\pi_2\dots\pi_k$ be a permutation pattern on $k$ symbols.  Then for any permutation $\sigma=\sigma_1\sigma_2\dots\sigma_n\in\mathfrak{S}_n$, we say that $\sigma$ \emph{contains} $\pi$ if there is a (not necessarily contiguous) subword of $\sigma$ of length $k$ that is order-isomorphic to $\pi$.  More formally, 
+for any subset $J=\{j_1,\dots,j_k\}\subset\{1,\dots,n\}$ of cardinality $k$, write 
+\[
+\sigma_J = \sigma_{j_1} \sigma_{j_2} \dots \sigma_{j_k}.
+\]
+There is a \PMlinkescapetext{natural} \PMlinkname{isomorphism}{GroupHomomorphism} $\mathfrak{S}_J\to\mathfrak{S}_k$.  We say that $\sigma$ \emph{contains} $\pi$ if there is some $J\subset\{1,\dots,n\}$ of cardinality $k$ such that $\sigma_J\mapsto \pi$ under the isomorphism.
+
+If a permutation $\sigma$ does not contain $\pi$, then we say that $\sigma$ \emph{avoids} the pattern $\pi$.
+
+For example, let $\pi=132$.  Then the permutation $\sigma=1234$ avoids $\pi$, since $\sigma$ is strictly increasing but $\pi$ has a descent.  On the other hand, $\tau=1423$ contains $\pi$ twice, once as the subword $142$ and once as the subword $143$.
+
+Knuth showed that a permutation is stack-sortable if and only if it avoids the permutation pattern $231$.
+%%%%%
+%%%%%
+\end{document}

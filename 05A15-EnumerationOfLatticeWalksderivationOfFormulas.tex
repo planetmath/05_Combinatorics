@@ -1,0 +1,157 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EnumerationOfLatticeWalksderivationOfFormulas}
+\pmcreated{2013-03-22 19:21:44}
+\pmmodified{2013-03-22 19:21:44}
+\pmowner{csguy}{26054}
+\pmmodifier{csguy}{26054}
+\pmtitle{enumeration of lattice walks (derivation of formulas)}
+\pmrecord{4}{42315}
+\pmprivacy{1}
+\pmauthor{csguy}{26054}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A15}
+%\pmkeywords{lattice}
+%\pmkeywords{walk}
+%\pmkeywords{binomial coefficients}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\newcommand{\zz}{\mathbb{Z} \times \mathbb{Z}}
+
+\subsubsection*{Square lattice}
+The method of counting walks hinges on the concept of {\em walk generating function}: a Laurent polynomial $F(a,b)$ in two variables $a,b$ such that $[a^xb^y]F^n$ equals the number of walks from $(0,0)$ to $(x,y) \in \mathbb{Z} \times \mathbb{Z}$, where $[a^xb^y]P(a, b)$ denotes the coefficient of $a^xb^y$ in $P(a,b)$.
+
+The idea is to encode each possible step that can be taken from a vertex to an adjacent vertex as a term in $F(a,b)$. In the case of the square lattice, there are four possible steps from a given vertex: left, right, up, or down. They are encoded as $a$, $1/a$, $b$ and $1/b$.  So the walk generating polynomial is $F(a,b) = a + 1/a + b + 1/b$. Each term in the expansion of $F^n$ corresponds to a walk of length $n$ starting at a fixed vertex. For example, a term in $F^4$ such as $a \cdot 1/b \cdot 1/a \cdot 1/a = a^{-1}b^{-1}$ would correspond to the walk of length 4 consisting of the following sequence of steps: right, down,left, left. Moreover, when the term is written as a monomial $a^x b^y$, the exponents $x, y$ are precisely the coordinates of the end point of the walk (assuming the origin as the starting point of the walk).  Thus in this example the walk would end at vertex $(-1,-1)$.  When all like terms in the expansion are collected it becomes clear that $[a^xb^y]F^n$ counts the number of walks from $(0,0)$ to $(x,y$). 
+ 
+To obtain an explicit formula for the number of walks from the origin to $(x,y)$ we factor $F = (a+b)(1+1/ab)$, raise to the n-th power, use the binomial expansion, and collect like terms:
+\begin{align*}
+F^n &= (a+b)^n(1+1/ab)^n \\
+    &= (\sum_i\binom{n}{i} a^ib^{n-i})(\sum_j \binom{n}{j} a^{-j}b^{-j}) \\
+    &= \sum_{(i,j)} \binom{n}{i}\binom{n}{j} a^{i-j}b^{n-i-j}
+\end{align*}
+
+
+The number of walks $w(x,y,n)$ of length $n$ is the coefficient of $a^xb^y$, namely
+\begin{align*}
+w(x,y,n) &= \sum_{\substack{i-j=x,\\n-i-j=y}} \binom{n}{i}\binom{n}{j}
+\end{align*}
+If $n$ and $x+y$ have different parity, there are no integers $i,j$ satisfying the summation constraints, and thus the coefficient of $a^xb^y$ is zero, indicating that there are no walks of length $n$ from the origin to $(x,y)$. If, on the other hand, $n$ and $x+y$ have the same parity, the constraints admit only one solution $(i,j)$, namely $i = (n + x -y)/2$ and $j = (n - x -y)/2$. Thus, in this case, 
+\begin{align*}
+  w(x,y,n) = \binom{n}{\frac{n+x-y}{2}} \binom{n}{\frac{n-x-y}{2}}
+\end{align*}
+
+\subsubsection*{Triangular lattice}
+In the case of a triangular lattice, the walk generating function is $F = a + 1/a + b + 1/b + b/a + a/b$, where each term correspond to the possible steps that can be taken from a vertex to an adjacent vertex: right, left, up, down, diagonally up, diagonally down. It can also be written as $F = (1/a+1/b)(1+a)(1+b) - 2$. The number of walks of length $n$ from the origin to $(x,y)$ is given by the coeeficient of $a^xb^y$ in $F^n$. Using the binomial expansion, one obtains:
+\begin{align*}
+ F^n &= [(1/a+1/b)(1+a)(1+b) - 2]^n \\
+     &= \sum_k (-2)^{n-k} \binom{n}{k} (1/a + 1/b)^k(1+a)^k(1+b)^k\\
+     &= \sum_k (-2)^{n-k} \binom{n}{k} \sum_i\binom{k}{i} (1/a)^{k-i}(1/b)^{i} \sum_j\binom{k}{j}a^j \sum_{j'}\binom{k}{j'}b^{j'} \\
+     &= \sum_k (-2)^{n-k} \binom{n}{k} \sum_{(i,j,j')} \binom{k}{i}\binom{k}{j}\binom{k}{j'} a^{j-k+i} b^{j'-i}
+\end{align*}
+The number of walks $(x,y,n)$ of length $n$ from the origin to $(x,y)$ is the coefficient of $a^xb^y$:
+\begin{align*}
+  w(x,y,n) &= \sum_k(-2)^{n-k}\binom{n}{k} \sum_{\substack{j-k+i = x,\\ j'-i = y}} \binom{k}{i}\binom{k}{j}\binom{k}{j'}
+\end{align*}
+Adding the summation constraints for the inner sum, we get $j + j' = k + x + y$, thus $j'= k + x + y -j$ and $i = j' - y = k + x - j$. Therefore
+\begin{align*}
+ w(x,y,n) &= \sum_k(-2)^{n-k}\binom{n}{k} \sum_j \binom{k}{j} \binom{k}{j-x-y}\binom{k}{j-x}
+\end{align*}
+In particular, the number of closed walks of length $n$ starting and ending at $(0,0)$ is
+\begin{align*}
+   w(0,0,n) = \sum_k(-2)^{n-k}\binom{n}{k} \sum_j \binom{k}{j}^3
+\end{align*}
+
+\subsubsection*{Honeycomb lattice}
+First we observe that the honeycomb lattice is a {\em bipartite graph}: a graph with vertex set $V = V_1 \cup V_2$ such that every edge is from $V_1$ to $V_2$.  In the case of the honeycomb lattice, $V = \mathbb{Z} \times \mathbb{Z} = V_1 \cup V_2$ where $V_1 = \{(x,y) \in V: x + y \equiv 0 \pmod{3} \}$ and $V_2 = \{(x,y) \in V: x + y \equiv 1 \pmod{3} \}$. Every edge in the honeycomb lattice joins a vertex in $V_1$ to a vertex in $V_2$. Notice that a walk starting at a vertex in $V_1$ will end at a vertex in $V_1$ (resp. $V_2$) if it has even (resp. odd) length.
+
+From a vertex $(i,j) \in V_1$ the possible steps are up, right, or diagonally down. These are encoded by $F = a + b + 1/ab$; on the other hand, if $(i,j) \in V_2$, the possible steps from $(i,j)$ are left, down, or diagonally up, encoded by $G = 1/a + 1/b + ab$. Since a walk of even length $n$ from say $(0,0)$ must alternate between points in $V_1$ and points in $V_2$, each such walk corresponds to a term in the expansion of $(FG)^{n/2}$, and $w(x,y,n) = [a^xb^y](FG)^{n/2}$. Since $FG = 1 + (a+b)(a+1/ab)(b+1/ab)$, we have
+\begin{align*}
+(FG)^{n/2} & = \sum_k \binom{n}{k} (a+b)^k(a+1/ab)^k(b+1/ab)^k \\
+  &= \sum_k \binom{n}{k} \sum_i \binom{k}{i} a^{k-i}b^i \sum_j\binom{k}{j}a^{k-j}(1/ab)^j \sum_{j'}\binom{k}{j'}b^{k-j'}(1/ab)^{j'} \\
+  &= \sum_k\binom{n}{k}\sum_{i,j,j'}\binom{k}{i}\binom{k}{j}\binom{k}{j'} a^{2k-i-2j-j'} b^{k+i-j-2j'}
+\end{align*}
+Thus for $n$ even,
+\begin{align*}
+w(x,y,n) &= [a^xb^y](FG)^{n/2} \\
+  &= \sum_k\binom{n}{k}\sum_{\substack{2k-i-2j-j'=x,\\k+i-j-2j'=y}}\binom{k}{i}\binom{k}{j}\binom{k}{j'}
+\end{align*}
+
+The constraints under the inner sum imply $j' = k - j - (x+y)/3$ and $i = k -j -x + (x+y)/3$. Thus if $x+y \not\equiv 0 \pmod{3}$ they are not satisfied by any integers $i$, $j$, $j'$, and $w(x,y,n) = 0$. This simply reflects the fact that there are no even length walks from a vertex in $V_1$ to a vertex in $V_2$.  On the other hand, if $x+y \equiv 0 \pmod{3}$, using $\binom{p}{q} = \binom{p}{p-q}$ we obtain
+\begin{align*}
+  w(x,y,n) = \sum_k^{n/2} \binom{n/2}{k} \sum_j \binom{k}{j + x-(x+y)/3} \binom{k}{j} \binom{k}{j + (x+y)/3}
+\end{align*}
+Walks of odd length $n$ from $(0,0)$ to $(x,y) \in V_2$ can be computed by $w(x,y,n) = w(x-1,y,n-1) + w(x, y+1, n-1) + w(x+1, y+1, n-1)$, where the terms in the right hand side can be computed by the previous formula.
+
+For $x = y = 0$ we obtain the following formula for the number of closed walks of even length $n$ starting and ending at $(0,0)$:
+\begin{align*}
+  w(0,0,n) = \sum_k^{n/2} \binom{n/2}{k}\sum_j\binom{k}{j}^3
+\end{align*}
+An alternative expansion yields another formula for $w(x,y,n)$ that contains a single summation. Writing $FG = (1 + a^2b + ab^2)(1 + a^{-2}b^{-1} + a^{-1}b^{-2})$, we obtain
+\begin{align*}
+(FG)^{n/2} &= \sum_k \binom{n/2}{k}(a^2b+ab^2)^k \sum_{k'}\binom{n/2}{k'}(a^{-2}b^{-1} + a^{-1}b^{-2})^{k'} \\
+  &= \sum_{k,j}\binom{n/2}{k}\binom{k}{j} (a^2b)^{k-j}(ab^2)^j\sum_{k',j'}\binom{n/2}{k'}\binom{k'}{j'}(a^{-2}b^{-1})^{k'-j'}(a^{-1}b^{-2})^{j'}\\
+ &= \sum_{k,j,k',j'} \binom{n/2}{k}\binom{n/2}{k'}\binom{k}{j}\binom{k'}{j'}a^{2k-2k'-j+j'}b^{k-k'+j-j'}
+\end{align*}
+The number of walks $w(x,y,n)$ is the coefficient of $a^xb^y$, namely
+\begin{align*}
+ w(x,y,n) &= \sum_{\substack{2k-2k'-j+j'=x,\\k-k'+j-j'=y}}\binom{n/2}{k}\binom{n/2}{k'}\binom{k}{j}\binom{k'}{j'}
+\end{align*}
+The constraints under the summation imply $3k - 3k' = x + y$ and $3j-3j' = 2y - x$, thus $k'= k - (x+y)/3$ and $j' = j + (x-2y)/3$.  Therefore
+\begin{align*}
+w(x,y,n) &= \sum_k\binom{n/2}{k}\binom{n/2}{k-(x+y)/3}\sum_j\binom{k}{k-j}\binom{k-(x+y)/3}{j+(x-2y)/3}
+\end{align*}
+But
+\begin{align*}
+\sum_j\binom{k}{k-j}\binom{k-(x+y)/3}{j+(x-2y)/3} &= \binom{2k-(x+y)/3}{k+(x-2y)/3}
+\end{align*}
+by Vandermonde's convolution.  Therefore
+\begin{align*}
+w(x,y,n) &= \sum_{k=0}^{n/2}\binom{n/2}{k}\binom{n/2}{k-(x+y)/3}\binom{2k-(x+y)/3}{k+(x-2y)/3}
+\end{align*}
+Setting $(x,y) = (0,0)$ we obtain the following formula for the number of closed walks starting and ending at $(0,0)$:
+\begin{align*}
+  w(0,0,n) = \sum_{k=0}^{n/2}\binom{n/2}{k}^2\binom{2k}{k}
+\end{align*}
+
+\subsubsection*{Dice lattice}
+
+The dice lattice is also a bipartite graph, with vertex set $V_0 \cup V_1 \cup V_2$, where $V_i = \{(x,y) \in \zz: x+y \equiv i \pmod{3} \}$, and with edges going from $V_0$ to $V_1 \cup V_2$. The possible moves are:
+\begin{itemize}
+\item From a vertex in $V_0$: east,west,north,south, northeast,southwest, encoded as $a, 1/a, b, 1/b, ab, 1/ab$.
+\item From a vertex in $V_1$: west, south, northeast, encoded as $1/a,1/b,ab$.
+\item From a vertex in $V_2$: east, north, southwest, encoded as $a, b, 1/ab$.
+\end{itemize}
+
+Moreover, starting at a vertex in $V_1$, moves $a,b,1/ab$ take us to a vertex in $V_2$, and moves $1/a,1/b,ab$ take us to a vertex in $V_3$. Of course any move from a vertex in $V_2 \cup V_3$ takes us back to a vertex in $V_1$.  After these observations and a moment's reflection, we conclude that for even $n$ the number of walks of length $n$ starting at $(0,0)$ is the coefficient of $a^xb^y$ in 
+\begin{align*}
+  [FG + GF]^{n/2} &= 2^{n/2}(FG)^{n/2}
+\end{align*}
+where $F = a+b+1/ab$ and $G=1/a + 1/b + ab$ are defined as in the case of the honeycomb lattice.  So the number of walks of even length from $(0,0)$ to $(x,y)$ is $2^{n/2}$ times the corresponding number of walks in the honeycomb lattice, and the formulas for the dice lattice follow.
+
+
+%%%%%
+%%%%%
+\end{document}

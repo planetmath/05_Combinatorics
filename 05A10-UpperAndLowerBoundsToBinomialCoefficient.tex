@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UpperAndLowerBoundsToBinomialCoefficient}
+\pmcreated{2013-03-22 13:29:53}
+\pmmodified{2013-03-22 13:29:53}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{upper and lower bounds to binomial coefficient}
+\pmrecord{6}{34074}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given two integers $n,k>0$ such that $k\le n$, we have the following inequalities for the binomial coefficient ${n\choose k}$:
+\begin{eqnarray*}
+{n \choose k} & \le & \frac{n^k}{k!} \\
+{n \choose k} & \le & \left(\frac{n\cdot e}{k}\right)^k \\
+{n \choose k} & \ge & \left(\frac{n}{k}\right)^k \\
+\end{eqnarray*}
+Here $e$ is the base of natural logarithms.
+Also, for large $n$, ${n \choose k} \approx \frac{n^k}{k!}$.
+%%%%%
+%%%%%
+\end{document}

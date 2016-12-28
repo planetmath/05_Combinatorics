@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Tree}
+\pmcreated{2013-03-22 12:28:57}
+\pmmodified{2013-03-22 12:28:57}
+\pmowner{Logan}{6}
+\pmmodifier{Logan}{6}
+\pmtitle{tree}
+\pmrecord{9}{32697}
+\pmprivacy{1}
+\pmauthor{Logan}{6}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmrelated{Graph}
+\pmrelated{TreeTraversals}
+\pmrelated{BinaryTree}
+\pmrelated{BalancedTree}
+\pmrelated{SpanningTree}
+\pmrelated{NullTree}
+\pmrelated{GraphTheory}
+\pmrelated{BetheLattice}
+\pmdefines{free tree}
+\pmdefines{rooted tree}
+\pmdefines{forest}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[all]{xy}
+\begin{document}
+Formally, a \emph{forest} is an undirected, acyclic graph.  A forest consists of
+\emph{trees}, which are themselves acyclic, connected graphs.  For example,
+the following diagram represents a forest, each connected component of which is a tree.
+
+$$
+\xymatrix{
+\bullet & \bullet \ar@{-}[d] & \bullet \ar@{-}[r] \ar@{-}[d] \ar@{-}[dr] & \bullet  & \bullet \ar@{-}[r] & \bullet \ar@{-}[d] \\
+        & \bullet            & \bullet & \bullet & \bullet \ar@{-}[r] & \bullet
+}
+$$
+
+All trees are forests, but not all forests are trees.  As in a graph, a forest is made up of vertices (which are often called nodes interchangeably) and edges.
+Like any graph, the vertices and edges may each be labelled --- that is, associated with some atom of data.  Therefore a forest or a tree is often used as a data structure.
+
+Often a particular node of a tree is specified as the \emph{root}.  Such trees are typically drawn with the root at the top of the diagram, with all other nodes depending down from it (however this is not always the case).  A tree where a root has been specified is called a \emph{rooted tree}.  A tree where no root has been specified is called a \emph{free tree}.  When speaking of tree traversals, and most especially of trees as datastructures, rooted trees are often implied.
+
+The edges of a rooted tree are often treated as directed.  In a rooted tree, every non-root node has exactly one edge that leads to the root.  This edge can be thought of as connecting each node to its \emph{parent}.  Often rooted trees ae considered directed in the sense that all edges connect parents to their children, but not vice-versa.  Given this parent-child relationship, a \emph{descendant} of a node in a directed tree is defined as any other node reachable from that node (that is, a node's children and all their descendants).
+
+Given this directed notion of a rooted tree, a \emph{rooted subtree} can be defined as any node of a tree and all of its descendants.  This notion of a rooted subtree is very useful in dealing with trees inductively and defining certain algorithms inductively.
+
+Because of their simple structure and unique properties, trees and forests have many uses.  Because of the simple definition of various tree traversals, they are often used to store and lookup data.  Many algorithms are based upon trees, or depend upon a tree in some manner, such as the heapsort algorithm or Huffman encoding.
+There are also a great many specific forms and families of trees, each with its own constraints, strengths, and weaknesses.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LabeledGraph}
+\pmcreated{2013-03-22 17:38:19}
+\pmmodified{2013-03-22 17:38:19}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{labeled graph}
+\pmrecord{7}{40060}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C78}
+\pmsynonym{labelled graph}{LabeledGraph}
+\pmsynonym{graph labelling}{LabeledGraph}
+\pmsynonym{labelling}{LabeledGraph}
+\pmsynonym{vertex labelling}{LabeledGraph}
+\pmsynonym{edge labelling}{LabeledGraph}
+\pmsynonym{total labelling}{LabeledGraph}
+\pmsynonym{labelled tree}{LabeledGraph}
+\pmsynonym{labelled multigraph}{LabeledGraph}
+\pmsynonym{labelled pseudograph}{LabeledGraph}
+\pmdefines{graph labeling}
+\pmdefines{labeling}
+\pmdefines{vertex labeling}
+\pmdefines{edge labeling}
+\pmdefines{total labeling}
+\pmdefines{labeled tree}
+\pmdefines{labeled multigraph}
+\pmdefines{labeled pseudograph}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $G=(V,E)$ be a graph with vertex set $V$ and edge set $E$.  A \emph{labeling} of $G$ is a partial function $\ell: V\cup E\to L$ for some set $L$.  For every $x$ in the domain of $\ell$, the element $\ell(x)\in L$ is called the \emph{label} of $x$.  Three of the most common types of labelings of a graph $G$ are
+\begin{itemize}
+\item \emph{total labeling}: $\ell$ is a total function (defined for all of $V\cup E$),
+\item \emph{vertex labeling}: the domain of $\ell$ is $V$, and
+\item \emph{edge labeling}: the domain of $\ell$ is $E$.
+\end{itemize}
+Usually, $L$ above is assumed to be a set of integers.  A \emph{labeled graph} is a pair $(G,\ell)$ where $G$ is a graph and $\ell$ is a labeling of $G$.
+
+An example of a labeling of a graph is a coloring of a graph.  Uses of graph labeling outside of combinatorics can be found in areas such as order theory, language theory, and proof theory.  A proof tree, for instance, is really a \emph{labeled tree}, where the labels of vertices are formulas, and the labels of edges are rules of inference.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+Every labeling of a graph can be extended to a total labeling.
+\item
+The notion of labeling can be easily extended to digraphs, multigraphs, and pseudographs.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

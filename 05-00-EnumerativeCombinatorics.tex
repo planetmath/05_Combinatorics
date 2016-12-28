@@ -1,0 +1,229 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EnumerativeCombinatorics}
+\pmcreated{2013-03-22 16:45:58}
+\pmmodified{2013-03-22 16:45:58}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{enumerative combinatorics}
+\pmrecord{14}{38993}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05-00}
+\pmrelated{DijkstrasAlgorithm}
+\pmrelated{RuleOfProduct}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{proposition}{Proposition}
+\newtheorem*{proposition*}{Proposition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\newtheorem*{example*}{Example}
+\begin{document}
+\emph{Enumerative combinatorics} deals with the question: if we know
+that a set $S$ is finite, how can we determine the exact number of
+elements that $S$ contains?  
+
+Basic principles and techniques of enumerative combinatorics include:
+\begin{itemize}
+\item
+the addition principle;
+
+\item
+the multiplication principle;
+
+\item
+the involution principle;
+
+\item
+the inclusion-exclusion principle; and
+
+\item
+the use of generating functions.
+\end{itemize}
+
+The principles listed above are disarmingly simple and seemingly
+obvious.  Nonetheless, when used properly they are powerful
+tools for producing bijective proofs of combinatorial identities.  On
+the other hand, while generating functions can frequently be used to
+give quick proofs of identities, it is sometimes difficult to extract
+combinatorial proofs from such proofs.
+
+%%% ADDITION
+The most fundamental principle of enumerative combinatorics and the
+basis of all counting is the \emph{addition principle}.  It says that
+if $S$ is a finite set, then
+\[
+|S| = \sum_{x\in S} 1.
+\]
+More generally, if $S=A\sqcup B$, then 
+\[
+|S| = \sum_{x\in A\sqcup B} 1= \sum_{x\in A} 1 + \sum_{x\in B} 1 = |A| + |B|.
+\]
+By induction on $n$, we also get
+\[
+\biggl|\bigsqcup_{i\in[n]} S_i\biggr| = \sum_{i\in[n]} |S_i|.
+\]
+As an application of the addition principle, we prove the
+\emph{multiplication principle}.
+
+%%% MULTIPLICATION
+\begin{proposition}
+{\bf Multiplication principle.} If $S$ and $T$ are finite sets, then
+\[
+|S\times T| = |S|\cdot |T|.
+\]
+\end{proposition}
+
+\begin{proof}
+By the addition principle,
+\[
+|S\times T| = \sum_{(x,y)\in S\times T} 1.
+\]
+But we can write $S\times T$ as the disjoint union
+\[
+S\times T = \bigsqcup_{y\in T} S\times\{y\}.
+\]
+The projection map $S\times\{y\}\to S$ is a bijection, so
+$|S\times\{y\}|=|S|$.  Hence it follows that
+\begin{align*}
+|S\times T| 
+&= \sum_{y\in T} |S\times\{y\}| \\
+&= \sum_{y\in T} |S| \\
+&= |S|\cdot\sum_{y\in T} 1 \\
+&= |S|\cdot |T|,
+\end{align*}
+which completes the proof.
+\end{proof}
+
+%%% INVOLUTION
+The \emph{involution principle} says that if $\varphi\colon S\to S$ is
+an involution, then for any $X\subset S$, $|X|=|\varphi(X)|$.  The
+following example illustrates the involution principle.
+
+\begin{proposition} 
+{\bf Enumerating elements of the powerset.}
+Let $[n]=\{1,2,\dots,n\}$ and let $2^{[n]}$ be the powerset of $[n]$.
+Then the cardinality of $2^{[n]}$ is $2^n$.
+\end{proposition}
+
+\begin{proof}
+Define a function $\varphi\colon 2^{[n]}\to 2^{[n]}$ by the formula
+\[
+\varphi(S) = S\Delta\{n\}.
+\]
+
+In other words, $\varphi(S)$ is the symmetric difference of $S$ and
+$\{n\}$ --- if $n$ is an element of $S$, we remove it, and if $n$ is
+not an element of $S$, we insert it.  The function $\varphi$ is an
+involution, hence a bijection.  Now notice that $2^{[n-1]}\subset
+2^{[n]}$ and $\varphi(2^{[n-1]}) = 2^{[n]}\setminus 2^{[n-1]}$.  In
+other words,
+\[
+2^{[n]} = 2^{[n-1]} \sqcup \varphi(2^{[n-1]}).
+\]
+Since $\varphi$ is a bijection, this implies that
+\[
+|2^{[n]}| = 2\cdot |2^{[n-1]}|.
+\]
+By induction on $n$ we obtain
+\[
+|2^{[n]}| = 2^n\cdot |2^{[0]}|.
+\]
+Now $[0] = \emptyset$, so $2^{[0]} = \{\emptyset\}$.  Thus
+$|2^{[0]}|=1$, implying that
+\[
+|2^{[n]}| = 2^n,
+\]
+which is what we wanted to show.
+\end{proof}
+
+%%% INCLUSION-EXCLUSION
+As we have seen above, it is possible to use the addition principle to
+count the number of elements in the disjoint union of finite sets.
+But what if we want to count the number of elements in a non-disjoint
+union of finite sets?  The \emph{inclusion-exclusion principle} gives
+us a way to do this.  A common way of stating the inclusion-exclusion
+principle is as the following proposition.
+
+\begin{proposition}
+{\bf Inclusion-exclusion principle.}
+Let $S_1,\dots, S_n$ be finite sets.  Then
+\[
+\biggl|\bigcup_{i\in[n]} S_i\biggr| = \sum_{T\in 2^{[n]}} (-1)^{|T|}\biggl|\bigcap_{i\in T} S_i\biggr|.
+\]
+\end{proposition}
+
+The formula in this proposition uses negative numbers.  But the core
+of the inclusion-exclusion principle is a statement about natural
+numbers.
+
+\begin{proposition}
+Let $S$ and $T$ be finite sets.  Then
+\[
+|S|+|T| = |S\cup T| + |S\cap T|.
+\]
+Thus the lattice of finite subsets of $\mathbb{N}$ is a modular lattice.
+\end{proposition}
+
+\begin{proof}
+By the addition principle,
+\begin{align*}
+|S|+|T| 
+&= |(S\setminus T)\sqcup(S\cap T)|+|(T\setminus S)\sqcup(S\cap T)| \\
+&= |S\setminus T| + |S\cap T| + |T\setminus S| + |S\cap T|.
+\end{align*}
+Now observe that $S\cup T=(S\setminus T)\sqcup (S\cap T)\sqcup
+(T\setminus S)$.  So by a second application of the addition principle,
+\[
+|S\cup T|+|S\cap T|
+= |S\setminus T| + |S\cap T| + |T\setminus S| + |S\cap T|.
+\]
+Hence $|S|+|T|=|S\cup T| + |S\cap T|$.
+\end{proof}
+
+%%% honestly, there are too many overloaded words in mathematics
+\PMlinkescapeword{algebraic}
+\PMlinkescapeword{basis}
+\PMlinkescapeword{branch}
+\PMlinkescapeword{branches}
+\PMlinkescapeword{completes}
+\PMlinkescapeword{configurations}
+\PMlinkescapeword{connections}
+\PMlinkescapeword{core}
+\PMlinkescapeword{divide}
+\PMlinkescapeword{field}
+\PMlinkescapeword{identities}
+\PMlinkescapeword{proposition}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{structures}
+\PMlinkescapeword{subfields}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{type}
+\PMlinkescapeword{words}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeBruijnDigraph}
+\pmcreated{2013-03-22 12:16:11}
+\pmmodified{2013-03-22 12:16:11}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{de Bruijn digraph}
+\pmrecord{8}{31699}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C20}
+\pmrelated{KautzGraph}
+\pmrelated{LineGraph}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%%\usepackage{xypic}
+\input xy
+\xyoption{all}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The vertices of the \emph{de Bruijn digraph} $B(n,m)$ are all possible words of length $m-1$ chosen from an alphabet of size $n$.
+
+$B(n,m)$ has $n^{m}$ edges consisting of each possible word of length $m$ from an alphabet of size $n$.  The edge $a_1a_2\dots a_n$ connects the vertex $a_1a_2\dots a_{n-1}$ to the vertex $a_2a_3\dots a_n$.
+
+For example, $B(2,4)$ could be drawn as:
+$$\xymatrix{
+& 000 \ar@(ur,ul)[]_{0000} \ar[dr]^{0001} & \\
+100 \ar[ur]^{1000} \ar[rr]^{1001} & & 001 \ar[dl]^{0010} \ar[ddd]^{0011}\\
+& 010 \ar[ul]^{0100} \ar@(ur,dr)[d]^{0101} & \\
+& 101 \ar[dr]^{1011} \ar@(dl,ul)[u]^{1010} & \\
+110 \ar[uuu]^{1100} \ar[ur]^{1101} & & 011 \ar[ll]_{0110} \ar[dl]^{0111}\\
+& 111 \ar@(dl,dr)[]_{1111} \ar[ul]^{1110} & 
+}$$
+
+Notice that an Euler cycle on $B(n,m)$ represents a shortest sequence of characters from an alphabet of size $n$ that includes every possible subsequence of $m$ characters.  For example, the sequence $000011110010101000$ includes all 4-bit subsequences.  Any de Bruijn digraph must have an Euler cycle, since each vertex has in degree and out degree of $n$.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

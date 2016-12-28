@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HammingMetric}
+\pmcreated{2013-03-22 14:59:37}
+\pmmodified{2013-03-22 14:59:37}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{Hamming metric}
+\pmrecord{7}{36699}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C12}
+\pmclassification{msc}{94C99}
+\pmsynonym{Hamming distance}{HammingMetric}
+\pmsynonym{Hamming metric}{HammingMetric}
+\pmrelated{HammingDistance}
+
+\usepackage{amsmath}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\begin{document}
+Let 
+\begin{align*}
+x &= (x_1,x_2,x_3,\ldots,x_n),\\
+y &= (y_1,y_2,y_3,\ldots,y_n)
+\end{align*}
+be bit patterns, that is, vectors consisting of zeros and ones.
+
+The Hamming distance $d_H(u,v)$ defined as 
+\[
+\sum_{j=1}^n |x_i-y_i|
+\]
+is equal to the number of positions where the bit patterns are differents.
+
+
+For instance, if 
+\,$u =(0,1,1,0,1,0,1)$\, and \,$v =(1,0,1,0,1,0,1)$\,
+ then
+\[
+d_H(u,v) = |0-1|+ |1-0| + |1-1| + |0-0|+|1-1| + |0-0| + |1-1| = 3
+\]
+because $u$ and $v$ have different bits at three positions.
+
+The Hamming distance holds the properties of a metric (otherwise it would not be truly a distance):
+\begin{itemize}
+\item $d_H(x,y)\geq 0$ for any $x,y$.\\
+\item $d_H(x,y)=0$ if and only if $x=y$.\\
+\item $d_H(x,y) = d_H(y,x)$ for any $x,y$.\\
+\item $d_H(x,y)\leq d_H(x,z) +  d_H(z,y)$ for any $x,y,z$.
+\end{itemize}
+
+If we realize that $d_H$ is counting something (positions where bits differ), then it's clear that $d_H$ can never be negative. Also, $d_H(x,x)= 0$ because a bit pattern has no different bits respect to itself, and if two bit patterns coincide on each position, they are indeed the same pattern, which proves the second property. The third condition also follows from the trivial fact that if $x$ differs at some position from $y$, then $y$ differs at the sae position from $x$.
+
+We are left to prove the last condition (trangle inequality).
+If 
+\begin{align*}
+x &= (x_1,x_2,x_3,\ldots,x_n)\\
+y &= (y_1,y_2,y_3,\ldots,y_n)\\
+z &= (z_1,z_2,z_3,\ldots,z_n)
+\end{align*}
+then $d_H(x,y)$ counts at how many places does $x$ differ from $y$. For instance, suppose that $x_3\neq y_3$. This means that the third bits are different, which adds $1$ to the whole sum $d_H(x,y)$.
+
+Now, if $x_3\neq y_3$ it cannot happen that $x_3=z_3$ and $z_3=y_3$ at the same \PMlinkescapetext{time}, so we have that $x_3\neq z_3$ or $z_3\neq y_3$. In either case, the sum $d_H(x,z) + d_H(z,y)$ also increases by one.
+
+So, for each mismatch that increases $d_H(x,y)$ by one, $d_H(x,z)+ d_H(z,y)$ also increases by one. We conclude that
+\[
+d_H(x,y)\leq d_H(x,z) + d_H(z,y).
+\]
+%%%%%
+%%%%%
+\end{document}

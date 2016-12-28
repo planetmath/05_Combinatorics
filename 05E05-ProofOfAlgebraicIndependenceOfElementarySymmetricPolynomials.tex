@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfAlgebraicIndependenceOfElementarySymmetricPolynomials}
+\pmcreated{2013-03-22 17:38:28}
+\pmmodified{2013-03-22 17:38:28}
+\pmowner{lalberti}{18937}
+\pmmodifier{lalberti}{18937}
+\pmtitle{proof of algebraic independence of elementary symmetric polynomials}
+\pmrecord{4}{40063}
+\pmprivacy{1}
+\pmauthor{lalberti}{18937}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05E05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Geometric proof, works when R is a division ring.\\
+
+Consider the quotient field Q of R and then the algebraic closure $K$ of $Q$.
+
+Consider the substitution map that associates to values $t_1,\ldots,t_n \in K^n$ the symmetric functions in these variables $s_1,\ldots,s_n$.
+$$\begin{array}{lccr}
+\phi: & K^n & \to & K^n\\
+      &  (t_i) & \mapsto & (s_i)
+\end{array}
+$$
+Because $K$ is algebraic closed this map is surjective. Indeed, fix values $v_i$, then on an algebraic closed field there are roots $t_i$ such that 
+$$X^n + \sum_i v_i X^i = \Pi_i (X+t_i)$$
+And by developing the right-hand side we get $v_i = s_i$.
+
+Then we consider the transposition morphism of algebras $\phi^*$ :
+$$\begin{array}{lccr}
+\phi^*: & R[S_1,\ldots,S_n] & \to & R[T_1,\ldots,T_n]\\
+      & f & \mapsto & f\circ\phi
+\end{array}
+$$
+The capital letters are there to emphasize the $S_i$ and $T_i$ are variables and $R[S_1,\ldots,S_n]$ and $R[T_1,\ldots,T_n]$ are regarded as function algebras over $K^n$.
+
+The theorem stating that the symmetric functions are algebraically independent is no more than saying that this morphism is injective.
+As a matter of fact, $\phi^*(S_i)$ is the $i^{th}$ symmetric function in the $T_i$, and $\phi^*$ is clearly a morphism of algebras.\\
+The conclusion is then straightforward from the surjectivity of $\phi$ because if $f\circ\phi = 0$ for some $f$, then by surjectivity of $\phi$ it means that $f$ was zero in the first place. In other words the kernel of $\phi^*$ is reduced to 0.
+%%%%%
+%%%%%
+\end{document}

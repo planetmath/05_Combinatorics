@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LatticePathsAndBallotNumbers}
+\pmcreated{2013-03-22 17:38:44}
+\pmmodified{2013-03-22 17:38:44}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{lattice paths and ballot numbers}
+\pmrecord{5}{40068}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A15}
+\pmsynonym{lattice paths}{LatticePathsAndBallotNumbers}
+\pmsynonym{ballot numbers}{LatticePathsAndBallotNumbers}
+\pmrelated{CatalanNumbers}
+\pmdefines{ballot numbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{multido}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A \emph{lattice path} is a path in $\mathbb{R}^n$ whose vertices are lattice points in some lattice (for example, points of $\mathbb{R}^n$ all of whose coordinates are integers). This article considers lattice paths in the plane from $(0,0)$ to $(m,n)$ for $m,n\geq 0$ whose vertices fall on $\mathbb{Z}\times\mathbb{Z}$.
+
+As a warm-up, how many paths altogether are there from $(0,0)$ to $(m,n)$ if we restrict the step sizes to $(1,0)$ and $(0,1)$ (that is, a path can travel only one step north or one step east at a time)? There are $m+n$ steps altogether, and we can choose any $n$ of them to be vertical steps, so the answer is obviously
+\[\dbinom{m+n}{n}\]
+Another way of visualizing the answer is to encode a path as a sequence of $H$'s and $V$'s corresponding to horizontal and vertical steps; the question then is: how many sequences of length $m+n$ are there with exactly $n$ $V$'s? Again, the answer is clearly as above.
+
+Suppose we are interested in paths from $(0,0)$ to $(m,n)$ for $m>n$ that stay strictly below the diagonal (except at the origin)? Note that any such path must start out with a horizontal step, so counting these paths is the same as counting paths from $(1,0)$ to $(m,n)$ that stay strictly below the diagonal. We know how many total paths there are: $\tbinom{m+n-1}{n}$ (use the above formula, starting at $(1,0)$ instead of $(0,0)$). We will calculate the number of paths that touch or go above the diagonal, and subtract one from the other.
+
+We can count the number of such unwanted paths by establishing a bijection with something that is easier to count. In fact, the number of paths from $(1,0)$ to $(m,n)$ that touch or cross the diagonal is the same as the total number of paths from $(0,1)$ to $(m,n)$. A bijection can be described as follows. Consider the diagram below:
+\begin{center}
+\begin{pspicture*}(-1,-1)(9,9)
+\psset{unit=.75 cm}
+\psline(0,0)(8,0)
+\psline(0,0)(0,8)
+\multido{\ix=1+1}{7}{
+\psline[linestyle=dotted](\ix,0)(\ix,8)
+\psline[linestyle=dotted](0,\ix)(8,\ix)}
+\psline[linestyle=dashed](0,0)(8,8)
+\psdot(1,0)
+\psdot(8,6)
+\psdot(0,1)
+\psdot(3,3)
+\psset{linecolor=red}
+\psset{linewidth=1.1pt}
+\psline(1,0)(2,0)
+\psline(2,0)(2,1)
+\psline(2,1)(3,1)
+\psline(3,1)(3,5)
+\psline(3,5)(6,5)
+\psline(6,5)(6,6)
+\psline(6,6)(8,6)
+\psset{linecolor=blue}
+\psline(0,1)(0,2)
+\psline(0,2)(1,2)
+\psline(1,2)(1,3)
+\psline(1,3)(3,3)
+\end{pspicture*}
+\end{center}
+The red path is one of the unwanted paths which crosses the diagonal. Given such a path, choose the first point at which the path touches the diagonal, and reflect all steps up to that point around the line $x=y$. This gives a path from $(0,1)$ to $(m,n)$; in the diagram, it is the blue path up to the point where the two paths cross, and then it is the same as the red path from that point on.
+
+Clearly reflecting a path twice gives the original path, so the reflection map is injective into paths from $(0,1)$ to $(m,n)$. But also, every path from $(0,1)$ to $(m,n)$ must cross the diagonal at some point, since $m>n$, and thus it is the reflection of some unwanted path from $(1,0)$ to $(m,n)$. So we have established the required bijection.
+
+Now, the total number of paths from $(0,1)$ to $(m,n)$ is $\dbinom{m+n-1}{m}$, so the total number of paths from $(1,0)$ to $(m,n)$ that never touch the diagonal is then
+\begin{align*}\dbinom{m+n-1}{m-1}&-\dbinom{m+n-1}{m} = \frac{(m+n-1)!}{(m-1)!n!}-\frac{(m+n-1)!}{m!(n-1)!} \\
+&=\frac{1}{m+n}\left(\frac{(m+n)!}{(m-1)!n!}-\frac{(m+n)!}{m!(n-1)!}\right)=\frac{1}{m+n}\left(m\frac{(m+n)!}{m!n!}-n\frac{(m+n)!}{m!n!}\right)\\
+&=\frac{m-n}{m+n}\dbinom{m+n}{m}
+\end{align*}
+
+These numbers are called \emph{ballot numbers}: if we had an election between two candidates in which the winner received $m$ votes and the loser $n$ votes, the ballot number counts the number of ways in which the votes could be counted so that the winner was always ahead. One can also easily see that the probability that the votes are counted in such a way is
+\[\frac{m-n}{m+n}\]
+
+By adjusting the start and end points, this argument can be easily used to derive a formula for paths that stay on or below the diagonal.
+
+Now, consider the special case $m=n+1$, i.e. paths from $(1,0)\to(n+1,n)$ staying below the diagonal. These are counted, per the above, by
+\[\frac{1}{2n+1}\dbinom{2n+1}{n}=\frac{(2n)!}{n!(n+1)!}=\frac{1}{n+1}\dbinom{2n}{n}\]
+which are the Catalan numbers.
+%%%%%
+%%%%%
+\end{document}

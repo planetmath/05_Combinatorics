@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PascalsRulebitStringProof}
+\pmcreated{2013-03-22 12:23:03}
+\pmmodified{2013-03-22 12:23:03}
+\pmowner{vampyr}{22}
+\pmmodifier{vampyr}{22}
+\pmtitle{Pascal's rule (bit string proof)}
+\pmrecord{5}{32166}
+\pmprivacy{1}
+\pmauthor{vampyr}{22}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+This proof is based on an alternate, but equivalent, definition of the binomial coefficient: $\binom{n}{r}$ is the number of bit strings (finite sequences of $0$s and $1$s) of length $n$ with exactly $r$ ones.
+
+We want to show that
+$$\binom{n}{r} = \binom{n-1}{r-1} + \binom{n-1}{r}$$
+To do so, we will show that both sides of the equation are counting the same set of bit strings.
+
+The left-hand side counts the set of strings of $n$ bits with $r$ $1$s.  Suppose we take one of these strings and remove the first bit $b$.  There are two cases: either $b = 1$, or $b = 0$.
+
+If $b = 1$, then the new string is $n-1$ bits with $r-1$ ones; there are $\binom{n-1}{r-1}$ bit strings of this nature.
+
+If $b = 0$, then the new string is $n-1$ bits with $r$ ones, and there are $\binom{n-1}{r}$ strings of this nature.
+
+Therefore every string counted on the left is covered by one, but not both, of these two cases.  If we add the two cases, we find that
+$$\binom{n}{r} = \binom{n-1}{r-1} + \binom{n-1}{r}$$
+%%%%%
+%%%%%
+\end{document}

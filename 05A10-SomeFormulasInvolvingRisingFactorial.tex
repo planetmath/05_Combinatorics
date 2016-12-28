@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SomeFormulasInvolvingRisingFactorial}
+\pmcreated{2013-03-22 17:49:12}
+\pmmodified{2013-03-22 17:49:12}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{some formulas involving rising factorial}
+\pmrecord{4}{40283}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{relation}
+
+Recall that, for $a\in\mathbb{C}$ and $n$ a nonnegative integer, the rising factorial $(a)_n$ is defined by
+\[
+(a)_n=\prod_{k=0}^{n-1}(a+k).
+\]
+
+The following results hold regarding the rising factorial:
+
+\begin{itemize}
+\item For all $a\in\mathbb{C}$, we have $(a)_0=1$.
+\item For all nonnegative integers $n$, we have $(1)_n=n!$.
+\item The binomial coefficients are given by
+\[
+\binom{a}{n}=\frac{(-1)^n(-a)_n}{n!}.
+\]
+\item The rising factorial relates to the gamma function.  One relation is given by the formula
+\[
+(a)_n=\frac{\Gamma(a+n)}{\Gamma(a)}.
+\]
+This formula can be used to extend the definition of rising factorial so that $n$ can be any complex number provided that $a+n$ is not a nonpositive integer.
+\item Another relation between the rising factorial and the gamma function is given by
+\[
+\Gamma(a)=\lim_{n\to\infty} \frac{n!\,n^{a-1}}{(a)_n}.
+\]
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

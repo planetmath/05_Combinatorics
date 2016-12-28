@@ -1,0 +1,338 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChromaticNumberOfAMetricSpace}
+\pmcreated{2013-03-22 14:06:31}
+\pmmodified{2013-03-22 14:06:31}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{chromatic number of a metric space}
+\pmrecord{44}{35510}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+\pmclassification{msc}{52C10}
+%\pmkeywords{chromatic number of the plane}
+\pmrelated{ChromaticNumber}
+\pmdefines{Moser spindle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+
+\usepackage[dvips,all,web]{xypic}
+
+\makeatletter
+\@ifundefined{url}{\usepackage{url}}{}
+\@ifundefined{latexonly}{\newcommand{\ltxonly}[2]{#1}}{\newcommand{\ltxonly}[2]{#2}}
+\makeatother
+
+
+\makeatletter
+\@ifundefined{makeimage}{\newcommand{\mkimg}{}}{\newcommand{\mkimg}[1]{\begin{makeimage}#1\end{makeimage}}}
+\makeatother
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\R}{\mathbb{R}}
+\newcommand*{\Q}{\mathbb{Q}}
+
+\def\drawhexlat{% 1.2 bigger
+\begin{xy}{
+0;<1.8pc,1.039230484541326376pc>:<0pc,2.07846096908265275223293560980705pc>::
+  \xylattice{-4}{8}{-4}{8}}
+\end{xy}}
+
+\def\drawhexd{\ar@{-}c;c+(0.666666666666,-0.333333333333)}
+\def\drawhexdr{\ar@{-}c+(0.666666666666,-0.333333333333);c+(1,0)}
+\def\drawhexdrhalfi{\ar@{-}c+(0.666666666666,-0.333333333333);c+(0.833333333333,-0.166666666666)}
+\def\drawhexdrhalfii{\ar@{-}c+(0.833333333333,-0.166666666666);c+(1,0)}
+\def\drawhexur{\ar@{-}c+(1,0);c+(0.666666666666,0.666666666666)}
+\def\drawhexurhalfi{\ar@{-}c+(1,0);c+(0.833333333333,0.333333333333)}
+\def\drawhexurhalfii{\ar@{-}c+(0.833333333333,0.333333333333);c+(0.666666666666,0.666666666666)}
+\def\drawhexu{\ar@{-}c+(0.666666666666,0.666666666666);c+(0,1)}
+\def\drawhexuhalfi{\ar@{-}c+(0.666666666666,0.666666666666);c+(0.333333333333,0.833333333333)}
+\def\drawhexuhalfii{\ar@{-}c+(0.333333333333,0.833333333333);c+(0,1)}
+\def\drawhexul{\ar@{-}c+(0,1);c+(-0.333333333333,0.666666666666)}
+\def\drawhexdl{\ar@{-}c+(-0.333333333333,0.666666666666);c}
+\def\drawhex{%
+\ar@{-}c;c+(0.666666666666,-0.333333333333)%
+\ar@{-}c+(0.666666666666,-0.333333333333);c+(1,0)%
+\ar@{-}c+(1,0);c+(0.666666666666,0.666666666666)%
+\ar@{-}c+(0.666666666666,0.666666666666);c+(0,1)%
+\ar@{-}c+(0,1);c+(-0.333333333333,0.666666666666)%
+\ar@{-}c+(-0.333333333333,0.666666666666);c}
+\def\drawhexlabel#1{\save c+(0.333333333333,0.333333333333)*\txt<2pc>{#1} \restore}
+
+\begin{document}
+\PMlinkescapeword{information}
+\PMlinkescapeword{blue}
+\PMlinkescapeword{argument}
+
+The \emph{\PMlinkescapetext{chromatic number} of a \PMlinkname{metric space}{MetricSpace}} is the minimum number of
+colors required to color the space in such a way that no two
+points at distance $1$ are assigned the same color. Alternatively,
+the chromatic number of a metric space is the
+\PMlinkname{chromatic number}{ChromaticNumber} of a graph whose
+vertices are points of the space, and two points are connected by
+an edge if they are at distance $1$ from each other.
+
+For example, the chromatic number of $\mathbb{R}$ is $2$ because
+it is impossible to color $\mathbb{R}$ into one color, but it is
+possible to color $\mathbb{R}$ into $2$ colors by coloring each of
+the intervals $[k,k+1)$, where $k$ is an integer, red or blue
+according to whether $k$ is odd or even.
+
+Unlike $\mathbb{R}$, the chromatic number of $\mathbb{R}^n$ is not
+known for any $n\geq 2$. For example, the chromatic number of the
+plane is known to be between $4$ and $7$ as the following pictures
+show.
+
+\parbox[b]{10pc}{\begin{xy}
+  0;<7pc,0pc>:<0pc,7pc>::
+@={(-1.,0.),(0.,0.),(0.228714,0.973494),(-0.5,1.65831),(-1.22871,0.973494),(-0.271286,0.684819),(-0.728714,0.684819)}@@{*{\ensuremath{\bullet}}}
+  \ar@{-}(-1.,0.);(0.,0.)
+  \ar@{-}(0.,0.);(0.228714,0.973494)
+  \ar@{-}(0.228714,0.973494);(-0.5,1.65831)
+  \ar@{-}(-0.5,1.65831);(-1.22871,0.973494)
+  \ar@{-}(-1.22871,0.973494);(-1.,0.)
+  \ar@{-}(-1.,0.);(-0.271286,0.684819)
+  \ar@{-}(-1.22871,0.973494);(-0.271286,0.684819)
+  \ar@{-}(-0.5,1.65831);(-0.271286,0.684819)
+  \ar@{-}(0.,0.);(-0.728714,0.684819)
+  \ar@{-}(0.228714,0.973494);(-0.728714,0.684819)
+  \ar@{-}(-0.5,1.65831);(-0.728714,0.684819)
+\end{xy}
+The Moser spindle. All edges are of unit length. The chromatic
+number is $4$.}\hspace{1pc}
+\parbox[b]{15pc}{
+\begin{renewcommand}{\latticebody}{%
+  \ifnum\latticeA=-4 \ifnum\latticeB=4 \drawhexuhalfi\fi\fi
+  \ifnum\latticeA=-4 \ifnum\latticeB=5 \drawhexuhalfi\drawhexlabel{7}\fi\fi
+  \ifnum\latticeA=-3 \ifnum\latticeB=2 \drawhexdrhalfii\fi\fi
+  \ifnum\latticeA=-3 \ifnum\latticeB=3 \drawhex\drawhexlabel{3}\fi\fi
+  \ifnum\latticeA=-3 \ifnum\latticeB=4 \drawhex\drawhexlabel{4}\fi\fi
+  \ifnum\latticeA=-3 \ifnum\latticeB=5 \drawhex\drawhexlabel{5}\fi\fi
+  \ifnum\latticeA=-3 \ifnum\latticeB=6 \drawhex\drawhexlabel{6}\fi\fi
+  \ifnum\latticeA=-3 \ifnum\latticeB=7 \drawhexurhalfi\fi\fi
+  \ifnum\latticeA=-2 \ifnum\latticeB=1 \drawhexdrhalfii\fi\fi
+  \ifnum\latticeA=-2 \ifnum\latticeB=2 \drawhex\drawhexlabel{7}\fi\fi
+  \ifnum\latticeA=-2 \ifnum\latticeB=3 \drawhex\drawhexlabel{1}\fi\fi
+  \ifnum\latticeA=-2 \ifnum\latticeB=4 \drawhex\drawhexlabel{2}\fi\fi
+  \ifnum\latticeA=-2 \ifnum\latticeB=5 \drawhex\drawhexlabel{3}\fi\fi
+  \ifnum\latticeA=-2 \ifnum\latticeB=6 \drawhex\drawhexlabel{4}\fi\fi
+  \ifnum\latticeA=-2 \ifnum\latticeB=7 \drawhexurhalfi\fi\fi
+  \ifnum\latticeA=-1 \ifnum\latticeB=1 \drawhex\drawhexlabel{4}\fi\fi
+  \ifnum\latticeA=-1 \ifnum\latticeB=2 \drawhex\drawhexlabel{5}\fi\fi
+  \ifnum\latticeA=-1 \ifnum\latticeB=3 \drawhex\drawhexlabel{6}\fi\fi
+  \ifnum\latticeA=-1 \ifnum\latticeB=4 \drawhex\drawhexlabel{7}\fi\fi
+  \ifnum\latticeA=-1 \ifnum\latticeB=5 \drawhex\drawhexlabel{1}\fi\fi
+  \ifnum\latticeA=-1 \ifnum\latticeB=6 \drawhex\drawhexlabel{2}\fi\fi
+  \ifnum\latticeA=0 \ifnum\latticeB=0 \drawhex\drawhexlabel{1}\fi\fi
+  \ifnum\latticeA=0 \ifnum\latticeB=1 \drawhex\drawhexlabel{2}\fi\fi
+  \ifnum\latticeA=0 \ifnum\latticeB=2 \drawhex\drawhexlabel{3}\fi\fi
+  \ifnum\latticeA=0 \ifnum\latticeB=3 \drawhex\drawhexlabel{4}\fi\fi
+  \ifnum\latticeA=0 \ifnum\latticeB=4 \drawhex\drawhexlabel{5}\fi\fi
+  \ifnum\latticeA=0 \ifnum\latticeB=5 \drawhex\drawhexlabel{6}\fi\fi
+  \ifnum\latticeA=0 \ifnum\latticeB=6 \drawhex\drawhexlabel{7}\fi\fi
+  \ifnum\latticeA=1 \ifnum\latticeB=-1 \drawhexurhalfii\fi\fi
+  \ifnum\latticeA=1 \ifnum\latticeB=0 \drawhex\drawhexlabel{6}\fi\fi
+  \ifnum\latticeA=1 \ifnum\latticeB=1 \drawhex\drawhexlabel{7}\fi\fi
+  \ifnum\latticeA=1 \ifnum\latticeB=2 \drawhex\drawhexlabel{1}\fi\fi
+  \ifnum\latticeA=1 \ifnum\latticeB=3 \drawhex\drawhexlabel{2}\fi\fi
+  \ifnum\latticeA=1 \ifnum\latticeB=4 \drawhex\drawhexlabel{3}\fi\fi
+  \ifnum\latticeA=1 \ifnum\latticeB=5 \drawhex\drawhexlabel{4}\fi\fi
+  %\ifnum\latticeA=1 \ifnum\latticeB=6 \drawhexdr\fi\fi
+  \ifnum\latticeA=1 \ifnum\latticeB=6 \drawhexdrhalfi\fi\fi
+  \ifnum\latticeA=2 \ifnum\latticeB=-1 \drawhexurhalfii\fi\fi
+  \ifnum\latticeA=2 \ifnum\latticeB=0 \drawhex\drawhexlabel{4}\fi\fi
+  \ifnum\latticeA=2 \ifnum\latticeB=1 \drawhex\drawhexlabel{5}\fi\fi
+  \ifnum\latticeA=2 \ifnum\latticeB=2 \drawhex\drawhexlabel{6}\fi\fi
+  \ifnum\latticeA=2 \ifnum\latticeB=3 \drawhex\drawhexlabel{7}\fi\fi
+  \ifnum\latticeA=2 \ifnum\latticeB=4 \drawhex\drawhexlabel{1}\fi\fi
+  \ifnum\latticeA=2 \ifnum\latticeB=5 \drawhexdrhalfi\fi\fi
+  \ifnum\latticeA=3 \ifnum\latticeB=0 \drawhex\drawhexlabel{2}\fi\fi
+  \ifnum\latticeA=3 \ifnum\latticeB=1 \drawhex\drawhexlabel{3}\fi\fi
+  \ifnum\latticeA=3 \ifnum\latticeB=2 \drawhex\drawhexlabel{4}\fi\fi
+  \ifnum\latticeA=3 \ifnum\latticeB=3 \drawhex\drawhexlabel{5}\fi\fi
+  \ifnum\latticeA=4 \ifnum\latticeB=0 \drawhexuhalfii\fi\fi
+  \ifnum\latticeA=4 \ifnum\latticeB=1 \drawhexuhalfii\drawhexlabel{1}\fi\fi
+}
+\drawhexlat
+\end{renewcommand}
+Periodic coloring of the plane
+with $7$ colors. The diameter of each hexagonal region is slightly
+less than $1$.}
+
+Using \PMlinkname{compactness argument}{GettingModelsIModelsConstructedFromConstants} one can show that if every finite set
+of points in the plane can be colored with $4$ colors, then the
+whole plane can be colored with $4$. However, if such a coloring
+exists, then at least one of the color sets is nonmeasurable with respect to the Lebesgue measure \cite{cite:falconer_msrbl_chrom_Rn}.
+
+If the coloring of the plane is to consist of regions bounded by
+Jordan curves, then at least $6$ colors are needed
+\cite{cite:woodall_chrom_plane}.  Moreover, under the additional
+assumption that no two regions, which are distance less than $1$ apart,
+receive the same color, then at least $7$ colors are needed
+\cite{cite:thomassen_planechromnum}.
+
+%The chromatic number of $\mathbb{R}^n$ is known to be between
+%$(1.239+o(1))^n$ and
+%$(3+o(1))^n$\cite{cite:raigorodskii_chrom_rn}.
+
+The following table summarizes known lower and upper bounds on
+the chromatic number of some metric spaces.
+
+\begin{tabular}{cccccccc}
+&$\R^2$&$\R^3$&$\R^4$&$\R^5$&$\R^6$&$\R^7$&$\R^n$\\
+Upper bound&7&15\cite{cite:coulson_chrom_rthree,cite:radoicic_toth_chrom_rthree}& & & & & $(3+o(1))^n$\cite{cite:larman_rogers_chrom_rn}\\
+\PMlinkescapetext{Lower bound}&4&6\cite{cite:neuchushtan}&7\cite{cite:cantwell}&%
+9\cite{cite:cantwell}&10\cite{cite:larman_rogers_chrom_rn}&%
+15\cite{cite:raigorodskii_survey}&$(1.239+o(1))^n$\cite{cite:raigorodskii_survey,cite:raigorodskii_chrom_rn}
+\end{tabular}\vspace{1.5ex}
+
+\begin{tabular}{cccccccc}
+&$\Q^2$&$\Q^3$&$\Q^4$&$\Q^5$&$\Q^6$&$\Q^7$&$\Q^n$\\
+Upper bound&2\cite{cite:woodall_chrom_plane}&2\cite{cite:johnson_chrom_qsmall}&4\cite{cite:benda_perles}& &  & &\\
+\PMlinkescapetext{Lower
+bound}&2\cite{cite:woodall_chrom_plane}&2\cite{cite:johnson_chrom_qsmall}&4\cite{cite:benda_perles}&7\cite{cite:mann_chrom_qfive}
+&10\cite{cite:mann_chrom_qn}%
+&13\cite{cite:mann_chrom_qn}&$(1.173+o(1))^n$\cite{cite:raigorodskii_survey}
+\end{tabular}
+
+For more information on the lower bounds for the chromatic numbers of
+$\R^n$ see \cite{cite:szekely_unitdist_szemtrot}.
+
+
+\begin{thebibliography}{10}
+
+\bibitem{cite:benda_perles}
+M.~Benda and M.~Perles.
+\newblock Colorings of metric spaces.
+\newblock {\em Geombinatorics}, 9(3):113--126, 2000.
+\newblock \PMlinkexternal{Zbl
+  0951.05037}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0951.05037}.
+
+\bibitem{cite:coulson_chrom_rthree}
+David Coulson.
+\newblock A $15$-colouring of $3$-space omitting distance one.
+\newblock {\em Discrete Math.}, 256:83--90, 2002.
+\newblock \PMlinkexternal{Zbl
+  1007.05052}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=1007.05052}.
+
+\bibitem{cite:falconer_msrbl_chrom_Rn}
+K.~J. Falconer.
+\newblock The realization of distances in measurable subsets covering
+  $\mathbb{R}^n$.
+\newblock {\em J.\ Combin.\ Theory Ser. A}, 31:184--189, 1981.
+\newblock \PMlinkexternal{Zbl
+  0469.05021}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0469.05021}.
+
+\bibitem{cite:johnson_chrom_qsmall}
+Peter~D. Johnson.
+\newblock Coloring abelian groups.
+\newblock {\em Discrete Math.}, 40:219--223, 1982.
+\newblock \PMlinkexternal{Zbl
+  0485.05009}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0485.05009}.
+
+\bibitem{cite:larman_rogers_chrom_rn}
+D.~G. Larman and C.~A. Rogers.
+\newblock The realization of distances within sets in Euclidean space.
+\newblock {\em Mathematika}, 19:1--24, 1972.
+\newblock \PMlinkexternal{Zbl
+  0246.05020}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0246.05020}.
+
+\bibitem{cite:mann_chrom_qfive}
+Matthias Mann.
+\newblock A new bound for the chromatic number of the rational five-space.
+\newblock {\em Geombinatorics}, 11(2):49--53, 2001.
+\newblock \PMlinkexternal{Zbl
+  0995.05051}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0995.05051}.
+
+\bibitem{cite:mann_chrom_qn}
+Matthias Mann.
+\newblock Hunting unit-distance graphs in rational $n$-spaces.
+\newblock {\em Geombinatorics}, 13(2):86--97, 2003.
+
+\bibitem{cite:radoicic_toth_chrom_rthree}
+Rado{\v{s}} Radoi{\v{c}}i{\'c} and G{\'e}za T{\'o}th.
+\newblock Note on the chromatic number of the space.
+\newblock In {\em Discrete and computational geometry}, volume~25 of {\em
+  Algorithms Combin.}, pages 695--698. Springer, Berlin, 2003.
+\newblock \PMlinkexternal{Zbl 1071.05527}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=1071.05527}.
+
+
+\bibitem{cite:raigorodskii_chrom_rn}
+Andrei~M. Raigorodskii.
+\newblock On the chromatic number of a space.
+\newblock {\em Russian Math. Surveys}, 55(2):351--352, 2000.
+\newblock \PMlinkexternal{Zbl
+  0966.05029}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0966.05029}.
+
+\bibitem{cite:raigorodskii_survey}
+Andrei~M. Raigorodskii.
+\newblock Borsuk's problem and the chromatic numbers of some metric spaces.
+\newblock {\em Russian Math. Surveys}, 56(1):103--139, 2001.
+\newblock \PMlinkexternal{Zbl
+  1008.54018}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=1008.54018}.
+
+\bibitem{cite:raigorodskii_lecture}
+Andrei~M. Raigorodskii.
+\newblock % (garbage????)
+\newblock Available at
+\PMlinkexternal{http://www.mccme.ru/mmmf-lectures/books/index.php?task=video}{http://www.mccme.ru/mmmf-lectures/books/index.php?task=video}, 2002.
+
+\bibitem{cite:raiskii_borsuk}
+D.~E. Raiskii.
+\newblock The realization of all distances in a decomposition of the space
+  $\mathbb{R}^n$ into $n+1$ parts.
+\newblock {\em Math. Notes}, 7:194--196, 1970.
+\newblock \PMlinkexternal{Zbl
+  0202.21702}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0202.21702}.
+
+\bibitem{cite:szekely_unitdist_szemtrot}
+L{\'a}szl{\'o}~A. Sz{\'e}kely.
+\newblock Erd{\H{o}}s on unit distances and {S}zemer{\'e}di-{T}rotter theorems.
+\newblock Preprint is at
+  \PMlinkexternal{http://www.math.sc.edu/~szekely/}{http://www.math.sc.edu/~szekely/}, 2002.
+
+\bibitem{cite:thomassen_planechromnum}
+Carsten Thomassen.
+\newblock On the {N}elson unit distance coloring problem.
+\newblock {\em Amer. Math. Monthly}, 106(9):850--853, 1999.
+\newblock \PMlinkexternal{Zbl 0986.05041}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0986.05041}.
+\newblock \PMlinkexternal{Available
+  online}{http://links.jstor.org/sici?sici=0002-9890\%28199911\%29106\%3A9\%3C\%850\%3AOTNUDC\%3E2.0.CO\%3B2-U} at
+  \PMlinkexternal{JSTOR}{http://www.jstor.org}.
+
+
+\bibitem{cite:woodall_chrom_plane}
+D.~R. Woodall.
+\newblock Distances realized by sets covering the plane.
+\newblock {\em J.\ Combin.\ Theory Ser. A}, 14:187--200, 1973.
+\newblock \PMlinkexternal{Zbl
+  0251.50003}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0251.50003}.
+
+\bibitem{cite:cantwell}
+K. Cantwell.
+\newblock Finite Euclidean Ramsey theory.
+\newblock {\em J.\ Combin. Theory Ser. A}, 73:273--285, 1996.
+\newblock \PMlinkexternal{Zbl 0842.05064}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0842.05064}.
+
+\bibitem{cite:neuchushtan}
+O. Neuchushtan.
+\newblock On the space chromatic number.
+\newblock {\em Discrete Mathematics.} 256:499--507, 2002.
+\newblock \PMlinkexternal{Zbl 1009.05058}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=1009.05058}.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KonigsLemma}
+\pmcreated{2013-03-22 15:38:26}
+\pmmodified{2013-03-22 15:38:26}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{K\"onig's lemma}
+\pmrecord{6}{37572}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmsynonym{Koenig's lemma}{KonigsLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\begin{document}
+\PMlinkescapeword{lemma}
+\begin{theorem*}[K\"onig's lemma]
+Let $T$ be a rooted directed tree.  If each vertex has finite 
+degree but there are arbitrarily long rooted paths in $T$, 
+then $T$ contains an infinite path.
+\end{theorem*}
+
+\begin{proof}
+For each $n\ge 1$, let $P_n$ be a rooted path in $T$ of length $n$,
+and let $c_n$ be the child of the root appearing in $P_n$.
+By assumption, the set $\{c_n\mid n\ge 1\}$ is finite.  
+Since the set $\{P_n\mid n\ge 1\}$ is infinite, the 
+pigeonhole principle implies that there is a child $c$ of the root
+such that $c=c_n$ for infinitely many $n$.  
+
+Now let us look at the subtree $T_c$ of $T$ rooted at $c$.  Each vertex
+has finite degree, and since there are paths $P_n$ of arbitrarily 
+long length in $T$ passing through $c$, there are arbitrarily long
+paths in $T_c$ rooted at $c$.  Hence if $T$ satisfies the hypothesis
+of the lemma, the root has a child $c$ such that $T_c$ also satisfies
+the hypothesis of the lemma.  Hence we may inductively build up a
+path in $T$ of infinite length, at each stage selecting a child so
+that the subtree rooted at that vertex still has arbitrarily long
+paths.
+\end{proof}
+
+% Proof
+
+% The proof is based upon induction and the pigeonhle principle.  By
+% hypothesis there are a finite number of edges emanating from the
+% root.  By the other hypothesis, there must exist an infinite number of
+% paths emanating at the root.  Each of these paths must include one of
+% the edges emanating from the root
+
+\begin{thebibliography}{9}
+\bibitem{cite:K}
+Kleene, Stephen., \emph{Mathematical Logic}, New York: Wiley, 1967.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

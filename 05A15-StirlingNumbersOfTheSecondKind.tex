@@ -1,0 +1,189 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StirlingNumbersOfTheSecondKind}
+\pmcreated{2013-03-22 12:33:32}
+\pmmodified{2013-03-22 12:33:32}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Stirling numbers of the second kind}
+\pmrecord{11}{32805}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A15}
+\pmrelated{StirlingNumbersOfTheFirstKind}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\un}{{\underline{n}}}
+\newcommand{\uk}{{\underline{k}}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\paragraph{Summary.}
+The Stirling numbers of the second kind, 
+$$S(n,k) = {n \brace k}, \quad k,n\in\natnums,\quad 1\leq k\leq n,$$
+are a doubly
+indexed sequence of natural numbers, enjoying a wealth of interesting
+combinatorial properties.  There exist several logically equivalent
+characterizations, but the starting point of the present entry will
+be the following definition:
+\begin{quote}
+  The Stirling number $S(n,k)$ is the number of ways to partition a set
+  of $n$ objects into $k$ groups.
+\end{quote}
+For example, $S(4,2) = 7$ because there are seven ways to partition 4
+objects --- call them a, b, c, d --- into two groups, namely:
+$$
+(a)(bcd),\;
+(b)(acd),\;
+(c)(abd),\;
+(d)(abc),\;
+(ab)(cd),\;
+(ac)(bd),\;
+(ad)(bc)
+$$
+
+Four additional characterizations will be discussed in this entry:
+\begin{itemize}
+\item a recurrence relation
+\item a generating function related to the falling factorial
+\item differential operators
+\item  a double-index generating function
+\end{itemize}
+Each of these will be discussed below, and shown to be equivalent.
+\paragraph{A recurrence relation.}
+The Stirling numbers of the second kind can be characterized in terms of
+the following recurrence relation:
+$$S(n,k) = kS(n-1,k) + S(n-1,k-1),\qquad 1\leq k < n,$$
+subject to the
+following initial conditions:
+$$S(n,n) = S(n,1) = 1.$$
+Let us now show that the recurrence formula
+follows from the enumerative definition.  Evidently, there is only one
+way to partition $n$ objects into $1$ group (everything is in that
+group), and only one way to partition $n$ objects into $n$ groups
+(every object is a group all by itself). Proceeding recursively, a
+division of $n$ objects $a_1, \ldots, a_{n-1}, a_n$ into $k$ groups
+can be achieved by only one of two basic maneuvers:
+\begin{itemize}
+\item We could partition the first $n-1$ objects into $k$ groups, and
+  then add object $a_n$ into one of those groups.  There are $k
+  S(n-1,k)$ ways to do this.
+\item We could partition the first $n-1$ objects into $k-1$ groups and
+  then add object $a_n$ as a new, 1 element group.  This gives an
+  additional 
+  $S(n-1,k-1)$ ways to create the desired partition.
+\end{itemize}
+The recursive point of view, therefore explains the connection between
+the recurrence formula, and the original definition.  
+
+Using the recurrence formula we can easily obtain a table of the
+initial Stirling numbers:
+
+\bigskip
+
+\begin{tabular}{lccccc}
+$n\backslash k$ & 1 & 2 & 3  & 4 & 5\\
+1 & 1 \\
+2 & 1 &  1 \\
+3 & 1 & 3 & 1 \\
+4 & 1 & 7 & 6 & 1 \\
+5 & 1 & 15&25 & 10 & 1
+\end{tabular}
+
+
+\paragraph{Falling Factorials.}
+Consider the vector space of polynomials in indeterminate $x$.  The
+most obvious basis of this infinite-dimensional vector space is the
+sequence of monomial powers: $x^n,\quad n\in\natnums.$ However, the
+sequence of falling factorials:
+$$x^\un=x(x-1)(x-2)\ldots(x-n+1),\quad n\in\natnums$$
+is also a basis, and hence can be
+used to generate the monomial basis.  Indeed, the Stirling numbers of
+the second kind can be characterized as the coefficients involved
+in the corresponding change of basis matrix, i.e.
+$$ x^n = \sum_{k=1}^n S(n,k) x^\uk.$$
+So, for example,
+$$x^4 = x + 7x(x-1) + 6x(x-1)(x-2) + x(x-1)(x-2)(x-3).$$
+
+Arguing inductively, let us prove that this characterization follows
+from the recurrence relation.  Evidently the formula is true for
+$n=1$.  Suppose then that the formula is true for a given $n$.  We
+have
+$$x x^\uk = x^{\underline{k+1}} + k x^\uk,$$ 
+and hence using the recurrence relation we deduce that
+\begin{align*}
+x^{n+1} &= \sum_{k=1}^n S(n,k)\,x\,x^\uk \\
+&= \sum_{k=1}^n \lp kS(n,k) x^\uk + S(n,k+1)\rp x^{\underline{k+1}} \\
+&= \sum_{k=1}^{n+1} S(n,k) x^\uk
+\end{align*}
+
+\paragraph{Differential operators.} 
+Let $D_x$ denote the ordinary derivative, applied to polynomials in
+indeterminate $x$, and let $T_x$ denote the differential operator
+$xD_x$.  We have the following characterization of the Stirling
+numbers of the second kind in terms of these two operators:
+$$(T_x)^n = \sum_{k=1}^n S(n,k)\, x^k (D_x)^k,$$
+where an
+exponentiated differential operator denotes the operator composed with
+itself the indicated number of times.  Let us show that this follows
+from the recurrence relation.  The proof is once again, inductive.
+Suppose that the characterization is true for a given $n$.  We have
+$$T_x(x^k (D_x)^k) =  k x^k (D_x)^k + x^{k+1} (D_x)^{k+1},$$
+and hence using the recurrence relation we deduce that
+\begin{align*}
+(T_x)^{n+1} &= xD_x\lp \sum_{k=1}^n  S(n,k)\, x^k (D_x)^k \rp \\
+&= \sum_{k=1}^n S(n,k) \lp k x^k (D_x)^k + x^{k+1} (D_x)^{k+1}\rp \\
+&= \sum_{k=1}^{n+1}  S(n+1,k)\, x^k (D_x)^k
+\end{align*}
+
+\paragraph{Double index generating function.}
+One can also characterize the Stirling numbers of the second kind in
+terms of the following  generating function:
+$$e^{x(e^t-1)} = \sum_{n=1}^\infty \sum_{k=1}^n S(n,k)\,
+x^k\,\frac{t^n}{n!}.$$
+Let us now prove this.  Note that the differential equation
+$$\frac{d\xi}{dt} = \xi,$$
+admits the general solution
+$$\xi = e^t x.$$
+It follows that for any polynomial $p(\xi)$ we have
+$$\exp(t T_\xi)[p(\xi)]\Big|_{\xi=x} = \sum_{n=0}^\infty \frac{t^n}{n!}
+(T_\xi)^n[p(\xi)]\Big|_{\xi=x} = p(e^t x).$$
+The proof is simple: just take $D_t$ of both sides.  To be more
+explicit,
+$$D_t\lb p(e^t x) \rb = p'(e^t x) e^t x =
+T_\xi[p(\xi)]\Big|_{\xi=xe^t},$$
+and that is exactly equal to $D_t$ of the left-hand side.  Since this
+relation holds for all polynomials, it also holds for all formal power
+series.  In particular if we apply the above relation to $e^\xi$, 
+use the result of the preceding section, and note that
+$$D_\xi[e^\xi] = e^\xi,$$
+we obtain
+\begin{align*}
+e^{xe^t} &= \sum_{n=1}^\infty \frac{t^n}{n!} (T_\xi)^n[e^\xi] \Big|_{\xi=x} \\
+&=  \sum_{n=1}^\infty \sum_{k=1}^n S(n,k)\, \frac{t^n}{n!} \xi^k
+(D_\xi)^k[e^\xi] \Big|_{\xi=x} \\
+&=  e^x \sum_{n=1}^\infty \sum_{k=1}^n S(n,k)\, x^k\, \frac{t^n}{n!}\\
+\end{align*}
+Dividing both sides by $e^x$ we obtain the desired generating
+function. Q.E.D.
+%%%%%
+%%%%%
+\end{document}

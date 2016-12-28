@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ColouringProblem}
+\pmcreated{2013-03-22 12:17:00}
+\pmmodified{2013-03-22 12:17:00}
+\pmowner{vampyr}{22}
+\pmmodifier{vampyr}{22}
+\pmtitle{colouring problem}
+\pmrecord{7}{31758}
+\pmprivacy{1}
+\pmauthor{vampyr}{22}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+\pmsynonym{coloring problem}{ColouringProblem}
+\pmsynonym{colour}{ColouringProblem}
+\pmsynonym{color}{ColouringProblem}
+\pmsynonym{graph colouring}{ColouringProblem}
+\pmsynonym{graph coloring}{ColouringProblem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+\usepackage{color}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{colouring problem} is to assign a \emph{colour} to every vertex of a graph such that no two adjacent vertices have the same colour.  These colours, of course, are not necessarily colours in the optic sense.
+
+Consider the following graph:
+
+$$\xymatrix{
+A \ar@{-}[r] & B \ar@{-}[r] \ar@{-}[d] & C \ar@{-}[r] \ar@{-}[dl] & F \ar@{-}[dl] \\
+& D \ar@{-}[r] & E & }$$
+
+One potential colouring of this graph is:
+
+$$\xymatrix{
+{\color{red}A} \ar@{-}[r] & {\color{blue}B} \ar@{-}[r] \ar@{-}[d] & {\color{red}C} \ar@{-}[r] \ar@{-}[dl] & {\color{green}F} \ar@{-}[dl] \\
+& {\color{green}D} \ar@{-}[r] & {\color{blue}E} & }$$
+
+$A$ and $C$ have the same colour; $B$ and $E$ have a second colour; and $D$ and $F$ have another.
+
+Graph colouring problems have many applications in such situations as scheduling and matching problems.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

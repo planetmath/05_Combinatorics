@@ -1,0 +1,229 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NumberOfUnrootedLabeledTrees}
+\pmcreated{2013-03-22 17:31:20}
+\pmmodified{2013-03-22 17:31:20}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{number of unrooted labeled trees}
+\pmrecord{6}{39914}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C30}
+\pmdefines{Prufer code}
+\pmdefines{Pr\"ufer code}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+\usepackage[graph]{xy}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{star}
+\PMlinkescapeword{group}
+\PMlinkescapeword{groups}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{central element}
+\PMlinkescapeword{completes}
+\PMlinkescapeword{walk}
+\PMlinkescapeword{event}
+\PMlinkescapeword{point}
+\begin{thm} (Cayley) The number of [isomorphism classes of] labeled trees on $n$ vertices $[n]=\{1,2,\ldots,n\}$ is $n^{n-2}$.
+\end{thm}
+
+This is sequence A000272 in the \PMlinkexternal{Online Encyclopedia of Integer Sequences}{http://www.research.att.com/~njas/sequences}
+
+For $n=1$ and $n=2$ the result is obvious. For $n=3$, the possible trees are
+\[ \fbox{ \xygraph{
+!{(0,0) }*+{\bullet_{1}}="1"
+!{(1,0) }*+{\bullet_{2}}="2"
+!{(2,0) }*+{\bullet_{3}}="3"
+!{(0,.5) }*+{\bullet_{1}}="4"
+!{(1,.5) }*+{\bullet_{3}}="5"
+!{(2,.5) }*+{\bullet_{2}}="6"
+!{(0,1) }*+{\bullet_{2}}="7"
+!{(1,1) }*+{\bullet_{1}}="8"
+!{(2,1) }*+{\bullet_{3}}="9"
+"1"-"2" "2"-"3"
+"4"-"5" "5"-"6"
+"7"-"8" "8"-"9"
+} } \]
+while for $n=4$, the $4^2=16$ trees fall into two groups: $12$ trees with linear structure and $4$ with a star structure. There are $12$ linear trees since there are $24$ orderings of $1,2,3,4$ and mirror orderings give the same tree; there are $4$ star trees since the tree is determined by its central element.
+
+There are many proofs of this theorem; the demonstration we give uses the \emph{Pr\"ufer bijection}, which associates with each such tree its \emph{Pr\"ufer code}; it is easily seen that the number of Pr\"ufer codes on $[n]$ is $n^{n-2}$.
+
+A \emph{Pr\"ufer code} on $[n]$ is a sequence of $n-2$ elements $a_1,a_2,\ldots,a_{n-2}$ chosen from $[n]$ (repetitions are allowed). Obviously there are $n^{n-2}$ codes on $n$ symbols.
+
+Given a tree $T$ on $[n]$ with $n\geq 3$, convert it to a Pr\"ufer code using the following algorithm:
+
+\texttt{
+\\
+\hspace*{6pt}for $j=1$ to $n-2$\\
+\hspace*{18pt}let $l_j$ be the vertex in $T$ with the smallest label\\
+\hspace*{18pt}let $a_j$ be the vertex adjacent to $l_j$\\
+\hspace*{18pt}remove $l_j$ from $T$\\
+\hspace*{6pt}next $j$
+}
+
+When this process completes, the result will be a Pr\"ufer code (of length $n-2$) on $n$ symbols; this mapping is clearly well-defined.
+
+Let's walk through a more complicated example. Consider the following tree on $8$ vertices:
+\[ \fbox{ \xygraph{
+!{(0,0)   }*+{\bullet_{4}}="4"
+!{(0.5,0.5) }*+{\bullet_{1}}="1"
+!{(0.5,1) }*+{\bullet_{3}}="3"
+!{(1,1)   }*+{\bullet_{6}}="6"
+!{(1.25,.5)   }*+{\bullet_{2}}="2"
+!{(1,0)   }*+{\bullet_{5}}="5"
+!{(1.75,.5) }*+{\bullet_{7}}="7"
+!{(1.5,0) }*+{\bullet_{8}}="8"
+"1"-"2" "1"-"3" "1"-"4" "1"-"5"
+"3"-"6"
+"2"-"7" "2"-"8"
+} } \]
+Using the algorithm above, we get
+\begin{center}
+\begin{tabular}{c|c}
+$l_j$ & $a_j$\\
+\hline
+$4$ & $1$\\
+$5$ & $1$\\
+$6$ & $3$\\
+$3$ & $1$\\
+$1$ & $2$\\
+$7$ & $2$
+\end{tabular}
+\end{center}
+and thus the Pr\"ufer code associated with this tree is $1,1,3,1,2,2$.
+
+The easiest way to see that this map is a bijection is by explicitly constructing its inverse. To do this, we must show how to construct a tree $T$ on $[n]$ given a Pr\"ufer code on $n$ symbols.
+
+Note first that the code for a given tree contains only the non-leaf vertices, and that each non-leaf vertex appears at least once in the code. The first of these statements is obvious from the algorithm - given that $n\geq 3$ and since the algorithm stops when there are only two vertices left in the tree, no leaf vertex in the original tree can be selected as an $a_j$.
+
+To see that every non-leaf must appear in the list, note that each vertex was either removed as one of the $l_j$ or it remains in the two-vertex tree at the end of the process. In either event, one of its adjacent vertices was removed from the tree at some point, so the vertex would appear in the code. In fact, it is clear that the number of times each vertex appears in the code is one less than its degree in the tree.
+
+Given this, it's rather straightforward to reconstruct the tree. Consider $a_1$. The leaf that was removed ($l_1$) must be the smallest leaf vertex, which is the smallest number not appearing in the code. It must attach to $a_1$. Essentially, this process continues as one moves forward through the $a_j$, except that allowances must be made for non-leaf vertices that are removed at later steps as they become leaf vertices. Here is an algorithm to reconstruct a tree from a Pr\"ufer code:
+
+\texttt{
+\\
+\hspace*{6pt}$A\leftarrow$ the set of leaf vertices\\
+\hspace*{6pt}$T\leftarrow$ the connected tree on the two vertices $a_{n-2}$ and the highest-numbered leaf\\
+\hspace*{6pt}for $j=1$ to $n-2$\\
+\hspace*{18pt}add $a_j$ and the lowest-numbered node $l$ in $A$ to $T$ (if not already in $T$)\\
+\hspace*{18pt}add an edge in $T$ between $a_j$ and $l$\\
+\hspace*{18pt}remove $l$ from $A$\\
+\hspace*{18pt}if $a_k\neq a_j$ for any $k>j$, add $a_j$ to $A$\\
+\hspace*{6pt}next $j$
+}
+
+Let's see how this process works on the Pr\"ufer code above.
+
+We start by letting $T$ be the tree on the two vertices $2$ and $8$ with an edge between them:
+\[ \fbox{ \xygraph{
+!{(1.25,.5)   }*+{\bullet_{2}}="2"
+!{(1.5,0) }*+{\bullet_{8}}="8"
+"2"-"8"
+} } \]
+The initial value for $A$ (the available vertices) is $4,5,6,7$.
+
+$a_1=1$, so add $1, 4$, and an edge between $1$ and $4$ to $T$. $1$ appears later in $A$, so we do not add it to $A$.
+\[ \fbox{ \xygraph{
+!{(0,0)   }*+{\bullet_{4}}="4"
+!{(0.5,0.5) }*+{\bullet_{1}}="1"
+!{(1.25,.5)   }*+{\bullet_{2}}="2"
+!{(1.5,0) }*+{\bullet_{8}}="8"
+"1"-"4" "2"-"8"
+} } \]
+
+$a_2=1$ and $A=\{5,6,7\}$, so add $5$ and an edge between $1$ and $5$:
+\[ \fbox{ \xygraph{
+!{(0,0)   }*+{\bullet_{4}}="4"
+!{(0.5,0.5) }*+{\bullet_{1}}="1"
+!{(1.25,.5)   }*+{\bullet_{2}}="2"
+!{(1,0)   }*+{\bullet_{5}}="5"
+!{(1.5,0) }*+{\bullet_{8}}="8"
+"1"-"4" "1"-"5"
+"2"-"8"
+} } \]
+
+$a_3=3$ and $A=\{6,7\}$. Add $3, 6$ and an edge from $3$ to $6$. This is the last occurrence of $3$ in the code, so add $3$ to $A$.
+\[ \fbox{ \xygraph{
+!{(0,0)   }*+{\bullet_{4}}="4"
+!{(0.5,0.5) }*+{\bullet_{1}}="1"
+!{(0.5,1) }*+{\bullet_{3}}="3"
+!{(1,1)   }*+{\bullet_{6}}="6"
+!{(1.25,.5)   }*+{\bullet_{2}}="2"
+!{(1,0)   }*+{\bullet_{5}}="5"
+!{(1.5,0) }*+{\bullet_{8}}="8"
+"1"-"4" "1"-"5"
+"3"-"6"
+"2"-"8"
+} } \]
+
+$a_4=1$ and $A=\{3,7\}$. Add an edge from $1$ to $3$. Add $1$ to $A$.
+\[ \fbox{ \xygraph{
+!{(0,0)   }*+{\bullet_{4}}="4"
+!{(0.5,0.5) }*+{\bullet_{1}}="1"
+!{(0.5,1) }*+{\bullet_{3}}="3"
+!{(1,1)   }*+{\bullet_{6}}="6"
+!{(1.25,.5)   }*+{\bullet_{2}}="2"
+!{(1,0)   }*+{\bullet_{5}}="5"
+!{(1.5,0) }*+{\bullet_{8}}="8"
+"1"-"3" "1"-"4" "1"-"5"
+"3"-"6"
+"2"-"8"
+} } \]
+
+$a_5=2$ and $A=\{1,7\}$. Add an edge from $1$ to $2$.
+\[ \fbox{ \xygraph{
+!{(0,0)   }*+{\bullet_{4}}="4"
+!{(0.5,0.5) }*+{\bullet_{1}}="1"
+!{(0.5,1) }*+{\bullet_{3}}="3"
+!{(1,1)   }*+{\bullet_{6}}="6"
+!{(1.25,.5)   }*+{\bullet_{2}}="2"
+!{(1,0)   }*+{\bullet_{5}}="5"
+!{(1.5,0) }*+{\bullet_{8}}="8"
+"1"-"2" "1"-"3" "1"-"4" "1"-"5"
+"3"-"6"
+"2"-"8"
+} } \]
+
+$a_6=2$ and $A=\{7\}$. Add $7$ and an edge from $2$ to $7$.
+\[ \fbox{ \xygraph{
+!{(0,0)   }*+{\bullet_{4}}="4"
+!{(0.5,0.5) }*+{\bullet_{1}}="1"
+!{(0.5,1) }*+{\bullet_{3}}="3"
+!{(1,1)   }*+{\bullet_{6}}="6"
+!{(1.25,.5)   }*+{\bullet_{2}}="2"
+!{(1,0)   }*+{\bullet_{5}}="5"
+!{(1.75,.5) }*+{\bullet_{7}}="7"
+!{(1.5,0) }*+{\bullet_{8}}="8"
+"1"-"2" "1"-"3" "1"-"4" "1"-"5"
+"3"-"6"
+"2"-"7" "2"-"8"
+} } \]
+
+We have reconstructed the original tree.
+%%%%%
+%%%%%
+\end{document}

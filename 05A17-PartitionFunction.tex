@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartitionFunction}
+\pmcreated{2013-03-22 15:57:55}
+\pmmodified{2013-03-22 15:57:55}
+\pmowner{silverfish}{6603}
+\pmmodifier{silverfish}{6603}
+\pmtitle{partition function}
+\pmrecord{9}{37980}
+\pmprivacy{1}
+\pmauthor{silverfish}{6603}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A17}
+\pmrelated{IntegerPartition}
+\pmrelated{NonMultiplicativeFunction}
+\pmdefines{partition generating function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\begin{document}
+The {\sl partition function } $p(n)$ is defined to be the number of partitions of the integer $n$.  The sequence of values $p(0), p(1), p(2),\ldots$ is Sloane's A000041 and begins $1, 1, 2, 3, 5, 7, 11, 15, 22, 30, \ldots$.  This function grows very quickly, as we see in the following theorem due to Hardy and \PMlinkname{Ramanujan}{SrinivasaRamanujan}.
+
+\begin{thm}
+As $n \rightarrow \infty$, the ratio of $p(n)$ and
+\[ \frac{ e^{\pi \sqrt{ 2n/3} } } {4n \sqrt{3} } \]
+approaches 1.
+\end{thm}
+
+
+The generating function of $p(n)$ is called $F$: by definition
+
+\[ F(x) = \sum _{n=0} ^\infty p(n) x ^n. \]
+
+$F$ can be written as an infinite product:
+
+\[ F(x) = \prod _{i=1} ^\infty (1-x^i) ^{-1}. \]
+To see this, expand each term in the product as a power series:
+
+\[ \label{product} \prod _{i=1} ^\infty  (1+ x^i + x^{2i} + x^{3i} + \cdots ). \]
+Now expand this as a power series.  Given a partition of $n$ with $a_i$ parts of size $i \geq 1$, we get a term $x^n$ in this expansion by choosing $x^{a_1}$ from the first term in the product, $x^{2a_2}$ from the second, $x^{3a_3}$ from the third and so on.  Clearly any term $x^n$ in the expansion arises in this way from a partition of $n$.
+
+One can prove in the same way that the generating function $F_m$ for the number $p_m(n)$ of partitions of $n$ into at most $m$ parts (or equivalently into parts of size at most $m$) is
+
+\[ F_m(x) = \prod _{i=1} ^m (1-x^i) ^{-1}. \]
+
+\begin{thebibliography}{5}
+\bibitem{HandW} G. H. Hardy and E. M. Wright, {\em An Introduction to the Theory of Numbers}, Oxford University Press, 2003.
+
+
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

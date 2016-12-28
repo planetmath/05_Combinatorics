@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatHadamardMatrixHasOrder1Or2Or4n}
+\pmcreated{2013-03-22 16:50:56}
+\pmmodified{2013-03-22 16:50:56}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{proof that Hadamard matrix has order 1 or  2 or 4n}
+\pmrecord{10}{39095}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05B20}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $m$ be the order of a Hadamard matrix. The matrix $[1]$ shows that order 1 
+is possible, and the \PMlinkescapetext{parent} entry has a $2 \times 2$ Hadamard matrix
+, so assume $m>2$. 
+
+We can assume that the first row of the matrix is all 1's by multiplying
+selected columns by $-1$. Then permute columns as needed to arrive at a
+matrix whose first three rows have the following form, where $P$ denotes a submatrix of one row
+and all 1's and $N$ denotes a submatrix of one row and all $-1$'s.
+
+$$\begin{matrix}
+\begin{matrix}
+x \quad  &\quad y & \quad z & \quad w
+\end{matrix} &
+\begin{matrix}
+\quad
+\end{matrix}
+\\
+\left[ \begin{matrix}
+\overbrace{P} & \overbrace{P} &  \overbrace{P} & \overbrace{P} \\
+P & P & N & N \\
+P & N & P & N \\
+\end{matrix} \right] 
+\end{matrix}
+$$
+
+Since the rows are orthogonal and there are $m$ columns we have
+\begin{center}
+$\begin{cases}
+x + y + z +w &= m \\
+x + y - z - w &= 0 \\
+x - y + z -w &= 0 \\
+x - y - z + w &= 0.
+\end{cases}$
+\end{center}
+Adding the 4 equations together we get 
+$$
+4x = m.
+$$
+so that $m$ must be divisible by 4.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExponentialFactorial}
+\pmcreated{2013-03-22 16:01:38}
+\pmmodified{2013-03-22 16:01:38}
+\pmowner{CompositeFan}{12809}
+\pmmodifier{CompositeFan}{12809}
+\pmtitle{exponential factorial}
+\pmrecord{7}{38068}
+\pmprivacy{1}
+\pmauthor{CompositeFan}{12809}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmrelated{Factorial}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Given a positive integer $n$, the "power tower" $n^{(n - 1)^{(n - 2) \dots }}$ is the {\em exponential factorial} of $n$. The recurrence relation is $a_1 = 1$, $a_n = n^{a_{n - 1}}$ for $n > 1$.
+
+So for example, $9 = 3^{2^1}$, $262144 = 4^{3^{2^1}}$. The exponential factorial for 5 has almost two hundred thousand base 10 digits. The ones that are small enough are listed in sequence A049384 of Sloane's OEIS.
+
+The sum of the reciprocals of the exponential factorials is a Liouville number. $$\sum_{i = 1}^\infty {1 \over a_i} \approx 1.6111149258083767361111111$$
+%%%%%
+%%%%%
+\end{document}

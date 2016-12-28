@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Subgraph}
+\pmcreated{2013-03-22 12:30:59}
+\pmmodified{2013-03-22 12:30:59}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{subgraph}
+\pmrecord{10}{32754}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C99}
+%\pmkeywords{graph}
+\pmrelated{Graph}
+\pmrelated{Pseudograph}
+\pmrelated{Multigraph}
+\pmdefines{induced}
+\pmdefines{spanned by}
+\pmdefines{spanning}
+\pmdefines{spanning subgraph}
+\pmdefines{induced subgraph}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We say that $G' = (V',E')$ is a \emph{subgraph} of $G = (V,E)$ if $V' \subseteq V$ and $E' \subseteq E$. In this case we write $G' \subseteq G$.
+
+If $G'$ contains \emph{all edges} of $G$ that join two vertices in $V'$ then $G'$ is said to be the subgraph \emph{induced} or \emph{spanned by} $V'$ and is denoted by $G[V']$. Thus, a subgraph $G'$ of $G$ is an induced subgraph if $G' = G[V(G')]$. If $V' = V$, then $G'$ is said to be a \emph{spanning} subgraph of $G$.
+
+Often, new graphs are constructed from old ones by deleting or adding some vertices and edges. If $W \subset V(G)$, then $G - W = G[V\setminus W]$ is the subgraph of $G$ obtained by deleting the vertices in $W$ \emph{and all edges incident with them}. Similarly, if $E' \subseteq E(G)$, then $G - E' = (V(G),E(G) \setminus E')$. If $W = {w}$ and $E' = {xy}$, then this notation is simplified to $G - w$ and $G - xy$. Similarly, if $x$ and $y$ are nonadjacent vertices of $G$, then $G + xy$ is obtained from $G$ by joining $x$ to $y$.
+
+
+\footnotesize{Adapted with permission of the author from \emph{\PMlinkescapetext{Modern Graph Theory}} by B\'{e}la Bollob\'{a}s, published by Springer-Verlag New York, Inc., 1998.}
+%%%%%
+%%%%%
+\end{document}

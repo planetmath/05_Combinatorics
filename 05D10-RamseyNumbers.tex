@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RamseyNumbers}
+\pmcreated{2013-03-22 16:16:32}
+\pmmodified{2013-03-22 16:16:32}
+\pmowner{wdsmith}{13774}
+\pmmodifier{wdsmith}{13774}
+\pmtitle{Ramsey numbers}
+\pmrecord{10}{38387}
+\pmprivacy{1}
+\pmauthor{wdsmith}{13774}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05D10}
+\pmrelated{RamseysTheorem2}
+\pmdefines{Ramsey numbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{blue}
+\PMlinkescapeword{edges}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{integer}
+
+Define $R(a,b)$ to be the least integer $N$ such that, in any red-blue 2-coloring of the edges of a $N$-vertex complete graph $K_N$,
+there must exist either an all-red $K_a$ or an all-blue $K_b$.
+
+Frank Ramsey proved these numbers always exist.
+He famously pointed out that among any 6 people, some three are mutual friends
+or some three mutual non-friends.  That is, $R(3,3)\le 6$.
+Since a red pentagon with a blue pentagram drawn inside it has no monochromatic triangle,
+$R(3,3)\ge 6$.  So $R(3,3)=6$.
+
+Special attention is usually paid to the diagonal $R(k,k)$, which is often just written $R(k)$.
+
+One can also generalize this in various ways,
+e.g. consider $R(a,b,c)$ for {\it three}-colorings of edges, etc (any number of
+arguments), and allow general sets of graphs, not just pairs of complete ones.
+ 
+Ramsey numbers are very difficult to determine.
+To prove lower bounds, construct good edge-colorings of some $K_N$ and, use a clique-finder
+to find the largest mono-colored cliques.
+To prove upper bounds, the main tool has been $R(a,b)\le R(a-1,b)+R(b-1,a)$
+which implies $R(a,b) \le {{a+b-2} \choose {a-1}}$ and then $R(k) \le [1+o(1)] 4^k / (4 \sqrt{\pi k}$
+when $k \to \infty$.
+From considering random colorings and using a probabilistic nonconstructive existence
+argument, one may show $R(k) \ge k 2^{k/2} [ o(1) + \sqrt{2} / e ]$.
+It is known that $R(1)=1$, $R(2)=2$, $R(3)=6$, $R(4)=18$, and $43 \le R(5) \le 49$.
+For a survey of the best upper and lower bounds available on small
+Ramsey numbers, see 
+\PMlinkexternal{Radziszowski's survey}{http://www.combinatorics.org/Surveys/ds1.pdf}
+(\PMlinkexternal{alternate link}{http://www.cs.rit.edu/~spr/}).
+Another kind of Ramsey-like number which has not gotten as much attention as it deserves,
+are Ramsey numbers for {\it directed} graphs.
+Let $\vec{R}(n)$ denote the least integer $N$ so that any tournament (complete directed graph
+with singly-directed arcs) with $\ge N$ vertices contains an acyclic (also called ``transitive'')
+$n$-node tournament.  (Analogies: 2-color the edges $\to$ two directions for arcs.
+Monochromatic $\to$ acyclic, i.e. all arcs ``point one way.'')
+
+Again, to prove lower bounds, construct good tournaments and apply something like
+a clique-finder (but instead aimed at trying to find the largest acyclic induced subgraph).
+To prove upper bounds, the main tool is $\vec{R}(n+1) \le 2 \vec{R}(n)$.
+That can be used to show the upper bound, and
+random-orientation arguments combined with a nonconstructive probabilistic existence argument
+show the lower bound, in $[1+o(1)] 2^{n+1)/2} \le \vec{R}(n) \le 55 \cdot 2^{n-7}$.
+It is known that $\vec{R}(1)=1$, 
+$\vec{R}(2)=2$,
+$\vec{R}(3)=4$,
+$\vec{R}(4)=8$,
+$\vec{R}(5)=14$,
+$\vec{R}(6)=28$,
+and
+$32 \le \vec{R}(7) \le 55$.
+For a full survey of directed graph Ramsey numbers includng proofs and refererences,
+see \PMlinkexternal{Smith's survey}{http://www.rangevoting.org/PuzzRamsey.html}.
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+
+\end{document}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdjacencyMatrix}
+\pmcreated{2013-03-22 17:22:43}
+\pmmodified{2013-03-22 17:22:43}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{adjacency  matrix}
+\pmrecord{7}{39744}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C50}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\subsubsection*{Definition}
+
+Let $G=(V,E)$ be a graph with vertex set $V=\lbrace v_1,\ldots, v_n \rbrace$ and edge set $E$.  The \emph{adjacency matrix} $M_G=(m_{ij})$ of $G$ is defined as follows: $M_G$ is an $n\times n$ matrix such that
+\begin{displaymath}
+m_{ij} = \left \lbrace
+\begin{array}{ll}
+1 & \textrm{if $\lbrace v_i,v_j\rbrace \in E$}\\
+0 & \textrm{otherwise.}
+\end{array}
+\right.
+\end{displaymath}
+In other words, start with the $n\times n$ zero matrix, put a $1$ in \PMlinkescapetext{cell} $(i,j)$ if there is an edge whose endpoints are $v_i$ and $v_j$.
+
+For example, the adjacency matrix of the following graph 
+
+\begin{figure}[!h]
+\centering
+\scalebox{0.8}{\includegraphics{adjacencymat_graph.eps}}
+\end{figure}
+
+is 
+
+$$\begin{pmatrix}
+0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 0 & 1 & 1 \\
+1 & 0 & 0 & 0 & 1 \\
+1 & 1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 
+\end{pmatrix}.$$
+
+\textbf{Remarks}.  Let $G$ be a graph and $M_G$ be its adjacency matrix.
+\begin{itemize}
+\item $M_G$ is symmetric with $0$'s in its main diagonal.
+\item The sum of the cells in any given column (or row) is the degree of the corresponding vertex.  Therefore, the sum of all the cells in $M_G$ is twice the number of edges in $G$.
+\item $M_G=\mathbf{1}-I$ iff $G$ is a complete graph.  Here, $\mathbf{1}$ is the matrix whose entries are all $1$ and $I$ is the identity matrix.
+\item If we are given a symmetric matrix $M$ of order $n$ whose entries are either $1$ or $0$ and whose entries in the main diagonal are all $0$, then we can construct a graph $G$ such that $M=M_G$.
+\end{itemize}
+
+\subsubsection*{Generalizations}
+
+The above definition of an adjacency matrix can be extended to multigraphs (multiple edges between pairs of vertices allowed), pseudographs (loops allowed), and even directed pseudographs (edges are directional).  There are two cases in which we can generalize the definition, depending on whether edges are directional.
+
+\begin{enumerate}
+\item (Edges are not directional).  
+
+Since a multigraph is just a special case of a pseudograph, we will define $M_G$ for a pseudograph $G$.  Let $G=(V,E)$ be a pseudograph with $V=\lbrace v_1,\ldots,v_n\rbrace$  The \emph{adjacency matrix} $M_G=(m_{ij})$ of $G$ is an $n\times n$ matrix such that $m_{ij}$ is the number of edges whose endpoints are $v_i$ and $v_j$.  Again, $M_G$ is symmetric, but the main diagonal may contain non-zero entries, in case there are loops.
+
+\item (Edges are directional).  
+
+Since a digraph is a special case of a directed pseudograph, we again define $M_G$ in the most general setting.  Let $G=(V,E)$ be a directed pseudograph with $V=\lbrace v_1,\ldots,v_n\rbrace$ and $E\subseteq V\times V\times (\mathbb{N}\cup \lbrace 0\rbrace)$.  The \emph{adjacency matrix} $M_G$ of $G$ is an $n\times n$ matrix such that $$m_{ij}=|\lbrace k\mid (v_i,v_j,k)\in E\rbrace|.$$  In other words, $m_{ij}$ is the number of directed edges from $v_i$ to $v_j$.
+
+\end{enumerate}
+
+\textbf{Remarks}
+\begin{itemize}
+\item If $G$ is a multigraph, then the entries in the main diagonal of $M_G$ must be all $0$.
+\item If $G$ is a graph, then $M_G$ corresponds to the original definition given in the previous section.
+\item If $G$ is a digraph, then entries $M_G$ consists of $0$'s and $1$'s and its main diagonal consists of all $0$'s.
+\item Given \emph{any} square matrix $M$, there is a directed pseudograph $G$ with $M=M_G$.  In addition, $M$ corresponds to adjacency matrix of various types of graphs if appropriate conditions are imposed on $M$
+\item Generally, one can \emph{derive} a pseudograph from a directed pseudograph by ``forgetting'' the order in the ordered pairs of vertices.  If $G$ is a directed pseudograph and $G'$ is the corresponding derived pseudograph.  Let $M_G=(m_{ij})$ and $M_{G'}=(n_{ij})$, then $n_{ij}=m_{ij}+m_{ji}$.  
+
+In the language of category theory, the above operation is done via a forgetful functor (from the category of directed pseudographs to the category of pseudographs).  Other forgetful functors between categories of various types of graphs are possible.  In each case, the forgetful functor has an associated operation on the adjacency matrices of the graphs involved.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

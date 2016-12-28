@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HamiltonianGraph}
+\pmcreated{2013-03-22 11:52:43}
+\pmmodified{2013-03-22 11:52:43}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{Hamiltonian graph}
+\pmrecord{13}{30474}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C45}
+\pmclassification{msc}{55-00}
+\pmclassification{msc}{82-00}
+\pmclassification{msc}{83-00}
+\pmclassification{msc}{81-00}
+\pmsynonym{Hamiltonian}{HamiltonianGraph}
+\pmrelated{HamiltonianCycle}
+\pmrelated{HamiltonianPath}
+\pmrelated{OresTheorem}
+\pmrelated{BondyAndChvatalTheorem}
+\pmrelated{PetersensGraph}
+\pmrelated{Traceable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A graph $G$ is \emph{Hamiltonian} if it has a Hamiltonian cycle.
+
+A useful condition both necessary and sufficient for a graph to be Hamiltonian is not known.  Ore's theorem and the Bondy and Chv\'atal theorem give sufficient conditions, while a necessary condition follows quickly from the definition, namely:
+
+Let $G=(V,E)$ be a graph of order at least 3. If $G$ is Hamiltonian, then for every proper subset $U$ of $V$, the subgraph induced by $V-U$ has at most $|U|$ components.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

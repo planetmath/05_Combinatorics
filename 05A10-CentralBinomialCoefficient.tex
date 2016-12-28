@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CentralBinomialCoefficient}
+\pmcreated{2013-03-22 14:25:40}
+\pmmodified{2013-03-22 14:25:40}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{central binomial coefficient}
+\pmrecord{8}{35936}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmclassification{msc}{11B65}
+\pmrelated{BinomialCoefficient}
+\pmrelated{CatalanNumbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+The $n$th {\em central binomial coefficient} is defined to be
+
+\[ {2n \choose n} = \frac{(2n)!}{(n!)^2} \]
+
+where ${2n \choose n}$ is a binomial coefficient.  These numbers have the generating function
+
+\[ \frac{1}{\sqrt{1-4x}} = 1 + 2x + 6x^2 + 20x^3 + 70x^4 + 252x^5 + \cdots \]
+
+They are closely related to the Catalan sequence, in that 
+\[ C_n = \frac{1}{n+1} {2n \choose n}  \]
+
+{\bf Alternate definition}\\
+
+A less frequently-encountered definition for the $n$th central binomial coefficient is ${ n \choose {\lfloor \frac{n}{2} \rfloor} }$.
+
+Note that the set of these numbers meeting this alternate criterion is a superset of those meeting the first criterion, since for $n = 2m$ we have
+\[ {n \choose {\lfloor \frac{n}{2} \rfloor} } =
+   {2m \choose {\lfloor \frac{2m}{2} \rfloor} } = {2m \choose m} \]
+
+By cancelling terms of one of the $n!$'s against terms of the $2n!$, one may rewrite the central binomial 
+coefficient as follows:
+\[
+{2n \choose n} = 
+{2n (2n-1) \cdots (n+2) (n+1) \over
+ n (n-1) \cdots 3 \cdot 2 \cdot 1}.
+\]
+Alternatively, one may cancel each term of the $n!$ against twice itself, leaving $2$'s in the numerator:
+\[
+{2n \choose n} = 
+2^n {(2n-1) (2n-3) \cdots 5 \cdot 3 \cdot 1 \over
+n (n-1) \cdots 3 \cdot 2 \cdot 1}
+\]
+Doubling the terms in the denominator, we obtain an expression for the central binomial coeficient
+in terms of a quotient of successive odd numbers by successive even numbers:
+\[
+{2n \choose n} = 4^n
+{(2n-1) (2n-3) \cdots 5 \cdot 3 \cdot 1 \over
+ 2n (2n-2) \cdots 6 \cdot 4 \cdot 2}
+\]
+By means of these formulae, one may derive some important properties of the central
+binomial coeficients.  By examining the first two formulae, one may deduce results
+about the prime factors of central binomial coefficients  (for proofs, please see the
+attachments to this entry):
+
+\begin{thm}
+If $n \ge 3$ is an integer and $p$ is a prime number such that $n < p < 2n$, then
+$p$ divides ${2n \choose n}$.
+\end{thm}
+
+\begin{thm}
+If $n \ge 3$ is an integer and $p$ is a prime number such that $2n/3 < p \le n$, then
+$p$ does not divide ${2n \choose n}$.
+\end{thm}
+
+In conjunction with Wallis' formula for $\pi$, the third formula for the central
+binomial coefficient may be used to derive an asymptotic expression, as is done in
+an attachment to this entry:
+\[
+ {2n \choose n} \approx
+ \sqrt{2 \over \pi}
+ {4^n \over \sqrt{2n+1}}
+\]
+%%%%%
+%%%%%
+\end{document}

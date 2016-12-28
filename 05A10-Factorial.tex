@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Factorial}
+\pmcreated{2013-03-22 11:53:58}
+\pmmodified{2013-03-22 11:53:58}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{factorial}
+\pmrecord{22}{30516}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmclassification{msc}{11B65}
+\pmclassification{msc}{92-01}
+\pmclassification{msc}{92B05}
+\pmsynonym{factorial function}{Factorial}
+\pmrelated{BinomialCoefficient}
+\pmrelated{ExponentialFactorial}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{word}
+
+For any non-negative integer $n$, the {\em factorial} of $n$, denoted $n!$, can be defined by
+$$n!=\prod_{r=1}^n r$$
+where for $n=0$ the empty product is taken to be $1$.
+
+Alternatively, the factorial can be defined recursively by $0!=1$ and $n!=n(n-1)!$ for $n>0$.
+
+$n!$ is equal to the number of permutations of $n$ distinct objects.
+For example, there are $5!$ ways to arrange the five letters A, B, C, D and E into a word.
+
+For every non-negative integer $n$ we have
+$$\Gamma(n+1) = n!$$
+where $\Gamma$ is Euler's gamma function.
+In this way the notion of factorial can be generalized to all \PMlinkname{complex}{Complex} values except the negative integers.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

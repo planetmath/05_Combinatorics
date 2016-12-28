@@ -1,0 +1,459 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KempeChain}
+\pmcreated{2013-05-16 21:17:19}
+\pmmodified{2013-05-16 21:17:19}
+\pmowner{marijke}{8873}
+\pmmodifier{unlord}{1}
+\pmtitle{Kempe chain}
+\pmrecord{7}{36934}
+\pmprivacy{1}
+\pmauthor{marijke}{1}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C15}
+\pmrelated{ColoringsOfPlaneGraphs}
+\pmrelated{ProofOfVizingsTheoremForGraphs}
+
+\usepackage{amssymb}
+% \usepackage{amsmath}
+% \usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% portions from
+% makra.sty 1989-2005 by Marijke van Gans %
+                                          %          ^ ^
+\catcode`\@=11                            %          o o
+                                          %         ->*<-
+                                          %           ~
+%%%% CHARS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        %    code    char  frees  for
+
+\let\Para\S             %    \Para     ÃƒÂ‚Ã‚Â§   \S \scriptstyle
+\let\Pilcrow\P          %    \Pilcrow  ÃƒÂ‚Ã‚Â¶   \P
+\mathchardef\pilcrow="227B
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+\let\bs\backslash       %    \bs       \
+\let\us\_               %    \us       _     \_  ...
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+%%%% DIACRITICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\udot\d             % under-dot (text mode), frees \d
+\let\odot\.             % over-dot (text mode),  frees \.
+%let\hacek\v            % hacek (text mode),     frees \v
+%let\makron\=           % makron (text mode),    frees \=
+%let\tilda\~            % tilde (text mode),     frees \~
+\let\uml\"              % umlaut (text mode),    frees \"
+
+%def\ij/{i{\kern-.07em}j}
+%def\trema#1{\discretionary{-}{#1}{\uml #1}}
+
+%%%% amssymb %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\le\leqslant
+\let\ge\geqslant
+%let\prece\preceqslant
+%let\succe\succeqslant
+
+%%%% USEFUL MISC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\C++{C$^{_{++}}$}
+
+%let\writelog\wlog
+%def\wl@g/{{\sc wlog}}
+%def\wlog{\@ifnextchar/{\wl@g}{\writelog}}
+
+%def\org#1{\lower1.2pt\hbox{#1}} 
+% chem struct formulae: \bs, --- /  \org{C} etc. 
+
+%%%% USEFUL INTERNAL LaTeX STUFF %%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\Ifnextchar=\@ifnextchar
+%let\Ifstar=\@ifstar
+%def\currsize{\@currsize}
+
+%%%% KERNING, SPACING, BREAKING %%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\qqquad{\hskip3em\relax}
+%def\qqqquad{\hskip4em\relax}
+%def\qqqqquad{\hskip5em\relax}
+%def\qqqqqquad{\hskip6em\relax}
+%def\qqqqqqquad{\hskip7em\relax}
+%def\qqqqqqqquad{\hskip8em\relax}
+
+%%%% LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% COUNTERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\addtoreset\@addtoreset
+%{A}{B} adds A to list of counters reset to 0
+% when B is \refstepcounter'ed (see latex.tex)
+%
+%def\numbernext#1#2{\setcounter{#1}{#2}\addtocounter{#1}{\m@ne}}
+
+%%%% EQUATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% LEMMATA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% DISPLAY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% MATH LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\D\displaystyle
+\let\T\textstyle
+\let\S\scriptstyle
+\let\SS\scriptscriptstyle
+
+% array:
+%def\<#1:{\begin{array}{#1}}
+%def\>{\end{array}}
+
+% array using [ ] with rounded corners:
+%def\[#1:{\left\lgroup\begin{array}{#1}} 
+%def\]{\end{array}\right\rgroup}
+
+% array using ( ):
+%def\(#1:{\left(\begin{array}{#1}}
+%def\){\end{array}\right)}
+
+%def\hh{\noalign{\vskip\doublerulesep}}
+
+%%%% MATH SYMBOLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\d{\mathord{\rm d}}                      % d as in dx
+%def\e{{\rm e}}                              % e as in e^x
+
+%def\Ell{\hbox{\it\char`\$}}
+
+\def\sfmath#1{{\mathchoice%
+{{\sf #1}}{{\sf #1}}{{\S\sf #1}}{{\SS\sf #1}}}}
+\def\Stalkset#1{\sfmath{I\kern-.12em#1}}
+\def\Bset{\Stalkset B}
+\def\Nset{\Stalkset N}
+\def\Rset{\Stalkset R}
+\def\Hset{\Stalkset H}
+\def\Fset{\Stalkset F}
+\def\kset{\Stalkset k}
+\def\In@set{\raise.14ex\hbox{\i}\kern-.237em\raise.43ex\hbox{\i}}
+\def\Roundset#1{\sfmath{\kern.14em\In@set\kern-.4em#1}}
+\def\Qset{\Roundset Q}
+\def\Cset{\Roundset C}
+\def\Oset{\Roundset O}
+\def\Zset{\sfmath{Z\kern-.44emZ}}
+
+% \frac overwrites LaTeX's one (use TeX \over instead)
+%def\fraq#1#2{{}^{#1}\!/\!{}_{\,#2}}
+\def\frac#1#2{\mathord{\mathchoice%
+{\T{#1\over#2}}
+{\T{#1\over#2}}
+{\S{#1\over#2}}
+{\SS{#1\over#2}}}}
+%def\half{\frac12}
+
+\mathcode`\<="4268         % < now is \langle, \lt is <
+\mathcode`\>="5269         % > now is \rangle, \gt is >
+
+%def\biggg#1{{\hbox{$\left#1\vbox %to20.5\p@{}\right.\n@space$}}}
+%def\Biggg#1{{\hbox{$\left#1\vbox %to23.5\p@{}\right.\n@space$}}}
+
+\let\epsi=\varepsilon
+\def\omikron{o}
+
+\def\Alpha{{\rm A}}
+\def\Beta{{\rm B}}
+\def\Epsilon{{\rm E}}
+\def\Zeta{{\rm Z}}
+\def\Eta{{\rm H}}
+\def\Iota{{\rm I}}
+\def\Kappa{{\rm K}}
+\def\Mu{{\rm M}}
+\def\Nu{{\rm N}}
+\def\Omikron{{\rm O}}
+\def\Rho{{\rm P}}
+\def\Tau{{\rm T}}
+\def\Ypsilon{{\rm Y}} % differs from \Upsilon
+\def\Chi{{\rm X}}
+
+%def\dg{^{\circ}}                   % degrees
+
+%def\1{^{-1}}                       % inverse
+
+\def\*#1{{\bf #1}}                  % boldface e.g. vector
+%def\vi{\mathord{\hbox{\bf\i}}}     % boldface vector \i
+%def\vj{\mathord{\,\hbox{\bf\j}}}   % boldface vector \j
+
+%def\union{\mathbin\cup}
+%def\isect{\mathbin\cap}
+
+%let\so\Longrightarrow
+%let\oso\Longleftrightarrow
+%let\os\Longleftarrow
+
+% := and :<=>
+%def\isdef{\mathrel{\smash{\stackrel{\SS\rm def}{=}}}}
+%def\iffdef{\mathrel{\smash{stackrel{\SS\rm def}{\oso}}}}
+
+\def\isdef{\mathrel{\mathop{=}\limits^{\smash{\hbox{\tiny def}}}}}
+%def\iffdef{\mathrel{\mathop{\oso}\limits^{\smash{\hbox{\tiny %def}}}}}
+
+%def\tr{\mathop{\rm tr}}            % tr[ace]
+%def\ter#1{\mathop{^#1\rm ter}}     % k-ter[minant]
+
+%let\.=\cdot
+%let\x=\times                % ÃƒÂƒÃ‚Â—ÃƒÂ‚Ã‚Â— (direct product)
+
+%def\qed{ ${\S\circ}\!{}^\circ\!{\S\circ}$}
+%def\qed{\vrule height 6pt width 6pt depth 0pt}
+
+%def\edots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}\mkern1mu   %  .shorter
+%   \raise4pt\hbox{.}\mkern1mu                  %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %        .
+%def\fdots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}            %   . ~45ÃƒÂ‚Ã‚Â°
+%   \raise4pt\hbox{.}                           %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %       .
+
+\def\mod#1{\allowbreak \mkern 10mu({\rm mod}\,\,#1)}
+% redefines TeX's one using less space
+
+%def\int{\intop\displaylimits}
+%def\oint{\ointop\displaylimits}
+
+%def\intoi{\int_0^1}
+%def\intall{\int_{-\infty}^\infty}
+
+%def\su#1{\mathop{\sum\raise0.7pt\hbox{$\S\!\!\!\!\!#1\,$}}}
+
+%let\frakR\Re
+%let\frakI\Im
+%def\Re{\mathop{\rm Re}\nolimits}
+%def\Im{\mathop{\rm Im}\nolimits}
+%def\conj#1{\overline{#1\vphantom1}}
+%def\cj#1{\overline{#1\vphantom+}}
+
+%def\forAll{\mathop\forall\limits}
+%def\Exists{\mathop\exists\limits}
+
+%%%% PICTURES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\cent{\makebox(0,0)}
+
+%def\node{\circle*4}
+%def\nOde{\circle4}
+
+%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\opcit{[{\it op.\,cit.}]}
+\def\bitem#1{\bibitem[#1]{#1}}
+\def\name#1{{\sc #1}}
+\def\book#1{{\sl #1\/}}
+\def\paper#1{``#1''}
+\def\mag#1{{\it #1\/}}
+\def\vol#1{{\bf #1}}
+\def\isbn#1{{\small\tt ISBN\,\,#1}}
+\def\seq#1{{\small\tt #1}}
+%def\url<{\verb>}
+%def\@cite#1#2{[{#1\if@tempswa\ #2\fi}]}
+
+%%%% VERBATIM CODE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\"{\verb"}
+
+%%%% AD HOC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% WORDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \hyphenation{pre-sent pre-sents pre-sent-ed pre-sent-ing
+% re-pre-sent re-pre-sents re-pre-sent-ed re-pre-sent-ing
+% re-fer-ence re-fer-ences re-fer-enced re-fer-encing
+% ge-o-met-ry re-la-ti-vi-ty Gauss-ian Gauss-ians
+% Des-ar-gues-ian}
+
+%def\oord/{o{\trema o}rdin\-ate}
+% usage: C\oord/s, c\oord/.
+% output: co\"ord... except when linebreak at co-ord...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                                          %
+                                          %          ^ ^
+\catcode`\@=12                            %          ` '
+                                          %         ->*<-
+                                          %           ~
+\begin{document}
+\PMlinkescapeword{chain}
+\PMlinkescapeword{chains}
+\PMlinkescapeword{embedding}
+\PMlinkescapeword{embeddings}
+\PMlinkescapeword{even}
+\PMlinkescapeword{length}
+\PMlinkescapeword{map}
+\PMlinkescapeword{maps}
+\PMlinkescapeword{mean}
+\PMlinkescapeword{meet}
+\PMlinkescapeword{odd}
+\PMlinkescapeword{maximal}
+\PMlinkescapeword{sound}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{time}
+\PMlinkescapeword{types}
+
+% \subsection*{Kempe chains}
+
+Alfred B.\ Kempe
+(\PMlinkexternal{bio at St Andrews}{http://www-history.mcs.st-andrews.ac.uk/Mathematicians/Kempe.html})
+first used these chains, now called after him,
+in 1879 in a ``proof'' of the four-color conjecture. Although Percy Heawood
+found a flaw in his proof 11 years later, the idea of Kempe chains itself is
+quite sound. Heawood used it to prove 5 colors suffice for maps on the plane,
+and the 1976 proof by Appel, Haken and Koch is also based on Kempe's ideas.
+
+The original Kempe chains were used in the context of colorings of countries
+on a map, or in modern terminology {\bf face colorings} of a plane graph $G$
+(such that no two adjacent faces receive the same color). The idea was
+extended by Heawood to embeddings of a graph in any other surface. Here
+%
+\begin{itemize}
+
+\item a Kempe chain of colors $a$ and $b$ is a maximal connected set of faces
+that have either of those colors. \PMlinkescapetext{Connected} as in: you can travel from any face in the set to any other, through the set. Maximal as in: there are no more faces of those colors you could enlarge the set with, i.e.\ that border the area you've already got.
+
+\end{itemize}
+%
+In the modern dual formulation of the four-color theorem, faces of $G$ are
+replaced by vertices of the dual graph $G^*$ (and vice versa); vertices are
+adjacent (linked by an edge) in $G^*$ whenever the corresponding faces of $G$
+were adjacent (sharing a border). It now becomes a {\bf vertex coloring}
+problem (again, adjacent vertices must receive different colors). Here
+%
+\begin{itemize}
+
+\item a Kempe chain of colors $a$ and $b$ is a maximal connected subgraph
+containing only vertices of those colors. Connected as usual in graph theory
+(there's a path between any two vertices) and maximal as in: there are no
+more vertices of those colors you could enlarge the subgraph with, i.e.\ that
+are adjacent to a vertex you've already got.
+
+An alternative formulation: let $G(a,b)$ be the subgraph induced by all the
+vertices of color $a$ or $b$ (that is, with all the edges that run between
+those vertices). Now any connected component $H(a,b)$ of $G(a,b)$ is a Kempe
+chain.
+
+\end{itemize}
+%
+While faces imply an embedding in a surface, the vertex version of the
+definition does not rely on any embedding. The chains are more useful in
+the context of an embedding though.
+
+\clearpage
+\subsection*{Kempe chains of edges}
+
+With {\bf edge coloring} of graphs (again, with different colors for adjacent
+edges i.e.\ those that meet at a vertex), an analogous concept can defined.
+Here
+%
+\begin{itemize}
+
+\item a Kempe chain of colors $a$ and $b$ is a maximal connected subgraph
+where the edges have either of those colors. Connected and maximal as before.
+
+An alternative formulation: let $G(a,b)$ be the subgraph consisting of all the
+edges of color $a$ or $b$ (with any vertices incident to them). Now any
+connected component $H(a,b)$ of $G(a,b)$ is a Kempe chain.
+
+\end{itemize}
+%
+While superficially similar to the previous definition, these ``Kempe chains''
+are rather different animals. Their structure is far simpler. At any vertex of
+$H(a,b)$, there can be at most one edge of color $a$ and one edge of color $b$
+(at most two edges in all). Two things can happen:
+%
+\begin{itemize}
+
+\item[$\circ$] Every vertex in the chain has two such edges. In a finite
+     graph, this must mean a closed path (cycle). Note that, being colored
+     alternatingly, the number of edges must now be even.
+
+\item[$\circ$] A vertex misses out on having an edge of one of those colors,
+     and the chain stops there (it can't miss out on both colors because then
+     it wouldn't be part of the chain). In a finite graph, the other end of
+     the chain must now also terminate somewhere (at a vertex that misses
+     out either one of the colors). The chain is an open path of one or
+     more edges (its length can be even or odd).
+
+\end{itemize}
+
+\clearpage
+\subsection*{Kempe chain arguments}
+
+One technique that can be used with all these types of chains is
+%
+\begin{itemize}
+
+\item swapping the colors in one $H(a,b)$. This is always possible:
+      by definition, there are no adjacent items that could
+      lead to a color clash.
+
+      Kempe slipped up when he swapped an $H(a,b)$ and an $H(a,c)$ without
+      taking in account that swapping colors $a$ and $b$ in part of the
+      graph could alter the shape and connectedness of any $H(a,c)$, but
+      swapping colors in one Kempe chain at a time (and then taking stock of
+      the lay of the land afresh) is quite safe.
+
+      Swapping can be used to free up a color somewhere, see the
+      \PMlinkid{proof of Vizing's theorem}{6932} for a repeated use
+      of this ploy on edge-based Kempe chains.
+
+\end{itemize}
+%
+Specific to the use in plane graphs we have that
+%
+\begin{itemize}
+
+\item if a Kempe chain forms a cycle, it disconnects the sphere or plane area
+      into disjoint parts (on the plane, inside and outside the cycle).
+
+\end{itemize}
+%
+Specifically when four colors are used for faces:
+%
+\begin{itemize}
+
+\item The whole area is divided into red/green swathes and yellow/blue ones.
+      Alternatively, into red/yellow and green/blue ones. Or red/blue and
+      yellow/green ones.
+
+\end{itemize}
+%
+Specifically for edge-based Kempe chains in regular $\rho$-valent graphs, if
+we try to edge-color the graph with only $\rho$ colors:
+%
+\begin{itemize}
+
+\item No vertex can miss out on any of the $\rho$ colors, so every $H(a,b)$
+      must be a cycle (of even length).
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegerPartition}
+\pmcreated{2013-03-22 14:17:34}
+\pmmodified{2013-03-22 14:17:34}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{integer partition}
+\pmrecord{9}{35748}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A17}
+\pmclassification{msc}{11P99}
+\pmsynonym{partition}{IntegerPartition}
+\pmsynonym{unordered partition}{IntegerPartition}
+\pmrelated{PartitionFunction2}
+\pmdefines{dual partition}
+\pmdefines{Young diagram}
+\pmdefines{Ferrers diagram}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage[all,web]{xypic}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\def\drawsqlat{%
+\begin{xy}{
+  0;<1.7pc,0pc>:<0pc,1.7pc>::
+  \xylattice{0}{6}{0}{6}}
+\end{xy}}
+\def\drawsq{\ar@{-}c;c+(1,0)\ar@{-}c;c+(0,1)\ar@{-}c+(1,0);c+(1,1)\ar@{-}c+(0,1);c+(1,1)}
+\def\drawsqlabel#1{\save c+(0.5,0.5)*\txt<2pc>{#1} \restore}
+\begin{document}
+\PMlinkescapeword{row}
+
+An (unordered) partition of a natural number $n$ is a way of writing $n$ as a
+sum of natural numbers. For example, the following are the all
+partitions of $5$:
+\begin{align*}
+5&=5&5&=2+2+1\\
+5&=4+1&5&=2+1+1+1\\
+5&=3+2&5&=1+1+1+1+1\\
+5&=3+1+1
+\end{align*}
+Conventionally, parts of a partition are written from the largest
+to the smallest. Instead of writing the partition as a sum, it is common to use the multiset notation, such as $\{8,5,5,5,2,1,1\}$ for $27=8+5+5+5+2+1+1$. Another common notation is to write multiplicities as superscripts, such as $1^22^15^38$ for $27=8+5+5+5+2+1+1$. Note that this way of writing partitions typically uses smallest to largest.
+
+Partitions are often drawn as \emph{Young
+diagrams}, which are rectangular arrays of boxes in which the $k$'th
+row has a number of boxes equal to the $k$'th part of the
+partition. Sometimes dots are used instead of boxes, and then the
+obtained picture is called a \emph{Ferrers diagram}. For instance,
+the partition $10=5+2+2+1$ is drawn
+
+\begin{center}
+\parbox[b]{10pc}{
+\begin{renewcommand}{\latticebody}{%
+\ifnum\latticeA=5 \ifnum\latticeB=4 \drawsq\fi\fi
+\ifnum\latticeA=4 \ifnum\latticeB=4 \drawsq\fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=4 \drawsq\fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=4 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=4 \drawsq\fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=3 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=3 \drawsq\fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\fi\fi}
+\drawsqlat
+\end{renewcommand} 
+Young diagram}\quad
+\parbox[b]{10pc}{\begin{renewcommand}{\latticebody}{%
+\ifnum\latticeA=5 \ifnum\latticeB=4 \drawsqlabel{$\bullet$}\fi\fi
+\ifnum\latticeA=4 \ifnum\latticeB=4 \drawsqlabel{$\bullet$}\fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=4 \drawsqlabel{$\bullet$}\fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=4 \drawsqlabel{$\bullet$}\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=4 \drawsqlabel{$\bullet$}\fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=3 \drawsqlabel{$\bullet$}\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=3 \drawsqlabel{$\bullet$}\fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=2 \drawsqlabel{$\bullet$}\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsqlabel{$\bullet$}\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsqlabel{$\bullet$}\fi\fi
+}\drawsqlat
+\end{renewcommand} Ferrers diagram}
+\end{center}
+
+
+The \emph{dual partition} is the partition obtained by reflecting
+the Young diagram along the main diagonal. For example, the Young
+diagram of the partition dual to the one above is
+\begin{center}
+\begin{renewcommand}{\latticebody}{
+\ifnum\latticeA=4 \ifnum\latticeB=5 \drawsq\fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=5 \drawsq\fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=5 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=5 \drawsq\fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=4 \drawsq\fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=4 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=4 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=3 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\fi\fi }
+\drawsqlat
+\end{renewcommand}
+\end{center}
+which is the diagram of $10=4+3+1+1+1$.
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:stanley_enum_one}
+Richard~P. Stanley.
+\newblock {\em Enumerative Combinatorics}, volume~I.
+\newblock Wadsworth \& Brooks, 1986.
+\newblock \PMlinkexternal{Zbl 0608.05001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0608.05001}.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RootedTree}
+\pmcreated{2013-03-22 19:32:02}
+\pmmodified{2013-03-22 19:32:02}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{rooted tree}
+\pmrecord{38}{42511}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C05}
+\pmdefines{labeled rooted tree}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{pstricks,pst-tree}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+
+\begin{document}
+A \emph{rooted tree} is a pair $(T,v)$, where $T$ is a tree and $v$ is a vertex of $T$ called the \emph{root} of $T$.  For example, the following diagram represents a rooted tree with root $k$
+$$
+\pstree[treemode=U,radius=3pt,levelsep=7ex]
+{\Tc{3pt}~[tnpos=b,tndepth=0pt,radius=4pt]{$k$}}
+{
+\pstree{\TC~[tnpos=l]{$i$}}
+{
+\pstree{\TC~[tnpos=l]{$e$}}
+{\TC~[tnpos=r]{$a$}}
+\TC~[tnpos=r]{$f$}}
+\pstree{\TC~[tnpos=r]{$j$}}
+{\TC~[tnpos=l]{$g$}
+\pstree{\TC~[tnpos=r]{$h$}}
+{\TC~[tnpos=l]{$b$}\TC~[tnpos=r]{$c$}\TC~[tnpos=r]{$d$}}
+}
+}
+$$
+
+Any rooted tree $T$ has a natural partial ordering defined on its vertex set $V(T)$.  Let $rt(T)$ be the root of $T$.  For any pair of vertices $x,y$ of $T$, we define $x\le y$ if $x$ is on the path from $rt(T)$ to $y$.  It is easy to see that $\le$ is a partial order on $V(T)$, and $rt(T)$ is the unique minimum element.
+
+Given a vertex $v$, a \emph{parent} of $v$ is a vertex $w$ that is covered by $v$.  In other words, $w< v$ and if $w\le w'< v$, then $w'= w$.  Since the path connecting $rt(T)$ to $v$ is unique, the parent of a vertex is always unique.  In the example above, vertex $i$ is the parent of vertices $e$ and $f$.  The root $rt(T)$ has no parent.
+
+A \emph{child} of a vertex $v$ is a vertex $u$ that covers $v$.  In other words, $v< u$, and if $v< u' \le u$, then $u'=u$.  Again, from the tree above, vertices $b,c$, and $d$ are children of vertex $h$.  A vertex that is maximal with respect to $\le$ is called a \emph{leaf}.  A leaf has no children.  Vertices $a,b,c,d$ above are leaves.  In addition, $u$ is the parent of $v$ iff $v$ is a child of $u$.  It is possible for a vertex to have neither children nor a parent (consider the linear ordering on the non-negative reals).
+
+It is easy to see that every path on a rooted tree is a linear ordering, or a chain.  A \emph{branch} of a rooted tree is a maximal chain.  For example, the path $a,e,i,k$ is a branch.  Every branch of $T$ has at least one end-point: $rt(T)$.  If it has another end point, that point must be a leaf.  Every vertex lies on a unique branch.  If each path of a rooted tree $T$ is in addition well-ordered, then $T$ is tree in the sense of set theory.
+
+A subtree $T'$ of a rooted tree $T$ need not have a root, and even if it is rooted, its root may not be the same as the root of $T$.
+
+Given a rooted tree $T$, if take the disjoint union of $V(T)$ and $\lbrace x\rbrace$, and add $\lbrace rt(T),x\rbrace$ to the edge set of $T$, then we obtain another rooted tree $T'$ whose root is $x$.  This construction can be generalized: if $T_i$ are rooted trees indexed by $i\in I$, then we can take the disjoint union of their vertex sets $V(T_i)$, together with a singleton $\lbrace x\rbrace$ (disjoint union here as well).  Next, add the set $\lbrace \lbrace rt(T_i),x\rbrace \mid i\in I\rbrace$ to the disjoing union of the edge sets $E(T_i)$.  What we have is a rooted tree with root $x$.  This rooted tree is denoted by $\bigoplus T_i$.
+
+A \emph{labeled rooted tree} is a rooted tree where there is a function $f: V(T)\to L$.  In other words, each vertex $v$ has a label $f(v) \in L$.
+
+%%%%%
+%%%%%
+\end{document}

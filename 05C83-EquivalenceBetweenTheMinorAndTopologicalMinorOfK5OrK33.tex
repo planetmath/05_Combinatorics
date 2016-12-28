@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquivalenceBetweenTheMinorAndTopologicalMinorOfK5OrK33}
+\pmcreated{2013-03-22 17:47:15}
+\pmmodified{2013-03-22 17:47:15}
+\pmowner{jwaixs}{18148}
+\pmmodifier{jwaixs}{18148}
+\pmtitle{equivalence between the minor and topological minor of $K_5$ or $K_{3,3}$}
+\pmrecord{11}{40248}
+\pmprivacy{1}
+\pmauthor{jwaixs}{18148}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C83}
+\pmclassification{msc}{05C10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+$ \Leftarrow )$ Remark that if a graph G contains $ K_5 $ or $ K_{3,3} $ as a \PMlinkname{topological minor}{subdivision} it is easy to see that it also contains respectively $ K_5 $ or $ K_{3,3} $ as a minor.
+
+
+$ \Rightarrow )$ Same goes for $ K_{3,3} $ as minor. If graph G contains a minor of $ K_{3,3} $ as minor it also contains a \PMlinkname{topological minor}{subdivision} of $ K_{3,3} $ in G.
+So it's suffices to show that if graph G contains a $ K_5 $ as minor, it also contains a $ K_5 $ or $ K_{3,3} $ as \PMlinkname{topological minor}{subdivision}.
+
+Suppose that $ G \succeq K_5 $, let $ K \subseteq G $ be minimal such that $ K $ is a minor of $ G $. Because $K$ is minimal every branch set of $K$ induces a tree in $K$ and every two branch sets have exactly one edge between them.
+For every branch tree $ V_x $ we can add all four edges joining it to the other branches, this way we obtain a tree $ T_x $.
+If each of the trees $ T_x $ is a \PMlinkname{topological minor}{subdivision} of $ K_{1,4} $, $ K $ will be a \PMlinkname{topological minor}{subdivision} of $ K_5 $. This image should make clear how our $ K $ looks like. The big circles are presenting different sets of vertices.
+
+\begin{center}
+$ \xymatrix {
+  & \bigcirc & & \bigcirc \ar@{.}[ll] \\
+  \bigcirc \ar@{.}[ur] \ar@{.}[urrr] & & & & \bigcirc \ar@{.}[llll] \ar@{.}[ul] \ar@{.}[ulll] \\
+  \bullet \ar@{-}[u] & \bullet \ar@{-}[uu] & & \bullet \ar@{-}[uu] & \bullet  \ar@{-}[u] & T_x = MK_{1,4} \\
+  & & \bigcirc \ar@{-}[urr] \ar@{-}[ur] \ar@{-}[ul] \ar@{-}[ull] & V_x
+} $
+\end{center}
+
+If one of the trees is not a $ TK_{1,4} $ it has exactly two vertices of degree 3, which means that $ K $ is a \PMlinkname{topological minor}{subdivision} of $ K_{3,3} $. $ K $ now looks like this. The big circles and triangles are presenting different sets of vertices.
+
+\begin{center}
+$ \xymatrix {
+  & \bigtriangleup & \bigcirc \ar@{.}[l] \\
+  \bigtriangleup \ar@{.}[urr] & & & \bigcirc \ar@{.}[lll] \ar@{.}[ull] \\
+  \bullet \ar@{-}[u] & \bullet \ar@{-}[uu] & \bullet \ar@{-}[uu] & \bullet  \ar@{-}[u] & T_x \ne MK_{1,4} \\
+  & \bigcirc \ar@{-}[ul] \ar@{-}[u] & \bigtriangleup \ar@{-}[u] \ar@{-}[ur] \ar@{-}[l] & V_x
+} $
+\end{center}
+
+Thus if $ G \succeq K_5 $ then $ G $ contains a \PMlinkname{topological minor}{subdivision} of $ K_{3,3} $ or $ K_5 $. Which proofs this theorem.
+%%%%%
+%%%%%
+\end{document}

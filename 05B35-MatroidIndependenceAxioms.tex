@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatroidIndependenceAxioms}
+\pmcreated{2013-03-22 14:44:05}
+\pmmodified{2013-03-22 14:44:05}
+\pmowner{sgraves}{6614}
+\pmmodifier{sgraves}{6614}
+\pmtitle{matroid independence axioms}
+\pmrecord{6}{36367}
+\pmprivacy{1}
+\pmauthor{sgraves}{6614}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05B35}
+\pmsynonym{matroid independent sets}{MatroidIndependenceAxioms}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Hassler Whitney's definition of a matroid was based upon the idea of independent sets and was given in terms of the following three axioms:\\
+
+A finite set $E$ along with a collection $\mathcal{I}$ of subsets of $E$ is a matroid if $M=(E,\mathcal{I})$ meets the following criteria:\\
+\noindent{(I1)} $\emptyset\in\mathcal{I}$;\\
+\noindent{(I2)} If $I_1\in\mathcal{I}$ and $I_2\subseteq I_1$, then $I_2\in\mathcal{I}$;\\
+\noindent{(I3)} If $I_1,I_2\in\mathcal{I}$ with $|I_1|<|I_2|$, then there is some $e\in I_2$ such that $I_1\cup\{e\}\in\mathcal{I}$.
+
+The third axiom, (I3), is equivalent to the following alternative axiom:
+
+\noindent(I3*) If $S,T\in \mathcal{I}$ and $S,T\subset U\subset E$ and $S$ and $T$ are both maximal subsets of $U$ with the property that they are in $\mathcal{I}$, then $|S|=|T|$.
+
+\begin{proof} Suppose {(I3)} holds, and that $S$ and $T$ are maximal independent subsets of $A\subseteq E$. Also assume, without loss of generality, that $|S|<|T|$. Then there is some $e\in T$ such that $S\cup\{e\}\in\mathcal{I}$, but $S\subset S\cup\{e\} \subseteq A$, contradicting maximality of $S$.\\
+Now suppose that {(I3*)} holds, and assume that $S,T \in \mathcal{I}$ with $|S|<|T|$. Let $A=S\cup T$. Then $S$ cannot be maximal in $A$ by {(I3*)}, so there must be elements $e_i\in A$ such that $S\cup\{e_i\}\in\mathcal{I}$ is maximal, and by construction these $e_i\in T$. So {(I3)} holds.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

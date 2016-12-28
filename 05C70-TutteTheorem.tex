@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TutteTheorem}
+\pmcreated{2013-03-22 14:06:04}
+\pmmodified{2013-03-22 14:06:04}
+\pmowner{scineram}{4030}
+\pmmodifier{scineram}{4030}
+\pmtitle{Tutte theorem}
+\pmrecord{11}{35501}
+\pmprivacy{1}
+\pmauthor{scineram}{4030}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C70}
+%\pmkeywords{complete matching}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $G(V,E)$ be any finite graph. $G$ has a complete matching if and only if for all $X \subseteq V(G)$ the inequality $c_p(G-X) \leq |X|$ holds, where $c_p(H)$ is the number of the components of the $H$ graph with odd number of vertices. This is called the Tutte condition.
+
+\begin{proof}
+In a complete matching there is at least one edge between $X$ and the odd components of $G-X$, and different edges have distinct endvertices. So $c_p(G-X)\leq|X|$. This proves the necessity.
+
+The sufficiency is proved in a few steps indirectly.
+\begin{enumerate}
+\item It is very easy to see that if $|V(G)|$ is even, then $c_p(G-X)\neq|X|-1$ and $c_p(G-X)\neq|X|+1$. This will be used later. And if the Tutte condition holds, applying it to $X=\emptyset$ gives $|V(G)|$ is even.
+
+\item Now assume there exists a graph satisfying the Tutte condition but without complete matching ,and let $G$ be such a counterexample with the lowest number of vertices. There exist a set $Y\subseteq V(G)$ such that $c_p(G-Y)=|Y|$, examples are the empty set and  every vertex. Let $Y_0$ be such set with the highest number of vertices.
+
+\item If $G_s$ is an even component in $G-Y_0$, then adding its vertex $t$ to $Y_0$ gives $c_p(G-Y_0-\{t\})\geq|Y_0|+1$, because it creates at least one odd component. But this with the Tutte condition gives $c_p(G-Y_0-\{t\})=|Y_0\cup\{t\}|$, which contradicts the maximality of $Y_0$. 
+So there are no even components in $G-Y_0$.
+
+\item Let $G_p$ be an odd component of $G-Y_0$, and let $t$ any of its vertices. Assume there is no complete matching in $G_p-\{t\}$. Since $G$ is minimal counterexample, there exits a set $X\subseteq G_p-\{t\}$ such that $c_p(G_p-\{t\}-X)>|X|$, but because of $(1)$ it is at least $|X|+2$. Then $c_p(G-X-Y_0-\{t\})\geq|Y_0|-1+|X|+2=|X\cup Y_0\cup\{t\}|$, which contradicts the maximality of $Y_0$. So by removing any vertex from an odd component the remaining part has a complete matching.
+
+\item Represent each odd components by one vertex, and remove the edges in $Y_0$. From the definition of $Y_0$ this is a bipartite graph. If we choose $p$ vertices from the representatives of the odd components, they are together adjacent to at least $p$ vertices in $Y_0$, otherwise we could remove less than $p$ vertices from $Y_0$ thus from $V(G)$, and still get $p$ odd component, which violates the Tutte condition. So there is complete matching in this reduced graph because of Hall's marriage theorem.
+
+\item The complete matching in the reduced graph covers $Y_0$ and exactly one vertex in each odd component. But there is also a matching in the rest of each odd component covering the rest as proven in $(4)$, and from $(3)$ there are no even components. Combining these gives a complete matching of $G$, which is a contradiction.
+\end{enumerate}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

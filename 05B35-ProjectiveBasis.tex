@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProjectiveBasis}
+\pmcreated{2013-03-22 19:14:38}
+\pmmodified{2013-03-22 19:14:38}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{projective basis}
+\pmrecord{10}{42169}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05B35}
+\pmclassification{msc}{06C10}
+\pmclassification{msc}{51A05}
+\pmsynonym{independent}{ProjectiveBasis}
+\pmdefines{span}
+\pmdefines{projective independence}
+\pmdefines{projectively independent}
+\pmdefines{basis}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In the parent entry, we see how one may define dimension of a projective space inductively, from its subspaces starting with a point, then a line, and working its way up.  Another way to define dimension start with defining dimensions of the empty set, a point, a line, and a plane to be $-1,0,1$, and $2$, and then use the fact that any other projective space is isomorphic to the projective space $P(V)$ associated with a vector space $V$, and then define the dimension to be the dimension of $V$, minus $1$.  In this entry, we introduce a more natural way of defining dimensions, via the concept of a basis.
+
+Throughout the discussion, $\mathbf{P}$ is a projective space (as in any model satisfying the axioms of projective geometry).
+
+Given a subset $S$ of $\mathbf{P}$, the \emph{span} of $S$, written $\langle S \rangle$, is the smallest subspace of $\mathbf{P}$ containing $S$.  In other words, $\langle S\rangle$ is the intersection of all subspaces of $\mathbf{P}$ containing $S$.  Thus, if $S$ is itself a subspace of $\mathbf{P}$, $\langle S\rangle = S$.  We also say that $S$ spans $\langle S\rangle$.
+
+One may think of $\langle \cdot \rangle$ as an operation on the powerset of $\mathbf{P}$.  It is easy to verify that this operation is a closure operator.  In addition, $\langle \cdot \rangle$ is \emph{algebraic}, in the sense that any point in $\langle S\rangle$ is in the span of a finite subset of $S$.  In other words, $$\langle S\rangle = \lbrace P\mid P\in \langle F\rangle\mbox{ for some finite }F\subseteq S\rbrace.$$
+
+Another property of $\langle \cdot \rangle$ is the exchange property: for any subspace $U$, if $P\notin U$, then for any point $Q$, $\langle U\cup \lbrace P\rbrace \rangle = \langle U\cup \lbrace Q\rbrace \rangle$ iff $Q\in \langle U\cup \lbrace P\rbrace \rangle - U$.
+
+A subset $S$ of $\mathbf{P}$ is said to be \emph{projectively independent}, or simply \emph{independent}, if, for any proper subset $S'$ of $S$, the span of $S'$ is a proper subset of the span of $S$: $\langle S'\rangle \subset \langle S\rangle$.  This is the same as saying that $S$ is a \emph{minimal} spanning set for $\langle S\rangle$, in the sense that no proper subset of $S$ spans $\langle S\rangle$.  Equivalently, $S$ is independent iff for any $x\in S$, $\langle S-\lbrace x\rbrace \rangle \ne \langle S\rangle$.
+
+$S$ is called a \emph{projective basis}, or simply \emph{basis} for $\mathbf{P}$, if $S$ is independent and spans $\mathbf{P}$.
+
+All of the properties about spanning sets, independent sets, and bases for vector spaces have their projective counterparts.  We list some of them here:
+\begin{enumerate}
+\item Every projective space has a basis.
+\item If $S_1,S_2$ are independent, then $\langle S_1\cap S_2\rangle = \langle S_1\rangle \cap \langle S_2\rangle$.
+\item If $S$ is independent and $P\in \langle S\rangle$, then there is $Q\in S$ such that $(\lbrace P\rbrace \cup S)-\lbrace Q\rbrace $ spans $\langle S\rangle$.
+\item Let $B$ be a basis for $\mathbf{P}$.  If $S$ spans $\mathbf{P}$, then $|B|\le |S|$.  If $S$ is independent, then $|S|\le |B|$.  As a result, all bases for $\mathbf{P}$ have the same cardinality.
+\item Every independent subset in $\mathbf{P}$ may be extended to a basis for $\mathbf{P}$.
+\item Every spanning set for $\mathbf{P}$ may be reduced to a basis for $\mathbf{P}$.
+\end{enumerate}
+
+In light of items 1 and 4 above, we may define the \emph{dimension} of $\mathbf{P}$ to be the cardinality of its basis.
+
+One of the main result on dimension is the dimension formula: if $U,V$ are subspaces of $\mathbf{P}$, then
+$$\dim(U)+\dim(V)=\dim(U\cup V)+\dim(U\cap V),$$
+which is the counterpart of the same formula for vector subspaces of a vector space (see \PMlinkname{this entry}{DimensionFormulaeForVectorSpaces}).
+
+\begin{thebibliography}{6}
+\bibitem{br} A. Beutelspacher, U. Rosenbaum {\it Projective Geometry, From Foundations to Applications}, Cambridge University Press (2000)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

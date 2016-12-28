@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MaximumFlowminimumCutTheorem}
+\pmcreated{2013-03-22 13:00:55}
+\pmmodified{2013-03-22 13:00:55}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{maximum flow/minimum cut theorem}
+\pmrecord{12}{33399}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C20}
+\pmsynonym{max flow min cut theorem}{MaximumFlowminimumCutTheorem}
+\pmrelated{Flow}
+\pmrelated{Cut}
+\pmrelated{MaximalMatchingminimalEdgeCoveringTheorem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\R}{\mathbb R^+}
+\begin{document}
+\PMlinkescapeword{free}
+Let $G$ be a finite digraph with nonnegative weights and with
+exactly one sink and exactly one source. Then
+
+I) For any flow $f$ on $G$ and any cut $C$ of $G$, the amount
+of flow for $f$ is less than or equal to the weight of $C$.
+
+II) There exists a flow $f_0$ on $G$ and a cut $C_0$ of $G$
+such that the amount of the flow of $f_0$ equals the weight of $C_0$.
+
+\textbf{Proof: }(I) is easy, so we prove only (II).
+Write $\R$ for the set of nonnegative real numbers.
+Let $V$ be the set of vertices of $G$.
+Define a matrix
+$$\kappa:V\times V\to\R$$
+where $\kappa(x,y)$ is the sum of the weights (or capacities) of
+all the directed edges from $x$ to $y$.
+By hypothesis there is a unique $v\in V$ (the source) such that
+$$\kappa(x,v)=0\qquad\forall x\in V$$
+and a unique $w\in V$ (the sink) such that
+$$\kappa(w,x)=0\qquad\forall x\in V\;.$$
+We may also assume $\kappa(x,x)=0$ for all $x\in V$.
+Any flow $f$ will correspond uniquely (see Remark below) to a matrix
+$$\varphi:V\times V\to\R$$
+such that
+\begin{eqnarray*}
+\varphi(x,y)&\le&\kappa(x,y)\qquad\forall x,y\in V \\
+\sum_z\varphi(x,z)&=&\sum_z\varphi(z,x)\qquad\forall x\ne v,w
+\end{eqnarray*}
+Let $\lambda$ be the matrix of any maximal flow, and let $A$
+be the set of $x\in V$ such that there exists a finite sequence
+$x_0=v,x_1,\ldots,x_n=x$
+such that for all $m$ from $1$ to $n-1$, we have either
+\begin{equation} \label{eq:a}
+\lambda(x_m,x_{m+1})<\kappa(x_m,x_{m+1})
+\end{equation}
+or
+\begin{equation} \label{eq:b}
+\lambda(x_{m+1},x_m)>0\;.
+\end{equation}
+Write $B=V-A$.
+
+Trivially, $v\in A$.
+Let us show that $w\in B$.
+Arguing by contradiction, suppose $w\in A$, and let $(x_m)$ be
+a sequence from $v$ to $w$ with the properties we just mentioned.
+Take a real number $\epsilon>0$ such that
+$$\epsilon+ \lambda(x_m,x_{m+1})<\kappa(x_m,x_{m+1})$$
+for all the (finitely many) $m$ for which (\ref{eq:a}) holds, and such
+that
+$$\lambda(x_{m+1},x_m)>\epsilon$$
+for all the $m$ for which (\ref{eq:b}) holds.
+But now we can define a matrix $\mu$ with a larger flow
+than $\lambda$ (larger by $\epsilon$) by:
+$$\mu(x_m,x_{m+1})=\epsilon+\lambda(x_m,x_{m+1})
+\qquad\text{if (\ref{eq:a}) holds}$$
+$$\mu(x_{m+1},x_m)=\lambda(x_{m+1},x_m)-\epsilon
+\qquad\text{if (\ref{eq:b}) holds}$$
+$$\mu(a,b)=\lambda(a,b)
+\qquad\text{for all other pairs }(a,b)\;.$$
+This contradiction shows that $w\in B$.
+
+Now consider the set $C$ of pairs $(x,y)$ of vertices such that
+$x\in V$ and $y\in W$.
+Since $W$ is nonempty, $C$ is a cut.
+But also, for any $(x,y)\in C$ we have
+\begin{equation} \label{eq:c}
+\lambda(x,y)=\kappa(x,y)
+\end{equation}
+for otherwise we would have $y\in V$.
+Summing (\ref{eq:c}) over $C$, we see that the amount of the
+flow $f$ is the capacity of $C$, QED.
+
+\textbf{Remark: } We expressed the proof rather informally, because the terminology of graph theory is not very well standardized and cannot all be found yet here at PlanetMath. Please feel free to suggest any revision you think worthwhile.
+%%%%%
+%%%%%
+\end{document}

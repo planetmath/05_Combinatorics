@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BirthdayProblem}
+\pmcreated{2013-03-22 16:09:38}
+\pmmodified{2013-03-22 16:09:38}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{birthday problem}
+\pmrecord{16}{38242}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A10}
+\pmclassification{msc}{60C05}
+\pmclassification{msc}{60-00}
+\pmsynonym{birthday paradox}{BirthdayProblem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+The \emph{birthday problem} is:
+What is the probability of two or more people out of a \PMlinkescapetext{group} of $n$ do have the same birthday?
+
+\textit{Solution.}
+Let $A$ be the event two or more people out of a group of $n$ to have the same birthday.
+It is easy to find first the complement of $A$, $A^c$, which is that no two people out of a group of $n$ will have matching birthdays out of $365$ (number of days of one year) equally possible birthdays. We start with an arbitrary person's birthday. So the second person's birthday in order to be different from the first one gives us the probability, $1-\frac{1}{365}$.
+Consecutively, the third person's birthday is different from the first two and we have $(1-\frac{1}{365})(1-\frac{2}{365})$. Finally for the the $n$th person's birthday we get the probability 
+\begin{center}
+\begin{tabular}{ll}
+$\displaystyle P[A^c]$ & $\displaystyle =\left(1-\frac{1}{365}\right)\left(1-\frac{2}{365}\right)\dots\left(1-\frac{n-1}{365}\right)$\\ & $\displaystyle =\frac{(365-1)}{365}\frac{(365-2)}{365}\dots\frac{(365-(n-1))}{365}$\\ & $\displaystyle =\frac{(365-1)}{365}\dots \frac{(365-(n-1))}{365^n}$\\
+& $\displaystyle =\frac{365!}{(365-n)!365^n}$\\ & $\displaystyle ={365\choose n}\frac{n!}{365^n}$
+\end{tabular}
+\end{center}
+By the last expression of the estimated probability we can see that there exists another easier approach to find the probability which is the following:
+\begin{enumerate}
+\item We set the possible ways for $1\dots n$ birthdays, $365^n$ as the denominator. 
+\item Using the binomial coefficient ${365\choose n}$, which represents the number of ways of picking $n$ unordered birthdays from $365$ days multiplied by the factorial $n!$ used for the number of orders, in that way we determine the numerator.
+\end{enumerate}
+Therefore we have $$P[A^c]={365\choose n}\frac{n!}{365^n}$$
+whence
+$$P[A]=1-P[A^c]=1-{365\choose n}\frac{n!}{365^n}.$$
+
+The table below shows the probability $P[A]$ for some values of $n$
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$n$ & $P[A]$ \\
+\hline
+$10$ & $0,11695$ \\
+\hline
+$20$ & $0,41144$ \\
+\hline
+$23$ & $0,50730$ \\
+\hline 
+$30$ & $0,70632$ \\
+\hline
+$40$ & $0,89123$ \\
+\hline 
+$50$ & $0,97037$ \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+%%%%%
+%%%%%
+\end{document}

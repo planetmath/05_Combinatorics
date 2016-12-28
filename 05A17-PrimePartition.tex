@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimePartition}
+\pmcreated{2013-03-22 17:28:02}
+\pmmodified{2013-03-22 17:28:02}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{prime partition}
+\pmrecord{4}{39852}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05A17}
+\pmclassification{msc}{11P99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A {\em prime partition} is a \PMlinkname{partition}{IntegerPartition} of a given positive integer $n$ consisting only of prime numbers. For example, a prime partition of 42 is 29 + 5 + 5 + 3.
+
+If we accept partitions of length 1 as valid partitions, then it is obvious that only prime numbers have prime partitions of length 1. Not accepting 1 as a prime number makes the problem of prime partitions more interesting, otherwise there would always be for a given $n$, if nothing else, a prime partition consisting of $n$ 1s. Almost as bad, however, is a partion of $n$ into $\lfloor \frac{n}{2} \rfloor$ 2s and 3s.
+
+Both Goldbach's conjecture and Levy's conjecture can be restated in terms of prime partitions thus: for any even integer $n > 2$ there is always a prime partition of length 2, and for any odd integer $n > 5$ there is always a prime partition of length 3 with at most 2 distinct elements.
+
+Assuming Goldbach's conjecture is true, the most efficient prime partition of an even integer is of length 2, while Vinogradov's theorem has proven the most efficient prime partition of a sufficiently large composite odd integer is of length 3.
+%%%%%
+%%%%%
+\end{document}

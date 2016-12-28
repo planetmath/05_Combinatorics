@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LabelledDigraph}
+\pmcreated{2013-03-22 15:15:07}
+\pmmodified{2013-03-22 15:15:07}
+\pmowner{GrafZahl}{9234}
+\pmmodifier{GrafZahl}{9234}
+\pmtitle{labelled digraph}
+\pmrecord{4}{37033}
+\pmprivacy{1}
+\pmauthor{GrafZahl}{9234}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{05C20}
+\pmclassification{msc}{05C12}
+\pmclassification{msc}{05C78}
+\pmclassification{msc}{05C90}
+%\pmkeywords{graph}
+%\pmkeywords{travelling salesman}
+%\pmkeywords{TSP}
+\pmdefines{label}
+\pmdefines{weighted digraph}
+\pmdefines{weight}
+\pmdefines{vertex-weighted digraph}
+\pmdefines{edge-weighted digraph}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Prod}{\prod\limits}
+\newcommand{\Sum}{\sum\limits}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mc}{\mathcal}
+\newcommand{\ol}{\overline}
+
+% Math Operators/functions
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\cwe}{cwe}
+\DeclareMathOperator{\we}{we}
+\DeclareMathOperator{\wt}{wt}
+\begin{document}
+\PMlinkescapeword{time}
+\PMlinkescapeword{times}
+\PMlinkescapeword{complete}
+\PMlinkescapeword{size}
+\PMlinkescapeword{sizes}
+\PMlinkescapeword{associates}
+A triple $(V,E,w)$ is called a \emph{labelled digraph}, if $(V,E)$ is a
+digraph and $w$ is an association of elements from some set $L$, the
+\emph{labels}, to some of the edges and vertices of the digraph. In
+other words, $w$ is a mapping from a subset $A\subseteq V\cup E$ to
+$L$. Most often, $L$ is a subset of the real numbers, in which case
+$(V,E,w)$ is called a \emph{weighted} digraph and its labels are
+called \emph{weights}. Typically, either $A=V$ or $A=E$, in which case
+$(V,E,w)$ is called either a \emph{vertex-weighted digraph} or an
+\emph{edge-weighted digraph}, respectively.
+
+\subsection*{Application examples}
+
+We give two typical ``real life'' examples. The first features an
+edge-weighted digraph, while the second requires the implementation of
+a vertex-weighted digraph.
+
+\subsubsection*{Railway network}
+
+A railway network consists of railway stations connected by rails. A
+train needs a certain time (measured in minutes) to fare from one
+station to another. In a formalisation, $V$ is the set of train
+stations, $E$ the set of direct connexions between them and $w\colon
+E\to\mbb{N}$ a weighting corresponding to the journey times, so
+$(V,E,w)$ is an edge-weighted digraph. Although typically $(V,E)$ is a
+\PMlinkid{symmetric digraph}{1702}, $w$ does not need to be symmetric: for example, the
+journey from $a$ to $b$ might take longer than the return journey
+because $b$ is located on a mountain.
+
+An important optimisation problem is the efficient determination of
+the fastest way from one station to another. An even harder problem is
+to find the fastest round trip (usually called a \emph{tour}) via a
+given number of stations. This is the \emph{travelling salesman
+problem}.
+
+\subsubsection*{Dependency graph}
+
+A software bundle consists of a number of packages each of which is
+either installed or not. An installed package occupies a certain
+amount of bytes on a storage medium. Packages may depend on other
+packages, that is installation of a package may require other packages
+to be installed first, which in turn may require still other packages
+and so forth. One is interested in the complete storage requirement
+incurred by the installation of one package and all its dependencies.
+
+In a formalisation, the packages are vertices of a digraph $(V,E)$, and an
+edge $(a,b)\in E$ means ``$a$ depends on $b$''. Such a digraph is typically
+not symmetric. The weighting $w\colon V\to\mbb{N}$ associates sizes to
+packages. A subset $W$ of $V$ is \emph{dependency-closed}, if for any
+$w\in W$, all dependencies of $w$ are in $W$. Given a to-be-installed
+package $v$, the storage requirement incurred by the installation of
+$v$ and all its dependencies is the sum of the vertex weights of the
+smallest dependency-closed subset of $V$ containing $v$.
+%%%%%
+%%%%%
+\end{document}
