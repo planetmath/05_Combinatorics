@@ -1,0 +1,137 @@
+<!DOCTYPE html><html>
+<head>
+<title>Moore graphs of d=2 are v-valent and order is v^2+1</title>
+<!--Generated on Fri Feb  9 07:56:13 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Moore graphs of <math id="m1" class="ltx_Math" alttext="d=2" display="inline"><mrow><mi>d</mi><mo>=</mo><mn>2</mn></mrow></math> are <math id="m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>-valent and order is <math id="m3" class="ltx_Math" alttext="v^{2}+1" display="inline"><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></math>
+</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Given</span> a Moore graph with diameter 2 and girth 5, which implies the
+existence of cycles. <span class="ltx_text ltx_font_bold">To prove</span> every node (vertex) has the same valency,
+<math id="p2.m1" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> say, and the number <math id="p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> of nodes (vertices) is <math id="p2.m3" class="ltx_Math" alttext="v^{2}+1" display="inline"><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma:</span> a key feature of Moore graphs with diameter 2 is that any nodes X
+and  that are not adjacent have exactly one shared neighbour Y. <span class="ltx_text ltx_font_bold">Proof of lemma:</span> at least one Y<math id="p3.m1" class="ltx_Math" alttext="{}_{k}" display="inline"><msub><mi></mi><mi>k</mi></msub></math> because distance XY is not 1 so must be 2, at most one because XY<math id="p3.m2" class="ltx_Math" alttext="{}_{0}" display="inline"><msub><mi></mi><mn>0</mn></msub></math>ZY<math id="p3.m3" class="ltx_Math" alttext="{}_{1}" display="inline"><msub><mi></mi><mn>1</mn></msub></math> would be a 4-cycle.  <math id="p3.m4" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma:</span> every two adjacent nodes B and C lie together on some 5-cycle.
+<span class="ltx_text ltx_font_bold">Proof of lemma:</span> every node (other than B) is at distance 1 or 2 from B, and every node (other than C) at distance 1 or 2 from C. There are no nodes X
+at distance 1 from both (BXC would be a 3-cycle). Suppose the graph only has nodes at distance 1 from B and 2 from C (call them A<math id="p4.m1" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math>), and nodes at distance 1 from C and 2 from B (call them D<math id="p4.m2" class="ltx_Math" alttext="{}_{j}" display="inline"><msub><mi></mi><mi>j</mi></msub></math>). Now no cycle can exist (the only edges are A<math id="p4.m3" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math>B, BC, CD<math id="p4.m4" class="ltx_Math" alttext="{}_{j}" display="inline"><msub><mi></mi><mi>j</mi></msub></math>; any edge of type AA, AC, , BD, DD would create a 3-or 4-cycle). But Moore graphs have cycles by definition. So there must be at least one node E at distance 2 from both B and C. Let A be the joint neighbour of B and E, and D that of C and E (note A <math id="p4.m5" class="ltx_Math" alttext="\neq" display="inline"><mo>≠</mo></math> D, otherwise BAC would be a 3-cycle). Now CDEAB is a 5-cycle with edge BC.  <math id="p4.m6" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma:</span> two nodes O and Q at distance 2 have the same valency. <span class="ltx_text ltx_font_bold">Proof
+of lemma:</span> let P be the unique joint neighbour. Let O have <math id="p5.m1" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> other neighbours
+N<math id="p5.m2" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math> and let Q have <math id="p5.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> other neighbours R<math id="p5.m4" class="ltx_Math" alttext="{}_{j}" display="inline"><msub><mi></mi><mi>j</mi></msub></math>.</p>
+</div>
+<div id="p6" class="ltx_para ltx_centering">
+<svg version="1.1" fill="black" height="110.0pt" stroke="black" unitlength="1.0pt" width="141.828427124746" fragid="p6.pic1" viewBox="7.17157287525381 1 149 109" overflow="visible"><g transform="translate(0,110.0)"><g transform="scale(1 -1)"><g transform="translate(50,55)"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(44,27)"><circle fill="none" r="6.2" stroke-width="0.4" cx="0" cy="0"></circle></g><g transform="translate(-7,44)"><circle r="2" stroke="none" cx="0" cy="0"></circle></g><g transform="translate(-40,0)"><circle r="2" stroke="none" cx="0" cy="0"></circle></g><g transform="translate(-7,-44)"><circle r="2" stroke="none" cx="0" cy="0"></circle></g><g transform="translate(44,-27)"><circle fill="none" r="6.2" stroke-width="0.4" cx="0" cy="0"></circle></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(-7,44)"><path d="M 0,0 45,-15" stroke-width="0.4"></path></g><g transform="translate(-40,0)"><path d="M 0,0 33,44" stroke-width="0.4"></path></g><g transform="translate(-40,0)"><path d="M 0,0 33,-44" stroke-width="0.4"></path></g><g transform="translate(-7,-44)"><path d="M 0,0 45,15" stroke-width="0.4"></path></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(7,44)"><g pos="b"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p6.pic1.m1" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math></foreignObject></g></g></g><g transform="translate(31,36)"><g pos="b"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p6.pic1.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></foreignObject></g></g></g><g transform="translate(44,27)"><g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p6.pic1.m3" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math></foreignObject></g></g></g><g transform="translate(44,-27)"><g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p6.pic1.m4" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math></foreignObject></g></g></g><g transform="translate(31,-36)"><g pos="t"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p6.pic1.m5" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></foreignObject></g></g></g><g transform="translate(7,-44)"><g pos="t"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p6.pic1.m6" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math></foreignObject></g></g></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(54,27)"><g pos="l"><text dominant-baseline="middle" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black">N<g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p6.pic1.m7" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math></foreignObject></g></text></g></g><g transform="translate(-10,48)"><g pos="rb"><text dominant-baseline="middle" baseline-shift="super" text-anchor="end" x="0" y="0" transform="scale(1 -1)" fill="black">O</text></g></g><g transform="translate(-46,0)"><g pos="r"><text dominant-baseline="middle" text-anchor="end" x="0" y="0" transform="scale(1 -1)" fill="black">P</text></g></g><g transform="translate(-10,-48)"><g pos="rt"><text dominant-baseline="middle" baseline-shift="sub" text-anchor="end" x="0" y="0" transform="scale(1 -1)" fill="black">Q</text></g></g><g transform="translate(54,-27)"><g pos="l"><text dominant-baseline="middle" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black">R<g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p6.pic1.m8" class="ltx_Math" alttext="{}_{j}" display="inline"><msub><mi></mi><mi>j</mi></msub></math></foreignObject></g></text></g></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g></g></g></g></svg>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">No N<math id="p7.m1" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math> can be adjacent to P (3-cycle PON<math id="p7.m2" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math>) so the unique joint neighbours
+of any N<math id="p7.m3" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math> and Q must be among the R<math id="p7.m4" class="ltx_Math" alttext="{}_{j}" display="inline"><msub><mi></mi><mi>j</mi></msub></math>. Different N<math id="p7.m5" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math> and N<math id="p7.m6" class="ltx_Math" alttext="{}_{i^{\prime}}" display="inline"><msub><mi></mi><msup><mi>i</mi><mo>′</mo></msup></msub></math>
+cannot use the same R<math id="p7.m7" class="ltx_Math" alttext="{}_{j}" display="inline"><msub><mi></mi><mi>j</mi></msub></math> (4-cycle ON<math id="p7.m8" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math>R<math id="p7.m9" class="ltx_Math" alttext="{}_{j}" display="inline"><msub><mi></mi><mi>j</mi></msub></math>N<math id="p7.m10" class="ltx_Math" alttext="{}_{i^{\prime}}" display="inline"><msub><mi></mi><msup><mi>i</mi><mo>′</mo></msup></msub></math>) so we have <math id="p7.m11" class="ltx_Math" alttext="o\leqslant q" display="inline"><mrow><mi>o</mi><mo>⩽</mo><mi>q</mi></mrow></math>.
+By the same argument (swapping O and Q, N<math id="p7.m12" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math> and R<math id="p7.m13" class="ltx_Math" alttext="{}_{j}" display="inline"><msub><mi></mi><mi>j</mi></msub></math>) also <math id="p7.m14" class="ltx_Math" alttext="q\leqslant o" display="inline"><mrow><mi>q</mi><mo>⩽</mo><mi>o</mi></mrow></math> so we
+have <math id="p7.m15" class="ltx_Math" alttext="o=q" display="inline"><mrow><mi>o</mi><mo>=</mo><mi>q</mi></mrow></math>, both nodes have valency <math id="p7.m16" class="ltx_Math" alttext="q+1" display="inline"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math>.  <math id="p7.m17" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma:</span> two adjacent nodes O and S have the same valency. <span class="ltx_text ltx_font_bold">Proof
+of lemma:</span> let OPQRS be the 5-cycle through SO. Calling the valency of Q
+again <math id="p8.m1" class="ltx_Math" alttext="q+1" display="inline"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math>, both O and S have that same valency by the previous lemma.  <math id="p8.m2" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof of theorem:</span> the graph is connected. Travel from any node to any
+other via adjacent ones, the valency stays the same by the last lemma (let’s
+keep calling it <math id="p9.m1" class="ltx_Math" alttext="q+1" display="inline"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math>).</p>
+</div>
+<div id="p10" class="ltx_para ltx_centering">
+<svg version="1.1" fill="black" height="132" stroke="black" unitlength="1.0pt" width="161.828427124746" fragid="p10.pic1" viewBox="3.17157287525381 -11 165 121" overflow="visible"><g transform="translate(0,110.0)"><g transform="scale(1 -1)"><g transform="translate(50,55)"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(-44,27)"><circle r="2" stroke="none" cx="0" cy="0"></circle></g><g transform="translate(7,44)"><circle fill="none" r="6.2" stroke-width="0.4" cx="0" cy="0"></circle></g><g transform="translate(40,0)"><circle fill="none" r="10.2" stroke-width="0.4" cx="0" cy="0"></circle></g><g transform="translate(7,-44)"><circle fill="none" r="6.2" stroke-width="0.4" cx="0" cy="0"></circle></g><g transform="translate(-44,-27)"><circle r="2" stroke="none" cx="0" cy="0"></circle></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(1,42)"><path d="M 0,0 -45,-15" stroke-width="0.4"></path></g><g transform="translate(34,8)"><path d="M 0,0 -23,30.67" stroke-width="0.4"></path></g><g transform="translate(34,-8)"><path d="M 0,0 -23,-30.67" stroke-width="0.4"></path></g><g transform="translate(1,-42)"><path d="M 0,0 -45,15" stroke-width="0.4"></path></g><g transform="translate(-44,-27)"><path d="M 0,0 0,54" stroke-width="0.4"></path></g><g transform="translate(50,0)"><path d="M 0,0 24,6" stroke-width="0.4"></path></g><g transform="translate(50,0)"><path d="M 0,0 24,-6" stroke-width="0.4"></path></g><g transform="translate(74,0)"><rect fill="none" height="12" rx="6" stroke-width="0.4" width="12" x="-6" y="-6"></rect></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(7,44)"><g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math></foreignObject></g></g></g><g transform="translate(40,0)"><g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m2" class="ltx_Math" alttext="q^{2}" display="inline"><msup><mi>q</mi><mn>2</mn></msup></math></foreignObject></g></g></g><g transform="translate(7,-44)"><g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math></foreignObject></g></g></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(26,15)"><g pos="tr"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></foreignObject></g></g></g><g transform="translate(15,30)"><g pos="tr"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math></foreignObject></g></g></g><g transform="translate(-6,35)"><g pos="t"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m6" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></foreignObject></g></g></g><g transform="translate(-27,27)"><g pos="t"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m7" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math></foreignObject></g></g></g><g transform="translate(-41,13)"><g pos="l"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m8" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></foreignObject></g></g></g><g transform="translate(-41,-13)"><g pos="l"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m9" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></foreignObject></g></g></g><g transform="translate(-27,-27)"><g pos="b"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m10" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math></foreignObject></g></g></g><g transform="translate(-6,-35)"><g pos="b"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m11" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></foreignObject></g></g></g><g transform="translate(15,-30)"><g pos="br"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m12" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math></foreignObject></g></g></g><g transform="translate(26,-15)"><g pos="br"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m13" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></foreignObject></g></g></g><g transform="translate(70,8)"><g pos="b"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m14" class="ltx_Math" alttext="q-1" display="inline"><mrow><mi>q</mi><mo>-</mo><mn>1</mn></mrow></math></foreignObject></g></g></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(-50,30)"><g pos="r"><text dominant-baseline="middle" text-anchor="end" x="0" y="0" transform="scale(1 -1)" fill="black">N</text></g></g><g transform="translate(12,56)"><g pos="b"><text dominant-baseline="middle" baseline-shift="super" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black">O<g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m15" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math></foreignObject></g></text></g></g><g transform="translate(44,-14)"><g pos="t"><text dominant-baseline="middle" baseline-shift="sub" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black">P<g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m16" class="ltx_Math" alttext="{}_{ij}" display="inline"><msub><mi></mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math></foreignObject></g></text></g></g><g transform="translate(12,-56)"><g pos="t"><text dominant-baseline="middle" baseline-shift="sub" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black">Q<g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="p10.pic1.m17" class="ltx_Math" alttext="{}_{j}" display="inline"><msub><mi></mi><mi>j</mi></msub></math></foreignObject></g></text></g></g><g transform="translate(-50,-30)"><g pos="r"><text dominant-baseline="middle" text-anchor="end" x="0" y="0" transform="scale(1 -1)" fill="black">R</text></g></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g></g></g></g></svg>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Now let N and R be any two adjacent nodes. N has <math id="p11.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> other neighbours O<math id="p11.m2" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math>
+and R has <math id="p11.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> other neighbours Q<math id="p11.m4" class="ltx_Math" alttext="{}_{j}" display="inline"><msub><mi></mi><mi>j</mi></msub></math>. Call the joint neighbour of O<math id="p11.m5" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math> and
+Q<math id="p11.m6" class="ltx_Math" alttext="{}_{j}" display="inline"><msub><mi></mi><mi>j</mi></msub></math> now P<math id="p11.m7" class="ltx_Math" alttext="{}_{ij}" display="inline"><msub><mi></mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math>, these <math id="p11.m8" class="ltx_Math" alttext="q^{2}" display="inline"><msup><mi>q</mi><mn>2</mn></msup></math> nodes are all distinct (4-cycles of type
+NOPO and/or RQPQ otherwise) and none of them coincide with N, R, the Os or Qs
+(3- or 4-cycles otherwise). On the other hand, there are no further nodes
+(distance <math id="p11.m9" class="ltx_Math" alttext="&gt;2" display="inline"><mrow><mi></mi><mo>&gt;</mo><mn>2</mn></mrow></math> from N or R otherwise). Tally: <math id="p11.m10" class="ltx_Math" alttext="q^{2}+2q+2=(q+1)^{2}+1" display="inline"><mrow><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mrow></math>,
+for valency <math id="p11.m11" class="ltx_Math" alttext="q+1" display="inline"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math>.  <math id="p11.m12" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Moore graphs of <math id="p11.m13" class="ltx_Math" alttext="d=2" display="inline"><mrow><mi>d</mi><mo>=</mo><mn>2</mn></mrow></math> are <math id="p11.m14" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>-valent and order is <math id="p11.m15" class="ltx_Math" alttext="v^{2}+1" display="inline"><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">MooreGraphsOfD2AreVvalentAndOrderIsV21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:11:30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:11:30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">marijke (8873)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">marijke (8873)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">marijke (8873)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 05C75</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 07:56:13 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

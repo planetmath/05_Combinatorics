@@ -1,0 +1,204 @@
+<!DOCTYPE html><html>
+<head>
+<title>The Real History of Getting Settled To Accomplish Studies</title>
+<!--Generated on Fri Feb  9 07:56:49 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">The Real History of Getting Settled To Accomplish Studies</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Dijkstra’s algorithm</em>, named for its creator, the famous Dutch computer scientist Edsger W. Dijkstra, is one of the most common  for finding the shortest paths from a single source vertex to other vertices in a graph that is weighted, directed and connected. Dijkstra’s  is generally useful in networks where efficient traversal is very important. <span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>In fact, this article was probably brought to you by the  Shortest Path First Internet protocol, which relies on Dijkstra’s .</span></span></span></p>
+</div>
+<span class="ltx_ERROR undefined">\theoremstyle</span>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">definition</p>
+</div>
+<div id="ThmdijkstrasAlgorithmx1" class="ltx_theorem ltx_theorem_dijkstrasAlgorithm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span> (Dijkstra’s )</h6>
+<div id="ThmdijkstrasAlgorithmx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Assume that <math id="ThmdijkstrasAlgorithmx1.p1.m1" class="ltx_Math" alttext="G=(V,E)" display="inline"><mrow><mi>G</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>V</mi><mo mathvariant="normal">,</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is weighted, directed and connected. For an undirected graph, replace each edge <math id="ThmdijkstrasAlgorithmx1.p1.m2" class="ltx_Math" alttext="(v,w)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>v</mi><mo mathvariant="normal">,</mo><mi>w</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> with a pair of edges <math id="ThmdijkstrasAlgorithmx1.p1.m3" class="ltx_Math" alttext="(v,w)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>v</mi><mo mathvariant="normal">,</mo><mi>w</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> and <math id="ThmdijkstrasAlgorithmx1.p1.m4" class="ltx_Math" alttext="(w,v)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>w</mi><mo mathvariant="normal">,</mo><mi>v</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>, each having the same weight as the original undirected edge. For convenience, the weight of an edge will be denoted <math id="ThmdijkstrasAlgorithmx1.p1.m5" class="ltx_Math" alttext="d(v,w)" display="inline"><mrow><mi>d</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>v</mi><mo mathvariant="normal">,</mo><mi>w</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>, where <math id="ThmdijkstrasAlgorithmx1.p1.m6" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> and <math id="ThmdijkstrasAlgorithmx1.p1.m7" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> are its endpoints.</span></p>
+</div>
+<div id="ThmdijkstrasAlgorithmx1.p2" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">1.</span></span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Fix a vertex </span><math id="I1.i1.p1.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math><span class="ltx_text ltx_font_italic"> in </span><math id="I1.i1.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math><span class="ltx_text ltx_font_italic">, called the </span><em class="ltx_emph">source</em><span class="ltx_text ltx_font_italic">, from which the shortest paths to all the other vertices are found.</span></p>
+</div>
+<div id="I1.i1.p2" class="ltx_para">
+<ul id="I1.I1" class="ltx_itemize">
+<li id="I1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let </span><math id="I1.I1.i1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math><span class="ltx_text ltx_font_italic"> be the set of </span><em class="ltx_emph">examined</em><span class="ltx_text ltx_font_italic"> vertices, initialized to </span><math id="I1.I1.i1.p1.m2" class="ltx_Math" alttext="\{s\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>s</mi><mo stretchy="false">}</mo></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="I1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let </span><math id="I1.I1.i2.p1.m1" class="ltx_Math" alttext="w(v)" display="inline"><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic"> denote the  of the path with minimum weight from </span><math id="I1.I1.i2.p1.m2" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math><span class="ltx_text ltx_font_italic"> to </span><math id="I1.I1.i2.p1.m3" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math><span class="ltx_text ltx_font_italic">. For a vertex incident on an edge pointing from </span><math id="I1.I1.i2.p1.m4" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math><span class="ltx_text ltx_font_italic">, </span><math id="I1.I1.i2.p1.m5" class="ltx_Math" alttext="w(v)" display="inline"><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic"> simply equals </span><math id="I1.I1.i2.p1.m6" class="ltx_Math" alttext="d(s,v)" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic">. </span><math id="I1.I1.i2.p1.m7" class="ltx_Math" alttext="w(s)=0" display="inline"><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic">, since it takes no effort to stay in . For all other vertices, </span><math id="I1.I1.i2.p1.m8" class="ltx_Math" alttext="w(v)=\infty" display="inline"><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math><span class="ltx_text ltx_font_italic">, which means that the path with minimum  from </span><math id="I1.I1.i2.p1.m9" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math><span class="ltx_text ltx_font_italic"> to </span><math id="I1.I1.i2.p1.m10" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math><span class="ltx_text ltx_font_italic"> is unknown. </span><span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>For computational purposes, this default weight was traditionally a very large number. However, IEEE 754 floating  standard permits values of .</span></span></span><span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</li>
+<li id="I1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let </span><math id="I1.I1.i3.p1.m1" class="ltx_Math" alttext="p(v)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic"> denote the </span><em class="ltx_emph">predecessor</em><span class="ltx_text ltx_font_italic"> of </span><math id="I1.I1.i3.p1.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math><span class="ltx_text ltx_font_italic">, which is the previous vertex in a shortest path that can be used to  back to the source. </span><math id="I1.I1.i3.p1.m3" class="ltx_Math" alttext="p(v)=s" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>s</mi></mrow></math><span class="ltx_text ltx_font_italic"> for all vertices incident on edges pointing from </span><math id="I1.I1.i3.p1.m4" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">2.</span></span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Find a vertex </span><math id="I1.i2.p1.m1" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math><span class="ltx_text ltx_font_italic"> in </span><math id="I1.i2.p1.m2" class="ltx_Math" alttext="V\setminus S" display="inline"><mrow><mi>V</mi><mo>∖</mo><mi>S</mi></mrow></math><span class="ltx_text ltx_font_italic"> (i.e., an unexamined vertex) that minimizes </span><math id="I1.i2.p1.m3" class="ltx_Math" alttext="w(v)" display="inline"><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic">. If there is more than one with minimum weight, any one of them is an acceptable value of </span><math id="I1.i2.p1.m4" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+<div id="I1.i2.p2" class="ltx_para">
+<ul id="I1.I2" class="ltx_itemize">
+<li id="I1.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I1.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let </span><math id="I1.I2.i1.p1.m1" class="ltx_Math" alttext="S=S\cup\{v\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mi>S</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi>v</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">, i.e., mark </span><math id="I1.I2.i1.p1.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math><span class="ltx_text ltx_font_italic"> as examined.</span></p>
+</div>
+</li>
+<li id="I1.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I1.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For each vertex </span><math id="I1.I2.i2.p1.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math><span class="ltx_text ltx_font_italic"> such that an edge leads from </span><math id="I1.I2.i2.p1.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math><span class="ltx_text ltx_font_italic"> to </span><math id="I1.I2.i2.p1.m3" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math><span class="ltx_text ltx_font_italic">, compare the  value of </span><math id="I1.I2.i2.p1.m4" class="ltx_Math" alttext="w(u)" display="inline"><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic"> to </span><math id="I1.I2.i2.p1.m5" class="ltx_Math" alttext="w(v)+d(v,u)" display="inline"><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">, a value that will be called </span><math id="I1.I2.i2.p1.m6" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+<div id="I1.I2.i2.p2" class="ltx_para">
+<ul id="I1.I2.I1" class="ltx_itemize">
+<li id="I1.I2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">*</span></span> 
+<div id="I1.I2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I1.I2.I1.i1.p1.m1" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math><span class="ltx_text ltx_font_italic"> is smaller than the  value </span><math id="I1.I2.I1.i1.p1.m2" class="ltx_Math" alttext="w(u)" display="inline"><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic">, then let </span><math id="I1.I2.I1.i1.p1.m3" class="ltx_Math" alttext="w(u)=N" display="inline"><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>N</mi></mrow></math><span class="ltx_text ltx_font_italic"> and </span><math id="I1.I2.I1.i1.p1.m4" class="ltx_Math" alttext="p(u)=v" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>v</mi></mrow></math><span class="ltx_text ltx_font_italic">. This incremental way of finding shorter paths is called </span><em class="ltx_emph">edge relaxation</em><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="I1.I2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">*</span></span> 
+<div id="I1.I2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Otherwise, do nothing.</span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">3.</span></span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Repeat previous step until </span><math id="I1.i3.p1.m1" class="ltx_Math" alttext="S=V" display="inline"><mrow><mi>S</mi><mo>=</mo><mi>V</mi></mrow></math><span class="ltx_text ltx_font_italic">, that is, when all vertices have been examined.</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">After the last iteration, for any vertex <math id="p3.m1" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> where <math id="p3.m2" class="ltx_Math" alttext="w(v)" display="inline"><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math> is not , the shortest path from <math id="p3.m3" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> to <math id="p3.m4" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> can be found repeated application of <math id="p3.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> to <math id="p3.m6" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> until it yields <math id="p3.m7" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math>. That is, the vertices in the path, in reverse , are <math id="p3.m8" class="ltx_Math" alttext="p(v),p(p(v)),\ldots,s" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>s</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Notice that there is no guarantee that this  finds <em class="ltx_emph ltx_font_italic">any</em> shortest paths from <math id="p4.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math>. It simply finds whichever shortest paths <em class="ltx_emph ltx_font_italic">do</em> exist. In particular, when <math id="p4.m2" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> has an out-degree of zero, then all other vertices will simply be marked as examined without any changes in <math id="p4.m3" class="ltx_Math" alttext="w(v)" display="inline"><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math> for any value of <math id="p4.m4" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>; there will be no shortest paths, because there are none as a rule.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Notice also that Dijkstra’s  is an example of dynamic programming. Let <math id="p5.m1" class="ltx_Math" alttext="S_{i}" display="inline"><msub><mi>S</mi><mi>i</mi></msub></math> equal the value of <math id="p5.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> in the <math id="p5.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th iteration of the , where <math id="p5.m4" class="ltx_Math" alttext="i=0" display="inline"><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow></math> initially and <math id="p5.m5" class="ltx_Math" alttext="S_{0}" display="inline"><msub><mi>S</mi><mn>0</mn></msub></math> = <math id="p5.m6" class="ltx_Math" alttext="\{s\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>s</mi><mo stretchy="false">}</mo></mrow></math>. Let <math id="p5.m7" class="ltx_Math" alttext="w(v,S_{i})" display="inline"><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><msub><mi>S</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> denote the weight of the shortest path from <math id="p5.m8" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> to <math id="p5.m9" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>, given the knowledge of <math id="p5.m10" class="ltx_Math" alttext="S_{i}" display="inline"><msub><mi>S</mi><mi>i</mi></msub></math>. Then</p>
+</div>
+<div id="p6" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="w(v,S_{i})=\cases{0}&amp;\text{forv=s}\\
+\min\{d(u,v)+w(u,S_{i})\}&amp;\text{forv\neq s,wherevisadjacenttou\in S_{i}}\\
+\infty&amp;\text{otherwise}" display="block"><mrow><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><msub><mi>S</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd></mtd></mtr></mtable></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\text</mtext></merror><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mi>min</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><msub><mi>S</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\text</mtext></merror><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>v</mi></mrow><mo>≠</mo><mi>s</mi></mrow><mo>,</mo><mrow><mrow><mi>w</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>u</mi></mrow><mo>∈</mo><mrow><msub><mi>S</mi><mi>i</mi></msub><mo>⁢</mo><mi mathvariant="normal">∞</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\text</mtext></merror><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>e</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Therefore, the purpose of Dijkstra’s  is to determine the best policy for transforming the state of the problem (i.e., which vertex to move to next). It does so by refining an approximation of the best shortest-path policy for all vertices with each iteration until the full  is realized. The  is efficient in practice because each iteration relies on previously determined .</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Generally speaking, the complexity of Dijkstra’s algorithm is <math id="p8.m1" class="ltx_Math" alttext="O(|V|^{2})" display="inline"><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mrow><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></math>, because in the worst-case  of finding all the shortest paths from <math id="p8.m2" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> in a complete graph, <math id="p8.m3" class="ltx_Math" alttext="|V|-1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow><mo>-</mo><mn>1</mn></mrow></math> comparisons are made on <math id="p8.m4" class="ltx_Math" alttext="|V|-1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow><mo>-</mo><mn>1</mn></mrow></math> vertices.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">[TODO: more on algorithmic complexity]
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">The Real History of Getting Settled To Accomplish Studies</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TheRealHistoryOfGettingSettledToAccomplishStudies</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-11-27 10:59:45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-11-27 10:59:45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">jacou (1000048)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">(0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">jacou (0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C85</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">shortest path algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GraphTheory</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Combinatorics</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 07:56:49 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

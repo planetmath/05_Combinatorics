@@ -1,0 +1,315 @@
+<!DOCTYPE html><html>
+<head>
+<title>derivation of generating function for the reciprocal central binomial coefficients</title>
+<!--Generated on Thu Feb  8 20:35:40 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">derivation of generating function for the reciprocal central binomial coefficients</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">According to the  article, the ordinary generating function for <math id="p1.m1" class="ltx_Math" alttext="\dbinom{2n}{n}^{-1}" display="inline"><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mi>n</mi></mfrac></mstyle><mo>)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> is</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\frac{4\left(\sqrt{4-x}+\sqrt{x}\arcsin\left(\frac{\sqrt{x}}{2}\right)\right)}%
+{(4-x)^{3/2}}" display="block"><mfrac><mrow><mn>4</mn><mo>⁢</mo><mrow><mo>(</mo><mrow><msqrt><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow></msqrt><mo>+</mo><mrow><msqrt><mi>x</mi></msqrt><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac><msqrt><mi>x</mi></msqrt><mn>2</mn></mfrac><mo>)</mo></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">To see this, let <math id="p1.m2" class="ltx_Math" alttext="C_{n}=\binom{2n}{n}^{-1}" display="inline"><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>=</mo><msup><mrow><mo>(</mo><mfrac linethickness="0pt"><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mi>n</mi></mfrac><mo>)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>, and <math id="p1.m3" class="ltx_Math" alttext="C(x)=\sum_{n\geq 0}C_{n}x^{n}" display="inline"><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></msub><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></mrow></math> its ordinary generating function. Then</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle C_{n+1}" display="inline"><msub><mi>C</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=\dbinom{2n+2}{n+1}^{-1}=\frac{(n+1)!(n+1)!}{(2n+2)!}" display="inline"><mrow><mi></mi><mo>=</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>2</mn></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mstyle><mo>)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\frac{(n+1)(n+1)}{(2n+2)(2n+1)}\cdot\frac{n!n!}{(2n)!}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>⋅</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=\frac{n+1}{2(2n+1)}\cdot C_{n}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>⋅</mo><msub><mi>C</mi><mi>n</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="(4n+2)C_{n+1}=(n+1)C_{n}" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>C</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>C</mi><mi>n</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\sum_{n\geq 0}(4n+2)C_{n+1}x^{n}=\sum_{n\geq 0}(n+1)C_{n}x^{n}" display="block"><mrow><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></munder><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>C</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></munder><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>C</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">A little algebra gives</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="4\sum_{n\geq 0}(n+1)C_{n+1}x^{n}-2\sum_{n\geq 0}C_{n+1}x^{n}=\sum_{n\geq 0}nC_%
+{n}x^{n}+\sum_{n\geq 0}C_{n}x^{n}" display="block"><mrow><mrow><mrow><mn>4</mn><mo>⁢</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></munder><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>C</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></munder><mrow><msub><mi>C</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></munder><mrow><mi>n</mi><mo>⁢</mo><msub><mi>C</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow><mo>+</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></munder><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="4C^{\prime}(x)-\frac{2}{x}(C(x)-1)=xC^{\prime}(x)+C(x)" display="block"><mrow><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>C</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mfrac><mn>2</mn><mi>x</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><msup><mi>C</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and, collecting terms,</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="(4x-x^{2})C^{\prime}(x)=(x+2)C(x)-2" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>C</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mn>2</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We now have a first-order linear ODE to solve. Put it in the form</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="C^{\prime}(x)+\frac{-x-2}{x(4-x)}C(x)=\frac{-2}{4x-x^{2}}" display="block"><mrow><mrow><mrow><msup><mi>C</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mrow><mrow><mo>-</mo><mi>x</mi></mrow><mo>-</mo><mn>2</mn></mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and we must now integrate the coefficient of <math id="p1.m4" class="ltx_Math" alttext="C(x)" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Expand by partial fractions and integrate to get</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\int\frac{-x-2}{x(4-x)}dx=\ln\left(\frac{(4-x)^{3/2}}{\sqrt{x}}\right)" display="block"><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mrow><mo>-</mo><mi>x</mi></mrow><mo>-</mo><mn>2</mn></mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup><msqrt><mi>x</mi></msqrt></mfrac><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus the solution to the equation is</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\displaystyle C(x)" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle=\frac{\sqrt{x}}{(4-x)^{3/2}}\left(k+\int\frac{(4-x)^{3/2}}{\sqrt%
+{x}}\cdot\frac{-2}{x(4-x)}dx\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msqrt><mi>x</mi></msqrt><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>k</mi><mo>+</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup><msqrt><mi>x</mi></msqrt></mfrac><mo>⋅</mo><mfrac><mrow><mo>-</mo><mn>2</mn></mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle=\frac{k\sqrt{x}}{(4-x)^{3/2}}-\frac{2\sqrt{x}}{(4-x)^{3/2}}\int%
+\frac{\sqrt{4-x}}{x^{3/2}}dx" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>k</mi><mo>⁢</mo><msqrt><mi>x</mi></msqrt></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><msqrt><mi>x</mi></msqrt></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><msqrt><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow></msqrt><msup><mi>x</mi><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle=\frac{k\sqrt{x}}{(4-x)^{3/2}}-\frac{2\sqrt{x}}{(4-x)^{3/2}}\left%
+(\frac{-2(4-x)}{\sqrt{x(4-x)}}-\arcsin\left(\frac{x}{2}-1\right)\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>k</mi><mo>⁢</mo><msqrt><mi>x</mi></msqrt></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><msqrt><mi>x</mi></msqrt></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><msqrt><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mfrac></mstyle><mo>-</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mi>x</mi><mn>2</mn></mfrac></mstyle><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m2" class="ltx_Math" alttext="\displaystyle=\frac{4}{4-x}+\frac{\sqrt{x}}{(4-x)^{3/2}}\left(k+2\arcsin\left(%
+\frac{x}{2}-1\right)\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>4</mn><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow></mfrac></mstyle><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msqrt><mi>x</mi></msqrt><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>k</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mi>x</mi><mn>2</mn></mfrac></mstyle><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">To determine the constant <math id="p1.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, note that we should have <math id="p1.m6" class="ltx_Math" alttext="C^{\prime}(x)\big{\lvert}_{x=0}=\frac{1}{2}" display="inline"><mrow><msup><mi>C</mi><mo>′</mo></msup><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><msub><mo fence="true" maxsize="120%" minsize="120%">|</mo><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow></math>; looking at <math id="p1.m7" class="ltx_Math" alttext="\lim_{x\to 0}C^{\prime}(x)" display="inline"><mrow><msub><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></msub><mo>⁡</mo><mrow><msup><mi>C</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> we see that for <math id="p1.m8" class="ltx_Math" alttext="k=\pi" display="inline"><mrow><mi>k</mi><mo>=</mo><mi>π</mi></mrow></math> this equation holds. Thus</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="C(x)=\frac{4}{4-x}+\frac{\sqrt{x}}{(4-x)^{3/2}}\left(\pi+2\arcsin\left(\frac{x%
+}{2}-1\right)\right)" display="block"><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>4</mn><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>+</mo><mrow><mfrac><msqrt><mi>x</mi></msqrt><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>π</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We show below that the following is an identity:</p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="\sqrt{\frac{z+1}{2}}=\sin\left(\frac{\pi}{4}+\frac{1}{2}\arcsin(z)\right)" display="block"><mrow><msqrt><mfrac><mrow><mi>z</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msqrt><mo>=</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mi>π</mi><mn>4</mn></mfrac><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Assuming that result, substitute <math id="p1.m9" class="ltx_Math" alttext="\frac{x}{2}-1" display="inline"><mrow><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>-</mo><mn>1</mn></mrow></math> for <math id="p1.m10" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> and simplify to get</p>
+<table id="S0.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\frac{\sqrt{x}}{2}=\sin\left(\frac{\pi}{4}+\frac{1}{2}\arcsin\left(\frac{x}{2}%
+-1\right)\right)" display="block"><mrow><mfrac><msqrt><mi>x</mi></msqrt><mn>2</mn></mfrac><mo>=</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mi>π</mi><mn>4</mn></mfrac><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that</p>
+<table id="S0.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex19.m1" class="ltx_Math" alttext="4\arcsin\left(\frac{\sqrt{x}}{2}\right)=\pi+2\arcsin\left(\frac{x}{2}-1\right)" display="block"><mrow><mrow><mn>4</mn><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac><msqrt><mi>x</mi></msqrt><mn>2</mn></mfrac><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>π</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and then</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex20.m1" class="ltx_Math" alttext="\displaystyle C(x)" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex20.m2" class="ltx_Math" alttext="\displaystyle=\frac{4}{4-x}+\frac{\sqrt{x}}{(4-x)^{3/2}}\left(4\arcsin\left(%
+\frac{\sqrt{x}}{2}\right)\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>4</mn><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow></mfrac></mstyle><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msqrt><mi>x</mi></msqrt><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>4</mn><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msqrt><mi>x</mi></msqrt><mn>2</mn></mfrac></mstyle><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex21" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex21.m2" class="ltx_Math" alttext="\displaystyle=\frac{4\left(\sqrt{4-x}+\sqrt{x}\arcsin\left(\frac{\sqrt{x}}{2}%
+\right)\right)}{(4-x)^{3/2}}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>⁢</mo><mrow><mo>(</mo><mrow><msqrt><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow></msqrt><mo>+</mo><mrow><msqrt><mi>x</mi></msqrt><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac><msqrt><mi>x</mi></msqrt><mn>2</mn></mfrac><mo>)</mo></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as desired.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Finally, to prove the identity, first expand the right-hand  using the formula for <math id="p2.m1" class="ltx_Math" alttext="\sin(a+b)" display="inline"><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, and then apply the half-angle formulas:</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex22" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex22.m1" class="ltx_Math" alttext="\displaystyle\sin\left(\frac{\pi}{4}+\frac{1}{2}\arcsin(z)\right)" display="inline"><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mi>π</mi><mn>4</mn></mfrac></mstyle><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex22.m2" class="ltx_Math" alttext="\displaystyle=\frac{\sqrt{2}}{2}\left(\cos\left(\frac{1}{2}\arcsin(z)\right)+%
+\sin\left(\frac{1}{2}\arcsin(z)\right)\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex23" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex23.m2" class="ltx_Math" alttext="\displaystyle=\frac{\sqrt{2}}{2}\left(\sqrt{\frac{1+\cos(\arcsin(z))}{2}}+%
+\sqrt{\frac{1-\cos(\arcsin(z))}{2}}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><msqrt><mstyle displaystyle="true"><mfrac><mrow><mn>1</mn><mo>+</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mn>2</mn></mfrac></mstyle></msqrt><mo>+</mo><msqrt><mstyle displaystyle="true"><mfrac><mrow><mn>1</mn><mo>-</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mn>2</mn></mfrac></mstyle></msqrt></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex24" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex24.m2" class="ltx_Math" alttext="\displaystyle=\frac{\sqrt{2}}{2}\left(\sqrt{\frac{1+\sqrt{1-z^{2}}}{2}}+\sqrt{%
+\frac{1-\sqrt{1-z^{2}}}{2}}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><msqrt><mstyle displaystyle="true"><mfrac><mrow><mn>1</mn><mo>+</mo><msqrt><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></msqrt></mrow><mn>2</mn></mfrac></mstyle></msqrt><mo>+</mo><msqrt><mstyle displaystyle="true"><mfrac><mrow><mn>1</mn><mo>-</mo><msqrt><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></msqrt></mrow><mn>2</mn></mfrac></mstyle></msqrt></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex25" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex25.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{2}\left(\sqrt{1+\sqrt{1-z^{2}}}+\sqrt{1-\sqrt{1-z^{2}}}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><msqrt><mrow><mn>1</mn><mo>+</mo><msqrt><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></msqrt></mrow></msqrt><mo>+</mo><msqrt><mrow><mn>1</mn><mo>-</mo><msqrt><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></msqrt></mrow></msqrt></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now square this expression to get</p>
+<table id="S0.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex26.m1" class="ltx_Math" alttext="\frac{1}{4}\left(2+2\sqrt{1-1+z^{2}}\right)=\frac{\lvert z\rvert+1}{2}" display="block"><mrow><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mrow><mrow><mn>1</mn><mo>-</mo><mn>1</mn></mrow><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></msqrt></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mrow><mo fence="true" stretchy="false">|</mo><mi>z</mi><mo fence="true" stretchy="false">|</mo></mrow><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus the identity holds for <math id="p2.m2" class="ltx_Math" alttext="0\leq z\leq 1" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>z</mi><mo>≤</mo><mn>1</mn></mrow></math>; an almost identical computation using <math id="p2.m3" class="ltx_Math" alttext="-z" display="inline"><mrow><mo>-</mo><mi>z</mi></mrow></math> in  of <math id="p2.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> shows that it also holds for <math id="p2.m5" class="ltx_Math" alttext="-1\leq z\leq 0" display="inline"><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>≤</mo><mi>z</mi><mo>≤</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">derivation of generating function for the reciprocal central binomial coefficients</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DerivationOfGeneratingFunctionForTheReciprocalCentralBinomialCoefficients</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:04:58</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:04:58</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rm50 (10146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rm50 (10146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rm50 (10146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Result</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05A10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05A15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05A19</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11B65</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:35:40 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

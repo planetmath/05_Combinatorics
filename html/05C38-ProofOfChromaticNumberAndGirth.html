@@ -1,0 +1,241 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of chromatic number and girth</title>
+<!--Generated on Thu Feb  8 20:44:03 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of chromatic number and girth</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="\alpha(G)" display="inline"><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math> denote the size of the largest independent set in
+<math id="p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, and <math id="p2.m3" class="ltx_Math" alttext="\chi(G)" display="inline"><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math> the chromatic number of <math id="p2.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. We want to show
+that there is a graph <math id="p2.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> with girth larger than <math id="p2.m6" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> and
+<math id="p2.m7" class="ltx_Math" alttext="\chi(G)&gt;k" display="inline"><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mi>k</mi></mrow></math>, for any <math id="p2.m8" class="ltx_Math" alttext="\ell,k&gt;0" display="inline"><mrow><mrow><mi mathvariant="normal">ℓ</mi><mo>,</mo><mi>k</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>.
+</p>
+</div>
+<div id="p3" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">We first prove the following claim.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Claim:</span> Given a positive integer <math id="p5.m1" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> and a positive real
+number <math id="p5.m2" class="ltx_Math" alttext="t&lt;1/\ell" display="inline"><mrow><mi>t</mi><mo>&lt;</mo><mrow><mn>1</mn><mo>/</mo><mi mathvariant="normal">ℓ</mi></mrow></mrow></math>, for all sufficiently large <math id="p5.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, there is a
+graph <math id="p5.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> on <math id="p5.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> vertices satisfying properties</p>
+</div>
+<div id="p6" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">the number of cycles of length at most <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> is less than
+<math id="I1.i1.p1.m2" class="ltx_Math" alttext="n/2" display="inline"><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\alpha(G)&lt;3n^{1-t}\log n" display="inline"><mrow><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow></msup><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof of claim:</span> Let <math id="p7.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a random graph on <math id="p7.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> vertices,
+in which each pair of vertices joint by an edge independently with
+probability <math id="p7.m3" class="ltx_Math" alttext="p=n^{t-1}" display="inline"><mrow><mi>p</mi><mo>=</mo><msup><mi>n</mi><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>. Let <math id="p7.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be the number of cycles of length
+at most <math id="p7.m5" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> in <math id="p7.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. The expected value of <math id="p7.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle E[X]" display="inline"><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=\sum_{i=3}^{\ell}\frac{n(n-1)\cdots(n-i+1)}{2i}p^{i}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>3</mn></mrow><mi mathvariant="normal">ℓ</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>p</mi><mi>i</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle&lt;\sum_{i=3}^{\ell}\frac{(np)^{i}}{2i}&lt;\sum_{i=3}^{\ell}n^{ti}&lt;%
+\ell n^{t\ell}" display="inline"><mrow><mi></mi><mo>&lt;</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>3</mn></mrow><mi mathvariant="normal">ℓ</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>⁢</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mrow><mn>2</mn><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle></mrow><mo>&lt;</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>3</mn></mrow><mi mathvariant="normal">ℓ</mi></munderover></mstyle><msup><mi>n</mi><mrow><mi>t</mi><mo>⁢</mo><mi>i</mi></mrow></msup></mrow><mo>&lt;</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><msup><mi>n</mi><mrow><mi>t</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By Markov inequality,
+</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\Pr(X\geq n/2)&lt;2\ell n^{t\ell-1}," display="block"><mrow><mrow><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>≥</mo><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><msup><mi>n</mi><mrow><mrow><mi>t</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we have</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\Pr(X\geq n/2)\rightarrow 0" display="block"><mrow><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>≥</mo><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as <math id="p7.m8" class="ltx_Math" alttext="n\rightarrow\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, since <math id="p7.m9" class="ltx_Math" alttext="t\ell&lt;1" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">On the other hand, let <math id="p8.m1" class="ltx_Math" alttext="y=\lceil(3\log n)/p\rceil" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mo stretchy="false">⌈</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mi>p</mi></mrow><mo stretchy="false">⌉</mo></mrow></mrow></math>, and <math id="p8.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> be
+the number of independent sets of size <math id="p8.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> in <math id="p8.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. By Markov
+inequality again,</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\Pr(\alpha(G)\geq y)=\Pr(Y\geq 1)\leq E[Y]." display="block"><mrow><mrow><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>≥</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">However,</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="E[Y]={n\choose y}(1-p)^{y(y-1)/2}" display="block"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>y</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using the inequalities, <math id="p8.m5" class="ltx_Math" alttext="{n\choose y}&lt;n^{y}" display="inline"><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>y</mi></mfrac><mo>)</mo></mrow><mo>&lt;</mo><msup><mi>n</mi><mi>y</mi></msup></mrow></math> and <math id="p8.m6" class="ltx_Math" alttext="(1-p)\leq e^{-p}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mo>≤</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>p</mi></mrow></msup></mrow></math>, we get</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\Pr(\alpha(G)\geq y)&lt;(ne^{-p(y-1)/2})^{y}" display="block"><mrow><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow></mrow></msup></mrow><mo stretchy="false">)</mo></mrow><mi>y</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Our choice of <math id="p8.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> guarantees that <math id="p8.m8" class="ltx_Math" alttext="ne^{-p(y-1)/2}&lt;\beta&lt;1" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow></mrow></msup></mrow><mo>&lt;</mo><mi>β</mi><mo>&lt;</mo><mn>1</mn></mrow></math>
+for some <math id="p8.m9" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math>, and <math id="p8.m10" class="ltx_Math" alttext="y\rightarrow\infty" display="inline"><mrow><mi>y</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math> as <math id="p8.m11" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> approaches
+infinity. Therefore,</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\Pr(\alpha(G)\geq y)\rightarrow 0,\quad\text{as
+$n\rightarrow\infty$}." display="block"><mrow><mrow><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mn>0</mn><mo rspace="12.5pt">,</mo><mrow><mtext>as </mtext><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">We can thus find <math id="p9.m1" class="ltx_Math" alttext="n_{0}" display="inline"><msub><mi>n</mi><mn>0</mn></msub></math> such that for all <math id="p9.m2" class="ltx_Math" alttext="n&gt;n_{0}" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></math>, both <math id="p9.m3" class="ltx_Math" alttext="\Pr(X\geq n/2)" display="inline"><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>≥</mo><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p9.m4" class="ltx_Math" alttext="\Pr(\alpha(G)\geq y)" display="inline"><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> are strictly less than
+<math id="p9.m5" class="ltx_Math" alttext="1/2" display="inline"><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></math>. For all <math id="p9.m6" class="ltx_Math" alttext="n&gt;n_{0}" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></math>,</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\Pr(X&lt;\ell\text{ and }\alpha(G)&lt;y)&gt;1-\Pr(X\geq\ell)-\Pr(\alpha(G)\geq y)&gt;1." display="block"><mrow><mrow><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>&lt;</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mrow><mn>1</mn><mo>-</mo><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>≥</mo><mi mathvariant="normal">ℓ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>&gt;</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore there exists a graph that satisfies the two properties
+in the claim. This ends the proof of the claim.</p>
+</div>
+<div id="p10" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Let <math id="p11.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a graph that satisfies the two properties in the
+claim. Remove a vertex from each cycle of length at most <math id="p11.m2" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> in
+<math id="p11.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. The resulting graph <math id="p11.m4" class="ltx_Math" alttext="G^{\prime}" display="inline"><msup><mi>G</mi><mo>′</mo></msup></math> has girth larger than <math id="p11.m5" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, more
+than <math id="p11.m6" class="ltx_Math" alttext="n/2" display="inline"><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow></math> vertices, and <math id="p11.m7" class="ltx_Math" alttext="\alpha(G^{\prime})\leq\alpha(G)" display="inline"><mrow><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>G</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Since
+<span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/6037<math id="p11.m8" class="ltx_Math" alttext="\chi(G^{\prime})\alpha(G^{\prime})\geq|G^{\prime}|" display="inline"><mrow><mrow><mi mathvariant="normal">χ</mi><mo mathvariant="monospace">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi mathvariant="normal">G</mi><mo mathvariant="normal">′</mo></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="monospace">⁢</mo><mi mathvariant="normal">α</mi><mo mathvariant="monospace">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi mathvariant="normal">G</mi><mo mathvariant="normal">′</mo></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">≥</mo><mrow><mo mathvariant="normal" stretchy="false">|</mo><msup><mi mathvariant="normal">G</mi><mo mathvariant="normal">′</mo></msup><mo mathvariant="normal" stretchy="false">|</mo></mrow></mrow></math></span>, we have
+</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\chi(G^{\prime})\geq\frac{n/2}{3n^{1-t}\log n}=\frac{n^{t}}{6\log n}" display="block"><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>G</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mfrac><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow></msup><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow></mrow></mfrac><mo>=</mo><mfrac><msup><mi>n</mi><mi>t</mi></msup><mrow><mn>6</mn><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We can pick sufficiently large <math id="p11.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that <math id="p11.m10" class="ltx_Math" alttext="\chi(G^{\prime})" display="inline"><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>G</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></math> is larger
+than <math id="p11.m11" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. Then the chromatic number of <math id="p11.m12" class="ltx_Math" alttext="G^{\prime}" display="inline"><msup><mi>G</mi><mo>′</mo></msup></math> is larger than <math id="p11.m13" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> and
+girth is larger than <math id="p11.m14" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Reference</span>: N. Alon and J. Spencer, <span class="ltx_text ltx_font_italic">The probabilistic method</span>, 2nd, John Wiley.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of chromatic number and girth</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfChromaticNumberAndGirth</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:31:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:31:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">kshum (5987)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">kshum (5987)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">kshum (5987)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 05C80</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:44:03 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

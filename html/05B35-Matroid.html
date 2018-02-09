@@ -1,0 +1,591 @@
+<!DOCTYPE html><html>
+<head>
+<title>matroid</title>
+<!--Generated on Thu Feb  8 20:39:42 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">matroid</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_italic">matroid</span> is a combinatorial structure whose properties imitate those of linearly independent subsets of a vector space. Notions such as rank and independence (of a subset) have a meaning for any matroid, as does the notion of duality.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Definitions of a matroid</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">A matroid permits several equivalent formal definitions: two definitions
+in terms of a rank function, one in terms of independent subsets, and
+several more. We discuss several definitions below.</p>
+</div>
+<section id="S1.SSx1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">First rank definition</h3>
+
+<div id="Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Definition 1</span></h6>
+<div id="Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A matroid consists of a set <math id="Thmdefinition1.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> and a function <math id="Thmdefinition1.p1.m2" class="ltx_Math" alttext="r\colon\mathcal{P}(E)\to\mathbb{N}" display="inline"><mrow><mi>r</mi><mo mathvariant="normal">:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">→</mo><mi mathvariant="normal">N</mi></mrow></mrow></math> satisfying the axioms:</span></p>
+</div>
+<div id="Thmdefinition1.p2" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">r1</span></span> 
+<div id="I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For any </span><math id="I1.ix1.p1.m1" class="ltx_Math" alttext="S\in\mathcal{P}(E)" display="inline"><mrow><mi>S</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">, </span><math id="I1.ix1.p1.m2" class="ltx_Math" alttext="r(S)\leq|S|" display="inline"><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>S</mi><mo stretchy="false">|</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="I1.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">r2</span></span> 
+<div id="I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The function </span><math id="I1.ix2.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math><span class="ltx_text ltx_font_italic"> is order-preserving.</span></p>
+</div>
+</li>
+<li id="I1.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">r3</span></span> 
+<div id="I1.ix3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The function </span><math id="I1.ix3.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math><span class="ltx_text ltx_font_italic"> satisfies the submodular inequality. That is, for any </span><math id="I1.ix3.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math><span class="ltx_text ltx_font_italic">, </span><math id="I1.ix3.p1.m3" class="ltx_Math" alttext="T\in\mathcal{P}(E)" display="inline"><mrow><mi>T</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">,</span></p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="r(S\cup T)+r(S\cap T)\leq r(S)+r(T)." display="block"><mrow><mrow><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>∪</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>∩</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≤</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="S1.SSx1.p1" class="ltx_para">
+<p class="ltx_p">In this situation, <math id="S1.SSx1.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is called the <span class="ltx_text ltx_font_italic">rank function</span> of the matroid <math id="S1.SSx1.p1.m2" class="ltx_Math" alttext="(E,r)" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></math>. If every singleton of <math id="S1.SSx1.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> has rank equal to 1, then <math id="S1.SSx1.p1.m4" class="ltx_Math" alttext="(E,r)" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></math> is called a normal matroid.</p>
+</div>
+<div id="S1.SSx1.p2" class="ltx_para">
+<p class="ltx_p">An isomorphism of matroids <math id="S1.SSx1.p2.m1" class="ltx_Math" alttext="(E,r)\to(F,s)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math> consists of a bijection <math id="S1.SSx1.p2.m2" class="ltx_Math" alttext="f:E\to F" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>F</mi></mrow></mrow></math> which preserves rank, that is, satisfies <math id="S1.SSx1.p2.m3" class="ltx_Math" alttext="s(f(A))=r(A)" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="S1.SSx1.p2.m4" class="ltx_Math" alttext="A\in\mathcal{P}(E)" display="inline"><mrow><mi>A</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S1.SSx2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Second rank definition</h3>
+
+<div id="Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Definition 2</span></h6>
+<div id="Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A matroid consists of a set <math id="Thmdefinition2.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> and a function <math id="Thmdefinition2.p1.m2" class="ltx_Math" alttext="r\colon\mathcal{P}(E)\to\mathbb{N}" display="inline"><mrow><mi>r</mi><mo mathvariant="normal">:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">→</mo><mi mathvariant="normal">N</mi></mrow></mrow></math> satisfying the axioms:</span></p>
+</div>
+<div id="Thmdefinition2.p2" class="ltx_para">
+<ul id="I2" class="ltx_itemize">
+<li id="I2.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">q1</span></span> 
+<div id="I2.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.ix1.p1.m1" class="ltx_Math" alttext="r(\emptyset)=0" display="inline"><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="I2.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">q2</span></span> 
+<div id="I2.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I2.ix2.p1.m1" class="ltx_Math" alttext="x\in E" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow></math><span class="ltx_text ltx_font_italic"> and </span><math id="I2.ix2.p1.m2" class="ltx_Math" alttext="S\in\mathcal{P}(E)" display="inline"><mrow><mi>S</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">, then </span><math id="I2.ix2.p1.m3" class="ltx_Math" alttext="r(S\cup\{x\})-r(S)" display="inline"><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic"> is either 0 or 1.</span></p>
+</div>
+</li>
+<li id="I2.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">q3</span></span> 
+<div id="I2.ix3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I2.ix3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math><span class="ltx_text ltx_font_italic">, </span><math id="I2.ix3.p1.m2" class="ltx_Math" alttext="y\in E" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>E</mi></mrow></math><span class="ltx_text ltx_font_italic"> and </span><math id="I2.ix3.p1.m3" class="ltx_Math" alttext="S\in\mathcal{P}(E)" display="inline"><mrow><mi>S</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">, then
+</span><math id="I2.ix3.p1.m4" class="ltx_Math" alttext="r(S\cup\{x\})=r(S\cup\{y\})=r(S)" display="inline"><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic"> implies </span><math id="I2.ix3.p1.m5" class="ltx_Math" alttext="r(S\cup\{x,y\})=r(S)" display="inline"><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="S1.SSx3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Independent set definition</h3>
+
+<div id="Thmdefinition3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Definition 3</span></h6>
+<div id="Thmdefinition3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A matroid is a pair <math id="Thmdefinition3.p1.m1" class="ltx_Math" alttext="(E,\mathcal{I})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal">,</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">I</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> with <math id="Thmdefinition3.p1.m2" class="ltx_Math" alttext="\mathcal{I}\subseteq\mathcal{P}(E)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">I</mi><mo mathvariant="normal">⊆</mo><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> (called the <span class="ltx_text ltx_font_normal">independent sets</span> of <math id="Thmdefinition3.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>) satisfying the axioms:</span></p>
+</div>
+<div id="Thmdefinition3.p2" class="ltx_para">
+<ul id="I3" class="ltx_itemize">
+<li id="I3.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">i1</span></span> 
+<div id="I3.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The empty set is independent.</span></p>
+</div>
+</li>
+<li id="I3.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">i2</span></span> 
+<div id="I3.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Every subset of an independent set is independent.</span></p>
+</div>
+</li>
+<li id="I3.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">i3</span></span> 
+<div id="I3.ix3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For any </span><math id="I3.ix3.p1.m1" class="ltx_Math" alttext="U\subseteq E" display="inline"><mrow><mi>U</mi><mo>⊆</mo><mi>E</mi></mrow></math><span class="ltx_text ltx_font_italic">, any two subsets of </span><math id="I3.ix3.p1.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math><span class="ltx_text ltx_font_italic"> which are maximal with respect to membership in </span><math id="I3.ix3.p1.m3" class="ltx_Math" alttext="\mathcal{I}" display="inline"><mi class="ltx_font_mathcaligraphic">ℐ</mi></math><span class="ltx_text ltx_font_italic"> have the same cardinality.</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="S1.SSx3.p1" class="ltx_para">
+<p class="ltx_p">The matroid <math id="S1.SSx3.p1.m1" class="ltx_Math" alttext="(E,I)" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></math> is normal if every singleton in <math id="S1.SSx3.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is independent.</p>
+</div>
+</section>
+<section id="S1.SSx4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Base definition</h3>
+
+<div id="Thmdefinition4" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Definition 4</span></h6>
+<div id="Thmdefinition4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A matroid is a pair <math id="Thmdefinition4.p1.m1" class="ltx_Math" alttext="(E,\mathcal{B})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal">,</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">B</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> with <math id="Thmdefinition4.p1.m2" class="ltx_Math" alttext="\mathcal{B}\subseteq\mathcal{P}(E)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">B</mi><mo mathvariant="normal">⊆</mo><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> (called the <span class="ltx_text ltx_font_normal">bases</span> of <math id="Thmdefinition4.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>) a subset of <math id="Thmdefinition4.p1.m4" class="ltx_Math" alttext="\mathcal{P}(E)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> satisfying the axioms:</span></p>
+</div>
+<div id="Thmdefinition4.p2" class="ltx_para">
+<ul id="I4" class="ltx_itemize">
+<li id="I4.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">b1</span></span> 
+<div id="I4.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.ix1.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math><span class="ltx_text ltx_font_italic"> has at least one base.
+</span></p>
+</div>
+</li>
+<li id="I4.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">b2</span></span> 
+<div id="I4.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The proper subsets of a base are not bases.</span></p>
+</div>
+</li>
+<li id="I4.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">b3</span></span> 
+<div id="I4.ix3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I4.ix3.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math><span class="ltx_text ltx_font_italic"> and </span><math id="I4.ix3.p1.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math><span class="ltx_text ltx_font_italic"> are bases and </span><math id="I4.ix3.p1.m3" class="ltx_Math" alttext="x\in E\setminus S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>E</mi><mo>∖</mo><mi>S</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic">, then for some </span><math id="I4.ix3.p1.m4" class="ltx_Math" alttext="y\in E\setminus T" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mi>E</mi><mo>∖</mo><mi>T</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic">, the set </span><math id="I4.ix3.p1.m5" class="ltx_Math" alttext="(S\cup\{x\})\setminus\{y\}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∖</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo stretchy="false">}</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic"> is a base.</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="S1.SSx4.p1" class="ltx_para">
+<p class="ltx_p">The matroid <math id="S1.SSx4.p1.m1" class="ltx_Math" alttext="(E,\mathcal{B})" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo stretchy="false">)</mo></mrow></math> is called normal if each singleton of <math id="S1.SSx4.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is contained in a base of <math id="S1.SSx4.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>.</p>
+</div>
+</section>
+<section id="S1.SSx5" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Closure definition</h3>
+
+<div id="Thmdefinition5" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Definition 5</span></h6>
+<div id="Thmdefinition5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A matroid consists of a set <math id="Thmdefinition5.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> and a function <math id="Thmdefinition5.p1.m2" class="ltx_Math" alttext="\operatorname{cl}\colon\mathcal{P}(E)\to\mathcal{P}(E)" display="inline"><mrow><mi mathvariant="normal">cl</mi><mo mathvariant="normal">:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">→</mo><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, called the <span class="ltx_text ltx_font_normal">closure operator</span>, satisfying the axioms:</span></p>
+</div>
+<div id="Thmdefinition5.p2" class="ltx_para">
+<ul id="I5" class="ltx_itemize">
+<li id="I5.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">cl1</span></span> 
+<div id="I5.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Any subset of </span><math id="I5.ix1.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math><span class="ltx_text ltx_font_italic"> is contained in its closure.</span></p>
+</div>
+</li>
+<li id="I5.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">cl2</span></span> 
+<div id="I5.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I5.ix2.p1.m1" class="ltx_Math" alttext="S\subseteq\operatorname{cl}(T)" display="inline"><mrow><mi>S</mi><mo>⊆</mo><mrow><mi>cl</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic"> then </span><math id="I5.ix2.p1.m2" class="ltx_Math" alttext="\operatorname{cl}(S)\subseteq\operatorname{cl}(T)" display="inline"><mrow><mrow><mi>cl</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>cl</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="I5.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">cl3</span></span> 
+<div id="I5.ix3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I5.ix3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math><span class="ltx_text ltx_font_italic"> is in the closure of </span><math id="I5.ix3.p1.m2" class="ltx_Math" alttext="S\cup\{y\}" display="inline"><mrow><mi>S</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo stretchy="false">}</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic"> but not that of </span><math id="I5.ix3.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math><span class="ltx_text ltx_font_italic">, then </span><math id="I5.ix3.p1.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math><span class="ltx_text ltx_font_italic"> is in the closure of </span><math id="I5.ix3.p1.m5" class="ltx_Math" alttext="S\cup\{x\}" display="inline"><mrow><mi>S</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="S1.SSx5.p1" class="ltx_para">
+<p class="ltx_p">The closure operator is sometimes also called the <span class="ltx_text ltx_font_italic">span mapping</span> of the matroid. In this case <math id="S1.SSx5.p1.m1" class="ltx_Math" alttext="\operatorname{cl}(A)" display="inline"><mrow><mi>cl</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> is called the span of <math id="S1.SSx5.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S1.SSx5.p2" class="ltx_para">
+<p class="ltx_p">The matroid <math id="S1.SSx5.p2.m1" class="ltx_Math" alttext="(E,\operatorname{cl})" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>cl</mi><mo stretchy="false">)</mo></mrow></math> is normal if the empty set is its own closure.</p>
+</div>
+</section>
+<section id="S1.SSx6" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Circuit definition</h3>
+
+<div id="Thmdefinition6" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Definition 6</span></h6>
+<div id="Thmdefinition6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A matroid is a pair <math id="Thmdefinition6.p1.m1" class="ltx_Math" alttext="(E,\mathcal{C})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal">,</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">C</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> with <math id="Thmdefinition6.p1.m2" class="ltx_Math" alttext="\mathcal{C}\subset\mathcal{P}(E)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">C</mi><mo mathvariant="normal">⊂</mo><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> (called the <span class="ltx_text ltx_font_normal">circuits</span> of <math id="Thmdefinition6.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>) satisfying the axioms:</span></p>
+</div>
+<div id="Thmdefinition6.p2" class="ltx_para">
+<ul id="I6" class="ltx_itemize">
+<li id="I6.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">c1</span></span> 
+<div id="I6.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The empty set is not a circuit.</span></p>
+</div>
+</li>
+<li id="I6.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">c2</span></span> 
+<div id="I6.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The proper supersets of a circuit are not circuits.</span></p>
+</div>
+</li>
+<li id="I6.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">c3</span></span> 
+<div id="I6.ix3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I6.ix3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math><span class="ltx_text ltx_font_italic"> is in the intersection of two distinct circuits </span><math id="I6.ix3.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math><span class="ltx_text ltx_font_italic"> and </span><math id="I6.ix3.p1.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math><span class="ltx_text ltx_font_italic">, then there is a circuit </span><math id="I6.ix3.p1.m4" class="ltx_Math" alttext="U\subseteq S\cup T" display="inline"><mrow><mi>U</mi><mo>⊆</mo><mrow><mi>S</mi><mo>∪</mo><mi>T</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic"> which does not contain </span><math id="I6.ix3.p1.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="S1.SSx6.p1" class="ltx_para">
+<p class="ltx_p">The matroid <math id="S1.SSx6.p1.m1" class="ltx_Math" alttext="(E,\mathcal{C})" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></math> is normal if no singleton of <math id="S1.SSx6.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is a circuit.</p>
+</div>
+</section>
+<section id="S1.SSx7" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Combinatorial optimization definition</h3>
+
+<div id="S1.SSx7.p1" class="ltx_para">
+<p class="ltx_p">There’s yet another definition of matroids from “Combinatorial Optimization” by Papadimitriou and Steiglitz. pp. 280-285.</p>
+</div>
+<div id="S1.SSx7.p2" class="ltx_para">
+<p class="ltx_p">It requires three definitions to generate their definition of matroids. These are more or less grabbed from the book above.</p>
+</div>
+<div id="S1.SSx7.p3" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_italic">subset system</span> (E,g) is a finite set E with g a collection of subsets of E closed under inclusion, meaning that if <math id="S1.SSx7.p3.m1" class="ltx_Math" alttext="A\in g" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi>g</mi></mrow></math>, and <math id="S1.SSx7.p3.m2" class="ltx_Math" alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow></math>, then <math id="S1.SSx7.p3.m3" class="ltx_Math" alttext="B\in g" display="inline"><mrow><mi>B</mi><mo>∈</mo><mi>g</mi></mrow></math>.</p>
+</div>
+<div id="S1.SSx7.p4" class="ltx_para">
+<p class="ltx_p">Definition 2: The <span class="ltx_text ltx_font_italic">“combinatorial optimization problem”</span> (nonstandard term used in book) is as follows. Let (E,g) be a subset system and weight w, a nonnegative real function on E. Find the subset in g with the largest total weight.</p>
+</div>
+<div id="S1.SSx7.p5" class="ltx_para">
+<p class="ltx_p">Definition 3: Let (E,g) be a subset system and w, a weight function defined as above to give the “combinatorial optimization problem”. The greedy algorithm for construction of a subset I in g is as follows. Start with I being the empty set. Take the next highest weight element, e in E (w(e) ¿= w(f) for all f in E). If the union of I and e is in g, then add element e to I. Repeat until you exhaust all elements of E.</p>
+</div>
+<div id="S1.SSx7.p6" class="ltx_para">
+<p class="ltx_p">Now we have the definition of a matroid.
+</p>
+</div>
+<div id="S1.SSx7.p7" class="ltx_para">
+<p class="ltx_p">Definition 4:Let M=(E,g) be a subset system. M is a “matroid” if the greedy algorithm correctly solves the ”combinatorial optimization problem” for any weight function associated with M.</p>
+</div>
+</section>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Equivalence of the definitions</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">It would take several pages to spell out what is a circuit in terms of rank,
+and likewise for each other possible pair of the alternative defining notions,
+and then to prove that the various sets of axioms unambiguously define the
+same structure.
+So let me sketch just one example: the equivalence of Definitions 1 (on
+rank) and 6 (on circuits).
+Assume first the conditions in Definition 1.
+Define a circuit as a minimal subset <math id="S2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> of <math id="S2.p1.m2" class="ltx_Math" alttext="\mathcal{P}(E)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> having the property
+<math id="S2.p1.m3" class="ltx_Math" alttext="r(A)&lt;|A|" display="inline"><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mo stretchy="false">|</mo><mi>A</mi><mo stretchy="false">|</mo></mrow></mrow></math>.
+With a little effort, we verify the axioms (c1)-(c3).
+Now assume (c1)-(c3), and let <math id="S2.p1.m4" class="ltx_Math" alttext="r(A)" display="inline"><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the largest
+integer <math id="S2.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that <math id="S2.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> has a subset <math id="S2.p1.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> for which</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">– <math id="S2.p2.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> contains no element of <math id="S2.p2.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math></p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">– <math id="S2.p3.m1" class="ltx_Math" alttext="n=|B|" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>B</mi><mo stretchy="false">|</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">One now proves (r1)-(r3).
+Next, one shows that if we define <math id="S2.p4.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> in terms of
+<math id="S2.p4.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>, and then another rank function <math id="S2.p4.m3" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> in terms of <math id="S2.p4.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, we end up with
+<math id="S2.p4.m5" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math>=<math id="S2.p4.m6" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>.
+The equivalence of (r*) and (c*) is easy enough as well.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Examples of matroids</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be a vector space over a field <math id="S3.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, and let <math id="S3.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> be a finite subset of
+<math id="S3.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.
+For <math id="S3.p1.m5" class="ltx_Math" alttext="S\subset E" display="inline"><mrow><mi>S</mi><mo>⊂</mo><mi>E</mi></mrow></math>, let <math id="S3.p1.m6" class="ltx_Math" alttext="r(S)" display="inline"><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the dimension of the subspace of <math id="S3.p1.m7" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>
+generated by <math id="S3.p1.m8" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>.
+Then <math id="S3.p1.m9" class="ltx_Math" alttext="(E,r)" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></math> is a matroid.
+Such a matroid, or one isomorphic
+to it, is said to be representable over <math id="S3.p1.m10" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>.
+The matroid is normal iff <math id="S3.p1.m11" class="ltx_Math" alttext="0\notin E" display="inline"><mrow><mn>0</mn><mo>∉</mo><mi>E</mi></mrow></math>.
+There exist matroids which are not representable over any field.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">The second example of a matroid comes from graph theory.
+The following definition will be rather informal, partly because the
+terminology of graph theory is not very well standardised.
+For our present purpose, a graph consists
+of a finite set <math id="S3.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, whose elements are called vertices, plus a set <math id="S3.p2.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> of
+two-element subsets of <math id="S3.p2.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, called edges.
+A circuit in the graph is a finite set of at least three edges which can
+be arranged in a cycle:</p>
+<table id="S3.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex2.m1" class="ltx_Math" alttext="\{a,b\},\{b,c\},\ldots\{y,z\},\{z,a\}" display="block"><mrow><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>z</mi><mo>,</mo><mi>a</mi><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">such that the vertices <math id="S3.p2.m4" class="ltx_Math" alttext="a,b,\ldots z" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></math> are distinct.
+With circuits thus defined, <math id="S3.p2.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> satisfies the axioms in Definition 6,
+and is thus a matroid, and in fact a normal matroid.
+(The definition is easily adjusted to permit graphs with loops, which
+define non-normal matroids.)
+Such a matroid, or one isomorphic to it, is called “graphic”.</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p3.m1" class="ltx_Math" alttext="E=A\cup B" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow></mrow></math> be a finite set, where <math id="S3.p3.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S3.p3.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are nonempty and disjoint.
+Let <math id="S3.p3.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> a subset of <math id="S3.p3.m5" class="ltx_Math" alttext="A\times B" display="inline"><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></math>.
+We get a “matching” matroid on <math id="S3.p3.m6" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> as follows.
+Each element of <math id="S3.p3.m7" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> defines a “line” which is a subset
+(a row or column) of the set <math id="S3.p3.m8" class="ltx_Math" alttext="A\times B" display="inline"><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></math>.
+Let us call the elements of <math id="S3.p3.m9" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> “points”.
+For any <math id="S3.p3.m10" class="ltx_Math" alttext="S\subset E" display="inline"><mrow><mi>S</mi><mo>⊂</mo><mi>E</mi></mrow></math> let <math id="S3.p3.m11" class="ltx_Math" alttext="r(S)" display="inline"><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+be the largest number <math id="S3.p3.m12" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that for some set of points <math id="S3.p3.m13" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>:</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">– <math id="S3.p4.m1" class="ltx_Math" alttext="|P|=n" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>P</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>n</mi></mrow></math></p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">– No two points of <math id="S3.p5.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> are on the same line</p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">– Any point of <math id="S3.p6.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is on a line defined by an element of <math id="S3.p6.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>.</p>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">One can prove (it is not trivial) that <math id="S3.p7.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is the rank function of
+a matroid on <math id="S3.p7.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>.
+That matroid is normal iff every line contains at least one point.
+Matching matroids participate in combinatorics, in
+connection with results on “transversals”, such as Hall’s marriage
+theorem.
+</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>The dual of a matroid</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Proposition: Let <math id="S4.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> be a matroid and <math id="S4.p1.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> its rank function.
+Define a mapping <math id="S4.p1.m3" class="ltx_Math" alttext="s:\beta(E)\to\mathbb{N}" display="inline"><mrow><mi>s</mi><mo>:</mo><mrow><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>ℕ</mi></mrow></mrow></math> by</p>
+<table id="S4.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex3.m1" class="ltx_Math" alttext="s(A)=|A|-r(E)+r(E-A)." display="block"><mrow><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>A</mi><mo stretchy="false">|</mo></mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then the pair <math id="S4.p1.m4" class="ltx_Math" alttext="(E,s)" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></math> is a matroid (called the dual of <math id="S4.p1.m5" class="ltx_Math" alttext="(E,r)" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">We leave the proof as an exercise.
+Also, it is easy to verify that the
+dual of the dual is the original matroid.
+A circuit in <math id="S4.p2.m1" class="ltx_Math" alttext="(E,s)" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></math> is also
+referred to as a cocircuit in <math id="S4.p2.m2" class="ltx_Math" alttext="(E,r)" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></math>.
+There is a notion of cobasis also, and cospan.</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">If the dual of <math id="S4.p3.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is graphic, <math id="S4.p3.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is called cographic.
+This notion of
+duality agrees with the notion of same name in the theory of planar
+graphs (and likewise in linear algebra): given a plane graph, the dual
+of its matroid is the matroid of the dual graph.
+A matroid that is both
+graphic and cographic is called planar, and various criteria for
+planarity of a graph can be extended to matroids.
+The notion of
+orientability can also be extended from graphs to matroids.</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Binary matroids</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">A matroid is said to be binary if it is representable over the field of
+two elements.
+There are several other (equivalent) characterisations of a binary
+matroid <math id="S5.p1.m1" class="ltx_Math" alttext="(E,r)" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></math>, such as:</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">– The symmetric difference of any family of circuits is the union of
+a family of pairwise disjoint circuits.</p>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">– For any circuit <math id="S5.p3.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> and cocircuit <math id="S5.p3.m2" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>, we have <math id="S5.p3.m3" class="ltx_Math" alttext="|C\cap D|\equiv 0\pmod{2}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>C</mi><mo>∩</mo><mi>D</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≡</mo><mrow><mn>0</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">Any graphic matroid is binary.
+The dual of a binary matroid is binary.</p>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Miscellaneous</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">The definition of the chromatic polynomial of a graph,</p>
+<table id="S6.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex4.m1" class="ltx_Math" alttext="\chi(x)=\sum_{F\subset E}(-1)^{|F|}x^{r(E)-r(F)}," display="block"><mrow><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>F</mi><mo>⊂</mo><mi>E</mi></mrow></munder><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">|</mo><mi>F</mi><mo stretchy="false">|</mo></mrow></msup><mo>⁢</mo><msup><mi>x</mi><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">extends without change to any matroid.
+This polynomial has something to say about the decomposibility of
+matroids into simpler ones.</p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">Also on the topic of decomposibility, matroids have a sort of
+structure theory, in terms of what are called minors and separators.
+That theory, due to Tutte, goes by induction; roughly speaking,
+it is an adaptation of the old algorithms for putting
+a matrix into a canonical form.</p>
+</div>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p">Along the same lines are several theorems on “basis exchange”, such as
+the following.
+Let <math id="S6.p3.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> be a matroid and let</p>
+<table id="S6.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex5.m1" class="ltx_Math" alttext="A=\{a_{1},\ldots,a_{n}\}" display="block"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S6.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex6.m1" class="ltx_Math" alttext="B=\{b_{1},\ldots,b_{n}\}" display="block"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">be two (equipotent) bases of <math id="S6.p3.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>.
+There exists a permutation <math id="S6.p3.m3" class="ltx_Math" alttext="\psi" display="inline"><mi>ψ</mi></math> of the set
+<math id="S6.p3.m4" class="ltx_Math" alttext="\{1,\ldots,n\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></math> such that, for every <math id="S6.p3.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> from <math id="S6.p3.m6" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> to <math id="S6.p3.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>,</p>
+<table id="S6.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex7.m1" class="ltx_Math" alttext="\{a_{1},\ldots,a_{m},b_{\psi(m+1)},\ldots,b_{\psi(n)}\}" display="block"><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub><mo>,</mo><msub><mi>b</mi><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a basis of <math id="S6.p3.m8" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>.</p>
+</div>
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>Further reading</h2>
+
+<div id="S7.p1" class="ltx_para">
+<p class="ltx_p">A good textbook is:</p>
+</div>
+<div id="S7.p2" class="ltx_para">
+<p class="ltx_p">James G. Oxley, <em class="ltx_emph ltx_font_italic">Matroid Theory</em>,
+Oxford University Press, New York etc., 1992</p>
+</div>
+<div id="S7.p3" class="ltx_para">
+<p class="ltx_p">plus the updates-and-errata file at Dr. Oxley’s
+<span class="ltx_text ltx_font_typewriter">http://www.math.lsu.edu/ oxley</span>website.</p>
+</div>
+<div id="S7.p4" class="ltx_para">
+<p class="ltx_p">The chromatic polynomial is not discussed in Oxley, but see e.g.
+<span class="ltx_text ltx_font_typewriter">http://www.math.binghamton.edu/zaslav/Matroids</span>Zaslavski.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">matroid</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Matroid</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:08:56</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:08:56</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05B35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">independence structure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ChromaticPolynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DependenceRelation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">submodular inequality</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:39:42 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

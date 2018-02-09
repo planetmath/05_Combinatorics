@@ -1,0 +1,146 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of crossing lemma</title>
+<!--Generated on Thu Feb  8 20:41:35 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of crossing lemma</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Euler’s formula implies the linear lower bound <math id="p1.m1" class="ltx_Math" alttext="\operatorname{cr}(G)\geq m-3n+6" display="inline"><mrow><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>m</mi><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>+</mo><mn>6</mn></mrow></mrow></math>, and so it cannot be used directly. What we need is to consider the subgraphs of our graph, apply Euler’s formula on them, and then combine the estimates. The probabilistic method provides a natural way to do that.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Consider a minimal embedding of <math id="p2.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. Choose independently every vertex of <math id="p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> with probability <math id="p2.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Let <math id="p2.m4" class="ltx_Math" alttext="G_{p}" display="inline"><msub><mi>G</mi><mi>p</mi></msub></math> be a graph induced by those vertices. By Euler’s formula, <math id="p2.m5" class="ltx_Math" alttext="\operatorname{cr}(G_{p})-m_{p}+3n_{p}\geq 0" display="inline"><mrow><mrow><mrow><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>G</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><msub><mi>m</mi><mi>p</mi></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>n</mi><mi>p</mi></msub></mrow></mrow><mo>≥</mo><mn>0</mn></mrow></math>. The expectation is clearly</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="E(\operatorname{cr}(G_{p})-m_{p}+3n_{p})\geq 0." display="block"><mrow><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>G</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><msub><mi>m</mi><mi>p</mi></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>n</mi><mi>p</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="p2.m6" class="ltx_Math" alttext="E(n_{p})=pn" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>n</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mi>n</mi></mrow></mrow></math>, <math id="p2.m7" class="ltx_Math" alttext="E(m_{p})=p^{2}m" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>m</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>⁢</mo><mi>m</mi></mrow></mrow></math> and <math id="p2.m8" class="ltx_Math" alttext="E(X_{p})=p^{4}\operatorname{cr}(G)" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>p</mi><mn>4</mn></msup><mo>⁢</mo><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, we get an inequality that bounds the crossing number of <math id="p2.m9" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> from below,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\operatorname{cr}(G)\geq p^{-2}m-3p^{-3}n." display="block"><mrow><mrow><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><msup><mi>p</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mi>m</mi></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>p</mi><mrow><mo>-</mo><mn>3</mn></mrow></msup><mo>⁢</mo><mi>n</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now set <math id="p2.m10" class="ltx_Math" alttext="p=\frac{4n}{m}" display="inline"><mrow><mi>p</mi><mo>=</mo><mfrac><mrow><mn>4</mn><mo>⁢</mo><mi>n</mi></mrow><mi>m</mi></mfrac></mrow></math> (which is at most <math id="p2.m11" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> since <math id="p2.m12" class="ltx_Math" alttext="m\geq 4n" display="inline"><mrow><mi>m</mi><mo>≥</mo><mrow><mn>4</mn><mo>⁢</mo><mi>n</mi></mrow></mrow></math>), and the inequaliy becomes</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\operatorname{cr}(G)\geq\frac{1}{64}\frac{m^{3}}{n^{2}}." display="block"><mrow><mrow><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mfrac><mn>1</mn><mn>64</mn></mfrac><mo>⁢</mo><mfrac><msup><mi>m</mi><mn>3</mn></msup><msup><mi>n</mi><mn>2</mn></msup></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Similarly, if <math id="p2.m13" class="ltx_Math" alttext="m\geq\frac{9}{2}n" display="inline"><mrow><mi>m</mi><mo>≥</mo><mrow><mfrac><mn>9</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>n</mi></mrow></mrow></math>, then we can set <math id="p2.m14" class="ltx_Math" alttext="p=\frac{9n}{2m}" display="inline"><mrow><mi>p</mi><mo>=</mo><mfrac><mrow><mn>9</mn><mo>⁢</mo><mi>n</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mrow></math> to get</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\operatorname{cr}(G)\geq\frac{4}{243}\frac{m^{3}}{n^{2}}." display="block"><mrow><mrow><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mfrac><mn>4</mn><mn>243</mn></mfrac><mo>⁢</mo><mfrac><msup><mi>m</mi><mn>3</mn></msup><msup><mi>n</mi><mn>2</mn></msup></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Martin Aigner and Günter M. Ziegler.
+
+</span>
+        
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_italic">Proofs from THE BOOK</span>.
+
+</span>
+        
+<span class="ltx_bibblock">Springer, 1999.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of crossing lemma</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfCrossingLemma</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:38:46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:38:46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bbukh (348)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bbukh (348)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bbukh (348)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C80</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ProbabilisticMethod</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:41:35 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

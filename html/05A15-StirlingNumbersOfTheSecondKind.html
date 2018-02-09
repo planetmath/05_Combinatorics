@@ -1,0 +1,479 @@
+<!DOCTYPE html><html>
+<head>
+<title>Stirling numbers of the second kind</title>
+<!--Generated on Thu Feb  8 20:37:39 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Stirling numbers of the second kind</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Summary.</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">The Stirling numbers of the second kind,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="S(n,k)={n\brace k},\quad k,n\in\mathbb{N},\quad 1\leq k\leq n," display="block"><mrow><mrow><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>{</mo><mfrac linethickness="0pt"><mi>n</mi><mi>k</mi></mfrac><mo>}</mo></mrow><mo rspace="12.5pt">,</mo><mi>k</mi></mrow></mrow><mo>,</mo><mrow><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo rspace="12.5pt">,</mo><mrow><mn>1</mn><mo>≤</mo><mi>k</mi><mo>≤</mo><mi>n</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are a doubly
+indexed sequence of natural numbers, enjoying a wealth of interesting
+combinatorial properties. There exist several logically equivalent
+characterizations, but the starting point of the present entry will
+be the following definition:</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p">The Stirling number <math id="S0.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="S(n,k)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of ways to partition a set
+of <math id="S0.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> objects into <math id="S0.SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> groups.</p>
+</blockquote>
+<p class="ltx_p">For example, <math id="S0.SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="S(4,2)=7" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>7</mn></mrow></math> because there are seven ways to partition 4
+objects — call them a, b, c, d — into two groups, namely:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="(a)(bcd),\;(b)(acd),\;(c)(abd),\;(d)(abc),\;(ab)(cd),\;(ac)(bd),\;(ad)(bc)" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><mrow><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">Four additional characterizations will be discussed in this entry:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">a recurrence relation</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">a generating function related to the falling factorial</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">differential operators</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">a double-index generating function</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Each of these will be discussed below, and shown to be equivalent.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">A recurrence relation.</h2>
+
+<div id="S0.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">The Stirling numbers of the second kind can be characterized in terms of
+the following recurrence relation:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="S(n,k)=kS(n-1,k)+S(n-1,k-1),\qquad 1\leq k&lt;n," display="block"><mrow><mrow><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mn>1</mn><mo>≤</mo><mi>k</mi><mo>&lt;</mo><mi>n</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">subject to the
+following initial conditions:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="S(n,n)=S(n,1)=1." display="block"><mrow><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let us now show that the recurrence formula
+follows from the enumerative definition. Evidently, there is only one
+way to partition <math id="S0.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> objects into <math id="S0.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> group (everything is in that
+group), and only one way to partition <math id="S0.SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> objects into <math id="S0.SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> groups
+(every object is a group all by itself). Proceeding recursively, a
+division of <math id="S0.SS0.SSS0.Px2.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> objects <math id="S0.SS0.SSS0.Px2.p1.m6" class="ltx_Math" alttext="a_{1},\ldots,a_{n-1},a_{n}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math> into <math id="S0.SS0.SSS0.Px2.p1.m7" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> groups
+can be achieved by only one of two basic maneuvers:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">We could partition the first <math id="I2.i1.p1.m1" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> objects into <math id="I2.i1.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> groups, and
+then add object <math id="I2.i1.p1.m3" class="ltx_Math" alttext="a_{n}" display="inline"><msub><mi>a</mi><mi>n</mi></msub></math> into one of those groups. There are <math id="I2.i1.p1.m4" class="ltx_Math" alttext="kS(n-1,k)" display="inline"><mrow><mi>k</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> ways to do this.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">We could partition the first <math id="I2.i2.p1.m1" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> objects into <math id="I2.i2.p1.m2" class="ltx_Math" alttext="k-1" display="inline"><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></math> groups and
+then add object <math id="I2.i2.p1.m3" class="ltx_Math" alttext="a_{n}" display="inline"><msub><mi>a</mi><mi>n</mi></msub></math> as a new, 1 element group. This gives an
+additional
+<math id="I2.i2.p1.m4" class="ltx_Math" alttext="S(n-1,k-1)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> ways to create the desired partition.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">The recursive point of view, therefore explains the connection between
+the recurrence formula, and the original definition.</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p">Using the recurrence formula we can easily obtain a table of the
+initial Stirling numbers:</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p3" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="S0.SS0.SSS0.Px2.p4" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math id="S0.SS0.SSS0.Px2.p4.m1" class="ltx_Math" alttext="n\backslash k" display="inline"><mrow><mi>n</mi><mo>\</mo><mi>k</mi></mrow></math></th>
+<td class="ltx_td ltx_align_center">1</td>
+<td class="ltx_td ltx_align_center">2</td>
+<td class="ltx_td ltx_align_center">3</td>
+<td class="ltx_td ltx_align_center">4</td>
+<td class="ltx_td ltx_align_center">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">1</th>
+<td class="ltx_td ltx_align_center">1</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">2</th>
+<td class="ltx_td ltx_align_center">1</td>
+<td class="ltx_td ltx_align_center">1</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">3</th>
+<td class="ltx_td ltx_align_center">1</td>
+<td class="ltx_td ltx_align_center">3</td>
+<td class="ltx_td ltx_align_center">1</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">4</th>
+<td class="ltx_td ltx_align_center">1</td>
+<td class="ltx_td ltx_align_center">7</td>
+<td class="ltx_td ltx_align_center">6</td>
+<td class="ltx_td ltx_align_center">1</td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">5</th>
+<td class="ltx_td ltx_align_center">1</td>
+<td class="ltx_td ltx_align_center">15</td>
+<td class="ltx_td ltx_align_center">25</td>
+<td class="ltx_td ltx_align_center">10</td>
+<td class="ltx_td ltx_align_center">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Falling Factorials.</h2>
+
+<div id="S0.SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">Consider the vector space of polynomials in indeterminate <math id="S0.SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. The
+most obvious basis of this infinite-dimensional vector space is the
+sequence of monomial powers: <math id="S0.SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="x^{n},\quad n\in\mathbb{N}." display="inline"><mrow><mrow><mrow><msup><mi>x</mi><mi>n</mi></msup><mo rspace="12.5pt">,</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo>.</mo></mrow></math> However, the
+sequence of falling factorials:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="x^{\underline{n}}=x(x-1)(x-2)\ldots(x-n+1),\quad n\in\mathbb{N}" display="block"><mrow><mrow><msup><mi>x</mi><munder accentunder="true"><mi>n</mi><mo>¯</mo></munder></msup><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>x</mi><mo>-</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is also a basis, and hence can be
+used to generate the monomial basis. Indeed, the Stirling numbers of
+the second kind can be characterized as the coefficients involved
+in the corresponding change of basis matrix, i.e.</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="x^{n}=\sum_{k=1}^{n}S(n,k)x^{\underline{k}}." display="block"><mrow><mrow><msup><mi>x</mi><mi>n</mi></msup><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><munder accentunder="true"><mi>k</mi><mo>¯</mo></munder></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So, for example,</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="x^{4}=x+7x(x-1)+6x(x-1)(x-2)+x(x-1)(x-2)(x-3)." display="block"><mrow><mrow><msup><mi>x</mi><mn>4</mn></msup><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px3.p2" class="ltx_para">
+<p class="ltx_p">Arguing inductively, let us prove that this characterization follows
+from the recurrence relation. Evidently the formula is true for
+<math id="S0.SS0.SSS0.Px3.p2.m1" class="ltx_Math" alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>. Suppose then that the formula is true for a given <math id="S0.SS0.SSS0.Px3.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. We
+have</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="xx^{\underline{k}}=x^{\underline{k+1}}+kx^{\underline{k}}," display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><msup><mi>x</mi><munder accentunder="true"><mi>k</mi><mo>¯</mo></munder></msup></mrow><mo>=</mo><mrow><msup><mi>x</mi><munder accentunder="true"><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo>¯</mo></munder></msup><mo>+</mo><mrow><mi>k</mi><mo>⁢</mo><msup><mi>x</mi><munder accentunder="true"><mi>k</mi><mo>¯</mo></munder></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and hence using the recurrence relation we deduce that</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle x^{n+1}" display="inline"><msup><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=\sum_{k=1}^{n}S(n,k)\,x\,x^{\underline{k}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><msup><mi>x</mi><munder accentunder="true"><mi>k</mi><mo>¯</mo></munder></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle=\sum_{k=1}^{n}\left(kS(n,k)x^{\underline{k}}+S(n,k+1)\right)x^{%
+\underline{k+1}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mrow><mo>(</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><munder accentunder="true"><mi>k</mi><mo>¯</mo></munder></msup></mrow><mo>+</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><munder accentunder="true"><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo>¯</mo></munder></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle=\sum_{k=1}^{n+1}S(n,k)x^{\underline{k}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></munderover></mstyle><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><munder accentunder="true"><mi>k</mi><mo>¯</mo></munder></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px4" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Differential operators.</h2>
+
+<div id="S0.SS0.SSS0.Px4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSS0.Px4.p1.m1" class="ltx_Math" alttext="D_{x}" display="inline"><msub><mi>D</mi><mi>x</mi></msub></math> denote the ordinary derivative, applied to polynomials in
+indeterminate <math id="S0.SS0.SSS0.Px4.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, and let <math id="S0.SS0.SSS0.Px4.p1.m3" class="ltx_Math" alttext="T_{x}" display="inline"><msub><mi>T</mi><mi>x</mi></msub></math> denote the differential operator
+<math id="S0.SS0.SSS0.Px4.p1.m4" class="ltx_Math" alttext="xD_{x}" display="inline"><mrow><mi>x</mi><mo>⁢</mo><msub><mi>D</mi><mi>x</mi></msub></mrow></math>. We have the following characterization of the Stirling
+numbers of the second kind in terms of these two operators:</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="(T_{x})^{n}=\sum_{k=1}^{n}S(n,k)\,x^{k}(D_{x})^{k}," display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><msub><mi>T</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mi>k</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>D</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where an
+exponentiated differential operator denotes the operator composed with
+itself the indicated number of times. Let us show that this follows
+from the recurrence relation. The proof is once again, inductive.
+Suppose that the characterization is true for a given <math id="S0.SS0.SSS0.Px4.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. We have</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="T_{x}(x^{k}(D_{x})^{k})=kx^{k}(D_{x})^{k}+x^{k+1}(D_{x})^{k+1}," display="block"><mrow><mrow><mrow><msub><mi>T</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mi>k</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>D</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><msup><mi>x</mi><mi>k</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>D</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow><mo>+</mo><mrow><msup><mi>x</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>D</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and hence using the recurrence relation we deduce that</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle(T_{x})^{n+1}" display="inline"><msup><mrow><mo stretchy="false">(</mo><msub><mi>T</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle=xD_{x}\left(\sum_{k=1}^{n}S(n,k)\,x^{k}(D_{x})^{k}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><msub><mi>D</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mi>k</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>D</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m2" class="ltx_Math" alttext="\displaystyle=\sum_{k=1}^{n}S(n,k)\left(kx^{k}(D_{x})^{k}+x^{k+1}(D_{x})^{k+1}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><msup><mi>x</mi><mi>k</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>D</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow><mo>+</mo><mrow><msup><mi>x</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>D</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex16.m2" class="ltx_Math" alttext="\displaystyle=\sum_{k=1}^{n+1}S(n+1,k)\,x^{k}(D_{x})^{k}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></munderover></mstyle><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mi>k</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mi>k</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>D</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px5" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Double index generating function.</h2>
+
+<div id="S0.SS0.SSS0.Px5.p1" class="ltx_para">
+<p class="ltx_p">One can also characterize the Stirling numbers of the second kind in
+terms of the following generating function:</p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="e^{x(e^{t}-1)}=\sum_{n=1}^{\infty}\sum_{k=1}^{n}S(n,k)\,x^{k}\,\frac{t^{n}}{n!}." display="block"><mrow><mrow><msup><mi>e</mi><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>e</mi><mi>t</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>x</mi><mi>k</mi></msup></mpadded><mo>⁢</mo><mfrac><msup><mi>t</mi><mi>n</mi></msup><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let us now prove this. Note that the differential equation</p>
+<table id="S0.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\frac{d\xi}{dt}=\xi," display="block"><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>ξ</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mi>ξ</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">admits the general solution</p>
+<table id="S0.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex19.m1" class="ltx_Math" alttext="\xi=e^{t}x." display="block"><mrow><mrow><mi>ξ</mi><mo>=</mo><mrow><msup><mi>e</mi><mi>t</mi></msup><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It follows that for any polynomial <math id="S0.SS0.SSS0.Px5.p1.m1" class="ltx_Math" alttext="p(\xi)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow></math> we have</p>
+<table id="S0.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex20.m1" class="ltx_Math" alttext="\exp(tT_{\xi})[p(\xi)]\Big{|}_{\xi=x}=\sum_{n=0}^{\infty}\frac{t^{n}}{n!}(T_{%
+\xi})^{n}[p(\xi)]\Big{|}_{\xi=x}=p(e^{t}x)." display="block"><mrow><mrow><msub><mrow><mrow><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>⁢</mo><msub><mi>T</mi><mi>ξ</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow><mo fence="true" maxsize="160%" minsize="160%">|</mo></mrow><mrow><mi>ξ</mi><mo>=</mo><mi>x</mi></mrow></msub><mo>=</mo><msub><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mfrac><msup><mi>t</mi><mi>n</mi></msup><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>T</mi><mi>ξ</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow><mo fence="true" maxsize="160%" minsize="160%">|</mo></mrow><mrow><mi>ξ</mi><mo>=</mo><mi>x</mi></mrow></msub><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>e</mi><mi>t</mi></msup><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The proof is simple: just take <math id="S0.SS0.SSS0.Px5.p1.m2" class="ltx_Math" alttext="D_{t}" display="inline"><msub><mi>D</mi><mi>t</mi></msub></math> of both sides. To be more
+explicit,</p>
+<table id="S0.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex21.m1" class="ltx_Math" alttext="D_{t}\left[p(e^{t}x)\right]=p^{\prime}(e^{t}x)e^{t}x=T_{\xi}[p(\xi)]\Big{|}_{%
+\xi=xe^{t}}," display="block"><mrow><mrow><mrow><msub><mi>D</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo>[</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>e</mi><mi>t</mi></msup><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>]</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>p</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>e</mi><mi>t</mi></msup><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mi>t</mi></msup><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><msub><mrow><mrow><msub><mi>T</mi><mi>ξ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow><mo fence="true" maxsize="160%" minsize="160%">|</mo></mrow><mrow><mi>ξ</mi><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><msup><mi>e</mi><mi>t</mi></msup></mrow></mrow></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and that is exactly equal to <math id="S0.SS0.SSS0.Px5.p1.m3" class="ltx_Math" alttext="D_{t}" display="inline"><msub><mi>D</mi><mi>t</mi></msub></math> of the left-hand side. Since this
+relation holds for all polynomials, it also holds for all formal power
+series. In particular if we apply the above relation to <math id="S0.SS0.SSS0.Px5.p1.m4" class="ltx_Math" alttext="e^{\xi}" display="inline"><msup><mi>e</mi><mi>ξ</mi></msup></math>,
+use the result of the preceding section, and note that</p>
+<table id="S0.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex22.m1" class="ltx_Math" alttext="D_{\xi}[e^{\xi}]=e^{\xi}," display="block"><mrow><mrow><mrow><msub><mi>D</mi><mi>ξ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>e</mi><mi>ξ</mi></msup><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mi>ξ</mi></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we obtain</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex23" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex23.m1" class="ltx_Math" alttext="\displaystyle e^{xe^{t}}" display="inline"><msup><mi>e</mi><mrow><mi>x</mi><mo>⁢</mo><msup><mi>e</mi><mi>t</mi></msup></mrow></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex23.m2" class="ltx_Math" alttext="\displaystyle=\sum_{n=1}^{\infty}\frac{t^{n}}{n!}(T_{\xi})^{n}[e^{\xi}]\Big{|}%
+_{\xi=x}" display="inline"><mrow><mi></mi><mo>=</mo><msub><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><mfrac><msup><mi>t</mi><mi>n</mi></msup><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>T</mi><mi>ξ</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>e</mi><mi>ξ</mi></msup><mo stretchy="false">]</mo></mrow></mrow></mrow><mo fence="true" maxsize="160%" minsize="160%">|</mo></mrow><mrow><mi>ξ</mi><mo>=</mo><mi>x</mi></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex24" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex24.m2" class="ltx_Math" alttext="\displaystyle=\sum_{n=1}^{\infty}\sum_{k=1}^{n}S(n,k)\,\frac{t^{n}}{n!}\xi^{k}%
+(D_{\xi})^{k}[e^{\xi}]\Big{|}_{\xi=x}" display="inline"><mrow><mi></mi><mo>=</mo><msub><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>t</mi><mi>n</mi></msup><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>ξ</mi><mi>k</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>D</mi><mi>ξ</mi></msub><mo stretchy="false">)</mo></mrow><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>e</mi><mi>ξ</mi></msup><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow><mo fence="true" maxsize="160%" minsize="160%">|</mo></mrow><mrow><mi>ξ</mi><mo>=</mo><mi>x</mi></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex25" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex25.m2" class="ltx_Math" alttext="\displaystyle=e^{x}\sum_{n=1}^{\infty}\sum_{k=1}^{n}S(n,k)\,x^{k}\,\frac{t^{n}%
+}{n!}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>x</mi><mi>k</mi></msup></mpadded><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>t</mi><mi>n</mi></msup><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Dividing both sides by <math id="S0.SS0.SSS0.Px5.p1.m5" class="ltx_Math" alttext="e^{x}" display="inline"><msup><mi>e</mi><mi>x</mi></msup></math> we obtain the desired generating
+function. Q.E.D.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Stirling numbers of the second kind</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">StirlingNumbersOfTheSecondKind</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:33:32</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:33:32</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05A15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">StirlingNumbersOfTheFirstKind</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:37:39 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

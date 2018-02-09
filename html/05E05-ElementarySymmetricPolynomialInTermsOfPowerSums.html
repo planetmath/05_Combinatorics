@@ -1,0 +1,434 @@
+<!DOCTYPE html><html>
+<head>
+<title>elementary symmetric polynomial in terms of power sums</title>
+<!--Generated on Fri Feb  9 07:58:36 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">elementary symmetric polynomial in terms of power sums</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Elementary symmetric polynomials can be expressed as polynomials in sums of powers. For instance, one can use the binomial identity <math id="p1.m1" class="ltx_Math" alttext="(x+y)^{2}=x^{2}+y^{2}+2xy" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math> to re-express the elementary symmetric polynomial of power 2 in 2 variables:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="x_{1}x_{2}=\frac{1}{2}\left(\sum_{k=1}^{2}x_{i}\right)^{2}-\frac{1}{2}\sum_{k=%
+1}^{2}(x_{i})^{2}" display="block"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mn>2</mn></munderover><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mn>2</mn></munderover><msup><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Similarly, one has the following identities:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\sum_{1\leq i&lt;j\leq n}x_{i}x_{j}=\frac{1}{2}\left(\sum_{k=1}^{n}x_{k}\right)^{%
+2}-\frac{1}{2}\sum_{k=1}^{n}(x_{i})^{2}" display="block"><mrow><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>&lt;</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></munder><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\sum_{1\leq i&lt;j&lt;k\leq n}x_{i}x_{j}x_{k}=\frac{1}{6}\left(\sum_{k=1}^{n}x_{k}%
+\right)^{3}-\frac{1}{2}\left(\sum_{k=1}^{n}x_{k}^{2}\right)\left(\sum_{k=1}^{n%
+}x_{k}\right)+\frac{1}{3}\sum_{k=1}^{n}x_{k}^{3}" display="block"><mrow><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>&lt;</mo><mi>j</mi><mo>&lt;</mo><mi>k</mi><mo>≤</mo><mi>n</mi></mrow></munder><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>k</mi></msub></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow><mn>3</mn></msup></mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>x</mi><mi>k</mi><mn>2</mn></msubsup></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>x</mi><mi>k</mi><mn>3</mn></msubsup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that the algebraic form of these expressions does not depend on <math id="p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the number of variables; this is true in general. In fact, it is possible to take <math id="p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> to infinity and obtain an identity for infinite series under suitable circumstances, but that lies beyond the scope of the current entry.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">These formulae can be derived using the Newton-Girard recursion relations. Moreover, these recursions can be used to provide an inductive proof that any elementary symmetric polynomial can be expressed in terms of sums of powers. It might also be worth pointing out that Waring’s formula allows one to do the opposite — express sums of powers in terms of symmetric polynomials.
+</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Whilst these recursions may be used to derive these formulae, they can be tedious to use; for deriving a particular such relation, it may be easier to determine coefficients by substituting particular values for the variables and solving linear equations, as will be demonstrated with an example. Suppose that we want to express the elementary symmetric polynomial of power 5,</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\sum_{1\leq a&lt;b&lt;c&lt;d&lt;e\leq n}x_{a}x_{b}x_{c}x_{d}x_{e}" display="block"><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mn>1</mn><mo>≤</mo><mi>a</mi><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mi>c</mi><mo>&lt;</mo><mi>d</mi><mo>&lt;</mo><mi>e</mi><mo>≤</mo><mi>n</mi></mrow></munder><mrow><msub><mi>x</mi><mi>a</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>b</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>c</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>d</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>e</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in terms of power sums. Since this is of the fifth order, we shall only require sums of powers less than or equal to 5. Furthermore, we shall only have terms of the fifth order in the expression, so we only need to consider products of these five power sums whose total order is five. To determine these possible sums, we consider the possible partitions of the number 5:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="5,4+1,3+2,3+1+1,2+2+1,2+1+1+1,1+1+1+1+1" display="block"><mrow><mn>5</mn><mo>,</mo><mrow><mn>4</mn><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>3</mn><mo>+</mo><mn>2</mn></mrow><mo>,</mo><mrow><mn>3</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>2</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>2</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Corresponding to these partitions, we have the following ansatz:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\sum_{1\leq a&lt;b&lt;c&lt;d&lt;e\leq n}x_{a}x_{b}x_{c}x_{d}x_{e}" display="inline"><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mn>1</mn><mo>≤</mo><mi>a</mi><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mi>c</mi><mo>&lt;</mo><mi>d</mi><mo>&lt;</mo><mi>e</mi><mo>≤</mo><mi>n</mi></mrow></munder></mstyle><mrow><msub><mi>x</mi><mi>a</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>b</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>c</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>d</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>e</mi></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle c_{5}\sum_{k=1}^{n}x_{k}^{5}+c_{41}\left(\sum_{k=1}^{n}x_{k}^{4}%
+\right)\left(\sum_{k=1}^{n}x_{k}\right)+c_{32}\left(\sum_{k=1}^{n}x_{k}^{3}%
+\right)\left(\sum_{k=1}^{n}x_{k}^{2}\right)" display="inline"><mrow><mrow><msub><mi>c</mi><mn>5</mn></msub><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>5</mn></msubsup></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>41</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>4</mn></msubsup></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>32</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>3</mn></msubsup></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>2</mn></msubsup></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle+" display="inline"><mo>+</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle c_{311}\left(\sum_{k=1}^{n}x_{k}^{3}\right)\left(\sum_{k=1}^{n}x%
+_{k}\right)^{2}+c_{221}\left(\sum_{k=1}^{n}x_{k}^{2}\right)^{2}\left(\sum_{k=1%
+}^{n}x_{k}\right)" display="inline"><mrow><mrow><msub><mi>c</mi><mn>311</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>3</mn></msubsup></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>221</mn></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>2</mn></msubsup></mrow><mo>)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle+" display="inline"><mo>+</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle c_{2111}\left(\sum_{k=1}^{n}x_{k}^{2}\right)\left(\sum_{k=1}^{n}%
+x_{k}\right)^{3}+c_{11111}\left(\sum_{k=1}^{n}x_{k}\right)^{5}" display="inline"><mrow><mrow><msub><mi>c</mi><mn>2111</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>2</mn></msubsup></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow><mn>3</mn></msup></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>11111</mn></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow><mn>5</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Now it remains to determine the <math id="p4.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>’s. This can be done by substituting particular values for the <math id="p4.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>’s to obtain 7 equations for the 7 coefficients. By choosing these values strategically, the equations can be made relatively simple so as to reduce the work of solving them. One possibility is the following:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle 1.\quad n" display="inline"><mrow><mn>1</mn><mo>.</mo><mo mathvariant="italic" separator="true"> </mo><mi>n</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle 1\qquad x_{1}=1:" display="inline"><mrow><mrow><mrow><mn>1</mn><mo mathvariant="italic" separator="true">  </mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>=</mo><mn>1</mn></mrow><mo>:</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m3" class="ltx_Math" alttext="\displaystyle c_{5}+c_{41}+c_{32}+c_{311}+c_{221}+c_{2111}+c_{11111}" display="inline"><mrow><msub><mi>c</mi><mn>5</mn></msub><mo>+</mo><msub><mi>c</mi><mn>41</mn></msub><mo>+</mo><msub><mi>c</mi><mn>32</mn></msub><mo>+</mo><msub><mi>c</mi><mn>311</mn></msub><mo>+</mo><msub><mi>c</mi><mn>221</mn></msub><mo>+</mo><msub><mi>c</mi><mn>2111</mn></msub><mo>+</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\displaystyle 2.\quad n" display="inline"><mrow><mn>2</mn><mo>.</mo><mo mathvariant="italic" separator="true"> </mo><mi>n</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m3" class="ltx_Math" alttext="\displaystyle 2\qquad x_{1}=1\quad x_{2}=1:" display="inline"><mrow><mn>2</mn><mo mathvariant="italic" separator="true">  </mo><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn><mo>:</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m3" class="ltx_Math" alttext="\displaystyle 2c_{5}+4c_{41}+4c_{32}+8c_{311}+8c_{221}+16c_{2111}+32c_{11111}" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>5</mn></msub></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>c</mi><mn>41</mn></msub></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>c</mi><mn>32</mn></msub></mrow><mo>+</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>c</mi><mn>311</mn></msub></mrow><mo>+</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>c</mi><mn>221</mn></msub></mrow><mo>+</mo><mrow><mn>16</mn><mo>⁢</mo><msub><mi>c</mi><mn>2111</mn></msub></mrow><mo>+</mo><mrow><mn>32</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\displaystyle 3.\quad n" display="inline"><mrow><mn>3</mn><mo>.</mo><mo mathvariant="italic" separator="true"> </mo><mi>n</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m3" class="ltx_Math" alttext="\displaystyle 3\qquad x_{1}=1\quad x_{2}=1\quad x_{3}=1:" display="inline"><mrow><mn>3</mn><mo mathvariant="italic" separator="true">  </mo><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>3</mn></msub><mo>=</mo><mn>1</mn><mo>:</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m3" class="ltx_Math" alttext="\displaystyle 3c_{5}+9c_{41}+9c_{32}+27c_{311}+27c_{221}+81c_{2111}+243c_{11111}" display="inline"><mrow><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>5</mn></msub></mrow><mo>+</mo><mrow><mn>9</mn><mo>⁢</mo><msub><mi>c</mi><mn>41</mn></msub></mrow><mo>+</mo><mrow><mn>9</mn><mo>⁢</mo><msub><mi>c</mi><mn>32</mn></msub></mrow><mo>+</mo><mrow><mn>27</mn><mo>⁢</mo><msub><mi>c</mi><mn>311</mn></msub></mrow><mo>+</mo><mrow><mn>27</mn><mo>⁢</mo><msub><mi>c</mi><mn>221</mn></msub></mrow><mo>+</mo><mrow><mn>81</mn><mo>⁢</mo><msub><mi>c</mi><mn>2111</mn></msub></mrow><mo>+</mo><mrow><mn>243</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\displaystyle 4.\quad n" display="inline"><mrow><mn>4</mn><mo>.</mo><mo mathvariant="italic" separator="true"> </mo><mi>n</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex15.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m3" class="ltx_Math" alttext="\displaystyle 3\qquad x_{1}=1\quad x_{2}=1\quad x_{3}=-1:" display="inline"><mrow><mn>3</mn><mo mathvariant="italic" separator="true">  </mo><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>3</mn></msub><mo>=</mo><mo>-</mo><mn>1</mn><mo>:</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex16.m1" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex16.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex16.m3" class="ltx_Math" alttext="\displaystyle c_{5}+3c_{41}+3c_{32}+c_{311}+9c_{221}+3c_{2111}+c_{11111}" display="inline"><mrow><msub><mi>c</mi><mn>5</mn></msub><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>41</mn></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>32</mn></msub></mrow><mo>+</mo><msub><mi>c</mi><mn>311</mn></msub><mo>+</mo><mrow><mn>9</mn><mo>⁢</mo><msub><mi>c</mi><mn>221</mn></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>2111</mn></msub></mrow><mo>+</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex17.m1" class="ltx_Math" alttext="\displaystyle 5.\quad n" display="inline"><mrow><mn>5</mn><mo>.</mo><mo mathvariant="italic" separator="true"> </mo><mi>n</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex17.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex17.m3" class="ltx_Math" alttext="\displaystyle 3\qquad x_{1}=2\quad x_{2}=-1\quad x_{3}=-1:" display="inline"><mrow><mn>3</mn><mo mathvariant="italic" separator="true">  </mo><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mo>-</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>3</mn></msub><mo>=</mo><mo>-</mo><mn>1</mn><mo>:</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex18" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex18.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex18.m3" class="ltx_Math" alttext="\displaystyle 5c_{5}+6c_{32}" display="inline"><mrow><mrow><mn>5</mn><mo>⁢</mo><msub><mi>c</mi><mn>5</mn></msub></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><msub><mi>c</mi><mn>32</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex19" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex19.m1" class="ltx_Math" alttext="\displaystyle 6.\quad n" display="inline"><mrow><mn>6</mn><mo>.</mo><mo mathvariant="italic" separator="true"> </mo><mi>n</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex19.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex19.m3" class="ltx_Math" alttext="\displaystyle 4\qquad x_{1}=1\quad x_{2}=1\quad x_{3}=1\quad x_{4}=1:" display="inline"><mrow><mn>4</mn><mo mathvariant="italic" separator="true">  </mo><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>3</mn></msub><mo>=</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>4</mn></msub><mo>=</mo><mn>1</mn><mo>:</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex20.m1" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex20.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex20.m3" class="ltx_Math" alttext="\displaystyle 4c_{5}+16c_{41}+16c_{32}+64c_{311}+64c_{221}+256c_{2111}+1024c_{%
+11111}" display="inline"><mrow><mrow><mn>4</mn><mo>⁢</mo><msub><mi>c</mi><mn>5</mn></msub></mrow><mo>+</mo><mrow><mn>16</mn><mo>⁢</mo><msub><mi>c</mi><mn>41</mn></msub></mrow><mo>+</mo><mrow><mn>16</mn><mo>⁢</mo><msub><mi>c</mi><mn>32</mn></msub></mrow><mo>+</mo><mrow><mn>64</mn><mo>⁢</mo><msub><mi>c</mi><mn>311</mn></msub></mrow><mo>+</mo><mrow><mn>64</mn><mo>⁢</mo><msub><mi>c</mi><mn>221</mn></msub></mrow><mo>+</mo><mrow><mn>256</mn><mo>⁢</mo><msub><mi>c</mi><mn>2111</mn></msub></mrow><mo>+</mo><mrow><mn>1024</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex21" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex21.m1" class="ltx_Math" alttext="\displaystyle 7.\quad n" display="inline"><mrow><mn>7</mn><mo>.</mo><mo mathvariant="italic" separator="true"> </mo><mi>n</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex21.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex21.m3" class="ltx_Math" alttext="\displaystyle 5\qquad x_{1}=1\quad x_{2}=1\quad x_{3}=1\quad x_{4}=1\quad x_{5%
+}=1:" display="inline"><mrow><mn>5</mn><mo mathvariant="italic" separator="true">  </mo><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>3</mn></msub><mo>=</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>4</mn></msub><mo>=</mo><mn>1</mn><mo mathvariant="italic" separator="true"> </mo><msub><mi>x</mi><mn>5</mn></msub><mo>=</mo><mn>1</mn><mo>:</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex22" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex22.m1" class="ltx_Math" alttext="\displaystyle 1" display="inline"><mn>1</mn></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex22.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex22.m3" class="ltx_Math" alttext="\displaystyle 5c_{5}+25c_{41}+25c_{32}+125c_{311}+125c_{221}+625c_{2111}+3125c%
+_{11111}" display="inline"><mrow><mrow><mn>5</mn><mo>⁢</mo><msub><mi>c</mi><mn>5</mn></msub></mrow><mo>+</mo><mrow><mn>25</mn><mo>⁢</mo><msub><mi>c</mi><mn>41</mn></msub></mrow><mo>+</mo><mrow><mn>25</mn><mo>⁢</mo><msub><mi>c</mi><mn>32</mn></msub></mrow><mo>+</mo><mrow><mn>125</mn><mo>⁢</mo><msub><mi>c</mi><mn>311</mn></msub></mrow><mo>+</mo><mrow><mn>125</mn><mo>⁢</mo><msub><mi>c</mi><mn>221</mn></msub></mrow><mo>+</mo><mrow><mn>625</mn><mo>⁢</mo><msub><mi>c</mi><mn>2111</mn></msub></mrow><mo>+</mo><mrow><mn>3125</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">By combining equations 1,2,3,6, the following sparse system may be derived:</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex24" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex24.m1" class="ltx_Math" alttext="\displaystyle c_{5}" display="inline"><msub><mi>c</mi><mn>5</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex24.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex24.m3" class="ltx_Math" alttext="\displaystyle 24c_{11111}" display="inline"><mrow><mn>24</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex25" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex25.m1" class="ltx_Math" alttext="\displaystyle c_{41}+c_{32}" display="inline"><mrow><msub><mi>c</mi><mn>41</mn></msub><mo>+</mo><msub><mi>c</mi><mn>32</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex25.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex25.m3" class="ltx_Math" alttext="\displaystyle-50c_{11111}" display="inline"><mrow><mo>-</mo><mrow><mn>50</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex26" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex26.m1" class="ltx_Math" alttext="\displaystyle c_{311}+c_{221}" display="inline"><mrow><msub><mi>c</mi><mn>311</mn></msub><mo>+</mo><msub><mi>c</mi><mn>221</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex26.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex26.m3" class="ltx_Math" alttext="\displaystyle 35c_{11111}" display="inline"><mrow><mn>35</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex27" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex27.m1" class="ltx_Math" alttext="\displaystyle c_{2111}" display="inline"><msub><mi>c</mi><mn>2111</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex27.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex27.m3" class="ltx_Math" alttext="\displaystyle-10c_{11111}" display="inline"><mrow><mo>-</mo><mrow><mn>10</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Likewise, subtracting equation 1 from equation 4 yields</p>
+<table id="S0.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex29.m1" class="ltx_Math" alttext="c_{41}+c_{32}+4c_{221}+c_{2111}=0" display="block"><mrow><mrow><msub><mi>c</mi><mn>41</mn></msub><mo>+</mo><msub><mi>c</mi><mn>32</mn></msub><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>c</mi><mn>221</mn></msub></mrow><mo>+</mo><msub><mi>c</mi><mn>2111</mn></msub></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Combining these equations with the already sparse eqnation 5 yeilds the following equations which express everyting else in terms of <math id="p5.m1" class="ltx_Math" alttext="c_{11111}" display="inline"><msub><mi>c</mi><mn>11111</mn></msub></math>:</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex30" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex30.m1" class="ltx_Math" alttext="\displaystyle c_{5}" display="inline"><msub><mi>c</mi><mn>5</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex30.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex30.m3" class="ltx_Math" alttext="\displaystyle 24c_{11111}" display="inline"><mrow><mn>24</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex31" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex31.m1" class="ltx_Math" alttext="\displaystyle c_{41}" display="inline"><msub><mi>c</mi><mn>41</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex31.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex31.m3" class="ltx_Math" alttext="\displaystyle-70c_{11111}" display="inline"><mrow><mo>-</mo><mrow><mn>70</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex32" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex32.m1" class="ltx_Math" alttext="\displaystyle c_{32}" display="inline"><msub><mi>c</mi><mn>32</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex32.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex32.m3" class="ltx_Math" alttext="\displaystyle 20c_{11111}" display="inline"><mrow><mn>20</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex33" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex33.m1" class="ltx_Math" alttext="\displaystyle c_{311}" display="inline"><msub><mi>c</mi><mn>311</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex33.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex33.m3" class="ltx_Math" alttext="\displaystyle 5c_{11111}" display="inline"><mrow><mn>5</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex34" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex34.m1" class="ltx_Math" alttext="\displaystyle c_{221}" display="inline"><msub><mi>c</mi><mn>221</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex34.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex34.m3" class="ltx_Math" alttext="\displaystyle 30c_{11111}" display="inline"><mrow><mn>30</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex35" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex35.m1" class="ltx_Math" alttext="\displaystyle c_{2111}" display="inline"><msub><mi>c</mi><mn>2111</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex35.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex35.m3" class="ltx_Math" alttext="\displaystyle-10c_{11111}" display="inline"><mrow><mo>-</mo><mrow><mn>10</mn><mo>⁢</mo><msub><mi>c</mi><mn>11111</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Substituting this into equation 7, we learn that <math id="p5.m2" class="ltx_Math" alttext="c_{11111}=1/120" display="inline"><mrow><msub><mi>c</mi><mn>11111</mn></msub><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mn>120</mn></mrow></mrow></math>, from which the values of the remaining coefficients follow immediately:</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex37" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex37.m1" class="ltx_Math" alttext="\displaystyle c_{5}" display="inline"><msub><mi>c</mi><mn>5</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex37.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex37.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{5}" display="inline"><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>5</mn></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex38" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex38.m1" class="ltx_Math" alttext="\displaystyle c_{41}" display="inline"><msub><mi>c</mi><mn>41</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex38.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex38.m3" class="ltx_Math" alttext="\displaystyle-\frac{7}{12}" display="inline"><mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>7</mn><mn>12</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex39" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex39.m1" class="ltx_Math" alttext="\displaystyle c_{32}" display="inline"><msub><mi>c</mi><mn>32</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex39.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex39.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{6}" display="inline"><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>6</mn></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex40" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex40.m1" class="ltx_Math" alttext="\displaystyle c_{311}" display="inline"><msub><mi>c</mi><mn>311</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex40.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex40.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{24}" display="inline"><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>24</mn></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex41" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex41.m1" class="ltx_Math" alttext="\displaystyle c_{221}" display="inline"><msub><mi>c</mi><mn>221</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex41.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex41.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{4}" display="inline"><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex42" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex42.m1" class="ltx_Math" alttext="\displaystyle c_{2111}" display="inline"><msub><mi>c</mi><mn>2111</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex42.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex42.m3" class="ltx_Math" alttext="\displaystyle-\frac{1}{12}" display="inline"><mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>12</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence the desired formula is the following:</p>
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex46" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex44.m1" class="ltx_Math" alttext="\displaystyle\sum_{1\leq a&lt;b&lt;c&lt;d&lt;e\leq n}x_{a}x_{b}x_{c}x_{d}x_{e}" display="inline"><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mn>1</mn><mo>≤</mo><mi>a</mi><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mi>c</mi><mo>&lt;</mo><mi>d</mi><mo>&lt;</mo><mi>e</mi><mo>≤</mo><mi>n</mi></mrow></munder></mstyle><mrow><msub><mi>x</mi><mi>a</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>b</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>c</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>d</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>e</mi></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex44.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex44.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{5}\sum_{k=1}^{n}x_{k}^{5}-\frac{7}{12}\left(\sum_{k=1}^{%
+n}x_{k}^{4}\right)\left(\sum_{k=1}^{n}x_{k}\right)+\frac{1}{6}\left(\sum_{k=1}%
+^{n}x_{k}^{3}\right)\left(\sum_{k=1}^{n}x_{k}^{2}\right)" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>5</mn></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>5</mn></msubsup></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>7</mn><mn>12</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>4</mn></msubsup></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>6</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>3</mn></msubsup></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>2</mn></msubsup></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex45.m2" class="ltx_Math" alttext="\displaystyle+" display="inline"><mo>+</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex45.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{24}\left(\sum_{k=1}^{n}x_{k}^{3}\right)\left(\sum_{k=1}^%
+{n}x_{k}\right)^{2}+\frac{1}{4}\left(\sum_{k=1}^{n}x_{k}^{2}\right)^{2}\left(%
+\sum_{k=1}^{n}x_{k}\right)" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>24</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>3</mn></msubsup></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>2</mn></msubsup></mrow><mo>)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex46.m2" class="ltx_Math" alttext="\displaystyle-" display="inline"><mo>-</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex46.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{12}\left(\sum_{k=1}^{n}x_{k}^{2}\right)\left(\sum_{k=1}^%
+{n}x_{k}\right)^{3}+\frac{1}{120}\left(\sum_{k=1}^{n}x_{k}\right)^{5}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>12</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>k</mi><mn>2</mn></msubsup></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow><mn>3</mn></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>120</mn></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>)</mo></mrow><mn>5</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">elementary symmetric polynomial in terms of power sums</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ElementarySymmetricPolynomialInTermsOfPowerSums</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:57:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:57:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Result</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05E05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">NewtonGirardFormulaSymmetricPolynomials</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 07:58:36 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,718 @@
+<!DOCTYPE html><html>
+<head>
+<title>colorings of plane graphs</title>
+<!--Generated on Thu Feb  8 20:42:20 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">colorings of plane graphs</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Colorings of plane graphs</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic" style="font-size:90%;">This is the first draft of this write-up. Corrections of its contents and suggestions are welcomed.</span></p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">A planar graph
+is a graph that can be embedded on a sphere or plane.
+A plane graph
+is such a graph together with a choice how to embed it; its <span class="ltx_text ltx_font_bold">faces</span>
+are the resulting regions of surface separated by edges.</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">A (face, edge, vertex etc.) <span class="ltx_text ltx_font_bold">coloring</span> is just a mapping from the relevant
+set of items to a small set of other things traditionally given the names of
+colors.</p>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">In graph theory however there is usually an extra condition a coloring has to
+satisfy to be valid. Unless specified otherwise, the condition is that
+adjacent items must be given distinct colors — two edges meeting at a vertex
+must have different colors, two faces with a common border must too.</p>
+</div>
+<section id="Sx1.SSx1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Face colorings</h3>
+
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Sx1.SSx1.p1" class="ltx_para">
+<p class="ltx_p">Because of the history of the subject, being couched in terms of coloring
+maps, faces have often been called “countries” and the plane graph a “map”.</p>
+</div>
+<div id="Sx1.SSx1.p2" class="ltx_para">
+<p class="ltx_p">A word on “border” in the context of face coloring. For countries to be
+considered adjacent it is not enough to just meet at one point. The reason is
+that that would make coloring problems uninteresting: divide a region into as
+many countries as you want, arranged like a pie chart, and any number of colors
+would be required if touching at a point did qualify.</p>
+</div>
+<div id="Sx1.SSx1.p3" class="ltx_para">
+<p class="ltx_p">So in a map which has a portion shaped like <math id="Sx1.SSx1.p3.m1" class="ltx_Math" alttext="\times" display="inline"><mo>×</mo></math>, both the North and
+South countries border both the East and West countries, but South does
+not border North so they’re allowed to have the same color, and West is
+likewise allowed to have the same color as East. Now consider a small border
+adjustment from <math id="Sx1.SSx1.p3.m2" class="ltx_Math" alttext="\times" display="inline"><mo>×</mo></math> to <span class="ltx_text" style="position:relative; bottom:1.4pt;"><math id="Sx1.SSx1.p3.m3" class="ltx_Math" alttext="\scriptstyle&gt;\!-\!&lt;" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">&gt;</mo><mo>⁣</mo><mo mathsize="70%" rspace="0.8pt" stretchy="false">-</mo><mo>⁣</mo><mo mathsize="70%" stretchy="false">&lt;</mo></mrow></math></span> where we’ve added one
+extra constraint: now North and South must have different colors. If it was
+possible to color the old map with a certain number of colors we can’t be
+certain we can still color the new map. Conversely however, if we can color
+the new map we can certainly color the old map (using the same color
+assignment even).</p>
+</div>
+<div id="Sx1.SSx1.p4" class="ltx_para">
+<p class="ltx_p">If we are given any bridgeless planar graph <math id="Sx1.SSx1.p4.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> (not necessarily trivalent),
+we can give any vertex with valency 4 this treatment, splitting it into two
+new vertices of valency 3 and a short new stretch of border, adding a
+constraint on coloring. Vertices with valency <math id="Sx1.SSx1.p4.m2" class="ltx_Math" alttext="v&gt;4" display="inline"><mrow><mi>v</mi><mo>&gt;</mo><mn>4</mn></mrow></math> can be given the same
+treatment in <math id="Sx1.SSx1.p4.m3" class="ltx_Math" alttext="v-3" display="inline"><mrow><mi>v</mi><mo>-</mo><mn>3</mn></mrow></math> steps, creating <math id="Sx1.SSx1.p4.m4" class="ltx_Math" alttext="v-2" display="inline"><mrow><mi>v</mi><mo>-</mo><mn>2</mn></mrow></math> vertices of valency 3 and <math id="Sx1.SSx1.p4.m5" class="ltx_Math" alttext="v-3" display="inline"><mrow><mi>v</mi><mo>-</mo><mn>3</mn></mrow></math> new
+pieces of border which only makes the problem harder: if we can still color
+this, we can also color the original.</p>
+</div>
+<div id="Sx1.SSx1.p5" class="ltx_para">
+<p class="ltx_p">2-valent vertices are simply funny features along an ongoing border
+between two countries, and 0-valent vertices funny features within the
+landscape. Removing them does not alter the coloring exercise. And finally
+1-valent vertices create a bridge; we do not want them nor do we want any
+other bridges, because at such an edge a country meets <span class="ltx_text ltx_font_italic">itself</span> on the
+other side of the border, making it impossible to have a color change there.
+This is why face coloring theorems are stated for bridge-free graphs only.</p>
+</div>
+<div id="Sx1.SSx1.p6" class="ltx_para">
+<p class="ltx_p">By now we have only vertices left of valency 3 so our new graph <math id="Sx1.SSx1.p6.m1" class="ltx_Math" alttext="G^{\sf Y}" display="inline"><msup><mi>G</mi><mi>𝖸</mi></msup></math> is
+trivalent (cubic). And if it can be <math id="Sx1.SSx1.p6.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-colored (for any <math id="Sx1.SSx1.p6.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>), then so can <math id="Sx1.SSx1.p6.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>.
+This completes the proof of</p>
+</div>
+<div id="Sx1.SSx1.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 0<math id="Sx1.SSx1.p7.m1" class="ltx_Math" alttext="\quad" display="inline"><mi></mi></math></span> Any bridge-free planar graph can be 4-colored <math id="Sx1.SSx1.p7.m2" class="ltx_Math" alttext="\Longleftrightarrow" display="inline"><mo>⟺</mo></math>
+any bridge-free planar trivalent graph can be 4-colored.</p>
+</div>
+<div id="Sx1.SSx1.p8" class="ltx_para">
+<p class="ltx_p">as the <math id="Sx1.SSx1.p8.m1" class="ltx_Math" alttext="\Longleftarrow" display="inline"><mo>⟸</mo></math> direction was argued above, and the <math id="Sx1.SSx1.p8.m2" class="ltx_Math" alttext="\Longrightarrow" display="inline"><mo>⟹</mo></math> direction is
+immediate (<span class="ltx_text ltx_font_italic">any</span> includes all the trivalent ones).  <math id="Sx1.SSx1.p8.m3" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="Sx1.SSx1.p9" class="ltx_para">
+<p class="ltx_p">Note the lemma does not state either side of the “iff” is true, merely
+that they are equivalent. The left-hand side is known as the <span class="ltx_text ltx_font_bold">four-color
+theorem</span>; having the right-hand side equivalent to it gives statements on
+trivalent graphs a more general importance.</p>
+</div>
+<div id="Sx1.SSx1.p10" class="ltx_para">
+<p class="ltx_p">One last point: we will consider the graph drawn on a sphere. Or, what is the
+same thing: if we draw it on a plane, we will also consider the infinite outside
+area to be a face. If you were thinking of your graph as a map subdividing a
+finite continent into countries just call the outside Oceania and color it
+blue.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Sx1.SSx1.p11" class="ltx_para">
+<p class="ltx_p">This convention too only makes the coloring harder: considering the outside to
+be a colorless sea allows countries with a shoreline to be of all four colors,
+while coloring Oceania (say) blue only allows those countries three different
+colors (just like any other set of countries with a common neighbour). Again,
+if we can color this, we can color plane maps of any other convention.</p>
+</div>
+</section>
+<section id="Sx1.SSx2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Edge colorings</h3>
+
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Sx1.SSx2.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">Tait coloring</span> of a trivalent graph is a coloring of its edges with
+only three colors, such that at each vertex the colors of the three edges
+there are different. After Peter G. Tait (1831–1901), Scottish physicist (<span class="ltx_text ltx_font_typewriter">http://www-history.mcs.st-andrews.ac.uk/Mathematicians/Tait.html</span>bio at St Andrews), who in 1880 proved the following</p>
+</div>
+<div id="Sx1.SSx2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 1 (Tait)<math id="Sx1.SSx2.p2.m1" class="ltx_Math" alttext="\quad" display="inline"><mi></mi></math></span> A bridge-free trivalent plane graph can be
+face-colored with 4 colors if and only if it can be edge-colored with 3
+colors.</p>
+</div>
+<div id="Sx1.SSx2.p3" class="ltx_para">
+<p class="ltx_p">We will not give our four colors such poetic names as red or green, instead
+they will be given two-bit labels (0,0) and (0,1) and (1,0) and (1,1), formally
+vectors in <math id="Sx1.SSx2.p3.m1" class="ltx_Math" alttext="{\mathchoice{{\sf I\kern-1.2ptF}}{{\sf I\kern-1.2ptF}}{{\scriptstyle\sf I\kern%
+-1.2ptF}}{{\scriptscriptstyle\sf I\kern-1.2ptF}}}_{2}^{2}" display="inline"><msubsup><mi>𝖨𝖥</mi><mn>2</mn><mn>2</mn></msubsup></math>, the vector space of dimension 2 over the finite field
+of order 2.</p>
+</div>
+<div id="Sx1.SSx2.p4" class="ltx_para">
+<p class="ltx_p">Edge colors used will be the <span class="ltx_text ltx_font_bold">difference</span> between the face colors on
+either side of the edge. Because <math id="Sx1.SSx2.p4.m1" class="ltx_Math" alttext="{\mathchoice{{\sf I\kern-1.2ptF}}{{\sf I\kern-1.2ptF}}{{\scriptstyle\sf I\kern%
+-1.2ptF}}{{\scriptscriptstyle\sf I\kern-1.2ptF}}}_{2}^{2}" display="inline"><msubsup><mi>𝖨𝖥</mi><mn>2</mn><mn>2</mn></msubsup></math> has characteristic 2, differences
+are the same thing as sums (so it doesn’t matter which we subtract from which).
+They are carried out (mod 2) on the individual coördinates (in terms of bit
+patterns: addition without internal carry, that is, the <span class="ltx_text ltx_font_smallcaps">xor</span> operation).</p>
+</div>
+<div id="Sx1.SSx2.p5" class="ltx_para">
+<p class="ltx_p">Note that the assignment of labels to <span class="ltx_text ltx_font_italic">face</span> colors is quite
+arbitrary (e.g. <math id="Sx1.SSx2.p5.m1" class="ltx_Math" alttext="(0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> has no special significance) but the
+assignment to <span class="ltx_text ltx_font_italic">edge</span> colors is less arbitrary: here <math id="Sx1.SSx2.p5.m2" class="ltx_Math" alttext="{\bf 0}=(0,0)" display="inline"><mrow><mn>𝟎</mn><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> really
+means something. It means a border between faces of the same color, exactly
+the thing that shouldn’t happen. You could say face colors are
+“position vectors” (where <math id="Sx1.SSx2.p5.m3" class="ltx_Math" alttext="(0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> is an arbitrary point) while
+edge colors are “free vectors”, differences between position vectors.</p>
+</div>
+<div id="Sx1.SSx2.p6" class="ltx_para">
+<p class="ltx_p">Proof of <math id="Sx1.SSx2.p6.m1" class="ltx_Math" alttext="\Longrightarrow" display="inline"><mo>⟹</mo></math>: let <math id="Sx1.SSx2.p6.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> and <math id="Sx1.SSx2.p6.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> be the sets of faces and edges,
+let <math id="Sx1.SSx2.p6.m4" class="ltx_Math" alttext="f:F\to{\mathchoice{{\sf I\kern-1.2ptF}}{{\sf I\kern-1.2ptF}}{{\scriptstyle\sf I%
+\kern-1.2ptF}}{{\scriptscriptstyle\sf I\kern-1.2ptF}}}_{2}^{2}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>F</mi><mo>→</mo><msubsup><mi>𝖨𝖥</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow></math> be a valid face-4-coloring, and
+<math id="Sx1.SSx2.p6.m5" class="ltx_Math" alttext="g:E\to{\mathchoice{{\sf I\kern-1.2ptF}}{{\sf I\kern-1.2ptF}}{{\scriptstyle\sf I%
+\kern-1.2ptF}}{{\scriptscriptstyle\sf I\kern-1.2ptF}}}_{2}^{2}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><msubsup><mi>𝖨𝖥</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow></math> the edge coloring we are trying to construct from <math id="Sx1.SSx2.p6.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.
+Let <math id="Sx1.SSx2.p6.m7" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> be any edge, and <math id="Sx1.SSx2.p6.m8" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> and <math id="Sx1.SSx2.p6.m9" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> the faces it separates. Now
+<math id="Sx1.SSx2.p6.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> being valid means <math id="Sx1.SSx2.p6.m11" class="ltx_Math" alttext="f(\alpha)\neq f(\beta)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> so <math id="Sx1.SSx2.p6.m12" class="ltx_Math" alttext="g(e)=f(\alpha)-f(\beta)\neq{\bf 0}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≠</mo><mn>𝟎</mn></mrow></math>. This means <math id="Sx1.SSx2.p6.m13" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> really is an edge-3-coloring
+<math id="Sx1.SSx2.p6.m14" class="ltx_Math" alttext="g:E\to{\mathchoice{{\sf I\kern-1.2ptF}}{{\sf I\kern-1.2ptF}}{{\scriptstyle\sf I%
+\kern-1.2ptF}}{{\scriptscriptstyle\sf I\kern-1.2ptF}}}_{2}^{2}\setminus\{{\bf 0}\}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mrow><msubsup><mi>𝖨𝖥</mi><mn>2</mn><mn>2</mn></msubsup><mo>∖</mo><mrow><mo stretchy="false">{</mo><mn>𝟎</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></mrow></math>.
+</p>
+</div>
+<div id="Sx1.SSx2.p7" class="ltx_para">
+<p class="ltx_p">It is also easy to see <math id="Sx1.SSx2.p7.m1" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is a valid coloring: let <math id="Sx1.SSx2.p7.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> and <math id="Sx1.SSx2.p7.m3" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> be any two
+edges meeting at vertex <span class="ltx_text ltx_font_smallcaps">p</span> say, and let <math id="Sx1.SSx2.p7.m4" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>, <math id="Sx1.SSx2.p7.m5" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> and <math id="Sx1.SSx2.p7.m6" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math>
+be the three faces found around <span class="ltx_text ltx_font_smallcaps">p</span> such that <math id="Sx1.SSx2.p7.m7" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> separates <math id="Sx1.SSx2.p7.m8" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>
+and <math id="Sx1.SSx2.p7.m9" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math>, and <math id="Sx1.SSx2.p7.m10" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> separates <math id="Sx1.SSx2.p7.m11" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> and <math id="Sx1.SSx2.p7.m12" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math>. By <math id="Sx1.SSx2.p7.m13" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> being valid we
+have <math id="Sx1.SSx2.p7.m14" class="ltx_Math" alttext="f(\beta)\neq f(\gamma)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> from which
+<math id="Sx1.SSx2.p7.m15" class="ltx_Math" alttext="g(e)=f(\beta)-f(\alpha)\neq f(\gamma)-f(\alpha)=g(d)" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≠</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.  <math id="Sx1.SSx2.p7.m16" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="Sx1.SSx2.p8" class="ltx_para">
+<p class="ltx_p">Note in passing that the three edge colors around <span class="ltx_text ltx_font_smallcaps">p</span> all being different
+(and nonzero) means they must be (0,1), (1,0), (1,1) in some order. That means
+they sum to <math id="Sx1.SSx2.p8.m1" class="ltx_Math" alttext="{\bf 0}" display="inline"><mn>𝟎</mn></math> in a valid edge-3-coloring, a result we will use.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Sx1.SSx2.p9" class="ltx_para">
+<p class="ltx_p">To construct <math id="Sx1.SSx2.p9.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> from <math id="Sx1.SSx2.p9.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> you might pick a color, give it to the country
+you’re in, and travel the world. At each border, add its edge color to the
+previous face color and assign that to the new country. I called edge colors
+differences rather than sums for that reason: if a journey <math id="Sx1.SSx2.p9.m3" class="ltx_Math" alttext="{\mit\Gamma}" display="inline"><mi mathvariant="normal">Γ</mi></math>
+visits faces <math id="Sx1.SSx2.p9.m4" class="ltx_Math" alttext="\alpha\beta\gamma\dots\psi\omega" display="inline"><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi><mo>⁢</mo><mi>γ</mi><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mi>ω</mi></mrow></math>, and the face colors everywhere
+have to be such that the edges crossed have colors <math id="Sx1.SSx2.p9.m5" class="ltx_Math" alttext="f(\beta)-f(\alpha)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+<math id="Sx1.SSx2.p9.m6" class="ltx_Math" alttext="f(\gamma)-f(\beta)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, … <math id="Sx1.SSx2.p9.m7" class="ltx_Math" alttext="f(\omega)-f(\psi)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ψ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> then the color
+<math id="Sx1.SSx2.p9.m8" class="ltx_Math" alttext="f(\omega)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> reached should be <math id="Sx1.SSx2.p9.m9" class="ltx_Math" alttext="f(\alpha)+\sum" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mo largeop="true" symmetric="true">∑</mo></mrow></math> colors of edges crossed.</p>
+</div>
+<div id="Sx1.SSx2.p10" class="ltx_para">
+<p class="ltx_p">So we construct <math id="Sx1.SSx2.p10.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> by “integrating” <math id="Sx1.SSx2.p10.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> (and indeed, “plus a constant”,
+the arbitrary color of the first country). If we <span class="ltx_text ltx_font_italic">can</span> do that without
+contradiction between all possible journeys, this “potential” <math id="Sx1.SSx2.p10.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> will
+automatically have <math id="Sx1.SSx2.p10.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> as its “gradient” as it should. Remains to prove
+the “integral” is independent of path taken, in other words that circular
+paths “integrate” to zero.</p>
+</div>
+<div id="Sx1.SSx2.p11" class="ltx_para">
+<p class="ltx_p">Thus far we haven’t used the fact that we’re in a sphere or plane!
+Of course, the use of “faces” at all means we have an embedding of a graph
+in some surface; the fact we didn’t use yet is that the surface has genus 0.
+Indeed, the forward half of Tait’s theorem (valid <math id="Sx1.SSx2.p11.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> implies valid <math id="Sx1.SSx2.p11.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>)
+is true in surfaces of any genus. For the reverse half (valid <math id="Sx1.SSx2.p11.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> implies
+valid <math id="Sx1.SSx2.p11.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>) we need to use the topological properties of the plane or sphere.</p>
+</div>
+<div id="Sx1.SSx2.p12" class="ltx_para">
+<p class="ltx_p">There are various ways of doing that. One wonderfully simple proof found in
+Wilson <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx5" title="" class="ltx_ref">Wil02</a>]</cite>, adapted here to use the <math id="Sx1.SSx2.p12.m1" class="ltx_Math" alttext="{\mathchoice{{\sf I\kern-1.2ptF}}{{\sf I\kern-1.2ptF}}{{\scriptstyle\sf I\kern%
+-1.2ptF}}{{\scriptscriptstyle\sf I\kern-1.2ptF}}}_{2}^{2}" display="inline"><msubsup><mi>𝖨𝖥</mi><mn>2</mn><mn>2</mn></msubsup></math> notation, relies on
+the graph being embedded in a plane. For a graph embedded in a sphere that
+entails choosing a country and puncturing the sphere in the interior of
+that country; it corresponds to the choice of giving that country the face
+color (0,0).</p>
+</div>
+<div id="Sx1.SSx2.p13" class="ltx_para">
+<p class="ltx_p">Proof of <math id="Sx1.SSx2.p13.m1" class="ltx_Math" alttext="\Longleftarrow" display="inline"><mo>⟸</mo></math>: the subgraph <math id="Sx1.SSx2.p13.m2" class="ltx_Math" alttext="G^{\prime}" display="inline"><msup><mi>G</mi><mo>′</mo></msup></math> formed by edges of the two colors (1,any)
+is regular 2-valent. So is the subgraph <math id="Sx1.SSx2.p13.m3" class="ltx_Math" alttext="G^{\prime\prime}" display="inline"><msup><mi>G</mi><mo>′′</mo></msup></math> formed by edges of the two
+colors (any,1). Such graphs consist of disjoint cycles. In a plane, such
+cycles have a well-defined interior and exterior. Every face <math id="Sx1.SSx2.p13.m4" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> has a
+number <math id="Sx1.SSx2.p13.m5" class="ltx_Math" alttext="g^{\prime}" display="inline"><msup><mi>g</mi><mo>′</mo></msup></math> counting the number of (nested) cycles of <math id="Sx1.SSx2.p13.m6" class="ltx_Math" alttext="G^{\prime}" display="inline"><msup><mi>G</mi><mo>′</mo></msup></math> it is inside, and
+similarly a number <math id="Sx1.SSx2.p13.m7" class="ltx_Math" alttext="g^{\prime\prime}" display="inline"><msup><mi>g</mi><mo>′′</mo></msup></math> with respect to <math id="Sx1.SSx2.p13.m8" class="ltx_Math" alttext="G^{\prime\prime}" display="inline"><msup><mi>G</mi><mo>′′</mo></msup></math>.</p>
+</div>
+<div id="Sx1.SSx2.p14" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx1.SSx2.p14.m1" class="ltx_Math" alttext="r^{\prime}" display="inline"><msup><mi>r</mi><mo>′</mo></msup></math> and <math id="Sx1.SSx2.p14.m2" class="ltx_Math" alttext="r^{\prime\prime}" display="inline"><msup><mi>r</mi><mo>′′</mo></msup></math> be the residues of <math id="Sx1.SSx2.p14.m3" class="ltx_Math" alttext="g^{\prime}" display="inline"><msup><mi>g</mi><mo>′</mo></msup></math> and <math id="Sx1.SSx2.p14.m4" class="ltx_Math" alttext="g^{\prime\prime}" display="inline"><msup><mi>g</mi><mo>′′</mo></msup></math> (mod 2). Give the face
+the color <math id="Sx1.SSx2.p14.m5" class="ltx_Math" alttext="(r^{\prime},r^{\prime\prime})" display="inline"><mrow><mo stretchy="false">(</mo><msup><mi>r</mi><mo>′</mo></msup><mo>,</mo><msup><mi>r</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></math>. This is clearly a face-4-coloring. And it is valid:
+to reach any neighbouring face <math id="Sx1.SSx2.p14.m6" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> we cross an edge with color <math id="Sx1.SSx2.p14.m7" class="ltx_Math" alttext="(e^{\prime},e^{\prime\prime})" display="inline"><mrow><mo stretchy="false">(</mo><msup><mi>e</mi><mo>′</mo></msup><mo>,</mo><msup><mi>e</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></math>
+where <math id="Sx1.SSx2.p14.m8" class="ltx_Math" alttext="e^{\prime}=1" display="inline"><mrow><msup><mi>e</mi><mo>′</mo></msup><mo>=</mo><mn>1</mn></mrow></math> iff <math id="Sx1.SSx2.p14.m9" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> is inside a number of <math id="Sx1.SSx2.p14.m10" class="ltx_Math" alttext="G^{\prime}" display="inline"><msup><mi>G</mi><mo>′</mo></msup></math> cycles that differs by
+1 from <math id="Sx1.SSx2.p14.m11" class="ltx_Math" alttext="g^{\prime}" display="inline"><msup><mi>g</mi><mo>′</mo></msup></math>, likewise <math id="Sx1.SSx2.p14.m12" class="ltx_Math" alttext="e^{\prime\prime}=1" display="inline"><mrow><msup><mi>e</mi><mo>′′</mo></msup><mo>=</mo><mn>1</mn></mrow></math> iff <math id="Sx1.SSx2.p14.m13" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> is inside a number of <math id="Sx1.SSx2.p14.m14" class="ltx_Math" alttext="G^{\prime\prime}" display="inline"><msup><mi>G</mi><mo>′′</mo></msup></math> cycles
+that differs by 1 from <math id="Sx1.SSx2.p14.m15" class="ltx_Math" alttext="g^{\prime\prime}" display="inline"><msup><mi>g</mi><mo>′′</mo></msup></math>. So <math id="Sx1.SSx2.p14.m16" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> has color <math id="Sx1.SSx2.p14.m17" class="ltx_Math" alttext="(r^{\prime}+e^{\prime},r^{\prime\prime}+e^{\prime\prime})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msup><mi>r</mi><mo>′</mo></msup><mo>+</mo><msup><mi>e</mi><mo>′</mo></msup></mrow><mo>,</mo><mrow><msup><mi>r</mi><mo>′′</mo></msup><mo>+</mo><msup><mi>e</mi><mo>′′</mo></msup></mrow><mo stretchy="false">)</mo></mrow></math> and we
+know <math id="Sx1.SSx2.p14.m18" class="ltx_Math" alttext="e^{\prime}" display="inline"><msup><mi>e</mi><mo>′</mo></msup></math> and <math id="Sx1.SSx2.p14.m19" class="ltx_Math" alttext="e^{\prime\prime}" display="inline"><msup><mi>e</mi><mo>′′</mo></msup></math> are not both zero.  <math id="Sx1.SSx2.p14.m20" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="Sx1.SSx2.p15" class="ltx_para">
+<p class="ltx_p">Tait himself hoped to prove face-4-colorability, via edge-3-colorability, in
+the following way.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Sx1.SSx2.p16" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 2 (Tait)<math id="Sx1.SSx2.p16.m1" class="ltx_Math" alttext="\quad" display="inline"><mi></mi></math></span> A trivalent plane graph that has a Hamiltonian cycle can be edge-colored with 3 colors.</p>
+</div>
+<div id="Sx1.SSx2.p17" class="ltx_para">
+<p class="ltx_p">A Hamiltonian cycle is a closed path that visits every vertex exactly once
+(and yes, <span class="ltx_text ltx_font_italic">that</span> Hamilton). We dropped the “bridgeless” qualifier
+because having a cycle in which every vertex is involved means no bridges:
+for any vertices <span class="ltx_text ltx_font_smallcaps">p</span> and <span class="ltx_text ltx_font_smallcaps">q</span> you can travel between them via the
+Hamiltonian cycle, and back via all different edges using the other half of
+the cycle. That would be impossible with a bridge: pick <span class="ltx_text ltx_font_smallcaps">p</span> and <span class="ltx_text ltx_font_smallcaps">q</span>
+either side of the bridge, now two routes between them would have to use the
+same edge (that bridge).</p>
+</div>
+<div id="Sx1.SSx2.p18" class="ltx_para">
+<p class="ltx_p">Note also that in a trivalent graph the number of edges <math id="Sx1.SSx2.p18.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> equals <math id="Sx1.SSx2.p18.m2" class="ltx_Math" alttext="3n/2" display="inline"><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow><mo>/</mo><mn>2</mn></mrow></math>
+where <math id="Sx1.SSx2.p18.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is the number of vertices. But <math id="Sx1.SSx2.p18.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is an integer, so <math id="Sx1.SSx2.p18.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is even.
+</p>
+</div>
+<div id="Sx1.SSx2.p19" class="ltx_para">
+<p class="ltx_p">Proof of lemma: the Hamiltonian cycle, having <math id="Sx1.SSx2.p19.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> vertices, also has <math id="Sx1.SSx2.p19.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> edges,
+which is even. Color them alternatingly red and green. Each vertex now has one
+red and one green edge; color the third edge blue.  <math id="Sx1.SSx2.p19.m3" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="Sx1.SSx2.p20" class="ltx_para">
+<p class="ltx_p">So Tait next tried to prove every planar graph has a Hamiltonian cycle.
+Unfortunately, some don’t.</p>
+</div>
+</section>
+<section id="Sx1.SSx3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">A vertex coloring</h3>
+
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Sx1.SSx3.p1" class="ltx_para">
+<p class="ltx_p">Curiously, the property that a graph is face-4-colorable, which turned out to
+be equivalent to being edge-3-colorable by Tait’s theorem, is also equivalent
+to admitting a certain kind of vertex-2-coloring. This seems to have been
+discovered independently a few times, most notably by Percy J. Heawood (<span class="ltx_text ltx_font_typewriter">http://www-history.mcs.st-andrews.ac.uk/Mathematicians/Heawood.html</span>bio at St Andrews).</p>
+</div>
+<div id="Sx1.SSx3.p2" class="ltx_para">
+<p class="ltx_p">We can call the vertex colors black and white, but think of them as representing values <math id="Sx1.SSx3.p2.m1" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math> and <math id="Sx1.SSx3.p2.m2" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> interpreted as residues (mod 3).
+This is not the kind of coloring where adjacent items have to be of different
+color! It does have another more global constraint though: around any face, the vertex colors must sum to 0 (mod 3).</p>
+</div>
+<div id="Sx1.SSx3.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 3<math id="Sx1.SSx3.p3.m1" class="ltx_Math" alttext="\quad" display="inline"><mi></mi></math></span> A bridge-free trivalent plane graph can be edge-colored
+with 3 colors if and only if it can be vertex-colored in the way just
+explained.</p>
+</div>
+<div id="Sx1.SSx3.p4" class="ltx_para">
+<p class="ltx_p">Rename the three edge colors to 0, 1 and 2 interpreted as residues (mod 3).
+These are again “position vector”-like; there’s no special significance
+to being 0. Let <math id="Sx1.SSx3.p4.m1" class="ltx_Math" alttext="g_{3}" display="inline"><msub><mi>g</mi><mn>3</mn></msub></math> be this new relabeled verion of the old <math id="Sx1.SSx3.p4.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>.</p>
+</div>
+<div id="Sx1.SSx3.p5" class="ltx_para">
+<p class="ltx_p">We construct a vertex coloring <math id="Sx1.SSx3.p5.m1" class="ltx_Math" alttext="h_{3}:V\to\{+1,-1\}" display="inline"><mrow><msub><mi>h</mi><mn>3</mn></msub><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mrow><mo stretchy="false">{</mo><mrow><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math> from <math id="Sx1.SSx3.p5.m2" class="ltx_Math" alttext="g_{3}" display="inline"><msub><mi>g</mi><mn>3</mn></msub></math> as follows:
+assign color <math id="Sx1.SSx3.p5.m3" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math> to a vertex if the edges there have colors 0, 1, 2 going
+clockwise; <math id="Sx1.SSx3.p5.m4" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> if counterclockwise. If the edge coloring <math id="Sx1.SSx3.p5.m5" class="ltx_Math" alttext="g_{3}" display="inline"><msub><mi>g</mi><mn>3</mn></msub></math> is valid,
+it is possible to define an <math id="Sx1.SSx3.p5.m6" class="ltx_Math" alttext="h_{3}" display="inline"><msub><mi>h</mi><mn>3</mn></msub></math> this way.</p>
+</div>
+<div id="Sx1.SSx3.p6" class="ltx_para">
+<p class="ltx_p">Note this makes the vertex colors <span class="ltx_text ltx_font_italic">differences</span> of edge colors in the
+following sense. If we travel around a face counterclockwise (i.e. always
+turning left) and <math id="Sx1.SSx3.p6.m1" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> and <math id="Sx1.SSx3.p6.m2" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> are two successive edges joined at vertex
+<span class="ltx_text ltx_font_smallcaps">p</span>, then <math id="Sx1.SSx3.p6.m3" class="ltx_Math" alttext="g_{3}(e)-g_{3}(d)=h_{3}(\hbox{\sc p})" display="inline"><mrow><mrow><mrow><msub><mi>g</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>g</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>h</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext class="ltx_font_smallcaps" mathvariant="normal">p</mtext><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. If instead we turn right to edge <math id="Sx1.SSx3.p6.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> say, we get <math id="Sx1.SSx3.p6.m5" class="ltx_Math" alttext="g_{3}(x)-g_{3}(d)=-h_{3}(\hbox{\sc p})" display="inline"><mrow><mrow><mrow><msub><mi>g</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>g</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><msub><mi>h</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext class="ltx_font_smallcaps" mathvariant="normal">p</mtext><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="Sx1.SSx3.p7" class="ltx_para">
+<p class="ltx_p">Proof of <math id="Sx1.SSx3.p7.m1" class="ltx_Math" alttext="\Longrightarrow" display="inline"><mo>⟹</mo></math>: Based on <math id="Sx1.SSx3.p7.m2" class="ltx_Math" alttext="g_{3}" display="inline"><msub><mi>g</mi><mn>3</mn></msub></math>, define <math id="Sx1.SSx3.p7.m3" class="ltx_Math" alttext="h_{3}" display="inline"><msub><mi>h</mi><mn>3</mn></msub></math> as above. To prove it is valid.
+Pick any face <math id="Sx1.SSx3.p7.m4" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>, and any edge <math id="Sx1.SSx3.p7.m5" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> in it, let <math id="Sx1.SSx3.p7.m6" class="ltx_Math" alttext="g_{3}(e)=c" display="inline"><mrow><mrow><msub><mi>g</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>c</mi></mrow></math>. Go round
+the face counterclockwise one whole cycle. Now</p>
+<table id="Sx1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex1.m1" class="ltx_Math" alttext="c\;+\sum_{{\scriptscriptstyle\rm V}\in\alpha}h(\hbox{\sc v})\;=\;c" display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>c</mi></mpadded><mo>+</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi mathsize="71%" mathvariant="normal">V</mi><mo>∈</mo><mi>α</mi></mrow></munder><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext class="ltx_font_smallcaps" mathvariant="normal">v</mtext><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mi>c</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(mod 3). Which proves the sum of <math id="Sx1.SSx3.p7.m7" class="ltx_Math" alttext="h_{3}" display="inline"><msub><mi>h</mi><mn>3</mn></msub></math> values around the cycle is zero.  <math id="Sx1.SSx3.p7.m8" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="Sx1.SSx3.p8" class="ltx_para">
+<p class="ltx_p">The same argument works in reverse: if <math id="Sx1.SSx3.p8.m1" class="ltx_Math" alttext="h_{3}" display="inline"><msub><mi>h</mi><mn>3</mn></msub></math> is a valid vertex coloring then,
+in any one cycle, we could assign an arbitrary color <math id="Sx1.SSx3.p8.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> to an edge <math id="Sx1.SSx3.p8.m3" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> and,
+going round counterclockwise finding vertices <span class="ltx_text ltx_font_smallcaps">p</span>, <span class="ltx_text ltx_font_smallcaps">q</span>… we could
+assign to the edges after <math id="Sx1.SSx3.p8.m4" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> the colors <math id="Sx1.SSx3.p8.m5" class="ltx_Math" alttext="c+h_{3}(\hbox{\sc p})" display="inline"><mrow><mi>c</mi><mo>+</mo><mrow><msub><mi>h</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext class="ltx_font_smallcaps" mathvariant="normal">p</mtext><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+<math id="Sx1.SSx3.p8.m6" class="ltx_Math" alttext="c+h_{3}(\hbox{\sc p})+h_{3}(\hbox{\sc q})" display="inline"><mrow><mi>c</mi><mo>+</mo><mrow><msub><mi>h</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext class="ltx_font_smallcaps" mathvariant="normal">p</mtext><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>h</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext class="ltx_font_smallcaps" mathvariant="normal">q</mtext><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and so on. Because <math id="Sx1.SSx3.p8.m7" class="ltx_Math" alttext="h_{3}" display="inline"><msub><mi>h</mi><mn>3</mn></msub></math> sums to zero
+around the cycle, it consistently assigns edge colors (e.g. edge <math id="Sx1.SSx3.p8.m8" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> again
+gets color <math id="Sx1.SSx3.p8.m9" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> once around the cycle) and because <math id="Sx1.SSx3.p8.m10" class="ltx_Math" alttext="h_{3}" display="inline"><msub><mi>h</mi><mn>3</mn></msub></math> is never zero, we
+never get the same edge color for successive edges.</p>
+</div>
+<div id="Sx1.SSx3.p9" class="ltx_para">
+<p class="ltx_p">But this isn’t yet enough. Given an <math id="Sx1.SSx3.p9.m1" class="ltx_Math" alttext="h_{3}" display="inline"><msub><mi>h</mi><mn>3</mn></msub></math> satisfying its rule, we can start
+reconstructing <math id="Sx1.SSx3.p9.m2" class="ltx_Math" alttext="g_{3}" display="inline"><msub><mi>g</mi><mn>3</mn></msub></math> by this “integration” process. We just saw it works
+locally on the level of single face boundary cycles. As with the previous
+theorem however, the problem with “integrating” is to prove this can be done
+unambiguously on a global scale, for which the topological properties of
+genus 0 surfaces must again crop up somehow.</p>
+</div>
+<div id="Sx1.SSx3.p10" class="ltx_para">
+<p class="ltx_p">I will choose to use the following property of planes and spheres:</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Sx1.SSx3.p11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 4<math id="Sx1.SSx3.p11.m1" class="ltx_Math" alttext="\quad" display="inline"><mi></mi></math></span> With a plane graph of <math id="Sx1.SSx3.p11.m2" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> faces on a genus 0 surface, it is possible to enlarge a collection of 1 face to <math id="Sx1.SSx3.p11.m3" class="ltx_Math" alttext="u-1" display="inline"><mrow><mi>u</mi><mo>-</mo><mn>1</mn></mrow></math> faces, one face at a time, in such a way that the area covered remains simply connected throughout.</p>
+</div>
+<div id="Sx1.SSx3.p12" class="ltx_para">
+<p class="ltx_p">Simply connected means that the area covered is topologically equivalent to a
+disk, that it doesn’t enclose any isolated area. Its boundary is a simple
+closed curve. Imagine the area covered by the collection of faces as shaded.
+On a sphere, the area covered being simply connected means there is a single
+connected shaded area inside the boundary and a single connected unshaded area
+outside, and that the boundary is <span class="ltx_text ltx_font_italic">one</span> closed curve. Of course, while
+the outside starts off big, it is reduced to just one face by the time the
+inside has reached <math id="Sx1.SSx3.p12.m1" class="ltx_Math" alttext="u-1" display="inline"><mrow><mi>u</mi><mo>-</mo><mn>1</mn></mrow></math> faces.
+</p>
+</div>
+<div id="Sx1.SSx3.p13" class="ltx_para">
+<p class="ltx_p">Proof of lemma: start with one face shaded. At each stage, there will be
+other faces immediately bordering the area shaded thus far. Choose one,
+call it <math id="Sx1.SSx3.p13.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>. If accreting it to the side of the growing shaded area
+would leave it simply connected, take it and move to the next step.</p>
+</div>
+<div id="Sx1.SSx3.p14" class="ltx_para">
+<p class="ltx_p">Now suppose <math id="Sx1.SSx3.p14.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> misbehaves, that adding it would enclose (one or more)
+unshaded region(s) <math id="Sx1.SSx3.p14.m2" class="ltx_Math" alttext="\Re" display="inline"><mi mathvariant="normal">ℜ</mi></math>. Of course on a sphere we are already
+enclosing an unshaded region, the whole outside. So what is really happening
+if <math id="Sx1.SSx3.p14.m3" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> misbehaves is that adding it would split the remaining outside
+into two (or more) pieces. Choose any one of those pieces and let that be
+our region <math id="Sx1.SSx3.p14.m4" class="ltx_Math" alttext="\Re" display="inline"><mi mathvariant="normal">ℜ</mi></math>.</p>
+</div>
+<div id="Sx1.SSx3.p15" class="ltx_para">
+<p class="ltx_p">Note that each of those pieces, including <math id="Sx1.SSx3.p15.m1" class="ltx_Math" alttext="\Re" display="inline"><mi mathvariant="normal">ℜ</mi></math>, contain some faces that
+border the already shaded area. The way it works is this: The boundary of the
+shaded region has <math id="Sx1.SSx3.p15.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> stretches where it borders <math id="Sx1.SSx3.p15.m3" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>, and <math id="Sx1.SSx3.p15.m4" class="ltx_Math" alttext="k\geqslant 1" display="inline"><mrow><mi>k</mi><mo>⩾</mo><mn>1</mn></mrow></math> because
+<math id="Sx1.SSx3.p15.m5" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> was chosen as a face that borders the shaded area. If <math id="Sx1.SSx3.p15.m6" class="ltx_Math" alttext="k=1" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow></math> it doesn’t
+misbehave; if <math id="Sx1.SSx3.p15.m7" class="ltx_Math" alttext="k&gt;1" display="inline"><mrow><mi>k</mi><mo>&gt;</mo><mn>1</mn></mrow></math> then adding it would split the new outside into <math id="Sx1.SSx3.p15.m8" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>
+regions: in between the <math id="Sx1.SSx3.p15.m9" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> stretches where the shaded area borders <math id="Sx1.SSx3.p15.m10" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>
+there are <math id="Sx1.SSx3.p15.m11" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> stretches where each time it would border one of those regions.</p>
+</div>
+<div id="Sx1.SSx3.p16" class="ltx_para">
+<p class="ltx_p">Choose a face <math id="Sx1.SSx3.p16.m1" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> from the faces of <math id="Sx1.SSx3.p16.m2" class="ltx_Math" alttext="\Re" display="inline"><mi mathvariant="normal">ℜ</mi></math> that border the shaded
+region, and try adding it. If that would fail too it would be by splitting
+the outside in more than one region. Choose one of those that does not contain
+<math id="Sx1.SSx3.p16.m3" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> and call it <math id="Sx1.SSx3.p16.m4" class="ltx_Math" alttext="\Re^{\prime}" display="inline"><msup><mi mathvariant="normal">ℜ</mi><mo>′</mo></msup></math>. Because it does not include <math id="Sx1.SSx3.p16.m5" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>, it is
+wholly contained within one of the regions adding <math id="Sx1.SSx3.p16.m6" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> would have created,
+namely <math id="Sx1.SSx3.p16.m7" class="ltx_Math" alttext="\Re" display="inline"><mi mathvariant="normal">ℜ</mi></math>. In fact <math id="Sx1.SSx3.p16.m8" class="ltx_Math" alttext="\Re\,^{\prime}\subseteq\Re\setminus\{\beta\}" display="inline"><mrow><msup><mpadded width="+1.7pt"><mi mathvariant="normal">ℜ</mi></mpadded><mo>′</mo></msup><mo>⊆</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>∖</mo><mrow><mo stretchy="false">{</mo><mi>β</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math> i.e. it has at least one fewer country than <math id="Sx1.SSx3.p16.m9" class="ltx_Math" alttext="\Re" display="inline"><mi mathvariant="normal">ℜ</mi></math>.</p>
+</div>
+<div id="Sx1.SSx3.p17" class="ltx_para">
+<p class="ltx_p">Choose a face <math id="Sx1.SSx3.p17.m1" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> from the faces of <math id="Sx1.SSx3.p17.m2" class="ltx_Math" alttext="\Re^{\prime}" display="inline"><msup><mi mathvariant="normal">ℜ</mi><mo>′</mo></msup></math> that border the shaded
+region, if this doesn’t work either choose a <math id="Sx1.SSx3.p17.m3" class="ltx_Math" alttext="\Re^{\prime\prime}" display="inline"><msup><mi mathvariant="normal">ℜ</mi><mo>′′</mo></msup></math> that does not contain
+<math id="Sx1.SSx3.p17.m4" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math>, and so on.</p>
+</div>
+<div id="Sx1.SSx3.p18" class="ltx_para">
+<p class="ltx_p">Now <math id="Sx1.SSx3.p18.m1" class="ltx_Math" alttext="\Re" display="inline"><mi mathvariant="normal">ℜ</mi></math> only has finitely many faces, and <math id="Sx1.SSx3.p18.m2" class="ltx_Math" alttext="|\Re|&gt;|\Re^{\prime}|&gt;|\Re^{\prime\prime}|\dots" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi mathvariant="normal">ℜ</mi><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mrow><mo stretchy="false">|</mo><msup><mi mathvariant="normal">ℜ</mi><mo>′</mo></msup><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mrow><mrow><mo stretchy="false">|</mo><msup><mi mathvariant="normal">ℜ</mi><mo>′′</mo></msup><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>.
+So things can go wrong only a finite number of times. We end up with a country
+that can be added without budding off a piece of outside.  <math id="Sx1.SSx3.p18.m3" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="Sx1.SSx3.p19" class="ltx_para">
+<p class="ltx_p">Now we can finish our proof of Theorem 3.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Sx1.SSx3.p20" class="ltx_para">
+<p class="ltx_p">Proof of <math id="Sx1.SSx3.p20.m1" class="ltx_Math" alttext="\Longleftarrow" display="inline"><mo>⟸</mo></math>: Pick one face. We saw we could pick an arbitrary color for one
+of its edges and then continue assigning <math id="Sx1.SSx3.p20.m2" class="ltx_Math" alttext="g_{3}" display="inline"><msub><mi>g</mi><mn>3</mn></msub></math> colors based on <math id="Sx1.SSx3.p20.m3" class="ltx_Math" alttext="h_{3}" display="inline"><msub><mi>h</mi><mn>3</mn></msub></math> going
+round, in a valid way. Shade the face to mark it as “done”.</p>
+</div>
+<div id="Sx1.SSx3.p21" class="ltx_para">
+<p class="ltx_p">Now pick additional faces along the lines of lemma 4. Keeping the boundary of
+the shaded area simply connected means that each new face borders the previous
+shaded area along a single stretch of boundary (say edges <math id="Sx1.SSx3.p21.m1" class="ltx_Math" alttext="a\dots m" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mi>m</mi></mrow></math> going
+counterclockwise), and this means the portion of the boundary of the new face
+where the edges (<math id="Sx1.SSx3.p21.m2" class="ltx_Math" alttext="n\dots z" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mi>z</mi></mrow></math> say) don’t have colors yet is also a single stretch.</p>
+</div>
+<div id="Sx1.SSx3.p22" class="ltx_para">
+<p class="ltx_p">This means we can edge-color the additional face validly: give <math id="Sx1.SSx3.p22.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> the color
+it already has, and go round turning left each time assigning edge colors
+based on <math id="Sx1.SSx3.p22.m2" class="ltx_Math" alttext="h_{3}" display="inline"><msub><mi>h</mi><mn>3</mn></msub></math>. This must agree with the colors for <math id="Sx1.SSx3.p22.m3" class="ltx_Math" alttext="b\dots m" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mi>m</mi></mrow></math> we already
+assigned consistently, and gives new colors for <math id="Sx1.SSx3.p22.m4" class="ltx_Math" alttext="n\dots z" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mi>z</mi></mrow></math> (which are now also
+consistent with the rest) and gives the same color again to <math id="Sx1.SSx3.p22.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> because <math id="Sx1.SSx3.p22.m6" class="ltx_Math" alttext="h_{3}" display="inline"><msub><mi>h</mi><mn>3</mn></msub></math>
+is valid.</p>
+</div>
+<div id="Sx1.SSx3.p23" class="ltx_para">
+<p class="ltx_p">Once we have covered <math id="Sx1.SSx3.p23.m1" class="ltx_Math" alttext="u-1" display="inline"><mrow><mi>u</mi><mo>-</mo><mn>1</mn></mrow></math> faces, the last face already has all its edges
+colored, validly.  <math id="Sx1.SSx3.p23.m2" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="Sx1.SSx3.p24" class="ltx_para">
+<p class="ltx_p">It’s a pity there doesn’t seem to be an easy way to find such a vertex
+coloring from scratch (thereby making the four color theorem much more simple to prove). There cannot be a very obvious way to find one. For example, valid
+face-4-colorings and edge-3-colorings of the dodecahedron correspond to a
+vertex-2-coloring that uses 4 of one color and 16 of the other color. It’s hard to see how any automatic scheme could spontaneously break the symmetry and
+treat 4 of those 20 vertices differently.</p>
+</div>
+<div id="Sx1.SSx3.p25" class="ltx_para">
+<p class="ltx_p">The four-color theorem says every bridgeless trivalent plane graph has a valid
+face-4-coloring. It is equivalent to saying it has a valid edge-3-coloring.
+And now it is equivalent to saying it has a valid vertex-2-coloring. The next
+thing would be a valid something-1-coloring, and it shouldn’t be too hard to
+prove that things can all be colored with 1 color! Unfortunately, we seem to
+have run out of graph elements to take the place of that “something”.</p>
+</div>
+</section>
+<section id="Sx1.SSx4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">A corollary: <math id="Sx1.SSx4.m1" class="ltx_Math" alttext="3n" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow></math>-gon faces</h3>
+
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Sx1.SSx4.p1" class="ltx_para">
+<p class="ltx_p">Consider a valid vertex-2-coloring <math id="Sx1.SSx4.p1.m1" class="ltx_Math" alttext="h_{3}" display="inline"><msub><mi>h</mi><mn>3</mn></msub></math>, with some black (<math id="Sx1.SSx4.p1.m2" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math>) and some
+white (<math id="Sx1.SSx4.p1.m3" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math>) vertices. Around each face, they sum to 0 (mod 3).</p>
+</div>
+<div id="Sx1.SSx4.p2" class="ltx_para">
+<p class="ltx_p">Now consider the following <span class="ltx_text ltx_font_bold">modification</span>: pick any vertex, and replace it
+by a tiny triangular country. If we give the three new vertices the opposite
+color from the old vertex, the coloring is still valid (in each of the three
+adjoining faces, one <math id="Sx1.SSx4.p2.m1" class="ltx_Math" alttext="\pm 1" display="inline"><mrow><mo>±</mo><mn>1</mn></mrow></math> is replaced by two <math id="Sx1.SSx4.p2.m2" class="ltx_Math" alttext="\mp 1" display="inline"><mrow><mo>∓</mo><mn>1</mn></mrow></math> which counts as the same).</p>
+</div>
+<div id="Sx1.SSx4.p3" class="ltx_para">
+<p class="ltx_p">Conversely, if the graph had any triangle face we could replace it by a single
+vertex. The only way three <math id="Sx1.SSx4.p3.m1" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math> or <math id="Sx1.SSx4.p3.m2" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> can add to zero (mod 3) is if they
+were all of the same sign, so we replace it by one vertex of the opposite
+sign.</p>
+</div>
+<div id="Sx1.SSx4.p4" class="ltx_para">
+<p class="ltx_p">Now suppose we expand all white vertices to black triangles. Or vice versa. We
+saw each single modification leaves a valid vertex coloring valid. So once
+we’re done and only have vertices of the same color, the coloring must
+still be valid. That can only mean one thing: every face now has a number of
+vertices divisible by 3. Not only the triangles we added, but also the
+original faces, which must have grown to 6-, 9-, 12- etc. -gons.</p>
+</div>
+<div id="Sx1.SSx4.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 5<math id="Sx1.SSx4.p5.m1" class="ltx_Math" alttext="\quad" display="inline"><mi></mi></math></span> A valid vertex coloring as in Theorem 3 exists if and only if it is possible to modify the plane graph, turning some vertices into triangles, in such a way that we end up with only faces whose size is divisible by 3.</p>
+</div>
+<div id="Sx1.SSx4.p6" class="ltx_para">
+<p class="ltx_p">Proof of <math id="Sx1.SSx4.p6.m1" class="ltx_Math" alttext="\Longrightarrow:" display="inline"><mrow><mi></mi><mo>⟹</mo><mo>:</mo></mrow></math> We just did it.  <math id="Sx1.SSx4.p6.m2" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="Sx1.SSx4.p7" class="ltx_para">
+<p class="ltx_p">Proof of <math id="Sx1.SSx4.p7.m1" class="ltx_Math" alttext="\Longleftarrow:" display="inline"><mrow><mi></mi><mo>⟸</mo><mo>:</mo></mrow></math> We are given such a sequence of modifications where every face
+ended up as a <math id="Sx1.SSx4.p7.m2" class="ltx_Math" alttext="3n" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow></math>-gon. It is very easy to give this a valid vertex-2-coloring:
+just give every vertex the same color. Now undo the modification step by step,
+each time coloring the new single vertex the opposite color from the triangle
+it replaced. Modifications and their reversals preserve the validity of
+vertex-2-colorings, so by the time we have undone every modification the graph
+is still validly colored.  <math id="Sx1.SSx4.p7.m3" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="Sx1.SSx4.p8" class="ltx_para">
+<p class="ltx_p">This gives yet another corollary of the four color theorem: that we can always
+find such a modication to <math id="Sx1.SSx4.p8.m1" class="ltx_Math" alttext="3n" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow></math>-gon faces.</p>
+</div>
+</section>
+<section id="Sx1.SSx5" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Duals</h3>
+
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Sx1.SSx5.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">dual</span> <math id="Sx1.SSx5.p1.m1" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math> of a bridgeless plane graph <math id="Sx1.SSx5.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is formed as follows:
+place one vertex of <math id="Sx1.SSx5.p1.m3" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math> inside each face of <math id="Sx1.SSx5.p1.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. For each edge <math id="Sx1.SSx5.p1.m5" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> of <math id="Sx1.SSx5.p1.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>,
+separating faces <math id="Sx1.SSx5.p1.m7" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> and <math id="Sx1.SSx5.p1.m8" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math>, draw one edge of <math id="Sx1.SSx5.p1.m9" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math> from its vertex
+in <math id="Sx1.SSx5.p1.m10" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> to its vertex in <math id="Sx1.SSx5.p1.m11" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math>, in such a way that the only edge of <math id="Sx1.SSx5.p1.m12" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>
+it crosses is <math id="Sx1.SSx5.p1.m13" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>, and so that it crosses <math id="Sx1.SSx5.p1.m14" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> at a point other than its
+endpoints.</p>
+</div>
+<div id="Sx1.SSx5.p2" class="ltx_para">
+<p class="ltx_p">This construction creates faces of <math id="Sx1.SSx5.p2.m1" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math> that each enclose one vertex of <math id="Sx1.SSx5.p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>
+and every one of those vertices is thus enclosed, making <math id="Sx1.SSx5.p2.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> likewise a dual
+of <math id="Sx1.SSx5.p2.m4" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math>.</p>
+</div>
+<div id="Sx1.SSx5.p3" class="ltx_para">
+<p class="ltx_p">To prove that assertion: let <span class="ltx_text ltx_font_smallcaps">p</span> be a vertex of <math id="Sx1.SSx5.p3.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, surrounded
+by faces <math id="Sx1.SSx5.p3.m2" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>, <math id="Sx1.SSx5.p3.m3" class="ltx_Math" alttext="\beta\dots" display="inline"><mrow><mi>β</mi><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></math> and with edges <math id="Sx1.SSx5.p3.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>, <math id="Sx1.SSx5.p3.m5" class="ltx_Math" alttext="e\dots" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></math> radiating from
+it. All those edges will be crossed by edges of <math id="Sx1.SSx5.p3.m6" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math> forming a closed cycle
+because they connect the vertices of <math id="Sx1.SSx5.p3.m7" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math> placed inside <math id="Sx1.SSx5.p3.m8" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>, <math id="Sx1.SSx5.p3.m9" class="ltx_Math" alttext="\beta\dots" display="inline"><mrow><mi>β</mi><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></math>
+going round. There are no other edges of <math id="Sx1.SSx5.p3.m10" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math> crossing our edges, and no
+edges of <math id="Sx1.SSx5.p3.m11" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> nearer to <span class="ltx_text ltx_font_smallcaps">p</span> to cross, so the cycle forms the boundary of a
+face. This shows every vertex of <math id="Sx1.SSx5.p3.m12" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> has a dual face of <math id="Sx1.SSx5.p3.m13" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math>.</p>
+</div>
+<div id="Sx1.SSx5.p4" class="ltx_para">
+<p class="ltx_p">To show every face of <math id="Sx1.SSx5.p4.m1" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math> is now accounted for, we can invoke Euler’s
+formula. <math id="Sx1.SSx5.p4.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> has <math id="Sx1.SSx5.p4.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> vertices, <math id="Sx1.SSx5.p4.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> edges, <math id="Sx1.SSx5.p4.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> faces, with <math id="Sx1.SSx5.p4.m6" class="ltx_Math" alttext="n-m+f=2" display="inline"><mrow><mrow><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow><mo>+</mo><mi>f</mi></mrow><mo>=</mo><mn>2</mn></mrow></math>. For
+<math id="Sx1.SSx5.p4.m7" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math> we have by construction <math id="Sx1.SSx5.p4.m8" class="ltx_Math" alttext="n^{*}=f" display="inline"><mrow><msup><mi>n</mi><mo>*</mo></msup><mo>=</mo><mi>f</mi></mrow></math> vertices, <math id="Sx1.SSx5.p4.m9" class="ltx_Math" alttext="m^{*}=m" display="inline"><mrow><msup><mi>m</mi><mo>*</mo></msup><mo>=</mo><mi>m</mi></mrow></math> edges, and an unknown
+number <math id="Sx1.SSx5.p4.m10" class="ltx_Math" alttext="f^{*}" display="inline"><msup><mi>f</mi><mo>*</mo></msup></math> of faces. By the previous argument there are at least the <math id="Sx1.SSx5.p4.m11" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>
+faces with vertices of <math id="Sx1.SSx5.p4.m12" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> in it. But by <math id="Sx1.SSx5.p4.m13" class="ltx_Math" alttext="n^{*}-m^{*}+f^{*}=2" display="inline"><mrow><mrow><mrow><msup><mi>n</mi><mo>*</mo></msup><mo>-</mo><msup><mi>m</mi><mo>*</mo></msup></mrow><mo>+</mo><msup><mi>f</mi><mo>*</mo></msup></mrow><mo>=</mo><mn>2</mn></mrow></math> (and <math id="Sx1.SSx5.p4.m14" class="ltx_Math" alttext="n^{*}=f" display="inline"><mrow><msup><mi>n</mi><mo>*</mo></msup><mo>=</mo><mi>f</mi></mrow></math> and
+<math id="Sx1.SSx5.p4.m15" class="ltx_Math" alttext="m^{*}=m" display="inline"><mrow><msup><mi>m</mi><mo>*</mo></msup><mo>=</mo><mi>m</mi></mrow></math> and <math id="Sx1.SSx5.p4.m16" class="ltx_Math" alttext="n-m+f=2" display="inline"><mrow><mrow><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow><mo>+</mo><mi>f</mi></mrow><mo>=</mo><mn>2</mn></mrow></math>) <math id="Sx1.SSx5.p4.m17" class="ltx_Math" alttext="f^{*}" display="inline"><msup><mi>f</mi><mo>*</mo></msup></math> must equal that <math id="Sx1.SSx5.p4.m18" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.  <math id="Sx1.SSx5.p4.m19" class="ltx_Math" alttext="{\scriptstyle\circ}\!{}^{\circ}\!{\scriptstyle\circ}" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">∘</mo><mmultiscripts><mo mathsize="70%" stretchy="false">∘</mo><mprescripts></mprescripts><none></none><mo>∘</mo></mmultiscripts></mrow></math></p>
+</div>
+<div id="Sx1.SSx5.p5" class="ltx_para">
+<p class="ltx_p">Modern formulations of the four color theorem usually take the dual view. In
+stead of a face-4-coloring, a vertex-4-coloring. Note this is different from
+the vertex-2-coloring in the previous sections; it has the standard constraint
+that adjacent vertices must have different colors.</p>
+</div>
+<div id="Sx1.SSx5.p6" class="ltx_para">
+<p class="ltx_p">The dual expression of lemma 0 is now that it is sufficient to consider plane
+graphs where every face is triangular (the dual of the <math id="Sx1.SSx5.p6.m1" class="ltx_Math" alttext="\times" display="inline"><mo>×</mo></math> to
+<span class="ltx_text" style="position:relative; bottom:1.4pt;"><math id="Sx1.SSx5.p6.m2" class="ltx_Math" alttext="\scriptstyle&gt;\!-\!&lt;" display="inline"><mrow><mo mathsize="70%" rspace="0.8pt" stretchy="false">&gt;</mo><mo>⁣</mo><mo mathsize="70%" rspace="0.8pt" stretchy="false">-</mo><mo>⁣</mo><mo mathsize="70%" stretchy="false">&lt;</mo></mrow></math></span> machinations is tiling up a <math id="Sx1.SSx5.p6.m3" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>-gon into
+<math id="Sx1.SSx5.p6.m4" class="ltx_Math" alttext="v-2" display="inline"><mrow><mi>v</mi><mo>-</mo><mn>2</mn></mrow></math> triangles).</p>
+</div>
+</section>
+<section id="Sx1.SSx6" class="ltx_subsection">
+<h3 class="ltx_title ltx_align_left ltx_title_subsection">History</h3>
+
+<div class="ltx_pagination ltx_align_left ltx_role_newpage"></div>
+<div id="Sx1.SSx6.p1" class="ltx_para ltx_align_left">
+<p class="ltx_p">The subject has colorful beginnings. Francis Guthrie was born in England in
+1832, obtained firsts in both mathematics and law, taught mathematics in South
+Africa until his death in 1899 and also found the time to get involved with
+railroad construction and to make his name in botany. One day he noticed
+something when coloring a map of the counties of England — the original
+four-color conjecture. And on 23 October 1852, in London, his brother Frederick
+asked his own math professor Augustus de Morgan about that observation
+(“With my brother’s permission”). De Morgan consulted Hamilton (“A
+student of mine asked me to day to give him a reason for a fact which I did
+not know was a fact — and do not yet.”). The latter didn’t think much of
+it and quipped he didn’t have time for that “quaternion of colours”.
+The problem didn’t go away though, Cayley dug it out again, Kempe gave his
+flawed proof that stood for 11 years, and the rest is history <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx2" title="" class="ltx_ref">FW77</a>, <a href="#bib.bibx4" title="" class="ltx_ref">FF94</a>]</cite>.</p>
+</div>
+<div id="Sx1.SSx6.p2" class="ltx_para ltx_align_left">
+<p class="ltx_p">The four-color conjecture (now four-color theorem) has loomed large over graph theory. The story how Kenneth Appel, Wolfgang Haken and John Koch found the proof by computer in 1976 is well known. Perhaps it has been fortunate the theorem resisted proof so long, because it has been a motivating force for many exciting developments in graph theory. This includes important results in graph coloring such as Vizing’s theorem, but also work that transcends the bounds of graph theory, such as that by Whitney and Tutte on what is now called matroids.</p>
+</div>
+<div id="Sx1.SSx6.p3" class="ltx_para ltx_align_left">
+<p class="ltx_p">And the future? Hadwiger’s conjecture can be regarded as a generalisation of the four-color theorem. And it is still open.</p>
+</div>
+</section>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+</span>
+      </li>
+      
+<li id="bib.bibx1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">Ore67</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">Oystein Ore</span>, <span class="ltx_text ltx_font_slanted">The Four-Color Problem</span>,
+<br class="ltx_break">Acad. Pr. 1967 without <span class="ltx_text ltx_font_typewriter" style="font-size:90%;">ISBN  0 12 528150 1
+<br class="ltx_break"></span><span class="ltx_text ltx_font_italic">Long the standard work on its subject, but written before
+the theorem was proven. Has a wealth of other graph theory
+material.</span>
+
+<div class="ltx_pagination ltx_role_newpage"></div>
+</span>
+      </li>
+      
+<li id="bib.bibx2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">FW77</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">S. Fiorini</span> and <span class="ltx_text ltx_font_smallcaps">R. J. Wilson</span>,
+<span class="ltx_text ltx_font_slanted">Edge-colourings of graphs
+<br class="ltx_break"></span>(Research notes in math. <span class="ltx_text ltx_font_bold">16</span>), Pitman 1977,
+<span class="ltx_text ltx_font_typewriter" style="font-size:90%;">ISBN  0 273 01129 4
+<br class="ltx_break"></span><span class="ltx_text ltx_font_italic">The first ever book devoted to edge-colorings,
+including material previously found only in Russian
+language journal articles.</span>
+
+</span>
+      </li>
+      
+<li id="bib.bibx3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">SK77</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">Thomas L. Saaty</span> and <span class="ltx_text ltx_font_smallcaps">Paul C. Kainen</span>,
+<br class="ltx_break"><span class="ltx_text ltx_font_slanted">The Four-Color Problem: assaults and conquest</span>,
+<br class="ltx_break">McGraw-Hill 1977; repr. Dover 1986,
+<span class="ltx_text ltx_font_typewriter" style="font-size:90%;">ISBN  0 486 65092 8
+<br class="ltx_break"></span><span class="ltx_text ltx_font_italic">Wonderfully broad, not only focussing on the now standard
+route to the Appel-Haken proof but also giving a wealth of
+other material related to colorings.</span>
+
+</span>
+      </li>
+      
+<li id="bib.bibx4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">FF94</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">Rudolf Fritsch</span> and <span class="ltx_text ltx_font_smallcaps">Gerda Fritsch</span>,
+<br class="ltx_break"><span class="ltx_text ltx_font_slanted">Der Vierfarbensatz</span>, Brockhaus 1994;
+<br class="ltx_break"><span class="ltx_text ltx_font_slanted">The Four-Color Theorem</span>, tra. <span class="ltx_text ltx_font_smallcaps">Julie Peschke</span>,
+<br class="ltx_break">Springer 1998, <span class="ltx_text ltx_font_typewriter" style="font-size:90%;">ISBN  0-387-98497-6
+<br class="ltx_break"></span><span class="ltx_text ltx_font_italic">History of the theorem with biographical cameos by
+G. Fritsch, thorough topological treatment of plane
+graph embedding and details of the Appel-Haken proof by
+R. Fritsch.</span>
+
+</span>
+      </li>
+      
+<li id="bib.bibx5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">Wil02</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">Robert A. Wilson</span>,
+<span class="ltx_text ltx_font_slanted">Graphs, Colourings and the Four-colour Theorem</span>,
+Oxford Univ. Pr. 2002, <span class="ltx_text ltx_font_typewriter" style="font-size:90%;">ISBN  0 19 851062 4</span> (pbk),
+<span class="ltx_text ltx_font_typewriter">http://www.maths.qmul.ac.uk/ raw/graph.htmlhttp://www.maths.qmul.ac.uk/ raw/graph.html</span>
+(errata &amp;c.)
+<br class="ltx_break"><span class="ltx_text ltx_font_italic">A good general course in graph theory, with special focus on
+the four-color theorem and details of the Appel-Haken proof.</span>
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">colorings of plane graphs</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ColoringsOfPlaneGraphs</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:10:25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:10:25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">marijke (8873)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">marijke (8873)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">marijke (8873)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">FourColorConjecture</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TaitColoring</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">KempeChain</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:42:20 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

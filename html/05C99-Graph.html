@@ -1,0 +1,201 @@
+<!DOCTYPE html><html>
+<head>
+<title>graph</title>
+<!--Generated on Fri Feb  9 07:57:05 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">graph</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">graph</em> <math id="p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is an ordered pair of disjoint sets <math id="p1.m2" class="ltx_Math" alttext="(V,E)" display="inline"><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></math> such that <math id="p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is a subset of the set <math id="p1.m4" class="ltx_Math" alttext="V^{(2)}" display="inline"><msup><mi>V</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup></math> of unordered pairs of <math id="p1.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. <math id="p1.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and <math id="p1.m7" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> are always assumed to be finite, unless explicitly stated otherwise. The set <math id="p1.m8" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is the set of <em class="ltx_emph ltx_font_italic">vertices</em> (sometimes called nodes) and <math id="p1.m9" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is the set of <em class="ltx_emph ltx_font_italic">edges</em>. If <math id="p1.m10" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a graph, then <math id="p1.m11" class="ltx_Math" alttext="V=V(G)" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is the vertex set of <math id="p1.m12" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, and <math id="p1.m13" class="ltx_Math" alttext="E=E(G)" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is the edge set.
+Typically, <math id="p1.m14" class="ltx_Math" alttext="V(G)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math> is defined to be nonempty. If <math id="p1.m15" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a vertex of <math id="p1.m16" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, we sometimes write <math id="p1.m17" class="ltx_Math" alttext="x\in G" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>G</mi></mrow></math> instead of <math id="p1.m18" class="ltx_Math" alttext="x\in V(G)" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">An edge <math id="p2.m1" class="ltx_Math" alttext="\{x,y\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">}</mo></mrow></math> (with <math id="p2.m2" class="ltx_Math" alttext="x\neq y" display="inline"><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow></math>) is said to <em class="ltx_emph ltx_font_italic">join</em> the vertices <math id="p2.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p2.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> and is denoted by <math id="p2.m5" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>. One says that the edges <math id="p2.m6" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> and <math id="p2.m7" class="ltx_Math" alttext="yx" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mi>x</mi></mrow></math> are <em class="ltx_emph ltx_font_italic">equivalent</em>; the vertices <math id="p2.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p2.m9" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are the <em class="ltx_emph ltx_font_italic">endvertices</em> of this edge. If <math id="p2.m10" class="ltx_Math" alttext="xy\in E(G)" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="p2.m11" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p2.m12" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are <em class="ltx_emph ltx_font_italic">adjacent</em>, or <em class="ltx_emph ltx_font_italic">neighboring</em>, vertices of <math id="p2.m13" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, and the vertices <math id="p2.m14" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p2.m15" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are <em class="ltx_emph ltx_font_italic">incident</em> with the edge <math id="p2.m16" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>. Two edges are <em class="ltx_emph ltx_font_italic">adjacent</em> if they have at least one common endvertex. Also, <math id="p2.m17" class="ltx_Math" alttext="x\sim y" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></math> means that the vertex <math id="p2.m18" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is adjacent to the vertex <math id="p2.m19" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Notice that this definition allows pairs of the form <math id="p3.m1" class="ltx_Math" alttext="\{x,x\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></math>, which would correspond to a node joining to itself. Some authors explicitly disallow this in their definition of a graph.</p>
+</div>
+<div id="p4" class="ltx_para ltx_centering">
+<img src="grapha.eps" id="p4.g1" class="ltx_graphics" alt=""><img src="graphb.eps" id="p4.g2" class="ltx_graphics" alt=""><img src="graphc.eps" id="p4.g3" class="ltx_graphics" alt="">
+<br class="ltx_break">
+<p class="ltx_p">Some graphs.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Note: Some authors include multigraphs in their definition of a graph. In this notation, the above definition corresponds to that of a <em class="ltx_emph ltx_font_italic">simple graph</em>. A graph is then <em class="ltx_emph ltx_font_italic">simple</em> if there is at most one edge joining each pair of nodes.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="font-size:80%;">Adapted with permission of the author from <em class="ltx_emph ltx_font_italic"></em> by Béla Bollobás, published by Springer-Verlag New York, Inc., 1998.
+</span></p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t"><span class="ltx_text" style="font-size:80%;">Title</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:80%;">graph</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Canonical name</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">Graph</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Date of creation</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">2013-03-22 11:57:54</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Last modified on</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">2013-03-22 11:57:54</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Owner</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">mathcam (2727)</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Last modified by</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">mathcam (2727)</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Numerical id</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">34</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Author</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">mathcam (2727)</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Entry type</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">Definition</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Classification</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">msc 05C99</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">LoopOfAGraph</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">NeighborhoodOfAVertex</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">EulersPolyhedronTheorem</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">Digraph</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">Tree</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">SpanningTree</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">ConnectedGraph</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">Cycle</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">GraphTheory</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">GraphTopology</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">Subgraph</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">SimplePath</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">EulerPath</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">Diameter3</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">DistanceInAGraph</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">GraphHomomorphism</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">Pseudograph</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">Multigraph</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Related topic</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">OrderOf</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Defines</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">edge</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Defines</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">vertex</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Defines</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">endvertex</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Defines</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">adjacent</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Defines</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">incident</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Defines</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">join</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l"><span class="ltx_text" style="font-size:80%;">Defines</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text" style="font-size:80%;">vertices</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l"><span class="ltx_text" style="font-size:80%;">Defines</span></td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r"><span class="ltx_text" style="font-size:80%;">simple graph</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 07:57:05 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

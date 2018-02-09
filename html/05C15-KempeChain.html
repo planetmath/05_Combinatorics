@@ -1,0 +1,243 @@
+<!DOCTYPE html><html>
+<head>
+<title>Kempe chain</title>
+<!--Generated on Thu Feb  8 20:42:32 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Kempe chain</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Alfred B. Kempe
+(<span class="ltx_text ltx_font_typewriter">http://www-history.mcs.st-andrews.ac.uk/Mathematicians/Kempe.html</span>bio at St Andrews)
+first used these chains, now called after him,
+in 1879 in a “proof” of the four-color conjecture. Although Percy Heawood
+found a flaw in his proof 11 years later, the idea of Kempe chains itself is
+quite sound. Heawood used it to prove 5 colors suffice for maps on the plane,
+and the 1976 proof by Appel, Haken and Koch is also based on Kempe’s ideas.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The original Kempe chains were used in the context of colorings of countries
+on a map, or in modern terminology <span class="ltx_text ltx_font_bold">face colorings</span> of a plane graph <math id="p3.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>
+(such that no two adjacent faces receive the same color). The idea was
+extended by Heawood to embeddings of a graph in any other surface. Here</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">a Kempe chain of colors <math id="I1.i1.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is a maximal connected set of faces
+that have either of those colors.  as in: you can travel from any face in the set to any other, through the set. Maximal as in: there are no more faces of those colors you could enlarge the set with, i.e. that border the area you’ve already got.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">In the modern dual formulation of the four-color theorem, faces of <math id="p3.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> are
+replaced by vertices of the dual graph <math id="p3.m3" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math> (and vice versa); vertices are
+adjacent (linked by an edge) in <math id="p3.m4" class="ltx_Math" alttext="G^{*}" display="inline"><msup><mi>G</mi><mo>*</mo></msup></math> whenever the corresponding faces of <math id="p3.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>
+were adjacent (sharing a border). It now becomes a <span class="ltx_text ltx_font_bold">vertex coloring</span>
+problem (again, adjacent vertices must receive different colors). Here
+</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">a Kempe chain of colors <math id="I2.i1.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I2.i1.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is a maximal connected subgraph
+containing only vertices of those colors. Connected as usual in graph theory
+(there’s a path between any two vertices) and maximal as in: there are no
+more vertices of those colors you could enlarge the subgraph with, i.e. that
+are adjacent to a vertex you’ve already got.</p>
+</div>
+<div id="I2.i1.p2" class="ltx_para">
+<p class="ltx_p">An alternative formulation: let <math id="I2.i1.p2.m1" class="ltx_Math" alttext="G(a,b)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the subgraph induced by all the
+vertices of color <math id="I2.i1.p2.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> or <math id="I2.i1.p2.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> (that is, with all the edges that run between
+those vertices). Now any connected component <math id="I2.i1.p2.m4" class="ltx_Math" alttext="H(a,b)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="I2.i1.p2.m5" class="ltx_Math" alttext="G(a,b)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a Kempe
+chain.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">While faces imply an embedding in a surface, the vertex version of the
+definition does not rely on any embedding. The chains are more useful in
+the context of an embedding though.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Kempe chains of edges</h2>
+
+<div id="S0.SSx1.p1" class="ltx_para">
+<p class="ltx_p">With <span class="ltx_text ltx_font_bold">edge coloring</span> of graphs (again, with different colors for adjacent
+edges i.e. those that meet at a vertex), an analogous concept can defined.
+Here</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">a Kempe chain of colors <math id="I3.i1.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I3.i1.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is a maximal connected subgraph
+where the edges have either of those colors. Connected and maximal as before.</p>
+</div>
+<div id="I3.i1.p2" class="ltx_para">
+<p class="ltx_p">An alternative formulation: let <math id="I3.i1.p2.m1" class="ltx_Math" alttext="G(a,b)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the subgraph consisting of all the
+edges of color <math id="I3.i1.p2.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> or <math id="I3.i1.p2.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> (with any vertices incident to them). Now any
+connected component <math id="I3.i1.p2.m4" class="ltx_Math" alttext="H(a,b)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="I3.i1.p2.m5" class="ltx_Math" alttext="G(a,b)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a Kempe chain.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">While superficially similar to the previous definition, these “Kempe chains”
+are rather different animals. Their structure is far simpler. At any vertex of
+<math id="S0.SSx1.p1.m1" class="ltx_Math" alttext="H(a,b)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>, there can be at most one edge of color <math id="S0.SSx1.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and one edge of color <math id="S0.SSx1.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>
+(at most two edges in all). Two things can happen:</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><math id="I4.ix1.m1" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math></span> 
+<div id="I4.ix1.p1" class="ltx_para">
+<p class="ltx_p">Every vertex in the chain has two such edges. In a finite
+graph, this must mean a closed path (cycle). Note that, being colored
+alternatingly, the number of edges must now be even.</p>
+</div>
+</li>
+<li id="I4.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><math id="I4.ix2.m1" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math></span> 
+<div id="I4.ix2.p1" class="ltx_para">
+<p class="ltx_p">A vertex misses out on having an edge of one of those colors,
+and the chain stops there (it can’t miss out on both colors because then
+it wouldn’t be part of the chain). In a finite graph, the other end of
+the chain must now also terminate somewhere (at a vertex that misses
+out either one of the colors). The chain is an open path of one or
+more edges (its length can be even or odd).</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S0.SSx2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Kempe chain arguments</h2>
+
+<div id="S0.SSx2.p1" class="ltx_para">
+<p class="ltx_p">One technique that can be used with all these types of chains is</p>
+<ul id="I5" class="ltx_itemize">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p">swapping the colors in one <math id="I5.i1.p1.m1" class="ltx_Math" alttext="H(a,b)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>. This is always possible:
+by definition, there are no adjacent items that could
+lead to a color clash.</p>
+</div>
+<div id="I5.i1.p2" class="ltx_para">
+<p class="ltx_p">Kempe slipped up when he swapped an <math id="I5.i1.p2.m1" class="ltx_Math" alttext="H(a,b)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> and an <math id="I5.i1.p2.m2" class="ltx_Math" alttext="H(a,c)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math> without
+taking in account that swapping colors <math id="I5.i1.p2.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I5.i1.p2.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> in part of the
+graph could alter the shape and connectedness of any <math id="I5.i1.p2.m5" class="ltx_Math" alttext="H(a,c)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math>, but
+swapping colors in one Kempe chain at a time (and then taking stock of
+the lay of the land afresh) is quite safe.</p>
+</div>
+<div id="I5.i1.p3" class="ltx_para">
+<p class="ltx_p">Swapping can be used to free up a color somewhere, see the
+<span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/6932</span>proof of Vizing’s theorem for a repeated use
+of this ploy on edge-based Kempe chains.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Specific to the use in plane graphs we have that</p>
+<ul id="I6" class="ltx_itemize">
+<li id="I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i1.p1" class="ltx_para">
+<p class="ltx_p">if a Kempe chain forms a cycle, it disconnects the sphere or plane area
+into disjoint parts (on the plane, inside and outside the cycle).</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Specifically when four colors are used for faces:</p>
+<ul id="I7" class="ltx_itemize">
+<li id="I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I7.i1.p1" class="ltx_para">
+<p class="ltx_p">The whole area is divided into red/green swathes and yellow/blue ones.
+Alternatively, into red/yellow and green/blue ones. Or red/blue and
+yellow/green ones.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Specifically for edge-based Kempe chains in regular <math id="S0.SSx2.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>-valent graphs, if
+we try to edge-color the graph with only <math id="S0.SSx2.p1.m2" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> colors:</p>
+<ul id="I8" class="ltx_itemize">
+<li id="I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I8.i1.p1" class="ltx_para">
+<p class="ltx_p">No vertex can miss out on any of the <math id="I8.i1.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> colors, so every <math id="I8.i1.p1.m2" class="ltx_Math" alttext="H(a,b)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+must be a cycle (of even length).</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Kempe chain</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">KempeChain</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-05-16 21:17:19</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-05-16 21:17:19</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">marijke (8873)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">unlord (1)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">marijke (1)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ColoringsOfPlaneGraphs</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ProofOfVizingsTheoremForGraphs</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:42:32 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

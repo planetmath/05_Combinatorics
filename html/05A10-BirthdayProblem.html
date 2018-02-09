@@ -1,0 +1,191 @@
+<!DOCTYPE html><html>
+<head>
+<title>birthday problem</title>
+<!--Generated on Thu Feb  8 20:35:27 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">birthday problem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">birthday problem</em> is:
+What is the probability of two or more people out of a  of <math id="p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> do have the same birthday?</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Solution.</span>
+Let <math id="p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be the event two or more people out of a group of <math id="p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> to have the same birthday.
+It is easy to find first the complement of <math id="p2.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, <math id="p2.m4" class="ltx_Math" alttext="A^{c}" display="inline"><msup><mi>A</mi><mi>c</mi></msup></math>, which is that no two people out of a group of <math id="p2.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> will have matching birthdays out of <math id="p2.m6" class="ltx_Math" alttext="365" display="inline"><mn>365</mn></math> (number of days of one year) equally possible birthdays. We start with an arbitrary person’s birthday. So the second person’s birthday in order to be different from the first one gives us the probability, <math id="p2.m7" class="ltx_Math" alttext="1-\frac{1}{365}" display="inline"><mrow><mn>1</mn><mo>-</mo><mfrac><mn>1</mn><mn>365</mn></mfrac></mrow></math>.
+Consecutively, the third person’s birthday is different from the first two and we have <math id="p2.m8" class="ltx_Math" alttext="(1-\frac{1}{365})(1-\frac{2}{365})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mfrac><mn>1</mn><mn>365</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mfrac><mn>2</mn><mn>365</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. Finally for the the <math id="p2.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>th person’s birthday we get the probability</p>
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="p2.m10" class="ltx_Math" alttext="\displaystyle P[A^{c}]" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>A</mi><mi>c</mi></msup><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="p2.m11" class="ltx_Math" alttext="\displaystyle=\left(1-\frac{1}{365}\right)\left(1-\frac{2}{365}\right)\dots%
+\left(1-\frac{n-1}{365}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>365</mn></mfrac></mstyle></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>2</mn><mn>365</mn></mfrac></mstyle></mrow><mo>)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mn>365</mn></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><math id="p2.m12" class="ltx_Math" alttext="\displaystyle=\frac{(365-1)}{365}\frac{(365-2)}{365}\dots\frac{(365-(n-1))}{365}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo stretchy="false">(</mo><mrow><mn>365</mn><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>365</mn></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo stretchy="false">(</mo><mrow><mn>365</mn><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mn>365</mn></mfrac></mstyle><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo stretchy="false">(</mo><mrow><mn>365</mn><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>365</mn></mfrac></mstyle></mrow></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><math id="p2.m13" class="ltx_Math" alttext="\displaystyle=\frac{(365-1)}{365}\dots\frac{(365-(n-1))}{365^{n}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo stretchy="false">(</mo><mrow><mn>365</mn><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>365</mn></mfrac></mstyle><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo stretchy="false">(</mo><mrow><mn>365</mn><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><msup><mn>365</mn><mi>n</mi></msup></mfrac></mstyle></mrow></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><math id="p2.m14" class="ltx_Math" alttext="\displaystyle=\frac{365!}{(365-n)!365^{n}}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>365</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>365</mn><mo>-</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><msup><mn>365</mn><mi>n</mi></msup></mrow></mfrac></mstyle></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><math id="p2.m15" class="ltx_Math" alttext="\displaystyle={365\choose n}\frac{n!}{365^{n}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mn>365</mn><mi>n</mi></mfrac></mstyle><mo>)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><msup><mn>365</mn><mi>n</mi></msup></mfrac></mstyle></mrow></mrow></math></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">By the last expression of the estimated probability we can see that there exists another easier approach to find the probability which is the following:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">We set the possible ways for <math id="I1.i1.p1.m1" class="ltx_Math" alttext="1\dots n" display="inline"><mrow><mn>1</mn><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mi>n</mi></mrow></math> birthdays, <math id="I1.i1.p1.m2" class="ltx_Math" alttext="365^{n}" display="inline"><msup><mn>365</mn><mi>n</mi></msup></math> as the denominator.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Using the binomial coefficient <math id="I1.i2.p1.m1" class="ltx_Math" alttext="{365\choose n}" display="inline"><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>365</mn><mi>n</mi></mfrac><mo>)</mo></mrow></math>, which represents the number of ways of picking <math id="I1.i2.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> unordered birthdays from <math id="I1.i2.p1.m3" class="ltx_Math" alttext="365" display="inline"><mn>365</mn></math> days multiplied by the factorial <math id="I1.i2.p1.m4" class="ltx_Math" alttext="n!" display="inline"><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math> used for the number of orders, in that way we determine the numerator.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Therefore we have</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="P[A^{c}]={365\choose n}\frac{n!}{365^{n}}" display="block"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>A</mi><mi>c</mi></msup><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>365</mn><mi>n</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mfrac><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><msup><mn>365</mn><mi>n</mi></msup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence
+</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="P[A]=1-P[A^{c}]=1-{365\choose n}\frac{n!}{365^{n}}." display="block"><mrow><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>-</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>A</mi><mi>c</mi></msup><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>-</mo><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>365</mn><mi>n</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mfrac><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><msup><mn>365</mn><mi>n</mi></msup></mfrac></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The table below shows the probability <math id="p3.m1" class="ltx_Math" alttext="P[A]" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow></mrow></math> for some values of <math id="p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></p>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><math id="p3.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><math id="p3.m4" class="ltx_Math" alttext="P[A]" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow></mrow></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><math id="p3.m5" class="ltx_Math" alttext="10" display="inline"><mn>10</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p3.m6" class="ltx_Math" alttext="0,11695" display="inline"><mrow><mn>0</mn><mo>,</mo><mn>11695</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><math id="p3.m7" class="ltx_Math" alttext="20" display="inline"><mn>20</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p3.m8" class="ltx_Math" alttext="0,41144" display="inline"><mrow><mn>0</mn><mo>,</mo><mn>41144</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><math id="p3.m9" class="ltx_Math" alttext="23" display="inline"><mn>23</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p3.m10" class="ltx_Math" alttext="0,50730" display="inline"><mrow><mn>0</mn><mo>,</mo><mn>50730</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><math id="p3.m11" class="ltx_Math" alttext="30" display="inline"><mn>30</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p3.m12" class="ltx_Math" alttext="0,70632" display="inline"><mrow><mn>0</mn><mo>,</mo><mn>70632</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><math id="p3.m13" class="ltx_Math" alttext="40" display="inline"><mn>40</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p3.m14" class="ltx_Math" alttext="0,89123" display="inline"><mrow><mn>0</mn><mo>,</mo><mn>89123</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t"><math id="p3.m15" class="ltx_Math" alttext="50" display="inline"><mn>50</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><math id="p3.m16" class="ltx_Math" alttext="0,97037" display="inline"><mrow><mn>0</mn><mo>,</mo><mn>97037</mn></mrow></math></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">birthday problem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BirthdayProblem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:09:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:09:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05A10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60C05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">birthday paradox</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:35:27 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

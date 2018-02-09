@@ -1,0 +1,119 @@
+<!DOCTYPE html><html>
+<head>
+<title>line graph</title>
+<!--Generated on Fri Feb  9 07:56:08 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">line graph</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a graph. The <em class="ltx_emph ltx_font_italic">line graph</em> of <math id="p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is denoted by <math id="p1.m3" class="ltx_Math" alttext="L(G)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math> and is defined as follows. The vertices of <math id="p1.m4" class="ltx_Math" alttext="L(G)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math> are the edges of <math id="p1.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. Two vertices of <math id="p1.m6" class="ltx_Math" alttext="L(G)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math> are connected by an edge if and only if the corresponding edges in <math id="p1.m7" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> form a path (which must be a directed path if <math id="p1.m8" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a digraph).</p>
+</div>
+<div id="Thmexample1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 1</span>.</h6>
+<div id="Thmexample1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmexample1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be the undirected graph on the vertex set <math id="Thmexample1.p1.m2" class="ltx_Math" alttext="V(G)=\{a,b,c,d\}" display="inline"><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">}</mo></mrow></mrow></math> and edge set <math id="Thmexample1.p1.m3" class="ltx_Math" alttext="E(G)=\{ab,bc,cd,bd\}" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo>,</mo><mrow><mi>c</mi><mo>⁢</mo><mi>d</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Then the line graph <math id="Thmexample1.p1.m4" class="ltx_Math" alttext="L(G)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math> has vertex set <math id="Thmexample1.p1.m5" class="ltx_Math" alttext="V(L(G))=\{ab,bc,cd,bd\}" display="inline"><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo>,</mo><mrow><mi>c</mi><mo>⁢</mo><mi>d</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Since <math id="Thmexample1.p1.m6" class="ltx_Math" alttext="ab" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></math> and <math id="Thmexample1.p1.m7" class="ltx_Math" alttext="bc" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></math> are incident in <math id="Thmexample1.p1.m8" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, they are connected by an edge in <math id="Thmexample1.p1.m9" class="ltx_Math" alttext="L(G)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math>. We label this edge by the unique walk from <math id="Thmexample1.p1.m10" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> to <math id="Thmexample1.p1.m11" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> determined by these edges, namely <math id="Thmexample1.p1.m12" class="ltx_Math" alttext="abc" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></math>. With this notation, the edge set is <math id="Thmexample1.p1.m13" class="ltx_Math" alttext="E(L(G))=\{abc,abd,bcd,bdc,cbd\}" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>c</mi></mrow><mo>,</mo><mrow><mi>c</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\xymatrix{&amp;a\ar@{-}[d]^{ab}&amp;&amp;&amp;ab\ar@{-}[dl]_{abc}\ar@{-}[dr]^{abd}&amp;\\
+&amp;b\ar@{-}[dl]_{bc}\ar@{-}[dr]^{bd}&amp;&amp;bc\ar@{-}[rr]^{bcd}\ar@{-}[dr]_{cbd}&amp;&amp;bd%
+\ar@{-}[dl]^{bdc}\\
+c\ar@{-}[rr]_{cd}&amp;&amp;d&amp;&amp;cd}" display="block"><mrow><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><msup><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><msub><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>l</mi></mrow><mo stretchy="false">]</mo></mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></msub><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><msup><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><msub><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>l</mi></mrow><mo stretchy="false">]</mo></mrow><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></msub><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><msup><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mrow><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><msup><mrow><mo stretchy="false">[</mo><mrow><mi>r</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi></mrow></msup><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><msub><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mrow><mi>c</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow></msub><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><msup><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>l</mi></mrow><mo stretchy="false">]</mo></mrow><mrow><mi>b</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>c</mi></mrow></msup><mo>⁢</mo><mi>c</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><msub><mrow><mo stretchy="false">[</mo><mrow><mi>r</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mrow><mi>c</mi><mo>⁢</mo><mi>d</mi></mrow></msub><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Above we display the graphs <math id="Thmexample1.p1.m14" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> (left) and <math id="Thmexample1.p1.m15" class="ltx_Math" alttext="L(G)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math> (right).</p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Part of the reason for interest in line graphs is the following observation:</p>
+</div>
+<div id="Thmpropositionx1" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition</span>.</h6>
+<div id="Thmpropositionx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If a graph is Eulerian, then its line graph is Hamiltonian.</span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">This follows immediately from the fact that a sequence of incident edges in <math id="p3.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a sequence of incident vertices in <math id="p3.m2" class="ltx_Math" alttext="L(G)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="Thmexample2" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 2</span>.</h6>
+<div id="Thmexample2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmexample2.p1.m1" class="ltx_Math" alttext="B_{n}" display="inline"><msub><mi>B</mi><mi>n</mi></msub></math> be the de Bruijn digraph on binary strings of length <math id="Thmexample2.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Then for <math id="Thmexample2.p1.m3" class="ltx_Math" alttext="n\geq 2" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow></math>, the next de Bruijn digraph can be obtained by taking the line graph of the previous one, that is, <math id="Thmexample2.p1.m4" class="ltx_Math" alttext="B_{n+1}=L(B_{n})" display="inline"><mrow><msub><mi>B</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">line graph</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">LineGraph</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:24:15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:24:15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C75</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">DeBruijnDigraph</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 07:56:08 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

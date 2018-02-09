@@ -1,0 +1,140 @@
+<!DOCTYPE html><html>
+<head>
+<title>Cayley graph</title>
+<!--Generated on Thu Feb  8 20:43:18 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Cayley graph</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="G=\langle X|R\rangle" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mi>X</mi><mo stretchy="false">|</mo><mi>R</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> be a presentation of the finitely generated group <math id="p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> with generators <math id="p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and relations <math id="p1.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>. We define the <em class="ltx_emph ltx_font_italic">Cayley graph</em> <math id="p1.m5" class="ltx_Math" alttext="\Gamma=\Gamma(G,X)" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>=</mo><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> of <math id="p1.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> with generators <math id="p1.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> as</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\Gamma=\left(G,E\right)," display="block"><mrow><mrow><mi mathvariant="normal">Γ</mi><mo>=</mo><mrow><mo>(</mo><mi>G</mi><mo>,</mo><mi>E</mi><mo>)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="E=\left\{\left\{u,a\cdot u\right\}|u\in G,a\in X\right\}." display="block"><mrow><mrow><mi>E</mi><mo>=</mo><mrow><mo>{</mo><mrow><mo>{</mo><mi>u</mi><mo>,</mo><mrow><mi>a</mi><mo>⋅</mo><mi>u</mi></mrow><mo>}</mo></mrow><mo stretchy="false">|</mo><mrow><mrow><mi>u</mi><mo>∈</mo><mi>G</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>∈</mo><mi>X</mi></mrow></mrow><mo>}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">That is, the vertices of the Cayley graph are precisely the elements of <math id="p2.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, and two elements of <math id="p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> are connected by an edge iff some generator in <math id="p2.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> transfers the one to the other.</p>
+</div>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Examples</h2>
+
+<div id="S0.SSx1.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="G=\mathbb{Z}^{d}" display="inline"><mrow><mi>G</mi><mo>=</mo><msup><mi>ℤ</mi><mi>d</mi></msup></mrow></math>, with generators <math id="I1.i1.p1.m2" class="ltx_Math" alttext="X=\{e_{1},\ldots,e_{d}\}" display="inline"><mrow><mi>X</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>d</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math>, the standard basis vectors. Then <math id="I1.i1.p1.m3" class="ltx_Math" alttext="\Gamma(G,X)" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the <math id="I1.i1.p1.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>-dimensional grid; confusingly, it too is often termed “<math id="I1.i1.p1.m5" class="ltx_Math" alttext="\mathbb{Z}^{d}" display="inline"><msup><mi>ℤ</mi><mi>d</mi></msup></math>”.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="G=F_{d}" display="inline"><mrow><mi>G</mi><mo>=</mo><msub><mi>F</mi><mi>d</mi></msub></mrow></math>, the free group with the <math id="I1.i2.p1.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> generators <math id="I1.i2.p1.m3" class="ltx_Math" alttext="X=\{g_{1},...,g_{d}\}" display="inline"><mrow><mi>X</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>g</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>g</mi><mi>d</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math>. Then <math id="I1.i2.p1.m4" class="ltx_Math" alttext="\Gamma(G,X)" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the <math id="I1.i2.p1.m5" class="ltx_Math" alttext="2d" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>d</mi></mrow></math>-regular tree.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.SSx1.p2" class="ltx_para">
+<p class="ltx_p">A Cayley graph can be considered as a metric space with <math id="S0.SSx1.p2.m1" class="ltx_Math" alttext="d(x,y)" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> (<math id="S0.SSx1.p2.m2" class="ltx_Math" alttext="x,y\in G" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>G</mi></mrow></math>) being
+the minimum number of edges one must traverse to get from <math id="S0.SSx1.p2.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> to <math id="S0.SSx1.p2.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>. Thus, each edge has length 1.</p>
+</div>
+<div id="S0.SSx1.p3" class="ltx_para">
+<p class="ltx_p">1) the graph is also edge labeled by the generator and directed. If you are in a group then given directed edges is sufficient to reconstruct the label.
+Though in practice the vertices themselves are just dots (save the identity at times) in the graph and instead it is the edges that get labeled to tell you what to call the vertex.</p>
+</div>
+<div id="S0.SSx1.p4" class="ltx_para">
+<p class="ltx_p">2) The definition works for more than groups. In fact, it is sometimes used for the graph of a (semi)group acting on a set S as a Cayley graph with vertices S and edges given by the group action. As the definition of the graph is nearly identical authors do not generally strive to distinguish these two notions of a Cayley graph.</p>
+</div>
+<div id="S0.SSx1.p5" class="ltx_para">
+<p class="ltx_p">3) In a group, the graph is regular and connected.</p>
+</div>
+<div id="S0.SSx1.p6" class="ltx_para">
+<p class="ltx_p">4) The metric we mentioned above is usually called ”word length” . The bounding of word lengths – that is bounding the girth of a the graph, is a hard and active research problem involving the theory of expanders.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Cayley graph</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CayleyGraph</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:48:53</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:48:53</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Presentationgroup</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">FinitelyGenerated</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:43:18 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

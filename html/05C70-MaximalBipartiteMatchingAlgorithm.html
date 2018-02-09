@@ -1,0 +1,153 @@
+<!DOCTYPE html><html>
+<head>
+<title>maximal bipartite matching algorithm</title>
+<!--Generated on Fri Feb  9 07:55:43 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">maximal bipartite matching algorithm</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The maximal bipartite matching algorithm is similar some ways to the Ford-Fulkerson algorithm for network flow. This is not a coincidence; network flows and matchings are closely related. This algorithm, however, avoids some of the overhead associated with finding network flow.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The basic idea behind this algorithm is as follows:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Start with some (not necessarily maximal) matching <math id="I1.i1.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Find a path that alternates with an edge <math id="I1.i2.p1.m1" class="ltx_Math" alttext="e_{1}\not\in M" display="inline"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>∉</mo><mi>M</mi></mrow></math>, followed by an edge <math id="I1.i2.p1.m2" class="ltx_Math" alttext="e_{2}\in M" display="inline"><mrow><msub><mi>e</mi><mn>2</mn></msub><mo>∈</mo><mi>M</mi></mrow></math>, and so on, ending with some edge <math id="I1.i2.p1.m3" class="ltx_Math" alttext="e_{f}\not\in M" display="inline"><mrow><msub><mi>e</mi><mi>f</mi></msub><mo>∉</mo><mi>M</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For each edge <math id="I1.i3.p1.m1" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> in the path, add <math id="I1.i3.p1.m2" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> to <math id="I1.i3.p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> if <math id="I1.i3.p1.m4" class="ltx_Math" alttext="e\not\in M" display="inline"><mrow><mi>e</mi><mo>∉</mo><mi>M</mi></mrow></math> or remove <math id="I1.i3.p1.m5" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> from <math id="I1.i3.p1.m6" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> if <math id="I1.i3.p1.m7" class="ltx_Math" alttext="e\in M" display="inline"><mrow><mi>e</mi><mo>∈</mo><mi>M</mi></mrow></math>. Note that this must increase <math id="I1.i3.p1.m8" class="ltx_Math" alttext="|M|" display="inline"><mrow><mo stretchy="false">|</mo><mi>M</mi><mo stretchy="false">|</mo></mrow></math> by <math id="I1.i3.p1.m9" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Repeat until we can no longer augment the matching in this manner.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The algorithm employs a clever labeling trick to find these paths and to ensure that the set of edges chosen remains a valid matching.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The algorithm as described here uses the matrix form of a bipartite graph. Translating the matching from a matrix to a graph is straightforward.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">There are two phases to this algorithm: labeling and flipping.</p>
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Labeling</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">We begin with a matrix with <math id="S0.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> rows and <math id="S0.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> columns containing <math id="S0.SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>s, <math id="S0.SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>s, and <math id="S0.SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="1*" display="inline"><mrow><mn>1</mn><mo>*</mo></mrow></math>s, where a <math id="S0.SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="1*" display="inline"><mrow><mn>1</mn><mo>*</mo></mrow></math> indicates in edge in the matching and a <math id="S0.SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> indicates an edge not in the matching. Number the columns <math id="S0.SS0.SSS0.Px1.p1.m8" class="ltx_Math" alttext="1\dots C" display="inline"><mrow><mn>1</mn><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mi>C</mi></mrow></math> and number the rows <math id="S0.SS0.SSS0.Px1.p1.m9" class="ltx_Math" alttext="1\dots R" display="inline"><mrow><mn>1</mn><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mi>R</mi></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">Start by labeling each column that contains no <math id="S0.SS0.SSS0.Px1.p2.m1" class="ltx_Math" alttext="1*" display="inline"><mrow><mn>1</mn><mo>*</mo></mrow></math>s with the symbol <math id="S0.SS0.SSS0.Px1.p2.m2" class="ltx_Math" alttext="\#" display="inline"><mi mathvariant="normal">#</mi></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">Now we scan the columns. Scan each column <math id="S0.SS0.SSS0.Px1.p3.m1" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> that has been labelled but not scanned. Find each <math id="S0.SS0.SSS0.Px1.p3.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> in column <math id="S0.SS0.SSS0.Px1.p3.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> that is in an unlabelled row; label this row <math id="S0.SS0.SSS0.Px1.p3.m4" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>. Mark column <math id="S0.SS0.SSS0.Px1.p3.m5" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> as scanned.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p4" class="ltx_para">
+<p class="ltx_p">Next, we scan the rows. Scan each row <math id="S0.SS0.SSS0.Px1.p4.m1" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> that has been labelled but not scanned. Find the first <math id="S0.SS0.SSS0.Px1.p4.m2" class="ltx_Math" alttext="1*" display="inline"><mrow><mn>1</mn><mo>*</mo></mrow></math> in row <math id="S0.SS0.SSS0.Px1.p4.m3" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>. Label the column in which it appears <math id="S0.SS0.SSS0.Px1.p4.m4" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>, and mark row <math id="S0.SS0.SSS0.Px1.p4.m5" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> as scanned. If there is no <math id="S0.SS0.SSS0.Px1.p4.m6" class="ltx_Math" alttext="1*" display="inline"><mrow><mn>1</mn><mo>*</mo></mrow></math> in row <math id="S0.SS0.SSS0.Px1.p4.m7" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>, proceed to the flipping phase.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p5" class="ltx_para">
+<p class="ltx_p">Otherwise, go back to column scanning. Continue scanning and labelling until there are no labelled, unscanned rows or columns; at that point, the set of <math id="S0.SS0.SSS0.Px1.p5.m1" class="ltx_Math" alttext="1*" display="inline"><mrow><mn>1</mn><mo>*</mo></mrow></math>s is a maximal matching.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Flipping</h2>
+
+<div id="S0.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">We enter the flip phase when we scan some row <math id="S0.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> that contains no <math id="S0.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="1*" display="inline"><mrow><mn>1</mn><mo>*</mo></mrow></math>. This row must have some label <math id="S0.SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, and in column <math id="S0.SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, row <math id="S0.SS0.SSS0.Px2.p1.m5" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> of the matrix, there must be a <math id="S0.SS0.SSS0.Px2.p1.m6" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>; change this to a <math id="S0.SS0.SSS0.Px2.p1.m7" class="ltx_Math" alttext="1*" display="inline"><mrow><mn>1</mn><mo>*</mo></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p">Now consider column <math id="S0.SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>; it has some label <math id="S0.SS0.SSS0.Px2.p2.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>. If <math id="S0.SS0.SSS0.Px2.p2.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is <math id="S0.SS0.SSS0.Px2.p2.m4" class="ltx_Math" alttext="\#" display="inline"><mi mathvariant="normal">#</mi></math>, clear all the labels and mark all rows and columns unscanned, and begin the labeling phase again. Otherwise, change the <math id="S0.SS0.SSS0.Px2.p2.m5" class="ltx_Math" alttext="1*" display="inline"><mrow><mn>1</mn><mo>*</mo></mrow></math> at column <math id="S0.SS0.SSS0.Px2.p2.m6" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, row <math id="S0.SS0.SSS0.Px2.p2.m7" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> to a <math id="S0.SS0.SSS0.Px2.p2.m8" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p3" class="ltx_para">
+<p class="ltx_p">Move on to row <math id="S0.SS0.SSS0.Px2.p3.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> and scan this row.
+</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Notes</h2>
+
+<div id="S0.SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">The algorithm must begin with some matching; we may begin with the empty set (or a single edge), since that is always a matching. However, each iteration through the process increases the size of the matching by exactly one. Therefore, we can make a simple optimization by starting with a larger matching. A naïve greedy algorithm can quickly choose a valid matching that is usually close to the size of the maximal matching; we may initalize our matrix with that matching to give the procedure a head start.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">maximal bipartite matching algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">MaximalBipartiteMatchingAlgorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:40:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:40:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 05C70</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 07:55:43 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html><html>
+<head>
+<title>adjacency matrix</title>
+<!--Generated on Thu Feb  8 20:44:51 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">adjacency matrix</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Definition</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="G=(V,E)" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a graph with vertex set <math id="S0.SS0.SSSx1.p1.m2" class="ltx_Math" alttext="V=\{v_{1},\ldots,v_{n}\}" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math> and edge set <math id="S0.SS0.SSSx1.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>. The <em class="ltx_emph ltx_font_italic">adjacency matrix</em> <math id="S0.SS0.SSSx1.p1.m4" class="ltx_Math" alttext="M_{G}=(m_{ij})" display="inline"><mrow><msub><mi>M</mi><mi>G</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="S0.SS0.SSSx1.p1.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is defined as follows: <math id="S0.SS0.SSSx1.p1.m6" class="ltx_Math" alttext="M_{G}" display="inline"><msub><mi>M</mi><mi>G</mi></msub></math> is an <math id="S0.SS0.SSSx1.p1.m7" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix such that</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="m_{ij}=\left\{\begin{array}[]{ll}1&amp;\textrm{if $\{v_{i},v_{j}\}\in E$}\\
+0&amp;\textrm{otherwise.}\end{array}\right." display="block"><mrow><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mn>1</mn></mtd><mtd columnalign="left"><mrow><mtext>if </mtext><mrow><mrow><mo stretchy="false">{</mo><msub><mi>v</mi><mi>i</mi></msub><mo>,</mo><msub><mi>v</mi><mi>j</mi></msub><mo stretchy="false">}</mo></mrow><mo>∈</mo><mi>E</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mtext>otherwise.</mtext></mtd></mtr></mtable><mi></mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In other words, start with the <math id="S0.SS0.SSSx1.p1.m8" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> zero matrix, put a <math id="S0.SS0.SSSx1.p1.m9" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> in  <math id="S0.SS0.SSSx1.p1.m10" class="ltx_Math" alttext="(i,j)" display="inline"><mrow><mo stretchy="false">(</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></math> if there is an edge whose endpoints are <math id="S0.SS0.SSSx1.p1.m11" class="ltx_Math" alttext="v_{i}" display="inline"><msub><mi>v</mi><mi>i</mi></msub></math> and <math id="S0.SS0.SSSx1.p1.m12" class="ltx_Math" alttext="v_{j}" display="inline"><msub><mi>v</mi><mi>j</mi></msub></math>.</p>
+</div>
+<div id="S0.SS0.SSSx1.p2" class="ltx_para">
+<p class="ltx_p">For example, the adjacency matrix of the following graph</p>
+</div>
+<figure id="S0.SS0.SSSx1.fig1" class="ltx_figure">
+<p class="ltx_p ltx_align_center"><svg version="1.1" height="16" width="40" fragid="S0.SS0.SSSx1.pic1" viewBox="-4 1 36 17" overflow="visible"><g transform="translate(0,9.0)"><g transform="scale(1 -1)"><g transform="scale(0.8)"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><img src="adjacencymat_graph.eps" id="S0.SS0.SSSx1.pic1.g1" class="ltx_graphics" alt=""></foreignObject></g></g></g></g></svg></p>
+</figure>
+<div id="S0.SS0.SSSx1.p3" class="ltx_para">
+<p class="ltx_p">is</p>
+</div>
+<div id="S0.SS0.SSSx1.p4" class="ltx_para">
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\begin{pmatrix}0&amp;0&amp;1&amp;1&amp;0\\
+0&amp;0&amp;0&amp;1&amp;1\\
+1&amp;0&amp;0&amp;0&amp;1\\
+1&amp;1&amp;0&amp;0&amp;0\\
+0&amp;1&amp;1&amp;0&amp;0\end{pmatrix}." display="block"><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSSx1.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>. Let <math id="S0.SS0.SSSx1.p5.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a graph and <math id="S0.SS0.SSSx1.p5.m2" class="ltx_Math" alttext="M_{G}" display="inline"><msub><mi>M</mi><mi>G</mi></msub></math> be its adjacency matrix.</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="M_{G}" display="inline"><msub><mi>M</mi><mi>G</mi></msub></math> is symmetric with <math id="I1.i1.p1.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>’s in its main diagonal.
+</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The sum of the cells in any given column (or row) is the degree of the corresponding vertex. Therefore, the sum of all the cells in <math id="I1.i2.p1.m1" class="ltx_Math" alttext="M_{G}" display="inline"><msub><mi>M</mi><mi>G</mi></msub></math> is twice the number of edges in <math id="I1.i2.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="M_{G}=\mathbf{1}-I" display="inline"><mrow><msub><mi>M</mi><mi>G</mi></msub><mo>=</mo><mrow><mn>𝟏</mn><mo>-</mo><mi>I</mi></mrow></mrow></math> iff <math id="I1.i3.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a complete graph. Here, <math id="I1.i3.p1.m3" class="ltx_Math" alttext="\mathbf{1}" display="inline"><mn>𝟏</mn></math> is the matrix whose entries are all <math id="I1.i3.p1.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> and <math id="I1.i3.p1.m5" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is the identity matrix.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">If we are given a symmetric matrix <math id="I1.i4.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> of order <math id="I1.i4.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> whose entries are either <math id="I1.i4.p1.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> or <math id="I1.i4.p1.m4" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> and whose entries in the main diagonal are all <math id="I1.i4.p1.m5" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, then we can construct a graph <math id="I1.i4.p1.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> such that <math id="I1.i4.p1.m7" class="ltx_Math" alttext="M=M_{G}" display="inline"><mrow><mi>M</mi><mo>=</mo><msub><mi>M</mi><mi>G</mi></msub></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S0.SS0.SSSx2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Generalizations</h2>
+
+<div id="S0.SS0.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">The above definition of an adjacency matrix can be extended to multigraphs (multiple edges between pairs of vertices allowed), pseudographs (loops allowed), and even directed pseudographs (edges are directional). There are two cases in which we can generalize the definition, depending on whether edges are directional.</p>
+</div>
+<div id="S0.SS0.SSSx2.p2" class="ltx_para">
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">(Edges are not directional).</p>
+</div>
+<div id="I2.i1.p2" class="ltx_para">
+<p class="ltx_p">Since a multigraph is just a special case of a pseudograph, we will define <math id="I2.i1.p2.m1" class="ltx_Math" alttext="M_{G}" display="inline"><msub><mi>M</mi><mi>G</mi></msub></math> for a pseudograph <math id="I2.i1.p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. Let <math id="I2.i1.p2.m3" class="ltx_Math" alttext="G=(V,E)" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a pseudograph with <math id="I2.i1.p2.m4" class="ltx_Math" alttext="V=\{v_{1},\ldots,v_{n}\}" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math> The <em class="ltx_emph ltx_font_italic">adjacency matrix</em> <math id="I2.i1.p2.m5" class="ltx_Math" alttext="M_{G}=(m_{ij})" display="inline"><mrow><msub><mi>M</mi><mi>G</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="I2.i1.p2.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is an <math id="I2.i1.p2.m7" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix such that <math id="I2.i1.p2.m8" class="ltx_Math" alttext="m_{ij}" display="inline"><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> is the number of edges whose endpoints are <math id="I2.i1.p2.m9" class="ltx_Math" alttext="v_{i}" display="inline"><msub><mi>v</mi><mi>i</mi></msub></math> and <math id="I2.i1.p2.m10" class="ltx_Math" alttext="v_{j}" display="inline"><msub><mi>v</mi><mi>j</mi></msub></math>. Again, <math id="I2.i1.p2.m11" class="ltx_Math" alttext="M_{G}" display="inline"><msub><mi>M</mi><mi>G</mi></msub></math> is symmetric, but the main diagonal may contain non-zero entries, in case there are loops.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">(Edges are directional).</p>
+</div>
+<div id="I2.i2.p2" class="ltx_para">
+<p class="ltx_p">Since a digraph is a special case of a directed pseudograph, we again define <math id="I2.i2.p2.m1" class="ltx_Math" alttext="M_{G}" display="inline"><msub><mi>M</mi><mi>G</mi></msub></math> in the most general setting. Let <math id="I2.i2.p2.m2" class="ltx_Math" alttext="G=(V,E)" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a directed pseudograph with <math id="I2.i2.p2.m3" class="ltx_Math" alttext="V=\{v_{1},\ldots,v_{n}\}" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="I2.i2.p2.m4" class="ltx_Math" alttext="E\subseteq V\times V\times(\mathbb{N}\cup\{0\})" display="inline"><mrow><mi>E</mi><mo>⊆</mo><mrow><mi>V</mi><mo>×</mo><mi>V</mi><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ℕ</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. The <em class="ltx_emph ltx_font_italic">adjacency matrix</em> <math id="I2.i2.p2.m5" class="ltx_Math" alttext="M_{G}" display="inline"><msub><mi>M</mi><mi>G</mi></msub></math> of <math id="I2.i2.p2.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is an <math id="I2.i2.p2.m7" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix such that</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="m_{ij}=|\{k\mid(v_{i},v_{j},k)\in E\}|." display="block"><mrow><mrow><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">{</mo><mi>k</mi><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo>,</mo><msub><mi>v</mi><mi>j</mi></msub><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>E</mi></mrow><mo stretchy="false">}</mo></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In other words, <math id="I2.i2.p2.m8" class="ltx_Math" alttext="m_{ij}" display="inline"><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> is the number of directed edges from <math id="I2.i2.p2.m9" class="ltx_Math" alttext="v_{i}" display="inline"><msub><mi>v</mi><mi>i</mi></msub></math> to <math id="I2.i2.p2.m10" class="ltx_Math" alttext="v_{j}" display="inline"><msub><mi>v</mi><mi>j</mi></msub></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.SS0.SSSx2.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span></p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I3.i1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a multigraph, then the entries in the main diagonal of <math id="I3.i1.p1.m2" class="ltx_Math" alttext="M_{G}" display="inline"><msub><mi>M</mi><mi>G</mi></msub></math> must be all <math id="I3.i1.p1.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I3.i2.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a graph, then <math id="I3.i2.p1.m2" class="ltx_Math" alttext="M_{G}" display="inline"><msub><mi>M</mi><mi>G</mi></msub></math> corresponds to the original definition given in the previous section.</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I3.i3.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a digraph, then entries <math id="I3.i3.p1.m2" class="ltx_Math" alttext="M_{G}" display="inline"><msub><mi>M</mi><mi>G</mi></msub></math> consists of <math id="I3.i3.p1.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>’s and <math id="I3.i3.p1.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>’s and its main diagonal consists of all <math id="I3.i3.p1.m5" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>’s.
+</p>
+</div>
+</li>
+<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p">Given <em class="ltx_emph ltx_font_italic">any</em> square matrix <math id="I3.i4.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>, there is a directed pseudograph <math id="I3.i4.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> with <math id="I3.i4.p1.m3" class="ltx_Math" alttext="M=M_{G}" display="inline"><mrow><mi>M</mi><mo>=</mo><msub><mi>M</mi><mi>G</mi></msub></mrow></math>. In addition, <math id="I3.i4.p1.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> corresponds to adjacency matrix of various types of graphs if appropriate conditions are imposed on <math id="I3.i4.p1.m5" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math></p>
+</div>
+</li>
+<li id="I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i5.p1" class="ltx_para">
+<p class="ltx_p">Generally, one can <em class="ltx_emph ltx_font_italic">derive</em> a pseudograph from a directed pseudograph by “forgetting” the order in the ordered pairs of vertices. If <math id="I3.i5.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a directed pseudograph and <math id="I3.i5.p1.m2" class="ltx_Math" alttext="G^{\prime}" display="inline"><msup><mi>G</mi><mo>′</mo></msup></math> is the corresponding derived pseudograph. Let <math id="I3.i5.p1.m3" class="ltx_Math" alttext="M_{G}=(m_{ij})" display="inline"><mrow><msub><mi>M</mi><mi>G</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="I3.i5.p1.m4" class="ltx_Math" alttext="M_{G^{\prime}}=(n_{ij})" display="inline"><mrow><msub><mi>M</mi><msup><mi>G</mi><mo>′</mo></msup></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>n</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math>, then <math id="I3.i5.p1.m5" class="ltx_Math" alttext="n_{ij}=m_{ij}+m_{ji}" display="inline"><mrow><msub><mi>n</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>+</mo><msub><mi>m</mi><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow></mrow></math>.</p>
+</div>
+<div id="I3.i5.p2" class="ltx_para">
+<p class="ltx_p">In the language of category theory, the above operation is done via a forgetful functor (from the category of directed pseudographs to the category of pseudographs). Other forgetful functors between categories of various types of graphs are possible. In each case, the forgetful functor has an associated operation on the adjacency matrices of the graphs involved.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">adjacency matrix</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AdjacencyMatrix</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:22:43</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:22:43</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 05C50</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:44:51 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

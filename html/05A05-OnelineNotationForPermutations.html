@@ -1,0 +1,150 @@
+<!DOCTYPE html><html>
+<head>
+<title>one-line notation for permutations</title>
+<!--Generated on Thu Feb  8 20:35:10 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">one-line notation for permutations</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">One-line notation</em> is a system for representing permutations on a collection of symbols by words over the alphabet consisting of those symbols. First we show how the notation works in an example, and then we show that the notation can be made to work for any symmetric group.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">First consider the permutation <math id="p3.m1" class="ltx_Math" alttext="\pi=(134)(25)" display="inline"><mrow><mi>π</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mn>134</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>25</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math> in the symmetric group <math id="p3.m2" class="ltx_Math" alttext="\mathfrak{S}_{5}" display="inline"><msub><mi>𝔖</mi><mn>5</mn></msub></math>. Here <math id="p3.m3" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> is written in cycle notation, so <math id="p3.m4" class="ltx_Math" alttext="\pi(1)=3" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>, <math id="p3.m5" class="ltx_Math" alttext="\pi(2)=5" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>5</mn></mrow></math>, <math id="p3.m6" class="ltx_Math" alttext="\pi(3)=4" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>4</mn></mrow></math>, <math id="p3.m7" class="ltx_Math" alttext="\pi(4)=1" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>, and <math id="p3.m8" class="ltx_Math" alttext="\pi(5)=2" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>2</mn></mrow></math>. We can record this information in the following table:</p>
+</div>
+<div id="p4" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\begin{array}[]{clllll}i&amp;1&amp;2&amp;3&amp;4&amp;5\\
+\pi(i)&amp;3&amp;5&amp;4&amp;1&amp;2\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>i</mi></mtd><mtd columnalign="left"><mn>1</mn></mtd><mtd columnalign="left"><mn>2</mn></mtd><mtd columnalign="left"><mn>3</mn></mtd><mtd columnalign="left"><mn>4</mn></mtd><mtd columnalign="left"><mn>5</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mn>3</mn></mtd><mtd columnalign="left"><mn>5</mn></mtd><mtd columnalign="left"><mn>4</mn></mtd><mtd columnalign="left"><mn>1</mn></mtd><mtd columnalign="left"><mn>2</mn></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Finally, we read off the one-line notation as the second row of the table. Thus we write <math id="p5.m1" class="ltx_Math" alttext="\pi=35412" display="inline"><mrow><mi>π</mi><mo>=</mo><mn>35412</mn></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Now we define one-line notation for arbitrary finite symmetric groups. Let <math id="p6.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a set of finite cardinality <math id="p6.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and let <math id="p6.m3" class="ltx_Math" alttext="\mathfrak{S}_{X}" display="inline"><msub><mi>𝔖</mi><mi>X</mi></msub></math> be the group of permutations on <math id="p6.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. Fix once and for all a total order <math id="p6.m5" class="ltx_Math" alttext="&lt;" display="inline"><mo>&lt;</mo></math> on <math id="p6.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. Using this order, we may say that</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="X=\{x_{1}&lt;x_{2}&lt;\dots&lt;x_{n}\}." display="block"><mrow><mi>X</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mn>1</mn></msub><mo>&lt;</mo><msub><mi>x</mi><mn>2</mn></msub><mo>&lt;</mo><mi mathvariant="normal">…</mi><mo>&lt;</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For an arbitrary <math id="p6.m7" class="ltx_Math" alttext="\pi\in\mathfrak{S}_{X}" display="inline"><mrow><mi>π</mi><mo>∈</mo><msub><mi>𝔖</mi><mi>X</mi></msub></mrow></math>, the one-line notation for <math id="p6.m8" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> is then</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\pi=\pi(x_{1})\pi(x_{2})\cdots\pi(x_{n})." display="block"><mrow><mrow><mi>π</mi><mo>=</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Observe that if <math id="p6.m9" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> and <math id="p6.m10" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> are distinct permutations in <math id="p6.m11" class="ltx_Math" alttext="\mathfrak{S}_{X}" display="inline"><msub><mi>𝔖</mi><mi>X</mi></msub></math>, then there is some <math id="p6.m12" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> for which <math id="p6.m13" class="ltx_Math" alttext="\pi(x_{i})\neq\sigma(x_{i})" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Hence the one-line notations for <math id="p6.m14" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> and <math id="p6.m15" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> will differ in the <math id="p6.m16" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th position. This shows that one-line notation is an injective map.
+Furthermore, we can immediately recover <math id="p6.m17" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> from its one-line notation. If <math id="p6.m18" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> has one-line notation <math id="p6.m19" class="ltx_Math" alttext="a_{1}a_{2}\dots a_{n}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math>, then we know that <math id="p6.m20" class="ltx_Math" alttext="\pi(x_{i})=a_{i}" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>a</mi><mi>i</mi></msub></mrow></math> for all <math id="p6.m21" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>. For example, consider the permutation in <math id="p6.m22" class="ltx_Math" alttext="\mathfrak{S}_{7}" display="inline"><msub><mi>𝔖</mi><mn>7</mn></msub></math> written in one-line notation as <math id="p6.m23" class="ltx_Math" alttext="\pi=1732654" display="inline"><mrow><mi>π</mi><mo>=</mo><mn>1732654</mn></mrow></math>. We immediately obtain the following:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\begin{array}[]{clllllll}i&amp;1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7\\
+\pi(i)&amp;1&amp;7&amp;3&amp;2&amp;6&amp;5&amp;4\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>i</mi></mtd><mtd columnalign="left"><mn>1</mn></mtd><mtd columnalign="left"><mn>2</mn></mtd><mtd columnalign="left"><mn>3</mn></mtd><mtd columnalign="left"><mn>4</mn></mtd><mtd columnalign="left"><mn>5</mn></mtd><mtd columnalign="left"><mn>6</mn></mtd><mtd columnalign="left"><mn>7</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mn>1</mn></mtd><mtd columnalign="left"><mn>7</mn></mtd><mtd columnalign="left"><mn>3</mn></mtd><mtd columnalign="left"><mn>2</mn></mtd><mtd columnalign="left"><mn>6</mn></mtd><mtd columnalign="left"><mn>5</mn></mtd><mtd columnalign="left"><mn>4</mn></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So now we can translate the permutation into cycle notation: <math id="p6.m24" class="ltx_Math" alttext="\pi=(1)(274)(56)" display="inline"><mrow><mi>π</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>274</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>56</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">If we are willing to allow words of infinite length, we can even extend one-line notation to symmetric groups of arbitrary cardinality. Let <math id="p7.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a set and <math id="p7.m2" class="ltx_Math" alttext="\mathfrak{S}_{X}" display="inline"><msub><mi>𝔖</mi><mi>X</mi></msub></math> its symmetric group. Apply the axiom of choice to select a well-ordering on <math id="p7.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. So we may write the elements of <math id="p7.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> in order as the tuple <math id="p7.m5" class="ltx_Math" alttext="(x_{1},x_{2},\dots,x_{\alpha},x_{\alpha+1},\dots)" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>α</mi></msub><mo>,</mo><msub><mi>x</mi><mrow><mi>α</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></math>. Then for each <math id="p7.m6" class="ltx_Math" alttext="\pi\in\mathfrak{S}_{X}" display="inline"><mrow><mi>π</mi><mo>∈</mo><msub><mi>𝔖</mi><mi>X</mi></msub></mrow></math> the one-line notation for <math id="p7.m7" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> is the tuple</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="(\pi(x_{1}),\pi(x_{2}),\dots,\pi(x_{\alpha}),\pi(x_{\alpha+1}),\dots)." display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>α</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mrow><mi>α</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The same analysis as in the finite case shows that a permutation is uniquely recoverable from its representation in one-line notation.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">one-line notation for permutations</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">OnelineNotationForPermutations</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:24:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:24:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05A05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Permutation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CycleNotation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">one-line notation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:35:10 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

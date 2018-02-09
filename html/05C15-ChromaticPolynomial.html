@@ -1,0 +1,173 @@
+<!DOCTYPE html><html>
+<head>
+<title>chromatic polynomial</title>
+<!--Generated on Thu Feb  8 20:42:15 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">chromatic polynomial</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a graph (in the sense of graph theory) whose set <math id="p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>
+of vertices is finite and nonempty, and which has no loops or
+multiple edges.
+For any natural number <math id="p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, let <math id="p1.m4" class="ltx_Math" alttext="\chi(G,x)" display="inline"><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, or just <math id="p1.m5" class="ltx_Math" alttext="\chi(x)" display="inline"><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>,
+denote the number of <math id="p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-colorations of <math id="p1.m7" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, i.e. the number of
+mappings <math id="p1.m8" class="ltx_Math" alttext="f\colon V\to\{1,2,\ldots,x\}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math> such that <math id="p1.m9" class="ltx_Math" alttext="f(a)\neq f(b)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for any
+pair <math id="p1.m10" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> of adjacent vertices.
+Let us prove that <math id="p1.m11" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math> (which is called the
+<em class="ltx_emph ltx_font_italic">chromatic polynomial</em> of the graph <math id="p1.m12" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>)
+is a polynomial function in <math id="p1.m13" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> with coefficients in <math id="p1.m14" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>.
+Write <math id="p1.m15" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> for the set of edges in <math id="p1.m16" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. If <math id="p1.m17" class="ltx_Math" alttext="|E|" display="inline"><mrow><mo stretchy="false">|</mo><mi>E</mi><mo stretchy="false">|</mo></mrow></math>=0, then trivially
+<math id="p1.m18" class="ltx_Math" alttext="\chi(x)=x^{|V|}" display="inline"><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mrow><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow></msup></mrow></math> (where <math id="p1.m19" class="ltx_Math" alttext="|\cdot|" display="inline"><mrow><mo stretchy="false">|</mo><mo>⋅</mo><mo stretchy="false">|</mo></mrow></math> denotes the number of elements
+of a finite set).
+If not, then we choose an edge <math id="p1.m20" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> and construct two graphs
+having fewer edges than <math id="p1.m21" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>: <math id="p1.m22" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is obtained from <math id="p1.m23" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> by contracting
+the edge <math id="p1.m24" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>, and <math id="p1.m25" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is obtained from <math id="p1.m26" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> by omitting the edge <math id="p1.m27" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>.
+We have</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\chi(G,x)=\chi(K,x)-\chi(H,x)" display="block"><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="p1.m28" class="ltx_Math" alttext="x\in\mathbb{N}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, because the polynomial <math id="p1.m29" class="ltx_Math" alttext="\chi(K,x)" display="inline"><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number
+of colorations of the vertices of <math id="p1.m30" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> which might or might not be
+valid for the edge <math id="p1.m31" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>, while <math id="p1.m32" class="ltx_Math" alttext="\chi(H,x)" display="inline"><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number which
+are not valid.
+By induction on <math id="p1.m33" class="ltx_Math" alttext="|E|" display="inline"><mrow><mo stretchy="false">|</mo><mi>E</mi><mo stretchy="false">|</mo></mrow></math>, (<a href="#S0.E1" title="(1) ‣ chromatic polynomial" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) shows that <math id="p1.m34" class="ltx_Math" alttext="\chi(G,x)" display="inline"><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is
+a polynomial over <math id="p1.m35" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">By refining the argument a little, one can show</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\chi(x)=x^{|V|}-|E|x^{|V|-1}+\ldots\pm sx^{k}\;," display="block"><mrow><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msup><mi>x</mi><mrow><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow></msup><mo>-</mo><mrow><mrow><mo stretchy="false">|</mo><mi>E</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mrow><mrow><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>+</mo><mi mathvariant="normal">…</mi></mrow><mo>±</mo><mrow><mi>s</mi><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi>x</mi><mi>k</mi></msup></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some nonzero integer <math id="p2.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math>, where <math id="p2.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is the number
+of connected components of <math id="p2.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, and the coefficients alternate in sign.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">With the help of the Möbius-Rota
+inversion formula (see Moebius Inversion),
+or directly by induction, one can prove</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\chi(x)=\sum_{F\subset E}(-1)^{|F|}x^{|V|-r(F)}" display="block"><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>F</mi><mo>⊂</mo><mi>E</mi></mrow></munder><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">|</mo><mi>F</mi><mo stretchy="false">|</mo></mrow></msup><mo>⁢</mo><msup><mi>x</mi><mrow><mrow><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the sum is over all subsets <math id="p3.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> of <math id="p3.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>, and <math id="p3.m3" class="ltx_Math" alttext="r(F)" display="inline"><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></math> denotes the
+rank of <math id="p3.m4" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> in <math id="p3.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, i.e. the number of elements of
+any maximal cycle-free subset of <math id="p3.m6" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>.
+(Alternatively, the sum may be taken only over subsets <math id="p3.m7" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> such that
+<math id="p3.m8" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is equal to the span of <math id="p3.m9" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>; all other summands cancel
+out in pairs.)</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">chromatic number</em> of <math id="p4.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is the smallest <math id="p4.m2" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math> such that
+<math id="p4.m3" class="ltx_Math" alttext="\chi(G,x)&gt;0" display="inline"><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math> or, equivalently, such that <math id="p4.m4" class="ltx_Math" alttext="\chi(G,x)\neq 0" display="inline"><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Tutte polynomial</em> of a graph, or more generally of a matroid
+<math id="p5.m1" class="ltx_Math" alttext="(E,r)" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></math>, is this function of two variables:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="t(x,y)=\sum_{F\subset E}(x-1)^{r(E)-r(F)}(y-1)^{|F|-r(F)}\;." display="block"><mrow><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>F</mi><mo>⊂</mo><mi>E</mi></mrow></munder><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msup><mo>⁢</mo><mpadded width="+2.8pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mo stretchy="false">|</mo><mi>F</mi><mo stretchy="false">|</mo></mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Compared to the chromatic polynomial, the Tutte contains more information
+about the matroid.
+Still, two or more nonisomorphic matroids may have the same Tutte polynomial.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">chromatic polynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ChromaticPolynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:58:25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:58:25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bbukh (348)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bbukh (348)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bbukh (348)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05B35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Matroid</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ChromaticNumber</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Tutte polynomial</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:42:15 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

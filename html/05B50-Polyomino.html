@@ -1,0 +1,148 @@
+<!DOCTYPE html><html>
+<head>
+<title>polyomino</title>
+<!--Generated on Thu Feb  8 20:39:59 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">polyomino</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A polyomino consists of a number of identical connected squares placed
+in distinct locations in the plane so that at least one side of each
+square is adjacent to (i.e. completely coincides with the side of)
+another square (if the polyomino consists of at least two squares).
+</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">A polyomino with <math id="p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> squares is called an <span class="ltx_text ltx_font_italic">n-omino</span>. For small <math id="p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>,
+polyominoes have special names. A 1-omino is called a <span class="ltx_text ltx_font_italic">monomino</span>,
+a 2-omino a <span class="ltx_text ltx_font_italic">domino</span>, a 3-omino a <span class="ltx_text ltx_font_italic">tromino</span> or <span class="ltx_text ltx_font_italic">triomino</span>,
+etc. The famous Tetris video game derives its name from the fact that
+the bricks are <span class="ltx_text ltx_font_italic">tetrominoes</span> or 4-ominoes.</p>
+</div>
+<figure id="S0.F1" class="ltx_figure">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subgraphics"><img src="Polyomino.1.eps" id="S0.F1.g1" class="ltx_graphics" alt=""></td>
+<td class="ltx_subgraphics"><img src="Polyomino.2.eps" id="S0.F1.g2" class="ltx_graphics" alt=""></td>
+<td class="ltx_subgraphics"><img src="Polyomino.3.eps" id="S0.F1.g3" class="ltx_graphics" alt=""></td>
+<td class="ltx_subgraphics"><img src="Polyomino.4.eps" id="S0.F1.g4" class="ltx_graphics" alt=""></td>
+<td class="ltx_subgraphics"><img src="Polyomino.5.eps" id="S0.F1.g5" class="ltx_graphics" alt=""></td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_font_sansserif"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>All distinct 1-, 2-, 3-, 4-, and 5-ominoes. Pentominoes
+have been scaled in the figure to fit on the page.</figcaption>
+</figure>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Fixed polyominoes</span> (which are also called <span class="ltx_text ltx_font_italic">lattice animals</span>)
+are considered distinct if they cannot be translated into each other,
+while <span class="ltx_text ltx_font_italic">free polyominoes</span> must also be distinct under rotation and
+reflection.
+</p>
+</div>
+<figure id="S0.F2" class="ltx_figure">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subgraphics"><img src="Polyomino.6.eps" id="S0.F2.g1" class="ltx_graphics" alt=""></td>
+<td class="ltx_subgraphics"><img src="Polyomino.7.eps" id="S0.F2.g2" class="ltx_graphics" alt=""></td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_font_sansserif"><span class="ltx_tag ltx_tag_figure">Figure 2: </span>All distinct, fixed dominoes and trominoes.</figcaption>
+</figure>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The topic of how many distinct (free or fixed) n-ominoes exist for a given
+<math id="p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> has been the subject of much research. It is known that the
+number of free n-ominoes <math id="p4.m2" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math> grows exponentially. More precisely, it
+can be proven that <math id="p4.m3" class="ltx_Math" alttext="3.72^{n}&lt;A_{n}&lt;4.65^{n}" display="inline"><mrow><msup><mn>3.72</mn><mi>n</mi></msup><mo>&lt;</mo><msub><mi>A</mi><mi>n</mi></msub><mo>&lt;</mo><msup><mn>4.65</mn><mi>n</mi></msup></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Polyominoes are special instances of <span class="ltx_text ltx_font_italic">polyforms</span>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">polyomino</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Polyomino</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:20:18</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:20:18</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">s0 (9826)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">s0 (9826)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">s0 (9826)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05B50</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">n-omino</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">domino</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">tromino</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">tetromino</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">fixed polyomino</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">lattice animal</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:39:59 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html><html>
+<head>
+<title>incidence geometry</title>
+<!--Generated on Thu Feb  8 20:39:37 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">incidence geometry</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Incidence geometry is essentially geometry based on the first postulate in Euclid’s <em class="ltx_emph ltx_font_italic">The Elements</em>. Basically, the first postulate states that we can draw a straight line from one point to another point. At the end of the 19th century, David Hilbert extended and axiomatized this postulate by adding several companion “incidence axioms” in his famous “Grundlagen der Geometrie” (). Since Hilbert’s publication, his axioms of incidence have been characterized by alternative but equivalent (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Equivalent3</span>) versions, as well as generalized as to include areas of interests from other branches of mathematics, especially, in combinatorics. In this entry, we will define incidence geometry using abstract notions of sets, functions, and relations (specifically, an incidence relation) and then briefly discuss how this definition is related to the axioms of incidence that we know from high school and college.
+
+<br class="ltx_break">
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="p2.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> be a set and <math id="p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> a positive integer. An <em class="ltx_emph ltx_font_italic">incidence geometry</em> on <math id="p2.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> consists of</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">an onto function <math id="I1.i1.p1.m1" class="ltx_Math" alttext="t\colon P\to\{0,1,\ldots,n\}" display="inline"><mrow><mi>t</mi><mo>:</mo><mrow><mi>P</mi><mo>→</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math> called a <em class="ltx_emph ltx_font_italic">type function</em>. If we define <math id="I1.i1.p1.m2" class="ltx_Math" alttext="P_{i}:=t^{-1}(i)" display="inline"><mrow><msub><mi>P</mi><mi>i</mi></msub><mo>:=</mo><mrow><msup><mi>t</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="I1.i1.p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> can be partitioned into a finite number of subsets:</p>
+</div>
+<div id="I1.i1.p2" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="P=P_{0}\cup\cdots\cup P_{n},\mbox{ with }P_{i}\cap P_{j}=\varnothing\mbox{ for%
+ }i\neq j." display="block"><mrow><mrow><mrow><mi>P</mi><mo>=</mo><mrow><msub><mi>P</mi><mn>0</mn></msub><mo>∪</mo><mi mathvariant="normal">⋯</mi><mo>∪</mo><msub><mi>P</mi><mi>n</mi></msub></mrow></mrow><mo>,</mo><mrow><mrow><mrow><mtext> with </mtext><mo>⁢</mo><msub><mi>P</mi><mi>i</mi></msub></mrow><mo>∩</mo><msub><mi>P</mi><mi>j</mi></msub></mrow><mo>=</mo><mrow><mi mathvariant="normal">∅</mi><mo>⁢</mo><mtext> for </mtext><mo>⁢</mo><mi>i</mi></mrow><mo>≠</mo><mi>j</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="I1.i1.p3" class="ltx_para">
+<p class="ltx_p">Elements of <math id="I1.i1.p3.m1" class="ltx_Math" alttext="P_{i}" display="inline"><msub><mi>P</mi><mi>i</mi></msub></math> are variously known as <em class="ltx_emph ltx_font_italic">blocks</em> or <em class="ltx_emph ltx_font_italic">varieties</em> of <em class="ltx_emph ltx_font_italic">type <math id="I1.i1.p3.m2" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math></em>. Sometimes, they are also called <em class="ltx_emph ltx_font_italic">flats</em> of <em class="ltx_emph ltx_font_italic">dimension <math id="I1.i1.p3.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math></em>. For this discussion, we will use the latter terminology. Flats of specific dimensions have further conditions:</p>
+</div>
+<div id="I1.i1.p4" class="ltx_para">
+<ol id="I1.I1" class="ltx_enumerate">
+<li id="I1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I1.i1.p1.m1" class="ltx_Math" alttext="P_{0}\neq\varnothing" display="inline"><mrow><msub><mi>P</mi><mn>0</mn></msub><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>. Flats of dimension 0 are called <em class="ltx_emph ltx_font_bold ltx_font_italic">points</em>.</p>
+</div>
+</li>
+<li id="I1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I1.i2.p1.m1" class="ltx_Math" alttext="P_{n}\neq\varnothing" display="inline"><mrow><msub><mi>P</mi><mi>n</mi></msub><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math> and consists of one element <math id="I1.I1.i2.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, called the
+<em class="ltx_emph ltx_font_italic">space</em>.
+</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">a reflexive (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Reflexive</span>) and symmetric relation <math id="I1.i2.p1.m1" class="ltx_Math" alttext="I\subseteq P\times P" display="inline"><mrow><mi>I</mi><mo>⊆</mo><mrow><mi>P</mi><mo>×</mo><mi>P</mi></mrow></mrow></math> on <math id="I1.i2.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, called an <em class="ltx_emph ltx_font_italic">incidence relation</em>, with the following conditions (or axioms):</p>
+</div>
+<div id="I1.i2.p2" class="ltx_para">
+<ol id="I1.I2" class="ltx_enumerate">
+<li id="I1.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I1.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">for any <math id="I1.I2.i1.p1.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math> such that <math id="I1.I2.i1.p1.m2" class="ltx_Math" alttext="(a,b)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> and <math id="I1.I2.i1.p1.m3" class="ltx_Math" alttext="t(a)=t(b)" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="I1.I2.i1.p1.m4" class="ltx_Math" alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I1.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I1.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">suppose <math id="I1.I2.i2.p1.m1" class="ltx_Math" alttext="t(a)\leq t(b)\leq t(c)" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> with <math id="I1.I2.i2.p1.m2" class="ltx_Math" alttext="(a,b)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> and <math id="I1.I2.i2.p1.m3" class="ltx_Math" alttext="(b,c)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math>, then <math id="I1.I2.i2.p1.m4" class="ltx_Math" alttext="(a,c)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I1.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(c)</span> 
+<div id="I1.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">given that <math id="I1.I2.i3.p1.m1" class="ltx_Math" alttext="t(a)&lt;n" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi>n</mi></mrow></math>, there is a point <math id="I1.I2.i3.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> such that <math id="I1.I2.i3.p1.m3" class="ltx_Math" alttext="(p,a)\notin I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∉</mo><mi>I</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I1.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(d)</span> 
+<div id="I1.I2.i4.p1" class="ltx_para">
+<p class="ltx_p">given <math id="I1.I2.i4.p1.m1" class="ltx_Math" alttext="t(a)&lt;n" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi>n</mi></mrow></math> and a point <math id="I1.I2.i4.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> with <math id="I1.I2.i4.p1.m3" class="ltx_Math" alttext="(p,a)\notin I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∉</mo><mi>I</mi></mrow></math>, there is a unique <math id="I1.I2.i4.p1.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> with <math id="I1.I2.i4.p1.m5" class="ltx_Math" alttext="t(b)=t(a)+1" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>, such that <math id="I1.I2.i4.p1.m6" class="ltx_Math" alttext="(a,b)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> and <math id="I1.I2.i4.p1.m7" class="ltx_Math" alttext="(p,b)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math>; furthermore, if, in addition, there is a <math id="I1.I2.i4.p1.m8" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> such that <math id="I1.I2.i4.p1.m9" class="ltx_Math" alttext="(p,c)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> and <math id="I1.I2.i4.p1.m10" class="ltx_Math" alttext="(a,c)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math>, then <math id="I1.I2.i4.p1.m11" class="ltx_Math" alttext="(b,c)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> as well;</p>
+</div>
+</li>
+<li id="I1.I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(e)</span> 
+<div id="I1.I2.i5.p1" class="ltx_para">
+<p class="ltx_p">given that <math id="I1.I2.i5.p1.m1" class="ltx_Math" alttext="t(a)&gt;0" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>, there is a pair of a point <math id="I1.I2.i5.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and a flat <math id="I1.I2.i5.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, with <math id="I1.I2.i5.p1.m4" class="ltx_Math" alttext="t(b)=t(a)-1" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mn>1</mn></mrow></mrow></math> and <math id="I1.I2.i5.p1.m5" class="ltx_Math" alttext="(p,b)\notin I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∉</mo><mi>I</mi></mrow></math>, such that <math id="I1.I2.i5.p1.m6" class="ltx_Math" alttext="(b,a)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> and <math id="I1.I2.i5.p1.m7" class="ltx_Math" alttext="(p,a)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I1.I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(f)</span> 
+<div id="I1.I2.i6.p1" class="ltx_para">
+<p class="ltx_p">given that <math id="I1.I2.i6.p1.m1" class="ltx_Math" alttext="0&lt;t(a)=t(b)=i&lt;n" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>i</mi><mo>&lt;</mo><mi>n</mi></mrow></math>, a point <math id="I1.I2.i6.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> with <math id="I1.I2.i6.p1.m3" class="ltx_Math" alttext="(p,a),(p,b)\in I" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>I</mi></mrow></math>, and a flat <math id="I1.I2.i6.p1.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> with <math id="I1.I2.i6.p1.m5" class="ltx_Math" alttext="t(d)=i+1" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mrow></math>, <math id="I1.I2.i6.p1.m6" class="ltx_Math" alttext="(a,d),(b,d)\in I" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>I</mi></mrow></math>, then there is a <math id="I1.I2.i6.p1.m7" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> with <math id="I1.I2.i6.p1.m8" class="ltx_Math" alttext="t(c)=i-1" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></mrow></math> such that <math id="I1.I2.i6.p1.m9" class="ltx_Math" alttext="(a,c),(b,c)\in I" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>I</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">An incidence geometry is often written as a triple <math id="p3.m1" class="ltx_Math" alttext="(P,n,I)" display="inline"><mrow><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>n</mi><mo>,</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>.</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Flats of dimensions 1 and 2 are commonly called <em class="ltx_emph ltx_font_bold ltx_font_italic">lines</em> and <em class="ltx_emph ltx_font_bold ltx_font_italic">planes</em>, respectively. Flats of dimension <math id="I2.i1.p1.m1" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> are called <em class="ltx_emph ltx_font_italic">hyperplanes</em>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">When <math id="I2.i2.p1.m1" class="ltx_Math" alttext="(a,b)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math>, we say that <math id="I2.i2.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is <em class="ltx_emph ltx_font_italic">incident</em> with <math id="I2.i2.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>. Since <math id="I2.i2.p1.m4" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is symmetric, we also say that <math id="I2.i2.p1.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and
+<math id="I2.i2.p1.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are incident without any ambiguity. Furthermore, if <math id="I2.i2.p1.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I2.i2.p1.m8" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are incident with <math id="I2.i2.p1.m9" class="ltx_Math" alttext="t(a)\leq t(b)" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then we say that <math id="I2.i2.p1.m10" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> <em class="ltx_emph ltx_font_bold ltx_font_italic">lies on</em> <math id="I2.i2.p1.m11" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, or <math id="I2.i2.p1.m12" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> <em class="ltx_emph ltx_font_bold ltx_font_italic">passes through</em> <math id="I2.i2.p1.m13" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Condition 2 is known as the “weak” , or the “transversality” of <math id="I2.i3.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. Basically, <math id="I2.i3.p1.m2" class="ltx_Math" alttext="(a,b)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> and <math id="I2.i3.p1.m3" class="ltx_Math" alttext="(b,c)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> imply <math id="I2.i3.p1.m4" class="ltx_Math" alttext="(a,c)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> whenever the dimensions of <math id="I2.i3.p1.m5" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math> and
+<math id="I2.i3.p1.m6" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> are in a non-decreasing order.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">From Conditions 4 and 5 above, given any flat <math id="I2.i4.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> of dimension <math id="I2.i4.p1.m2" class="ltx_Math" alttext="i&gt;0" display="inline"><mrow><mi>i</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, there exist a point <math id="I2.i4.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and a flat <math id="I2.i4.p1.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> of dimension <math id="I2.i4.p1.m5" class="ltx_Math" alttext="i-1" display="inline"><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></math> with the properties that</p>
+</div>
+<div id="I2.i4.p2" class="ltx_para">
+<ol id="I2.I1" class="ltx_enumerate">
+<li id="I2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.I1.i1.p1.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is not incident with <math id="I2.I1.i1.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>,</p>
+</div>
+</li>
+<li id="I2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.I1.i2.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is incident with <math id="I2.I1.i2.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, and</p>
+</div>
+</li>
+<li id="I2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(c)</span> 
+<div id="I2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.I1.i3.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is incident with <math id="I2.I1.i3.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>,</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="I2.i4.p3" class="ltx_para">
+<p class="ltx_p">then the unique flat of dimension <math id="I2.i4.p3.m1" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> mentioned in Condition 4 is <math id="I2.i4.p3.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>. We say that <math id="I2.i4.p3.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is <em class="ltx_emph ltx_font_italic">generated by</em> <math id="I2.i4.p3.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="I2.i4.p3.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, or that <math id="I2.i4.p3.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="I2.i4.p3.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> generate <math id="I2.i4.p3.m8" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, and we write <math id="I2.i4.p3.m9" class="ltx_Math" alttext="a=\langle p,b\rangle" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mi>p</mi><mo>,</mo><mi>b</mi><mo stretchy="false">⟩</mo></mrow></mrow></math>. When <math id="I2.i4.p3.m10" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is a point, <math id="I2.i4.p3.m11" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is often written as <math id="I2.i4.p3.m12" class="ltx_Math" alttext="\overleftrightarrow{pb}" display="inline"><mover accent="true"><mrow><mi>p</mi><mo>⁢</mo><mi>b</mi></mrow><mo>↔</mo></mover></math>. In addition, if we were to pick a different pair of a point <math id="I2.i4.p3.m13" class="ltx_Math" alttext="p^{\prime}" display="inline"><msup><mi>p</mi><mo>′</mo></msup></math> and a flat <math id="I2.i4.p3.m14" class="ltx_Math" alttext="b^{\prime}" display="inline"><msup><mi>b</mi><mo>′</mo></msup></math> of dimension <math id="I2.i4.p3.m15" class="ltx_Math" alttext="i-1" display="inline"><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></math> satisfying the above three properties, then <math id="I2.i4.p3.m16" class="ltx_Math" alttext="a=\langle p^{\prime},b^{\prime}\rangle" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>p</mi><mo>′</mo></msup><mo>,</mo><msup><mi>b</mi><mo>′</mo></msup><mo stretchy="false">⟩</mo></mrow></mrow></math> as well.</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p">From the second part of Condition 4, <math id="I2.i5.p1.m1" class="ltx_Math" alttext="\langle p,b\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mi>p</mi><mo>,</mo><mi>b</mi><mo stretchy="false">⟩</mo></mrow></math> is, in a sense, the smallest block (in terms of its type number), such that the above three properties hold. In other words, for any block <math id="I2.i5.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> with <math id="I2.i5.p1.m3" class="ltx_Math" alttext="(p,a)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> and <math id="I2.i5.p1.m4" class="ltx_Math" alttext="(b,a)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math>, then <math id="I2.i5.p1.m5" class="ltx_Math" alttext="(\langle p,b\rangle,a)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">⟨</mo><mi>p</mi><mo>,</mo><mi>b</mi><mo stretchy="false">⟩</mo></mrow><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math>. It is easy to see that <math id="I2.i5.p1.m6" class="ltx_Math" alttext="t(a)\geq t(\langle p,b\rangle)" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">⟨</mo><mi>p</mi><mo>,</mo><mi>b</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. For otherwise, <math id="I2.i5.p1.m7" class="ltx_Math" alttext="t(a)&lt;t(\langle p,b\rangle)" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">⟨</mo><mi>p</mi><mo>,</mo><mi>b</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, which means <math id="I2.i5.p1.m8" class="ltx_Math" alttext="t(a)\leq t(b)" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This inequality together with <math id="I2.i5.p1.m9" class="ltx_Math" alttext="(p,a)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> and <math id="I2.i5.p1.m10" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> imply
+that <math id="I2.i5.p1.m11" class="ltx_Math" alttext="(p,b)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math>, a contradiction.</p>
+</div>
+</li>
+<li id="I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i6.p1" class="ltx_para">
+<p class="ltx_p">In Condition 6, if <math id="I2.i6.p1.m1" class="ltx_Math" alttext="a\neq b" display="inline"><mrow><mi>a</mi><mo>≠</mo><mi>b</mi></mrow></math>, then <math id="I2.i6.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> is necessarily incident with <math id="I2.i6.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Otherwise, <math id="I2.i6.p1.m4" class="ltx_Math" alttext="a=\langle p,c\rangle=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mi>p</mi><mo>,</mo><mi>c</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mi>b</mi></mrow></math>. Also, without much trouble, one can show that <math id="I2.i6.p1.m5" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> in the condition must be unique.</p>
+</div>
+</li>
+<li id="I2.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i7.p1.m1" class="ltx_Math" alttext="P_{i}\neq\varnothing" display="inline"><mrow><msub><mi>P</mi><mi>i</mi></msub><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math> for all <math id="I2.i7.p1.m2" class="ltx_Math" alttext="0\leq i\leq n" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mrow></math>. In other words, there exists at least one flat of every dimension. To see this, we first observe that <math id="I2.i7.p1.m3" class="ltx_Math" alttext="P_{0}\neq\varnothing" display="inline"><mrow><msub><mi>P</mi><mn>0</mn></msub><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>, there is at least one point <math id="I2.i7.p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. With <math id="I2.i7.p1.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, there is a point <math id="I2.i7.p1.m6" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> such that <math id="I2.i7.p1.m7" class="ltx_Math" alttext="(p,q)\notin I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>∉</mo><mi>I</mi></mrow></math>. Therefore, there is a (unique) line <math id="I2.i7.p1.m8" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> that is incident with
+both <math id="I2.i7.p1.m9" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="I2.i7.p1.m10" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>. Continue this way until we reach <math id="I2.i7.p1.m11" class="ltx_Math" alttext="i=n" display="inline"><mrow><mi>i</mi><mo>=</mo><mi>n</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i8.p1" class="ltx_para">
+<p class="ltx_p">Any flat of dimension <math id="I2.i8.p1.m1" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> is incident with at least <math id="I2.i8.p1.m2" class="ltx_Math" alttext="i+1" display="inline"><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></math> points.</p>
+</div>
+</li>
+<li id="I2.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i9.p1" class="ltx_para">
+<p class="ltx_p">Every flat is incident with at least one flat of every dimension.
+As a result, the space <math id="I2.i9.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is incident with every flat of every dimension.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Shadow</span>. For any <math id="p5.m1" class="ltx_Math" alttext="a\in P" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>P</mi></mrow></math>, define <math id="p5.m2" class="ltx_Math" alttext="I(a)=\{b\in P\mid(a,b)\in I\}" display="inline"><mrow><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>b</mi><mo>∈</mo><mi>P</mi></mrow><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, <math id="p5.m3" class="ltx_Math" alttext="I^{-}(a)=\{b\in I(a)\mid t(b)\leq t(a)\}" display="inline"><mrow><mrow><msup><mi>I</mi><mo>-</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>b</mi><mo>∈</mo><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∣</mo><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, and <math id="p5.m4" class="ltx_Math" alttext="I^{+}(a)=\{b\in I(a)\mid t(b)\geq t(a)\}" display="inline"><mrow><mrow><msup><mi>I</mi><mo>+</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>b</mi><mo>∈</mo><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∣</mo><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. For specific type <math id="p5.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, we also define <math id="p5.m6" class="ltx_Math" alttext="I_{k}(a)=\{b\mid t(b)=k\mbox{ and }(b,a)\in I\}" display="inline"><mrow><mrow><msub><mi>I</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>b</mi><mo>∣</mo><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>I</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. When <math id="p5.m7" class="ltx_Math" alttext="k=0" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow></math>, <math id="p5.m8" class="ltx_Math" alttext="I_{0}(a)" display="inline"><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math>, the set of all points incident with <math id="p5.m9" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, is referred to as the <em class="ltx_emph ltx_font_italic">shadow</em> of <math id="p5.m10" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>. We have that <math id="p5.m11" class="ltx_Math" alttext="I_{0}(a)\subseteq I^{-}(a)\subseteq I(a)" display="inline"><mrow><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msup><mi>I</mi><mo>-</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. We also have <math id="p5.m12" class="ltx_Math" alttext="I^{-}(a)\cap I^{+}(a)=I_{t(a)}(a)=\{a\}" display="inline"><mrow><mrow><mrow><msup><mi>I</mi><mo>-</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><msup><mi>I</mi><mo>+</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>I</mi><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo stretchy="false">}</mo></mrow></mrow></math>.
+
+<br class="ltx_break">
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Remark</span>. It is possible to show that <math id="p5.m13" class="ltx_Math" alttext="(a,b)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> if and only if <math id="p5.m14" class="ltx_Math" alttext="I_{0}(a)\subseteq I_{0}(b)" display="inline"><mrow><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> or <math id="p5.m15" class="ltx_Math" alttext="I_{0}(b)\subseteq I_{0}(a)" display="inline"><mrow><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Furthermore, if <math id="p5.m16" class="ltx_Math" alttext="I_{0}(a)\subseteq I_{0}(b)" display="inline"><mrow><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="p5.m17" class="ltx_Math" alttext="t(a)\leq t(b)" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. In particular, <math id="p5.m18" class="ltx_Math" alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math> if and only if <math id="p5.m19" class="ltx_Math" alttext="I_{0}(a)=I_{0}(b)" display="inline"><mrow><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. From the last remark above, <math id="p5.m20" class="ltx_Math" alttext="I(S)=P" display="inline"><mrow><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>P</mi></mrow></math>, and in particular <math id="p5.m21" class="ltx_Math" alttext="P_{k}=I_{k}(S)\subset I(S)" display="inline"><mrow><msub><mi>P</mi><mi>k</mi></msub><mo>=</mo><mrow><msub><mi>I</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊂</mo><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. We also have for any flat <math id="p5.m22" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, <math id="p5.m23" class="ltx_Math" alttext="I_{0}(a)\subseteq I_{0}(S)" display="inline"><mrow><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This says that every singleton subset of <math id="p5.m24" class="ltx_Math" alttext="I_{0}(S)" display="inline"><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math> is of the form <math id="p5.m25" class="ltx_Math" alttext="I_{0}(p)" display="inline"><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> for some <math id="p5.m26" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. The discussion so far suggests the following simpler, more intuitive, formulation of incidence geometry:
+
+<br class="ltx_break">
+<br class="ltx_break">Let <math id="p5.m27" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a set. An incidence geometry on <math id="p5.m28" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a subset <math id="p5.m29" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> of the power set of <math id="p5.m30" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> such that <math id="p5.m31" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> can be partitioned into <math id="p5.m32" class="ltx_Math" alttext="n+1" display="inline"><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></math> finite subsets <math id="p5.m33" class="ltx_Math" alttext="P_{0},\ldots,P_{n}" display="inline"><mrow><msub><mi>P</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>P</mi><mi>n</mi></msub></mrow></math> with the following <em class="ltx_emph ltx_font_italic">axioms</em>:</p>
+</div>
+<div id="p6" class="ltx_para">
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="P_{0}" display="inline"><msub><mi>P</mi><mn>0</mn></msub></math> consists of all singleton subsets of <math id="I3.i1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I3.i1.p1.m3" class="ltx_Math" alttext="P_{0}" display="inline"><msub><mi>P</mi><mn>0</mn></msub></math> is non-empty; elements of <math id="I3.i1.p1.m4" class="ltx_Math" alttext="P_{0}" display="inline"><msub><mi>P</mi><mn>0</mn></msub></math> are called points of <math id="I3.i1.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Since there is an obvious one-to-one correspondence between <math id="I3.i1.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I3.i1.p1.m7" class="ltx_Math" alttext="P_{0}" display="inline"><msub><mi>P</mi><mn>0</mn></msub></math>, we shall follow by convention and call elements of <math id="I3.i1.p1.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> points of <math id="I3.i1.p1.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> instead;</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="P_{n}=\{A\}" display="inline"><mrow><msub><mi>P</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>A</mi><mo stretchy="false">}</mo></mrow></mrow></math>; <math id="I3.i2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is called the space;</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">for every element <math id="I3.i3.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> of <math id="I3.i3.p1.m2" class="ltx_Math" alttext="P_{i}" display="inline"><msub><mi>P</mi><mi>i</mi></msub></math>, where <math id="I3.i3.p1.m3" class="ltx_Math" alttext="i&lt;n" display="inline"><mrow><mi>i</mi><mo>&lt;</mo><mi>n</mi></mrow></math>, there is a point <math id="I3.i3.p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> such that <math id="I3.i3.p1.m5" class="ltx_Math" alttext="p\notin a" display="inline"><mrow><mi>p</mi><mo>∉</mo><mi>a</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p">for every <math id="I3.i4.p1.m1" class="ltx_Math" alttext="a\in P_{i}" display="inline"><mrow><mi>a</mi><mo>∈</mo><msub><mi>P</mi><mi>i</mi></msub></mrow></math>, where <math id="I3.i4.p1.m2" class="ltx_Math" alttext="i&lt;n" display="inline"><mrow><mi>i</mi><mo>&lt;</mo><mi>n</mi></mrow></math>, and point <math id="I3.i4.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> such that <math id="I3.i4.p1.m4" class="ltx_Math" alttext="p\notin A" display="inline"><mrow><mi>p</mi><mo>∉</mo><mi>A</mi></mrow></math>, there is a unique <math id="I3.i4.p1.m5" class="ltx_Math" alttext="b\in P_{i+1}" display="inline"><mrow><mi>b</mi><mo>∈</mo><msub><mi>P</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math> such that <math id="I3.i4.p1.m6" class="ltx_Math" alttext="a\subset b" display="inline"><mrow><mi>a</mi><mo>⊂</mo><mi>b</mi></mrow></math> and <math id="I3.i4.p1.m7" class="ltx_Math" alttext="p\in b" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>b</mi></mrow></math>; furthermore, if there is a <math id="I3.i4.p1.m8" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> with <math id="I3.i4.p1.m9" class="ltx_Math" alttext="a\subset c" display="inline"><mrow><mi>a</mi><mo>⊂</mo><mi>c</mi></mrow></math> and <math id="I3.i4.p1.m10" class="ltx_Math" alttext="p\in c" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>c</mi></mrow></math>, then <math id="I3.i4.p1.m11" class="ltx_Math" alttext="b\subseteq c" display="inline"><mrow><mi>b</mi><mo>⊆</mo><mi>c</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I3.i5.p1" class="ltx_para">
+<p class="ltx_p">for every <math id="I3.i5.p1.m1" class="ltx_Math" alttext="a\in P_{i}" display="inline"><mrow><mi>a</mi><mo>∈</mo><msub><mi>P</mi><mi>i</mi></msub></mrow></math>, where <math id="I3.i5.p1.m2" class="ltx_Math" alttext="i&gt;0" display="inline"><mrow><mi>i</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, then there is a point <math id="I3.i5.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and a <math id="I3.i5.p1.m4" class="ltx_Math" alttext="b\in P_{i-1}" display="inline"><mrow><mi>b</mi><mo>∈</mo><msub><mi>P</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math> with <math id="I3.i5.p1.m5" class="ltx_Math" alttext="p\notin b" display="inline"><mrow><mi>p</mi><mo>∉</mo><mi>b</mi></mrow></math>, such that <math id="I3.i5.p1.m6" class="ltx_Math" alttext="p\in a" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>a</mi></mrow></math> and <math id="I3.i5.p1.m7" class="ltx_Math" alttext="b\subset a" display="inline"><mrow><mi>b</mi><mo>⊂</mo><mi>a</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I3.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I3.i6.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I3.i6.p1.m1" class="ltx_Math" alttext="a,b\in P_{i}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><msub><mi>P</mi><mi>i</mi></msub></mrow></math> and <math id="I3.i6.p1.m2" class="ltx_Math" alttext="d\in P_{i+1}" display="inline"><mrow><mi>d</mi><mo>∈</mo><msub><mi>P</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>, where <math id="I3.i6.p1.m3" class="ltx_Math" alttext="0&lt;i&lt;n" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>i</mi><mo>&lt;</mo><mi>n</mi></mrow></math>, with a point <math id="I3.i6.p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> such that <math id="I3.i6.p1.m5" class="ltx_Math" alttext="p\in a\subset d" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>a</mi><mo>⊂</mo><mi>d</mi></mrow></math> and <math id="I3.i6.p1.m6" class="ltx_Math" alttext="p\in b\subset d" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>b</mi><mo>⊂</mo><mi>d</mi></mrow></math>, then there is a <math id="I3.i6.p1.m7" class="ltx_Math" alttext="c\in P_{i-1}" display="inline"><mrow><mi>c</mi><mo>∈</mo><msub><mi>P</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math> such that <math id="I3.i6.p1.m8" class="ltx_Math" alttext="c\subset a" display="inline"><mrow><mi>c</mi><mo>⊂</mo><mi>a</mi></mrow></math> and <math id="I3.i6.p1.m9" class="ltx_Math" alttext="c\subset b" display="inline"><mrow><mi>c</mi><mo>⊂</mo><mi>b</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">If we define <math id="p7.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> on <math id="p7.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> to be <math id="p7.m3" class="ltx_Math" alttext="(a,b)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> if and only if there is a symmetrized inclusion relation between <math id="p7.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p7.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> (<math id="p7.m6" class="ltx_Math" alttext="a\subseteq b" display="inline"><mrow><mi>a</mi><mo>⊆</mo><mi>b</mi></mrow></math> or <math id="p7.m7" class="ltx_Math" alttext="b\subseteq a" display="inline"><mrow><mi>b</mi><mo>⊆</mo><mi>a</mi></mrow></math>), it is not hard to verify that <math id="p7.m8" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is an incidence relation on <math id="p7.m9" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.
+
+<br class="ltx_break">
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Remarks</span>. Elements of <math id="p7.m10" class="ltx_Math" alttext="P_{1}" display="inline"><msub><mi>P</mi><mn>1</mn></msub></math> are called lines of <math id="p7.m11" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and elements of <math id="p7.m12" class="ltx_Math" alttext="P_{2}" display="inline"><msub><mi>P</mi><mn>2</mn></msub></math> are called planes of <math id="p7.m13" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Whenever <math id="p7.m14" class="ltx_Math" alttext="a,b\in P" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>P</mi></mrow></math> such that <math id="p7.m15" class="ltx_Math" alttext="a\subset b" display="inline"><mrow><mi>a</mi><mo>⊂</mo><mi>b</mi></mrow></math>, then we say that <math id="p7.m16" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> lies on <math id="p7.m17" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> or <math id="p7.m18" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> passes through <math id="p7.m19" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>. Two special types of incidence geometries are worth mentioning:</p>
+</div>
+<div id="p8" class="ltx_para">
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I4.i1.p1.m1" class="ltx_Math" alttext="n=2" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow></math>, an incidence geometry on <math id="I4.i1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is called a <em class="ltx_emph ltx_font_bold ltx_font_italic">plane incidence geometry</em>. In a plane incidence geometry, Axioms 1 through 3, 5 and first part of 4 are necessary. Axiom 2 says that the space is <em class="ltx_emph ltx_font_italic">the</em> unique plane of <math id="I4.i1.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Axiom 3 enumerates elements of <math id="I4.i1.p1.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. Axiom 4 is the heart of the incidence geometry; it
+says that two distinct points lie on a unique line. Furthermore, Axiom 4, together with Axiom 3, say that any line is a subset of the plane. Second part of Axiom 4 is redundant in a plane incidence geometry. If any element of <math id="I4.i1.p1.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> that passes through two distinct points must be either a line or the plane. If it is a line, it must be the unique line determined by the two points, or the plane, which, clearly includes the unique line. Axiom 5 says that there is
+only  to create lines (and the plane), namely, via Axiom 4. Axiom 6 is trivial too (let <math id="I4.i1.p1.m6" class="ltx_Math" alttext="c=p" display="inline"><mrow><mi>c</mi><mo>=</mo><mi>p</mi></mrow></math>).</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I4.i2.p1.m1" class="ltx_Math" alttext="n=3" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow></math>, an incidence geometry on <math id="I4.i2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is called a <em class="ltx_emph ltx_font_bold ltx_font_italic">solid incidence geometry</em>. Axioms 1 through 3, 5, and the first part of Axiom 4 here play the same role as they do in a plane incidence geometry. First part of Axiom 4 also says that a line and a point not lying on it determine a unique plane. The second part of Axiom 4 and Axiom 6 play an equally important role as the other Axioms. Without the second part of Axiom 4, we would not be able to show, for example, that given a plane <math id="I4.i2.p1.m3" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> and a point <math id="I4.i2.p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> lying on <math id="I4.i2.p1.m5" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>, there is a line <math id="I4.i2.p1.m6" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> lying on <math id="I4.i2.p1.m7" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> but not passing through <math id="I4.i2.p1.m8" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Axiom 6 is decidedly non-trivial in solid incidence geometry. It basically says that two planes passing through a common point must pass through a line. Without it, it is possible to find an example such that two planes “<em class="ltx_emph ltx_font_italic">intersect</em>” at exactly one point.</p>
+</div>
+</li>
+<li id="I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i3.p1" class="ltx_para">
+<p class="ltx_p">Several familiar concepts concerning particular incidence properties of flat can be defined: points are <em class="ltx_emph ltx_font_italic">collinear</em> if they lie on the same line; points and lines are <em class="ltx_emph ltx_font_italic">coplanar</em> if they lie on the same plane; a <em class="ltx_emph ltx_font_italic">pencil</em> is a collection of flats of the same dimension sharing a common incidence property which, in most cases, states they have the same “intersection”.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Speaking of intersections, it would be proper to formally define what it means for two hyperplanes to “intersect”.
+
+<br class="ltx_break">
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Intersection</span>. Let <math id="p9.m1" class="ltx_Math" alttext="a,b\in P" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>P</mi></mrow></math>. An <em class="ltx_emph ltx_font_italic">intersection</em> of <math id="p9.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p9.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is a flat <math id="p9.m4" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, if it exists, such that <math id="p9.m5" class="ltx_Math" alttext="I_{0}(c)=I_{0}(a)\cap I_{0}(b)" display="inline"><mrow><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.
+
+<br class="ltx_break">
+<br class="ltx_break">Immediately, we see that, if an intersection of <math id="p9.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p9.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> exists, it must be unique. For if <math id="p9.m8" class="ltx_Math" alttext="I_{0}(c)=I_{0}(a)\cap I_{0}(b)=I_{0}(d)" display="inline"><mrow><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="p9.m9" class="ltx_Math" alttext="c=d" display="inline"><mrow><mi>c</mi><mo>=</mo><mi>d</mi></mrow></math>. We shall abuse the use of set-theoretic intersection to mean incidental intersection: if <math id="p9.m10" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p9.m11" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are two flats, then <math id="p9.m12" class="ltx_Math" alttext="a\cap b" display="inline"><mrow><mi>a</mi><mo>∩</mo><mi>b</mi></mrow></math> denotes their intersection. Furthermore, if no intersection exists, we write <math id="p9.m13" class="ltx_Math" alttext="a\cap b=\varnothing" display="inline"><mrow><mrow><mi>a</mi><mo>∩</mo><mi>b</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.
+
+<br class="ltx_break">
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Remarks</span>.</p>
+</div>
+<div id="p10" class="ltx_para">
+<ul id="I5" class="ltx_itemize">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p">It is easy to show that if <math id="I5.i1.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I5.i1.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> be flats with <math id="I5.i1.p1.m3" class="ltx_Math" alttext="i=t(a)\leq t(b)" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="I5.i1.p1.m4" class="ltx_Math" alttext="a\cap b=d\neq\varnothing" display="inline"><mrow><mrow><mi>a</mi><mo>∩</mo><mi>b</mi></mrow><mo>=</mo><mi>d</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>, then <math id="I5.i1.p1.m5" class="ltx_Math" alttext="(d,a)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>d</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math> and <math id="I5.i1.p1.m6" class="ltx_Math" alttext="(d,b)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>d</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math>. In addition, if <math id="I5.i1.p1.m7" class="ltx_Math" alttext="(a,b)\in I" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow></math>, then <math id="I5.i1.p1.m8" class="ltx_Math" alttext="a=d" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>d</mi></mrow></math>. Also, the unique <math id="I5.i1.p1.m9" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> in Condition 6 above is the intersection or <math id="I5.i1.p1.m10" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I5.i1.p1.m11" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>.</p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i2.p1" class="ltx_para">
+<p class="ltx_p">In light of the introduction of the concept of the intersection (of two flats), it seems feasible to toss in an additional element, called the <em class="ltx_emph ltx_font_italic">empty block</em> or <em class="ltx_emph ltx_font_italic">empty flat</em>, <math id="I5.i2.p1.m1" class="ltx_Math" alttext="\varnothing" display="inline"><mi mathvariant="normal">∅</mi></math>, into the underlying set <math id="I5.i2.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> of the incidence geometry: <math id="I5.i2.p1.m3" class="ltx_Math" alttext="P_{-1}:=\{\varnothing\}" display="inline"><mrow><msub><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">∅</mi><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="I5.i2.p1.m4" class="ltx_Math" alttext="P^{\prime}=P_{-1}\cup P" display="inline"><mrow><msup><mi>P</mi><mo>′</mo></msup><mo>=</mo><mrow><msub><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>∪</mo><mi>P</mi></mrow></mrow></math>. If we next define a binary relation <math id="I5.i2.p1.m5" class="ltx_Math" alttext="I^{\prime}" display="inline"><msup><mi>I</mi><mo>′</mo></msup></math> on <math id="I5.i2.p1.m6" class="ltx_Math" alttext="P^{\prime}" display="inline"><msup><mi>P</mi><mo>′</mo></msup></math> to be:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="(a,b)\in I^{\prime}\textrm{ if }\left\{\begin{array}[]{ll}(a,b)\in I,\\
+a=\varnothing\textrm{, or}\\
+b=\varnothing.\end{array}\right." display="block"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><msup><mi>I</mi><mo>′</mo></msup><mo>⁢</mo><mtext> if </mtext><mo>⁢</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>I</mi></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mi>a</mi><mo>=</mo><mrow><mi mathvariant="normal">∅</mi><mo>⁢</mo><mtext>, or</mtext></mrow></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mi>b</mi><mo>=</mo><mi mathvariant="normal">∅</mi></mrow><mo>.</mo></mrow></mtd><mtd></mtd></mtr></mtable><mi></mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then <math id="I5.i2.p1.m7" class="ltx_Math" alttext="I^{\prime}" display="inline"><msup><mi>I</mi><mo>′</mo></msup></math> becomes an incidence relation on <math id="I5.i2.p1.m8" class="ltx_Math" alttext="P^{\prime}" display="inline"><msup><mi>P</mi><mo>′</mo></msup></math>
+if we restrict flat <math id="I5.i2.p1.m9" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> in Condition 3 to be non-empty only. Furthermore, <math id="I5.i2.p1.m10" class="ltx_Math" alttext="P^{\prime}" display="inline"><msup><mi>P</mi><mo>′</mo></msup></math>, together with <math id="I5.i2.p1.m11" class="ltx_Math" alttext="I^{\prime}" display="inline"><msup><mi>I</mi><mo>′</mo></msup></math> have almost all the ingredients of being an incidence geometry, except that the range of the type function has now been extended to include <math id="I5.i2.p1.m12" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i3.p1" class="ltx_para">
+<p class="ltx_p">For every pair of non-empty <math id="I5.i3.p1.m1" class="ltx_Math" alttext="a,b\in P^{\prime}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><msup><mi>P</mi><mo>′</mo></msup></mrow></math>, <math id="I5.i3.p1.m2" class="ltx_Math" alttext="U=I^{+}(a)\cap I^{+}(b)" display="inline"><mrow><mi>U</mi><mo>=</mo><mrow><mrow><msup><mi>I</mi><mo>+</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><msup><mi>I</mi><mo>+</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> is a non-empty set since the space <math id="I5.i3.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is in it. In addition, since <math id="I5.i3.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is finite, <math id="I5.i3.p1.m5" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> has a minimal element <math id="I5.i3.p1.m6" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> if we order its elements by their corresponding type numbers. Moreover, <math id="I5.i3.p1.m7" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> is unique. We denote this <math id="I5.i3.p1.m8" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> by <math id="I5.i3.p1.m9" class="ltx_Math" alttext="\langle a,b\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">⟩</mo></mrow></math>. This definition is consistent with our earlier definition of <math id="I5.i3.p1.m10" class="ltx_Math" alttext="\langle\cdot,\cdot\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo stretchy="false">⟩</mo></mrow></math> when the first coordinate is a point and the second coordinate is a flat not passing through the point.</p>
+</div>
+</li>
+<li id="I5.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i4.p1" class="ltx_para">
+<p class="ltx_p">Collecting all the data above, it is now easy to see that <math id="I5.i4.p1.m1" class="ltx_Math" alttext="P^{\prime}" display="inline"><msup><mi>P</mi><mo>′</mo></msup></math>, together with the intersection operator <math id="I5.i4.p1.m2" class="ltx_Math" alttext="\cap" display="inline"><mo>∩</mo></math>, and the angle bracket operator <math id="I5.i4.p1.m3" class="ltx_Math" alttext="\langle\cdot,\cdot\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo stretchy="false">⟩</mo></mrow></math> form a semimodular lattice, if we set <math id="I5.i4.p1.m4" class="ltx_Math" alttext="a\wedge b:=a\cap b" display="inline"><mrow><mrow><mi>a</mi><mo>∧</mo><mi>b</mi></mrow><mo>:=</mo><mrow><mi>a</mi><mo>∩</mo><mi>b</mi></mrow></mrow></math> and <math id="I5.i4.p1.m5" class="ltx_Math" alttext="a\vee b:=\langle a,b\rangle" display="inline"><mrow><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow><mo>:=</mo><mrow><mo stretchy="false">⟨</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">⟩</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I5.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i5.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_bold ltx_font_italic">parallelism</em>. Let <math id="I5.i5.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> be a flat. A flat <math id="I5.i5.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is said be parallel to <math id="I5.i5.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> if</p>
+</div>
+<div id="I5.i5.p2" class="ltx_para">
+<ol id="I5.I1" class="ltx_enumerate">
+<li id="I5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I5.I1.i1.p1.m1" class="ltx_Math" alttext="t(b)=t(a)" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I5.I1.i2.p1.m1" class="ltx_Math" alttext="a\cap b" display="inline"><mrow><mi>a</mi><mo>∩</mo><mi>b</mi></mrow></math> is either <math id="I5.I1.i2.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> or <math id="I5.I1.i2.p1.m3" class="ltx_Math" alttext="\varnothing" display="inline"><mi mathvariant="normal">∅</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="I5.i5.p3" class="ltx_para">
+<p class="ltx_p">We write <math id="I5.i5.p3.m1" class="ltx_Math" alttext="a\parallel b" display="inline"><mrow><mi>a</mi><mo>∥</mo><mi>b</mi></mrow></math>. Note that if <math id="I5.i5.p3.m2" class="ltx_Math" alttext="a\cap b=a" display="inline"><mrow><mrow><mi>a</mi><mo>∩</mo><mi>b</mi></mrow><mo>=</mo><mi>a</mi></mrow></math>, then <math id="I5.i5.p3.m3" class="ltx_Math" alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>, since <math id="I5.i5.p3.m4" class="ltx_Math" alttext="t(b)=t(a)" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. So if <math id="I5.i5.p3.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is parallel to <math id="I5.i5.p3.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, <math id="I5.i5.p3.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is parallel to <math id="I5.i5.p3.m8" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, and we may say that <math id="I5.i5.p3.m9" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I5.i5.p3.m10" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are parallel. Parallelism is a reflexive and symmetric relation. However, it is not transitive (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Transitive3</span>) (as in the case of a hyperbolic geometry). Condition 6 above can now be restated as: if two flats of dimensions <math id="I5.i5.p3.m11" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>, both lying in a flat of dimension <math id="I5.i5.p3.m12" class="ltx_Math" alttext="i+1" display="inline"><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></math>, are not parallel, then their intersection is a flat of dimension <math id="I5.i5.p3.m13" class="ltx_Math" alttext="i-1" display="inline"><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I5.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i6.p1" class="ltx_para">
+<p class="ltx_p">An incidence geometry with the condition (or axiom) that every pair
+of (non-empty) flats of dimensions <math id="I5.i6.p1.m1" class="ltx_Math" alttext="&gt;0" display="inline"><mrow><mi></mi><mo>&gt;</mo><mn>0</mn></mrow></math> have non-empty intersection is called a <em class="ltx_emph ltx_font_bold ltx_font_italic">projective incidence geometry</em>.</p>
+</div>
+</li>
+<li id="I5.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i7.p1" class="ltx_para">
+<p class="ltx_p">An incidence geometry with the condition (or axiom) that for every (non-empty) flat <math id="I5.i7.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> of dimension <math id="I5.i7.p1.m2" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> with <math id="I5.i7.p1.m3" class="ltx_Math" alttext="i&lt;n" display="inline"><mrow><mi>i</mi><mo>&lt;</mo><mi>n</mi></mrow></math>, and any point <math id="I5.i7.p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> not lying on <math id="I5.i7.p1.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, there is a flat <math id="I5.i7.p1.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> passing through <math id="I5.i7.p1.m7" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, such that <math id="I5.i7.p1.m8" class="ltx_Math" alttext="a\parallel b" display="inline"><mrow><mi>a</mi><mo>∥</mo><mi>b</mi></mrow></math>, is called an <em class="ltx_emph ltx_font_bold ltx_font_italic">affine incidence geometry</em>. The condition just stated is known as the <em class="ltx_emph ltx_font_italic">Playfair’s Axiom</em>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Note to reader: the historical background of this entry is weak. Any additional historical information on this is welcome!</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_italic">Handbook of Incidence Geometry</span>, edited by Francis Buekenhout,
+Elsevier Science Publishing Co. (1995)
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> D. Hilbert, <span class="ltx_text ltx_font_italic">Foundations of Geometry</span>, Open Court Publishing Co. (1971)
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock"> K. Borsuk and W. Szmielew, <span class="ltx_text ltx_font_italic">Foundations of Geometry</span>, North-Holland Publishing Co. Amsterdam (1960)
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock"> R. Hartshorne, <span class="ltx_text ltx_font_italic">Geometry: Euclid and Beyond</span>, Springer (2000)
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p12" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">incidence geometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">IncidenceGeometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:26:13</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:26:13</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">26</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05B35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06C10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51A05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">lies on</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">lying on</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">passes through</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">passing through</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SemimodularLattice</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">incident</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">incidence relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">type function</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">plane incidence geometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">solid incidence geometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">incidence axiom</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">shadow</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pass through</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">lie on</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">line</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">plane</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">projective incidence geometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">affine incidence geometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Playfair’s axiom</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">coplanar</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:39:37 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

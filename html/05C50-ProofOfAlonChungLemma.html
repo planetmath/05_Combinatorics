@@ -1,0 +1,190 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Alon-Chung lemma</title>
+<!--Generated on Thu Feb  8 20:45:02 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Alon-Chung lemma</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let the vertices of <math id="p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be labeled by <math id="p1.m2" class="ltx_Math" alttext="\{1,2,\ldots,n\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></math>, and <math id="p1.m3" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math> be the column vector defined by</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="x_{i}=\begin{cases}1&amp;\text{if vertex $i$ is in $X$}\\
+0&amp;\text{otherwise}\end{cases}" display="block"><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mn>1</mn></mtd><mtd columnalign="left"><mrow><mtext>if vertex </mtext><mi>i</mi><mtext> is in </mtext><mi>X</mi></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mtext>otherwise</mtext></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for <math id="p1.m4" class="ltx_Math" alttext="i=1,2,\ldots,n" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="\mathbf{A}" display="inline"><mi>𝐀</mi></math> denote the adjacency matrix of <math id="p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. The number of edges in the subgraph induced by <math id="p2.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> equals <math id="p2.m4" class="ltx_Math" alttext="\frac{1}{2}\mathbf{x}^{T}\mathbf{Ax}" display="inline"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>𝐱</mi><mi>T</mi></msup><mo>⁢</mo><mi>𝐀𝐱</mi></mrow></math>, and we are going to show the following equivalent inequality,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathbf{x}^{T}\mathbf{Ax}\leq\frac{1}{n}\Big{(}d|X|^{2}+\lambda|X|(n-|X|)\Big{%
+)}." display="block"><mrow><mrow><mrow><msup><mi>𝐱</mi><mi>T</mi></msup><mo>⁢</mo><mi>𝐀𝐱</mi></mrow><mo>≤</mo><mrow><mfrac><mn>1</mn><mi>n</mi></mfrac><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">We label the eigenvalues of <math id="p3.m1" class="ltx_Math" alttext="\mathbf{A}" display="inline"><mi>𝐀</mi></math> in decreasing order as</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\lambda_{1}\geq\lambda_{2}\geq\ldots\geq\lambda_{n}." display="block"><mrow><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>≥</mo><msub><mi>λ</mi><mn>2</mn></msub><mo>≥</mo><mi mathvariant="normal">…</mi><mo>≥</mo><msub><mi>λ</mi><mi>n</mi></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The largest eigenvalue <math id="p4.m1" class="ltx_Math" alttext="\lambda_{1}" display="inline"><msub><mi>λ</mi><mn>1</mn></msub></math> is equal to the degree <math id="p4.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>, and we let <math id="p4.m3" class="ltx_Math" alttext="\mathbf{u}_{1}" display="inline"><msub><mi>𝐮</mi><mn>1</mn></msub></math> be the corresponding normalized eigenvector,</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\mathbf{u}_{1}:=\frac{1}{\sqrt{n}}[1,1,\ldots,1]^{T}." display="block"><mrow><mrow><msub><mi>𝐮</mi><mn>1</mn></msub><mo>:=</mo><mrow><mfrac><mn>1</mn><msqrt><mi>n</mi></msqrt></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mi>T</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As <math id="p4.m4" class="ltx_Math" alttext="\mathbf{A}" display="inline"><mi>𝐀</mi></math> is symmetric, there is a unitary matrix <math id="p4.m5" class="ltx_Math" alttext="\mathbf{U}" display="inline"><mi>𝐔</mi></math> that diagonalizes <math id="p4.m6" class="ltx_Math" alttext="\mathbf{A}" display="inline"><mi>𝐀</mi></math>,</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\mathbf{U}^{T}\mathbf{AU}=\begin{bmatrix}\lambda_{1}&amp;&amp;&amp;\\
+&amp;\lambda_{2}&amp;&amp;\\
+&amp;&amp;\ddots&amp;\\
+&amp;&amp;&amp;\lambda_{n}\end{bmatrix}." display="block"><mrow><mrow><mrow><msup><mi>𝐔</mi><mi>T</mi></msup><mo>⁢</mo><mi>𝐀𝐔</mi></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>λ</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><msub><mi>λ</mi><mn>2</mn></msub></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><msub><mi>λ</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The first column of <math id="p4.m7" class="ltx_Math" alttext="\mathbf{U}" display="inline"><mi>𝐔</mi></math> is the column vector <math id="p4.m8" class="ltx_Math" alttext="\mathbf{u}_{1}" display="inline"><msub><mi>𝐮</mi><mn>1</mn></msub></math>. We obtain</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\mathbf{x}^{T}\mathbf{Ax}" display="inline"><mrow><msup><mi>𝐱</mi><mi>T</mi></msup><mo>⁢</mo><mi>𝐀𝐱</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle\sum_{k=1}^{n}\lambda_{k}(\mathbf{u}_{k}^{T}\mathbf{x})^{2}" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><msub><mi>λ</mi><mi>k</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>𝐮</mi><mi>k</mi><mi>T</mi></msubsup><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle d(\mathbf{u}_{1}^{T}\mathbf{x})^{2}+\lambda_{2}\sum_{k=2}^{n}(%
+\mathbf{u}_{k}^{T}\mathbf{x})^{2}." display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>𝐮</mi><mn>1</mn><mi>T</mi></msubsup><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow><mi>n</mi></munderover></mstyle><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>𝐮</mi><mi>k</mi><mi>T</mi></msubsup><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">In the line above, the first term is</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="d(\mathbf{u}_{1}^{T}\mathbf{x})^{2}=\frac{d|X|^{2}}{n}," display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>𝐮</mi><mn>1</mn><mi>T</mi></msubsup><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mi>n</mi></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">while the summation is equal to</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\sum_{k=2}^{n}(\mathbf{u}_{k}^{T}\mathbf{x})^{2}=\|\mathbf{x}\|^{2}-(\mathbf{u%
+}_{1}^{T}\mathbf{x})^{2}=|X|-\frac{|X|^{2}}{n}." display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>𝐮</mi><mi>k</mi><mi>T</mi></msubsup><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mrow><mo>∥</mo><mi>𝐱</mi><mo>∥</mo></mrow><mn>2</mn></msup><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>𝐮</mi><mn>1</mn><mi>T</mi></msubsup><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mo>-</mo><mfrac><msup><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mi>n</mi></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Hence</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle\mathbf{x}^{T}\mathbf{Ax}" display="inline"><mrow><msup><mi>𝐱</mi><mi>T</mi></msup><mo>⁢</mo><mi>𝐀𝐱</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m3" class="ltx_Math" alttext="\displaystyle\frac{d|X|^{2}}{n}+\lambda_{2}\Big{(}|X|-\frac{|X|^{2}}{n}\Big{)}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mi>n</mi></mfrac></mstyle><mo>+</mo><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mi>n</mi></mfrac></mstyle></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{n}\Big{(}d|X|^{2}+\lambda_{2}|X|(n-|X|)\Big{)}." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>n</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Alon-Chung lemma</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfAlonChungLemma</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:26:53</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:26:53</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">kshum (5987)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">kshum (5987)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">kshum (5987)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 05C50</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:45:02 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

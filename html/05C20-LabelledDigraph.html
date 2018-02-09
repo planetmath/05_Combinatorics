@@ -1,0 +1,168 @@
+<!DOCTYPE html><html>
+<head>
+<title>labelled digraph</title>
+<!--Generated on Thu Feb  8 20:43:07 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">labelled digraph</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A triple <math id="p1.m1" class="ltx_Math" alttext="(V,E,w)" display="inline"><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></math> is called a <em class="ltx_emph ltx_font_italic">labelled digraph</em>, if <math id="p1.m2" class="ltx_Math" alttext="(V,E)" display="inline"><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></math> is a
+digraph and <math id="p1.m3" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> is an association of elements from some set <math id="p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, the
+<em class="ltx_emph ltx_font_italic">labels</em>, to some of the edges and vertices of the digraph. In
+other words, <math id="p1.m5" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> is a mapping from a subset <math id="p1.m6" class="ltx_Math" alttext="A\subseteq V\cup E" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mrow><mi>V</mi><mo>∪</mo><mi>E</mi></mrow></mrow></math> to
+<math id="p1.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. Most often, <math id="p1.m8" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a subset of the real numbers, in which case
+<math id="p1.m9" class="ltx_Math" alttext="(V,E,w)" display="inline"><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></math> is called a <em class="ltx_emph ltx_font_italic">weighted</em> digraph and its labels are
+called <em class="ltx_emph ltx_font_italic">weights</em>. Typically, either <math id="p1.m10" class="ltx_Math" alttext="A=V" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>V</mi></mrow></math> or <math id="p1.m11" class="ltx_Math" alttext="A=E" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>E</mi></mrow></math>, in which case
+<math id="p1.m12" class="ltx_Math" alttext="(V,E,w)" display="inline"><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></math> is called either a <em class="ltx_emph ltx_font_italic">vertex-weighted digraph</em> or an
+<em class="ltx_emph ltx_font_italic">edge-weighted digraph</em>, respectively.</p>
+</div>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Application examples</h2>
+
+<div id="S0.SSx1.p1" class="ltx_para">
+<p class="ltx_p">We give two typical “real life” examples. The first features an
+edge-weighted digraph, while the second requires the implementation of
+a vertex-weighted digraph.</p>
+</div>
+<section id="S0.SSx1.SSSx1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">Railway network</h3>
+
+<div id="S0.SSx1.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">A railway network consists of railway stations connected by rails. A
+train needs a certain time (measured in minutes) to fare from one
+station to another. In a formalisation, <math id="S0.SSx1.SSSx1.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is the set of train
+stations, <math id="S0.SSx1.SSSx1.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> the set of direct connexions between them and <math id="S0.SSx1.SSSx1.p1.m3" class="ltx_Math" alttext="w\colon E\to\mathbb{N}" display="inline"><mrow><mi>w</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>ℕ</mi></mrow></mrow></math> a weighting corresponding to the journey times, so
+<math id="S0.SSx1.SSSx1.p1.m4" class="ltx_Math" alttext="(V,E,w)" display="inline"><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></math> is an edge-weighted digraph. Although typically <math id="S0.SSx1.SSSx1.p1.m5" class="ltx_Math" alttext="(V,E)" display="inline"><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></math> is a
+<span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/1702</span>symmetric digraph, <math id="S0.SSx1.SSSx1.p1.m6" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> does not need to be symmetric: for example, the
+journey from <math id="S0.SSx1.SSSx1.p1.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> to <math id="S0.SSx1.SSSx1.p1.m8" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> might take longer than the return journey
+because <math id="S0.SSx1.SSSx1.p1.m9" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is located on a mountain.</p>
+</div>
+<div id="S0.SSx1.SSSx1.p2" class="ltx_para">
+<p class="ltx_p">An important optimisation problem is the efficient determination of
+the fastest way from one station to another. An even harder problem is
+to find the fastest round trip (usually called a <em class="ltx_emph ltx_font_italic">tour</em>) via a
+given number of stations. This is the <em class="ltx_emph ltx_font_italic">travelling salesman
+problem</em>.</p>
+</div>
+</section>
+<section id="S0.SSx1.SSSx2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">Dependency graph</h3>
+
+<div id="S0.SSx1.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">A software bundle consists of a number of packages each of which is
+either installed or not. An installed package occupies a certain
+amount of bytes on a storage medium. Packages may depend on other
+packages, that is installation of a package may require other packages
+to be installed first, which in turn may require still other packages
+and so forth. One is interested in the complete storage requirement
+incurred by the installation of one package and all its dependencies.</p>
+</div>
+<div id="S0.SSx1.SSSx2.p2" class="ltx_para">
+<p class="ltx_p">In a formalisation, the packages are vertices of a digraph <math id="S0.SSx1.SSSx2.p2.m1" class="ltx_Math" alttext="(V,E)" display="inline"><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></math>, and an
+edge <math id="S0.SSx1.SSSx2.p2.m2" class="ltx_Math" alttext="(a,b)\in E" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>E</mi></mrow></math> means “<math id="S0.SSx1.SSSx2.p2.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> depends on <math id="S0.SSx1.SSSx2.p2.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>”. Such a digraph is typically
+not symmetric. The weighting <math id="S0.SSx1.SSSx2.p2.m5" class="ltx_Math" alttext="w\colon V\to\mathbb{N}" display="inline"><mrow><mi>w</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>ℕ</mi></mrow></mrow></math> associates sizes to
+packages. A subset <math id="S0.SSx1.SSSx2.p2.m6" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> of <math id="S0.SSx1.SSSx2.p2.m7" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is <em class="ltx_emph ltx_font_italic">dependency-closed</em>, if for any
+<math id="S0.SSx1.SSSx2.p2.m8" class="ltx_Math" alttext="w\in W" display="inline"><mrow><mi>w</mi><mo>∈</mo><mi>W</mi></mrow></math>, all dependencies of <math id="S0.SSx1.SSSx2.p2.m9" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> are in <math id="S0.SSx1.SSSx2.p2.m10" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math>. Given a to-be-installed
+package <math id="S0.SSx1.SSSx2.p2.m11" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>, the storage requirement incurred by the installation of
+<math id="S0.SSx1.SSSx2.p2.m12" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> and all its dependencies is the sum of the vertex weights of the
+smallest dependency-closed subset of <math id="S0.SSx1.SSSx2.p2.m13" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> containing <math id="S0.SSx1.SSSx2.p2.m14" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">labelled digraph</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LabelledDigraph</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:15:07</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:15:07</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GrafZahl (9234)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GrafZahl (9234)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GrafZahl (9234)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C78</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05C90</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">label</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">weighted digraph</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">weight</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">vertex-weighted digraph</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">edge-weighted digraph</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Feb  8 20:43:07 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
