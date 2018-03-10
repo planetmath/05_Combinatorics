@@ -18,7 +18,7 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p">The maximal bipartite matching algorithm is similar some ways to the Ford-Fulkerson algorithm for network flow. This is not a coincidence; network flows and matchings are closely related. This algorithm, however, avoids some of the overhead associated with finding network flow.</p>
+<p class="ltx_p">The <a class="nnexus_concept" href="http://planetmath.org/maximalbipartitematchingalgorithm">maximal bipartite matching algorithm</a> is <a class="nnexus_concept" href="http://planetmath.org/equivalentmachines">similar</a> some ways to the Ford-Fulkerson algorithm for <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">network flow</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/NetworkFlow.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/flow"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>. This is not a coincidence; network flows and <a class="nnexus_concept" href="http://planetmath.org/matching">matchings</a> are closely related. This <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">algorithm</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Algorithm.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/algorithm"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>, however, avoids some of the overhead associated with finding network flow.</p>
 </div>
 <div id="p2" class="ltx_para">
 <p class="ltx_p">The basic idea behind this algorithm is as follows:</p>
@@ -50,10 +50,10 @@
 </ol>
 </div>
 <div id="p3" class="ltx_para">
-<p class="ltx_p">The algorithm employs a clever labeling trick to find these paths and to ensure that the set of edges chosen remains a valid matching.</p>
+<p class="ltx_p">The algorithm employs a clever <a class="nnexus_concept" href="http://planetmath.org/labeledgraph">labeling</a> trick to find these paths and to ensure that the set of edges chosen remains a valid matching.</p>
 </div>
 <div id="p4" class="ltx_para">
-<p class="ltx_p">The algorithm as described here uses the matrix form of a bipartite graph. Translating the matching from a matrix to a graph is straightforward.</p>
+<p class="ltx_p">The algorithm as described here uses the matrix form of a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">bipartite graph</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/BipartiteGraph.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/bipartitegraph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>. Translating the matching from a matrix to a graph is straightforward.</p>
 </div>
 <div id="p5" class="ltx_para">
 <p class="ltx_p">There are two phases to this algorithm: labeling and flipping.</p>
@@ -95,7 +95,7 @@
 <h2 class="ltx_title ltx_title_paragraph">Notes</h2>
 
 <div id="S0.SS0.SSS0.Px3.p1" class="ltx_para">
-<p class="ltx_p">The algorithm must begin with some matching; we may begin with the empty set (or a single edge), since that is always a matching. However, each iteration through the process increases the size of the matching by exactly one. Therefore, we can make a simple optimization by starting with a larger matching. A naïve greedy algorithm can quickly choose a valid matching that is usually close to the size of the maximal matching; we may initalize our matrix with that matching to give the procedure a head start.
+<p class="ltx_p">The algorithm must begin with some matching; we may begin with the empty set (or a single edge), since that is always a matching. However, each <a class="nnexus_concept" href="http://mathworld.wolfram.com/Iteration.html">iteration</a> through the process increases the size of the matching by exactly one. Therefore, we can make a simple optimization by starting with a larger matching. A naïve <a class="nnexus_concept" href="http://mathworld.wolfram.com/GreedyAlgorithm.html">greedy algorithm</a> can quickly choose a valid matching that is usually close to the size of the maximal matching; we may initalize our matrix with that matching to give the procedure a head start.
 </p>
 <table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
 <tbody class="ltx_tbody">
@@ -136,7 +136,7 @@
 <td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></th>
 <td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 05C70</td>
 </tr>
 </tbody>

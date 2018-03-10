@@ -18,10 +18,10 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p">Euler’s formula implies the linear lower bound <math id="p1.m1" class="ltx_Math" alttext="\operatorname{cr}(G)\geq m-3n+6" display="inline"><mrow><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>m</mi><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>+</mo><mn>6</mn></mrow></mrow></math>, and so it cannot be used directly. What we need is to consider the subgraphs of our graph, apply Euler’s formula on them, and then combine the estimates. The probabilistic method provides a natural way to do that.</p>
+<p class="ltx_p">Euler’s formula implies the linear <a class="nnexus_concept" href="http://planetmath.org/upperbound">lower bound</a> <math id="p1.m1" class="ltx_Math" alttext="\operatorname{cr}(G)\geq m-3n+6" display="inline"><mrow><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>m</mi><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>+</mo><mn>6</mn></mrow></mrow></math>, and so it cannot be used directly. What we need is to consider the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">subgraphs</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Subgraph.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/subgraph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of our graph, apply Euler’s formula on them, and then combine the estimates. The <a class="nnexus_concept" href="http://planetmath.org/probabilisticmethod">probabilistic method</a> provides a natural way to do that.</p>
 </div>
 <div id="p2" class="ltx_para">
-<p class="ltx_p">Consider a minimal embedding of <math id="p2.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. Choose independently every vertex of <math id="p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> with probability <math id="p2.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Let <math id="p2.m4" class="ltx_Math" alttext="G_{p}" display="inline"><msub><mi>G</mi><mi>p</mi></msub></math> be a graph induced by those vertices. By Euler’s formula, <math id="p2.m5" class="ltx_Math" alttext="\operatorname{cr}(G_{p})-m_{p}+3n_{p}\geq 0" display="inline"><mrow><mrow><mrow><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>G</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><msub><mi>m</mi><mi>p</mi></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>n</mi><mi>p</mi></msub></mrow></mrow><mo>≥</mo><mn>0</mn></mrow></math>. The expectation is clearly</p>
+<p class="ltx_p">Consider a minimal embedding of <math id="p2.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. Choose independently every vertex of <math id="p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> with <a class="nnexus_concept" href="http://mathworld.wolfram.com/Probability.html">probability</a> <math id="p2.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Let <math id="p2.m4" class="ltx_Math" alttext="G_{p}" display="inline"><msub><mi>G</mi><mi>p</mi></msub></math> be a graph induced by those vertices. By Euler’s formula, <math id="p2.m5" class="ltx_Math" alttext="\operatorname{cr}(G_{p})-m_{p}+3n_{p}\geq 0" display="inline"><mrow><mrow><mrow><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>G</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><msub><mi>m</mi><mi>p</mi></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>n</mi><mi>p</mi></msub></mrow></mrow><mo>≥</mo><mn>0</mn></mrow></math>. The <a class="nnexus_concept" href="http://planetmath.org/expectedvalue">expectation</a> is clearly</p>
 <table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -30,7 +30,7 @@
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">Since <math id="p2.m6" class="ltx_Math" alttext="E(n_{p})=pn" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>n</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mi>n</mi></mrow></mrow></math>, <math id="p2.m7" class="ltx_Math" alttext="E(m_{p})=p^{2}m" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>m</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>⁢</mo><mi>m</mi></mrow></mrow></math> and <math id="p2.m8" class="ltx_Math" alttext="E(X_{p})=p^{4}\operatorname{cr}(G)" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>p</mi><mn>4</mn></msup><mo>⁢</mo><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, we get an inequality that bounds the crossing number of <math id="p2.m9" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> from below,</p>
+<p class="ltx_p">Since <math id="p2.m6" class="ltx_Math" alttext="E(n_{p})=pn" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>n</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mi>n</mi></mrow></mrow></math>, <math id="p2.m7" class="ltx_Math" alttext="E(m_{p})=p^{2}m" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>m</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>⁢</mo><mi>m</mi></mrow></mrow></math> and <math id="p2.m8" class="ltx_Math" alttext="E(X_{p})=p^{4}\operatorname{cr}(G)" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>p</mi><mn>4</mn></msup><mo>⁢</mo><mrow><mi>cr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, we get an inequality that bounds the <a class="nnexus_concept" href="http://planetmath.org/crossingnumber">crossing number</a> of <math id="p2.m9" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> from below,</p>
 <table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -87,7 +87,7 @@ Martin Aigner and Günter M. Ziegler.
 <tbody class="ltx_tbody">
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
-<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of crossing lemma</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><a class="nnexus_concept" href="http://planetmath.org/proofofcrossinglemma">proof of crossing lemma</a></td>
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
@@ -122,7 +122,7 @@ Martin Aigner and Günter M. Ziegler.
 <td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></th>
 <td class="ltx_td ltx_align_left ltx_border_r">msc 05C10</td>
 </tr>
 <tr class="ltx_tr">

@@ -18,7 +18,7 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p">On a digraph, define a <em class="ltx_emph ltx_font_italic">sink</em> to be a vertex with
+<p class="ltx_p">On a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">digraph</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Digraph.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/directedgraph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>, define a <em class="ltx_emph ltx_font_italic">sink</em> to be a vertex with
 out-degree zero and a <em class="ltx_emph ltx_font_italic">source</em> to be a vertex with
 in-degree zero.
 Let <math id="p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a digraph with non-negative weights and with exactly
@@ -40,7 +40,7 @@ of values to each edge of <math id="p1.m4" class="ltx_Math" alttext="G" display=
 <span class="ltx_tag ltx_tag_enumerate">2.</span> 
 <div id="I1.i2.p1" class="ltx_para">
 <p class="ltx_p">For any vertex <math id="I1.i2.p1.m1" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>, excluding the source and the sink, let <math id="I1.i2.p1.m2" class="ltx_Math" alttext="E_{in}" display="inline"><msub><mi>E</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub></math> be
-the set of edges incident to <math id="I1.i2.p1.m3" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> and let <math id="I1.i2.p1.m4" class="ltx_Math" alttext="E_{out}" display="inline"><msub><mi>E</mi><mrow><mi>o</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>t</mi></mrow></msub></math> be the set of edges
+the set of edges <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">incident</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/incidencegeometry"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/incidencestructure"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/graph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> to <math id="I1.i2.p1.m3" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> and let <math id="I1.i2.p1.m4" class="ltx_Math" alttext="E_{out}" display="inline"><msub><mi>E</mi><mrow><mi>o</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>t</mi></mrow></msub></math> be the set of edges
 incident from <math id="I1.i2.p1.m5" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>.
 Then we must have</p>
 <table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
@@ -72,26 +72,26 @@ If <math id="p3.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></ma
 <p class="ltx_p">We will refer to this quantity as the amount of flow.</p>
 </div>
 <div id="p5" class="ltx_para">
-<p class="ltx_p">Note that a flow given by <math id="p5.m1" class="ltx_Math" alttext="f(e)=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> trivially satisfies these conditions.
-We are typically more interested in <em class="ltx_emph ltx_font_italic">maximum flows</em>, where the amount
+<p class="ltx_p">Note that a flow given by <math id="p5.m1" class="ltx_Math" alttext="f(e)=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> trivially <a class="nnexus_concept" href="http://planetmath.org/satisfactionrelation">satisfies</a> these conditions.
+We are typically more interested in <em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://planetmath.org/flow">maximum flows</a></em>, where the amount
 of flow is maximized for a particular graph.</p>
 </div>
 <div id="p6" class="ltx_para">
 <p class="ltx_p">We may interpret a flow as a means of transmitting something through
-a network.
+a <a class="nnexus_concept" href="http://mathworld.wolfram.com/Network.html">network</a>.
 Suppose we think of the edges in a graph as pipes, with the weights
 corresponding with the capacities of the pipes; we are pouring water
 into the system through the source and draining it through the sink.
 Then the first rule requires that we do not pump more water through
 a pipe than is possible, and the second rule requires that any water
 entering a junction of pipes must leave.
-Under this interpretation, the maximum amount of flow corresponds to
+Under this <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">interpretation</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Interpretation.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/structure"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/truthvaluesemanticsforclassicalpropositionallogic"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>, the maximum amount of flow corresponds to
 the maximum amount of water we could pump through this network.</p>
 </div>
 <div id="p7" class="ltx_para">
 <p class="ltx_p">Instead of water in pipes, one may think of electric charge in a network of conductors.
 Rule (2) above is one of Kirchoff’s two laws for such networks; the other
-says that the sum of the voltage drops around any circuit is zero.
+says that the sum of the voltage drops around any <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">circuit</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Circuit.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/closedwalktrektrailpath"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> is zero.
 </p>
 <table class="ltx_tabular ltx_align_right ltx_align_middle">
 <tbody class="ltx_tbody">
@@ -100,7 +100,7 @@ says that the sum of the voltage drops around any circuit is zero.
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">flow</td>
 </tr>
 <tr class="ltx_tr">
-<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</td>
 <td class="ltx_td ltx_align_left ltx_border_r">Flow</td>
 </tr>
 <tr class="ltx_tr">
@@ -129,10 +129,10 @@ says that the sum of the voltage drops around any circuit is zero.
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
-<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><a class="nnexus_concept" href="http://planetmath.org/definition">Definition</a></td>
 </tr>
 <tr class="ltx_tr">
-<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></td>
 <td class="ltx_td ltx_align_left ltx_border_r">msc 05C20</td>
 </tr>
 <tr class="ltx_tr">
@@ -141,7 +141,7 @@ says that the sum of the voltage drops around any circuit is zero.
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
-<td class="ltx_td ltx_align_left ltx_border_r">network flow</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><a class="nnexus_concept" href="http://mathworld.wolfram.com/NetworkFlow.html">network flow</a></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>

@@ -18,16 +18,16 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">multigraph</em> is a graph in which we allow more than one edge to join a pair of vertices. Two or more edges that join a pair of vertices are called <em class="ltx_emph ltx_font_italic">parallel edges</em>. Every graph, then, is a multigraph, but not all multigraphs are graphs.
-Some authors define the concept of a graph by excluding graphs with multiple
-edges or loops. Then if they want to consider more general graphs the 
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic"><a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">multigraph</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Multigraph.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/multigraph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup></em> is a graph in which we allow more than one edge to join a pair of vertices. Two or more edges that join a pair of vertices are called <em class="ltx_emph ltx_font_italic">parallel edges</em>. Every graph, then, is a multigraph, but not all multigraphs are graphs.
+Some authors define the concept of a graph by excluding graphs with <a class="nnexus_concept" href="http://mathworld.wolfram.com/MultipleEdge.html">multiple
+edges</a> or loops. Then if they want to consider more general graphs the 
 multigraph is introduced. Usually, such graphs have no loops.
 Formally, a multigraph <math id="p1.m1" class="ltx_Math" alttext="G=(V,E)" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a pair, where <math id="p1.m2" class="ltx_Math" alttext="E=(V^{(2)},f)" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msup><mi>V</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup><mo>,</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></math>
 is a multiset for which <math id="p1.m3" class="ltx_Math" alttext="f(x,x)=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math id="p1.m4" class="ltx_Math" alttext="V^{(2)}" display="inline"><msup><mi>V</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup></math> is the set of unordered pairs
 of <math id="p1.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
 </div>
 <div id="p2" class="ltx_para">
-<p class="ltx_p">A multigraph can be used to  a matrix whose entries are nonnegative integers. To do this, suppose that <math id="p2.m1" class="ltx_Math" alttext="A=(a_{ij})" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math> is an <math id="p2.m2" class="ltx_Math" alttext="m\times n" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>
+<p class="ltx_p">A multigraph can be used to  a matrix whose entries are <a class="nnexus_concept" href="http://mathworld.wolfram.com/NonnegativeInteger.html">nonnegative integers</a>. To do this, suppose that <math id="p2.m1" class="ltx_Math" alttext="A=(a_{ij})" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math> is an <math id="p2.m2" class="ltx_Math" alttext="m\times n" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>
 matrix of nonnegative integers.
 Let <math id="p2.m3" class="ltx_Math" alttext="V=S\cup T" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mi>S</mi><mo>∪</mo><mi>T</mi></mrow></mrow></math>, where <math id="p2.m4" class="ltx_Math" alttext="S=\{1,\ldots,m\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>m</mi><mo stretchy="false">}</mo></mrow></mrow></math> and
 <math id="p2.m5" class="ltx_Math" alttext="T=\{1^{\prime},\ldots,n^{\prime}\}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msup><mn>1</mn><mo>′</mo></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>n</mi><mo>′</mo></msup><mo stretchy="false">}</mo></mrow></mrow></math> and connect vertex <math id="p2.m6" class="ltx_Math" alttext="i\in S" display="inline"><mrow><mi>i</mi><mo>∈</mo><mi>S</mi></mrow></math> to vertex <math id="p2.m7" class="ltx_Math" alttext="j^{\prime}\in T" display="inline"><mrow><msup><mi>j</mi><mo>′</mo></msup><mo>∈</mo><mi>T</mi></mrow></math> with <math id="p2.m8" class="ltx_Math" alttext="a_{ij}" display="inline"><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math>
@@ -41,7 +41,7 @@ edges.</p>
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">multigraph</td>
 </tr>
 <tr class="ltx_tr">
-<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</td>
 <td class="ltx_td ltx_align_left ltx_border_r">Multigraph</td>
 </tr>
 <tr class="ltx_tr">
@@ -70,10 +70,10 @@ edges.</p>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
-<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><a class="nnexus_concept" href="http://planetmath.org/definition">Definition</a></td>
 </tr>
 <tr class="ltx_tr">
-<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></td>
 <td class="ltx_td ltx_align_left ltx_border_r">msc 05C75</td>
 </tr>
 <tr class="ltx_tr">
@@ -86,7 +86,7 @@ edges.</p>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
-<td class="ltx_td ltx_align_left ltx_border_r">Subgraph</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">Subgraph</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Subgraph.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/subgraph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
@@ -94,7 +94,7 @@ edges.</p>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
-<td class="ltx_td ltx_align_left ltx_border_r">Pseudograph</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">Pseudograph</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Pseudograph.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/pseudograph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>

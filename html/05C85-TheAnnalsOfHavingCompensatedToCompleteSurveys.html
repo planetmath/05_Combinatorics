@@ -18,7 +18,7 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p">The depth-first search (DFS)  is a method for finding a spanning forest of a connected graph (specifically, a spanning tree in the case of an undirected connected graph), and is a useful  for other . In particular, the DFS is useful for finding the connected components of a graph. This article currently describes only the DFS for an undirected graph.</p>
+<p class="ltx_p">The depth-first search (DFS)  is a method for finding a <a class="nnexus_concept" href="http://planetmath.org/subgraph">spanning</a> forest of a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">connected graph</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/ConnectedGraph.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/connectedgraph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> (specifically, a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">spanning tree</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/SpanningTree.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/spanningtree"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> in the case of an undirected connected graph), and is a useful  for other . In particular, the DFS is useful for finding the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">connected components</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/ConnectedComponent.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/connectedposet"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/connectedcomponent"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/connectedspace"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of a graph. This article currently describes only the DFS for an <a class="nnexus_concept" href="http://mathworld.wolfram.com/UndirectedGraph.html">undirected graph</a>.</p>
 </div>
 <span class="ltx_ERROR undefined">\theoremstyle</span>
 <div id="p2" class="ltx_para">
@@ -28,7 +28,7 @@
 <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
 <span class="ltx_tag ltx_tag_theorem">Definition</span> (DFS on an Undirected Graph)</h6>
 <div id="ThmundirectedDfsx1.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_italic">Assume that the undirected graph <math id="ThmundirectedDfsx1.p1.m1" class="ltx_Math" alttext="G=(V,E)" display="inline"><mrow><mi>G</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>V</mi><mo mathvariant="normal">,</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is connected. The DFS proceeds as follows.</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Assume that the undirected graph <math id="ThmundirectedDfsx1.p1.m1" class="ltx_Math" alttext="G=(V,E)" display="inline"><mrow><mi>G</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>V</mi><mo mathvariant="normal">,</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is <a class="nnexus_concept" href="http://planetmath.org/connectedspace">connected</a>. The DFS proceeds as follows.</span></p>
 </div>
 <div id="ThmundirectedDfsx1.p2" class="ltx_para">
 <ol id="I1" class="ltx_enumerate">
@@ -61,7 +61,7 @@
 </ol>
 </div>
 <div id="ThmundirectedDfsx1.p3" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_italic">When the search is , it  <math id="ThmundirectedDfsx1.p3.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> into two sets. One  the directed edges between visited vertices, called <em class="ltx_emph ltx_font_upright">tree edges</em>, which form a directed spanning tree of the graph. The other  the remaining edges of <math id="ThmundirectedDfsx1.p3.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> which were left unexamined because they were incident on a vertex that was already visited at some  in the search. Because these unexamined edges can be seen as <em class="ltx_emph ltx_font_upright">returning</em> to vertices that were previously visited, they are called <em class="ltx_emph ltx_font_upright">back edges</em>.</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">When the search is , it  <math id="ThmundirectedDfsx1.p3.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> into two sets. One  the directed edges between visited vertices, called <em class="ltx_emph ltx_font_upright">tree edges</em>, which form a <a class="nnexus_concept" href="http://planetmath.org/directedgraph">directed spanning tree</a> of the graph. The other  the remaining edges of <math id="ThmundirectedDfsx1.p3.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> which were left unexamined because they were <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">incident</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/incidencegeometry"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/incidencestructure"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/graph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> on a vertex that was already visited at some  in the search. Because these unexamined edges can be seen as <em class="ltx_emph ltx_font_upright">returning</em> to vertices that were previously visited, they are called <em class="ltx_emph ltx_font_upright">back edges</em>.</span></p>
 </div>
 </div>
 <section id="bib" class="ltx_bibliography">
@@ -73,7 +73,7 @@
         <span class="ltx_bibtag ltx_role_refnum">1</span>
         
 <span class="ltx_bibblock">
-Swamy, M.N.S., Thulasiraman, K., <em class="ltx_emph ltx_font_italic">Graphs, Networks and Algorithms</em>, John Wiley and Sons, New York, 1981.
+Swamy, M.N.S., Thulasiraman, K., <em class="ltx_emph ltx_font_italic">Graphs, <a class="nnexus_concept" href="http://mathworld.wolfram.com/Network.html">Networks</a> and Algorithms</em>, John Wiley and Sons, New York, 1981.
 
 </span>
       </li>
@@ -85,7 +85,7 @@ Swamy, M.N.S., Thulasiraman, K., <em class="ltx_emph ltx_font_italic">Graphs, Ne
 <tbody class="ltx_tbody">
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
-<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">The Annals of Having Compensated To Complete Surveys</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">The Annals of Having Compensated To <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">Complete</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/ordersinanumberfield"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/completebinarytree"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/completegraph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/complete"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> Surveys</td>
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
@@ -120,7 +120,7 @@ Swamy, M.N.S., Thulasiraman, K., <em class="ltx_emph ltx_font_italic">Graphs, Ne
 <td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></th>
 <td class="ltx_td ltx_align_left ltx_border_r">msc 05C85</td>
 </tr>
 <tr class="ltx_tr">

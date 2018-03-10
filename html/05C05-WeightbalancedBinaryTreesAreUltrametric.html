@@ -18,7 +18,7 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be the set of leaf nodes in a weight-balanced binary tree. Let the distance between leaf nodes be identified with the weighted path length between them. We will show that this distance metric on <math id="p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is ultrametric.</p>
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be the set of <a class="nnexus_concept" href="http://planetmath.org/leafnodeofatree">leaf nodes</a> in a weight-balanced binary tree. Let the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">distance</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Distance.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/distanceinagraph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> between leaf nodes be identified with the <a class="nnexus_concept" href="http://planetmath.org/weightedpathlength">weighted path length</a> between them. We will show that this distance metric on <math id="p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is ultrametric.</p>
 </div>
 <div id="p2" class="ltx_para">
 <p class="ltx_p">Before we begin, let the join of any two nodes <math id="p2.m1" class="ltx_Math" alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math>, denoted <math id="p2.m2" class="ltx_Math" alttext="x\lor y" display="inline"><mrow><mi>x</mi><mo>∨</mo><mi>y</mi></mrow></math>, be defined as the node <math id="p2.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> which is the most immediate common ancestor of <math id="p2.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p2.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> (that is, the common ancestor which is farthest from the root). Also, we are using weight-balanced in the sense that</p>
@@ -34,7 +34,7 @@
 <li id="I1.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_itemize">•</span> 
 <div id="I1.i2.p1" class="ltx_para">
-<p class="ltx_p">each subtree is weight-balanced, too.</p>
+<p class="ltx_p">each <a class="nnexus_concept" href="http://mathworld.wolfram.com/Subtree.html">subtree</a> is weight-balanced, too.</p>
 </div>
 </li>
 </ul>
@@ -127,13 +127,13 @@
 <p class="ltx_p">Note that this means that, if <math id="S0.SSx2.p10.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math> are leaf nodes, and you are at a node outside the subtree under <math id="S0.SSx2.p10.m2" class="ltx_Math" alttext="a\lor b" display="inline"><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow></math>, then <math id="S0.SSx2.p10.m3" class="ltx_Math" alttext="d(\textrm{you},a)=d(\textrm{you},b)" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>you</mtext><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>you</mtext><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. In other words, (from the point of view of distance between you and them,) the  of any subtree that is not your own doesn’t matter to you. This is expressed in the three point condition as “if two points are closer to each other than they are to you, then their distance to you is equal”.</p>
 </div>
 <div id="S0.SSx2.p11" class="ltx_para">
-<p class="ltx_p">(above, we have only proved this if you are at a leaf node, but it works for any node which is outside the subtree under <math id="S0.SSx2.p11.m1" class="ltx_Math" alttext="a\lor b" display="inline"><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow></math>, because the paths to <math id="S0.SSx2.p11.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S0.SSx2.p11.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> must both pass through <math id="S0.SSx2.p11.m4" class="ltx_Math" alttext="a\lor b" display="inline"><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow></math>).
+<p class="ltx_p">(above, we have only proved this if you are at a leaf node, but it works for any node which is outside the subtree under <math id="S0.SSx2.p11.m1" class="ltx_Math" alttext="a\lor b" display="inline"><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow></math>, because the paths to <math id="S0.SSx2.p11.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S0.SSx2.p11.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> must both <a class="nnexus_concept" href="http://planetmath.org/incidencegeometry">pass through</a> <math id="S0.SSx2.p11.m4" class="ltx_Math" alttext="a\lor b" display="inline"><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow></math>).
 </p>
 <table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
 <tbody class="ltx_tbody">
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
-<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">weight-balanced binary trees are ultrametric</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><a class="nnexus_concept" href="http://planetmath.org/weightbalancedbinarytreesareultrametric">weight-balanced binary trees are ultrametric</a></td>
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
@@ -168,7 +168,7 @@
 <td class="ltx_td ltx_align_left ltx_border_r">Result</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></th>
 <td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 05C05</td>
 </tr>
 </tbody>
